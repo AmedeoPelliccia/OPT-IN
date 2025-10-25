@@ -78,7 +78,7 @@ Secondary Coverage (Portable):
 
 - Sensor O2-1: Refueling operator position
 - Sensor O2-2: Any enclosed area adjacent to refueling zone
-- Sensor O2-3: Below-grade areas (H₂ heavier than air when cold)
+- Sensor O2-3: Below-grade areas (monitor for O₂ displacement/asphyxiant risk)
 
 ═══════════════════════════════════════════════════════════════════
 
