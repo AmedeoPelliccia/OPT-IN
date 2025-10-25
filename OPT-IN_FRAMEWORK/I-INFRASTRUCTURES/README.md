@@ -1,11 +1,41 @@
 # I-INFRASTRUCTURES
 
-This section contains ground-based infrastructure and support systems according to ATA chapters:
+Authoritative ground infrastructure and support content organized by ATA chapter. All human-readable docs are Markdown; each file has a `.meta.yaml` sidecar (v1.1). Folder names use `NN-SECTION_NAME` numeration. Indices are hyperlinkable.
 
-- ATA 02: OPERATIONS INFORMATION (GROUND-BASED OPS)
-- ATA 03: SUPPORT INFORMATION (GROUND SUPPORT EQUIPMENT - GSE)
-- ATA 10: PARKING, MOORING, STORAGE & RETURN TO SERVICE
-- ATA 13: HARDWARE AND GENERAL TOOLS
-- ATA 85-90 (Reserved): INFRASTRUCTURE INTERFACE STANDARDS
-- ATA 115: FLIGHT SIMULATOR SYSTEMS
-- ATA 116: FLIGHT SIMULATOR CUING SYSTEM
+## Contents
+
+- [ATA_02-OPERATIONS_INFORMATION](ATA_02-OPERATIONS_INFORMATION/)  
+  Ground-based ops: FCOM/QRH, performance, W&B, MEL, ground ops.
+
+- [ATA_03-SUPPORT_INFORMATION](ATA_03-SUPPORT_INFORMATION/)  
+  GSE standards and manuals, firmware, acceptance tests, safety, registry.
+
+- [ATA_10-PARKING_MOORING_STORAGE_RTS](ATA_10-PARKING_MOORING_STORAGE_RTS/)  
+  Parking, mooring, storage (short/long term), return to service, diagrams.
+
+- [ATA_13-HARDWARE_AND_GENERAL_TOOLS](ATA_13-HARDWARE_AND_GENERAL_TOOLS/)  
+  Hardware and consumables catalogs, general tools, inventory and control.
+
+- [ATA_85-90-INFRASTRUCTURE_INTERFACE_STANDARDS](ATA_85-90-INFRASTRUCTURE_INTERFACE_STANDARDS/)  
+  Normative airport interfaces: fluids, HVDC power, datalink, physical envelopes, compliance tests.
+
+- [ATA_115-FLIGHT_SIMULATOR_SYSTEMS](ATA_115-FLIGHT_SIMULATOR_SYSTEMS/)  
+  Qualification (QTG), aircraft data packages, simulator architecture, ops & maintenance, software, logs.
+
+- [ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM](ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM/)  
+  Visual, motion, aural, and control loading specs; calibration; latency tests; software; logs.
+
+## Conventions
+
+- **Naming:** `<DOC>_<SUBJECT>_rev<SEMVER>_<YYYYMMDD>.<ext>`  
+- **Sidecars:** every `.md/.yml/.json/.bin` has `<file>.meta.yaml` with `{id, revision, effective_date, integrity.checksum}`.  
+- **Integrity:** signatures and `checksums/SHA256SUMS.txt` where present.  
+- **Cross-refs (minimum):**  
+  - ATA 02 ↔ 03, 10, 13  
+  - ATA 85 ↔ 28-60, 26-40; ATA 86 ↔ 24, 46-40, 95  
+  - ATA 115 ↔ 116, 42, 27, 28-60  
+- **CI checks:** filename lint, sidecar schema, link check, checksum verify.
+
+## Change control
+
+All changes via PR with approver roles per `INDEX.meta.yaml`. Breaking changes require version bump and back-links update.
