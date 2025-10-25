@@ -17,7 +17,7 @@ This document provides the authoritative glossary of abbreviations and acronyms 
 | Abbreviation | Term | Definition |
 | :--- | :--- | :--- |
 | **ADS-B** | Automatic Dependent Surveillance-Broadcast | Surveillance technology for aircraft tracking |
-| **AMPEL360** | Advanced Modular Platform for Efficient Low-emission 360 | The AMPEL360 aircraft program |
+| **AMPEL360** | Aerospace Modular Platforms, Emissions-Low | AMPEL develops modular aerospace platforms that minimize lifecycle emissions. |
 | **APU** | Auxiliary Power Unit | Provides auxiliary power for aircraft systems |
 | **ASD-STE100** | Aerospace and Defence - Simplified Technical English | Controlled language specification |
 | **ATA** | Air Transport Association | Industry standards organization |

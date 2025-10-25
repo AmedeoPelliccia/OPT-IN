@@ -24,7 +24,7 @@ approvals:
 integrity:
   checksum:
     algorithm: "sha256"
-    value: "2bceba0e1b712aec30da71709e5f6cdcfc55458e3328c5a9a5ef5aff12ee8d08"
+    value: "f1e4ad01c3554c88e51f9e60f5524d8d50a26a9d24ef3f7e3d89464bd877ab60"
 revision_history:
   - version: "2.5.0"
     date: "2029-01-10"
