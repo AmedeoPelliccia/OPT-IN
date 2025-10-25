@@ -36,7 +36,7 @@ The following framework ensures the critical interfaces between systems are form
 
 * **O-ORGANIZATION**
 
-  * [`ATA_00-GENERAL/`](OPT-IN%20FRAMEWORK/O-ORGANIZATION/ATA_00-GENERAL/) - Comprehensive governance framework with detailed subdirectories
+  * [`ATA_00-GENERAL/`](OPT-IN FRAMEWORK/O-ORGANIZATION/ATA_00-GENERAL/) - Comprehensive governance framework with detailed subdirectories
   * [`ATA-01_MAINTENANCE_POLICY/`](O-ORGANIZATION/ATA-01_MAINTENANCE_POLICY/)
   * [`ATA-04_AIRWORTHINESS_LIMITATIONS/`](O-ORGANIZATION/ATA-04_AIRWORTHINESS_LIMITATIONS/)
   * [`ATA-05_TIME_LIMITS_MAINT_CHECKS/`](O-ORGANIZATION/ATA-05_TIME_LIMITS_MAINT_CHECKS/)
