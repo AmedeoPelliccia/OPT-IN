@@ -1,0 +1,22 @@
+schema_version: "1.1"
+folder: "ATA_13-HARDWARE_AND_GENERAL_TOOLS"
+purpose: "Master catalog and management system for all non-specialized hardware and general tools for AMPEL360 maintenance and servicing"
+owners: ["Materials & Process Engineering", "Maintenance Planning", "Quality Assurance"]
+approvers:
+  - role: "Materials & Process Engineering Lead"
+    name: "TBD"
+  - role: "Maintenance Manager"
+    name: "TBD"
+  - role: "Quality Manager"
+    name: "TBD"
+effective_date: "2029-01-15"
+doc_policy:
+  naming: "<TYPE>_<Subject>_<SEMVER>.<ext> or <TYPE>_<Subject>.<ext>"
+  formats: ["md", "yaml", "csv", "json"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "SHA256SUMS.txt"
+  signature_required: ["md", "csv"]
+refs:
+  ata_links: ["03", "05", "20", "70"]
+  standards: ["NAS", "MS", "AN", "SAE-AS", "MIL-SPEC", "SAE-AMS"]
