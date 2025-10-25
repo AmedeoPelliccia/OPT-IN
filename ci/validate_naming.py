@@ -17,15 +17,15 @@ from pathlib import Path
 
 # Define naming patterns for different document types
 PATTERNS = {
-    'ICD': re.compile(r'^ICD_[A-Z0-9-]+_[\w-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf|dxf)$'),
-    'GOM': re.compile(r'^GOM_[A-Z0-9-]+_[\w-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|xml|pdf)$'),
-    'ATP': re.compile(r'^ATP_[A-Z0-9-]+_[\w-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|csv|pdf)$'),
-    'IPC': re.compile(r'^IPC_[A-Z0-9-]+_[\w-]+_rev\d+\.\d+\.\d+_\d{8}\.(xml|json)$'),
-    'SDS': re.compile(r'^SDS_[A-Z0-9-]+_[\w-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf)$'),
+    'ICD': re.compile(r'^ICD_[A-Z0-9-]+_[A-Za-z0-9-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf|dxf)$'),
+    'GOM': re.compile(r'^GOM_[A-Z0-9-]+_[A-Za-z0-9-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|xml|pdf)$'),
+    'ATP': re.compile(r'^ATP_[A-Z0-9-]+_[A-Za-z0-9-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|csv|pdf)$'),
+    'IPC': re.compile(r'^IPC_[A-Z0-9-]+_[A-Za-z0-9-]+_rev\d+\.\d+\.\d+_\d{8}\.(xml|json)$'),
+    'SDS': re.compile(r'^SDS_[A-Z0-9-]+_[A-Za-z0-9-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf)$'),
     'FW': re.compile(r'^FW_[A-Z0-9-]+_v\d+\.\d+\.\d+\.(bin|hex|elf|sig)$'),
     'SW': re.compile(r'^SW_[A-Z0-9-]+_v\d+\.\d+\.\d+\.(zip|tar\.gz|sig)$'),
-    'TRAIN': re.compile(r'^TRAIN_[A-Z0-9-]+_[\w-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf)$'),
-    'MAINT': re.compile(r'^MAINT_[A-Z0-9-]+_[\w-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf)$'),
+    'TRAIN': re.compile(r'^TRAIN_[A-Z0-9-]+_[A-Za-z0-9-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf)$'),
+    'MAINT': re.compile(r'^MAINT_[A-Z0-9-]+_[A-Za-z0-9-]+_rev\d+\.\d+\.\d+_\d{8}\.(md|pdf)$'),
     'CAL': re.compile(r'^CAL_[A-Z0-9-]+_\d{8}\.(md|pdf)$'),
 }
 
