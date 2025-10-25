@@ -30,9 +30,6 @@ The following framework ensures the critical interfaces between systems are form
 ---
 
 ### **Locked-Down and Final AMPEL360 ATA Chapter Mapping**
-
-Here’s a GitHub-ready, **non-grouped** hyperlinked index plus an idempotent tree generator.
-
 ---
 
 ## Hyperlinked index
