@@ -1,0 +1,49 @@
+schema_version: "1.1"
+id: "STD_Numbering-And-Naming-Conventions"
+document:
+  type: "STD"
+  title: "Numbering and Naming Conventions"
+  revision: "1.1.0"
+  effective_date: "2028-02-20"
+  subject: "Standardized numbering and naming conventions for all technical artifacts"
+  ata_chapter: "00"
+  category: "Governance and Standards"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "All Personnel"
+    - "Engineering"
+    - "Documentation"
+    - "Quality Assurance"
+    - "Configuration Management"
+approvals:
+  - authority: "Configuration Management Team"
+    status: "Released"
+    date: "2028-02-20"
+  - authority: "Chief Engineering Office"
+    status: "Approved"
+    date: "2028-02-20"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "f5af76e856134943ffa56e531b2cf4d29a521cda63037d70fb8803b15af33acb"
+revision_history:
+  - version: "1.1.0"
+    date: "2028-02-20"
+    changes: "Added provisional code naming and migration guidelines"
+    author: "Configuration Management Team"
+  - version: "1.0.0"
+    date: "2028-01-01"
+    changes: "Initial release of numbering and naming conventions"
+    author: "Configuration Management Team"
+references:
+  standards:
+    - "Semantic Versioning"
+    - "ATA iSpec 2200"
+    - "ISO 8601"
+  related_documents:
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"
+    - "STD_Metadata-Schema-Guide_rev1.1.0_20280220.md"
+    - "DOC_OPT-IN-Framework-Philosophy_rev1.0.0_20280101.md"

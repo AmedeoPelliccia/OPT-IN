@@ -1,0 +1,49 @@
+schema_version: "1.1"
+id: "DICT_Master-Terminology"
+document:
+  type: "DICT"
+  title: "Master Terminology Dictionary"
+  revision: "2.1.0"
+  effective_date: "2029-01-10"
+  subject: "Master terminology dictionary with technical terms and concepts"
+  ata_chapter: "00"
+  category: "Definitions and Terminology"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "All Personnel"
+approvals:
+  - authority: "Terminology Committee"
+    status: "Released"
+    date: "2029-01-10"
+  - authority: "Chief Engineering Office"
+    status: "Approved"
+    date: "2029-01-10"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "950c3565299fcbd438b14930e96a94e11bc185c76b6a9b2739e93cd2fffcf33a"
+revision_history:
+  - version: "2.1.0"
+    date: "2029-01-10"
+    changes: "Added QIS, BWB enhanced definition, Provisional Code"
+    author: "Terminology Committee"
+  - version: "2.0.0"
+    date: "2028-11-01"
+    changes: "Major revision aligned with OPT-IN framework"
+    author: "Terminology Committee"
+  - version: "1.5.0"
+    date: "2028-08-15"
+    changes: "Added hydrogen and fuel cell terminology"
+    author: "Terminology Committee"
+  - version: "1.0.0"
+    date: "2028-03-01"
+    changes: "Initial release"
+    author: "Terminology Committee"
+references:
+  related_documents:
+    - "GLOSSARY_Abbreviations-And-Acronyms_rev2.5.0_20290110.md"
+    - "DOC_OPT-IN-Framework-Philosophy_rev1.0.0_20280101.md"
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"

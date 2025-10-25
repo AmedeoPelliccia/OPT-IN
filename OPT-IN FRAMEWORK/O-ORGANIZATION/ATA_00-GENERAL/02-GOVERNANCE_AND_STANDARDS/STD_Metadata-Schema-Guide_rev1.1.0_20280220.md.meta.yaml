@@ -1,0 +1,48 @@
+schema_version: "1.1"
+id: "STD_Metadata-Schema-Guide"
+document:
+  type: "STD"
+  title: "Metadata Schema Guide"
+  revision: "1.1.0"
+  effective_date: "2028-02-20"
+  subject: "Rules for .meta.yaml composition and validation"
+  ata_chapter: "00"
+  category: "Governance and Standards"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "All Personnel"
+    - "Engineering"
+    - "Documentation"
+    - "Quality Assurance"
+approvals:
+  - authority: "Documentation Architecture Team"
+    status: "Released"
+    date: "2028-02-20"
+  - authority: "Chief Engineering Office"
+    status: "Approved"
+    date: "2028-02-20"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "355e6936f6e54f20ca5c437291d1ba90631dda83aa8f7d876e5ca8e67027bdbe"
+revision_history:
+  - version: "1.1.0"
+    date: "2028-02-20"
+    changes: "Added security classification section and enhanced validation rules"
+    author: "Documentation Architecture Team"
+  - version: "1.0.0"
+    date: "2028-01-01"
+    changes: "Initial release of metadata schema guide"
+    author: "Documentation Architecture Team"
+references:
+  standards:
+    - "YAML 1.2 Specification"
+    - "JSON Schema Draft 7"
+    - "ISO 8601"
+    - "Semantic Versioning"
+  related_documents:
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"
+    - "DOC_OPT-IN-Framework-Philosophy_rev1.0.0_20280101.md"

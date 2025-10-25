@@ -1,0 +1,45 @@
+schema_version: "1.1"
+id: "DOC_OPT-IN-Framework-Philosophy"
+document:
+  type: "DOC"
+  title: "The OPT-IN Framework Philosophy"
+  revision: "1.0.0"
+  effective_date: "2028-01-01"
+  subject: "Framework definition and guiding principles"
+  ata_chapter: "00"
+  category: "Introduction and Philosophy"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "All Personnel"
+    - "Engineering"
+    - "Documentation"
+    - "Quality Assurance"
+approvals:
+  - authority: "Chief Engineering Office"
+    status: "Released"
+    date: "2028-01-01"
+  - authority: "Program Director"
+    status: "Approved"
+    date: "2028-01-01"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "602eef36390991138e90777b9ec87b64be835325f73b64c14775a848e5fd84a2"
+revision_history:
+  - version: "1.0.0"
+    date: "2028-01-01"
+    changes: "Initial release of OPT-IN framework philosophy"
+    author: "Documentation Architecture Team"
+references:
+  standards:
+    - "ATA iSpec 2200"
+    - "S1000D"
+    - "ASD-STE100"
+    - "DO-178C"
+    - "DO-254"
+  related_documents:
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"
+    - "STD_Metadata-Schema-Guide_rev1.1.0_20280220.md"

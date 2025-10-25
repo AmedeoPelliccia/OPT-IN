@@ -4,6 +4,13 @@
 
 General information, abbreviations, and common data applicable across all systems.
 
+## ⚠️ Updated Structure
+
+**This directory has been superseded by the comprehensive ATA_00-GENERAL structure.**
+
+**Please refer to the new location:**
+- [**ATA_00-GENERAL**](../ATA_00-GENERAL/) - Complete governance framework with detailed subdirectories
+
 ## Applicable Standards & Regulations
 
 - ATA iSpec 2200
