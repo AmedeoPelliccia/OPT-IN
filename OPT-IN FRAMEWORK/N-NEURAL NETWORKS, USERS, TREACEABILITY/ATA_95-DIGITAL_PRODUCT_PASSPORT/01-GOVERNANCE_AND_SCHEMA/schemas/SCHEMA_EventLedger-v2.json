@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/EventLedger-v2.json",
+  "title": "Event Ledger Entry",
+  "description": "Immutable event log entry in the Digital Product Passport system",
+  "type": "object",
+  "required": ["schema_version", "event_id", "prev_event_hash", "merkle_root", "log_index", "timestamp_utc", "actor", "action", "subjects", "signature"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Schema version (MAJOR.MINOR)"
+    },
+    "event_id": {
+      "type": "string",
+      "description": "Unique identifier for this event"
+    },
+    "prev_event_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hash of the previous event (creates chain)"
+    },
+    "merkle_root": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "Merkle tree root for this event batch"
+    },
+    "log_index": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Sequential index in the global event log"
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when event occurred"
+    },
+    "actor": {
+      "type": "object",
+      "required": ["type", "id"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["OEM", "MRO", "OPERATOR", "REGULATOR", "AUDITOR"],
+          "description": "Type of actor performing the action"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the actor organization"
+        },
+        "technician_id": {
+          "type": "string",
+          "description": "Individual technician identifier if applicable"
+        },
+        "location": {
+          "type": "string",
+          "description": "Physical location where action was performed"
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "required": ["type", "description"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["MANUFACTURE", "INSTALLATION", "REMOVAL", "REPLACEMENT", "INSPECTION", "REPAIR", "MODIFICATION", "TRANSFER", "DECOMMISSION"],
+          "description": "Type of action performed"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the action"
+        },
+        "work_order_ref": {
+          "type": "string",
+          "description": "Reference to work order or job card"
+        },
+        "regulatory_ref": {
+          "type": "string",
+          "description": "Reference to applicable airworthiness directive or service bulletin"
+        }
+      }
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "id"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["Aircraft", "Part", "PartInstalled", "PartRemoved", "Document"],
+            "description": "Type of subject affected by this event"
+          },
+          "id": {
+            "type": "string",
+            "description": "URN identifier for the subject"
+          },
+          "details": {
+            "type": "object",
+            "description": "Additional subject-specific details",
+            "additionalProperties": true
+          }
+        }
+      },
+      "description": "Entities affected by this event"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "signer_key_id", "value"],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["ed25519", "ecdsa"],
+          "description": "Digital signature algorithm"
+        },
+        "signer_key_id": {
+          "type": "string",
+          "description": "Identifier of the signing key"
+        },
+        "value": {
+          "type": "string",
+          "description": "Base64-encoded signature value"
+        }
+      },
+      "description": "Cryptographic signature ensuring event authenticity"
+    },
+    "log_sig": {
+      "type": "string",
+      "description": "Transparency log signature (anchoring proof)"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["PHOTO", "DOCUMENT", "CERTIFICATE", "MEASUREMENT"]
+          },
+          "ref": {
+            "type": "string",
+            "description": "Reference to attachment storage location"
+          },
+          "hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hash of attachment for integrity"
+          }
+        }
+      },
+      "description": "Supporting documentation attached to this event"
+    },
+    "data_classification": {
+      "type": "string",
+      "enum": ["PUBLIC", "INTERNAL", "REGULATED", "PII-SENSITIVE"],
+      "default": "REGULATED",
+      "description": "Data classification level for this event"
+    }
+  },
+  "additionalProperties": false
+}

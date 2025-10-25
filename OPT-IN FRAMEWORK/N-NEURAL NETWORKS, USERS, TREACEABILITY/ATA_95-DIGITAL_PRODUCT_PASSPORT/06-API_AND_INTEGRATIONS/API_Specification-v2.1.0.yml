@@ -1,0 +1,368 @@
+openapi: 3.0.3
+info:
+  title: AMPEL360 Digital Product Passport API
+  version: 2.1.0
+  description: |
+    RESTful API for accessing and managing Digital Product Passports for AMPEL360 aircraft and components.
+    
+    ## Authentication
+    All endpoints require authentication via OAuth 2.0 with JWT tokens.
+    
+    ## Rate Limits
+    - 1000 requests per hour for standard users
+    - 10000 requests per hour for system integrations
+    
+  contact:
+    name: AMPEL API Support
+    email: api-support@ampel360.aero
+  license:
+    name: Proprietary
+    
+servers:
+  - url: https://api.dpp.ampel360.aero/v2
+    description: Production server
+  - url: https://api-staging.dpp.ampel360.aero/v2
+    description: Staging server
+
+security:
+  - OAuth2: [read:passport, write:event]
+
+paths:
+  /aircraft/{msn}/passport:
+    get:
+      summary: Retrieve aircraft passport
+      description: Get the current digital product passport for a specific aircraft
+      operationId: getAircraftPassport
+      tags:
+        - Aircraft Passports
+      parameters:
+        - name: msn
+          in: path
+          required: true
+          description: Manufacturer Serial Number
+          schema:
+            type: string
+            example: "AMP360-001"
+        - name: revision
+          in: query
+          required: false
+          description: Specific revision number (omit for latest)
+          schema:
+            type: integer
+            example: 157
+      responses:
+        '200':
+          description: Passport retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AircraftPassport'
+        '404':
+          description: Aircraft not found
+        '403':
+          description: Access denied
+      security:
+        - OAuth2: [read:passport]
+  
+  /parts/{serial_number}/passport:
+    get:
+      summary: Retrieve part passport
+      description: Get the current digital product passport for a specific part
+      operationId: getPartPassport
+      tags:
+        - Part Passports
+      parameters:
+        - name: serial_number
+          in: path
+          required: true
+          description: Part serial number
+          schema:
+            type: string
+            example: "SN-ENG-L-12345"
+      responses:
+        '200':
+          description: Passport retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PartPassport'
+        '404':
+          description: Part not found
+        '403':
+          description: Access denied
+      security:
+        - OAuth2: [read:passport]
+  
+  /events:
+    post:
+      summary: Append new event to ledger
+      description: |
+        Create a new event entry in the immutable event ledger.
+        Requires appropriate role permissions (MRO, OPERATOR).
+      operationId: createEvent
+      tags:
+        - Event Ledger
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventLedgerEntry'
+      responses:
+        '201':
+          description: Event created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  event_id:
+                    type: string
+                  log_index:
+                    type: integer
+                  timestamp_utc:
+                    type: string
+                    format: date-time
+        '400':
+          description: Invalid event data
+        '403':
+          description: Insufficient permissions
+      security:
+        - OAuth2: [write:event]
+  
+  /events/{event_id}:
+    get:
+      summary: Retrieve specific event
+      description: Get details of a specific event from the ledger
+      operationId: getEvent
+      tags:
+        - Event Ledger
+      parameters:
+        - name: event_id
+          in: path
+          required: true
+          schema:
+            type: string
+            example: "event_MRO-1234-WorkOrder-5678"
+      responses:
+        '200':
+          description: Event retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventLedgerEntry'
+        '404':
+          description: Event not found
+      security:
+        - OAuth2: [read:passport]
+  
+  /aircraft/{msn}/events:
+    get:
+      summary: List events for aircraft
+      description: Retrieve paginated list of events related to a specific aircraft
+      operationId: listAircraftEvents
+      tags:
+        - Event Ledger
+      parameters:
+        - name: msn
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: from_date
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: to_date
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: event_type
+          in: query
+          schema:
+            type: string
+            enum: [MANUFACTURE, INSTALLATION, REMOVAL, REPLACEMENT, INSPECTION, REPAIR, MODIFICATION, TRANSFER, DECOMMISSION]
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: page_size
+          in: query
+          schema:
+            type: integer
+            default: 50
+            maximum: 100
+      responses:
+        '200':
+          description: Events retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  events:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/EventLedgerEntry'
+                  pagination:
+                    type: object
+                    properties:
+                      page:
+                        type: integer
+                      page_size:
+                        type: integer
+                      total_events:
+                        type: integer
+                      total_pages:
+                        type: integer
+      security:
+        - OAuth2: [read:passport]
+
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://auth.ampel360.aero/oauth/token
+          scopes:
+            read:passport: Read access to passports and events
+            write:event: Create new events in the ledger
+            read:piidata: Access to PII-sensitive data (restricted)
+  
+  schemas:
+    AircraftPassport:
+      type: object
+      description: Digital Product Passport for an aircraft
+      required:
+        - schema_version
+        - passport_id
+        - type
+        - revision
+        - last_updated_utc
+        - identity
+        - airworthiness
+        - configuration
+        - utilization
+        - provenance
+      properties:
+        schema_version:
+          type: string
+          example: "2.0"
+        passport_id:
+          type: string
+          example: "urn:ampel360:msn:001"
+        type:
+          type: string
+          enum: [AircraftPassport]
+        revision:
+          type: integer
+          example: 157
+        last_updated_utc:
+          type: string
+          format: date-time
+        identity:
+          type: object
+          properties:
+            msn:
+              type: string
+            registration:
+              type: string
+            operator:
+              type: string
+        airworthiness:
+          type: object
+          properties:
+            certificate_of_airworthiness_id:
+              type: string
+            status:
+              type: string
+              enum: [AIRWORTHY, GROUNDED, MAINTENANCE, DECOMMISSIONED]
+        configuration:
+          type: object
+        utilization:
+          type: object
+        provenance:
+          type: object
+    
+    PartPassport:
+      type: object
+      description: Digital Product Passport for a component
+      required:
+        - schema_version
+        - passport_id
+        - type
+        - revision
+        - last_updated_utc
+      properties:
+        schema_version:
+          type: string
+        passport_id:
+          type: string
+        type:
+          type: string
+          enum: [PartPassport]
+        revision:
+          type: integer
+    
+    EventLedgerEntry:
+      type: object
+      description: Immutable event log entry
+      required:
+        - schema_version
+        - event_id
+        - timestamp_utc
+        - actor
+        - action
+        - subjects
+      properties:
+        schema_version:
+          type: string
+        event_id:
+          type: string
+        prev_event_hash:
+          type: string
+        merkle_root:
+          type: string
+        log_index:
+          type: integer
+        timestamp_utc:
+          type: string
+          format: date-time
+        actor:
+          type: object
+          properties:
+            type:
+              type: string
+              enum: [OEM, MRO, OPERATOR, REGULATOR, AUDITOR]
+            id:
+              type: string
+        action:
+          type: object
+          properties:
+            type:
+              type: string
+              enum: [MANUFACTURE, INSTALLATION, REMOVAL, REPLACEMENT, INSPECTION, REPAIR, MODIFICATION, TRANSFER, DECOMMISSION]
+            description:
+              type: string
+        subjects:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              id:
+                type: string
+        signature:
+          type: object
+          properties:
+            algorithm:
+              type: string
+            signer_key_id:
+              type: string
+            value:
+              type: string
