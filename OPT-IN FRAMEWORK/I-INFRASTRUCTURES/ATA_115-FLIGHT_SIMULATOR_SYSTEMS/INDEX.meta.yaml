@@ -1,0 +1,72 @@
+# INDEX.meta.yaml
+# ATA 115: Flight Simulator Systems
+# Master metadata index for audit traceability
+
+document_type: "ATA_115_FLIGHT_SIMULATOR_SYSTEMS"
+revision: "1.0.0"
+date_created: "2028-01-15"
+date_modified: "2029-04-20"
+owner: "AMPEL360 Flight Training Division"
+regulatory_status: "EASA CS-FSTD(A) Level D Qualified"
+
+# Development Assurance Level
+dal: "D"
+qualification_level: "Level D"
+
+# Critical cross-references to on-board systems
+cross_references:
+  - ata_chapter: "ATA 42"
+    description: "Integrated Modular Avionics (QIS scheduler)"
+    relevance: "Simulator must model IMA timing and resource allocation"
+  - ata_chapter: "ATA 27"
+    description: "Flight Control Laws (BWB handling qualities)"
+    relevance: "Ground effect and control law behavior critical for Level D qualification"
+  - ata_chapter: "ATA 28"
+    description: "Cryogenic H₂ Fuel System"
+    relevance: "Safety procedures and system behavior modeling"
+  - ata_chapter: "ATA 26"
+    description: "Fire Protection (H₂ leak detection)"
+    relevance: "Emergency procedure training scenarios"
+
+# Directory structure validation
+structure:
+  - name: "01-QUALIFICATION_AND_CERTIFICATION"
+    required: true
+    description: "QTGs, certification plans, and certificates"
+  - name: "02-AIRCRAFT_DATA_PACKAGE_OEM"
+    required: true
+    description: "Version-controlled source data from aircraft program"
+  - name: "03-SIMULATOR_SYSTEMS_ARCHITECTURE"
+    required: true
+    description: "Hardware and software specifications"
+  - name: "04-OPERATIONS_AND_MAINTENANCE"
+    required: true
+    description: "SOM, SMM, and IPC manuals"
+  - name: "05-DATABASES"
+    required: true
+    description: "Visual and navigation databases"
+  - name: "06-CONFIGURATION_AND_SOFTWARE"
+    required: true
+    description: "Software versions and SBOMs"
+  - name: "07-REGISTRY_AND_LOGS"
+    required: true
+    description: "In-service status and maintenance logs"
+
+# Validation rules
+validation:
+  - rule: "All QTG tests must reference source aircraft data package version"
+    enforced: true
+  - rule: "Top-level folders must follow numeric prefix convention (NN-NAME)"
+    enforced: true
+  - rule: "Digital signatures required for aircraft data manifests"
+    enforced: true
+  - rule: "Checksums required for all binary data files"
+    enforced: true
+
+# Compliance notes
+compliance:
+  standards:
+    - "EASA CS-FSTD(A)"
+    - "FAA AC 120-40"
+    - "ICAO Doc 9625 (Manual of Criteria for FSTDs)"
+  audit_trail: "Automated CI validation via .github/workflows/ata115-structure-check.yml"

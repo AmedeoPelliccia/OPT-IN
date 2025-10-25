@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AMPEL360 Hybrid Powertrain Model -->
+<!-- Version: 3.1.5 -->
+<!-- Date: 2028-12-10 -->
+<!-- SHA256: b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2g3 -->
+
+<PowertrainModel>
+  <Header>
+    <Aircraft>AMPEL360</Aircraft>
+    <Version>3.1.5</Version>
+    <Date>2028-12-10</Date>
+    <Units>SI</Units>
+  </Header>
+
+  <ElectricMotor>
+    <Model>EM-AMPEL360-2000kW</Model>
+    <MaxPower_kW>2000</MaxPower_kW>
+    <MaxTorque_Nm>12000</MaxTorque_Nm>
+    <Efficiency>
+      <!-- RPM vs Efficiency table -->
+      <Point rpm="0" efficiency="0.0"/>
+      <Point rpm="1000" efficiency="0.92"/>
+      <Point rpm="2000" efficiency="0.95"/>
+      <Point rpm="3000" efficiency="0.96"/>
+      <Point rpm="4000" efficiency="0.95"/>
+      <Point rpm="5000" efficiency="0.93"/>
+    </Efficiency>
+  </ElectricMotor>
+
+  <FuelCellSystem ata_reference="24-60-00">
+    <Description>Hydrogen PEM Fuel Cell Stacks</Description>
+    <NumberOfStacks>4</NumberOfStacks>
+    <StackPowerRating_kW>500</StackPowerRating_kW>
+    <TotalPower_kW>2000</TotalPower_kW>
+    
+    <PerformanceCharacteristics>
+      <NominalEfficiency>0.55</NominalEfficiency>
+      <H2_Consumption_kg_per_kWh>0.025</H2_Consumption_kg_per_kWh>
+      <ResponseTime_sec>2.0</ResponseTime_sec>
+    </PerformanceCharacteristics>
+
+    <DegradationModel>
+      <!-- Supports QTG Test 3.B.2 - Fuel Cell Failure -->
+      <GradualDegradation>
+        <TimeConstant_min>5.0</TimeConstant_min>
+        <PowerDecayProfile>exponential</PowerDecayProfile>
+        <WarningThreshold_percent>70.0</WarningThreshold_percent>
+        <FailureThreshold_percent>30.0</FailureThreshold_percent>
+      </GradualDegradation>
+    </DegradationModel>
+
+    <H2_Isolation ata_reference="28-60-00">
+      <IsolationValveDelay_sec>3.0</IsolationValveDelay_sec>
+      <LeakDetection ata_reference="26-40-00">
+        <SensorResponse_sec>1.5</SensorResponse_sec>
+      </LeakDetection>
+    </H2_Isolation>
+  </FuelCellSystem>
+
+  <BatterySystem ata_reference="24-33-00">
+    <Chemistry>Solid_CO2_Advanced</Chemistry>
+    <Capacity_kWh>500</Capacity_kWh>
+    <MaxDischargeRate_kW>1000</MaxDischargeRate_kW>
+    <MaxChargeRate_kW>500</MaxChargeRate_kW>
+    
+    <StateOfChargeModel>
+      <SOC_percent voltage_V="800.0">100</SOC_percent>
+      <SOC_percent voltage_V="780.0">90</SOC_percent>
+      <SOC_percent voltage_V="760.0">80</SOC_percent>
+      <SOC_percent voltage_V="740.0">70</SOC_percent>
+      <SOC_percent voltage_V="720.0">60</SOC_percent>
+      <SOC_percent voltage_V="700.0">50</SOC_percent>
+    </StateOfChargeModel>
+  </BatterySystem>
+
+  <PowerManagement ata_reference="42-55-00">
+    <Description>Powertrain/Energy Orchestration Framework</Description>
+    <QIS_Integration ata_reference="42-60-00">
+      <ResourceAllocation>dynamic</ResourceAllocation>
+      <TaskMigration>enabled</TaskMigration>
+    </QIS_Integration>
+  </PowerManagement>
+
+  <FailureModes>
+    <!-- Referenced by QTG Test 3.B.2 -->
+    <Failure id="FC_STACK_DEGRADATION">
+      <AffectedSystem>FuelCellStack</AffectedSystem>
+      <Type>gradual</Type>
+      <Detection>power_output_monitoring</Detection>
+      <Annunciation>FUEL_CELL_DEGRADED_amber_then_FAIL_red</Annunciation>
+    </Failure>
+    
+    <Failure id="BATTERY_THERMAL_RUNAWAY" ata_reference="26-30-00">
+      <AffectedSystem>BatterySystem</AffectedSystem>
+      <Type>sudden</Type>
+      <Detection>thermal_sensors</Detection>
+      <FireProtection>automatic_discharge</FireProtection>
+    </Failure>
+  </FailureModes>
+
+</PowertrainModel>
