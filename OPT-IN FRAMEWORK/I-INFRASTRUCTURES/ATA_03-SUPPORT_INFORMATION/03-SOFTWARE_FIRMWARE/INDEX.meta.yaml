@@ -1,5 +1,5 @@
 schema_version: "1.1"
-folder: "ATA_03-SUPPORT_INFORMATION/03-software_firmware"
+folder: "ATA_03-SUPPORT_INFORMATION/03-SOFTWARE_FIRMWARE"
 purpose: "Software and firmware packages for GSE diagnostic and control systems"
 owners: ["Engineering", "IT", "Ground Ops"]
 approvers:

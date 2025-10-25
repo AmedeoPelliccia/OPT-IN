@@ -1,5 +1,5 @@
 schema_version: "1.1"
-folder: "ATA_03-SUPPORT_INFORMATION/08-spares"
+folder: "ATA_03-SUPPORT_INFORMATION/08-SPARES"
 purpose: "Illustrated Parts Catalogs (IPCs), spares inventory, and supply chain management"
 owners: ["Supply Chain", "Ground Ops", "Maintenance"]
 approvers:
