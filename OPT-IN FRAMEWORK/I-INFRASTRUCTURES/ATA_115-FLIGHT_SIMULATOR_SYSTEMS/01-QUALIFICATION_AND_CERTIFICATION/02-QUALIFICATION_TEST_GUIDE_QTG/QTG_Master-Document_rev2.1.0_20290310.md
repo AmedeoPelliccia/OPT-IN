@@ -114,7 +114,7 @@ All simulator changes documented and assessed for QTG impact
 
 - PLAN_Master-Certification-Strategy_rev1.0.0_20280115.md
 - Aircraft Data Package v3.2.0
-- EASA Qualification Certificate CERT_EASA-Level-D_ID-EU-1234_rev2.0.0_20290420.pdf
+- EASA Qualification Certificate CERT_EASA-Level-D_ID-EU-1234_rev2.0.0_20290420.md
 
 ## 9. Approval and Revision History
 

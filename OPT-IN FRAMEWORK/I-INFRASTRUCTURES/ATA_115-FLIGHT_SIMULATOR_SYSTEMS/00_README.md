@@ -38,7 +38,7 @@ The AMPEL360 FFS has a Development Assurance Level (DAL) of D as training infras
     │   │       ├── QTG-TEST_2.A.4b_Handling-Qualities-BWB-Ground-Effect.md
     │   │       └── QTG-TEST_3.B.2_Systems-H2-Fuel-Cell-Failure.md
     │   └── /03-CERTIFICATES
-    │       └── CERT_EASA-Level-D_ID-EU-1234_rev2.0.0_20290420.pdf
+    │       └── CERT_EASA-Level-D_ID-EU-1234_rev2.0.0_20290420.md
     ├── /02-AIRCRAFT_DATA_PACKAGE_OEM
     │   ├── MANIFEST_Data-Package-v3.2.0.md
     │   ├── MANIFEST_Data-Package-v3.2.0.sig
