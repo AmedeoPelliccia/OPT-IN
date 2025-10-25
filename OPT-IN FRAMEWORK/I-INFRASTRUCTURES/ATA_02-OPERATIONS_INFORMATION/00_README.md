@@ -35,28 +35,28 @@ The QRH is generated from a canonical source XML file. The Markdown document is 
 ## 01 — FCOM · Flight Crew Operating Manual
 
 * [`/01-FCOM-Flight_Crew_Operating_Manual/INDEX.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/INDEX.meta.yaml)
-* **LIMITATIONS**
+* **01-LIMITATIONS**
 
-  * [`FCOM-LIMITATIONS_General.md`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_General.md)
-  * [`FCOM-LIMITATIONS_General.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_General.md.meta.yaml)
-  * [`FCOM-LIMITATIONS_Operational_Minima.md`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_Operational_Minima.md)
-  * [`FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml)
+  * [`FCOM-LIMITATIONS_General.md`](01-FCOM-Flight_Crew_Operating_Manual/01-LIMITATIONS/FCOM-LIMITATIONS_General.md)
+  * [`FCOM-LIMITATIONS_General.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/01-LIMITATIONS/FCOM-LIMITATIONS_General.md.meta.yaml)
+  * [`FCOM-LIMITATIONS_Operational_Minima.md`](01-FCOM-Flight_Crew_Operating_Manual/01-LIMITATIONS/FCOM-LIMITATIONS_Operational_Minima.md)
+  * [`FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/01-LIMITATIONS/FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml)
 * **NORMAL_PROCEDURES**
 
   * *(files with `.meta.yaml` sidecars)* — [`/01-FCOM-Flight_Crew_Operating_Manual/NORMAL_PROCEDURES/`](01-FCOM-Flight_Crew_Operating_Manual/NORMAL_PROCEDURES/)
-* **NON-NORMAL_PROCEDURES**
+* **03-NON_NORMAL_PROCEDURES**
 
-  * [`INDEX.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/INDEX.meta.yaml)
-  * [`NNP_CB_RESET_POLICY.md`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_CB_RESET_POLICY.md)
-  * [`NNP_CB_RESET_POLICY.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_CB_RESET_POLICY.md.meta.yaml)
-  * [`NNP_24-33_Battery_Thermal_Runaway.md`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_24-33_Battery_Thermal_Runaway.md)
-  * [`NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml)
-  * [`NNP_26-40_H2_Leak_In_Flight.md`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_26-40_H2_Leak_In_Flight.md)
-  * [`NNP_26-40_H2_Leak_In_Flight.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_26-40_H2_Leak_In_Flight.md.meta.yaml)
-* **SYSTEM_DESCRIPTIONS**
+  * [`INDEX.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/03-NON_NORMAL_PROCEDURES/INDEX.meta.yaml)
+  * [`NNP_CB_RESET_POLICY.md`](01-FCOM-Flight_Crew_Operating_Manual/03-NON_NORMAL_PROCEDURES/NNP_CB_RESET_POLICY.md)
+  * [`NNP_CB_RESET_POLICY.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/03-NON_NORMAL_PROCEDURES/NNP_CB_RESET_POLICY.md.meta.yaml)
+  * [`NNP_24-33_Battery_Thermal_Runaway.md`](01-FCOM-Flight_Crew_Operating_Manual/03-NON_NORMAL_PROCEDURES/NNP_24-33_Battery_Thermal_Runaway.md)
+  * [`NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/03-NON_NORMAL_PROCEDURES/NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml)
+  * [`NNP_26-40_H2_Leak_In_Flight.md`](01-FCOM-Flight_Crew_Operating_Manual/03-NON_NORMAL_PROCEDURES/NNP_26-40_H2_Leak_In_Flight.md)
+  * [`NNP_26-40_H2_Leak_In_Flight.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/03-NON_NORMAL_PROCEDURES/NNP_26-40_H2_Leak_In_Flight.md.meta.yaml)
+* **04-SYSTEM_DESCRIPTIONS**
 
-  * [`SYS_42-60_QIS_Scheduler_Overview.md`](01-FCOM-Flight_Crew_Operating_Manual/SYSTEM_DESCRIPTIONS/SYS_42-60_QIS_Scheduler_Overview.md)
-  * [`SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/SYSTEM_DESCRIPTIONS/SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml)
+  * [`SYS_42-60_QIS_Scheduler_Overview.md`](01-FCOM-Flight_Crew_Operating_Manual/04-SYSTEM_DESCRIPTIONS/SYS_42-60_QIS_Scheduler_Overview.md)
+  * [`SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/04-SYSTEM_DESCRIPTIONS/SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml)
 
 ## 02 — QRH · Quick Reference Handbook
 
@@ -64,28 +64,28 @@ The QRH is generated from a canonical source XML file. The Markdown document is 
 * [`AMPEL360_QRH_Digital.md`](02-QRH-Quick_Reference_Handbook/AMPEL360_QRH_Digital.md)
 * [`AMPEL360_QRH_Digital.md.meta.yaml`](02-QRH-Quick_Reference_Handbook/AMPEL360_QRH_Digital.md.meta.yaml)
 * [`AMPEL360_QRH_Digital.sig`](02-QRH-Quick_Reference_Handbook/AMPEL360_QRH_Digital.sig)
-* **source_data**
+* **01-SOURCE_DATA**
 
-  * [`qrh_procedures.xml`](02-QRH-Quick_Reference_Handbook/source_data/qrh_procedures.xml)
+  * [`qrh_procedures.xml`](02-QRH-Quick_Reference_Handbook/01-SOURCE_DATA/qrh_procedures.xml)
 
 ## 03 — FPERF · Performance
 
 * [`/03-FPERF-Performance/INDEX.meta.yaml`](03-FPERF-Performance/INDEX.meta.yaml)
-* **data_packages**
+* **01-DATA_PACKAGES**
 
-  * [`manifest.meta.yaml`](03-FPERF-Performance/data_packages/manifest.meta.yaml)
-  * [`takeoff_performance.json`](03-FPERF-Performance/data_packages/takeoff_performance.json)
-  * [`takeoff_performance.json.sig`](03-FPERF-Performance/data_packages/takeoff_performance.json.sig)
+  * [`manifest.meta.yaml`](03-FPERF-Performance/01-DATA_PACKAGES/manifest.meta.yaml)
+  * [`takeoff_performance.json`](03-FPERF-Performance/01-DATA_PACKAGES/takeoff_performance.json)
+  * [`takeoff_performance.json.sig`](03-FPERF-Performance/01-DATA_PACKAGES/takeoff_performance.json.sig)
 
 ## 04 — WBM · Weight and Balance
 
 * [`/04-WBM-Weight_and_Balance/INDEX.meta.yaml`](04-WBM-Weight_and_Balance/INDEX.meta.yaml)
-* **data**
+* **01-DATA**
 
-  * [`basic_empty_weight_config.json`](04-WBM-Weight_and_Balance/data/basic_empty_weight_config.json)
-  * [`basic_empty_weight_config.json.sig`](04-WBM-Weight_and_Balance/data/basic_empty_weight_config.json.sig)
-  * [`cg_envelope_BWB.json`](04-WBM-Weight_and_Balance/data/cg_envelope_BWB.json)
-  * [`cg_envelope_BWB.json.sig`](04-WBM-Weight_and_Balance/data/cg_envelope_BWB.json.sig)
+  * [`basic_empty_weight_config.json`](04-WBM-Weight_and_Balance/01-DATA/basic_empty_weight_config.json)
+  * [`basic_empty_weight_config.json.sig`](04-WBM-Weight_and_Balance/01-DATA/basic_empty_weight_config.json.sig)
+  * [`cg_envelope_BWB.json`](04-WBM-Weight_and_Balance/01-DATA/cg_envelope_BWB.json)
+  * [`cg_envelope_BWB.json.sig`](04-WBM-Weight_and_Balance/01-DATA/cg_envelope_BWB.json.sig)
 
 ## 05 — MEL · Minimum Equipment List
 
@@ -100,13 +100,13 @@ The QRH is generated from a canonical source XML file. The Markdown document is 
 * [`/06-GROUND_OPS-Ground_Operations_Manual/INDEX.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/INDEX.meta.yaml)
 * [`00-Training_&_PPE.md`](06-GROUND_OPS-Ground_Operations_Manual/00-Training_%26_PPE.md)
 * [`00-Training_&_PPE.md.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/00-Training_%26_PPE.md.meta.yaml)
-* **01-Refueling_and_Offload**
+* **01-REFUELING_AND_OFFLOAD**
 
   * **LH2_Cryogenic_Refueling**
 
-    * [`INDEX.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/INDEX.meta.yaml)
-    * [`LH2_Area_Monitoring_O2_H2_Sensors.md`](06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.md)
-    * [`LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml)
+    * [`INDEX.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/01-REFUELING_AND_OFFLOAD/LH2_Cryogenic_Refueling/INDEX.meta.yaml)
+    * [`LH2_Area_Monitoring_O2_H2_Sensors.md`](06-GROUND_OPS-Ground_Operations_Manual/01-REFUELING_AND_OFFLOAD/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.md)
+    * [`LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/01-REFUELING_AND_OFFLOAD/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml)
 
 
 ## Document Types
