@@ -1,0 +1,91 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+# FCOM Limitations - Operational Minima
+
+id: "FCOM-LIMITATIONS_Operational_Minima"
+document_type: "Flight Crew Operating Manual - Limitations"
+ata_chapter: "02"
+title: "Operational Minima and Dispatch Requirements"
+
+# Revision and Effectivity Control
+revision: "1.0.0"
+effective_date: "2028-10-01"
+supersedes: null
+effectivity:
+  msn: "AMP360-001 through AMP360-999"
+  configuration_id: "BWB-H2-CFG-02"
+applicability: "All Flight Crew, Dispatch"
+
+# Document Classification
+classification: "CONTROLLED - FLIGHT OPERATIONS"
+distribution: "Flight Crew, Dispatch, Training Department"
+
+# Regulatory Basis
+regulatory_basis:
+  - standard: "EASA Part-OPS"
+    section: "CAT.OP.MPA.110 - Aerodrome operating minima"
+  - standard: "FAA 14 CFR Part 121"
+    section: "§121.651 - Takeoff and landing weather minimums"
+  - standard: "ICAO Annex 6"
+    section: "Part I - Chapter 4"
+
+approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.FCOM.OPMIN.001"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-FCOM-OPMIN-001"
+    status: "Approved"
+    date: "2028-09-28"
+  - authority: "AMPEL360 Flight Operations"
+    status: "Released"
+    date: "2028-09-30"
+    approved_by: "Chief Pilot & Director of Operations"
+
+# Content Summary
+content_sections:
+  - "Weather Minima"
+  - "Equipment Minima"
+  - "Facility Requirements"
+  - "Crew Qualification Minima"
+  - "Dispatch Conditions"
+  - "Special Operational Minima"
+
+# Special Considerations
+ampel360_specific_requirements:
+  - "H₂ refueling facility availability"
+  - "CO₂ offload capability at destination"
+  - "BWB ground handling capability"
+  - "Dual-fuel (SAF + H₂) reserves calculation"
+  - "Battery SOC minimum for dispatch"
+
+# Cross-References
+related_documents:
+  - "FCOM-LIMITATIONS_General"
+  - "MEL - Minimum Equipment List"
+  - "QRH §DISPATCH"
+  - "Performance Manual"
+  
+related_ata_chapters:
+  - "ATA-05: Time Limits / Maintenance Checks"
+  - "ATA-24: Electrical Power"
+  - "ATA-28: Fuel Systems"
+
+# Data Integrity
+checksum:
+  algorithm: "sha256"
+  value: "e5f6789012345678901234567890abcdef1234567890abcdef1234567890"
+
+# Audit Trail
+change_history:
+  - version: "1.0.0"
+    date: "2028-09-30"
+    description: "Initial release establishing operational minima for AMPEL360"
+    author: "Flight Operations Documentation Team"
+    approved_by: "Chief Pilot & Director of Operations"
+
+# Notes
+notes: |
+  This document must be consulted before every dispatch decision.
+  Weather minima may be more restrictive than standard aircraft due to BWB characteristics.
+  Facility requirements are unique due to H₂ and CO₂ handling needs.

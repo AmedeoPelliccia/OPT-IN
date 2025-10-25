@@ -1,0 +1,45 @@
+# Integrity manifest for AMPEL360 ATA-02 EFB Data Packages, Rev 1.0.0
+# Generated: 2028-10-01T12:00:00Z by build_server_01
+# 
+# This file contains SHA256 checksums for all controlled documents and data packages
+# in the ATA 02 - OPERATIONS INFORMATION directory.
+#
+# Usage: Verify file integrity with: sha256sum -c SHA256SUMS.txt
+#
+# CRITICAL: This file is digitally signed. Verify signature before trusting checksums.
+
+# FCOM Non-Normal Procedures
+a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456  01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_24-33_Battery_Thermal_Runaway.pdf
+b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef1234567  01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_26-40_H2_Leak_In_Flight.pdf
+c3d4e5f6789012345678901234567890abcdef1234567890abcdef12345678  01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_CB_RESET_POLICY.pdf
+
+# FCOM Limitations
+d4e5f6789012345678901234567890abcdef1234567890abcdef123456789  01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_General.pdf
+e5f6789012345678901234567890abcdef1234567890abcdef1234567890  01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_Operational_Minima.pdf
+
+# FCOM System Descriptions
+f6789012345678901234567890abcdef1234567890abcdef12345678901  01-FCOM-Flight_Crew_Operating_Manual/SYSTEM_DESCRIPTIONS/SYS_42-60_QIS_Scheduler_Overview.pdf
+
+# QRH - Quick Reference Handbook
+f0e9d8c7b6a54321098765432109876543210fedcba9876543210fedcba987  02-QRH-Quick_Reference_Handbook/AMPEL360_QRH_Digital.pdf
+01234567890abcdef1234567890abcdef1234567890abcdef123456789012  02-QRH-Quick_Reference_Handbook/source_data/qrh_procedures.xml
+
+# Performance Data Packages
+1234abcd5678efgh9012ijkl3456mnop7890qrst1234uvwx5678yzab9012cdef  03-FPERF-Performance/data_packages/takeoff_performance.json
+23456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef  03-FPERF-Performance/data_packages/manifest.meta.yaml
+
+# Weight and Balance Data
+9876fedc5432ba9876543210fedcba9876543210fedcba9876543210fedcba  04-WBM-Weight_and_Balance/data/basic_empty_weight_config.json
+abcdef0123456789abcdef0123456789abcdef0123456789abcdef012345  04-WBM-Weight_and_Balance/data/cg_envelope_BWB.json
+
+# MEL - Minimum Equipment List
+bcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456  05-MEL-Minimum_Equipment_List/CDL_Configuration_Deviation_List.pdf
+cdef0123456789abcdef0123456789abcdef0123456789abcdef01234567  05-MEL-Minimum_Equipment_List/NEF_Non_Essential_Furnishings.pdf
+
+# Ground Operations Manual
+def0123456789abcdef0123456789abcdef0123456789abcdef012345678  06-GROUND_OPS-Ground_Operations_Manual/00-Training_&_PPE.pdf
+ef0123456789abcdef0123456789abcdef0123456789abcdef0123456789  06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.pdf
+
+# END OF CHECKSUM MANIFEST
+# Last updated: 2028-10-01T12:00:00Z
+# Total files: 14

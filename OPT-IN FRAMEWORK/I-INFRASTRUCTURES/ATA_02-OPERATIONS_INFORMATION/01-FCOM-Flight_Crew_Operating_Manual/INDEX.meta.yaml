@@ -1,0 +1,76 @@
+# Directory Governance for Flight Crew Operating Manual (FCOM)
+# AMPEL360 Aircraft Operations Documentation
+
+directory_id: "01-FCOM-Flight_Crew_Operating_Manual"
+parent_directory: "ATA_02-OPERATIONS_INFORMATION"
+ata_chapter: "02"
+document_type: "Flight Crew Operating Manual"
+
+# Description
+title: "AMPEL360 Flight Crew Operating Manual"
+description: |
+  Primary operational guide for flight crews containing system descriptions,
+  normal procedures, non-normal procedures, and operational limitations.
+  Specifically addresses unique AMPEL360 systems including hydrogen fuel cells,
+  solid-CO2 batteries, CO2 capture, and BWB handling characteristics.
+
+# Ownership
+owner:
+  organization: "AMPEL360 Flight Operations"
+  department: "Flight Training & Standards"
+  responsible_person: "Chief Pilot"
+  contact: "fcom@ampel360.aero"
+
+# Version Control
+revision: "1.0.0"
+effective_date: "2028-10-01"
+last_updated: "2028-09-30"
+approval_status: "APPROVED"
+
+# Applicability
+effectivity:
+  aircraft_type: "AMPEL360 BWB-H2"
+  msn_range: "AMP360-001 through AMP360-999"
+  configuration: "BWB-H2-CFG-02"
+
+# Regulatory Compliance
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.FCOM.002"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-FCOM-2028-001"
+    date: "2028-09-28"
+
+# Subdirectories
+subdirectories:
+  - name: "LIMITATIONS"
+    description: "Aircraft operational limitations and certification limits"
+  - name: "NORMAL_PROCEDURES"
+    description: "Standard operating procedures for all flight phases"
+  - name: "NON-NORMAL_PROCEDURES"
+    description: "Abnormal and emergency procedures with QRH cross-references"
+  - name: "SYSTEM_DESCRIPTIONS"
+    description: "Detailed operational descriptions of aircraft systems"
+
+# Special Considerations
+ampel360_specific_sections:
+  - "Energy Orchestration Modes"
+  - "Hydrogen System Management"
+  - "CO₂ Capture System Operations"
+  - "BWB Handling Characteristics"
+  - "Multi-Fuel Performance Management"
+  - "Cryogenic System Monitoring"
+
+# Quality Control
+document_control:
+  classification: "CONTROLLED - FLIGHT OPERATIONS"
+  distribution: "Flight Crew Only"
+  review_cycle: "Annual"
+  next_review: "2029-09-30"
+
+# Notes
+notes: |
+  All FCOM documents must be accompanied by .meta.yaml sidecar files.
+  Non-Normal Procedures must include QRH cross-references in footers.
+  System descriptions must reference related ATA chapters and safety systems.

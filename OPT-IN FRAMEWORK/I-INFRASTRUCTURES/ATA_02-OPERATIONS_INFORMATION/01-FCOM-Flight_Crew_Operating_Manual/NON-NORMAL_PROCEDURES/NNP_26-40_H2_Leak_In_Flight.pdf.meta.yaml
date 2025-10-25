@@ -1,0 +1,129 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+# Non-Normal Procedure - H₂ Leak In Flight
+
+id: "NNP_26-40_H2_Leak_In_Flight"
+document_type: "Non-Normal Procedure"
+ata_chapter: "26-40"
+title: "Hydrogen Leak - In Flight"
+
+# Revision and Effectivity Control
+revision: "1.0.0"
+effective_date: "2028-10-01"
+supersedes: null
+effectivity:
+  msn: "AMP360-001 through AMP360-999"
+  configuration_id: "BWB-H2-CFG-02"
+applicability: "Flight Crew"
+
+# Document Classification
+classification: "CONTROLLED - FLIGHT SAFETY CRITICAL"
+distribution: "Flight Crew Only"
+emergency_type: "EMERGENCY"
+
+# Safety and Compliance
+hazards:
+  - "FIRE-03: Hydrogen fire/explosion risk"
+  - "CRYO-01: Cryogenic exposure hazard"
+  - "FUEL-01: Loss of fuel cell capability"
+  - "POWER-01: Limited battery endurance"
+
+safety_critical: true
+memory_items: true
+
+regulatory_basis:
+  - standard: "EASA CS-25"
+    section: "25.1309 - Equipment, systems, and installations"
+  - standard: "EASA CS-25"
+    section: "25.863 - Flammable fluid fire protection"
+  - standard: "FAA 14 CFR Part 25"
+    section: "§25.1309 & §25.863"
+
+approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.NNP.26-40.001"
+    status: "Approved"
+    date: "2028-09-15"
+    approved_by: "Chief Engineer, Certification"
+  - authority: "FAA"
+    approval_reference: "FAA-NNP-26-40-001"
+    status: "Approved"
+    date: "2028-09-18"
+    approved_by: "FAA DER"
+  - authority: "AMPEL Engineering"
+    status: "Released"
+    date: "2028-09-10"
+    approved_by: "Chief Engineer, Fuel Systems"
+
+# Procedural Linkage
+qrh_reference:
+  section: "EMER-2.1"
+  page: "2-1"
+  title: "H2 LEAK IN FLIGHT"
+
+# Related Systems Cross-References
+related_ata_chapters:
+  - chapter: "26-40-xx"
+    description: "H₂ Leak/Fire Detection"
+    relevance: "Hydrogen sensor system and leak detection logic"
+  - chapter: "28-60-00"
+    description: "Cryogenic H₂ Storage & Distribution"
+    relevance: "Hydrogen tank, valves, and distribution system"
+  - chapter: "24-60-00"
+    description: "Fuel Cell Stacks & DC Output"
+    relevance: "Fuel cell system isolation and power management"
+  - chapter: "26-40-xx"
+    description: "Fire Detection/Suppression"
+    relevance: "H₂ fire detection and suppression if leak ignites"
+
+related_procedures:
+  - "NNP_26-40_H2_Fire"
+  - "NNP_24-60_Fuel_Cell_Failure"
+  - "NNP_28-60_Cryogenic_Tank_Pressure_Anomaly"
+  - "FCOM SYS 28-60 - H₂ Storage System Description"
+  - "FCOM SYS 24-60 - Fuel Cell System Description"
+
+# Training Requirements
+training_requirements:
+  simulator: "Required - Full procedure practice"
+  frequency: "Annual recurrent training"
+  special_emphasis:
+    - "Memory items proficiency"
+    - "H₂ properties and hazards"
+    - "Power management with fuel cell isolated"
+    - "Battery endurance calculation"
+    - "Emergency descent if required"
+
+# Data Integrity
+checksum:
+  algorithm: "sha256"
+  value: "b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef1234567"
+
+# Audit Trail
+change_history:
+  - version: "1.0.0"
+    date: "2028-09-30"
+    description: "Initial release for AMPEL360 entry into service"
+    author: "Flight Safety Documentation Team"
+    approved_by: "Chief Pilot & Safety Manager"
+
+# Notes
+notes: |
+  Hydrogen leak procedures are unique to AMPEL360 and represent a novel emergency
+  scenario in commercial aviation. This procedure is based on:
+  - Extensive hazard analysis and fault tree analysis
+  - Hydrogen safety protocols from aerospace and industrial applications
+  - Multiple layers of automatic protection (sensors, isolation valves)
+  - Flight test validation of leak detection and isolation systems
+  
+  Key safety features:
+  - Multiple redundant H₂ sensors (25% LEL trigger threshold)
+  - Automatic isolation at sensor trigger
+  - Hydrogen naturally vents upward (lighter than air)
+  - Multiple barriers between H₂ system and ignition sources
+  - Battery system provides backup power for safe landing
+  
+  Flight crew must understand hydrogen properties:
+  - Colorless, odorless - detection by sensors only
+  - Wide explosive range (4-75% in air)
+  - Extremely cold (-253°C) in liquid form
+  - Rapid dispersion due to low density

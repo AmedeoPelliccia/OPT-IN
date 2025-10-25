@@ -1,0 +1,36 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+
+id: "NNP_CB_RESET_POLICY"
+document_type: "Non-Normal Procedure - Policy"
+ata_chapter: "24-00"
+title: "Circuit Breaker Reset Policy"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+effectivity:
+  msn: "AMP360-001 through AMP360-999"
+  configuration_id: "BWB-H2-CFG-02"
+applicability: "All Flight Crew"
+
+classification: "CONTROLLED - FLIGHT SAFETY CRITICAL"
+safety_critical: true
+
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "FAA"
+    status: "Approved"
+    date: "2028-09-28"
+
+qrh_reference:
+  section: "GENERAL-1"
+  title: "CB RESET POLICY"
+
+checksum:
+  algorithm: "sha256"
+  value: "c3d4e5f6789012345678901234567890abcdef1234567890abcdef12345678"
+
+notes: |
+  AMPEL360 has additional CB restrictions due to novel systems (H₂, battery, CO₂).
+  Some CBs protect safety-critical isolation logic and must never be reset in flight.

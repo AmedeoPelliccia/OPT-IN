@@ -1,0 +1,33 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+
+id: "00-Training_&_PPE"
+document_type: "Ground Operations Manual - Training & PPE"
+ata_chapter: "02"
+title: "AMPEL360 Ground Operations Training & PPE Requirements"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+applicability: "All ground operations personnel"
+
+classification: "CONTROLLED - GROUND OPERATIONS"
+safety_critical: true
+
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "FAA"
+    status: "Approved"
+    date: "2028-09-28"
+  - authority: "AMPEL360 Ground Safety"
+    status: "Released"
+    date: "2028-09-20"
+
+checksum:
+  algorithm: "sha256"
+  value: "def0123456789abcdef0123456789abcdef0123456789abcdef012345678"
+
+notes: |
+  H₂ handling training mandatory before any refueling operations.
+  Specialized PPE required for cryogenic operations.
+  Certification levels ensure appropriate qualifications.

@@ -1,0 +1,44 @@
+# Directory Governance for LH₂ Cryogenic Refueling
+# Ground Operations Manual
+
+directory_id: "LH2_Cryogenic_Refueling"
+parent_directory: "06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload"
+ata_chapter: "02"
+document_type: "Ground Operations Procedure"
+
+title: "Liquid Hydrogen (LH₂) Cryogenic Refueling Procedures"
+description: |
+  Mission-critical procedures for safely refueling AMPEL360 with cryogenic liquid hydrogen.
+  Includes GSE interface, safety protocols, area monitoring, and emergency response.
+
+owner:
+  organization: "AMPEL360 Ground Operations"
+  department: "Fuel Systems & Safety"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+approval_status: "APPROVED"
+
+safety_critical: true
+specialized_training_required: true
+certification_level: "Level 2 - AMPEL360 Specialist"
+
+hazards:
+  - "Cryogenic burn hazard (-253°C)"
+  - "Hydrogen flammability (4-75% explosive range)"
+  - "Asphyxiation (oxygen displacement)"
+  - "High-pressure system"
+  - "Cold embrittlement of materials"
+
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.GOPS.H2.001"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-GOPS-H2-2028-001"
+    date: "2028-09-28"
+
+notes: |
+  Hydrogen refueling represents novel ground operations for commercial aviation.
+  Procedures based on aerospace and industrial H₂ handling standards.
+  Multiple safety barriers and continuous monitoring required.

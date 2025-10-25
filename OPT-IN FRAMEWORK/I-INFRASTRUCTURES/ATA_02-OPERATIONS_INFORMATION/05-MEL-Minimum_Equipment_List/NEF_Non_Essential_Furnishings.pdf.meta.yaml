@@ -1,0 +1,28 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+
+id: "NEF_Non_Essential_Furnishings"
+document_type: "Non-Essential Furnishings List"
+ata_chapter: "02"
+title: "AMPEL360 Non-Essential Furnishings (NEF)"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+applicability: "All aircraft, maintenance control"
+
+classification: "CONTROLLED - OPERATIONAL USE"
+
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "FAA"
+    status: "Approved"
+    date: "2028-09-28"
+
+checksum:
+  algorithm: "sha256"
+  value: "cdef0123456789abcdef0123456789abcdef0123456789abcdef01234567"
+
+notes: |
+  NEF allows dispatch with specific non-safety items inoperative.
+  Simplifies dispatch decisions for minor cabin items.

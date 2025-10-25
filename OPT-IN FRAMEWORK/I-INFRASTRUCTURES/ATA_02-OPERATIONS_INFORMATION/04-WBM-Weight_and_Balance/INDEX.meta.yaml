@@ -1,0 +1,45 @@
+# Directory Governance for Weight and Balance Data
+# AMPEL360 Aircraft Operations Documentation
+
+directory_id: "04-WBM-Weight_and_Balance"
+parent_directory: "ATA_02-OPERATIONS_INFORMATION"
+ata_chapter: "02"
+document_type: "Weight and Balance Manual"
+
+title: "AMPEL360 Weight and Balance Manual"
+description: |
+  Weight and balance data for BWB configuration with multiple consumables.
+  Critical for safe operation due to unique loading characteristics and
+  in-flight CG shifts from fuel consumption and CO₂ accumulation.
+
+owner:
+  organization: "AMPEL360 Flight Operations"
+  department: "Weight & Balance Engineering"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+approval_status: "APPROVED"
+
+# Unique W&B Challenges
+ampel360_specific_challenges:
+  - "BWB loading extremely sensitive to CG position"
+  - "Multiple consumables: SAF, LH₂, captured CO₂"
+  - "In-flight CG shift as fuels consumed and CO₂ stored"
+  - "FMS active CG calculation required"
+  - "Cryogenic H₂ density changes with temperature"
+
+data_packages_signed: true
+signature_algorithm: "RSA-4096"
+
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.WB.001"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-WB-2028-001"
+    date: "2028-09-28"
+
+notes: |
+  BWB CG envelope is more restrictive than traditional aircraft.
+  Real-time FMS monitoring of CG during flight is mandatory.
+  Loading charts account for unique BWB passenger/cargo distribution.

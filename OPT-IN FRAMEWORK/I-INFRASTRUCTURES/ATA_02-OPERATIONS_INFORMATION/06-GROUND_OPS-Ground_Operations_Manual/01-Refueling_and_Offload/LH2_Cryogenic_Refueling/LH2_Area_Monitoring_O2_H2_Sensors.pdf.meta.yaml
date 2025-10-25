@@ -1,0 +1,105 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+
+id: "LH2_Area_Monitoring_O2_H2_Sensors"
+document_type: "Ground Operations Procedure - Safety"
+ata_chapter: "02"
+title: "LH₂ Area Monitoring - O₂ and H₂ Sensors"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+applicability: "All ground personnel - H₂ refueling operations"
+
+classification: "CONTROLLED - SAFETY CRITICAL"
+safety_critical: true
+training_required: "Level 2 - AMPEL360 Specialist"
+
+hazards:
+  - "H2-FIRE: Hydrogen fire/explosion risk"
+  - "CRYO-01: Cryogenic exposure"
+  - "ASPHYX-01: Oxygen displacement/asphyxiation"
+
+regulatory_basis:
+  - standard: "NFPA 2"
+    section: "Hydrogen Technologies Code"
+  - standard: "ISO 14687"
+    section: "Hydrogen fuel quality"
+  - standard: "SAE ARP 5216"
+    section: "Hydrogen ground support equipment"
+
+approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.GOPS.H2.SENS.001"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-GOPS-H2-SENS-001"
+    status: "Approved"
+    date: "2028-09-28"
+  - authority: "AMPEL360 Ground Safety"
+    status: "Released"
+    date: "2028-09-20"
+    approved_by: "Director of Ground Safety"
+
+# Cross-References
+related_documents:
+  - "GSE H₂ Refueling System Manual (ATA-03)"
+  - "H₂ Emergency Response Procedures"
+  - "FCOM SYS 28-60 (H₂ Storage System)"
+  - "NNP_26-40_H2_Leak_In_Flight"
+
+related_ata_chapters:
+  - "ATA-03: Support Information (GSE)"
+  - "ATA-26-40: H₂ Leak/Fire Detection"
+  - "ATA-28-60: Cryogenic H₂ Storage"
+
+# Sensor Specifications
+sensor_requirements:
+  h2_sensors:
+    type: "Catalytic bead or electrochemical"
+    quantity_fixed: 4
+    quantity_portable: 2
+    range: "0-100% LEL"
+    alarm_warning: "10% LEL"
+    alarm_danger: "25% LEL"
+    accuracy: "±2% LEL"
+    response_time_sec: 10
+    calibration_interval: "Weekly"
+    
+  o2_sensors:
+    type: "Electrochemical or paramagnetic"
+    quantity_fixed: 3
+    range: "0-25% O₂"
+    alarm_low: "19.5% O₂"
+    alarm_danger_low: "18% O₂"
+    alarm_high: "23.5% O₂"
+    accuracy: "±0.5% O₂"
+    response_time_sec: 15
+    calibration_interval: "Monthly"
+
+# Data Integrity
+checksum:
+  algorithm: "sha256"
+  value: "ef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+
+# Audit Trail
+change_history:
+  - version: "1.0.0"
+    date: "2028-09-30"
+    description: "Initial release for AMPEL360 H₂ refueling operations"
+    author: "Ground Safety Team"
+    approved_by: "Director of Ground Safety"
+
+# Notes
+notes: |
+  Area monitoring is critical safety barrier for H₂ refueling operations.
+  Continuous monitoring required - no interruption permitted during refueling.
+  Multiple sensors provide redundancy and coverage.
+  Alarm response procedures must be practiced regularly.
+  
+  H₂ detection at 25% LEL provides safety margin before 100% LEL (4% in air).
+  O₂ monitoring prevents asphyxiation from H₂ or inert gas displacement.
+  
+  Weather conditions affect sensor placement and H₂ dispersion.
+  Regular calibration mandatory to ensure sensor accuracy.
+  
+  Footer cross-reference to GSE manuals ensures integrated safety approach.

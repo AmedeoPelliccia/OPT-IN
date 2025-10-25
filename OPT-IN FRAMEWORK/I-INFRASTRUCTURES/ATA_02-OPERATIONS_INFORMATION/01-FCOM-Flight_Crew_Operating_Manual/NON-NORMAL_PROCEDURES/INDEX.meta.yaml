@@ -1,0 +1,97 @@
+# Directory Governance for Non-Normal Procedures (NNP)
+# FCOM - Flight Crew Operating Manual
+
+directory_id: "NON-NORMAL_PROCEDURES"
+parent_directory: "01-FCOM-Flight_Crew_Operating_Manual"
+ata_chapter: "02"
+document_type: "Non-Normal Procedures"
+
+# Description
+title: "AMPEL360 Non-Normal Procedures"
+description: |
+  Abnormal and emergency procedures for flight crew response to system failures,
+  malfunctions, and emergency situations. All procedures include cross-references
+  to corresponding QRH checklists.
+
+# Ownership
+owner:
+  organization: "AMPEL360 Flight Operations"
+  department: "Flight Safety & Standards"
+  responsible_person: "Chief Pilot / Safety Manager"
+  contact: "safety@ampel360.aero"
+
+# Version Control
+revision: "1.0.0"
+effective_date: "2028-10-01"
+last_updated: "2028-09-30"
+approval_status: "APPROVED"
+
+# Quality Standards
+procedural_integrity_requirements:
+  - "One-to-one linkage with QRH checklist"
+  - "QRH section reference in footer"
+  - "Cross-reference to related ATA systems"
+  - "Hazard identification and mitigation"
+  - "Clear decision points and memory items"
+
+# Novel Emergency Procedures
+ampel360_specific_procedures:
+  - procedure: "H2 Leak (Ground/In-Flight)"
+    qrh_reference: "§EMER-2.1"
+    ata_chapter: "26-40"
+  - procedure: "Solid-CO₂ Battery Thermal Runaway"
+    qrh_reference: "§EMER-1.1"
+    ata_chapter: "24-33"
+  - procedure: "Powertrain Orchestrator Fault"
+    qrh_reference: "§EMER-3.1"
+    ata_chapter: "42-55"
+  - procedure: "CO₂ Capture System Leak/Overpress"
+    qrh_reference: "§EMER-4.1"
+    ata_chapter: "21-80"
+  - procedure: "Fuel Cell Stack Failure"
+    qrh_reference: "§EMER-2.2"
+    ata_chapter: "24-60"
+  - procedure: "Cryogenic Tank Pressure Anomaly"
+    qrh_reference: "§EMER-2.3"
+    ata_chapter: "28-60"
+
+# Traditional Emergency Procedures
+standard_procedures:
+  - "Engine Failure (In-Flight/On Ground)"
+  - "Fire (Engine/APU/Cargo/Cabin)"
+  - "Smoke Removal"
+  - "Rapid Decompression"
+  - "Electrical System Failures"
+  - "Hydraulic System Failures"
+  - "Flight Control Malfunctions"
+
+# Regulatory Compliance
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.FCOM.NNP.001"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-FCOM-NNP-001"
+    date: "2028-09-28"
+
+# Document Control
+document_control:
+  classification: "CONTROLLED - FLIGHT SAFETY CRITICAL"
+  distribution: "Flight Crew Only"
+  review_cycle: "Annual or Post-Incident"
+  next_review: "2029-09-30"
+
+# Training Requirements
+training_notes: |
+  All procedures must be covered in initial and recurrent training.
+  Novel procedures (H₂, CO₂, battery) require dedicated simulator sessions.
+  Memory items must be practiced to proficiency.
+
+# Notes
+notes: |
+  Each NNP document must include:
+  - Clear header with ATA chapter and system references
+  - QRH cross-reference in footer
+  - Related safety system cross-references (fire detection, sensors, isolation)
+  - Decision trees for pilot action
+  - Consequences of incorrect action

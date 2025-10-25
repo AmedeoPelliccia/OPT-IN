@@ -1,0 +1,39 @@
+# Directory Governance for Minimum Equipment List (MEL)
+# AMPEL360 Aircraft Operations Documentation
+
+directory_id: "05-MEL-Minimum_Equipment_List"
+parent_directory: "ATA_02-OPERATIONS_INFORMATION"
+ata_chapter: "02"
+document_type: "Minimum Equipment List"
+
+title: "AMPEL360 Minimum Equipment List (MEL)"
+description: |
+  Regulatory-approved list of systems/components that may be inoperative for dispatch.
+  Includes unique AMPEL360 systems (fuel cells, batteries, H₂, CO₂ capture).
+
+owner:
+  organization: "AMPEL360 Flight Operations"
+  department: "Maintenance Control & Flight Operations"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+approval_status: "APPROVED"
+
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.MEL.001"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-MEL-2028-001"
+    date: "2028-09-28"
+
+ampel360_specific_items:
+  - "Fuel Cell Stacks: Minimum number for dispatch"
+  - "Battery Modules: Minimum operative modules and SOC"
+  - "H₂ System: Dispatch with components inop"
+  - "CO₂ Capture: Dispatch with system inoperative"
+  - "IMA/QIS: Relief for quantum scheduler failures"
+
+notes: |
+  MEL developed from MMEL with AMPEL360-specific relief.
+  Dispatch decisions must consider novel system interdependencies.

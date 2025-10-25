@@ -1,0 +1,79 @@
+{
+  "manifest_version": "1.0.0",
+  "aircraft": "AMPEL360",
+  "effective_date": "2028-10-01",
+  "description": "Performance data package manifest for EFB applications",
+  
+  "data_packages": [
+    {
+      "package_id": "takeoff_performance",
+      "file": "takeoff_performance.json",
+      "version": "1.0.0",
+      "description": "Takeoff performance data including V-speeds, runway requirements, climb gradients",
+      "signature_file": "takeoff_performance.json.sig",
+      "checksum": "1234abcd5678efgh9012ijkl3456mnop7890qrst1234uvwx5678yzab9012cdef",
+      "size_bytes": 2457600,
+      "last_updated": "2028-09-28"
+    },
+    {
+      "package_id": "landing_performance",
+      "file": "landing_performance.json",
+      "version": "1.0.0",
+      "description": "Landing performance data including approach speeds, runway requirements",
+      "signature_file": "landing_performance.json.sig",
+      "checksum": "2345bcde6789fghi0123jklm4567nopq8901rstu2345vwxy6789zabc0123defg",
+      "size_bytes": 1843200,
+      "last_updated": "2028-09-28"
+    },
+    {
+      "package_id": "cruise_performance",
+      "file": "cruise_performance.json",
+      "version": "1.0.0",
+      "description": "Cruise performance including fuel flow, range, optimum altitude",
+      "signature_file": "cruise_performance.json.sig",
+      "checksum": "3456cdef7890ghij1234klmn5678opqr9012stuv3456wxyz7890abcd1234efgh",
+      "size_bytes": 3276800,
+      "last_updated": "2028-09-28"
+    }
+  ],
+  
+  "performance_variables": {
+    "standard_variables": [
+      "weight",
+      "altitude",
+      "temperature",
+      "wind",
+      "runway_condition"
+    ],
+    "ampel360_specific_variables": [
+      "battery_soc_percent",
+      "h2_quantity_kg",
+      "energy_orchestration_mode",
+      "fuel_cell_availability",
+      "saf_quantity_kg"
+    ]
+  },
+  
+  "energy_orchestration_modes": [
+    "MAX_EFFICIENCY",
+    "BALANCED",
+    "MAX_POWER",
+    "SAF_ONLY",
+    "HYBRID_BOOST",
+    "SILENT_TAXI"
+  ],
+  
+  "regulatory_basis": {
+    "easa": "CS-25 Subpart B - Performance",
+    "faa": "14 CFR Part 25 - Performance"
+  },
+  
+  "usage_notes": [
+    "All performance calculations must account for dual-fuel configuration",
+    "Battery SOC affects available electric power for hybrid boost modes",
+    "H2 quantity affects fuel cell power availability",
+    "Energy orchestration mode significantly impacts performance",
+    "EFB must verify digital signatures before using data",
+    "Multi-dimensional interpolation required for AMPEL360-specific variables"
+  ]
+}

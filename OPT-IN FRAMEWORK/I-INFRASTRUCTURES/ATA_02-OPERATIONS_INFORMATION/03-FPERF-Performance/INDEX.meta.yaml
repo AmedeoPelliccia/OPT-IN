@@ -1,0 +1,39 @@
+# Directory Governance for Performance Data
+# AMPEL360 Aircraft Operations Documentation
+
+directory_id: "03-FPERF-Performance"
+parent_directory: "ATA_02-OPERATIONS_INFORMATION"
+ata_chapter: "02"
+document_type: "Performance Data"
+
+title: "AMPEL360 Flight Performance Data"
+description: |
+  Multi-dimensional performance data for takeoff, cruise, and landing calculations.
+  Data depends on weight, altitude, temperature, battery SOC, H₂ quantity,
+  and energy orchestration mode.
+
+owner:
+  organization: "AMPEL360 Flight Operations"
+  department: "Performance Engineering"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+approval_status: "APPROVED"
+
+# Data Integrity
+data_packages_signed: true
+signature_algorithm: "RSA-4096"
+checksum_manifest: "../checksums/SHA256SUMS.txt"
+
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.PERF.001"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-PERF-2028-001"
+    date: "2028-09-28"
+
+notes: |
+  Performance calculations unique to AMPEL360 hybrid propulsion.
+  Must account for battery SOC, H₂ reserves, and orchestration mode.
+  EFB apps verify signatures before using data.

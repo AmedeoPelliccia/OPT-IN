@@ -1,0 +1,112 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+# Non-Normal Procedure - Battery Thermal Runaway
+
+id: "NNP_24-33_Battery_Thermal_Runaway"
+document_type: "Non-Normal Procedure"
+ata_chapter: "24-33"
+title: "Solid-CO₂ Battery Thermal Runaway"
+
+# Revision and Effectivity Control
+revision: "1.1.0"
+effective_date: "2028-10-01"
+supersedes: "1.0.0"
+effectivity:
+  msn: "AMP360-001 through AMP360-050"
+  configuration_id: "BWB-H2-CFG-02"
+applicability: "Flight Crew"
+
+# Document Classification
+classification: "CONTROLLED - FLIGHT SAFETY CRITICAL"
+distribution: "Flight Crew Only"
+emergency_type: "ABNORMAL/EMERGENCY"
+
+# Safety and Compliance
+hazards:
+  - "FIRE-01: Uncontrolled battery fire"
+  - "FIRE-02: Smoke/toxic fumes in cabin"
+  - "ELEC-03: High voltage shock hazard"
+  - "THERMAL-01: Cascade thermal runaway to adjacent modules"
+
+safety_critical: true
+memory_items: true
+
+regulatory_basis:
+  - standard: "EASA CS-25"
+    section: "25.1309 - Equipment, systems, and installations"
+  - standard: "FAA 14 CFR Part 25"
+    section: "§25.1309"
+
+approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.NNP.24-33.001"
+    status: "Approved"
+    date: "2028-09-15"
+    approved_by: "Chief Engineer, Certification"
+  - authority: "FAA"
+    approval_reference: "FAA-NNP-24-33-001"
+    status: "Approved"
+    date: "2028-09-18"
+    approved_by: "FAA DER"
+  - authority: "AMPEL Engineering"
+    status: "Released"
+    date: "2028-09-10"
+    approved_by: "Chief Engineer, Safety Systems"
+
+# Procedural Linkage
+qrh_reference:
+  section: "EMER-1.1"
+  page: "1-1"
+  title: "BATTERY THERMAL RUNAWAY"
+
+# Related Systems Cross-References
+related_ata_chapters:
+  - chapter: "26-30-xx"
+    description: "Fire Detection & Suppression"
+    relevance: "Fire detection and extinguisher system for battery compartment"
+  - chapter: "21-50-xx"
+    description: "Power Electronics Cooling"
+    relevance: "Thermal management for battery modules"
+  - chapter: "24-00-xx"
+    description: "Electrical Power"
+    relevance: "Electrical system reconfiguration after battery isolation"
+
+related_procedures:
+  - "NNP_26-30_Battery_Compartment_Fire"
+  - "NNP_24-00_Electrical_Emergency_Configuration"
+  - "FCOM SYS 24-33 - Battery System Description"
+
+# Training Requirements
+training_requirements:
+  simulator: "Required - Full procedure practice"
+  frequency: "Annual recurrent training"
+  special_emphasis:
+    - "Memory items proficiency"
+    - "Smoke/fire recognition"
+    - "Electrical system management with reduced battery capacity"
+
+# Data Integrity
+checksum:
+  algorithm: "sha256"
+  value: "a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456"
+
+# Audit Trail
+change_history:
+  - version: "1.1.0"
+    date: "2028-10-01"
+    description: "Updated thermal management procedures based on certification testing"
+    author: "Flight Safety Documentation Team"
+    approved_by: "Chief Pilot & Safety Manager"
+  - version: "1.0.0"
+    date: "2028-05-15"
+    description: "Initial release"
+    author: "Flight Safety Documentation Team"
+    approved_by: "Chief Pilot"
+
+# Notes
+notes: |
+  This procedure addresses the unique characteristics of solid-CO₂ battery technology.
+  Thermal runaway in solid-CO₂ batteries differs from Li-ion batteries - specific
+  fire suppression and thermal management techniques apply.
+  
+  Critical: Immediate isolation prevents cascade to adjacent modules.
+  Multiple battery modules provide redundancy - safe flight continuation possible.

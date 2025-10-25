@@ -1,0 +1,88 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+# FCOM Limitations - General
+
+id: "FCOM-LIMITATIONS_General"
+document_type: "Flight Crew Operating Manual - Limitations"
+ata_chapter: "02"
+title: "General Aircraft Operational Limitations"
+
+# Revision and Effectivity Control
+revision: "1.0.0"
+effective_date: "2028-10-01"
+supersedes: null
+effectivity:
+  msn: "AMP360-001 through AMP360-999"
+  configuration_id: "BWB-H2-CFG-02"
+applicability: "All Flight Crew"
+
+# Document Classification
+classification: "CONTROLLED - FLIGHT OPERATIONS"
+distribution: "Flight Crew, Training Department"
+
+# Safety and Compliance
+hazards:
+  - "EXCEED-01: Exceedance of certified limits"
+  - "STRUCT-01: Structural damage from overload"
+  - "ENERGY-01: Energy system damage from improper operation"
+
+regulatory_basis:
+  - standard: "EASA CS-25"
+    section: "25.1501 - Operating Limitations"
+  - standard: "FAA 14 CFR Part 25"
+    section: "§25.1501"
+
+approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.FCOM.LIM.001"
+    status: "Approved"
+    date: "2028-09-25"
+    approved_by: "Chief Engineer, Certification"
+  - authority: "FAA"
+    approval_reference: "FAA-FCOM-LIM-001"
+    status: "Approved"
+    date: "2028-09-28"
+    approved_by: "FAA DER"
+  - authority: "AMPEL360 Flight Operations"
+    status: "Released"
+    date: "2028-09-30"
+    approved_by: "Chief Pilot"
+
+# Content Summary
+content_sections:
+  - "Airframe Limitations"
+  - "Powerplant Limitations"
+  - "Environmental System Limitations"
+  - "Weight and Balance Limitations"
+  - "Operational Limitations"
+  - "Novel System Limitations (H₂, CO₂, BWB)"
+
+# Cross-References
+related_documents:
+  - "FCOM-LIMITATIONS_Operational_Minima"
+  - "QRH §LIMITATIONS"
+  - "WBM - Weight and Balance Manual"
+  
+related_ata_chapters:
+  - "ATA-24-33: Solid-CO₂ Battery Modules"
+  - "ATA-26-40: Hydrogen Leak/Fire Detection"
+  - "ATA-28-60: Cryogenic H₂ Storage"
+  - "ATA-42-55: Powertrain Energy Orchestration"
+
+# Data Integrity
+checksum:
+  algorithm: "sha256"
+  value: "d4e5f6789012345678901234567890abcdef1234567890abcdef123456789"
+
+# Audit Trail
+change_history:
+  - version: "1.0.0"
+    date: "2028-09-30"
+    description: "Initial release for AMPEL360 entry into service"
+    author: "Flight Operations Documentation Team"
+    approved_by: "Chief Pilot"
+
+# Notes
+notes: |
+  This document establishes the certified operational limits for the AMPEL360 aircraft.
+  All flight crew must be familiar with these limitations.
+  Exceeding any limitation requires immediate reporting and engineering review.
