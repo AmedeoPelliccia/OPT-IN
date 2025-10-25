@@ -203,7 +203,7 @@ jobs:
           echo "Verifying JSON file syntax..."
           cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
           
-          json_files=$(find . -name "*.json" 2>/dev/null || echo "")
+          json_files=$(find . -iname "*.json" 2>/dev/null || echo "")
           
           if [ -z "$json_files" ]; then
             echo "No JSON files found to validate."
