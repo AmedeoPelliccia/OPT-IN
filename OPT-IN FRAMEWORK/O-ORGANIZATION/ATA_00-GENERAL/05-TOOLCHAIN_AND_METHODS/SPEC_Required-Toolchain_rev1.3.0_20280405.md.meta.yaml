@@ -1,0 +1,61 @@
+schema_version: "1.1"
+id: "SPEC_Required-Toolchain"
+document:
+  type: "SPEC"
+  title: "Required Toolchain Specification"
+  revision: "1.3.0"
+  effective_date: "2028-04-05"
+  subject: "Digital toolchain, CI/CD integration, and automated compliance checks"
+  ata_chapter: "00"
+  category: "Toolchain and Methods"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "Engineering"
+    - "Documentation"
+    - "DevOps"
+    - "Quality Assurance"
+approvals:
+  - authority: "DevOps and Tooling Team"
+    status: "Released"
+    date: "2028-04-05"
+  - authority: "Chief Engineering Office"
+    status: "Approved"
+    date: "2028-04-05"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "91df5554657fb91768b079b872c3ccd6acdc72ea28974ef623e3034771922110"
+revision_history:
+  - version: "1.3.0"
+    date: "2028-04-05"
+    changes: "Added MkDocs documentation portal and security tools section"
+    author: "DevOps and Tooling Team"
+  - version: "1.2.0"
+    date: "2028-03-01"
+    changes: "Updated Python and Pandoc minimum versions"
+    author: "DevOps and Tooling Team"
+  - version: "1.1.0"
+    date: "2028-02-01"
+    changes: "Added pre-commit hooks and GitHub Actions workflows"
+    author: "DevOps and Tooling Team"
+  - version: "1.0.0"
+    date: "2028-01-01"
+    changes: "Initial release of toolchain specification"
+    author: "DevOps and Tooling Team"
+references:
+  standards:
+    - "Semantic Versioning"
+    - "JSON Schema"
+  related_documents:
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"
+    - "STD_Metadata-Schema-Guide_rev1.1.0_20280220.md"
+  external_references:
+    - name: "Git Documentation"
+      url: "https://git-scm.com/doc"
+    - name: "Pandoc Manual"
+      url: "https://pandoc.org/MANUAL.html"
+    - name: "GitHub Actions"
+      url: "https://docs.github.com/actions"

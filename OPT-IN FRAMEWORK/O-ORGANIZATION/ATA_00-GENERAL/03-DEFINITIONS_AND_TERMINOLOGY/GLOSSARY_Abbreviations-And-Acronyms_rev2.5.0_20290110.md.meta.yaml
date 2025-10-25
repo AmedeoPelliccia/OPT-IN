@@ -1,0 +1,44 @@
+schema_version: "1.1"
+id: "GLOSSARY_Abbreviations-And-Acronyms"
+document:
+  type: "GLOSSARY"
+  title: "Glossary of Abbreviations and Acronyms"
+  revision: "2.5.0"
+  effective_date: "2029-01-10"
+  subject: "Approved abbreviations and acronyms"
+  ata_chapter: "00"
+  category: "Definitions and Terminology"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "All Personnel"
+approvals:
+  - authority: "Terminology Committee"
+    status: "Released"
+    date: "2029-01-10"
+  - authority: "Chief Engineering Office"
+    status: "Approved"
+    date: "2029-01-10"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "2bceba0e1b712aec30da71709e5f6cdcfc55458e3328c5a9a5ef5aff12ee8d08"
+revision_history:
+  - version: "2.5.0"
+    date: "2029-01-10"
+    changes: "Added QIS, SAF, and updated DPP definition"
+    author: "Terminology Committee"
+  - version: "2.4.0"
+    date: "2028-11-15"
+    changes: "Added CI/CD, IMA, and BWB enhanced definition"
+    author: "Terminology Committee"
+  - version: "2.3.0"
+    date: "2028-09-01"
+    changes: "Added LH₂ and fuel cell related terms"
+    author: "Terminology Committee"
+references:
+  related_documents:
+    - "DOC_OPT-IN-Framework-Philosophy_rev1.0.0_20280101.md"
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"

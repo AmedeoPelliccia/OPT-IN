@@ -1,0 +1,46 @@
+schema_version: "1.1"
+id: "POLICY_System-Safety-Program-Plan"
+document:
+  type: "POLICY"
+  title: "System Safety Program Plan"
+  revision: "1.0.0"
+  effective_date: "2028-03-01"
+  subject: "System safety governance policy"
+  ata_chapter: "00"
+  category: "Safety and Airworthiness"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "Engineering"
+    - "System Safety"
+    - "Quality Assurance"
+    - "Certification"
+approvals:
+  - authority: "Chief Safety Officer"
+    status: "Released"
+    date: "2028-03-01"
+  - authority: "Program Director"
+    status: "Approved"
+    date: "2028-03-01"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "31605b1d3f7a88a0c9abe81a7736f8660c08bc00a67491e2b31314eec03e3cd0"
+revision_history:
+  - version: "1.0.0"
+    date: "2028-03-01"
+    changes: "Initial release of system safety program plan"
+    author: "Chief Safety Officer"
+references:
+  standards:
+    - "FAA Part 25"
+    - "EASA CS-25"
+    - "ARP4754A"
+    - "ARP4761"
+    - "DO-178C"
+    - "DO-254"
+  related_documents:
+    - "DOC_OPT-IN-Framework-Philosophy_rev1.0.0_20280101.md"
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"

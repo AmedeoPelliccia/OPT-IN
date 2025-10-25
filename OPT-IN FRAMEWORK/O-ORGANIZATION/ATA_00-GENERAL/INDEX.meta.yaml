@@ -1,0 +1,39 @@
+schema_version: "1.1"
+chapter:
+  ata: "00"
+  title: "GENERAL"
+  description: "Governance layer for the entire AMPEL360 documentation framework"
+  category: "O-ORGANIZATION"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+dependencies:
+  parent: "O-ORGANIZATION"
+  related_chapters:
+    - "ATA-01"
+    - "ATA-04"
+    - "ATA-05"
+    - "ATA-18"
+    - "ATA-95"
+    - "ATA-115"
+subdirectories:
+  - name: "01-INTRODUCTION_AND_PHILOSOPHY"
+    purpose: "Framework definition and guiding principles"
+  - name: "02-GOVERNANCE_AND_STANDARDS"
+    purpose: "Configuration management and document control"
+  - name: "03-DEFINITIONS_AND_TERMINOLOGY"
+    purpose: "Authoritative glossary and data dictionary"
+  - name: "04-SAFETY_AND_AIRWORTHINESS"
+    purpose: "System safety policies and certification alignment"
+  - name: "05-TOOLCHAIN_AND_METHODS"
+    purpose: "Digital toolchain and CI/CD integration"
+approvals:
+  - authority: "Chief Engineering Office"
+    status: "Released"
+    date: "2028-01-01"
+revision_history:
+  - version: "1.0.0"
+    date: "2028-01-01"
+    changes: "Initial release of ATA 00 governance framework"
+    author: "Documentation Architecture Team"
