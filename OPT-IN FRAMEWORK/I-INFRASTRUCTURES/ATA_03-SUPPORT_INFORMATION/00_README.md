@@ -6,7 +6,7 @@ This directory contains the master support information for all Ground Support Eq
 
 *   **Automated Governance:** All changes are validated via a CI guardrail (`.github/workflows/gse-guard.yml`) which checks file naming, metadata schema compliance, checksums, and digital signatures.
 *   **Controlled Metadata:** Every artifact is accompanied by a `v1.1` `.meta.yaml` sidecar file, validated against a formal JSON schema.
-*   **Lifecycle Management:** Each GSE item is tracked from interface definition (`/01-interfaces`) and acceptance (`/04-acceptance_and_certification`) through in-service use (`/09-registry`).
+*   **Lifecycle Management:** Each GSE item is tracked from interface definition (`/01-INTERFACES`) and acceptance (`/04-ACCEPTANCE_AND_CERTIFICATION`) through in-service use (`/09-REGISTRY`).
 *   **Markdown First:** All technical documents are maintained as plain-text Markdown (`.md`) for maximum traceability.
 
 ---
@@ -22,31 +22,31 @@ This directory contains the master support information for all Ground Support Eq
     ├── SHA256SUMS.txt
     ├── /schemas
     │   └── meta_v1_1.json
-    ├── /01-interfaces
+    ├── /01-INTERFACES
     │   ├── INDEX.meta.yaml
     │   └── ICD_AP360-S001_LH2-Coupling_rev3.0.0_20280901.md
-    ├── /02-gse_manuals
+    ├── /02-GSE_MANUALS
     │   ├── INDEX.meta.yaml
     │   └── /AP360-S001_LH2_Cryogenic_Refueler
     │       ├── GOM_AP360-S001_LH2-Refueler_rev2.0.0_20281101.md
     │       └── GOM_AP360-S001_LH2-Refueler_rev2.0.0_20281101.meta.yaml
-    ├── /03-software_firmware
+    ├── /03-SOFTWARE_FIRMWARE
     │   └── INDEX.meta.yaml
-    ├── /04-acceptance_and_certification
+    ├── /04-ACCEPTANCE_AND_CERTIFICATION
     │   └── INDEX.meta.yaml
-    ├── /05-safety
+    ├── /05-SAFETY
     │   └── INDEX.meta.yaml
-    ├── /06-training
+    ├── /06-TRAINING
     │   ├── INDEX.meta.yaml
     │   └── training_records.csv
-    ├── /07-maintenance_and_calibration
+    ├── /07-MAINTENANCE_AND_CALIBRATION
     │   ├── INDEX.meta.yaml
     │   └── /calibration
     │       ├── INDEX.meta.yaml
     │       └── schedule.csv
-    ├── /08-spares
+    ├── /08-SPARES
     │   └── INDEX.meta.yaml
-    └── /09-registry
+    └── /09-REGISTRY
         ├── INDEX.meta.yaml
         ├── status.json
         └── defects.csv
@@ -68,7 +68,7 @@ Each folder contains an `INDEX.meta.yaml` file that defines:
 **Example:**
 ```yaml
 schema_version: "1.1"
-folder: "ATA_03-SUPPORT_INFORMATION/02-gse_manuals"
+folder: "ATA_03-SUPPORT_INFORMATION/02-GSE_MANUALS"
 purpose: "Operational and maintenance manuals for AMPEL360 GSE"
 owners: ["Ground Ops", "Quality", "Safety"]
 approvers:
@@ -94,8 +94,8 @@ The checksum manifest ensures integrity of all controlled documents:
 
 ```
 # SHA256SUMS for ATA-03 controlled documents. Run `sha256sum --check SHA256SUMS.txt` to validate.
-<sha256>  02-gse_manuals/AP360-S001_LH2_Cryogenic_Refueler/GOM_AP360-S001_LH2-Refueler_rev2.0.0_20281101.md
-<sha256>  03-software_firmware/AP360-T003_FC-Diag-Unit/FW_AP360-T003_v2.5.1.bin
+<sha256>  02-GSE_MANUALS/AP360-S001_LH2_Cryogenic_Refueler/GOM_AP360-S001_LH2-Refueler_rev2.0.0_20281101.md
+<sha256>  03-SOFTWARE_FIRMWARE/AP360-T003_FC-Diag-Unit/FW_AP360-T003_v2.5.1.bin
 ```
 
 ### CI Guardrail (`.github/workflows/gse-guard.yml`)
@@ -151,7 +151,7 @@ All `.meta.yaml` sidecar files are validated against:
 
 ## Data Registries
 
-### Registry Status (`09-registry/status.json`)
+### Registry Status (`09-REGISTRY/status.json`)
 
 Live status of all GSE fleet items:
 ```json

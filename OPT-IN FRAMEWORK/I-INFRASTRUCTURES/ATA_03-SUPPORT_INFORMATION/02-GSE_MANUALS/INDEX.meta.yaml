@@ -1,5 +1,5 @@
 schema_version: "1.1"
-folder: "ATA_03-SUPPORT_INFORMATION/02-gse_manuals"
+folder: "ATA_03-SUPPORT_INFORMATION/02-GSE_MANUALS"
 purpose: "Ground Operations Manuals (GOMs) and maintenance procedures for AMPEL360 GSE"
 owners: ["Ground Ops", "Maintenance", "Quality"]
 approvers:

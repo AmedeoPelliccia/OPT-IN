@@ -1,5 +1,5 @@
 schema_version: "1.1"
-folder: "ATA_03-SUPPORT_INFORMATION/04-acceptance_and_certification"
+folder: "ATA_03-SUPPORT_INFORMATION/04-ACCEPTANCE_AND_CERTIFICATION"
 purpose: "Acceptance Test Procedures (ATPs) and certification records for GSE commissioning"
 owners: ["Quality", "Engineering", "Safety"]
 approvers:

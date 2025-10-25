@@ -1,5 +1,5 @@
 schema_version: "1.1"
-folder: "ATA_03-SUPPORT_INFORMATION/06-training"
+folder: "ATA_03-SUPPORT_INFORMATION/06-TRAINING"
 purpose: "Training materials, courses, and personnel qualification records for GSE operations"
 owners: ["Training", "Ground Ops", "Safety"]
 approvers:

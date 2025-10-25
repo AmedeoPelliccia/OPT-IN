@@ -1,5 +1,5 @@
 schema_version: "1.1"
-folder: "ATA_03-SUPPORT_INFORMATION/09-registry"
+folder: "ATA_03-SUPPORT_INFORMATION/09-REGISTRY"
 purpose: "Live GSE fleet registry, availability tracking, and defect management"
 owners: ["Ground Ops", "Maintenance", "Quality"]
 approvers:
