@@ -1,0 +1,9 @@
+# O-ORGANIZATION
+
+This section contains organizational standards and general information according to ATA chapters:
+
+- ATA 00: GENERAL
+- ATA 01: MAINTENANCE POLICY INFORMATION
+- ATA 04: AIRWORTHINESS LIMITATIONS
+- ATA 05: TIME LIMITS / MAINTENANCE CHECKS
+- ATA 18: VIBRATION AND NOISE ANALYSIS
