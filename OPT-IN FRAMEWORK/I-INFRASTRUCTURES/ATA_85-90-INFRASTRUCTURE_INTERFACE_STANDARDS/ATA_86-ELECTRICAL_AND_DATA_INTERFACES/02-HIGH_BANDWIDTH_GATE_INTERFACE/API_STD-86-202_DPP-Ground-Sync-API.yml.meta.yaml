@@ -1,0 +1,39 @@
+schema_version: "1.1"
+id: "API_STD-86-202_DPP-Ground-Sync-API"
+document:
+  type: "API-STD"
+  title: "Standard - DPP Ground Sync API"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+compliance:
+  standards:
+    - "OpenAPI 3.1"
+    - "ISO/IEC 27001"
+  certification_procedure: "TEST_STD-89-201"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "234abc567def890123456789012345678901234567890123456789012345"
+  signature_required: true
+traceability:
+  crossrefs:
+    - "ATA_95"
+    - "ATA_46-40"
+  tests:
+    - "TEST_STD-89-201"
+  related_docs:
+    - "ICD_STD-86-201"
+    - "SEC_STD-86-203"
+approvals:
+  - role: "Chief Data Architect"
+    name: "Dr. Maria Garcia"
+    date: "2029-05-20"
+  - role: "Chief Information Security Officer"
+    name: "Lisa Anderson"
+    date: "2029-05-21"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-04-22T10:30:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-22T16:00:00Z"

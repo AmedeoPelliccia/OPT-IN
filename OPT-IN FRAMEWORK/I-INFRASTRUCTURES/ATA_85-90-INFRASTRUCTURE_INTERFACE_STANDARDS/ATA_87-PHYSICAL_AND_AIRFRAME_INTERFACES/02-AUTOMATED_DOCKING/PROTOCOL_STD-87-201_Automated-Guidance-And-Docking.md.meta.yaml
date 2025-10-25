@@ -1,0 +1,32 @@
+schema_version: "1.1"
+id: "PROTOCOL_STD-87-201_Automated-Guidance-And-Docking"
+document:
+  type: "PROTOCOL-STD"
+  title: "Protocol - Automated Guidance and Docking"
+  revision: "1.0.0"
+  effective_date: "2030-01-01"
+  status: "DRAFT"
+compliance:
+  standards: []
+  certification_procedure: ""
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "345abc678def901234567890123456789012345678901234567890123456"
+  signature_required: false
+traceability:
+  crossrefs:
+    - "ATA_52"
+  tests: []
+  related_docs:
+    - "SPEC_STD-87-101"
+    - "SPEC_STD-87-102"
+approvals:
+  - role: "Chief Automation Engineer"
+    name: "Dr. Yuki Tanaka"
+    date: "2029-05-26"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-05-15T16:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-26T10:30:00Z"

@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "PROTOCOL_STD-86-102_HVDC-Charging-Handshake"
+document:
+  type: "PROTOCOL-STD"
+  title: "Standard - HVDC Charging Handshake Protocol"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+compliance:
+  standards:
+    - "ISO 15118"
+    - "IEC 61851-23"
+  certification_procedure: "TEST_STD-89-101"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "345def678abc901234567890123456789012345678901234567890123456"
+  signature_required: true
+traceability:
+  crossrefs:
+    - "ATA_24"
+  tests:
+    - "TEST_STD-89-101"
+  related_docs:
+    - "ICD_STD-86-101"
+approvals:
+  - role: "Chief Electrical Engineer"
+    name: "Michael Johnson"
+    date: "2029-05-16"
+  - role: "Cybersecurity Officer"
+    name: "Lisa Anderson"
+    date: "2029-05-19"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-04-15T14:30:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-15T10:00:00Z"

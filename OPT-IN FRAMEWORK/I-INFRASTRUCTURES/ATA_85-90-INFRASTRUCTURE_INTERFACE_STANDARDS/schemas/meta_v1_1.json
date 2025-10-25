@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Infrastructure Standards Document Metadata Schema v1.1",
+  "description": "Validation schema for AMPEL360 Infrastructure Interface Standards document metadata sidecars (ATA 85-90)",
+  "type": "object",
+  "required": ["schema_version", "id", "document", "compliance", "integrity"],
+  "properties": {
+    "schema_version": {
+      "const": "1.1",
+      "description": "Metadata schema version"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^(ICD|PROC|SPEC|PROTOCOL|API|SEC|TEST|ROADMAP)_STD-[0-9]{2}-[0-9]{3}(_[A-Za-z0-9-]+)?$",
+      "description": "Unique document identifier following naming convention"
+    },
+    "document": {
+      "type": "object",
+      "required": ["type", "title", "revision", "effective_date", "status"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ICD-STD", "PROC-STD", "SPEC-STD", "PROTOCOL-STD", "API-STD", "SEC-STD", "TEST-STD", "ROADMAP-STD"],
+          "description": "Document type classification"
+        },
+        "title": {
+          "type": "string",
+          "description": "Full document title"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version (major.minor.patch)"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when this standard becomes effective (ISO 8601)"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["DRAFT", "CANDIDATE", "RATIFIED", "DEPRECATED"],
+          "description": "Lifecycle status of the standard"
+        }
+      }
+    },
+    "compliance": {
+      "type": "object",
+      "description": "Regulatory and standards compliance",
+      "properties": {
+        "standards": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Referenced industry standards (e.g., ISO 21013, NFPA 2)"
+        },
+        "certification_procedure": {
+          "type": "string",
+          "pattern": "^(TEST_STD-89-[0-9]{3})?$",
+          "description": "Reference to the compliance test procedure (optional for DRAFT documents)"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["checksum"],
+      "properties": {
+        "checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256", "sha512"]
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-f0-9]+$",
+              "description": "Hexadecimal checksum value"
+            }
+          }
+        },
+        "signature_required": {
+          "type": "boolean",
+          "description": "Whether digital signature is required for this document"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Cross-references and traceability links",
+      "properties": {
+        "crossrefs": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Cross-references to other ATA chapters"
+        },
+        "tests": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Related test procedures"
+        },
+        "related_docs": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Related standards documents"
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "description": "Document approval chain",
+      "items": {
+        "type": "object",
+        "required": ["role", "name", "date"],
+        "properties": {
+          "role": {"type": "string"},
+          "name": {"type": "string"},
+          "date": {"type": "string", "format": "date"},
+          "signature": {"type": "string"}
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "description": "Audit trail information",
+      "properties": {
+        "created_by": {"type": "string"},
+        "created_utc": {"type": "string", "format": "date-time"},
+        "modified_by": {"type": "string"},
+        "modified_utc": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

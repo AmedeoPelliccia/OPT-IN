@@ -1,0 +1,32 @@
+schema_version: "1.1"
+id: "SPEC_STD-87-102_Aircraft-Clearance-And-Exclusion-Zones"
+document:
+  type: "SPEC-STD"
+  title: "Specification - Aircraft Clearance and Exclusion Zones"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+compliance:
+  standards: []
+  certification_procedure: "TEST_STD-89-101"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "012def345abc678901234567890123456789012345678901234567890123"
+  signature_required: true
+traceability:
+  crossrefs:
+    - "ATA_52"
+  tests:
+    - "TEST_STD-89-101"
+  related_docs:
+    - "SPEC_STD-87-101"
+approvals:
+  - role: "Chief Safety Officer"
+    name: "James Chen"
+    date: "2029-05-18"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-04-09T10:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-18T13:00:00Z"

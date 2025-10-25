@@ -1,0 +1,242 @@
+openapi: 3.1.0
+info:
+  title: AMPEL360 DPP Ground Sync API
+  version: 1.0.0
+  description: |
+    API Standard for synchronizing Digital Product Passport (DPP) data between
+    AMPEL360 aircraft and ground infrastructure systems at the gate.
+  contact:
+    name: AMPEL360 Infrastructure Standards Team
+    email: standards@ampel360.aero
+  license:
+    name: Proprietary - AMPEL360
+    identifier: Proprietary
+servers:
+  - url: https://gate.{airport}.ampel360.aero/api/v1
+    description: Airport Gate API Endpoint
+    variables:
+      airport:
+        default: ams
+        description: Airport IATA code
+security:
+  - mTLS: []
+  - bearerAuth: []
+paths:
+  /dpp/sync:
+    post:
+      summary: Synchronize DPP data
+      description: |
+        Synchronizes Digital Product Passport data from aircraft to ground systems.
+        Requires mutual TLS authentication and valid JWT token.
+      operationId: syncDPP
+      tags:
+        - DPP Synchronization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DPPSyncRequest'
+      responses:
+        '200':
+          description: DPP sync successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DPPSyncResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal server error
+      security:
+        - mTLS: []
+          bearerAuth: []
+  /dpp/status/{aircraftId}:
+    get:
+      summary: Get DPP sync status
+      description: Retrieves the current synchronization status for an aircraft
+      operationId: getDPPStatus
+      tags:
+        - DPP Synchronization
+      parameters:
+        - name: aircraftId
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: '^AC-[0-9]{5}$'
+          description: Aircraft identifier (e.g., AC-12345)
+      responses:
+        '200':
+          description: Status retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DPPStatusResponse'
+        '404':
+          description: Aircraft not found
+components:
+  securitySchemes:
+    mTLS:
+      type: mutualTLS
+      description: Mutual TLS with X.509 certificates
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    DPPSyncRequest:
+      type: object
+      required:
+        - aircraft_id
+        - dpp_data
+        - signature
+      properties:
+        aircraft_id:
+          type: string
+          pattern: '^AC-[0-9]{5}$'
+          example: AC-12345
+        flight_id:
+          type: string
+          example: AMP360-1234
+        timestamp:
+          type: string
+          format: date-time
+        dpp_data:
+          type: object
+          description: Digital Product Passport data payload
+          properties:
+            maintenance_records:
+              type: array
+              items:
+                $ref: '#/components/schemas/MaintenanceRecord'
+            flight_hours:
+              type: number
+              format: float
+            cycles:
+              type: integer
+            component_status:
+              type: array
+              items:
+                $ref: '#/components/schemas/ComponentStatus'
+        signature:
+          $ref: '#/components/schemas/DigitalSignature'
+    DPPSyncResponse:
+      type: object
+      properties:
+        sync_id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [success, partial, failed]
+        timestamp:
+          type: string
+          format: date-time
+        records_synced:
+          type: integer
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorDetail'
+    DPPStatusResponse:
+      type: object
+      properties:
+        aircraft_id:
+          type: string
+        last_sync:
+          type: string
+          format: date-time
+        sync_status:
+          type: string
+          enum: [synchronized, pending, error]
+        records_count:
+          type: integer
+    MaintenanceRecord:
+      type: object
+      required:
+        - record_id
+        - date
+        - type
+      properties:
+        record_id:
+          type: string
+        date:
+          type: string
+          format: date-time
+        type:
+          type: string
+          enum: [inspection, repair, modification, service]
+        ata_chapter:
+          type: string
+        description:
+          type: string
+        technician:
+          type: string
+    ComponentStatus:
+      type: object
+      properties:
+        component_id:
+          type: string
+        part_number:
+          type: string
+        serial_number:
+          type: string
+        status:
+          type: string
+          enum: [serviceable, unserviceable, monitoring]
+        hours:
+          type: number
+        cycles:
+          type: integer
+        next_maintenance:
+          type: string
+          format: date
+    DigitalSignature:
+      type: object
+      required:
+        - algorithm
+        - value
+        - certificate_fingerprint
+      properties:
+        algorithm:
+          type: string
+          enum: [ECDSA-P384-SHA384, RSA-4096-SHA384]
+        value:
+          type: string
+          format: byte
+          description: Base64-encoded signature
+        certificate_fingerprint:
+          type: string
+          description: SHA-256 fingerprint of signing certificate
+        timestamp:
+          type: string
+          format: date-time
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorDetail'
+    ErrorDetail:
+      type: object
+      properties:
+        field:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
