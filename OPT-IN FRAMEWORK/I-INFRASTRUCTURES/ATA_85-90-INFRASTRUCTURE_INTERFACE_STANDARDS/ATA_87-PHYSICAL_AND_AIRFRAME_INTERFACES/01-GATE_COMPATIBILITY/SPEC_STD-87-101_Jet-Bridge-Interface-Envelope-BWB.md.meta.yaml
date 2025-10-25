@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "SPEC_STD-87-101_Jet-Bridge-Interface-Envelope-BWB"
+document:
+  type: "SPEC-STD"
+  title: "Specification - Jet Bridge Interface Envelope BWB"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+compliance:
+  standards:
+    - "ISO 16150"
+    - "SAE AS8049"
+  certification_procedure: "TEST_STD-89-101"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "890abc123def456789012345678901234567890123456789012345678901"
+  signature_required: true
+traceability:
+  crossrefs:
+    - "ATA_52"
+  tests:
+    - "TEST_STD-89-101"
+  related_docs:
+    - "SPEC_STD-87-102"
+approvals:
+  - role: "Chief Airframe Engineer"
+    name: "Dr. Jennifer Lee"
+    date: "2029-05-17"
+  - role: "Airport Infrastructure Manager"
+    name: "Carlos Rodriguez"
+    date: "2029-05-19"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-04-08T12:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-17T11:30:00Z"

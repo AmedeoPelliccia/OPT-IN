@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "TEST_STD-89-101_LH2-Hydrant-System-Fidelity-Test"
+document:
+  type: "TEST-STD"
+  title: "Test Procedure - LH2 Hydrant System Fidelity Test"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+compliance:
+  standards:
+    - "ISO 21013"
+    - "NFPA 2"
+  certification_procedure: ""
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "456abc789def012345678901234567890123456789012345678901234567"
+  signature_required: true
+traceability:
+  crossrefs:
+    - "ATA_85"
+  tests: []
+  related_docs:
+    - "ICD_STD-85-101"
+    - "PROC_STD-85-102"
+approvals:
+  - role: "Chief Test Engineer"
+    name: "Dr. Hans Schmidt"
+    date: "2029-05-23"
+  - role: "Safety Compliance Officer"
+    name: "James Chen"
+    date: "2029-05-24"
+audit:
+  created_by: "AMPEL360 Testing & Certification Team"
+  created_utc: "2029-05-05T09:00:00Z"
+  modified_by: "AMPEL360 Testing & Certification Team"
+  modified_utc: "2029-05-23T14:15:00Z"

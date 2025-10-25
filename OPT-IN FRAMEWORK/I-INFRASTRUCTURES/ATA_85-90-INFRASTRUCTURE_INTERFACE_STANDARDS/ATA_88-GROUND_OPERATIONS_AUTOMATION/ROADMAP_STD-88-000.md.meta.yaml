@@ -1,0 +1,32 @@
+schema_version: "1.1"
+id: "ROADMAP_STD-88-000"
+document:
+  type: "ROADMAP-STD"
+  title: "Roadmap - Ground Operations Automation"
+  revision: "0.9.0"
+  effective_date: "2029-06-01"
+  status: "DRAFT"
+compliance:
+  standards: []
+  certification_procedure: ""
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "567def890abc123456789012345678901234567890123456789012345678"
+  signature_required: false
+traceability:
+  crossrefs:
+    - "ATA_85"
+    - "ATA_86"
+    - "ATA_87"
+  tests: []
+  related_docs: []
+approvals:
+  - role: "Director of Ground Operations"
+    name: "Thomas Mueller"
+    date: "2029-05-25"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-05-01T08:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-25T17:00:00Z"

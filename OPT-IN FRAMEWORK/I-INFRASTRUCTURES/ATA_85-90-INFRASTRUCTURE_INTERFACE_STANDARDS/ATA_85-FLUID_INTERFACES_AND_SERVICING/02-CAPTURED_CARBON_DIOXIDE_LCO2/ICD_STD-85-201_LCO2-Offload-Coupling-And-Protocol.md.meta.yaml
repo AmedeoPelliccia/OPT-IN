@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "ICD_STD-85-201_LCO2-Offload-Coupling-And-Protocol"
+document:
+  type: "ICD-STD"
+  title: "Standard - LCO2 Offload Coupling and Protocol"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+compliance:
+  standards:
+    - "ISO 20421"
+    - "EN 1092-1"
+  certification_procedure: "TEST_STD-89-101"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "789abc012345def678901234567890123456789012345678901234567890"
+  signature_required: true
+traceability:
+  crossrefs:
+    - "ATA_21-80"
+    - "ATA_12"
+  tests:
+    - "TEST_STD-89-101"
+  related_docs: []
+approvals:
+  - role: "Chief Engineer - Environmental Systems"
+    name: "Dr. Sarah Williams"
+    date: "2029-05-18"
+  - role: "Safety Compliance Officer"
+    name: "James Chen"
+    date: "2029-05-20"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-04-10T11:30:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-10T09:15:00Z"

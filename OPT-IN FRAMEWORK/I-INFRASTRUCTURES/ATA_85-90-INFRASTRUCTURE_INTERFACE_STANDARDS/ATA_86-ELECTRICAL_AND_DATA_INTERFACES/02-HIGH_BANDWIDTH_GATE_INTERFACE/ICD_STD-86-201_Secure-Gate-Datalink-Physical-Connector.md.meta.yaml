@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "ICD_STD-86-201_Secure-Gate-Datalink-Physical-Connector"
+document:
+  type: "ICD-STD"
+  title: "Standard - Secure Gate Datalink Physical Connector"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+compliance:
+  standards:
+    - "IEEE 802.3"
+  certification_procedure: "TEST_STD-89-201"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "901def234abc567890123456789012345678901234567890123456789012"
+  signature_required: true
+traceability:
+  crossrefs:
+    - "ATA_46-40"
+  tests:
+    - "TEST_STD-89-201"
+  related_docs:
+    - "API_STD-86-202"
+    - "SEC_STD-86-203"
+approvals:
+  - role: "Chief Data Systems Engineer"
+    name: "David Wong"
+    date: "2029-05-21"
+  - role: "Safety Compliance Officer"
+    name: "James Chen"
+    date: "2029-05-22"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-04-18T11:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-05-18T14:45:00Z"
