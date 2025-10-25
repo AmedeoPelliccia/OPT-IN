@@ -1,0 +1,37 @@
+{
+  "schema_version": "2.0",
+  "event_id": "event_MRO-1234-WorkOrder-5678",
+  "prev_event_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2",
+  "merkle_root": "e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8",
+  "log_index": 102394,
+  "timestamp_utc": "2029-04-15T17:30:10Z",
+  "actor": {
+    "type": "MRO",
+    "id": "MRO-1234",
+    "technician_id": "TECH-9876"
+  },
+  "action": {
+    "type": "REPLACEMENT",
+    "description": "Replaced LH Main Landing Gear Brake Unit."
+  },
+  "subjects": [
+    {
+      "type": "Aircraft",
+      "id": "urn:ampel360:msn:001"
+    },
+    {
+      "type": "PartRemoved",
+      "id": "urn:ampel360:part:SN-LGB-L-555"
+    },
+    {
+      "type": "PartInstalled",
+      "id": "urn:ampel360:part:SN-LGB-L-678"
+    }
+  ],
+  "signature": {
+    "algorithm": "ed25519",
+    "signer_key_id": "key_TECH-9876",
+    "value": "..."
+  },
+  "log_sig": "..."
+}

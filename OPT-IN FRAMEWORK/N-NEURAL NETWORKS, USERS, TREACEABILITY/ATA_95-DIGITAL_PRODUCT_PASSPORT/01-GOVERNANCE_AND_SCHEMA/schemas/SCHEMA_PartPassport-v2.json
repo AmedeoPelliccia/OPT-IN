@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/PartPassport-v2.json",
+  "title": "Part Passport",
+  "description": "Digital Product Passport for an aircraft component or part",
+  "type": "object",
+  "required": ["schema_version", "passport_id", "type", "revision", "last_updated_utc", "identity", "manufacturing", "status", "provenance"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Schema version (MAJOR.MINOR)"
+    },
+    "passport_id": {
+      "type": "string",
+      "pattern": "^urn:ampel360:part:.+$",
+      "description": "Unique identifier for this part passport"
+    },
+    "type": {
+      "type": "string",
+      "const": "PartPassport"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Revision number of this passport instance"
+    },
+    "last_updated_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "identity": {
+      "type": "object",
+      "required": ["serial_number", "part_number", "description"],
+      "properties": {
+        "serial_number": {
+          "type": "string",
+          "description": "Unique serial number of the part"
+        },
+        "part_number": {
+          "type": "string",
+          "description": "Part number (manufacturer designation)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable part description"
+        },
+        "ata_chapter": {
+          "type": "string",
+          "pattern": "^\\d{2}$",
+          "description": "ATA chapter code (e.g., '32' for landing gear)"
+        }
+      }
+    },
+    "manufacturing": {
+      "type": "object",
+      "required": ["manufacturer", "manufacture_date"],
+      "properties": {
+        "manufacturer": {
+          "type": "string",
+          "description": "Manufacturer name"
+        },
+        "manufacture_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of manufacture"
+        },
+        "batch_number": {
+          "type": "string",
+          "description": "Manufacturing batch or lot number"
+        },
+        "material_certificates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "References to material certificates"
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "required": ["lifecycle_state"],
+      "properties": {
+        "lifecycle_state": {
+          "type": "string",
+          "enum": ["NEW", "INSTALLED", "REMOVED", "IN_MAINTENANCE", "SCRAPPED"],
+          "description": "Current lifecycle state"
+        },
+        "installed_on_aircraft": {
+          "type": "string",
+          "pattern": "^urn:ampel360:msn:\\d+$",
+          "description": "Reference to aircraft if currently installed"
+        },
+        "installation_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of current installation"
+        },
+        "time_since_new_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Operating hours since manufacture"
+        },
+        "cycles_since_new": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Operating cycles since manufacture"
+        },
+        "time_since_overhaul_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Operating hours since last overhaul"
+        }
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "next_scheduled_maintenance": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of next scheduled maintenance"
+        },
+        "maintenance_program_ref": {
+          "type": "string",
+          "description": "Reference to applicable maintenance program"
+        },
+        "last_inspection_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["event_ledger_ref"],
+      "properties": {
+        "event_ledger_ref": {
+          "type": "string",
+          "pattern": "^urn:ampel360:ledger:part:.+$",
+          "description": "Reference to the event ledger for this part"
+        },
+        "previous_installations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "aircraft_id": {
+                "type": "string"
+              },
+              "installation_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "removal_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "removal_reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "data_classification": {
+      "type": "string",
+      "enum": ["PUBLIC", "INTERNAL", "REGULATED", "PII-SENSITIVE"],
+      "default": "INTERNAL",
+      "description": "Data classification level for this passport"
+    }
+  },
+  "additionalProperties": false
+}

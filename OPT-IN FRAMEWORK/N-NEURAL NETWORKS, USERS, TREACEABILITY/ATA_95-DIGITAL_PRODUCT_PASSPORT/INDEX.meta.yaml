@@ -1,0 +1,12 @@
+schema_version: "1.1"
+folder: "ATA_95-DIGITAL_PRODUCT_PASSPORT"
+purpose: "Defines the architecture, governance, and data standards for the AMPEL360 Digital Product Passport."
+owners: ["Data Governance", "Chief Architect", "Airworthiness"]
+approvers:
+  - role: "Head of Airworthiness"
+    name: "TBD"
+effective_date: "2028-12-01"
+data_classes: ["PUBLIC","INTERNAL","REGULATED","PII-SENSITIVE"]
+retention_policy: { default_years: 10, ledger_indefinite: true }
+crypto: { sig_algo: "ed25519", hash_algo: "sha256", transparency_log: true }
+crossrefs: ["ATA_42","ATA_45","ATA_02","ATA_03","ATA_115","ATA_116"]

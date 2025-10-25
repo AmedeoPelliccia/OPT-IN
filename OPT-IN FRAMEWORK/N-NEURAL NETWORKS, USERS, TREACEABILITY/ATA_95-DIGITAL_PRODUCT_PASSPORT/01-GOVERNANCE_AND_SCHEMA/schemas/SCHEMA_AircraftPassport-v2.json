@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/AircraftPassport-v2.json",
+  "title": "Aircraft Passport",
+  "description": "Digital Product Passport for an AMPEL360 aircraft",
+  "type": "object",
+  "required": ["schema_version", "passport_id", "type", "revision", "last_updated_utc", "identity", "airworthiness", "configuration", "utilization", "provenance"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Schema version (MAJOR.MINOR)"
+    },
+    "passport_id": {
+      "type": "string",
+      "pattern": "^urn:ampel360:msn:\\d+$",
+      "description": "Unique identifier for this aircraft passport"
+    },
+    "type": {
+      "type": "string",
+      "const": "AircraftPassport"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Revision number of this passport instance"
+    },
+    "last_updated_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "identity": {
+      "type": "object",
+      "required": ["msn", "registration", "operator"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number"
+        },
+        "registration": {
+          "type": "string",
+          "description": "Aircraft registration (tail number)"
+        },
+        "operator": {
+          "type": "string",
+          "description": "Current operator name"
+        },
+        "model": {
+          "type": "string",
+          "description": "Aircraft model designation"
+        },
+        "variant": {
+          "type": "string",
+          "description": "Specific variant configuration"
+        }
+      }
+    },
+    "airworthiness": {
+      "type": "object",
+      "required": ["certificate_of_airworthiness_id", "status"],
+      "properties": {
+        "certificate_of_airworthiness_id": {
+          "type": "string",
+          "description": "Airworthiness certificate identifier"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["AIRWORTHY", "GROUNDED", "MAINTENANCE", "DECOMMISSIONED"],
+          "description": "Current airworthiness status"
+        },
+        "issued_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Certificate issue date"
+        },
+        "expiry_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Certificate expiry date"
+        },
+        "issuing_authority": {
+          "type": "string",
+          "description": "Authority that issued the certificate (e.g., EASA, FAA)"
+        }
+      }
+    },
+    "configuration": {
+      "type": "object",
+      "required": ["as_built_ref", "as_maintained_ref"],
+      "properties": {
+        "as_built_ref": {
+          "type": "string",
+          "description": "Reference to initial build completion event"
+        },
+        "as_maintained_ref": {
+          "type": "string",
+          "description": "Reference to latest maintenance event"
+        },
+        "major_components": {
+          "type": "object",
+          "description": "Serial numbers of major installed components",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "software_configuration": {
+          "type": "object",
+          "description": "Installed software versions",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "utilization": {
+      "type": "object",
+      "properties": {
+        "flight_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total flight hours"
+        },
+        "flight_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total flight cycles (takeoff-landing pairs)"
+        },
+        "calendar_age_days": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Days since manufacture"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["event_ledger_ref"],
+      "properties": {
+        "event_ledger_ref": {
+          "type": "string",
+          "pattern": "^urn:ampel360:ledger:msn:\\d+$",
+          "description": "Reference to the event ledger for this aircraft"
+        },
+        "previous_operators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "operator": {
+                "type": "string"
+              },
+              "from_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "to_date": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        }
+      }
+    },
+    "data_classification": {
+      "type": "string",
+      "enum": ["PUBLIC", "INTERNAL", "REGULATED", "PII-SENSITIVE"],
+      "default": "REGULATED",
+      "description": "Data classification level for this passport"
+    }
+  },
+  "additionalProperties": false
+}
