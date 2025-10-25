@@ -24,71 +24,90 @@ Document footers contain explicit cross-references to related safety, monitoring
 ### Canonical Source
 The QRH is generated from a canonical source XML file. The Markdown document is a controlled build artifact optimized for GitHub readability.
 
-## Directory Structure
+# Hyperlinkable index — `I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION`
 
-```
-/I-INFRASTRUCTURES
-└── /ATA_02-OPERATIONS_INFORMATION
-    ├── 00_README.md
-    ├── INDEX.meta.yaml
-    ├── /checksums
-    │   └── SHA256SUMS.txt
-    ├── /01-FCOM-Flight_Crew_Operating_Manual
-    │   ├── INDEX.meta.yaml
-    │   ├── /LIMITATIONS
-    │   │   ├── FCOM-LIMITATIONS_General.md
-    │   │   ├── FCOM-LIMITATIONS_General.md.meta.yaml
-    │   │   ├── FCOM-LIMITATIONS_Operational_Minima.md
-    │   │   └── FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml
-    │   ├── /NORMAL_PROCEDURES
-    │   │   └── ... (files with .meta.yaml sidecars) ...
-    │   ├── /NON-NORMAL_PROCEDURES
-    │   │   ├── INDEX.meta.yaml
-    │   │   ├── NNP_CB_RESET_POLICY.md
-    │   │   ├── NNP_CB_RESET_POLICY.md.meta.yaml
-    │   │   ├── NNP_24-33_Battery_Thermal_Runaway.md
-    │   │   ├── NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml
-    │   │   ├── NNP_26-40_H2_Leak_In_Flight.md
-    │   │   └── NNP_26-40_H2_Leak_In_Flight.md.meta.yaml
-    │   └── /SYSTEM_DESCRIPTIONS
-    │       ├── SYS_42-60_QIS_Scheduler_Overview.md
-    │       └── SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml
-    ├── /02-QRH-Quick_Reference_Handbook
-    │   ├── INDEX.meta.yaml
-    │   ├── AMPEL360_QRH_Digital.md
-    │   ├── AMPEL360_QRH_Digital.md.meta.yaml
-    │   ├── AMPEL360_QRH_Digital.sig
-    │   └── /source_data
-    │       └── qrh_procedures.xml
-    ├── /03-FPERF-Performance
-    │   ├── INDEX.meta.yaml
-    │   └── /data_packages
-    │       ├── manifest.meta.yaml
-    │       ├── takeoff_performance.json
-    │       └── takeoff_performance.json.sig
-    ├── /04-WBM-Weight_and_Balance
-    │   ├── INDEX.meta.yaml
-    │   └── /data
-    │       ├── basic_empty_weight_config.json
-    │       ├── basic_empty_weight_config.json.sig
-    │       ├── cg_envelope_BWB.json
-    │       └── cg_envelope_BWB.json.sig
-    ├── /05-MEL-Minimum_Equipment_List
-    │   ├── INDEX.meta.yaml
-    │   ├── CDL_Configuration_Deviation_List.md
-    │   ├── CDL_Configuration_Deviation_List.md.meta.yaml
-    │   ├── NEF_Non_Essential_Furnishings.md
-    │   └── NEF_Non_Essential_Furnishings.md.meta.yaml
-    └── /06-GROUND_OPS-Ground_Operations_Manual
-        ├── INDEX.meta.yaml
-        ├── 00-Training_&_PPE.md
-        ├── 00-Training_&_PPE.md.meta.yaml
-        └── /01-Refueling_and_Offload
-            └── /LH2_Cryogenic_Refueling
-                ├── INDEX.meta.yaml
-                ├── LH2_Area_Monitoring_O2_H2_Sensors.md
-                └── LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml
-```
+* [`00_README.md`](00_README.md)
+* [`INDEX.meta.yaml`](INDEX.meta.yaml)
+* **checksums**
+
+  * [`/checksums/SHA256SUMS.txt`](checksums/SHA256SUMS.txt)
+
+## 01 — FCOM · Flight Crew Operating Manual
+
+* [`/01-FCOM-Flight_Crew_Operating_Manual/INDEX.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/INDEX.meta.yaml)
+* **LIMITATIONS**
+
+  * [`FCOM-LIMITATIONS_General.md`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_General.md)
+  * [`FCOM-LIMITATIONS_General.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_General.md.meta.yaml)
+  * [`FCOM-LIMITATIONS_Operational_Minima.md`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_Operational_Minima.md)
+  * [`FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/LIMITATIONS/FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml)
+* **NORMAL_PROCEDURES**
+
+  * *(files with `.meta.yaml` sidecars)* — [`/01-FCOM-Flight_Crew_Operating_Manual/NORMAL_PROCEDURES/`](01-FCOM-Flight_Crew_Operating_Manual/NORMAL_PROCEDURES/)
+* **NON-NORMAL_PROCEDURES**
+
+  * [`INDEX.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/INDEX.meta.yaml)
+  * [`NNP_CB_RESET_POLICY.md`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_CB_RESET_POLICY.md)
+  * [`NNP_CB_RESET_POLICY.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_CB_RESET_POLICY.md.meta.yaml)
+  * [`NNP_24-33_Battery_Thermal_Runaway.md`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_24-33_Battery_Thermal_Runaway.md)
+  * [`NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml)
+  * [`NNP_26-40_H2_Leak_In_Flight.md`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_26-40_H2_Leak_In_Flight.md)
+  * [`NNP_26-40_H2_Leak_In_Flight.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/NON-NORMAL_PROCEDURES/NNP_26-40_H2_Leak_In_Flight.md.meta.yaml)
+* **SYSTEM_DESCRIPTIONS**
+
+  * [`SYS_42-60_QIS_Scheduler_Overview.md`](01-FCOM-Flight_Crew_Operating_Manual/SYSTEM_DESCRIPTIONS/SYS_42-60_QIS_Scheduler_Overview.md)
+  * [`SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml`](01-FCOM-Flight_Crew_Operating_Manual/SYSTEM_DESCRIPTIONS/SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml)
+
+## 02 — QRH · Quick Reference Handbook
+
+* [`/02-QRH-Quick_Reference_Handbook/INDEX.meta.yaml`](02-QRH-Quick_Reference_Handbook/INDEX.meta.yaml)
+* [`AMPEL360_QRH_Digital.md`](02-QRH-Quick_Reference_Handbook/AMPEL360_QRH_Digital.md)
+* [`AMPEL360_QRH_Digital.md.meta.yaml`](02-QRH-Quick_Reference_Handbook/AMPEL360_QRH_Digital.md.meta.yaml)
+* [`AMPEL360_QRH_Digital.sig`](02-QRH-Quick_Reference_Handbook/AMPEL360_QRH_Digital.sig)
+* **source_data**
+
+  * [`qrh_procedures.xml`](02-QRH-Quick_Reference_Handbook/source_data/qrh_procedures.xml)
+
+## 03 — FPERF · Performance
+
+* [`/03-FPERF-Performance/INDEX.meta.yaml`](03-FPERF-Performance/INDEX.meta.yaml)
+* **data_packages**
+
+  * [`manifest.meta.yaml`](03-FPERF-Performance/data_packages/manifest.meta.yaml)
+  * [`takeoff_performance.json`](03-FPERF-Performance/data_packages/takeoff_performance.json)
+  * [`takeoff_performance.json.sig`](03-FPERF-Performance/data_packages/takeoff_performance.json.sig)
+
+## 04 — WBM · Weight and Balance
+
+* [`/04-WBM-Weight_and_Balance/INDEX.meta.yaml`](04-WBM-Weight_and_Balance/INDEX.meta.yaml)
+* **data**
+
+  * [`basic_empty_weight_config.json`](04-WBM-Weight_and_Balance/data/basic_empty_weight_config.json)
+  * [`basic_empty_weight_config.json.sig`](04-WBM-Weight_and_Balance/data/basic_empty_weight_config.json.sig)
+  * [`cg_envelope_BWB.json`](04-WBM-Weight_and_Balance/data/cg_envelope_BWB.json)
+  * [`cg_envelope_BWB.json.sig`](04-WBM-Weight_and_Balance/data/cg_envelope_BWB.json.sig)
+
+## 05 — MEL · Minimum Equipment List
+
+* [`/05-MEL-Minimum_Equipment_List/INDEX.meta.yaml`](05-MEL-Minimum_Equipment_List/INDEX.meta.yaml)
+* [`CDL_Configuration_Deviation_List.md`](05-MEL-Minimum_Equipment_List/CDL_Configuration_Deviation_List.md)
+* [`CDL_Configuration_Deviation_List.md.meta.yaml`](05-MEL-Minimum_Equipment_List/CDL_Configuration_Deviation_List.md.meta.yaml)
+* [`NEF_Non_Essential_Furnishings.md`](05-MEL-Minimum_Equipment_List/NEF_Non_Essential_Furnishings.md)
+* [`NEF_Non_Essential_Furnishings.md.meta.yaml`](05-MEL-Minimum_Equipment_List/NEF_Non_Essential_Furnishings.md.meta.yaml)
+
+## 06 — Ground Operations Manual
+
+* [`/06-GROUND_OPS-Ground_Operations_Manual/INDEX.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/INDEX.meta.yaml)
+* [`00-Training_&_PPE.md`](06-GROUND_OPS-Ground_Operations_Manual/00-Training_%26_PPE.md)
+* [`00-Training_&_PPE.md.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/00-Training_%26_PPE.md.meta.yaml)
+* **01-Refueling_and_Offload**
+
+  * **LH2_Cryogenic_Refueling**
+
+    * [`INDEX.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/INDEX.meta.yaml)
+    * [`LH2_Area_Monitoring_O2_H2_Sensors.md`](06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.md)
+    * [`LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml`](06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml)
+
 
 ## Document Types
 
