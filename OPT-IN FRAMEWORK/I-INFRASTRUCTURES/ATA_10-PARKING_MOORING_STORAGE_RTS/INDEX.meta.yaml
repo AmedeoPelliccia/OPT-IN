@@ -1,0 +1,111 @@
+---
+chapter: ATA-10
+title: PARKING, MOORING, STORAGE & RETURN TO SERVICE
+version: 2.0.0
+last_updated: 2028-12-01
+status: active
+framework: OPT-IN
+category: I-INFRASTRUCTURES
+
+description: |
+  Comprehensive procedures for parking, mooring, storage, and return-to-service 
+  operations for AMPEL360 aircraft. Includes BWB-specific procedures and 
+  advanced systems preservation protocols.
+
+standards:
+  - FAA AC 43-16
+  - EASA Part-M
+  - ATA Spec 100
+  - S1000D
+
+related_ata_chapters:
+  - ATA-02: OPERATIONS INFORMATION
+  - ATA-03: SUPPORT INFORMATION
+  - ATA-09: TOWING AND TAXIING
+  - ATA-24: ELECTRICAL POWER
+  - ATA-28: FUEL SYSTEMS
+  - ATA-72: ENGINE
+
+subsections:
+  - id: 01
+    name: PARKING_AND_MANEUVERING
+    description: Normal parking operations and gate positioning for BWB
+    
+  - id: 02
+    name: MOORING
+    description: Standard and high-wind mooring procedures
+    
+  - id: 03
+    name: STORAGE_PROCEDURES
+    description: Short-term and long-term storage protocols
+    subsections:
+      - id: 01
+        name: SHORT_TERM_STORAGE_UNDER_30_DAYS
+        description: Procedures for storage periods less than 30 days
+      - id: 02
+        name: LONG_TERM_STORAGE_OVER_30_DAYS
+        description: Procedures for storage periods exceeding 30 days
+        subsections:
+          - id: 01
+            name: COMPONENT_SPECIFIC
+            description: Component-specific preservation procedures
+    
+  - id: 04
+    name: RETURN_TO_SERVICE
+    description: Checklists for restoring aircraft to operational status
+    
+  - id: 05
+    name: DIAGRAMS_AND_DATA
+    description: Technical diagrams and reference data
+
+key_procedures:
+  parking:
+    - PROC_Parking-Normal-Operations_rev1.2.0
+    - PROC_Gate-Positioning-BWB_rev1.1.0
+  
+  mooring:
+    - PROC_Mooring-Standard-Conditions_rev1.0.0
+    - PROC_Mooring-High-Wind-BWB_rev1.3.0
+  
+  storage_short_term:
+    - STSP_Checklist-Short-Term-Prep_rev1.5.0
+  
+  storage_long_term:
+    - LTSP_Master-Procedure-Long-Term-Prep_rev2.0.0
+    - LTSP-PROC_28-60_Cryo-H2-System-Inerting
+    - LTSP-PROC_24-33_Battery-Preservation-SOC-Mgmt
+    - LTSP-PROC_72-00_Engine-Preservation
+    - LTSP-PROC_5x-xx_Airframe-Protection
+  
+  return_to_service:
+    - RTS-Checklist_From-Short-Term-Storage_rev1.5.0
+    - RTS-Checklist_From-Long-Term-Storage_rev2.0.0
+
+special_considerations:
+  - BWB aircraft configuration requirements
+  - Cryogenic hydrogen system safety protocols
+  - Advanced battery preservation techniques
+  - Environmental monitoring requirements
+  - Long-term structural protection measures
+
+tags:
+  - parking
+  - mooring
+  - storage
+  - preservation
+  - return-to-service
+  - BWB
+  - cryogenic
+  - hydrogen
+  - battery-management
+
+maintainers:
+  - AMPEL360 Technical Publications
+  - Ground Operations Team
+  - Maintenance Engineering
+
+approval:
+  status: approved
+  date: 2028-12-01
+  authority: AMPEL360 Chief Engineer
+  certificate: ATA-10-CERT-2024-001
