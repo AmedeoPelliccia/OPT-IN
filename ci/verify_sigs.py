@@ -46,7 +46,7 @@ def requires_signature(filepath):
         return False
     
     # Check if it's in a registry folder (status/tracking files don't need signatures)
-    if '/09-registry/' in filepath or '\\09-registry\\' in filepath:
+    if '09-registry' in Path(filepath).parts:
         return False
     
     # Check if it's a training record or calibration schedule
