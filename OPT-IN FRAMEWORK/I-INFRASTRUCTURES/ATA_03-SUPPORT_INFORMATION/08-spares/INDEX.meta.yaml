@@ -1,0 +1,20 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/08-spares"
+purpose: "Illustrated Parts Catalogs (IPCs), spares inventory, and supply chain management"
+owners: ["Supply Chain", "Ground Ops", "Maintenance"]
+approvers:
+  - role: "Supply Chain Manager"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "IPC_<GSE-ID>_<Subject>_rev<SEMVER>_<YYYYMMDD>.xml"
+  formats: ["xml", "csv", "json"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: ["xml"]
+refs:
+  ata_links: ["03"]
+  standards:
+    - "S1000D (IPC standard)"
+    - "ATA iSpec 2200"

@@ -1,0 +1,80 @@
+schema_version: "1.1"
+id: "GOM-AP360-S001-20281101"
+gse:
+  id: "AP360-S001"
+  model: "LH2 Cryogenic Refueler"
+  type: "Fuel Servicing Equipment"
+  manufacturer: "AMPEL360 Ground Systems"
+document:
+  type: "GOM"
+  title: "Ground Operations Manual: LH2 Cryogenic Refueling System"
+  revision: "2.0.0"
+  effective_date: "2028-11-01"
+  supersedes: "GOM_AP360-S001_LH2-Refueler_rev1.5.0_20280715.md"
+effectivity:
+  aircraft: ["AMPEL360"]
+  serial_range: "All production aircraft"
+  mod_status: "Baseline configuration"
+compliance:
+  standards:
+    - "ISO 21013 (Cryogenic vessels)"
+    - "SAE AS50881 (GSE general requirements)"
+    - "ATEX 2014/34/EU (Explosive atmospheres)"
+  regulations:
+    - "FAA AC 00-34A (Aircraft Ground Handling)"
+    - "EASA Part-145 (Maintenance Organization Approvals)"
+maintenance:
+  interval: "Daily inspection, monthly calibration"
+  next_due: "2029-01-15"
+  responsibility: "Ground Operations & Maintenance"
+training:
+  required_courses:
+    - "COURSE-H2-001: Hydrogen Safety Awareness"
+    - "COURSE-LH2-002: Cryogenic Safety & PPE"
+    - "COURSE-AP360-S001: GSE-Specific Operation"
+    - "CERT-HV-001: High Voltage Safety (800V)"
+  certification_level: "Qualified Ground Crew"
+approvals:
+  - role: "Ground Ops Manager"
+    name: "TBD"
+    date: "2028-11-01"
+    signature: "Digital signature pending"
+  - role: "Safety Officer"
+    name: "TBD"
+    date: "2028-11-01"
+    signature: "Digital signature pending"
+  - role: "Quality Manager"
+    name: "TBD"
+    date: "2028-11-01"
+    signature: "Digital signature pending"
+integrity:
+  checksum: "e096b9fb89275f70ecf9a5bfa6b50992717b74624f6426fa77eb2483898fe5cb"
+  algorithm: "SHA256"
+traceability:
+  ata_links:
+    - "28-60: Cryogenic H₂ Storage & Distribution"
+    - "26-40: H₂ Leak/Fire Detection"
+    - "24: Electrical Power (HV)"
+    - "21-50: Power Electronics Cooling"
+    - "42: Integrated Modular Avionics"
+  related_docs:
+    - "ICD_AP360-S001_LH2-Coupling_rev3.0.0_20280901.md"
+    - "ATP_AP360-S001_LH2-Coupling_rev1.2.0_20280815.md"
+    - "SDS_LH2_rev4.0.0_20280601.md"
+  requirements:
+    - "REQ-GSE-001: Safe LH2 transfer capability"
+    - "REQ-GSE-002: HV ground power interface"
+    - "REQ-SAFE-010: H₂ leak detection and alarm"
+audit:
+  created_by: "L. Davis"
+  created_utc: "2028-11-01T09:00:00Z"
+  modified_by: "L. Davis"
+  modified_utc: "2028-11-01T14:30:00Z"
+signing:
+  required: true
+  signature_file: "GOM_AP360-S001_LH2-Refueler_rev2.0.0_20281101.md.sig"
+  public_key: "keys/ampel360_gse_signing_key.pub"
+build:
+  git_commit: "abc123def456"
+  git_tag: "gse-docs-v2.0.0"
+  build_date: "2028-11-01T15:00:00Z"

@@ -1,0 +1,26 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/09-registry"
+purpose: "Live GSE fleet registry, availability tracking, and defect management"
+owners: ["Ground Ops", "Maintenance", "Quality"]
+approvers:
+  - role: "Ground Operations Manager"
+    name: "TBD"
+  - role: "Maintenance Manager"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "REG_<TYPE>_<YYYYMMDD>.json or REG_<TYPE>_<YYYYMMDD>.csv"
+  formats: ["json", "csv"]
+  sidecar_required: false
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: []
+refs:
+  ata_links: ["02", "03", "04", "05"]
+data_files:
+  - name: "status.json"
+    description: "Real-time GSE fleet status and availability"
+    update_frequency: "hourly"
+  - name: "defects.csv"
+    headers: "id,gse_id,serial,opened_utc,severity,effect,containment,root_cause,status,closed_utc,linked_docs"
+    description: "Defect tracking and resolution log"

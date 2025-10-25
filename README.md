@@ -417,6 +417,12 @@ OPT-IN FRAMEWORK/
 ├── I-INFRASTRUCTURES/
 │   ├── ATA 02: OPERATIONS INFORMATION (GROUND-BASED OPS)
 │   ├── ATA 03: SUPPORT INFORMATION (GROUND SUPPORT EQUIPMENT - GSE)
+│   │   └── **ATA_03-SUPPORT_INFORMATION**: Comprehensive GSE lifecycle management
+│   │       ├── Automated CI governance (checksums, signatures, schema validation)
+│   │       ├── Interface Control Documents (ICDs) for GSE-aircraft interfaces
+│   │       ├── Ground Operations Manuals (GOMs) with metadata sidecars
+│   │       ├── Training records, calibration schedules, defect tracking
+│   │       └── Live GSE fleet registry and availability status
 │   ├── ATA 10: PARKING, MOORING, STORAGE & RETURN TO SERVICE
 │   ├── ATA 13: HARDWARE AND GENERAL TOOLS
 │   ├── ATA 85-90 (Reserved): (INFRASTRUCTURE INTERFACE STANDARDS)

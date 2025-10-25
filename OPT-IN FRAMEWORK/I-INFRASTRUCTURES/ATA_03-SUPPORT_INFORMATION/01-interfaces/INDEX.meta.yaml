@@ -1,0 +1,23 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/01-interfaces"
+purpose: "Interface Control Documents (ICDs) defining mechanical, electrical, and communication interfaces between GSE and aircraft systems"
+owners: ["Engineering", "Ground Ops"]
+approvers:
+  - role: "Chief Engineer"
+    name: "TBD"
+  - role: "Ground Operations Manager"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "ICD_<GSE-ID>_<Interface>_rev<SEMVER>_<YYYYMMDD>.md"
+  formats: ["md", "pdf", "dxf"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: ["md"]
+refs:
+  ata_links: ["28-60", "26-40", "24", "21-50"]
+  standards:
+    - "ISO 21013 (LH2 couplings)"
+    - "IEC 62196 (HV connectors)"
+    - "SAE AS50881 (GSE general)"

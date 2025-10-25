@@ -1,0 +1,24 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/04-acceptance_and_certification"
+purpose: "Acceptance Test Procedures (ATPs) and certification records for GSE commissioning"
+owners: ["Quality", "Engineering", "Safety"]
+approvers:
+  - role: "Quality Manager"
+    name: "TBD"
+  - role: "Chief Engineer"
+    name: "TBD"
+  - role: "Safety Officer"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "ATP_<GSE-ID>_<Subject>_rev<SEMVER>_<YYYYMMDD>.md"
+  formats: ["md", "csv", "pdf"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: ["md", "csv"]
+refs:
+  ata_links: ["28-60", "26-40", "24", "21-50"]
+  standards:
+    - "ISO 9001 (quality management)"
+    - "SAE AS50881"

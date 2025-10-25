@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "GSE Document Metadata Schema v1.1",
+  "description": "Validation schema for AMPEL360 Ground Support Equipment document metadata sidecars",
+  "type": "object",
+  "required": ["schema_version", "id", "document", "effectivity", "integrity"],
+  "properties": {
+    "schema_version": {
+      "const": "1.1",
+      "description": "Metadata schema version"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique document identifier"
+    },
+    "gse": {
+      "type": "object",
+      "description": "GSE-specific information",
+      "properties": {
+        "id": {"type": "string"},
+        "model": {"type": "string"},
+        "serial": {"type": "string"},
+        "type": {"type": "string"}
+      }
+    },
+    "document": {
+      "type": "object",
+      "required": ["type", "title", "revision", "effective_date"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ICD", "GOM", "ATP", "IPC", "SDS", "FW", "SW", "SPEC"]
+        },
+        "title": {"type": "string"},
+        "revision": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "supersedes": {"type": "string"}
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "Applicability and lifecycle information",
+      "properties": {
+        "aircraft": {"type": "array", "items": {"type": "string"}},
+        "serial_range": {"type": "string"},
+        "mod_status": {"type": "string"}
+      }
+    },
+    "compliance": {
+      "type": "object",
+      "description": "Regulatory and standards compliance",
+      "properties": {
+        "standards": {"type": "array", "items": {"type": "string"}},
+        "regulations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "description": "Maintenance and calibration information",
+      "properties": {
+        "interval": {"type": "string"},
+        "next_due": {"type": "string"},
+        "responsibility": {"type": "string"}
+      }
+    },
+    "training": {
+      "type": "object",
+      "description": "Training requirements",
+      "properties": {
+        "required_courses": {"type": "array", "items": {"type": "string"}},
+        "certification_level": {"type": "string"}
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "description": "Document approval chain",
+      "items": {
+        "type": "object",
+        "required": ["role", "name", "date"],
+        "properties": {
+          "role": {"type": "string"},
+          "name": {"type": "string"},
+          "date": {"type": "string", "format": "date"},
+          "signature": {"type": "string"}
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["checksum"],
+      "properties": {
+        "checksum": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "algorithm": {
+          "type": "string",
+          "enum": ["SHA256", "SHA512"]
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Cross-references and traceability links",
+      "properties": {
+        "ata_links": {"type": "array", "items": {"type": "string"}},
+        "related_docs": {"type": "array", "items": {"type": "string"}},
+        "requirements": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "audit": {
+      "type": "object",
+      "description": "Audit trail information",
+      "properties": {
+        "created_by": {"type": "string"},
+        "created_utc": {"type": "string", "format": "date-time"},
+        "modified_by": {"type": "string"},
+        "modified_utc": {"type": "string", "format": "date-time"}
+      }
+    },
+    "signing": {
+      "type": "object",
+      "description": "Digital signature information",
+      "properties": {
+        "required": {"type": "boolean"},
+        "signature_file": {"type": "string"},
+        "public_key": {"type": "string"}
+      }
+    },
+    "build": {
+      "type": "object",
+      "description": "Build and version control information",
+      "properties": {
+        "git_commit": {"type": "string"},
+        "git_tag": {"type": "string"},
+        "build_date": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

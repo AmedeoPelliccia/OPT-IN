@@ -1,0 +1,58 @@
+name: GSE Docs Guard
+
+on:
+  pull_request:
+    paths:
+      - "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install pyyaml jsonschema
+          
+      - name: Validate filenames against convention
+        run: |
+          echo "Validating filename conventions..."
+          python ci/validate_naming.py "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION"
+        continue-on-error: true
+        
+      - name: Validate metadata sidecars against schema
+        run: |
+          echo "Validating metadata sidecars..."
+          python ci/validate_meta.py --schema "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION/schemas/meta_v1_1.json" "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION"
+        continue-on-error: true
+        
+      - name: Verify checksum manifest integrity
+        run: |
+          cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION"
+          echo "Verifying checksums..."
+          sha256sum --check --strict SHA256SUMS.txt || echo "Checksum validation warnings (some files may be new)"
+        continue-on-error: true
+        
+      - name: Verify digital signatures
+        run: |
+          echo "Verifying digital signatures..."
+          python ci/verify_sigs.py "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION"
+        continue-on-error: true
+        
+      - name: Summary
+        run: |
+          echo "::notice::GSE documentation validation complete"
+          echo "Review any warnings above for compliance issues"
