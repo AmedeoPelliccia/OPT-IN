@@ -66,6 +66,10 @@
   </IMA_Architecture>
 
   <QIS_Scheduler provisional="true" ata_reference="42-60-00">
+    <!-- Note: QIS is marked provisional as it represents novel technology under development.
+         For FFS Level D qualification, the simulator models observable system behavior
+         (task migration, resource allocation effects) rather than internal QIS algorithms.
+         See Master Certification Strategy for handling of provisional technologies. -->
     <Description>Quantum-Inspired Scheduler for Resource Orchestration</Description>
     <SchedulingAlgorithm>Quantum_Annealing_Inspired</SchedulingAlgorithm>
     
