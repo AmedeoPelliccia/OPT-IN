@@ -28,7 +28,7 @@ Authoritative ground infrastructure and support content organized by ATA chapter
 ## Conventions
 
 - **Naming:** `<DOC>_<SUBJECT>_rev<SEMVER>_<YYYYMMDD>.<ext>`  
-- **Sidecars:** every `.md/.yml/.json/.bin` has `<file>.meta.yaml` with `{id, revision, effective_date, integrity.checksum}`.  
+- **Sidecars:** every `.md/.yml/.json/.bin` **will have** a `<file>.meta.yaml` sidecar with `{id, revision, effective_date, integrity.checksum}` (future requirement).  
 - **Integrity:** signatures and `checksums/SHA256SUMS.txt` where present.  
 - **Cross-refs (minimum):**  
   - ATA 02 ↔ 03, 10, 13  
