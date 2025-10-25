@@ -11,7 +11,7 @@ revision: "1.1.0"
 effective_date: "2028-10-01"
 supersedes: "1.0.0"
 effectivity:
-  msn: "AMP360-001 through AMP360-050"
+  msn: "AMP360-001 through AMP360-999"
   configuration_id: "BWB-H2-CFG-02"
 applicability: "Flight Crew"
 
