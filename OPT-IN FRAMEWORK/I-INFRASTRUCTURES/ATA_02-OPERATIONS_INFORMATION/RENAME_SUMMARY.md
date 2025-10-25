@@ -6,7 +6,9 @@ This document summarizes the renaming of subject folders within `ATA_02-OPERATIO
 ## Naming Convention
 All subject folders now follow the pattern: `^\d{2}-[A-Z0-9_]+$`
 - `NN`: Two-digit sequential number (starting at `01` per section)
-- `UPPER_SNAKE_CASE_NAME`: Folder name in uppercase with underscores
+- `UPPER_SNAKE_CASE_NAME`: Folder name in uppercase with underscores replacing hyphens
+  - Original hyphens in names (e.g., `NON-NORMAL_PROCEDURES`) are converted to underscores
+  - The prefix uses a hyphen separator: `NN-NAME`
 
 ## Total Changes
 - **7 folders renamed** across 4 sections
