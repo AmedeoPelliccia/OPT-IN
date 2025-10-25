@@ -11,7 +11,7 @@ import sys
 import json
 import argparse
 from pathlib import Path
-from jsonschema import validate, ValidationError, Draft202012Validator
+from jsonschema import ValidationError, Draft202012Validator
 
 
 def load_json(filepath):
