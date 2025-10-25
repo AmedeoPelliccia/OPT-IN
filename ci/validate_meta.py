@@ -95,10 +95,10 @@ def main():
                     errors.append(f"Failed to load: {relpath}")
                     continue
                 
-                # Skip INDEX.meta.yaml files as they have different structure
+                # Skip INDEX.meta.yaml files; not validated against any schema
                 if filename == 'INDEX.meta.yaml':
-                    print(f"  ⓘ Skipping INDEX.meta.yaml (different schema)")
-                    validated += 1
+                    print(f"  ⓘ Skipping INDEX.meta.yaml (not validated; no schema provided)")
+                    warnings.append(f"{relpath}: skipped (INDEX.meta.yaml not validated)")
                     continue
                 
                 valid, error_msg = validate_metadata(metadata, schema)
