@@ -424,10 +424,76 @@ OPT-IN FRAMEWORK/
 │   │       ├── Training records, calibration schedules, defect tracking
 │   │       └── Live GSE fleet registry and availability status
 │   ├── ATA 10: PARKING, MOORING, STORAGE & RETURN TO SERVICE
-│   ├── ATA 13: HARDWARE AND GENERAL TOOLS
+│   ├── **ATA_13-HARDWARE_AND_GENERAL_TOOLS**: Catalog and management system for hardware and tools
+│   │   ├── Hardware catalogs (fasteners, structural, electrical, fluid fittings)
+│   │   ├── Consumables catalog (adhesives, lubricants, cleaning agents)
+│   │   ├── General tools catalog (hand tools, pneumatic tools, torque wrenches)
+│   │   ├── Inventory control (interchangeability data, shelf life, tool control)
+│   │   └── Safety data sheets for hazardous materials
 │   ├── ATA 85-90 (Reserved): (INFRASTRUCTURE INTERFACE STANDARDS)
 │   ├── ATA 115: FLIGHT SIMULATOR SYSTEMS
 │   └── ATA 116: FLIGHT SIMULATOR CUING SYSTEM
 └── N-NEURAL NETWORKS, USERS, TREACEABILITY/
     └── ATA 95 (Prov): DIGITAL PRODUCT PASSPORT & TRACEABILITY
 ```
+
+---
+
+### Hyperlinkable Index — `I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS`
+
+* [`00_README.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/00_README.md)
+* [`INDEX.meta.yaml`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/INDEX.meta.yaml)
+
+## 01 — Hardware Catalogs
+
+* **01 — Fasteners**
+
+  * [`CAT_Standard-Bolts-MS-NAS.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/01-FASTENERS/CAT_Standard-Bolts-MS-NAS.md)
+  * [`CAT_Standard-Screws-AN-NAS.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/01-FASTENERS/CAT_Standard-Screws-AN-NAS.md)
+  * [`CAT_Hi-Lok-Fasteners.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/01-FASTENERS/CAT_Hi-Lok-Fasteners.md)
+* **02 — Structural Components**
+
+  * [`CAT_Standard-Rivets.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/02-STRUCTURAL_COMPONENTS/CAT_Standard-Rivets.md)
+  * [`CAT_Standard-Bearings.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/02-STRUCTURAL_COMPONENTS/CAT_Standard-Bearings.md)
+* **03 — Electrical Components**
+
+  * [`CAT_Standard-Connectors-MIL-DTL-38999.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/03-ELECTRICAL_COMPONENTS/CAT_Standard-Connectors-MIL-DTL-38999.md)
+  * [`CAT_Standard-Wire-And-Cable.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/03-ELECTRICAL_COMPONENTS/CAT_Standard-Wire-And-Cable.md)
+  * [`CAT_Standard-Circuit-Breakers.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/03-ELECTRICAL_COMPONENTS/CAT_Standard-Circuit-Breakers.md)
+* **04 — Fluid Fittings**
+
+  * [`CAT_Standard-AN-MS-Fittings.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/01-HARDWARE_CATALOGS/04-FLUID_FITTINGS/CAT_Standard-AN-MS-Fittings.md)
+
+## 02 — Consumables Catalog
+
+* [`CAT_Adhesives-And-Sealants.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/02-CONSUMABLES_CATALOG/CAT_Adhesives-And-Sealants.md)
+* [`CAT_Lubricants-Greases-And-Oils.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/02-CONSUMABLES_CATALOG/CAT_Lubricants-Greases-And-Oils.md)
+* [`CAT_Cleaning-Agents-And-Solvents.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/02-CONSUMABLES_CATALOG/CAT_Cleaning-Agents-And-Solvents.md)
+
+## 03 — General Tools Catalog
+
+* [`CAT_Hand-Tools-Standard.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/03-GENERAL_TOOLS_CATALOG/CAT_Hand-Tools-Standard.md)
+* [`CAT_Pneumatic-Tools.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/03-GENERAL_TOOLS_CATALOG/CAT_Pneumatic-Tools.md)
+* [`CAT_Torque-Wrenches-General-Use.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/03-GENERAL_TOOLS_CATALOG/CAT_Torque-Wrenches-General-Use.md)
+
+## 04 — Inventory and Control
+
+* **01 — Interchangeability Data**
+
+  * [`DATA_Part-Number-Cross-Reference-Table.csv`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/04-INVENTORY_AND_CONTROL/01-INTERCHANGEABILITY_DATA/DATA_Part-Number-Cross-Reference-Table.csv)
+* **02 — Shelf Life Program**
+
+  * [`PROC_Shelf-Life-Control-Procedure.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/04-INVENTORY_AND_CONTROL/02-SHELF_LIFE_PROGRAM/PROC_Shelf-Life-Control-Procedure.md)
+* **03 — Tool Control Program**
+
+  * [`PROC_Tool-Control-And-FOD-Prevention.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/04-INVENTORY_AND_CONTROL/03-TOOL_CONTROL_PROGRAM/PROC_Tool-Control-And-FOD-Prevention.md)
+  * **calibration**
+
+    * [`schedule.csv`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/04-INVENTORY_AND_CONTROL/03-TOOL_CONTROL_PROGRAM/calibration/schedule.csv)
+
+## 05 — Safety Data
+
+* **safety_data_sheets**
+
+  * [`SDS_MIL-PRF-23377_Primer.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/05-SAFETY_DATA/safety_data_sheets/SDS_MIL-PRF-23377_Primer.md)
+  * [`SDS_BMS-3-26_Grease.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/05-SAFETY_DATA/safety_data_sheets/SDS_BMS-3-26_Grease.md)
