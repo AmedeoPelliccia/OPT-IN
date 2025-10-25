@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AMPEL360 IMA and QIS Interface Specification -->
+<!-- Version: 2.8.0 -->
+<!-- Date: 2029-01-20 -->
+<!-- SHA256: c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2g3h4 -->
+
+<IMA_QIS_InterfaceSpecification>
+  <Header>
+    <Aircraft>AMPEL360</Aircraft>
+    <System>Integrated Modular Avionics with Quantum-Inspired Scheduler</System>
+    <Version>2.8.0</Version>
+    <Date>2029-01-20</Date>
+    <ATA_Reference_Primary>42</ATA_Reference_Primary>
+    <ATA_Reference_QIS>42-60-00</ATA_Reference_QIS>
+  </Header>
+
+  <IMA_Architecture>
+    <Description>Integrated Modular Avionics Core Platform</Description>
+    <ProcessorModules>
+      <Module id="IMA-1" type="primary">
+        <Processor>Multi-core ARINC 653</Processor>
+        <RAM_GB>32</RAM_GB>
+        <Partitions>8</Partitions>
+      </Module>
+      <Module id="IMA-2" type="primary">
+        <Processor>Multi-core ARINC 653</Processor>
+        <RAM_GB>32</RAM_GB>
+        <Partitions>8</Partitions>
+      </Module>
+      <Module id="IMA-3" type="backup">
+        <Processor>Multi-core ARINC 653</Processor>
+        <RAM_GB>16</RAM_GB>
+        <Partitions>4</Partitions>
+      </Module>
+    </ProcessorModules>
+
+    <Partitions>
+      <Partition id="P1" criticality="DAL-A">
+        <Name>Flight_Control_Laws</Name>
+        <ATA_Reference>27</ATA_Reference>
+        <CPU_Budget_percent>25</CPU_Budget_percent>
+        <Memory_MB>4096</Memory_MB>
+      </Partition>
+      
+      <Partition id="P2" criticality="DAL-B">
+        <Name>Navigation</Name>
+        <ATA_Reference>34</ATA_Reference>
+        <CPU_Budget_percent>15</CPU_Budget_percent>
+        <Memory_MB>2048</Memory_MB>
+      </Partition>
+      
+      <Partition id="P3" criticality="DAL-C">
+        <Name>Systems_Management</Name>
+        <ATA_Reference>42-55-00</ATA_Reference>
+        <CPU_Budget_percent>20</CPU_Budget_percent>
+        <Memory_MB>3072</Memory_MB>
+      </Partition>
+      
+      <Partition id="P4" criticality="DAL-D">
+        <Name>Crew_Alerting</Name>
+        <ATA_Reference>31</ATA_Reference>
+        <CPU_Budget_percent>10</CPU_Budget_percent>
+        <Memory_MB>1024</Memory_MB>
+      </Partition>
+    </Partitions>
+  </IMA_Architecture>
+
+  <QIS_Scheduler provisional="true" ata_reference="42-60-00">
+    <!-- Note: QIS is marked provisional as it represents novel technology under development.
+         For FFS Level D qualification, the simulator models observable system behavior
+         (task migration, resource allocation effects) rather than internal QIS algorithms.
+         See Master Certification Strategy for handling of provisional technologies. -->
+    <Description>Quantum-Inspired Scheduler for Resource Orchestration</Description>
+    <SchedulingAlgorithm>Quantum_Annealing_Inspired</SchedulingAlgorithm>
+    
+    <Features>
+      <DynamicResourceAllocation>enabled</DynamicResourceAllocation>
+      <TaskMigration>enabled</TaskMigration>
+      <PredictiveScheduling>enabled</PredictiveScheduling>
+      <FaultTolerance>automatic_reconfiguration</FaultTolerance>
+    </Features>
+
+    <OperatingModes>
+      <Mode id="NORMAL">
+        <Description>All IMA modules operational</Description>
+        <ResourceDistribution>optimal</ResourceDistribution>
+      </Mode>
+      
+      <Mode id="DEGRADED_1">
+        <Description>One IMA module failed</Description>
+        <Action>Migrate non-critical tasks to backup module</Action>
+        <ResourceDistribution>constrained</ResourceDistribution>
+      </Mode>
+      
+      <Mode id="DEGRADED_2">
+        <Description>Two IMA modules operational only</Description>
+        <Action>Shed non-essential tasks, maintain critical functions</Action>
+        <ResourceDistribution>minimal</ResourceDistribution>
+      </Mode>
+    </OperatingModes>
+
+    <TaskMigrationRules>
+      <!-- Supports QTG Test 3.B.2 system failure scenarios -->
+      <Rule priority="1">
+        <Condition>IMA_module_failure</Condition>
+        <Action>Migrate DAL-C and DAL-D tasks first</Action>
+        <TimeLimit_ms>500</TimeLimit_ms>
+      </Rule>
+      
+      <Rule priority="2">
+        <Condition>Multiple_system_failures</Condition>
+        <Action>Maintain DAL-A tasks, shed others as needed</Action>
+        <TimeLimit_ms>100</TimeLimit_ms>
+      </Rule>
+    </TaskMigrationRules>
+
+    <PerformanceMetrics>
+      <SchedulingLatency_microsec>50</SchedulingLatency_microsec>
+      <TaskMigrationTime_ms>200</TaskMigrationTime_ms>
+      <ResourceReallocationTime_ms>500</ResourceReallocationTime_ms>
+    </PerformanceMetrics>
+  </QIS_Scheduler>
+
+  <SystemIntegration>
+    <InterfaceToFuelCell ata_reference="24-60-00">
+      <Description>Power management coordination</Description>
+      <DataExchange frequency_Hz="10">
+        <Signal>Fuel_Cell_Power_Available</Signal>
+        <Signal>Fuel_Cell_Health_Status</Signal>
+        <Signal>H2_System_Pressure</Signal>
+      </DataExchange>
+      
+      <FailureHandling>
+        <!-- Referenced by QTG Test 3.B.2 -->
+        <OnFuelCellDegradation>
+          <QIS_Action>Reduce non-critical task priority</QIS_Action>
+          <PowerManagement>Increase battery utilization</PowerManagement>
+          <CrewAlert>FUEL_CELL_DEGRADED</CrewAlert>
+        </OnFuelCellDegradation>
+        
+        <OnFuelCellFailure>
+          <QIS_Action>Migrate tasks to backup partition if needed</QIS_Action>
+          <PowerManagement>Battery-only operation mode</PowerManagement>
+          <CrewAlert>FUEL_CELL_FAIL</CrewAlert>
+          <SystemIsolation>Close H2 isolation valve (ATA 28-60)</SystemIsolation>
+        </OnFuelCellFailure>
+      </FailureHandling>
+    </InterfaceToFuelCell>
+
+    <InterfaceToFlightControls ata_reference="27">
+      <Description>Flight control law execution on IMA</Description>
+      <Criticality>DAL-A</Criticality>
+      <GuaranteedResources>Always maintained by QIS</GuaranteedResources>
+    </InterfaceToFlightControls>
+
+    <InterfaceToFireProtection ata_reference="26">
+      <Description>H2 leak detection integration</Description>
+      <H2_LeakDetection ata_reference="26-40-00">
+        <SensorMonitoring frequency_Hz="100">enabled</SensorMonitoring>
+        <AutomaticIsolation>enabled</AutomaticIsolation>
+      </H2_LeakDetection>
+    </InterfaceToFireProtection>
+  </SystemIntegration>
+
+  <SimulatorRequirements>
+    <Description>Requirements for FFS modeling of IMA/QIS</Description>
+    
+    <Requirement id="SIM-IMA-001">
+      <Text>Simulator must model IMA partition execution and timing</Text>
+      <Fidelity>High - Critical for system behavior validation</Fidelity>
+    </Requirement>
+    
+    <Requirement id="SIM-QIS-001">
+      <Text>Simulator must model QIS task migration under failures</Text>
+      <Fidelity>Medium - Sufficient for crew procedure training</Fidelity>
+      <Validation>QTG Test 3.B.2</Validation>
+    </Requirement>
+    
+    <Requirement id="SIM-QIS-002">
+      <Text>Simulator must demonstrate proper system degradation modes</Text>
+      <Fidelity>Medium - Crew must experience realistic system responses</Fidelity>
+      <Validation>QTG Test 3.B.2</Validation>
+    </Requirement>
+  </SimulatorRequirements>
+
+  <CrossReferences>
+    <Reference ata="27">Flight Control Laws - Primary user of IMA</Reference>
+    <Reference ata="24-60">Fuel Cell System - Power source managed by QIS</Reference>
+    <Reference ata="28-60">H2 Storage - Integrated with safety systems</Reference>
+    <Reference ata="26-40">H2 Leak Detection - Safety-critical integration</Reference>
+    <Reference ata="42-55">Powertrain Orchestration - Uses QIS scheduling</Reference>
+    <Reference ata="31">Indicating/Recording - Task execution monitoring</Reference>
+  </CrossReferences>
+
+</IMA_QIS_InterfaceSpecification>

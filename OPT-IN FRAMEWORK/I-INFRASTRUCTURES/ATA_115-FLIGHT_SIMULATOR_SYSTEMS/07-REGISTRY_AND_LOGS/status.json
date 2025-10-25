@@ -1,0 +1,98 @@
+{
+  "simulator_id": "AMPEL360-FFS-001",
+  "serial_number": "SIM-A360-2027-001",
+  "location": {
+    "facility": "AMPEL360 Training Center",
+    "address": "Amsterdam Schiphol Airport, Netherlands",
+    "building": "Flight Training Building A",
+    "room": "Simulator Bay 1"
+  },
+  "certification_status": {
+    "level": "EASA CS-FSTD(A) Level D",
+    "certificate_id": "EU-1234",
+    "issue_date": "2029-01-15",
+    "expiry_date": "2030-01-15",
+    "authority": "EASA",
+    "next_evaluation_date": "2030-01-15"
+  },
+  "configuration": {
+    "aircraft_type": "AMPEL360",
+    "aircraft_data_package_version": "v3.2.0",
+    "simulator_software_version": "v2.5.1",
+    "visual_system_version": "v4.3.0",
+    "motion_system_version": "v3.1.2",
+    "last_configuration_change": "2029-02-20",
+    "last_software_update": "2029-02-20"
+  },
+  "operational_status": {
+    "overall_status": "OPERATIONAL",
+    "availability": "AVAILABLE",
+    "scheduled_maintenance": "2029-10-26T08:00:00Z",
+    "last_maintenance": "2029-10-19T14:30:00Z",
+    "next_qualification_test": "2029-11-15T09:00:00Z"
+  },
+  "system_health": {
+    "motion_system": {
+      "status": "OPERATIONAL",
+      "last_check": "2029-10-25T06:00:00Z",
+      "next_check": "2029-10-26T06:00:00Z"
+    },
+    "visual_system": {
+      "status": "OPERATIONAL",
+      "last_check": "2029-10-25T06:00:00Z",
+      "projector_lamp_hours": [1250, 1280, 1245, 1270, 1260, 1255]
+    },
+    "host_computer": {
+      "status": "OPERATIONAL",
+      "cpu_temperature_celsius": 45,
+      "memory_usage_percent": 62,
+      "disk_usage_percent": 48
+    },
+    "instructor_station": {
+      "status": "OPERATIONAL",
+      "last_check": "2029-10-25T06:00:00Z"
+    },
+    "flight_controls": {
+      "status": "OPERATIONAL",
+      "last_calibration": "2029-10-19T10:00:00Z",
+      "next_calibration": "2029-11-19T10:00:00Z"
+    }
+  },
+  "utilization": {
+    "total_flight_hours": 8542.5,
+    "flight_hours_since_last_maintenance": 127.3,
+    "sessions_this_month": 89,
+    "sessions_this_year": 1048,
+    "average_session_duration_hours": 3.2
+  },
+  "open_defects": {
+    "critical": 0,
+    "major": 0,
+    "minor": 2,
+    "cosmetic": 1
+  },
+  "crew_qualification_records": {
+    "type_rating_students": 12,
+    "recurrent_training_pilots": 8,
+    "instructor_training": 2
+  },
+  "contacts": {
+    "ffs_manager": {
+      "name": "Sarah Chen",
+      "email": "s.chen@ampel360training.aero",
+      "phone": "+31-20-XXX-XXXX"
+    },
+    "chief_instructor": {
+      "name": "Captain Robert Williams",
+      "email": "r.williams@ampel360training.aero",
+      "phone": "+31-20-XXX-XXXY"
+    },
+    "maintenance_lead": {
+      "name": "Engineering Supervisor Jan de Vries",
+      "email": "j.devries@ampel360training.aero",
+      "phone": "+31-20-XXX-XXXZ"
+    }
+  },
+  "last_updated": "2029-10-25T17:42:00Z",
+  "schema_version": "1.0"
+}
