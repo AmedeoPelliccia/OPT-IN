@@ -1,0 +1,22 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/05-safety"
+purpose: "Safety Data Sheets (SDS), hazard analyses, and safety procedures for GSE operations"
+owners: ["Safety", "Ground Ops", "Environmental"]
+approvers:
+  - role: "Safety Officer"
+    name: "TBD"
+  - role: "Environmental Manager"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "SDS_<GSE-ID>_<Hazard>_rev<SEMVER>_<YYYYMMDD>.md"
+  formats: ["md", "pdf"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: ["md"]
+refs:
+  ata_links: ["26-40", "28-60", "24"]
+  standards:
+    - "ISO 45001 (occupational health & safety)"
+    - "NFPA 2 (hydrogen safety)"

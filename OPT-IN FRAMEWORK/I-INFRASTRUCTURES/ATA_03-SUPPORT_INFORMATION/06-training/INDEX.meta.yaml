@@ -1,0 +1,25 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/06-training"
+purpose: "Training materials, courses, and personnel qualification records for GSE operations"
+owners: ["Training", "Ground Ops", "Safety"]
+approvers:
+  - role: "Training Manager"
+    name: "TBD"
+  - role: "Safety Officer"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "TRAIN_<GSE-ID>_<Course>_rev<SEMVER>_<YYYYMMDD>.md"
+  formats: ["md", "csv", "pdf"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: ["md"]
+refs:
+  ata_links: ["02", "03"]
+  standards:
+    - "ISO 10015 (quality management for training)"
+csv_files:
+  - name: "training_records.csv"
+    headers: "record_id,gse_id,course_id,employee_id,employee_name,attempt_date,result,expiry_date,assessor,notes"
+    description: "Personnel training and qualification records"

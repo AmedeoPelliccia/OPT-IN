@@ -1,0 +1,22 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/03-software_firmware"
+purpose: "Software and firmware packages for GSE diagnostic and control systems"
+owners: ["Engineering", "IT", "Ground Ops"]
+approvers:
+  - role: "Software Engineering Manager"
+    name: "TBD"
+  - role: "Quality Manager"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "FW_<GSE-ID>_v<SEMVER>.<ext> or SW_<GSE-ID>_v<SEMVER>.<ext>"
+  formats: ["bin", "hex", "elf", "zip", "sig"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: ["bin", "hex", "elf", "zip"]
+refs:
+  ata_links: ["42", "46-40"]
+  standards:
+    - "DO-178C (software)"
+    - "ISO 26262 (functional safety)"

@@ -1,0 +1,25 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/07-maintenance_and_calibration"
+purpose: "Maintenance schedules, calibration records, and metrology traceability for GSE and test equipment"
+owners: ["Maintenance", "Quality", "Metrology"]
+approvers:
+  - role: "Maintenance Manager"
+    name: "TBD"
+  - role: "Quality Manager"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "MAINT_<GSE-ID>_<Subject>_rev<SEMVER>_<YYYYMMDD>.md"
+  formats: ["md", "csv", "pdf"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../SHA256SUMS.txt"
+  signature_required: ["md"]
+refs:
+  ata_links: ["04", "05"]
+  standards:
+    - "ISO 9001 (quality management)"
+    - "ISO/IEC 17025 (calibration labs)"
+subdirectories:
+  - name: "calibration"
+    description: "Calibration certificates and schedules"

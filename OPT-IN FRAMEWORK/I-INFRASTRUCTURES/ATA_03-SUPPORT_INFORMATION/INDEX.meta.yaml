@@ -1,0 +1,53 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION"
+purpose: "Master directory for AMPEL360 Ground Support Equipment documentation and lifecycle management"
+owners: ["Ground Ops", "Quality", "Safety", "Engineering"]
+approvers:
+  - role: "Chief Ground Operations Officer"
+    name: "TBD"
+  - role: "Quality Manager"
+    name: "TBD"
+  - role: "Safety Officer"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "<DOC>_<GSE-ID>_<Subject>_rev<SEMVER>_<YYYYMMDD>.<ext>"
+  formats: ["md", "xml", "csv", "json", "cdx", "bin", "sig", "dxf", "pdf"]
+  sidecar_required: true
+  sidecar_schema: "schemas/meta_v1_1.json"
+integrity:
+  checksum_manifest: "SHA256SUMS.txt"
+  signature_required: ["md", "xml", "json", "bin", "cdx"]
+  checksum_algorithm: "SHA256"
+governance:
+  ci_workflow: ".github/workflows/gse-guard.yml"
+  validation_scripts:
+    - "ci/validate_naming.py"
+    - "ci/validate_meta.py"
+    - "ci/verify_sigs.py"
+refs:
+  ata_links: ["28-60", "26-40", "24", "21-50", "42", "46-40", "02", "10", "12", "13"]
+  standards:
+    - "ATA Spec 100"
+    - "SAE AS50881"
+    - "ISO 21013"
+    - "IEC 62196"
+subdirectories:
+  - name: "01-interfaces"
+    description: "Interface Control Documents for GSE-aircraft connections"
+  - name: "02-gse_manuals"
+    description: "Ground Operations Manuals and procedures"
+  - name: "03-software_firmware"
+    description: "GSE software and firmware packages"
+  - name: "04-acceptance_and_certification"
+    description: "Acceptance Test Procedures and certification records"
+  - name: "05-safety"
+    description: "Safety Data Sheets and hazard analyses"
+  - name: "06-training"
+    description: "Training materials and records"
+  - name: "07-maintenance_and_calibration"
+    description: "Maintenance schedules and calibration records"
+  - name: "08-spares"
+    description: "Spares catalog and inventory management"
+  - name: "09-registry"
+    description: "Live GSE fleet registry and defect tracking"

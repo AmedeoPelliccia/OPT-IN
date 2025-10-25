@@ -1,0 +1,6 @@
+id,gse_id,serial,opened_utc,severity,effect,containment,root_cause,status,closed_utc,linked_docs
+DEF-2028-145,AP360-S001,S001-017,2028-10-22T14:30:00Z,MINOR,Coupling slight frost accumulation during refuel,Monitor condition; replace seal if worsens,Seal wear (1200 cycles),OPEN,,GOM_AP360-S001_LH2-Refueler_rev2.0.0_20281101.md
+DEF-2028-219,AP360-T003,T003-044,2028-10-28T09:15:00Z,CRITICAL,CAN bus communication failure with aircraft,Unit grounded; backup unit dispatched,CAN controller chip failure,OPEN,,ICD_AP360-T003_CAN-Interface_rev1.0.0.md
+DEF-2028-223,AP360-T003,T003-044,2028-10-30T11:00:00Z,MAJOR,Diagnostic display intermittent,Use alternate display mode,Loose display cable connector,OPEN,,GOM_AP360-T003_Diagnostic-Unit_rev1.5.0.md
+DEF-2028-098,AP360-S002,S002-023,2028-09-12T16:45:00Z,MINOR,H2 sensor slow response time,Sensor replaced during PM,Sensor contamination,CLOSED,2028-09-15T10:00:00Z,CAL-H-201 calibration record
+DEF-2028-067,AP360-S001,S001-017,2028-08-05T13:20:00Z,MAJOR,LH2 pump vibration excessive,Pump bearing replaced,Bearing wear due to cryogenic thermal cycling,CLOSED,2028-08-10T14:30:00Z,MAINT_AP360-S001_Pump-Bearing-Replacement.md

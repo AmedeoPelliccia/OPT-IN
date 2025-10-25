@@ -1,0 +1,23 @@
+schema_version: "1.1"
+folder: "ATA_03-SUPPORT_INFORMATION/07-maintenance_and_calibration/calibration"
+purpose: "Calibration certificates, schedules, and metrology traceability for test equipment and instruments"
+owners: ["Metrology", "Quality"]
+approvers:
+  - role: "Metrology Manager"
+    name: "TBD"
+effective_date: "2028-08-01"
+doc_policy:
+  naming: "CAL_<INSTRUMENT-ID>_<YYYYMMDD>.md"
+  formats: ["md", "csv", "pdf"]
+  sidecar_required: true
+integrity:
+  checksum_manifest: "../../SHA256SUMS.txt"
+  signature_required: ["md"]
+refs:
+  standards:
+    - "ISO/IEC 17025 (calibration labs)"
+    - "NIST SP 800-88 (metrology traceability)"
+csv_files:
+  - name: "schedule.csv"
+    headers: "instrument_id,model,serial,last_date,due_date,location,uncertainty,traceability_std,assigned_to"
+    description: "Calibration schedule and status tracking"

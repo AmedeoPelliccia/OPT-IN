@@ -1,0 +1,55 @@
+{
+  "generated_utc": "2028-11-01T00:00:00Z",
+  "schema_version": "1.0",
+  "fleet": [
+    {
+      "gse_id": "AP360-S001",
+      "serial": "S001-017",
+      "model": "LH2 Cryogenic Refueler",
+      "location": "GSE Bay A, Hangar 3",
+      "availability": "IN_SERVICE",
+      "status_detail": "Operational - Available for dispatch",
+      "next_pm": "2029-01-15",
+      "hours": 812,
+      "cycles": 156,
+      "last_service": "2028-10-20",
+      "open_defects": ["DEF-2028-145"],
+      "notes": "H2 sensor calibration due 2029-01-15"
+    },
+    {
+      "gse_id": "AP360-T003",
+      "serial": "T003-044",
+      "model": "Flight Control Diagnostic Unit",
+      "location": "Maintenance Facility, Dock 5",
+      "availability": "AOG",
+      "status_detail": "AOG - CAN bus interface fault",
+      "next_pm": "2028-12-10",
+      "hours": 233,
+      "cycles": 89,
+      "last_service": "2028-09-05",
+      "open_defects": ["DEF-2028-219", "DEF-2028-223"],
+      "notes": "Awaiting replacement CAN controller board - ETA 2028-11-05"
+    },
+    {
+      "gse_id": "AP360-S002",
+      "serial": "S002-023",
+      "model": "LH2 Cryogenic Refueler",
+      "location": "GSE Bay B, Hangar 3",
+      "availability": "IN_SERVICE",
+      "status_detail": "Operational - Available for dispatch",
+      "next_pm": "2028-12-01",
+      "hours": 1034,
+      "cycles": 201,
+      "last_service": "2028-08-15",
+      "open_defects": [],
+      "notes": "Coupling seals replaced 2028-10-01, next replacement due 2029-10-01"
+    }
+  ],
+  "summary": {
+    "total_units": 3,
+    "in_service": 2,
+    "out_of_service": 0,
+    "aog": 1,
+    "maintenance": 0
+  }
+}
