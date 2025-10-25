@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  AMPEL360 Quick Reference Handbook (QRH) - Canonical Source
+  Version: 1.0.0
+  Generated: 2028-09-30T10:00:00Z
+  
+  This XML file is the single source of truth for all QRH procedures.
+  The PDF versions (digital and paper) are generated from this source.
+  
+  Schema: QRH-Procedures-v2.0.xsd
+-->
+<qrh_procedures version="1.0.0" aircraft="AMPEL360" effective_date="2028-10-01">
+  
+  <metadata>
+    <title>AMPEL360 Quick Reference Handbook</title>
+    <revision>1.0.0</revision>
+    <approval>
+      <authority>EASA</authority>
+      <reference>EASA.QRH.001</reference>
+      <date>2028-09-25</date>
+    </approval>
+    <approval>
+      <authority>FAA</authority>
+      <reference>FAA-QRH-2028-001</reference>
+      <date>2028-09-28</date>
+    </approval>
+  </metadata>
+  
+  <section id="GENERAL" title="General Procedures">
+    <procedure id="GENERAL-1" title="Circuit Breaker Reset Policy" fcom_ref="NNP_CB_RESET_POLICY">
+      <policy>ONE RESET ATTEMPT ONLY</policy>
+      <step>Identify system affected</step>
+      <step>Check for smoke/fire/odor</step>
+      <step>Wait 2 minutes for cooling</step>
+      <step>Reset CB once</step>
+      <step>If trips again: DO NOT RESET</step>
+      <warning>Never reset: Battery thermal, H2 detection, Fuel cell isolation CBs</warning>
+    </procedure>
+  </section>
+  
+  <section id="EMER-1" title="Electrical/Battery Emergencies">
+    <procedure id="EMER-1.1" title="Battery Thermal Runaway" ata="24-33" fcom_ref="NNP_24-33_Battery_Thermal_Runaway">
+      <condition>Battery overheat warning / Battery fire detected</condition>
+      
+      <memory_items>
+        <item>BATTERY MASTER - OFF</item>
+        <item>AFFECTED BATTERY CONTACTOR - OPEN</item>
+        <item>BATTERY FIRE SUPPRESSION - ARMED</item>
+      </memory_items>
+      
+      <steps>
+        <step>Battery system isolation - VERIFY</step>
+        <step>Fire/smoke condition - ASSESS</step>
+        <step condition="if_fire">Fire suppression - DISCHARGE</step>
+        <step>Essential bus power - VERIFY</step>
+        <step>Non-essential loads - SHED</step>
+        <step>Fuel cell output - INCREASE</step>
+        <step>Landing - PLAN (nearest suitable airport)</step>
+      </steps>
+      
+      <cautions>
+        <caution>Do NOT reset battery system</caution>
+        <caution>Battery may generate heat for 30 minutes</caution>
+        <caution>Toxic fumes may be present</caution>
+      </cautions>
+    </procedure>
+  </section>
+  
+  <section id="EMER-2" title="Hydrogen/Fuel Cell Emergencies">
+    <procedure id="EMER-2.1" title="H2 Leak In Flight" ata="26-40" fcom_ref="NNP_26-40_H2_Leak_In_Flight">
+      <condition>H2 leak warning / Sensor concentration >25% LEL</condition>
+      
+      <memory_items>
+        <item>H₂ SUPPLY SHUTOFF VALVES - CLOSE</item>
+        <item>FUEL CELL SYSTEM - ISOLATE</item>
+        <item>H₂ TANK VENT - OPEN (if safe)</item>
+      </memory_items>
+      
+      <steps>
+        <step>H₂ system isolation - VERIFY</step>
+        <step>H₂ concentration trend - MONITOR</step>
+        <step condition="if_increasing">Emergency descent - INITIATE</step>
+        <step>Fuel cell output - ZERO</step>
+        <step>Battery power - PRIMARY</step>
+        <step>SAF engines - VERIFY</step>
+        <step>Ventilation - MAXIMUM</step>
+        <step>Landing: Airport with H₂ capability - PREFERRED</step>
+        <step>Emergency declaration - MAYDAY</step>
+      </steps>
+      
+      <warnings>
+        <warning>Hydrogen highly flammable (4-75% explosive range)</warning>
+        <warning>Colorless and odorless - rely on sensors only</warning>
+        <warning>Battery endurance limited</warning>
+      </warnings>
+    </procedure>
+    
+    <procedure id="EMER-2.2" title="Fuel Cell Stack Failure" ata="24-60" fcom_ref="NNP_24-60_Fuel_Cell_Failure">
+      <condition>Fuel cell output loss / FC FAIL warning</condition>
+      <steps>
+        <step>Affected fuel cell - ISOLATE</step>
+        <step>Battery power - INCREASE</step>
+        <step>Remaining fuel cells - VERIFY</step>
+        <step>Electrical load - ASSESS</step>
+        <step>Landing - PLAN (if multiple FC failures)</step>
+      </steps>
+    </procedure>
+  </section>
+  
+  <section id="EMER-3" title="Propulsion/Energy Orchestration">
+    <procedure id="EMER-3.1" title="Powertrain Orchestrator Fault" ata="42-55" fcom_ref="NNP_42-55_Orchestrator_Fault">
+      <condition>POWER ORCH FAULT message</condition>
+      <steps>
+        <step>Manual power mode - SELECT</step>
+        <step>Power sources - VERIFY individually</step>
+        <step>Energy distribution - MONITOR</step>
+        <step>Performance - ASSESS</step>
+      </steps>
+    </procedure>
+  </section>
+  
+  <section id="EMER-4" title="Environmental Systems">
+    <procedure id="EMER-4.1" title="CO2 Capture System Leak/Overpress" ata="21-80" fcom_ref="NNP_21-80_CO2_System_Leak">
+      <condition>CO2 SYS LEAK or OVERPRESS warning</condition>
+      <memory_items>
+        <item>CO₂ CAPTURE SYSTEM - OFF</item>
+        <item>CO₂ ISOLATION VALVES - CLOSE</item>
+      </memory_items>
+      <steps>
+        <step>System isolation - VERIFY</step>
+        <step>Pressure trend - MONITOR</step>
+        <step>Ventilation - AS REQUIRED</step>
+        <step>Landing - PLAN (for offload/repair)</step>
+      </steps>
+    </procedure>
+  </section>
+
+  <!-- Additional procedures would continue here -->
+  
+</qrh_procedures>

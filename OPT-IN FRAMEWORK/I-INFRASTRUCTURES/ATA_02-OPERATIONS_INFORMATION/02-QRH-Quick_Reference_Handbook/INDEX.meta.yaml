@@ -1,0 +1,106 @@
+# Directory Governance for Quick Reference Handbook (QRH)
+# AMPEL360 Aircraft Operations Documentation
+
+directory_id: "02-QRH-Quick_Reference_Handbook"
+parent_directory: "ATA_02-OPERATIONS_INFORMATION"
+ata_chapter: "02"
+document_type: "Quick Reference Handbook"
+
+# Description
+title: "AMPEL360 Quick Reference Handbook (QRH)"
+description: |
+  Condensed, checklist-style emergency procedures for rapid cockpit reference.
+  Generated from canonical source XML. Markdown is a controlled build artifact.
+  Digital version is cryptographically signed for EFB integrity.
+
+# Ownership
+owner:
+  organization: "AMPEL360 Flight Operations"
+  department: "Flight Safety & Standards"
+  responsible_person: "Chief Pilot"
+  contact: "qrh@ampel360.aero"
+
+# Version Control
+revision: "1.0.0"
+effective_date: "2028-10-01"
+last_updated: "2028-09-30"
+approval_status: "APPROVED"
+
+# Build Information
+build_info:
+  source: "qrh_procedures.xml"
+  build_date: "2028-09-30T10:00:00Z"
+  build_tool: "QRH-Generator v2.1"
+  checksum_manifest: "../checksums/SHA256SUMS.txt"
+
+# Digital Signature
+signature:
+  file: "AMPEL360_QRH_Digital.sig"
+  algorithm: "RSA-4096"
+  purpose: "EFB integrity verification"
+  signed_by: "AMPEL360 Documentation Authority"
+  signing_date: "2028-09-30"
+
+# Regulatory Compliance
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.QRH.001"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-QRH-2028-001"
+    date: "2028-09-28"
+
+# Content Organization
+qrh_sections:
+  - section: "GENERAL"
+    description: "General policies and standard procedures"
+    procedures:
+      - "CB Reset Policy"
+      - "Smoke/Fire/Fumes"
+      - "Emergency Evacuation"
+  - section: "EMER-1"
+    description: "Electrical/Battery Emergencies"
+    procedures:
+      - "EMER-1.1: Battery Thermal Runaway"
+      - "EMER-1.2: Total Electrical Failure"
+  - section: "EMER-2"
+    description: "Hydrogen/Fuel Cell Emergencies"
+    procedures:
+      - "EMER-2.1: H2 Leak In Flight"
+      - "EMER-2.2: Fuel Cell Stack Failure"
+      - "EMER-2.3: Cryogenic Tank Pressure Anomaly"
+  - section: "EMER-3"
+    description: "Energy Orchestration/Propulsion"
+    procedures:
+      - "EMER-3.1: Powertrain Orchestrator Fault"
+      - "EMER-3.2: Engine Failure"
+  - section: "EMER-4"
+    description: "Environmental Systems"
+    procedures:
+      - "EMER-4.1: CO2 Capture System Leak/Overpress"
+      - "EMER-4.2: Decompression"
+      - "EMER-4.3: Cabin Fire"
+
+# Quality Control
+document_control:
+  classification: "CONTROLLED - FLIGHT SAFETY CRITICAL"
+  distribution: "Flight Crew - Paper and EFB"
+  review_cycle: "Annual or Post-Incident"
+  next_review: "2029-09-30"
+  paper_color: "Yellow pages (emergency procedures)"
+
+# FCOM Linkage
+fcom_linkage: |
+  Every QRH procedure has corresponding detailed NNP in FCOM.
+  FCOM procedures include QRH reference in footer.
+  One-to-one correspondence maintained for procedural integrity.
+
+# Notes
+notes: |
+  QRH is the primary emergency reference in the cockpit.
+  Procedures are condensed to essential steps only.
+  Expanded rationale and details are in FCOM NNP.
+  Digital version on EFB verified by signature before each flight.
+  
+  Canonical source (XML) ensures consistency and automated generation.
+  Any QRH change requires rebuild from source XML.

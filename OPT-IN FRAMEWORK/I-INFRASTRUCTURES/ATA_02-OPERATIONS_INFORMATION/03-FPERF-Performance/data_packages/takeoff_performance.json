@@ -1,0 +1,131 @@
+{
+  "data_package_id": "takeoff_performance",
+  "version": "1.0.0",
+  "aircraft": "AMPEL360",
+  "effective_date": "2028-10-01",
+  "description": "Takeoff performance data for AMPEL360 BWB-H2 configuration",
+  
+  "metadata": {
+    "certification_basis": "EASA CS-25, FAA 14 CFR Part 25",
+    "approved_by": ["EASA", "FAA"],
+    "approval_date": "2028-09-25",
+    "data_source": "Flight test and analysis",
+    "units": {
+      "weight": "kg",
+      "distance": "meters",
+      "speed": "knots",
+      "altitude": "feet",
+      "temperature": "celsius"
+    }
+  },
+  
+  "performance_data": {
+    "note": "This is sample/placeholder data structure. Actual performance data would contain multi-dimensional arrays with interpolation tables.",
+    
+    "takeoff_configurations": [
+      {
+        "config_id": "TO_CONFIG_FULL",
+        "description": "Full thrust, normal takeoff",
+        "flaps": 15,
+        "energy_mode": "BALANCED"
+      },
+      {
+        "config_id": "TO_CONFIG_REDUCED",
+        "description": "Reduced thrust takeoff",
+        "flaps": 15,
+        "energy_mode": "MAX_EFFICIENCY"
+      }
+    ],
+    
+    "v_speeds_sample": {
+      "weight_kg": 180000,
+      "altitude_ft": 0,
+      "temperature_c": 15,
+      "battery_soc": 80,
+      "h2_available": true,
+      "energy_mode": "BALANCED",
+      "speeds": {
+        "v1": 145,
+        "vr": 150,
+        "v2": 155,
+        "v_ref": 140
+      }
+    },
+    
+    "runway_required_sample": {
+      "weight_kg": 180000,
+      "altitude_ft": 0,
+      "temperature_c": 15,
+      "wind_knots": 0,
+      "runway_condition": "DRY",
+      "battery_soc": 80,
+      "energy_mode": "BALANCED",
+      "distances": {
+        "takeoff_distance_m": 2450,
+        "accelerate_stop_distance_m": 2680,
+        "takeoff_run_available_m": 2100
+      }
+    },
+    
+    "climb_gradient_sample": {
+      "weight_kg": 180000,
+      "altitude_ft": 0,
+      "temperature_c": 15,
+      "energy_mode": "BALANCED",
+      "one_engine_inop": false,
+      "climb_gradient_percent": 15.2,
+      "climb_gradient_one_engine_percent": 2.8
+    },
+    
+    "energy_mode_impact": {
+      "MAX_EFFICIENCY": {
+        "takeoff_distance_multiplier": 1.05,
+        "climb_gradient_multiplier": 0.95,
+        "note": "Optimized for fuel efficiency, slightly longer takeoff"
+      },
+      "BALANCED": {
+        "takeoff_distance_multiplier": 1.0,
+        "climb_gradient_multiplier": 1.0,
+        "note": "Standard performance baseline"
+      },
+      "MAX_POWER": {
+        "takeoff_distance_multiplier": 0.92,
+        "climb_gradient_multiplier": 1.15,
+        "note": "Maximum power output, shortest takeoff, higher battery drain"
+      },
+      "HYBRID_BOOST": {
+        "takeoff_distance_multiplier": 0.88,
+        "climb_gradient_multiplier": 1.25,
+        "note": "Combined SAF + fuel cell + battery, best performance, limited duration"
+      }
+    },
+    
+    "battery_soc_constraints": {
+      "minimum_soc_for_takeoff": 40,
+      "recommended_soc": 80,
+      "note": "Performance data valid for SOC ≥40%. Below 40%, consult MEL for restrictions."
+    },
+    
+    "h2_fuel_cell_impact": {
+      "fuel_cell_available": {
+        "power_boost_available": true,
+        "hybrid_modes_enabled": true
+      },
+      "fuel_cell_inop": {
+        "power_boost_available": false,
+        "battery_only_modes": true,
+        "performance_degradation_percent": 15,
+        "note": "Consult MEL Section 24-60 for dispatch with fuel cell inoperative"
+      }
+    }
+  },
+  
+  "notes": [
+    "Multi-dimensional interpolation required for intermediate values",
+    "BWB configuration has unique ground effect characteristics - affects rotation",
+    "Battery SOC impacts available power for hybrid boost modes",
+    "H2 fuel cell provides sustained high power output",
+    "Energy orchestration mode selection significantly affects performance",
+    "Actual performance tables contain hundreds of data points - this is structure only"
+  ]
+}

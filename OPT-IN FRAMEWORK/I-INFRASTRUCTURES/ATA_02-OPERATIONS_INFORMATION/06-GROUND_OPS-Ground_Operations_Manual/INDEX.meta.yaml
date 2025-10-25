@@ -1,0 +1,45 @@
+# Directory Governance for Ground Operations Manual
+# AMPEL360 Aircraft Operations Documentation
+
+directory_id: "06-GROUND_OPS-Ground_Operations_Manual"
+parent_directory: "ATA_02-OPERATIONS_INFORMATION"
+ata_chapter: "02"
+document_type: "Ground Operations Manual"
+
+title: "AMPEL360 Ground Operations & Handling Manual"
+description: |
+  Primary reference for ground crews covering towing, parking, mooring, and servicing.
+  Critical procedures for cryogenic H₂ refueling, CO₂ offloading, and BWB maneuvering.
+
+owner:
+  organization: "AMPEL360 Ground Operations"
+  department: "Ground Safety & Training"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+approval_status: "APPROVED"
+
+mission_critical_procedures:
+  - "Cryogenic H₂ Refueling - Safety protocols, GSE interface, thermal management"
+  - "Liquid CO₂ Offloading - GSE interface for captured CO₂ removal"
+  - "BWB Ground Maneuvering - Towing diagrams for large wingspan"
+
+safety_emphasis:
+  - "H₂ handling requires specialized training and PPE"
+  - "Cryogenic hazards (-253°C)"
+  - "H₂ flammability (4-75% explosive range)"
+  - "Area monitoring (O₂ and H₂ sensors)"
+  - "GSE interface standards"
+
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.GOPS.001"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-GOPS-2028-001"
+    date: "2028-09-28"
+
+notes: |
+  Ground operations significantly different from conventional aircraft.
+  Specialized GSE and training mandatory for H₂ and CO₂ systems.
+  BWB geometry requires specific gate/towing procedures.

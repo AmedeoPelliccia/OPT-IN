@@ -1,0 +1,69 @@
+# Directory Governance Metadata for ATA 02 - OPERATIONS INFORMATION
+# AMPEL360 Aircraft - I-INFRASTRUCTURES
+
+directory_id: "ATA_02-OPERATIONS_INFORMATION"
+ata_chapter: "02"
+title: "Operations Information (Ground-Based Ops)"
+description: "Flight and ground operations information including FCOM, QRH, performance, weight & balance, MEL, and ground operations procedures"
+
+# Ownership and Control
+owner:
+  organization: "AMPEL360 Flight Operations"
+  department: "Operations Documentation"
+  responsible_person: "Chief Pilot / Director of Operations"
+  contact: "ops-docs@ampel360.aero"
+
+# Approval and Effectivity
+approval_status: "APPROVED"
+effective_date: "2028-10-01"
+revision: "1.0.0"
+last_updated: "2028-09-30"
+
+# Applicability
+effectivity:
+  aircraft_type: "AMPEL360 BWB-H2"
+  msn_range: "AMP360-001 through AMP360-999"
+  configuration_baseline: "BWB-H2-CFG-02"
+
+# Regulatory Compliance
+regulatory_approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.A.002"
+    date: "2028-09-25"
+    status: "Approved"
+  - authority: "FAA"
+    approval_reference: "FAA-TC-2028-001"
+    date: "2028-09-28"
+    status: "Approved"
+
+# Quality Assurance
+quality_control:
+  review_cycle: "Annual"
+  next_review_date: "2029-09-30"
+  document_classification: "CONTROLLED - OPERATIONAL USE"
+  
+# Audit Trail
+audit:
+  created_date: "2028-01-15"
+  created_by: "AMPEL360 Documentation Team"
+  change_history:
+    - version: "1.0.0"
+      date: "2028-09-30"
+      description: "Initial release for AMPEL360 entry into service"
+      approved_by: "Chief Pilot & Director of Operations"
+
+# Cross-References
+related_ata_chapters:
+  - "ATA-03: Support Information (GSE)"
+  - "ATA-10: Parking, Mooring, Storage & RTS"
+  - "ATA-13: Hardware and General Tools"
+  - "ATA-24: Electrical Power"
+  - "ATA-26: Fire Protection"
+  - "ATA-28: Fuel Systems"
+
+# Notes
+notes: |
+  This directory contains all operational documentation required for flight crew
+  and ground operations personnel to safely operate the AMPEL360 aircraft.
+  All documents are controlled and require approval before revision.
+  Digital signatures verify integrity of performance and weight & balance data.

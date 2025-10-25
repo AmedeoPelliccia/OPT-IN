@@ -1,0 +1,28 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+
+id: "CDL_Configuration_Deviation_List"
+document_type: "Configuration Deviation List"
+ata_chapter: "02"
+title: "AMPEL360 Configuration Deviation List (CDL)"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+applicability: "All aircraft, all crews, maintenance control"
+
+classification: "CONTROLLED - OPERATIONAL USE"
+
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "FAA"
+    status: "Approved"
+    date: "2028-09-28"
+
+checksum:
+  algorithm: "sha256"
+  value: "bcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456"
+
+notes: |
+  CDL specific to AMPEL360 BWB configuration and novel systems.
+  H₂ and CO₂ external components included.

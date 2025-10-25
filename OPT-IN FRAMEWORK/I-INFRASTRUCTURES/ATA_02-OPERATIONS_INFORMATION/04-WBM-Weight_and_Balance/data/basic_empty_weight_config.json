@@ -1,0 +1,192 @@
+{
+  "document_id": "basic_empty_weight_config",
+  "version": "1.0.0",
+  "aircraft": "AMPEL360",
+  "effective_date": "2028-10-01",
+  "description": "Basic Empty Weight (BEW) and moment data for AMPEL360 BWB-H2 configuration",
+  
+  "metadata": {
+    "certification_basis": "EASA CS-25, FAA 14 CFR Part 25",
+    "approved_by": ["EASA", "FAA"],
+    "approval_date": "2028-09-25",
+    "units": {
+      "weight": "kg",
+      "arm": "meters from datum",
+      "moment": "kg-m"
+    },
+    "datum_location": "Nose reference point (station 0.0)"
+  },
+  
+  "basic_empty_weight": {
+    "aircraft_type": "AMPEL360 BWB-H2",
+    "configuration_id": "BWB-H2-CFG-02",
+    "bew_kg": 95000,
+    "bew_arm_m": 32.5,
+    "bew_moment_kg_m": 3087500,
+    "note": "BEW includes airframe, engines, systems, fixed equipment, unusable fuel/oil"
+  },
+  
+  "weight_breakdown": {
+    "airframe_structure": {
+      "weight_kg": 42000,
+      "arm_m": 30.0,
+      "note": "BWB composite structure"
+    },
+    "propulsion_systems": {
+      "saf_engines": {
+        "weight_kg": 8500,
+        "arm_m": 40.0
+      },
+      "fuel_cell_stacks": {
+        "weight_kg": 3200,
+        "arm_m": 28.0,
+        "note": "Includes fuel cell modules and DC converters"
+      },
+      "battery_modules": {
+        "weight_kg": 12000,
+        "arm_m": 32.0,
+        "note": "Solid-CO₂ battery packs"
+      }
+    },
+    "fuel_systems": {
+      "saf_system": {
+        "weight_kg": 1800,
+        "arm_m": 33.0
+      },
+      "h2_cryogenic_system": {
+        "weight_kg": 2500,
+        "arm_m": 35.0,
+        "note": "Includes cryogenic tanks, insulation, distribution"
+      }
+    },
+    "environmental_systems": {
+      "co2_capture_system": {
+        "weight_kg": 2200,
+        "arm_m": 31.0,
+        "note": "Capture, liquefaction, storage system"
+      },
+      "ecs_pressurization": {
+        "weight_kg": 2800,
+        "arm_m": 25.0
+      }
+    },
+    "avionics_systems": {
+      "weight_kg": 4500,
+      "arm_m": 15.0,
+      "note": "IMA platform, displays, sensors"
+    },
+    "other_systems": {
+      "weight_kg": 15500,
+      "arm_m": 28.0,
+      "note": "Hydraulics, landing gear, flight controls, etc."
+    }
+  },
+  
+  "operating_empty_weight": {
+    "oew_kg": 102000,
+    "oew_arm_m": 32.2,
+    "oew_moment_kg_m": 3284400,
+    "note": "OEW = BEW + crew, catering, unusable fluids, emergency equipment",
+    "standard_items": {
+      "flight_crew": {
+        "weight_kg": 250,
+        "arm_m": 8.0,
+        "note": "2 crew @ 125kg each including bags"
+      },
+      "cabin_crew": {
+        "weight_kg": 750,
+        "arm_m": 28.0,
+        "note": "6 crew @ 125kg each including bags"
+      },
+      "catering": {
+        "weight_kg": 1500,
+        "arm_m": 30.0
+      },
+      "emergency_equipment": {
+        "weight_kg": 800,
+        "arm_m": 25.0
+      },
+      "potable_water": {
+        "weight_kg": 400,
+        "arm_m": 35.0
+      },
+      "other": {
+        "weight_kg": 4300,
+        "arm_m": 32.0
+      }
+    }
+  },
+  
+  "maximum_weights": {
+    "mtow_kg": 220000,
+    "mlw_kg": 190000,
+    "mzfw_kg": 180000,
+    "max_fuel_capacity": {
+      "saf_kg": 45000,
+      "lh2_kg": 6000,
+      "note": "Dual-fuel capacity"
+    },
+    "max_payload_kg": 78000,
+    "max_co2_capture_kg": 2000
+  },
+  
+  "loading_stations": {
+    "passengers": {
+      "zone_1_fwd": {
+        "max_passengers": 80,
+        "arm_m": 18.0,
+        "standard_weight_per_pax_kg": 100
+      },
+      "zone_2_mid": {
+        "max_passengers": 120,
+        "arm_m": 32.0,
+        "standard_weight_per_pax_kg": 100
+      },
+      "zone_3_aft": {
+        "max_passengers": 80,
+        "arm_m": 45.0,
+        "standard_weight_per_pax_kg": 100
+      }
+    },
+    "cargo": {
+      "fwd_cargo": {
+        "max_weight_kg": 8000,
+        "arm_m": 22.0
+      },
+      "aft_cargo": {
+        "max_weight_kg": 12000,
+        "arm_m": 42.0
+      }
+    }
+  },
+  
+  "fuel_tanks_cg_effect": {
+    "saf_main_tanks": {
+      "capacity_kg": 45000,
+      "arm_full_m": 33.5,
+      "arm_empty_m": 33.5,
+      "note": "Centrally located, minimal CG shift during consumption"
+    },
+    "lh2_cryogenic_tanks": {
+      "capacity_kg": 6000,
+      "arm_full_m": 35.0,
+      "arm_empty_m": 35.0,
+      "note": "Specialized location for cryogenic containment"
+    },
+    "co2_accumulation": {
+      "max_capture_kg": 2000,
+      "arm_m": 31.0,
+      "cg_shift_note": "CO₂ mass increases during flight, opposite to fuel consumption"
+    }
+  },
+  
+  "cg_envelope_reference": "See cg_envelope_BWB.json for certified CG limits",
+  
+  "notes": [
+    "BWB configuration has unique CG sensitivity - envelope more restrictive than traditional aircraft",
+    "In-flight CG calculation mandatory due to multiple consumables and CO₂ accumulation",
+    "FMS continuously calculates CG based on fuel burn, H₂ consumption, and CO₂ capture",
+    "Loading must account for BWB lateral balance as well as longitudinal",
+    "Cryogenic H₂ density varies with temperature - real-time mass calculation required"
+  ]
+}

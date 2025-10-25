@@ -1,0 +1,135 @@
+{
+  "document_id": "cg_envelope_BWB",
+  "version": "1.0.0",
+  "aircraft": "AMPEL360 BWB-H2",
+  "effective_date": "2028-10-01",
+  "description": "Center of Gravity envelope for AMPEL360 Blended Wing Body configuration",
+  
+  "metadata": {
+    "certification_basis": "EASA CS-25, FAA 14 CFR Part 25",
+    "approved_by": ["EASA", "FAA"],
+    "approval_date": "2028-09-25",
+    "units": {
+      "cg_position": "percent MAC (Mean Aerodynamic Chord)",
+      "weight": "kg"
+    }
+  },
+  
+  "bwb_characteristics": {
+    "mac_length_m": 15.8,
+    "mac_leading_edge_m": 25.0,
+    "note": "BWB MAC calculation differs from conventional aircraft due to continuous wing-body blend"
+  },
+  
+  "cg_envelope": {
+    "description": "Certified CG limits as function of weight",
+    "note": "BWB envelope more restrictive than traditional aircraft due to stability characteristics",
+    
+    "envelope_points": [
+      {
+        "weight_kg": 102000,
+        "cg_fwd_limit_pct_mac": 25.0,
+        "cg_aft_limit_pct_mac": 35.0,
+        "note": "Minimum operating weight (OEW)"
+      },
+      {
+        "weight_kg": 140000,
+        "cg_fwd_limit_pct_mac": 23.0,
+        "cg_aft_limit_pct_mac": 36.0
+      },
+      {
+        "weight_kg": 180000,
+        "cg_fwd_limit_pct_mac": 22.0,
+        "cg_aft_limit_pct_mac": 37.0,
+        "note": "MZFW"
+      },
+      {
+        "weight_kg": 190000,
+        "cg_fwd_limit_pct_mac": 22.0,
+        "cg_aft_limit_pct_mac": 37.0,
+        "note": "MLW"
+      },
+      {
+        "weight_kg": 220000,
+        "cg_fwd_limit_pct_mac": 21.0,
+        "cg_aft_limit_pct_mac": 38.0,
+        "note": "MTOW"
+      }
+    ]
+  },
+  
+  "lateral_balance_limits": {
+    "description": "BWB requires lateral balance monitoring in addition to longitudinal CG",
+    "max_lateral_imbalance_kg_m": 5000,
+    "note": "Excessive lateral imbalance affects BWB roll characteristics"
+  },
+  
+  "in_flight_cg_monitoring": {
+    "fms_calculation": true,
+    "update_frequency_sec": 30,
+    "alert_threshold_approach_to_limit_pct": 2.0,
+    "description": "FMS continuously calculates CG based on fuel/H₂ consumption and CO₂ accumulation"
+  },
+  
+  "fuel_burn_cg_effects": {
+    "saf_consumption": {
+      "cg_shift_per_1000kg": 0.05,
+      "direction": "AFT",
+      "note": "SAF tanks centrally located, minimal CG shift"
+    },
+    "h2_consumption": {
+      "cg_shift_per_100kg": 0.08,
+      "direction": "AFT",
+      "note": "H₂ tanks slightly aft of aircraft CG"
+    },
+    "co2_accumulation": {
+      "cg_shift_per_100kg": -0.06,
+      "direction": "FWD",
+      "note": "CO₂ storage forward of CG, partially offsets fuel burn CG shift"
+    }
+  },
+  
+  "loading_procedures": {
+    "sequence": [
+      "1. Calculate OEW and moment",
+      "2. Add passenger loading (distribute per zones)",
+      "3. Add cargo (balance fwd/aft holds)",
+      "4. Add SAF fuel",
+      "5. Add LH₂ fuel",
+      "6. Calculate takeoff CG",
+      "7. Verify within envelope",
+      "8. Calculate landing CG (account for fuel burn and CO₂ capture)",
+      "9. Verify landing CG within envelope"
+    ],
+    "critical_checks": [
+      "Verify CG within limits at takeoff",
+      "Verify CG within limits at landing (all fuel scenarios)",
+      "Verify CG remains within limits throughout flight (FMS monitoring)",
+      "Verify lateral balance within limits"
+    ]
+  },
+  
+  "special_considerations": {
+    "bwb_sensitivity": "BWB more sensitive to CG position than conventional aircraft - envelope narrower",
+    "multi_consumable_complexity": "Three consumables (SAF, H₂, captured CO₂) require careful monitoring",
+    "co2_accumulation_effect": "CO₂ capture shifts CG forward during flight, opposite to fuel consumption",
+    "cryogenic_density": "LH₂ density varies with temperature - mass calculation must be real-time",
+    "fms_mandatory": "Active FMS CG monitoring mandatory for AMPEL360 operation"
+  },
+  
+  "dispatch_requirements": {
+    "takeoff_cg_within_envelope": "REQUIRED",
+    "landing_cg_within_envelope": "REQUIRED (all fuel scenarios)",
+    "fms_cg_monitoring_operative": "REQUIRED (per MEL)",
+    "lateral_balance_check": "REQUIRED"
+  },
+  
+  "notes": [
+    "CG envelope specifically developed for BWB aerodynamic characteristics",
+    "More restrictive than conventional aircraft due to stability considerations",
+    "Real-time FMS monitoring essential due to multiple consumables",
+    "CO₂ accumulation unique to AMPEL360 - shifts CG forward during flight",
+    "Loading software must account for BWB-specific envelope",
+    "Crew training emphasizes CG management unique to AMPEL360"
+  ]
+}

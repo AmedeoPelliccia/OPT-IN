@@ -1,0 +1,74 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+
+id: "AMPEL360_QRH_Digital"
+document_type: "Quick Reference Handbook"
+ata_chapter: "02"
+title: "AMPEL360 Quick Reference Handbook - Digital Version"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+effectivity:
+  msn: "AMP360-001 through AMP360-999"
+  configuration_id: "BWB-H2-CFG-02"
+applicability: "All Flight Crew"
+
+classification: "CONTROLLED - FLIGHT SAFETY CRITICAL"
+distribution: "Flight Crew - EFB Only"
+
+# Build Information
+build_info:
+  source_file: "source_data/qrh_procedures.xml"
+  source_version: "1.0.0"
+  build_date: "2028-09-30T10:00:00Z"
+  build_tool: "QRH-Generator"
+  build_tool_version: "2.1.0"
+  builder: "AMPEL360 Documentation Build Server"
+
+# Digital Signature
+digital_signature:
+  signature_file: "AMPEL360_QRH_Digital.sig"
+  algorithm: "RSA-4096"
+  public_key_fingerprint: "SHA256:a1b2c3d4e5f6..."
+  signed_by: "AMPEL360 Documentation Authority"
+  signing_date: "2028-09-30T12:00:00Z"
+  purpose: "EFB integrity verification before each flight"
+
+approvals:
+  - authority: "EASA"
+    approval_reference: "EASA.QRH.001"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "FAA"
+    approval_reference: "FAA-QRH-2028-001"
+    status: "Approved"
+    date: "2028-09-28"
+  - authority: "AMPEL360 Flight Operations"
+    status: "Released"
+    date: "2028-09-30"
+    approved_by: "Chief Pilot"
+
+# Content Summary
+total_procedures: 24
+emergency_procedures: 12
+abnormal_procedures: 12
+
+novel_procedures:
+  - "H2 Leak In Flight"
+  - "Battery Thermal Runaway"
+  - "Powertrain Orchestrator Fault"
+  - "CO2 Capture System Leak/Overpress"
+  - "Fuel Cell Stack Failure"
+  - "Cryogenic Tank Pressure Anomaly"
+
+# FCOM Linkage
+fcom_correspondence: "One-to-one with FCOM Non-Normal Procedures"
+
+checksum:
+  algorithm: "sha256"
+  value: "f0e9d8c7b6a54321098765432109876543210fedcba9876543210fedcba987"
+
+notes: |
+  This is the digital version in Markdown format for EFB use and GitHub readability.
+  Must verify signature before each flight per OpSpec.
+  Generated from canonical XML source to ensure consistency.
+  Markdown format provides better readability on GitHub while maintaining operational integrity.

@@ -1,0 +1,36 @@
+# Controlled Metadata for AMPEL360 Operations Documentation
+
+id: "SYS_42-60_QIS_Scheduler_Overview"
+document_type: "System Description"
+ata_chapter: "42-60"
+title: "Quantum-Inspired Scheduler - Operational Overview"
+
+revision: "1.0.0"
+effective_date: "2028-10-01"
+effectivity:
+  msn: "AMP360-001 through AMP360-999"
+  configuration_id: "BWB-H2-CFG-02"
+applicability: "Flight Crew"
+
+classification: "CONTROLLED - FLIGHT OPERATIONS"
+
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-09-25"
+  - authority: "AMPEL Engineering"
+    status: "Released"
+    date: "2028-09-20"
+
+related_ata_chapters:
+  - "ATA-42-00: Integrated Modular Avionics"
+  - "ATA-42-55: Powertrain Energy Orchestration"
+  - "ATA-31-60: Performance Recording"
+
+checksum:
+  algorithm: "sha256"
+  value: "f6789012345678901234567890abcdef1234567890abcdef12345678901"
+
+notes: |
+  QIS is a provisional system representing advanced scheduling technology.
+  Operational description focuses on crew interface and fault management.
