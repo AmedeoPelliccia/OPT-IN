@@ -1,6 +1,30 @@
 # OPT-IN
 Amedeo Pelliccia's development and documentation methodology
 
+**OPT-IN methodology** is described as a **structured framework for development and documentation** used across aerospace systems projects, including AQUA OS and AMPEL360.
+
+### Core structure
+
+OPT-IN is organized into four principal axes—**Organization, Program, Technology, Infrastructure, Neural**—each decomposed into subdomains that mirror ATA chapter logic for traceability and certification alignment.
+
+* **O (Organization):** governance, compliance, airworthiness, and maintenance policies.
+* **P (Program):** aircraft-level configuration control, servicing, and dimensional data.
+* **T (Technology):** the on-board systems tree that maps airframe, propulsion, energy, OS, and avionics to ATA codes for documentation uniformity.
+* **I (Infrastructure):** ground, airport, and supply-chain assets; flight simulators.
+* **N (Neural):** data lineage, user traceability, and AI/ML models for digital passporting.
+
+### Methodological principles
+
+1. **ATA-anchored documentation:** every technical artifact—requirement, code module, subsystem—is indexed by ATA chapter.section.subject to ensure interoperability with iSpec 2200 and S1000D deliverables.
+2. **Cross-referenced traceability:** logical, thermal, and energy interfaces are documented through secondary ATA references inside each branch.
+3. **Reduction of provisional subjects:** new technologies (e.g., quantum scheduling, CO₂ batteries) are introduced under provisional codes until validated by standards review.
+4. **Bidirectional linking:** development repositories and technical manuals share identifiers so that commits, verification steps, and documentation updates remain synchronized.
+5. **Audit readiness:** every addition must be traceable to a requirement and classification entry, guaranteeing certification evidence continuity .
+
+### Outcome
+
+This framework yields a **single-source-of-truth architecture** where engineering design, certification data, and maintenance documentation remain coherent across aircraft life-cycle phases, making OPT-IN both a configuration-management scheme and a documentation ontology.
+
 The following framework ensures the critical interfaces between systems are formally documented.
 
 ---
