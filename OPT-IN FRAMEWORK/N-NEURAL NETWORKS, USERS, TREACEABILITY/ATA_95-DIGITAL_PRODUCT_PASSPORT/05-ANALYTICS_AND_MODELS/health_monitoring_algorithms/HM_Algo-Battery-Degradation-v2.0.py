@@ -10,6 +10,7 @@ Version: 2.0
 Last Updated: 2029-01-10
 """
 
+import datetime
 import numpy as np
 from typing import Dict, List, Tuple
 
@@ -133,7 +134,7 @@ class BatteryHealthMonitor:
         
         return {
             "battery_id": battery_id,
-            "timestamp": "2029-04-15T18:00:00Z",  # Would use actual timestamp
+            "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "state_of_health_pct": round(soh, 2),
             "remaining_useful_life_days": rul_days,
             "current_capacity_ah": current_capacity,
