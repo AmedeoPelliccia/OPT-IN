@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0",
+  "passport_id": "urn:ampel360:msn:001",
+  "type": "AircraftPassport",
+  "revision": 157,
+  "last_updated_utc": "2029-04-15T18:00:00Z",
+  "identity": {
+    "msn": "AMP360-001",
+    "registration": "D-AMPL",
+    "operator": "Launch Customer Airlines"
+  },
+  "airworthiness": {
+    "certificate_of_airworthiness_id": "EASA.AW.12345",
+    "status": "AIRWORTHY"
+  },
+  "configuration": {
+    "as_built_ref": "event_OEM-001-BuildComplete",
+    "as_maintained_ref": "event_MRO-1234-WorkOrder-5678",
+    "major_components": {
+      "engine_left_sn": "SN-ENG-L-12345",
+      "engine_right_sn": "SN-ENG-R-12346",
+      "lg_nose_sn": "SN-LG-N-00123"
+    },
+    "software_configuration": {
+      "ima_os_version": "4.2.1",
+      "fms_db_cycle": "2905"
+    }
+  },
+  "utilization": {
+    "flight_hours": 1250.5,
+    "flight_cycles": 450
+  },
+  "provenance": {
+    "event_ledger_ref": "urn:ampel360:ledger:msn:001"
+  }
+}
