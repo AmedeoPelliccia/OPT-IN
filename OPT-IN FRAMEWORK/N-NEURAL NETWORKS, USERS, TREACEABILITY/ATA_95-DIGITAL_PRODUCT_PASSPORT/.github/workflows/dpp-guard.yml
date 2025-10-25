@@ -1,21 +1,21 @@
 name: DPP Guard
 on:
   push:
-    paths: ["N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/**"]
+    paths: ["OPT-IN FRAMEWORK/N-NEURAL NETWORKS, USERS, TREACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/**"]
   pull_request:
-    paths: ["N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/**"]
+    paths: ["OPT-IN FRAMEWORK/N-NEURAL NETWORKS, USERS, TREACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/**"]
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Validate Passport JSON structure
-        run: jq -e . N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/03-PASSPORT_DATA_LAKE/**/*.json
+        run: jq -e . "OPT-IN FRAMEWORK/N-NEURAL NETWORKS, USERS, TREACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/03-PASSPORT_DATA_LAKE/**/*.json"
       - name: Validate Event Ledger JSON structure
-        run: jq -e . N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/04-EVENT_LEDGER/**/*.json
+        run: jq -e . "OPT-IN FRAMEWORK/N-NEURAL NETWORKS, USERS, TREACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/04-EVENT_LEDGER/**/*.json"
       - name: Validate against JSON schemas
-        run: # python ci/validate_jsonschema.py --schema N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/01-GOVERNANCE_AND_SCHEMA/schemas
+        run: # python ci/validate_jsonschema.py --schema "OPT-IN FRAMEWORK/N-NEURAL NETWORKS, USERS, TREACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/01-GOVERNANCE_AND_SCHEMA/schemas"
       - name: Check ledger hash chain integrity
-        run: # python ci/check_ledger_chain.py N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/04-EVENT_LEDGER
+        run: # python ci/check_ledger_chain.py "OPT-IN FRAMEWORK/N-NEURAL NETWORKS, USERS, TREACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT/04-EVENT_LEDGER"
       - name: Check internal document links
         run: # python ci/check_links.py
