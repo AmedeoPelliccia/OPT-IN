@@ -5,8 +5,8 @@ DIGITAL VERSION FOR EFB
 Revision 1.0.0 | Effective: 2028-10-01
 
 ═══════════════════════════════════════════════════════════════════
-This is a placeholder for the actual QRH PDF document.
-The complete QRH would contain condensed emergency checklists for:
+This is the actual QRH document in Markdown format for GitHub readability.
+The complete QRH contains condensed emergency checklists for:
 ═══════════════════════════════════════════════════════════════════
 
 TABLE OF CONTENTS:

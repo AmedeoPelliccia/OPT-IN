@@ -68,7 +68,7 @@ checksum:
   value: "f0e9d8c7b6a54321098765432109876543210fedcba9876543210fedcba987"
 
 notes: |
-  This is the digital version for Electronic Flight Bag (EFB) use.
+  This is the digital version in Markdown format for EFB use and GitHub readability.
   Must verify signature before each flight per OpSpec.
   Generated from canonical XML source to ensure consistency.
-  Paper version also available with yellow emergency section pages.
+  Markdown format provides better readability on GitHub while maintaining operational integrity.

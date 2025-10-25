@@ -10,7 +10,7 @@ document_type: "Quick Reference Handbook"
 title: "AMPEL360 Quick Reference Handbook (QRH)"
 description: |
   Condensed, checklist-style emergency procedures for rapid cockpit reference.
-  Generated from canonical source XML. PDF is a controlled build artifact.
+  Generated from canonical source XML. Markdown is a controlled build artifact.
   Digital version is cryptographically signed for EFB integrity.
 
 # Ownership

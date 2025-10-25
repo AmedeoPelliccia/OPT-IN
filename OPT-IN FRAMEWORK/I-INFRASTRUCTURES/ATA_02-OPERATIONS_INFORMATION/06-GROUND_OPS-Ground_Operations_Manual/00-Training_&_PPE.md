@@ -140,7 +140,7 @@ Required records:
 
 Cross-References:
 - LH₂ Refueling Procedures: Section 01-Refueling_and_Offload
-- H₂ Area Monitoring: LH2_Area_Monitoring_O2_H2_Sensors.pdf
+- H₂ Area Monitoring: LH2_Area_Monitoring_O2_H2_Sensors.md
 - GSE Manuals: ATA 03 - Support Information
 
 Footer: 00-Training_&_PPE Rev 1.0.0 | © 2028 AMPEL360

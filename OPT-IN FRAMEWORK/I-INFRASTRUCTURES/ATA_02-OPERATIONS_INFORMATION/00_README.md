@@ -7,7 +7,7 @@ This directory contains all flight and ground operations information for the AMP
 ## Governance Principles
 
 ### Controlled Metadata
-Every artifact (`.pdf`, `.json`, etc.) is accompanied by a `.meta.yaml` sidecar file detailing its revision, effectivity, approvals, and a SHA256 checksum for integrity.
+Every artifact (`.md`, `.json`, etc.) is accompanied by a `.meta.yaml` sidecar file detailing its revision, effectivity, approvals, and a SHA256 checksum for integrity.
 
 ### Directory Governance
 Each directory contains an `INDEX.meta.yaml` file that specifies the owner, approval status, and effective date for the enclosed set of documents.
@@ -22,7 +22,7 @@ All FCOM Non-Normal Procedures (NNP) are linked one-to-one with their correspond
 Document footers contain explicit cross-references to related safety, monitoring, or procedural information (e.g., fire detection ATA codes, GSE interface documents).
 
 ### Canonical Source
-The QRH is generated from a canonical source XML file. The PDF is a controlled build artifact.
+The QRH is generated from a canonical source XML file. The Markdown document is a controlled build artifact optimized for GitHub readability.
 
 ## Directory Structure
 
@@ -36,27 +36,27 @@ The QRH is generated from a canonical source XML file. The PDF is a controlled b
     ├── /01-FCOM-Flight_Crew_Operating_Manual
     │   ├── INDEX.meta.yaml
     │   ├── /LIMITATIONS
-    │   │   ├── FCOM-LIMITATIONS_General.pdf
-    │   │   ├── FCOM-LIMITATIONS_General.pdf.meta.yaml
-    │   │   ├── FCOM-LIMITATIONS_Operational_Minima.pdf
-    │   │   └── FCOM-LIMITATIONS_Operational_Minima.pdf.meta.yaml
+    │   │   ├── FCOM-LIMITATIONS_General.md
+    │   │   ├── FCOM-LIMITATIONS_General.md.meta.yaml
+    │   │   ├── FCOM-LIMITATIONS_Operational_Minima.md
+    │   │   └── FCOM-LIMITATIONS_Operational_Minima.md.meta.yaml
     │   ├── /NORMAL_PROCEDURES
     │   │   └── ... (files with .meta.yaml sidecars) ...
     │   ├── /NON-NORMAL_PROCEDURES
     │   │   ├── INDEX.meta.yaml
-    │   │   ├── NNP_CB_RESET_POLICY.pdf
-    │   │   ├── NNP_CB_RESET_POLICY.pdf.meta.yaml
-    │   │   ├── NNP_24-33_Battery_Thermal_Runaway.pdf
-    │   │   ├── NNP_24-33_Battery_Thermal_Runaway.pdf.meta.yaml
-    │   │   ├── NNP_26-40_H2_Leak_In_Flight.pdf
-    │   │   └── NNP_26-40_H2_Leak_In_Flight.pdf.meta.yaml
+    │   │   ├── NNP_CB_RESET_POLICY.md
+    │   │   ├── NNP_CB_RESET_POLICY.md.meta.yaml
+    │   │   ├── NNP_24-33_Battery_Thermal_Runaway.md
+    │   │   ├── NNP_24-33_Battery_Thermal_Runaway.md.meta.yaml
+    │   │   ├── NNP_26-40_H2_Leak_In_Flight.md
+    │   │   └── NNP_26-40_H2_Leak_In_Flight.md.meta.yaml
     │   └── /SYSTEM_DESCRIPTIONS
-    │       ├── SYS_42-60_QIS_Scheduler_Overview.pdf
-    │       └── SYS_42-60_QIS_Scheduler_Overview.pdf.meta.yaml
+    │       ├── SYS_42-60_QIS_Scheduler_Overview.md
+    │       └── SYS_42-60_QIS_Scheduler_Overview.md.meta.yaml
     ├── /02-QRH-Quick_Reference_Handbook
     │   ├── INDEX.meta.yaml
-    │   ├── AMPEL360_QRH_Digital.pdf
-    │   ├── AMPEL360_QRH_Digital.pdf.meta.yaml
+    │   ├── AMPEL360_QRH_Digital.md
+    │   ├── AMPEL360_QRH_Digital.md.meta.yaml
     │   ├── AMPEL360_QRH_Digital.sig
     │   └── /source_data
     │       └── qrh_procedures.xml
@@ -75,19 +75,19 @@ The QRH is generated from a canonical source XML file. The PDF is a controlled b
     │       └── cg_envelope_BWB.json.sig
     ├── /05-MEL-Minimum_Equipment_List
     │   ├── INDEX.meta.yaml
-    │   ├── CDL_Configuration_Deviation_List.pdf
-    │   ├── CDL_Configuration_Deviation_List.pdf.meta.yaml
-    │   ├── NEF_Non_Essential_Furnishings.pdf
-    │   └── NEF_Non_Essential_Furnishings.pdf.meta.yaml
+    │   ├── CDL_Configuration_Deviation_List.md
+    │   ├── CDL_Configuration_Deviation_List.md.meta.yaml
+    │   ├── NEF_Non_Essential_Furnishings.md
+    │   └── NEF_Non_Essential_Furnishings.md.meta.yaml
     └── /06-GROUND_OPS-Ground_Operations_Manual
         ├── INDEX.meta.yaml
-        ├── 00-Training_&_PPE.pdf
-        ├── 00-Training_&_PPE.pdf.meta.yaml
+        ├── 00-Training_&_PPE.md
+        ├── 00-Training_&_PPE.md.meta.yaml
         └── /01-Refueling_and_Offload
             └── /LH2_Cryogenic_Refueling
                 ├── INDEX.meta.yaml
-                ├── LH2_Area_Monitoring_O2_H2_Sensors.pdf
-                └── LH2_Area_Monitoring_O2_H2_Sensors.pdf.meta.yaml
+                ├── LH2_Area_Monitoring_O2_H2_Sensors.md
+                └── LH2_Area_Monitoring_O2_H2_Sensors.md.meta.yaml
 ```
 
 ## Document Types
