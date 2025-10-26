@@ -24,7 +24,7 @@ alert_thresholds:
   open_fan_propulsor:
     green_ips: 0.15
     amber_ips: 0.25
-    red_ips: 0.25
+    red_ips: 0.26
   gearbox:
     green_g_rms: 0.20
     amber_g_rms: 0.35
