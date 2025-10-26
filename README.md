@@ -9,7 +9,7 @@ OPT-IN is organized into four principal axes—**Organization, Program, Technolo
 
 * **O (Organization):** governance, compliance, airworthiness, and maintenance policies.
 * **P (Program):** aircraft-level configuration control, servicing, and dimensional data.
-* **T (Technology):** the on-board systems tree organized into functional domains (A-Airframe, M-Mechanics, E1-Environment, D-Data, E2-Energy, O-Operating Systems, P-Propulsion, E3-Electronics, L1-Logics, L2-Links, I-Information/Intelligence/Interfaces, C1-Cockpit/Cabin/Cargo, C2-Circular/Cryogenic Systems, I2-Innovation & Development, A2-Aerodynamics) that maps to ATA codes for documentation uniformity.
+* **T (Technology):** the on-board systems tree organized into functional domains that maps to ATA codes for documentation uniformity. See detailed structure below with 15 specialized subdomains covering airframe, mechanics, environment, data, energy, operating systems, propulsion, electronics, logic systems, communications, interfaces/intelligence, cockpit/cabin, circular/cryogenic systems, innovation & development, and aerodynamics.
 * **I (Infrastructure):** ground, airport, and supply-chain assets; flight simulators.
 * **N (Neural):** data lineage, user traceability, and AI/ML models for digital passporting.
 
