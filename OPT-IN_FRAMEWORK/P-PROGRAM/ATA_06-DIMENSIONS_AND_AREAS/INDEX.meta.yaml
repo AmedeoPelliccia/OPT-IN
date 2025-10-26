@@ -1,0 +1,33 @@
+schema_version: "1.1"
+id: "ATA_06_INDEX"
+program: "AMPEL360"
+chapter: "ATA 06 - DIMENSIONS AND AREAS"
+units_primary: "SI"
+units_secondary: "Imperial (derived)"
+datums:
+  origin: { FS: 0.000 m, BL: 0.000 m, WL: 0.000 m }
+  axes: { X: "FS +fwd", Y: "BL +right", Z: "WL +up" }
+methods:
+  areas:
+    S_ref: "Method: BWB-REF-01; exposed wing + body-blend adders"
+    S_wet: "Method: BWB-WET-01; triangulated surface from CAD master"
+  volumes:
+    V_press: "Method: VOL-PRS-01; sealed pressure envelope"
+governance:
+  owner_role: "Chief Design Engineer"
+  review_board: ["Ops Engineering", "Structures", "Aero", "MRO"]
+  change_control: "SemVer; effective_date must move forward"
+effectivity:
+  msn_blocks:
+    - { from: 1, to: 50, config: "Block A" }
+    - { from: 51, to: null, config: "Block B" }
+traceability:
+  cad_master: "CAD-MASTER-ASSY_rev5.6.0.catpart"
+integrity:
+  checksum_algorithm: "sha256"
+  # The checksum values below are placeholders for demonstration purposes.
+files:
+  - id: "DATA_Principal-Dimensions-Table_rev2.1.0_20280401.md"
+    sha256: "0cbcd53673faab308f21901621f6a4063c14dd254599be96f479504ae1c7d536"
+  - id: "FIG_Three-View-Drawing_rev2.0.0_20280315.dxf"
+    sha256: "e419a06fee2b3b7c015a383749e0735da742ed629b60e6975d7113d0667e2e6d"

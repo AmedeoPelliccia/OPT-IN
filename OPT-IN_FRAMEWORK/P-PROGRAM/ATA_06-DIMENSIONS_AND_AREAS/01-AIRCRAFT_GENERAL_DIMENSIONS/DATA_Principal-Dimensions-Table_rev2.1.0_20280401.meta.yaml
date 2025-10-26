@@ -1,0 +1,14 @@
+schema_version: "1.1"
+id: "DATA_Principal-Dimensions-Table_rev2.1.0_20280401"
+document:
+  type: "DATA"
+  title: "Principal Dimensions Table"
+  revision: "2.1.0"
+  effective_date: "2028-04-01"
+effectivity:
+  msn: "ALL"
+  config: ["Block A", "Block B"]
+traceability:
+  source_cad_link: "CAD-MASTER-ASSY_rev5.6.0.catpart"
+integrity:
+  checksum: { algorithm: "sha256", value: "0cbcd53673faab308f21901621f6a4063c14dd254599be96f479504ae1c7d536" }

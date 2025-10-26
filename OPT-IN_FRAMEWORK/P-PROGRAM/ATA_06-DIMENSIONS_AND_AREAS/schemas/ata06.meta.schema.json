@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ATA 06 Metadata Schema",
+  "description": "Schema for ATA 06 metadata files",
+  "type": "object",
+  "required": ["schema_version", "id", "document", "effectivity", "traceability", "integrity"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Schema version number"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the document"
+    },
+    "document": {
+      "type": "object",
+      "required": ["type", "title", "revision", "effective_date"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["DATA", "FIG", "SPEC"],
+          "description": "Document type"
+        },
+        "title": {
+          "type": "string",
+          "description": "Document title"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Semantic version"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Effective date in ISO format"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn", "config"],
+      "properties": {
+        "msn": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ],
+          "description": "Manufacturing serial number applicability"
+        },
+        "config": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Configuration blocks"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "source_cad_link": {
+          "type": "string",
+          "description": "Link to source CAD file"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["checksum"],
+      "properties": {
+        "checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256"],
+              "description": "Checksum algorithm"
+            },
+            "value": {
+              "type": "string",
+              "description": "Checksum value"
+            }
+          }
+        }
+      }
+    }
+  }
+}

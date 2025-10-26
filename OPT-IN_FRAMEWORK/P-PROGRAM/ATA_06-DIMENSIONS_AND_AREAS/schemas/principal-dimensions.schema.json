@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Principal Dimensions Schema",
+  "description": "Schema for validating principal aircraft dimensions data",
+  "type": "object",
+  "required": ["dimensions", "units", "revision"],
+  "properties": {
+    "revision": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Document revision in semantic versioning format"
+    },
+    "units": {
+      "type": "object",
+      "required": ["length", "angle"],
+      "properties": {
+        "length": {
+          "type": "string",
+          "enum": ["m", "ft"],
+          "description": "Length measurement unit"
+        },
+        "angle": {
+          "type": "string",
+          "enum": ["deg", "rad"],
+          "description": "Angular measurement unit"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "unit"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Dimension name"
+          },
+          "value": {
+            "type": "number",
+            "description": "Dimension value"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Measurement unit"
+          },
+          "method": {
+            "type": "string",
+            "description": "Calculation method or measurement notes"
+          },
+          "tolerance": {
+            "type": "number",
+            "description": "Tolerance value"
+          }
+        }
+      }
+    }
+  }
+}
