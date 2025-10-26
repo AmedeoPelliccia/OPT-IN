@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION"
+document:
+  type: "INDEX"
+  title: "Infrastructure Compliance and Certification - ATA 89"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+description: |
+  Capítulo ATA 89 que define el programa de certificación AMPEL360-Ready y
+  procedimientos de prueba para infraestructura aeroportuaria.
+subsections:
+  - id: "CERTIFICATION_PROGRAM"
+    title: "Airport Certification Program"
+    description: "Programa de certificación AMPEL360-Ready"
+  - id: "test_procedures"
+    title: "Test Procedures"
+    description: "Procedimientos de prueba de cumplimiento"
+governance:
+  lifecycle_states:
+    - "DRAFT"
+    - "CANDIDATE"
+    - "RATIFIED"
+    - "DEPRECATED"
+  verification: "Este capítulo define los procedimientos de verificación"
+  certification_program: "AMPEL360-Ready"
+crossrefs:
+  - "../ATA_85-FLUID_INTERFACES_AND_SERVICING"
+  - "../ATA_86-ELECTRICAL_AND_DATA_INTERFACES"
+  - "../ATA_87-PHYSICAL_AND_AIRFRAME_INTERFACES"
+  - "../ATA_88-GROUND_OPERATIONS_AUTOMATION"
+  - "../ATA_03-SUPPORT_INFORMATION"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-01-15T10:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-01-15T10:00:00Z"

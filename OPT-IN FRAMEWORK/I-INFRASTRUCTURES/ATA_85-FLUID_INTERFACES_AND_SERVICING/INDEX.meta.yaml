@@ -1,0 +1,35 @@
+schema_version: "1.1"
+id: "ATA_85-FLUID_INTERFACES_AND_SERVICING"
+document:
+  type: "INDEX"
+  title: "Fluid Interfaces and Servicing - ATA 85"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+description: |
+  Capítulo ATA 85 que define estándares para interfaces de fluidos criogénicos
+  (LH₂, LCO₂) y sus procedimientos de servicio en la aeronave AMPEL360.
+subsections:
+  - id: "01-CRYOGENIC_HYDROGEN_LH2"
+    title: "Cryogenic Hydrogen (LH2)"
+    description: "Estándares para manejo e interfaz de hidrógeno líquido"
+  - id: "02-CAPTURED_CARBON_DIOXIDE_LCO2"
+    title: "Captured Carbon Dioxide (LCO2)"
+    description: "Estándares para manejo e interfaz de dióxido de carbono capturado"
+governance:
+  lifecycle_states:
+    - "DRAFT"
+    - "CANDIDATE"
+    - "RATIFIED"
+    - "DEPRECATED"
+  verification: "Cumplimiento verificable mediante TEST_STD-89-xxx"
+  security_by_design: true
+crossrefs:
+  - "../ATA_28-FUEL_SYSTEM"
+  - "../ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION"
+  - "../ATA_03-SUPPORT_INFORMATION"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-01-15T10:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-01-15T10:00:00Z"

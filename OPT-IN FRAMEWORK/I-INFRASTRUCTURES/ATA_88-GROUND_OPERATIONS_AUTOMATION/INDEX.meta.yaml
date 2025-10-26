@@ -1,0 +1,29 @@
+schema_version: "1.1"
+id: "ATA_88-GROUND_OPERATIONS_AUTOMATION"
+document:
+  type: "INDEX"
+  title: "Ground Operations Automation - ATA 88"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "DRAFT"
+description: |
+  Capítulo ATA 88 que define la hoja de ruta y estándares futuros para
+  automatización de operaciones en tierra de la aeronave AMPEL360.
+governance:
+  lifecycle_states:
+    - "DRAFT"
+    - "CANDIDATE"
+    - "RATIFIED"
+    - "DEPRECATED"
+  roadmap_status: "PLANNING"
+crossrefs:
+  - "../ATA_02-OPERATIONS_INFORMATION"
+  - "../ATA_85-FLUID_INTERFACES_AND_SERVICING"
+  - "../ATA_86-ELECTRICAL_AND_DATA_INTERFACES"
+  - "../ATA_87-PHYSICAL_AND_AIRFRAME_INTERFACES"
+  - "../ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-01-15T10:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-01-15T10:00:00Z"
