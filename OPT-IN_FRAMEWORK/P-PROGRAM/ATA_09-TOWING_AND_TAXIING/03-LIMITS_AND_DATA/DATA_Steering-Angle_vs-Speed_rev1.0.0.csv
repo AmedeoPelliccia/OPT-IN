@@ -1,0 +1,9 @@
+Speed_kmh,Max_Steering_Angle_deg,Min_Turn_Radius_m,Tire_Scrub_Risk,Notes
+0,70,15.2,Low,"Stationary or very slow, full steering available"
+5,70,15.2,Low,"Parking area maneuvering, tightest turns possible"
+8,68,15.8,Low,"Pushback speed, near-maximum steering"
+10,65,16.5,Medium,"Standard turn speed, recommended for most turns"
+15,58,18.9,Medium,"Moderate speed, steering begins to limit"
+20,48,23.1,Medium,"Straight taxiway speed, limited steering for corrections only"
+25,38,29.8,High,"Maximum tow speed, minimal steering capability, straight only"
+30,28,40.5,High,"Maximum normal taxi speed (flight ops), very limited steering"

@@ -1,0 +1,79 @@
+DXF Version: AC1024
+Drawing Name: AMPEL360 Tow Fitting and Adapter Views
+Revision: 1.0.0
+Effective Date: 2028-08-01
+
+DESCRIPTION:
+This DXF file contains detailed drawings of the AMPEL360 nose landing gear
+tow fitting and approved towbar adapters. Includes:
+- Tow fitting geometry and dimensions
+- Towbar connection interface
+- Adapter details for various tug types
+- Installation and clearance views
+
+VIEWS INCLUDED:
+- Front View: Tow fitting as seen from tug position
+- Side View (Right): Profile showing vertical alignment
+- Side View (Left): Mirror view for symmetry verification
+- Top View: Plan view showing horizontal alignment
+- Detail View A: Tow fitting pin bore detail
+- Detail View B: Towbar connection mechanism
+- Detail View C: Shear pin installation
+
+LAYERS:
+Layer 0: Nose landing gear outline (reference)
+Layer 1: Tow fitting geometry (dimensions and tolerances)
+Layer 2: Towbar connection points
+Layer 3: Adapters (various part numbers)
+Layer 4: Clearance envelopes
+Layer 5: Dimensions and tolerances
+Layer 6: Notes and part numbers
+
+DATUM:
+Tow fitting center: FS 12.5m, BL 0.0, WL 1.8m
+(Referenced to aircraft datum per ATA 06)
+
+UNITS: Millimeters (mm) for detail, Meters (m) for assembly
+
+KEY DIMENSIONS:
+- Tow fitting pin diameter: Ø76mm
+- Jaw opening: 85mm
+- Jaw thickness: 50mm
+- Load rating: 500kN ultimate, 300kN limit
+
+MATERIALS:
+- Tow fitting: Forged 4340 steel, heat-treated
+- Towbar head: Forged steel
+- Shear pin: AISI 4340, cadmium plated
+
+CROSS-REFERENCES:
+- ATA 06: NLG location and aircraft datums
+- ATA 32: NLG structural details
+- DATA_Towbar-And-Adapter-Specs_rev1.0.0.md
+
+PART NUMBERS SHOWN:
+- Towbar HD-001: TBR-AMPEL360-HD-001
+- Towbar STD-002: TBR-AMPEL360-STD-002
+- Adapter A-1: ADT-TMX450-AMPEL360
+- Adapter A-2: ADT-AST3-AMPEL360
+
+VIEWING:
+Use CAD software (AutoCAD, DraftSight, LibreCAD) to view and measure.
+Recommended print scale: 1:5 for details, 1:20 for assembly views.
+
+NOTES:
+- All dimensions are nominal; refer to engineering drawings for tolerances
+- Towbar must be compatible with tow fitting per DATA file
+- Shear pin must be installed per procedure and torqued properly
+- Inspect tow fitting per ATA 32 after any hard landing or towing incident
+
+---
+[This is a placeholder for the actual DXF binary/ASCII data]
+To create actual DXF, use CAD software with NLG engineering drawings.
+---
+
+Document Control:
+Version: 1.0.0
+Last Updated: 2028-08-01
+Owner: Ground Operations Engineering
+Approved: Structures Engineering, Ground Operations

@@ -1,0 +1,15 @@
+schema_version: "1.1"
+id: "ATA_09_INDEX"
+chapter: "ATA 09 - TOWING AND TAXIING"
+governance:
+  owner_role: "Ground Operations Engineering"
+  review_board: ["Structures", "W&B", "Flight Ops", "MRO"]
+limits:
+  towing_speed_kmh_max: 25
+  pushback_speed_kmh_max: 8
+  crosswind_pushback_max_kt: 25
+  slope_percent_max: 1.5
+traceability:
+  crossrefs: ["ATA 06", "ATA 07", "ATA 08", "ATA 28", "ATA 49", "ATA 71"]
+integrity:
+  checksum_algorithm: "sha256"
