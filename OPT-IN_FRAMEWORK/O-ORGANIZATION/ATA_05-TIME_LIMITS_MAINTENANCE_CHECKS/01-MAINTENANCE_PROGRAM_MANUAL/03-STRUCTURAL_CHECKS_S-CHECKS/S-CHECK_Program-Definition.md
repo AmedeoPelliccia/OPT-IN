@@ -288,7 +288,7 @@ LH2 tank structure requires special attention:
 - Leak history evaluation
 
 ### 10.3 Novel Technologies
-Quantum scheduling (ATA 42-60) and CO2 battery (ATA 24-33) support structures:
+Quantum scheduling (ATA 42-60) and CO₂ battery (ATA 24-33) support structures:
 - Vibration effects on mounting structure
 - Thermal cycling effects
 - Integration attachments inspection
@@ -299,13 +299,13 @@ Quantum scheduling (ATA 42-60) and CO2 battery (ATA 24-33) support structures:
 
 ### 11.1 Source Documents
 S-Check tasks originate from:
-- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
+- [ATA_04-AIRWORTHINESS_LIMITATIONS](../../../../O-ORGANIZATION/ATA_04-AIRWORTHINESS_LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
 - Supplemental Inspection Programs
 - Corrosion Prevention and Control Program (CPCP)
 - Fatigue and Damage Tolerance Evaluation
 
 ### 11.2 Traceability Matrix
-Complete task-to-source mapping in:
+Complete task-to-source mapping in:  
 `../../02-TRACEABILITY_AND_COMPLIANCE/TRACE_Matrix-MPD-ALS-to-Checks.csv`
 
 ---
@@ -313,7 +313,7 @@ Complete task-to-source mapping in:
 ## 12.0 References
 
 - MPM_Master-Document_rev1.0.0_20280701.md
-- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
+- [ATA_04-AIRWORTHINESS_LIMITATIONS](../../../../O-ORGANIZATION/ATA_04-AIRWORTHINESS_LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
 - SRM (Structural Repair Manual)
 - NDT Manual
 - Composite Repair Manual
@@ -325,3 +325,5 @@ Complete task-to-source mapping in:
 *Part of the AMPEL360 Maintenance Program - ATA 05*
 
 *Special focus on BWB composite structure and LH2 cryogenic system integrity*
+```
+
