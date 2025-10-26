@@ -149,7 +149,7 @@ Where:
 - Angle factor = cos(30°) = 0.866
 - Required WLL per sling = 1,125 kg / 0.866 = 1,299 kg
 - Actual WLL = 5,000 kg
-- Safety Factor = 5,000 / 1,299 = 3.8 (ACCEPTABLE but monitor for equal loading)
+- Safety Factor = 5,000 / 1,299 = 3.8 (**INSUFFICIENT – does not meet minimum required safety factor (5:1)**; select stronger sling or reduce load)
 
 ## Sling Inspection Requirements
 
