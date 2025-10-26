@@ -7,22 +7,22 @@ document:
   effective_date: "2029-06-01"
   status: "CANDIDATE"
 description: |
-  Capítulo ATA 87 que define estándares para interfaces físicas y de estructura
-  entre la aeronave AMPEL360 y la infraestructura terrestre.
+  ATA 87 chapter defining standards for physical and structural interfaces
+  between the AMPEL360 aircraft and ground infrastructure.
 subsections:
   - id: "01-GATE_COMPATIBILITY"
     title: "Gate Compatibility"
-    description: "Estándares para compatibilidad con puertas de embarque"
+    description: "Standards for boarding gate compatibility"
   - id: "02-AUTOMATED_DOCKING"
     title: "Automated Docking"
-    description: "Estándares para sistemas de atraque automatizado"
+    description: "Standards for automated docking systems"
 governance:
   lifecycle_states:
     - "DRAFT"
     - "CANDIDATE"
     - "RATIFIED"
     - "DEPRECATED"
-  verification: "Cumplimiento verificable mediante TEST_STD-89-xxx"
+  verification: "Verifiable compliance through TEST_STD-89-xxx"
   security_by_design: true
 crossrefs:
   - "../ATA_53-FUSELAGE"

@@ -1,27 +1,27 @@
 # ATA 88: Ground Operations Automation
 
-Este capítulo define la hoja de ruta y estándares futuros para la automatización de operaciones en tierra relacionadas con la aeronave AMPEL360.
+This chapter defines the roadmap and future standards for ground operations automation related to the AMPEL360 aircraft.
 
-## Gobernanza
-* **Ciclo de Vida de la Norma:** Cada documento de estándar (`-STD`) tiene un estado de ciclo de vida (`DRAFT`, `CANDIDATE`, `RATIFIED`, `DEPRECATED`) definido en sus metadatos.
-* **Hoja de Ruta:** Este capítulo se encuentra actualmente en fase de planificación y define la visión futura de la automatización.
+## Governance
+* **Standard Lifecycle:** Each standard document (`-STD`) has a lifecycle state (`DRAFT`, `CANDIDATE`, `RATIFIED`, `DEPRECATED`) defined in its metadata.
+* **Roadmap:** This chapter is currently in the planning phase and defines the future vision for automation.
 
-## Contenido
+## Contents
 
 ### ROADMAP_STD-88-000
-Hoja de ruta maestra para automatización de operaciones en tierra:
-- Visión y objetivos de automatización
-- Fases de implementación
-- Tecnologías habilitadoras
-- Cronograma de desarrollo
+Master roadmap for ground operations automation:
+- Automation vision and objectives
+- Implementation phases
+- Enabling technologies
+- Development timeline
 
-## Referencias Cruzadas
-- **ATA 02:** Operations Information (procedimientos operativos)
-- **ATA 85:** Fluid Interfaces and Servicing (automatización de reabastecimiento)
-- **ATA 86:** Electrical and Data Interfaces (integración de datos)
-- **ATA 87:** Physical and Airframe Interfaces (atraque automatizado)
-- **ATA 89:** Infrastructure Compliance and Certification (certificación de sistemas automatizados)
+## Cross-References
+- **ATA 02:** Operations Information (operational procedures)
+- **ATA 85:** Fluid Interfaces and Servicing (refueling automation)
+- **ATA 86:** Electrical and Data Interfaces (data integration)
+- **ATA 87:** Physical and Airframe Interfaces (automated docking)
+- **ATA 89:** Infrastructure Compliance and Certification (automated systems certification)
 
 ---
 
-*Parte del Mapeo de Capítulos ATA AMPEL360 - Marco OPT-IN*
+*Part of AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

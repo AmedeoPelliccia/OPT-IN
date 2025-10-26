@@ -7,8 +7,8 @@ document:
   effective_date: "2029-06-01"
   status: "DRAFT"
 description: |
-  Capítulo ATA 88 que define la hoja de ruta y estándares futuros para
-  automatización de operaciones en tierra de la aeronave AMPEL360.
+  ATA 88 chapter defining the roadmap and future standards for
+  ground operations automation of the AMPEL360 aircraft.
 governance:
   lifecycle_states:
     - "DRAFT"

@@ -1,28 +1,28 @@
 # ATA 87: Physical and Airframe Interfaces
 
-Este capítulo define los estándares para interfaces físicas y de estructura entre la aeronave AMPEL360 y la infraestructura terrestre, incluyendo compatibilidad de puerta y sistemas de atraque automatizado.
+This chapter defines the standards for physical and structural interfaces between the AMPEL360 aircraft and ground infrastructure, including gate compatibility and automated docking systems.
 
-## Gobernanza
-* **Ciclo de Vida de la Norma:** Cada documento de estándar (`-STD`) tiene un estado de ciclo de vida (`DRAFT`, `CANDIDATE`, `RATIFIED`, `DEPRECATED`) definido en sus metadatos.
-* **Cumplimiento Verificable:** Cada norma de interfaz (ICD, PROTOCOL, SPEC) está directamente vinculada a un procedimiento de prueba de cumplimiento (`TEST_STD-89-xxx`).
-* **Seguridad por Diseño:** Las especificaciones físicas incluyen zonas de exclusión y envolventes de seguridad.
+## Governance
+* **Standard Lifecycle:** Each standard document (`-STD`) has a lifecycle state (`DRAFT`, `CANDIDATE`, `RATIFIED`, `DEPRECATED`) defined in its metadata.
+* **Verifiable Compliance:** Each interface standard (ICD, PROTOCOL, SPEC) is directly linked to a compliance test procedure (`TEST_STD-89-xxx`).
+* **Security by Design:** Physical specifications include exclusion zones and safety envelopes.
 
-## Contenido
+## Contents
 
 ### 01-GATE_COMPATIBILITY
-Estándares para compatibilidad con puertas de embarque:
-- **SPEC_STD-87-101:** Jet Bridge Interface Envelope BWB - Envolvente de interfaz para puente de embarque
-- **SPEC_STD-87-102:** Aircraft Clearance and Exclusion Zones - Zonas de exclusión y espacio libre
+Standards for boarding gate compatibility:
+- **SPEC_STD-87-101:** Jet Bridge Interface Envelope BWB - Jet bridge interface envelope
+- **SPEC_STD-87-102:** Aircraft Clearance and Exclusion Zones - Clearance and exclusion zones
 
 ### 02-AUTOMATED_DOCKING
-Estándares para sistemas de atraque automatizado:
-- **PROTOCOL_STD-87-201:** Automated Guidance and Docking - Guiado y atraque automatizado
+Standards for automated docking systems:
+- **PROTOCOL_STD-87-201:** Automated Guidance and Docking - Automated guidance and docking
 
-## Referencias Cruzadas
-- **ATA 53:** Fuselage (estructura de la aeronave)
-- **ATA 10:** Parking, Mooring, Storage (procedimientos de estacionamiento)
-- **ATA 89:** Infrastructure Compliance and Certification (procedimientos de prueba)
+## Cross-References
+- **ATA 53:** Fuselage (aircraft structure)
+- **ATA 10:** Parking, Mooring, Storage (parking procedures)
+- **ATA 89:** Infrastructure Compliance and Certification (test procedures)
 
 ---
 
-*Parte del Mapeo de Capítulos ATA AMPEL360 - Marco OPT-IN*
+*Part of AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

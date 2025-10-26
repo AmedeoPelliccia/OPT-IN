@@ -7,22 +7,22 @@ document:
   effective_date: "2029-06-01"
   status: "CANDIDATE"
 description: |
-  Capítulo ATA 89 que define el programa de certificación AMPEL360-Ready y
-  procedimientos de prueba para infraestructura aeroportuaria.
+  ATA 89 chapter defining the AMPEL360-Ready certification program and
+  test procedures for airport infrastructure.
 subsections:
   - id: "CERTIFICATION_PROGRAM"
     title: "Airport Certification Program"
-    description: "Programa de certificación AMPEL360-Ready"
+    description: "AMPEL360-Ready certification program"
   - id: "test_procedures"
     title: "Test Procedures"
-    description: "Procedimientos de prueba de cumplimiento"
+    description: "Compliance test procedures"
 governance:
   lifecycle_states:
     - "DRAFT"
     - "CANDIDATE"
     - "RATIFIED"
     - "DEPRECATED"
-  verification: "Este capítulo define los procedimientos de verificación"
+  verification: "This chapter defines verification procedures"
   certification_program: "AMPEL360-Ready"
 crossrefs:
   - "../ATA_85-FLUID_INTERFACES_AND_SERVICING"

@@ -1,31 +1,31 @@
 # ATA 86: Electrical and Data Interfaces
 
-Este capítulo define los estándares para interfaces eléctricas y de datos entre la aeronave AMPEL360 y la infraestructura terrestre, incluyendo energía HVDC y enlaces de datos seguros.
+This chapter defines the standards for electrical and data interfaces between the AMPEL360 aircraft and ground infrastructure, including HVDC power and secure data links.
 
-## Gobernanza
-* **Ciclo de Vida de la Norma:** Cada documento de estándar (`-STD`) tiene un estado de ciclo de vida (`DRAFT`, `CANDIDATE`, `RATIFIED`, `DEPRECATED`) definido en sus metadatos.
-* **Cumplimiento Verificable:** Cada norma de interfaz (ICD, PROTOCOL, SPEC) está directamente vinculada a un procedimiento de prueba de cumplimiento (`TEST_STD-89-xxx`).
-* **Seguridad por Diseño:** Las interfaces de datos críticas incluyen un estándar de seguridad dedicado (`SEC_STD`) y requieren firmas digitales para sus especificaciones API.
+## Governance
+* **Standard Lifecycle:** Each standard document (`-STD`) has a lifecycle state (`DRAFT`, `CANDIDATE`, `RATIFIED`, `DEPRECATED`) defined in its metadata.
+* **Verifiable Compliance:** Each interface standard (ICD, PROTOCOL, SPEC) is directly linked to a compliance test procedure (`TEST_STD-89-xxx`).
+* **Security by Design:** Critical data interfaces include a dedicated security standard (`SEC_STD`) and require digital signatures for their API specifications.
 
-## Contenido
+## Contents
 
 ### 01-HIGH_VOLTAGE_DC_GROUND_POWER
-Estándares para energía de tierra en alta tensión DC:
-- **ICD_STD-86-101:** HVDC Ground Power Connector - Especificación del conector
-- **PROTOCOL_STD-86-102:** HVDC Charging Handshake - Protocolo de handshake de carga
+Standards for high-voltage DC ground power:
+- **ICD_STD-86-101:** HVDC Ground Power Connector - Connector specification
+- **PROTOCOL_STD-86-102:** HVDC Charging Handshake - Charging handshake protocol
 
 ### 02-HIGH_BANDWIDTH_GATE_INTERFACE
-Estándares para enlace de datos de alta velocidad en puerta:
-- **ICD_STD-86-201:** Secure Gate Datalink Physical Connector - Conector físico seguro
-- **API_STD-86-202:** DPP Ground Sync API - API para sincronización con tierra
-- **SEC_STD-86-203:** Gate Datalink Security - Estándares de seguridad
+Standards for high-bandwidth gate data link:
+- **ICD_STD-86-201:** Secure Gate Datalink Physical Connector - Secure physical connector
+- **API_STD-86-202:** DPP Ground Sync API - API for ground synchronization
+- **SEC_STD-86-203:** Gate Datalink Security - Security standards
 
-## Referencias Cruzadas
-- **ATA 24:** Electrical Power (sistema eléctrico de la aeronave)
-- **ATA 46:** Information Systems (sistemas de información)
-- **ATA 95:** Digital Product Passport (sincronización de datos)
-- **ATA 89:** Infrastructure Compliance and Certification (procedimientos de prueba)
+## Cross-References
+- **ATA 24:** Electrical Power (aircraft electrical system)
+- **ATA 46:** Information Systems (information systems)
+- **ATA 95:** Digital Product Passport (data synchronization)
+- **ATA 89:** Infrastructure Compliance and Certification (test procedures)
 
 ---
 
-*Parte del Mapeo de Capítulos ATA AMPEL360 - Marco OPT-IN*
+*Part of AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

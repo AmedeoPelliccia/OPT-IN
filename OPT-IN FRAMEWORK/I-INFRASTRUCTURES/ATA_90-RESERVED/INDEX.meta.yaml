@@ -7,12 +7,12 @@ document:
   effective_date: "2029-06-01"
   status: "RESERVED"
 description: |
-  Capítulo ATA 90 reservado para futuras expansiones de estándares de
-  interfaz de infraestructura conforme evolucionan las tecnologías.
+  ATA 90 chapter reserved for future expansion of infrastructure interface
+  standards as technologies evolve.
 governance:
   lifecycle_states:
     - "RESERVED"
-  future_use: "Tecnologías emergentes y nuevos estándares de interfaz"
+  future_use: "Emerging technologies and new interface standards"
 crossrefs:
   - "../ATA_88-GROUND_OPERATIONS_AUTOMATION"
 audit:
