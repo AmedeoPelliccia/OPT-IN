@@ -1,0 +1,7 @@
+Contributor,Symbol,Value,Unit,Type,Distribution,k,Std_Uncertainty,Note
+Load cell resolution,u_res,0.2,kg,B,rectangular,1.732,0.115,per cell
+Load cell linearity,u_lin,0.02,%FS,B,rectangular,1.732,_calc_,Full_Scale_100000_kg
+Level error effect on arm,u_level,0.05,deg,B,rectangular,1.732,_calc_,Propagate to arm length
+Air density model,u_rho_air,0.02,kg/m3,B,rectangular,1.732,_calc_,From_P_T_RH_sensor_specs
+Helium mass model,u_He,1.0,%,B,rectangular,1.732,_calc_,of computed m_He
+Repeatability (lift/re-set),u_rep,0.03,%,A,normal,1,_calc_,From test data
