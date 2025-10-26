@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "signature_id": "SIG_Baseline-Acoustic-Signature-Cabin",
+  "document": {
+    "title": "Baseline Acoustic Signature - Cabin",
+    "revision": "1.0.0",
+    "effective_date": "2028-04-15",
+    "type": "BASELINE_SIGNATURE"
+  },
+  "test_configuration": {
+    "aircraft_msn": "MSN-001",
+    "test_date": "2028-03-22",
+    "test_location": "AMPEL360 Flight Test Center - Acoustic Flight",
+    "test_type": "Acoustic Certification Flight",
+    "flight_conditions": {
+      "altitude_ft": 35000,
+      "mach": 0.78,
+      "oat_C": -50,
+      "cabin_altitude_ft": 6000,
+      "cabin_temp_C": 22,
+      "pax_load": 0,
+      "anc_status": "ON"
+    },
+    "instrumentation": {
+      "microphone_type": "GRAS 46BE",
+      "calibrator": "GRAS 42AB",
+      "calibration_level_db": 94.0,
+      "calibration_freq_hz": 1000,
+      "recording_system": "AP360-Acoustic-Recorder",
+      "sample_rate_khz": 48,
+      "bit_depth": 24
+    }
+  },
+  "repeatability": {
+    "runs": 5,
+    "max_delta_db": 1.8,
+    "acceptance_criteria": "< 2 dB"
+  },
+  "measurement_locations": [
+    {
+      "sensor_id": "ACO_25-CAB_FWD-01",
+      "location": "Row 5, overhead center",
+      "cabin_zone": "First Class",
+      "cruise_metrics": {
+        "leq_10s_dba": 74.5,
+        "lmax_dba": 78.2,
+        "lmin_dba": 72.1,
+        "l10_dba": 76.0,
+        "l90_dba": 73.2,
+        "nc_rating": "NC-65"
+      },
+      "spectral_data_cruise": {
+        "octave_bands": [
+          {"center_freq_hz": 31.5, "spl_db": 72.0},
+          {"center_freq_hz": 63, "spl_db": 70.5},
+          {"center_freq_hz": 125, "spl_db": 68.0},
+          {"center_freq_hz": 250, "spl_db": 65.5},
+          {"center_freq_hz": 500, "spl_db": 63.0},
+          {"center_freq_hz": 1000, "spl_db": 60.5},
+          {"center_freq_hz": 2000, "spl_db": 58.0},
+          {"center_freq_hz": 4000, "spl_db": 55.5},
+          {"center_freq_hz": 8000, "spl_db": 52.0}
+        ],
+        "tonal_components": [
+          {"frequency_hz": 240, "spl_db": 62.5, "source": "Open-fan BPF"},
+          {"frequency_hz": 480, "spl_db": 56.0, "source": "2x BPF"},
+          {"frequency_hz": 120, "spl_db": 58.0, "source": "Gear mesh"}
+        ]
+      }
+    },
+    {
+      "sensor_id": "ACO_25-CAB_15C-01",
+      "location": "Seat 15C, headrest",
+      "cabin_zone": "Business Class",
+      "cruise_metrics": {
+        "leq_10s_dba": 76.2,
+        "lmax_dba": 79.8,
+        "lmin_dba": 73.5,
+        "l10_dba": 77.5,
+        "l90_dba": 74.8,
+        "nc_rating": "NC-68"
+      },
+      "spectral_data_cruise": {
+        "octave_bands": [
+          {"center_freq_hz": 31.5, "spl_db": 74.0},
+          {"center_freq_hz": 63, "spl_db": 72.0},
+          {"center_freq_hz": 125, "spl_db": 69.5},
+          {"center_freq_hz": 250, "spl_db": 67.0},
+          {"center_freq_hz": 500, "spl_db": 64.5},
+          {"center_freq_hz": 1000, "spl_db": 62.0},
+          {"center_freq_hz": 2000, "spl_db": 59.5},
+          {"center_freq_hz": 4000, "spl_db": 57.0},
+          {"center_freq_hz": 8000, "spl_db": 53.5}
+        ],
+        "tonal_components": [
+          {"frequency_hz": 240, "spl_db": 64.0, "source": "Open-fan BPF"},
+          {"frequency_hz": 480, "spl_db": 57.5, "source": "2x BPF"},
+          {"frequency_hz": 120, "spl_db": 59.5, "source": "Gear mesh"}
+        ]
+      }
+    },
+    {
+      "sensor_id": "ACO_25-CAB_25C-01",
+      "location": "Seat 25C, headrest",
+      "cabin_zone": "Economy Class",
+      "cruise_metrics": {
+        "leq_10s_dba": 77.8,
+        "lmax_dba": 81.5,
+        "lmin_dba": 75.0,
+        "l10_dba": 79.0,
+        "l90_dba": 76.2,
+        "nc_rating": "NC-70"
+      },
+      "spectral_data_cruise": {
+        "octave_bands": [
+          {"center_freq_hz": 31.5, "spl_db": 76.0},
+          {"center_freq_hz": 63, "spl_db": 73.5},
+          {"center_freq_hz": 125, "spl_db": 71.0},
+          {"center_freq_hz": 250, "spl_db": 68.5},
+          {"center_freq_hz": 500, "spl_db": 66.0},
+          {"center_freq_hz": 1000, "spl_db": 63.5},
+          {"center_freq_hz": 2000, "spl_db": 61.0},
+          {"center_freq_hz": 4000, "spl_db": 58.5},
+          {"center_freq_hz": 8000, "spl_db": 55.0}
+        ],
+        "tonal_components": [
+          {"frequency_hz": 240, "spl_db": 65.5, "source": "Open-fan BPF"},
+          {"frequency_hz": 480, "spl_db": 59.0, "source": "2x BPF"},
+          {"frequency_hz": 120, "spl_db": 61.0, "source": "Gear mesh"}
+        ]
+      }
+    },
+    {
+      "sensor_id": "ACO_25-CAB_AFT-01",
+      "location": "Row 40, overhead center",
+      "cabin_zone": "Aft Economy",
+      "cruise_metrics": {
+        "leq_10s_dba": 76.5,
+        "lmax_dba": 80.2,
+        "lmin_dba": 74.0,
+        "l10_dba": 78.0,
+        "l90_dba": 75.0,
+        "nc_rating": "NC-69"
+      },
+      "spectral_data_cruise": {
+        "octave_bands": [
+          {"center_freq_hz": 31.5, "spl_db": 75.0},
+          {"center_freq_hz": 63, "spl_db": 72.5},
+          {"center_freq_hz": 125, "spl_db": 70.0},
+          {"center_freq_hz": 250, "spl_db": 67.5},
+          {"center_freq_hz": 500, "spl_db": 65.0},
+          {"center_freq_hz": 1000, "spl_db": 62.5},
+          {"center_freq_hz": 2000, "spl_db": 60.0},
+          {"center_freq_hz": 4000, "spl_db": 57.5},
+          {"center_freq_hz": 8000, "spl_db": 54.0}
+        ],
+        "tonal_components": [
+          {"frequency_hz": 240, "spl_db": 64.5, "source": "Open-fan BPF"},
+          {"frequency_hz": 480, "spl_db": 58.0, "source": "2x BPF"},
+          {"frequency_hz": 120, "spl_db": 60.0, "source": "Gear mesh"}
+        ]
+      }
+    }
+  ],
+  "anc_performance": {
+    "system_status": "Operational",
+    "target_reduction_db": 10,
+    "frequency_range_hz": [80, 500],
+    "measured_reduction": {
+      "63hz_octave": 8.5,
+      "125hz_octave": 11.2,
+      "250hz_octave": 12.5,
+      "500hz_octave": 9.8
+    },
+    "anc_off_comparison": {
+      "location": "Seat 25C",
+      "anc_off_leq_dba": 84.2,
+      "anc_on_leq_dba": 77.8,
+      "reduction_dba": 6.4
+    }
+  },
+  "flight_phase_summary": {
+    "phases": [
+      {
+        "phase": "Takeoff",
+        "altitude_ft": 1000,
+        "typical_dba": 82.5,
+        "duration_s": 120,
+        "notes": "Peak noise during climb-out"
+      },
+      {
+        "phase": "Climb",
+        "altitude_ft": 10000,
+        "typical_dba": 80.0,
+        "duration_s": 600,
+        "notes": "Gradually decreasing as altitude increases"
+      },
+      {
+        "phase": "Cruise",
+        "altitude_ft": 35000,
+        "typical_dba": 77.8,
+        "duration_s": "Steady",
+        "notes": "Baseline cruise condition, lowest cabin noise"
+      },
+      {
+        "phase": "Descent",
+        "altitude_ft": 10000,
+        "typical_dba": 79.5,
+        "duration_s": 900,
+        "notes": "Slightly elevated due to airframe noise"
+      },
+      {
+        "phase": "Approach",
+        "altitude_ft": 1000,
+        "typical_dba": 81.0,
+        "duration_s": 180,
+        "notes": "Flaps/gear deployment increases noise"
+      }
+    ]
+  },
+  "comparison_to_requirements": {
+    "certification_standard": "FAR 36 Stage 5",
+    "comfort_target_cruise_dba": 78,
+    "measured_average_cruise_dba": 76.7,
+    "margin_db": 1.3,
+    "compliance_status": "Pass"
+  },
+  "quality_assurance": {
+    "performed_by": "Acoustics Engineer - L. Chen",
+    "reviewed_by": "Chief Engineer Cabin Systems - K. Patel",
+    "approved_by": "Head of Airworthiness - R. Williams",
+    "approval_date": "2028-04-10"
+  },
+  "traceability": {
+    "test_report_id": "TR-AMP360-ACO-001",
+    "dpp_link": "DPP://MSN-001/ACOUSTIC/2028-03-22",
+    "crossrefs": ["ATA_25", "ATA_21", "ATA_61"]
+  },
+  "integrity": {
+    "checksum": "3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+    "algorithm": "sha256"
+  }
+}

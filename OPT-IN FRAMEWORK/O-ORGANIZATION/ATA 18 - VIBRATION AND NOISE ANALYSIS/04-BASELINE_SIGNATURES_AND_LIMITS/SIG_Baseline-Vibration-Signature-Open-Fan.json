@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "signature_id": "SIG_Baseline-Vibration-Signature-Open-Fan",
+  "document": {
+    "title": "Baseline Vibration Signature - Open-Fan Propulsor",
+    "revision": "1.0.0",
+    "effective_date": "2028-04-15",
+    "type": "BASELINE_SIGNATURE"
+  },
+  "test_configuration": {
+    "aircraft_msn": "MSN-001",
+    "test_date": "2028-03-20",
+    "test_location": "AMPEL360 Flight Test Center",
+    "test_type": "Ground Vibration Survey (GVS)",
+    "environment": {
+      "oew_kg": 85000,
+      "fuel_state": "10% SAF / 90% Jet-A1",
+      "temp_C": 15,
+      "pressure_hPa": 1013,
+      "humidity_percent": 45,
+      "wind_kts": 5
+    },
+    "instrumentation": {
+      "gse_id": "AP360-T020",
+      "dau_serial": "DAU-00001",
+      "calibration_due": "2029-03-15",
+      "reference_accelerometer": "PCB-394C06-SN12345"
+    }
+  },
+  "repeatability": {
+    "runs": 3,
+    "max_delta_percent": 4.2,
+    "acceptance_criteria": "< 5%"
+  },
+  "propulsor_left": {
+    "sensor_id": "VIB_61-NAC_L-AX_01",
+    "location": "Forward nacelle mount, axial",
+    "operating_conditions": [
+      {
+        "condition": "Idle",
+        "n1_rpm": 600,
+        "power_setting_percent": 5,
+        "metrics": {
+          "rms_ips": 0.045,
+          "peak_ips": 0.12,
+          "crest_factor": 2.67,
+          "kurtosis": 2.95,
+          "broadband_10_1000hz_ips": 0.038
+        },
+        "spectral_data": {
+          "dominant_orders": [
+            {"order": "1X", "frequency_hz": 10.0, "amplitude_ips": 0.028},
+            {"order": "2X", "frequency_hz": 20.0, "amplitude_ips": 0.012},
+            {"order": "BPF", "frequency_hz": 120.0, "amplitude_ips": 0.015, "note": "12 blades"}
+          ]
+        }
+      },
+      {
+        "condition": "Cruise",
+        "n1_rpm": 1200,
+        "power_setting_percent": 85,
+        "metrics": {
+          "rms_ips": 0.092,
+          "peak_ips": 0.25,
+          "crest_factor": 2.72,
+          "kurtosis": 3.05,
+          "broadband_10_1000hz_ips": 0.078
+        },
+        "spectral_data": {
+          "dominant_orders": [
+            {"order": "1X", "frequency_hz": 20.0, "amplitude_ips": 0.065},
+            {"order": "2X", "frequency_hz": 40.0, "amplitude_ips": 0.018},
+            {"order": "BPF", "frequency_hz": 240.0, "amplitude_ips": 0.032},
+            {"order": "2xBPF", "frequency_hz": 480.0, "amplitude_ips": 0.010}
+          ]
+        }
+      },
+      {
+        "condition": "Takeoff",
+        "n1_rpm": 1350,
+        "power_setting_percent": 100,
+        "metrics": {
+          "rms_ips": 0.125,
+          "peak_ips": 0.34,
+          "crest_factor": 2.72,
+          "kurtosis": 3.12,
+          "broadband_10_1000hz_ips": 0.105
+        },
+        "spectral_data": {
+          "dominant_orders": [
+            {"order": "1X", "frequency_hz": 22.5, "amplitude_ips": 0.088},
+            {"order": "2X", "frequency_hz": 45.0, "amplitude_ips": 0.025},
+            {"order": "BPF", "frequency_hz": 270.0, "amplitude_ips": 0.042},
+            {"order": "2xBPF", "frequency_hz": 540.0, "amplitude_ips": 0.015}
+          ]
+        }
+      }
+    ]
+  },
+  "propulsor_right": {
+    "sensor_id": "VIB_61-NAC_R-AX_01",
+    "location": "Forward nacelle mount, axial",
+    "operating_conditions": [
+      {
+        "condition": "Idle",
+        "n1_rpm": 600,
+        "power_setting_percent": 5,
+        "metrics": {
+          "rms_ips": 0.043,
+          "peak_ips": 0.11,
+          "crest_factor": 2.56,
+          "kurtosis": 2.88,
+          "broadband_10_1000hz_ips": 0.036
+        },
+        "spectral_data": {
+          "dominant_orders": [
+            {"order": "1X", "frequency_hz": 10.0, "amplitude_ips": 0.026},
+            {"order": "2X", "frequency_hz": 20.0, "amplitude_ips": 0.011},
+            {"order": "BPF", "frequency_hz": 120.0, "amplitude_ips": 0.014}
+          ]
+        }
+      },
+      {
+        "condition": "Cruise",
+        "n1_rpm": 1200,
+        "power_setting_percent": 85,
+        "metrics": {
+          "rms_ips": 0.089,
+          "peak_ips": 0.24,
+          "crest_factor": 2.70,
+          "kurtosis": 3.00,
+          "broadband_10_1000hz_ips": 0.075
+        },
+        "spectral_data": {
+          "dominant_orders": [
+            {"order": "1X", "frequency_hz": 20.0, "amplitude_ips": 0.062},
+            {"order": "2X", "frequency_hz": 40.0, "amplitude_ips": 0.017},
+            {"order": "BPF", "frequency_hz": 240.0, "amplitude_ips": 0.030},
+            {"order": "2xBPF", "frequency_hz": 480.0, "amplitude_ips": 0.009}
+          ]
+        }
+      },
+      {
+        "condition": "Takeoff",
+        "n1_rpm": 1350,
+        "power_setting_percent": 100,
+        "metrics": {
+          "rms_ips": 0.120,
+          "peak_ips": 0.33,
+          "crest_factor": 2.75,
+          "kurtosis": 3.08,
+          "broadband_10_1000hz_ips": 0.102
+        },
+        "spectral_data": {
+          "dominant_orders": [
+            {"order": "1X", "frequency_hz": 22.5, "amplitude_ips": 0.085},
+            {"order": "2X", "frequency_hz": 45.0, "amplitude_ips": 0.024},
+            {"order": "BPF", "frequency_hz": 270.0, "amplitude_ips": 0.040},
+            {"order": "2xBPF", "frequency_hz": 540.0, "amplitude_ips": 0.014}
+          ]
+        }
+      }
+    ]
+  },
+  "gearbox_baseline": {
+    "sensor_id": "VIB_79-GBX_L-AX_01",
+    "location": "Gearbox housing top",
+    "bearing_geometry": {
+      "type": "Angular Contact Ball Bearing",
+      "number_of_balls": 16,
+      "ball_diameter_mm": 25.4,
+      "pitch_diameter_mm": 180,
+      "contact_angle_deg": 40
+    },
+    "fault_frequencies_at_1200rpm": {
+      "bpfo_hz": 106.7,
+      "bpfi_hz": 173.3,
+      "bsf_hz": 42.5,
+      "ftf_hz": 6.67
+    },
+    "baseline_envelope_spectrum": {
+      "band_500_2000hz": {
+        "bpfo_amplitude_g": 0.045,
+        "bpfi_amplitude_g": 0.038,
+        "overall_rms_g": 0.085
+      },
+      "band_2000_5000hz": {
+        "bpfo_amplitude_g": 0.032,
+        "bpfi_amplitude_g": 0.028,
+        "overall_rms_g": 0.062
+      },
+      "band_5000_10000hz": {
+        "bpfo_amplitude_g": 0.018,
+        "bpfi_amplitude_g": 0.015,
+        "overall_rms_g": 0.038
+      }
+    }
+  },
+  "quality_assurance": {
+    "performed_by": "Flight Test Engineer - J. Smith",
+    "reviewed_by": "Chief Engineer Propulsion - M. Johnson",
+    "approved_by": "Head of Airworthiness - R. Williams",
+    "approval_date": "2028-04-10"
+  },
+  "traceability": {
+    "test_report_id": "TR-AMP360-GVS-001",
+    "dpp_link": "DPP://MSN-001/GVS/2028-03-20",
+    "crossrefs": ["ATA_61", "ATA_79", "ATA_05"]
+  },
+  "integrity": {
+    "checksum": "7f8e9c3b4a5d6e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f",
+    "algorithm": "sha256"
+  }
+}
