@@ -1,0 +1,42 @@
+Source_Task_ID,Source_ATA,Description,Interval_Basis,Interval_Value,Accomplished_In_Check_Package
+MPD_TASK_24-10-01,24-10,Op Check Main AC Elec,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_27-11-05,27-11,Lubrication Flight Control Actuators,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_32-00-01,32-00,General Visual Inspection Landing Gear,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_79-20-01,79-20,Engine Oil Servicing,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_21-00-01,21-00,Air Conditioning System Op Check,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_29-10-01,29-10,Hydraulic System Pressure Check,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_52-00-01,52-00,Door Operation and Safety Check,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_33-00-01,33-00,Interior and Exterior Lighting Check,FH,1000,A-CHECK_Work-Package-A01
+MPD_TASK_28-10-02,28-10,Fuel System Leak Check and Filter Inspection,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_28-60-01,28-60,LH2 Cryogenic System Visual Inspection,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_36-10-01,36-10,Pneumatic System Pressure Check,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_49-00-01,49-00,APU Operational Check and Inspection,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_71-00-01,71-00,Engine Compressor Borescope Inspection,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_34-00-01,34-00,Navigation System Self-Test,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_22-00-01,22-00,Autoflight System Operational Check,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_35-00-01,35-00,Oxygen System Pressure Check,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_38-00-01,38-00,Water/Waste System Inspection,FH,2000,A-CHECK_Work-Package-A02
+MPD_TASK_28-60-01,28-60,Cryo Tank Insulation Detailed Inspection,FH,4000,C-CHECK_Work-Package-C01
+MPD_TASK_32-10-01,32-10,Landing Gear Overhaul and Detailed Inspection,FH,4000,C-CHECK_Work-Package-C01
+ALS_INSP_53-00-01,53-00,Fuselage Structural Inspection,FH,4000,C-CHECK_Work-Package-C01
+MPD_TASK_27-20-01,27-20,Flight Control System Rigging Check,FH,4000,C-CHECK_Work-Package-C01
+ALS_INSP_24-45-01,24-45,EWIS Detailed Inspection,FH,4000,C-CHECK_Work-Package-C01
+MPD_TASK_29-20-01,29-20,Hydraulic System Detailed Inspection,FH,4000,C-CHECK_Work-Package-C01
+MPD_TASK_71-10-01,71-10,Engine Detailed Inspection (On-Wing),FH,4000,C-CHECK_Work-Package-C01
+ALS_INSP_57-10-01,57-10,Wing Structural Inspection (BWB),FH,4000,C-CHECK_Work-Package-C01
+MPD_TASK_22-10-01,22-10,Autoflight System Functional Test,FH,4000,C-CHECK_Work-Package-C01
+MPD_TASK_34-10-01,34-10,Navigation System Calibration,FH,4000,C-CHECK_Work-Package-C01
+ALS_INSP_53-10-01,53-10,BWB Wing Root Fatigue Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_53-20-01,53-20,Fuselage Skin Fatigue Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_57-20-01,57-20,Wing Spar Fatigue Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_28-60-02,28-60,LH2 Tank Wall Thickness Measurement,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_32-20-01,32-20,Landing Gear Attachment Fatigue Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_54-10-01,54-10,Engine Pylon Attachment Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_53-30-01,53-30,Pressure Bulkhead Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_57-30-01,57-30,BWB Composite Bond Line Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_53-40-01,53-40,Door Frame Fatigue Inspection,FC,10000,S-CHECK_Work-Package-S01
+ALS_INSP_53-10-02,53-10,BWB Wing Root Enhanced Fatigue Inspection,FC,20000,S-CHECK_Work-Package-S02
+ALS_INSP_53-50-01,53-50,Widespread Fatigue Damage Inspection,FC,20000,S-CHECK_Work-Package-S02
+ALS_INSP_28-60-03,28-60,LH2 Tank Comprehensive Structural Assessment,FC,20000,S-CHECK_Work-Package-S02
+ALS_INSP_57-40-01,57-40,Wing Lower Surface Composite Integrity,FC,20000,S-CHECK_Work-Package-S02
+ALS_INSP_32-30-01,32-30,Landing Gear Enhanced Structural Inspection,FC,20000,S-CHECK_Work-Package-S02

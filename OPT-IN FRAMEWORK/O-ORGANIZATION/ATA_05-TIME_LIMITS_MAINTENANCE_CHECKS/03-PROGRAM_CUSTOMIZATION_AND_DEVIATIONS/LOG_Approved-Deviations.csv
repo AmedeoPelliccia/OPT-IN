@@ -1,0 +1,4 @@
+Deviation_ID,Date_Submitted,Date_Approved,Category,Affected_Task_ID,Current_Requirement,Proposed_Change,Justification_Summary,Approval_Authority,Status,Effective_Date,Review_Date
+DEV-2028-001,2028-03-15,2028-03-20,A,MPD_TASK_33-00-01,Lighting check every 1000 FH,Lighting check every 1100 FH,Operator experience shows adequate reliability at extended interval,Continuing Airworthiness Mgr,Active,2028-04-01,2029-04-01
+DEV-2028-002,2028-05-10,2028-06-25,B,MPD_TASK_71-00-01,Borescope inspection every 2000 FH,Borescope inspection every 2500 FH,Engine manufacturer data supports extended interval for this engine type,EASA,Active,2028-07-01,2030-07-01
+DEV-2028-003,2028-06-01,2028-06-08,A,MPD_TASK_38-00-01,Water/Waste inspection visual only,Add UV dye leak detection,Enhanced detection method improves reliability,Continuing Airworthiness Mgr,Active,2028-06-15,2029-06-15
