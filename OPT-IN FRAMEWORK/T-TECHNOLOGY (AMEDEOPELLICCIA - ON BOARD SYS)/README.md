@@ -14,7 +14,7 @@ This section contains all on-board systems organized by functional domains follo
 - **E3-ELECTRONICS/**: Electronic systems, hardware platforms and modules (ATA 34, 39, 42 - Hardware CPM/IOM)
 - **L1-LOGICS/**: Flight control logic, automation and hosted applications (ATA 22, 27, 42 - Application Partitions)
 - **L2-LINKS/**: Communication, information systems and network fabric (ATA 23, 42 - AFDX Networks, 91)
-- **I-INFORMATION_INTELLIGENCE_INTERFACES/**: Integrated information systems, interfaces, health monitoring, and data services (ATA 31 - Indicating, 42 - Core OS/APIs/Health, 45 - OMS/CMS, 46 - ACARS/Datalink, 77 - Engine Indicating, 93 - Data Load)
+- **I-INFORMATION_INTELLIGENCE_INTERFACES/**: Integrated information systems, interfaces, health monitoring (ATA 31, 42, 45, 46, 77, 93)
 - **C1-COCKPIT_CABIN_CARGO/**: Interior systems, equipment and human interfaces (ATA 11, 15, 16, 25, 33, 35, 44)
 - **C2-CIRCULAR_CRYOGENIC_SYSTEMS/**: Fuel lifecycle including SAF, cryogenic hydrogen, and CO₂ capture (ATA 28, 21-80-00)
 - **I2-I+D/**: Innovation and Development - AI integration, quantum-inspired systems, model-based maintenance (ATA 40, 42-55-00, 42-60-00, 48, 92)
