@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.io/schemas/ata08/weighing-report.schema.json",
+  "title": "Aircraft Weighing Report",
+  "description": "Schema for aircraft weighing reports compliant with ATA 08 standards",
+  "type": "object",
+  "required": [
+    "reportId",
+    "msn",
+    "date",
+    "procedureRev",
+    "configHash",
+    "ambient",
+    "results",
+    "approvals"
+  ],
+  "properties": {
+    "reportId": {
+      "type": "string",
+      "pattern": "^WR-[0-9]{3}-[0-9]{2}$",
+      "description": "Unique report identifier (e.g., WR-001-01)"
+    },
+    "msn": {
+      "type": "string",
+      "pattern": "^AMP360-[0-9]{3}$",
+      "description": "Manufacturer Serial Number"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Weighing date (ISO 8601)"
+    },
+    "procedureRev": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Procedure revision (semver)"
+    },
+    "configHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}$",
+      "description": "Configuration hash (8-char hex)"
+    },
+    "ambient": {
+      "type": "object",
+      "required": ["pressure_hPa", "temperature_C", "humidity_pct", "wind_kt"],
+      "properties": {
+        "pressure_hPa": {
+          "type": "number",
+          "minimum": 950,
+          "maximum": 1050
+        },
+        "temperature_C": {
+          "type": "number",
+          "minimum": 18,
+          "maximum": 27
+        },
+        "humidity_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "wind_kt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        }
+      }
+    },
+    "results": {
+      "type": "object",
+      "required": ["bew_kg", "cg_fs_m", "cg_pctMAC", "u95_pct"],
+      "properties": {
+        "bew_kg": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Basic Empty Weight (kg)"
+        },
+        "cg_fs_m": {
+          "type": "number",
+          "description": "Center of Gravity, Fuselage Station (m)"
+        },
+        "cg_pctMAC": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Center of Gravity, % Mean Aerodynamic Chord"
+        },
+        "u95_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.1,
+          "description": "Combined uncertainty (U95) as % of BEW"
+        }
+      }
+    },
+    "approvals": {
+      "type": "object",
+      "required": ["qa", "wbe"],
+      "properties": {
+        "qa": {
+          "type": "string",
+          "description": "Quality Assurance approval signature"
+        },
+        "wbe": {
+          "type": "string",
+          "description": "Weight & Balance Engineer approval signature"
+        }
+      }
+    }
+  }
+}

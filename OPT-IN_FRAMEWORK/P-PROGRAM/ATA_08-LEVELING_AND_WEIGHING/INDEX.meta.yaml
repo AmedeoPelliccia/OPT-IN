@@ -1,0 +1,20 @@
+schema_version: "1.1"
+id: "ATA_08_INDEX"
+chapter: "ATA 08 - LEVELING AND WEIGHING"
+governance:
+  owner_role: "Weight & Balance Engineer"
+tolerances:
+  leveling_deg: { pitch: 0.05, roll: 0.05 }
+  weighing_percent_be: 0.1
+environment:
+  temp_C: [18, 27]
+  wind_knots_max: 2
+  doors: "Closed"
+references:
+  ata06_rev: "rev2.1.0"
+  ata07_rev: "rev1.2.0"
+outputs:
+  json_for_ata95: true
+  pdf_signed: true
+integrity:
+  checksum_algorithm: "sha256"

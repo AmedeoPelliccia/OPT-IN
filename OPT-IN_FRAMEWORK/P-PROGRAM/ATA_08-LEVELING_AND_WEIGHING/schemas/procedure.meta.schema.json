@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.io/schemas/ata08/procedure.meta.schema.json",
+  "title": "Procedure Metadata",
+  "description": "Schema for procedure metadata in ATA 08",
+  "type": "object",
+  "required": [
+    "procedure_id",
+    "title",
+    "revision",
+    "date",
+    "category",
+    "owner"
+  ],
+  "properties": {
+    "procedure_id": {
+      "type": "string",
+      "pattern": "^PROC_[A-Za-z0-9-]+$",
+      "description": "Unique procedure identifier"
+    },
+    "title": {
+      "type": "string",
+      "description": "Procedure title"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^rev[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Revision in format revX.Y.Z"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Procedure date (YYYYMMDD)"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["LEVELING", "WEIGHING", "DATA", "REPORT"],
+      "description": "Procedure category"
+    },
+    "owner": {
+      "type": "string",
+      "description": "Responsible role or person"
+    },
+    "tolerances": {
+      "type": "object",
+      "description": "Applicable tolerances for this procedure"
+    },
+    "environmental_controls": {
+      "type": "object",
+      "description": "Required environmental conditions"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Referenced documents or procedures"
+    }
+  }
+}

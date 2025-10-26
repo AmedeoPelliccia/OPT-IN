@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.io/schemas/ata08/corrections.schema.json",
+  "title": "Weight and Balance Corrections",
+  "description": "Schema for weight and balance correction entries",
+  "type": "object",
+  "required": [
+    "category",
+    "item",
+    "quantity",
+    "measured",
+    "unit",
+    "arm_fs_m",
+    "delta_mass_kg",
+    "delta_moment_kgm",
+    "source"
+  ],
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": ["Fluids", "Cryo", "Batteries", "Cabin", "Corrections"],
+      "description": "Correction category"
+    },
+    "item": {
+      "type": "string",
+      "description": "Item being corrected"
+    },
+    "quantity": {
+      "type": "string",
+      "enum": ["Full", "Empty", "Actual", "Computed", "Listed"],
+      "description": "Quantity status"
+    },
+    "measured": {
+      "type": "string",
+      "enum": ["Yes", "No"],
+      "description": "Whether item was directly measured"
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measurement"
+    },
+    "arm_fs_m": {
+      "type": "number",
+      "description": "Arm position in fuselage station (meters)"
+    },
+    "delta_mass_kg": {
+      "type": "number",
+      "description": "Change in mass (kg)"
+    },
+    "delta_moment_kgm": {
+      "type": "number",
+      "description": "Change in moment (kg·m)"
+    },
+    "source": {
+      "type": "string",
+      "description": "Source of correction data"
+    },
+    "unc_1sigma_kg": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Uncertainty (1-sigma, kg)"
+    }
+  }
+}
