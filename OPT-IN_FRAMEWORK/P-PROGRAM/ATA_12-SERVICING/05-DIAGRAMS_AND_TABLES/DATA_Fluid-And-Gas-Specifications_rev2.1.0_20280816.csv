@@ -1,0 +1,7 @@
+ATA,System,Fluid_Name,Specification,Capacity_Liters,Notes
+12,SAF_Fuel_System,Sustainable_Aviation_Fuel,ASTM_D7566,45000,Main fuel tanks
+12,LH2_Fuel_System,Liquid_Hydrogen,ISO_14687-2,15000,Cryogenic storage at 20K
+12,Hydraulic_System,MIL-PRF-83282,MIL-PRF-83282,180,Type IV synthetic hydraulic fluid
+12,Engine_Oil,Turbine_Engine_Oil,MIL-PRF-23699,120,Type II synthetic oil
+12,Potable_Water,Drinking_Water,NSF/ANSI_60,300,Chlorine < 0.2 ppm
+12,Waste_System,Lavatory_Waste,Blue_Ice_Type_III,200,Non-hazardous waste processing

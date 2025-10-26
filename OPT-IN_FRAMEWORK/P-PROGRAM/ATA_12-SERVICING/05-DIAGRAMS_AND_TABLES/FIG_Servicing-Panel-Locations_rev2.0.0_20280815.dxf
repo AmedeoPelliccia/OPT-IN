@@ -1,0 +1,58 @@
+# FIG - Servicing Panel Locations
+**Revision:** 2.0.0  
+**Effective Date:** 2028-08-15  
+**Format:** DXF (AutoCAD Drawing Exchange Format)  
+
+## Description
+This file contains the 3D CAD drawings showing the location of all servicing panels on the AMPEL360 BWB aircraft.
+
+## Servicing Panel Locations
+
+### Fuel System Panels
+* SAF Refuel Port (Starboard): Station 450, WL 120
+* SAF Defuel Port (Port): Station 450, WL 120
+* LH₂ Fill Port (Starboard): Station 380, WL 110
+
+**Note:** Refuel and defuel ports are intentionally positioned on opposite sides of the aircraft (Starboard vs Port) for operational safety. This configuration prevents accidental cross-connection during simultaneous refueling and defueling operations and allows for independent GSE positioning. Ground crews must be aware of this asymmetry during servicing operations.
+
+### Hydraulic System Panels
+* Hydraulic Reservoir Fill (Port): Station 520, WL 100
+* Hydraulic Sample Port (Port): Station 520, WL 98
+
+### Environmental Systems Panels
+* LH₂ Purge Port (Starboard): Station 380, WL 108
+* LCO₂ Offload Port (Port): Station 600, WL 115
+* Power Electronics Coolant Fill (Port): Station 550, WL 105
+
+### Water/Waste Systems Panels
+* Potable Water Fill (Port): Station 700, WL 95
+* Waste Drain (Port): Station 720, WL 93
+
+## Panel Identification
+All servicing panels are marked with:
+* ATA chapter number
+* System identifier
+* Color coding per servicing medium
+* QR code linking to ATA 95 DPP
+
+## Drawing Layers
+* Layer 1: Airframe outline
+* Layer 2: Servicing panel locations
+* Layer 3: Access doors and panels
+* Layer 4: Ground clearance envelopes
+* Layer 5: GSE positioning guides
+
+## Notes
+* All dimensions in millimeters
+* Coordinate system: Aircraft reference frame
+* Station: Longitudinal fuselage station
+* WL: Water line (vertical position)
+* BL: Butt line (lateral position)
+
+---
+**Format:** DXF R2018
+**Checksum (SHA256):** TBD  
+**Approved by:** Chief Engineer - Aircraft Configuration  
+**Next Review:** 2029-02-15
+
+*Note: This is a placeholder. The actual DXF file would contain the full 3D CAD model and would be approximately 2-5 MB in size.*
