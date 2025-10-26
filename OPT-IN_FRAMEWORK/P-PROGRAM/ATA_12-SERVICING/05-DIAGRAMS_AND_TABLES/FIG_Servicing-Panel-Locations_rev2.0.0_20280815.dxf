@@ -13,6 +13,8 @@ This file contains the 3D CAD drawings showing the location of all servicing pan
 * SAF Defuel Port (Port): Station 450, WL 120
 * LH₂ Fill Port (Starboard): Station 380, WL 110
 
+**Note:** Refuel and defuel ports are intentionally positioned on opposite sides of the aircraft (Starboard vs Port) for operational safety. This configuration prevents accidental cross-connection during simultaneous refueling and defueling operations and allows for independent GSE positioning. Ground crews must be aware of this asymmetry during servicing operations.
+
 ### Hydraulic System Panels
 * Hydraulic Reservoir Fill (Port): Station 520, WL 100
 * Hydraulic Sample Port (Port): Station 520, WL 98

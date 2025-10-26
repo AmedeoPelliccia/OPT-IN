@@ -3,7 +3,7 @@
   "type":"object",
   "required":["timestamp","msn","system","fluid","action","quantity_L","operator_id","gse_id","contamination_check","signoff"],
   "properties":{
-    "timestamp":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}Z$"},
+    "timestamp":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?([+-]\\d{2}:\\d{2}|Z)?$"},
     "msn":{"type":"string"},
     "system":{"type":"string"},
     "fluid":{"type":"string"},
@@ -14,6 +14,14 @@
     "operator_id":{"type":"string"},
     "gse_id":{"type":"string"},
     "contamination_check":{"type":"boolean"},
-    "signoff":{"type":"object","required":["role","name","timestamp"]}
+    "signoff":{
+      "type":"object",
+      "required":["role","name","timestamp"],
+      "properties":{
+        "role":{"type":"string"},
+        "name":{"type":"string"},
+        "timestamp":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?([+-]\\d{2}:\\d{2}|Z)?$"}
+      }
+    }
   }
 }

@@ -35,11 +35,11 @@ fi
 echo ""
 echo "2. Validating checksums..."
 missing_checksums=""
-for file in $(find "$root" -type f \( -name "*.md" -o -name "*.csv" -o -name "*.dxf" \) ! -name "00_README.md" ! -name "README.md"); do
+while IFS= read -r -d '' file; do
     if ! grep -qi 'sha256' "$file"; then
         missing_checksums="${missing_checksums}${file}\n"
     fi
-done
+done < <(find "$root" -type f \( -name "*.md" -o -name "*.csv" -o -name "*.dxf" \) ! -name "00_README.md" ! -name "README.md" -print0)
 
 if [ -n "$missing_checksums" ]; then
     echo "⚠ WARNING: Files missing SHA256 checksum references:"
@@ -88,7 +88,7 @@ fi
 echo ""
 echo "4. Validating CSV files..."
 csv_errors=""
-for csv in $(find "$root" -name "DATA_*.csv"); do
+while IFS= read -r -d '' csv; do
     # Check if file is not empty
     if [ ! -s "$csv" ]; then
         csv_errors="${csv_errors}Empty CSV file: $csv\n"
@@ -102,7 +102,7 @@ for csv in $(find "$root" -name "DATA_*.csv"); do
     else
         echo "✓ Valid CSV: $(basename $csv)"
     fi
-done
+done < <(find "$root" -name "DATA_*.csv" -print0)
 
 if [ -n "$csv_errors" ]; then
     echo "✗ FAILED: CSV validation errors:"
@@ -114,7 +114,7 @@ fi
 echo ""
 echo "5. Validating procedure files..."
 proc_errors=""
-for proc in $(find "$root" -name "PROC_*.md"); do
+while IFS= read -r -d '' proc; do
     # Check for required sections
     if ! grep -q "## Purpose" "$proc"; then
         proc_errors="${proc_errors}Missing '## Purpose' section in: $(basename $proc)\n"
@@ -129,7 +129,7 @@ for proc in $(find "$root" -name "PROC_*.md"); do
     if [ -z "$proc_errors" ]; then
         echo "✓ Valid procedure: $(basename $proc)"
     fi
-done
+done < <(find "$root" -name "PROC_*.md" -print0)
 
 if [ -n "$proc_errors" ]; then
     echo "⚠ WARNING: Procedure validation issues:"
