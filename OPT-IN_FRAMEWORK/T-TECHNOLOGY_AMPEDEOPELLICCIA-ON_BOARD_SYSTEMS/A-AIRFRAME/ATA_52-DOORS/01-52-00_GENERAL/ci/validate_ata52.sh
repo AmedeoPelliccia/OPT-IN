@@ -30,10 +30,22 @@ if [[ $sidecar_errors -eq 0 ]]; then
     echo "✅ All required sidecars are present."
 fi
 
-# 3. Validate schemas
+# 3. Validate JSON schemas
 echo "3. Validating JSON schemas..."
-# Add schema validation logic here using ajv-cli if JSON files were used
-echo "✅ Schema validation step complete (no JSON files to check)."
+if command -v python3 &> /dev/null; then
+  for schema in "$root"/01-52-00_GENERAL/schemas/*.json; do
+    if [ -f "$schema" ]; then
+      if python3 -c "import json; json.load(open('$schema'))" 2>/dev/null; then
+        echo "✅ Valid JSON schema: $(basename "$schema")"
+      else
+        echo "❌ ERROR: Invalid JSON syntax in $(basename "$schema")"
+        error_count=$((error_count + 1))
+      fi
+    fi
+  done
+else
+  echo "⚠️  Python3 not available, skipping JSON schema validation"
+fi
 
 echo "--- Validation finished. Total errors: $error_count ---"
 [[ $error_count -gt 0 ]] && exit 1 || exit 0
