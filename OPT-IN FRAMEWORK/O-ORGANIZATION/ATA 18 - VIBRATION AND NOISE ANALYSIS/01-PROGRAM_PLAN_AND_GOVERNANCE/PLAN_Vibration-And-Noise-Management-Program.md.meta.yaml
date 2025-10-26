@@ -1,7 +1,7 @@
 schema_version: "1.1"
 id: "PLAN_Vibration-And-Noise-Management-Program"
 document:
-  type: "PLAN"
+  type: "SPEC"
   title: "Vibration and Noise Management Program Plan"
   revision: "1.0.0"
   effective_date: "2028-04-15"
