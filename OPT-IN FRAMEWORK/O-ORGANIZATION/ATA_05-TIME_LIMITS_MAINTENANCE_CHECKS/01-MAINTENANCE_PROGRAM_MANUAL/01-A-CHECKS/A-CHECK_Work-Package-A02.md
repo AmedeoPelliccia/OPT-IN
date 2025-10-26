@@ -38,7 +38,7 @@ All required GSE is available per the task requirements:
 - Pressure test equipment
 
 ### 2.3 Documentation
-- Aircraft Maintenance Manual (AMM)
+- [Aircraft Maintenance Manual (AMM)](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md)
 - Illustrated Parts Catalog (IPC)
 - Aircraft technical log
 - Previous A01 work package records
@@ -55,15 +55,15 @@ All tasks from A-CHECK_Work-Package-A01 are included. Refer to A01 task list.
 
 | Task ID | Description | Source (MPD/ALS) | AMM Reference | Sign-off (Name/Date) |
 | :--- | :--- | :--- | :--- | :--- |
-| A02-28-01 | Fuel System Leak Check and Filter Inspection | MPD_TASK_28-10-02 | 28-10-00 | |
-| A02-28-60-01 | LH2 Cryogenic System Visual Inspection | MPD_TASK_28-60-01 | 28-60-00 | |
-| A02-36-01 | Pneumatic System Pressure Check | MPD_TASK_36-10-01 | 36-10-00 | |
-| A02-49-01 | APU Operational Check and Inspection | MPD_TASK_49-00-01 | 49-00-00 | |
-| A02-71-01 | Engine Compressor Borescope Inspection | MPD_TASK_71-00-01 | 71-00-00 | |
-| A02-34-01 | Navigation System Self-Test | MPD_TASK_34-00-01 | 34-00-00 | |
-| A02-22-01 | Autoflight System Operational Check | MPD_TASK_22-00-01 | 22-00-00 | |
-| A02-35-01 | Oxygen System Pressure Check | MPD_TASK_35-00-01 | 35-00-00 | |
-| A02-38-01 | Water/Waste System Inspection | MPD_TASK_38-00-01 | 38-00-00 | |
+| A02-28-01 | Fuel System Leak Check and Filter Inspection | MPD_TASK_28-10-02 | [28-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR%20(FUEL%20LIFECYCLE)/ATA%2028%20-%20FUEL%20(SAF%20-%20INCL.%2028-40-xx%20SAF%20CONDITIONING%20&%20QUALITY%20MGMT)/README.md) | |
+| A02-28-60-01 | LH2 Cryogenic System Visual Inspection | MPD_TASK_28-60-01 | [28-60-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR%20(FUEL%20LIFECYCLE)/ATA%2028-60-00%20(Prov)%20-%20Cryogenic%20H2%20Storage%20&%20Distribution/README.md) | |
+| A02-36-01 | Pneumatic System Pressure Check | MPD_TASK_36-10-01 | [36-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E1-ENVIRONMENT/ATA%2036%20-%20PNEUMATIC/README.md) | |
+| A02-49-01 | APU Operational Check and Inspection | MPD_TASK_49-00-01 | [49-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E2-ENERGY/ATA%2049%20-%20AIRBORNE%20AUXILIARY%20POWER/README.md) | |
+| A02-71-01 | Engine Compressor Borescope Inspection | MPD_TASK_71-00-01 | [71-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/P-PROPULSION/ATA%2071%20-%20POWER%20PLANT/README.md) | |
+| A02-34-01 | Navigation System Self-Test | MPD_TASK_34-00-01 | [34-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E3-ELECTRONICS/ATA%2034%20-%20NAVIGATION/README.md) | |
+| A02-22-01 | Autoflight System Operational Check | MPD_TASK_22-00-01 | [22-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/L1-LOGICS/ATA%2022%20-%20AUTOFLIGHT/README.md) | |
+| A02-35-01 | Oxygen System Pressure Check | MPD_TASK_35-00-01 | [35-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C1-COCKPIT.CABIN,CARGO/ATA%2035%20-%20OXYGEN/README.md) | |
+| A02-38-01 | Water/Waste System Inspection | MPD_TASK_38-00-01 | [38-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E1-ENVIRONMENT/ATA%2038%20-%20WATER%20WASTE/README.md) | |
 
 ---
 
@@ -135,7 +135,7 @@ All tasks from A-CHECK_Work-Package-A01 are included. Refer to A01 task list.
 - Fire extinguishers positioned (Class D for H2)
 
 ### 5.3 Quality Requirements
-- All torque values per AMM specifications
+- All torque values per [AMM](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md) specifications
 - Calibrated tools used where specified
 - Independent inspection for safety-critical items
 - Duplicate inspection for flight controls and fuel system

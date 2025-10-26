@@ -136,7 +136,7 @@ C-Check packages contain:
 1. Initial walk-around inspection
 2. Document pre-existing damage
 3. Position aircraft in hangar
-4. De-energize systems per AMM
+4. De-energize systems per [AMM](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md)
 5. Begin access panel removal
 6. Set up work platforms
 
@@ -231,7 +231,7 @@ Task-to-source mapping maintained in:
 - [ATA 01 - MAINTENANCE POLICY INFORMATION](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md): Maintenance Planning Document
 - [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section
 - [ATA 12 - SERVICING](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md): Servicing procedures
-- AMM (Aircraft Maintenance Manual)
+- [AMM (Aircraft Maintenance Manual)](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md)
 - SRM (Structural Repair Manual)
 - WDM (Wiring Diagram Manual)
 

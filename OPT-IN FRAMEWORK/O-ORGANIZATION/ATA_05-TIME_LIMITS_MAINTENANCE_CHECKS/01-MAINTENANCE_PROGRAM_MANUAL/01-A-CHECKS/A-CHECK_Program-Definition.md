@@ -100,7 +100,7 @@ A-Checks follow a staggered interval pattern:
 
 ### 5.2 Facility Requirements
 - Adequate lighting
-- Environmental conditions per AMM limits
+- Environmental conditions per [AMM](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md) limits
 - GSE availability verified
 - Tool control program in place
 
@@ -140,7 +140,7 @@ A-Checks follow a staggered interval pattern:
 ## 7.0 Quality Assurance
 
 ### 7.1 Independent Inspection
-Selected critical tasks require independent inspection per AMM.
+Selected critical tasks require independent inspection per [AMM](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md).
 
 ### 7.2 Duplicate Inspection
 Dual inspection required for:
@@ -176,7 +176,7 @@ Task-to-source mapping maintained in:
 - [ATA 01 - MAINTENANCE POLICY INFORMATION](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md): Maintenance Planning Document
 - [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section
 - [ATA 12 - SERVICING](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md): Servicing procedures
-- AMM (Aircraft Maintenance Manual)
+- [AMM (Aircraft Maintenance Manual)](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md)
 
 ---
 

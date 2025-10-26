@@ -59,16 +59,16 @@ This C-Check incorporates all tasks from:
 
 | Task ID | Description | Source | AMM Reference | Duration |
 | :--- | :--- | :--- | :--- | :--- |
-| C01-28-60-01 | Cryo Tank Insulation Detailed Inspection | MPD_TASK_28-60-01 | 28-60-00 | 8h |
-| C01-32-10-01 | Landing Gear Overhaul and Detailed Inspection | MPD_TASK_32-10-01 | 32-10-00 | 24h |
-| C01-53-00-01 | Fuselage Structural Inspection | ALS_INSP_53-00-01 | 53-00-00 | 16h |
-| C01-27-20-01 | Flight Control System Rigging Check | MPD_TASK_27-20-01 | 27-20-00 | 12h |
-| C01-24-45-01 | EWIS (Electrical Wiring) Detailed Inspection | ALS_INSP_24-45-01 | 24-45-00 | 20h |
-| C01-29-20-01 | Hydraulic System Detailed Inspection | MPD_TASK_29-20-01 | 29-20-00 | 16h |
-| C01-71-10-01 | Engine Detailed Inspection (On-Wing) | MPD_TASK_71-10-01 | 71-00-00 | 32h |
-| C01-57-10-01 | Wing Structural Inspection (BWB) | ALS_INSP_57-10-01 | 57-10-00 | 24h |
-| C01-22-10-01 | Autoflight System Functional Test | MPD_TASK_22-10-01 | 22-10-00 | 8h |
-| C01-34-10-01 | Navigation System Calibration | MPD_TASK_34-10-01 | 34-10-00 | 6h |
+| C01-28-60-01 | Cryo Tank Insulation Detailed Inspection | MPD_TASK_28-60-01 | [28-60-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR%20(FUEL%20LIFECYCLE)/ATA%2028-60-00%20(Prov)%20-%20Cryogenic%20H2%20Storage%20&%20Distribution/README.md) | 8h |
+| C01-32-10-01 | Landing Gear Overhaul and Detailed Inspection | MPD_TASK_32-10-01 | [32-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2032%20-%20LANDING%20GEAR/README.md) | 24h |
+| C01-53-00-01 | Fuselage Structural Inspection | ALS_INSP_53-00-01 | [53-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/ATA%2053%20-%20FUSELAGE/README.md) | 16h |
+| C01-27-20-01 | Flight Control System Rigging Check | MPD_TASK_27-20-01 | [27-20-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2027%20-%20FLIGHT%20CONTROLS%20(ACTUATION%20SYSTEMS)/README.md) | 12h |
+| C01-24-45-01 | EWIS (Electrical Wiring) Detailed Inspection | ALS_INSP_24-45-01 | [24-45-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E2-ENERGY/ATA%2024%20-%20ELECTRICAL%20POWER%20(INCL.%2024-45-xx%20EWIS%20MONITORING)/README.md) | 20h |
+| C01-29-20-01 | Hydraulic System Detailed Inspection | MPD_TASK_29-20-01 | [29-20-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2029%20-%20HYDRAULIC%20POWER/README.md) | 16h |
+| C01-71-10-01 | Engine Detailed Inspection (On-Wing) | MPD_TASK_71-10-01 | [71-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/P-PROPULSION/ATA%2071%20-%20POWER%20PLANT/README.md) | 32h |
+| C01-57-10-01 | Wing Structural Inspection (BWB) | ALS_INSP_57-10-01 | [57-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/ATA%2057%20-%20WINGS/README.md) | 24h |
+| C01-22-10-01 | Autoflight System Functional Test | MPD_TASK_22-10-01 | [22-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/L1-LOGICS/ATA%2022%20-%20AUTOFLIGHT/README.md) | 8h |
+| C01-34-10-01 | Navigation System Calibration | MPD_TASK_34-10-01 | [34-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E3-ELECTRONICS/ATA%2034%20-%20NAVIGATION/README.md) | 6h |
 
 ---
 
@@ -111,7 +111,7 @@ This C-Check incorporates all tasks from:
 **Objective:** Detailed inspection and servicing of landing gear.
 
 **Procedure:**
-1. Jack aircraft per AMM procedures
+1. Jack aircraft per [AMM 32-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2032%20-%20LANDING%20GEAR/README.md) procedures
 2. Remove main landing gear wheels and brakes
 3. Disassemble brake assemblies
 4. Inspect brake discs for wear and cracks
@@ -131,7 +131,7 @@ This C-Check incorporates all tasks from:
 - Hydraulic servicing equipment
 
 **Acceptance Criteria:**
-- Brake disc thickness >minimum per AMM
+- Brake disc thickness >minimum per [AMM 32-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2032%20-%20LANDING%20GEAR/README.md)
 - No cracks detected in gear structure
 - Shock strut extension within limits
 - All actuators operate smoothly
@@ -188,7 +188,7 @@ This C-Check incorporates all tasks from:
 3. Measure and record neutral positions
 4. Check cable tensions
 5. Verify actuator travel limits
-6. Adjust rigging per AMM specifications
+6. Adjust rigging per [AMM 27-20-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2027%20-%20FLIGHT%20CONTROLS%20(ACTUATION%20SYSTEMS)/README.md) specifications
 7. Perform control surface deflection checks
 8. Verify no binding or interference
 9. Reconnect all systems
@@ -203,7 +203,7 @@ This C-Check incorporates all tasks from:
 
 **Acceptance Criteria:**
 - All control surfaces deflect to specified angles ±0.5°
-- Cable tensions within AMM limits
+- Cable tensions within [AMM 27-20-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2027%20-%20FLIGHT%20CONTROLS%20(ACTUATION%20SYSTEMS)/README.md) limits
 - No binding throughout full travel
 - Control forces within limits
 
@@ -354,4 +354,4 @@ Review all LLPs for remaining life. Replace if due within next interval.
 
 ---
 
-*Refs: [ATA 01](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md) (MPD), [ATA 04](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md) (ALS), [ATA 12](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md) (Servicing), AMM, SRM*
+*Refs: [ATA 01](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md) (MPD), [ATA 04](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md) (ALS), [ATA 12](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md) (Servicing), [AMM](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md), SRM*

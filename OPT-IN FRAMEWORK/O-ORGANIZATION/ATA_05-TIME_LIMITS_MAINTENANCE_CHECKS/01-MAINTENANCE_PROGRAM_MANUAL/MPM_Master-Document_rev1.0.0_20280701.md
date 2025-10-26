@@ -174,7 +174,7 @@ Must be approved by the NAA before implementation.
 - [ATA 12 - SERVICING](../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md): Servicing procedures
 
 ### 7.2 Related Documents
-- AMM (Aircraft Maintenance Manual) - for task procedures
+- [AMM (Aircraft Maintenance Manual)](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md) - for task procedures
 - IPC (Illustrated Parts Catalog) - for part numbers
 - SRM (Structural Repair Manual) - for structural repairs
 - TSM (Troubleshooting Manual) - for fault isolation
