@@ -135,7 +135,7 @@ Where:
 
 **Final Selection:**
 - Use Type WR-2 (WLL 5,000 kg)
-- Safety Factor = 5,000 / 1,553 = 3.2 (ACCEPTABLE but marginal)
+- Safety Factor = 5,000 / 1,553 = 3.2 (INSUFFICIENT - use stronger sling or reduce load/angle)
 - **Recommendation:** Use stronger attachment or reduce weight
 
 ### Example 2: Open-Fan Propulsor (Four-Leg Basket)
