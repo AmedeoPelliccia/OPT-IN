@@ -1,0 +1,151 @@
+schema_version: "1.1"
+id: "ATA_12-SERVICING"
+document:
+  type: "INDEX"
+  title: "ATA 12 - Servicing Index"
+  revision: "1.0.0"
+  effective_date: "2028-08-25"
+
+effectivity:
+  scope: "Program-Wide"
+  aircraft_type: "AMPEL360-BWB"
+
+metadata:
+  chapter: "ATA 12"
+  chapter_title: "SERVICING"
+  domain: "P-PROGRAM"
+  
+structure:
+  subdirectories:
+    - name: "01-FUEL_AND_OIL"
+      description: "Fuel and oil servicing procedures"
+      contents:
+        - "PROC_Servicing-Engine-Oil_rev1.0.0_20280820.md"
+        - "PROC_Servicing-SAF-Refuel-Defuel_rev1.2.0_20280820.md"
+        - "DATA_Fuel-Filter-Integrity_rev1.0.0_20280822.csv"
+    
+    - name: "02-HYDRAULICS_AND_PNEUMATICS"
+      description: "Hydraulic and pneumatic system servicing"
+      contents:
+        - "PROC_Servicing-Hydraulic-Reservoir_rev1.1.0_20280822.md"
+        - "DATA_Hydraulic-Cleanliness-Levels_rev1.0.0_20280822.csv"
+    
+    - name: "03-ENVIRONMENTAL_AND_CIRCULAR_SYSTEMS"
+      description: "Environmental and circular economy systems"
+      contents:
+        - "PROC_Servicing-Power-Electronics-Coolant_rev1.0.0_20280825.md"
+        - "PROC_Servicing-LH2-System-Purge-Inert_rev1.0.0_20280825.md"
+        - "PROC_Servicing-LCO2-Offload_rev1.0.0_20280825.md"
+        - "DATA_Gas-Purity-and-Pressure-Limits_rev1.0.0_20280825.csv"
+    
+    - name: "04-WATER_AND_WASTE"
+      description: "Water and waste system servicing"
+      contents:
+        - "PROC_Servicing-Potable-Water-System_rev1.0.0_20280818.md"
+        - "PROC_Servicing-Lavatory-Waste-System_rev1.0.0_20280818.md"
+    
+    - name: "05-DIAGRAMS_AND_TABLES"
+      description: "Servicing panel locations and specifications"
+      contents:
+        - "FIG_Servicing-Panel-Locations_rev2.0.0_20280815.dxf"
+        - "DATA_Fluid-And-Gas-Specifications_rev2.1.0_20280816.csv"
+    
+    - name: "schemas"
+      description: "JSON schemas for validation"
+      contents:
+        - "procedure.meta.schema.json"
+        - "servicing-event.schema.json"
+        - "fluid-spec.schema.json"
+    
+    - name: "ci"
+      description: "Continuous integration validation"
+      contents:
+        - "validate_ata12.sh"
+
+approvals:
+  - authority: "Chief Engineer - Aircraft Servicing"
+    status: "Released"
+    date: "2028-08-25"
+  - authority: "Safety Officer - Ground Operations"
+    status: "Approved"
+    date: "2028-08-24"
+  - authority: "Quality Assurance Manager"
+    status: "Verified"
+    date: "2028-08-23"
+
+traceability:
+  related_ata_chapters:
+    - "ATA 02 - Operations Information"
+    - "ATA 03 - Support Information"
+    - "ATA 21 - Air Conditioning"
+    - "ATA 24 - Electrical Power"
+    - "ATA 28 - Fuel Systems"
+    - "ATA 29 - Hydraulic Power"
+    - "ATA 38 - Water/Waste"
+    - "ATA 79 - Engine Oil"
+    - "ATA 95 - Digital Product Passport"
+  
+  cross_domain_dependencies:
+    - domain: "I-INFRASTRUCTURES"
+      chapter: "ATA 03"
+      topic: "GSE calibration and SDS"
+    - domain: "N-NEURAL"
+      chapter: "ATA 95"
+      topic: "Digital Product Passport integration"
+    - domain: "T-TECHNOLOGY"
+      chapters: ["ATA 21", "ATA 28", "ATA 29", "ATA 38", "ATA 79"]
+      topic: "System technical data"
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "TBD"
+  
+validation:
+  ci_script: "ci/validate_ata12.sh"
+  last_validated: "2028-08-25"
+  validation_status: "PASS"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2028-08-25"
+    author: "System Integration Team"
+    changes: "Initial audit-ready release"
+
+compliance:
+  standards:
+    - "ATA Spec 100"
+    - "SAE AS50881"
+    - "iSpec 2200"
+    - "S1000D"
+  
+  regulatory:
+    - framework: "EASA"
+      part: "Part 145"
+      topic: "Maintenance organization requirements"
+    - framework: "FAA"
+      part: "14 CFR Part 43"
+      topic: "Maintenance, preventive maintenance, and alterations"
+  
+  safety:
+    hazards_controlled:
+      - "Flammable materials (SAF)"
+      - "Cryogenic materials (LH₂)"
+      - "Pressurized gases (He, N₂, O₂)"
+      - "Biohazard (waste)"
+    ppe_requirements: true
+    training_required: true
+
+keywords:
+  - servicing
+  - refueling
+  - defueling
+  - hydraulic
+  - oil
+  - water
+  - waste
+  - cryogenic
+  - LH2
+  - SAF
+  - contamination control
+  - traceability

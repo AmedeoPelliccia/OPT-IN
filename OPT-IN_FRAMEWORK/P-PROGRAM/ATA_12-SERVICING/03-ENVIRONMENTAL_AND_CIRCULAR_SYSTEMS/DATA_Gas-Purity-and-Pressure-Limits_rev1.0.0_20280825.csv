@@ -1,0 +1,5 @@
+System,Gas,Min_Purity_pct,Service_Pressure_bar,Relief_Pressure_bar,Notes
+LH2_Tank_He_Purge,Helium,99.995,10,15,"Purge/inert gas"
+Pneumatic_Start,Compressed Air,99.0,20,24,"Oil-free only"
+Cabin_Pressurization,Air,99.0,8.6,9.5,"Monitor humidity"
+Oxygen_Supply,Oxygen,99.5,185,200,"Cleaned for O₂ service"

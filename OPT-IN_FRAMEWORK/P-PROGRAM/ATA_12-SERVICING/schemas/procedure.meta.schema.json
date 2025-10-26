@@ -1,0 +1,27 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "type":"object",
+  "required":["environment","materials_traceability","sampling_required","disposal"],
+  "properties":{
+    "environment":{
+      "type":"object",
+      "required":["temp_C_range","wind_knots_max","humidity_pct_max","fume_detection_required"],
+      "properties":{
+        "temp_C_range":{"type":"array","items":{"type":"number"},"minItems":2,"maxItems":2},
+        "wind_knots_max":{"type":"number"},
+        "humidity_pct_max":{"type":"number"},
+        "fume_detection_required":{"type":"boolean"}
+      }
+    },
+    "materials_traceability":{"type":"boolean"},
+    "sampling_required":{"type":"boolean"},
+    "disposal":{
+      "type":"object",
+      "required":["waste_stream","container_spec"],
+      "properties":{
+        "waste_stream":{"type":"string"},
+        "container_spec":{"type":"string"}
+      }
+    }
+  }
+}
