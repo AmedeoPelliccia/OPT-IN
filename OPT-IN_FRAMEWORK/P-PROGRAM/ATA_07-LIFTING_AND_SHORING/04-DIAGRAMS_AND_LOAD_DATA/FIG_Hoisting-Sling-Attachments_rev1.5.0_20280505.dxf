@@ -1,0 +1,107 @@
+# Hoisting Sling Attachments Drawing
+**Revision:** 1.5.0  
+**Effective Date:** 2028-05-05  
+**Document ID:** FIG_Hoisting-Sling-Attachments_rev1.5.0_20280505
+
+## Purpose
+This is a placeholder for the engineering drawing showing all approved hoisting and sling attachment points for AMPEL360 components.
+
+## Drawing Content (DXF Format)
+
+**NOTE:** The actual CAD file is in DXF format and should be opened with appropriate CAD software (AutoCAD, DraftSight, LibreCAD, etc.).
+
+### Drawing Includes:
+
+1. **Open-Fan Propulsor Lifting Points**
+   - 4-point attachment configuration
+   - Attachment lug specifications
+   - Sling angle recommendations
+   - Clearance requirements
+
+2. **Main Battery Pack Lifting Points**
+   - Battery lifting fixture interface
+   - 4-point attachment locations
+   - Load distribution diagram
+   - Installation envelope
+
+3. **Landing Gear Component Attachments**
+   - Nose gear lifting points
+   - Main gear lifting points
+   - Wheel lifting provisions
+
+4. **Wing Section Lifting Points**
+   - Wing tip section attachments
+   - Outboard wing panel attachments
+   - Spar attachment points
+
+5. **Stabilizer Lifting Points**
+   - Horizontal stabilizer attachment
+   - Vertical stabilizer attachment
+   - Combined lifting configuration
+
+### Drawing Specifications
+
+- **File Format:** AutoCAD DXF R2018
+- **Units:** Millimeters
+- **Scale:** 1:10 for components, 1:50 for full aircraft views
+- **Layers:**
+  - SLING-ATTACH: Sling attachment points
+  - LOAD-LIMIT: Load limit annotations
+  - CLEARANCE: Clearance zones
+  - NOTES: General notes and specifications
+  - TITLE-BLOCK: Drawing title block
+
+### Usage Instructions
+
+1. Open DXF file in CAD software
+2. Review applicable component section
+3. Print at specified scale for field use
+4. Verify revision matches this document
+
+### File Location
+The actual DXF file should be stored at:
+`/04-DIAGRAMS_AND_LOAD_DATA/FIG_Hoisting-Sling-Attachments_rev1.5.0_20280505.dxf`
+
+## Key Attachment Specifications
+
+### Open-Fan Propulsor (LH/RH)
+- **Forward Upper Lug:** M24 bolt, WLL 2,500 kg
+- **Forward Lower Lug:** M24 bolt, WLL 2,500 kg
+- **Aft Upper Lug:** M24 bolt, WLL 2,500 kg
+- **Aft Lower Lug:** M24 bolt, WLL 2,500 kg
+- **Total Capacity:** 10,000 kg (safety factor 2.2 for 4,500 kg engine)
+
+### Main Battery Pack
+- **Four Corner Lugs:** M20 bolt each, WLL 1,500 kg per lug
+- **Total Capacity:** 6,000 kg (safety factor 2.0 for 3,000 kg battery)
+- **Lifting Fixture Required:** AP360-BAT-LIFT-001
+
+### Landing Gear
+- **Nose Gear:** Single point lift at strut, WLL 1,000 kg
+- **Main Gear:** Single point lift at strut, WLL 2,000 kg
+
+## Inspection and Maintenance
+
+All lifting attachment points must be inspected:
+- **Before each use:** Visual inspection for damage, corrosion
+- **Annually:** Dimensional verification, NDT inspection
+- **After any overload event:** Complete engineering assessment
+
+## References
+- Engineering Drawing: 07-71-001 (Engine Hoisting)
+- Engineering Drawing: 07-24-001 (Battery Hoisting)
+- Engineering Drawing: 07-32-001 (Landing Gear Hoisting)
+
+## Approval
+
+| Authority | Status | Date |
+| :--- | :--- | :--- |
+| Structural Engineering | Released | 2028-05-03 |
+| Design Engineering | Released | 2028-05-04 |
+
+---
+*This is a controlled document. The actual DXF file must be obtained from Engineering Document Control.*
+
+**To obtain the DXF file:**
+Contact: Document Control at doc-control@ampel360.com
+Reference: FIG_Hoisting-Sling-Attachments_rev1.5.0_20280505

@@ -1,0 +1,17 @@
+Scenario,Removed_Component,Mass_kg,Component_FS_m,Target_CG_%MAC,Ballast_Mass_kg,Ballast_FS_m,Residual_CG_%MAC,Notes
+ENG-LH,Open-Fan-Propulsor-LH,4500,35.500,25.0,2000,55.000,25.3,Use tail support if wind > 10 kt
+ENG-RH,Open-Fan-Propulsor-RH,4500,35.500,25.0,2000,55.000,25.3,Use tail support if wind > 10 kt
+BAT-MAIN,Main-Battery-Pack,3000,28.000,25.0,1500,-5.000,24.9,Use nose tether if hangar doors are open
+BOTH-ENG,Both-Engines-Removed,9000,35.500,25.0,4000,55.000,25.5,Mandatory tail jack support required
+NOSE-GEAR,Nose-Landing-Gear,450,8.500,25.0,200,-2.000,25.1,Lightweight - minimal ballast required
+MAIN-GEAR-LH,Main-Landing-Gear-LH,850,30.000,25.0,400,50.000,25.0,Monitor lateral CG shift
+MAIN-GEAR-RH,Main-Landing-Gear-RH,850,30.000,25.0,400,50.000,25.0,Monitor lateral CG shift
+BOTH-MAIN-GEAR,Both-Main-Landing-Gears,1700,30.000,25.0,800,50.000,25.1,Requires full aircraft jacking
+WING-TIP-LH,Left-Wing-Tip-Section,120,48.000,25.0,50,60.000,25.0,Verify wing fuel drained
+WING-TIP-RH,Right-Wing-Tip-Section,120,48.000,25.0,50,60.000,25.0,Verify wing fuel drained
+APU,Auxiliary-Power-Unit,650,52.000,25.0,300,65.000,25.1,Tail-heavy component - aft ballast
+CARGO-DOOR,Main-Cargo-Door,280,25.000,25.0,0,0.000,24.8,Minimal CG impact - no ballast required
+RADOME,Nose-Radome,85,5.000,25.0,0,0.000,24.9,Lightweight - no ballast required
+HORIZONTAL-STAB,Horizontal-Stabilizer,920,55.000,25.0,400,65.000,25.2,Use tail support stand mandatory
+VERTICAL-STAB,Vertical-Stabilizer,780,56.000,25.0,350,65.000,25.1,Use tail support stand mandatory
+BOTH-STAB,Both-Stabilizers,1700,55.500,25.0,750,65.000,25.3,Tail support + aft fuselage support required
