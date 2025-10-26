@@ -1,8 +1,8 @@
-# C2-CIRCULAR (FUEL LIFECYCLE)
+# C2-CIRCULAR_CRYOGENIC_SYSTEMS
 
 ## Overview
 
-This section contains the documentation and specifications for C2-CIRCULAR (FUEL LIFECYCLE).
+This section contains the documentation and specifications for C2-CIRCULAR_CRYOGENIC_SYSTEMS (Circular Economy & Cryogenic Systems), including sustainable aviation fuel (SAF), cryogenic hydrogen storage, and CO₂ capture.
 
 ## Navigation
 
@@ -12,13 +12,13 @@ This section contains the documentation and specifications for C2-CIRCULAR (FUEL
 
 - [A-AIRFRAME](../A-AIRFRAME/README.md)
 - [A2-AERODYNAMICS](../A2-AERODYNAMICS/README.md)
-- [C1-COCKPIT.CABIN,CARGO](../C1-COCKPIT.CABIN,CARGO/README.md)
+- [C1-COCKPIT_CABIN_CARGO](../C1-COCKPIT_CABIN_CARGO/README.md)
 - [D-DATA](../D-DATA/README.md)
 - [E1-ENVIRONMENT](../E1-ENVIRONMENT/README.md)
 - [E2-ENERGY](../E2-ENERGY/README.md)
 - [E3-ELECTRONICS](../E3-ELECTRONICS/README.md)
-- [I-INTERFACES](../I-INTERFACES/README.md)
-- [I2-INFORMATION&INTELLIGENCE](../I2-INFORMATION&INTELLIGENCE/README.md)
+- [I-INFORMATION_INTELLIGENCE_INTERFACES](../I-INFORMATION_INTELLIGENCE_INTERFACES/README.md)
+- [I2-I+D](../I2-I+D/README.md)
 - [L1-LOGICS](../L1-LOGICS/README.md)
 - [L2-LINKS](../L2-LINKS/README.md)
 - [M-MECHANICS](../M-MECHANICS/README.md)

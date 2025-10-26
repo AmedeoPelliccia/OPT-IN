@@ -1,8 +1,15 @@
-# I-INTERFACES
+# I-INFORMATION_INTELLIGENCE_INTERFACES
 
 ## Overview
 
-This section contains the documentation and specifications for I-INTERFACES.
+This section contains the documentation and specifications for I-INFORMATION_INTELLIGENCE_INTERFACES, consolidating information systems, intelligence capabilities, and human-machine interfaces including:
+
+- ATA 31: Indicating/Recording Systems (Indicating Function)
+- ATA 42: Integrated Modular Avionics (Core OS Services, APIs & Health Monitoring)
+- ATA 45: Onboard Maintenance Systems (OMS/CMS)
+- ATA 46: Information Systems (ACARS, DATALINK)
+- ATA 77: Engine Indicating
+- ATA 93 (Reserved): Onboard Data Load and Configuration
 
 ## Navigation
 
@@ -12,13 +19,13 @@ This section contains the documentation and specifications for I-INTERFACES.
 
 - [A-AIRFRAME](../A-AIRFRAME/README.md)
 - [A2-AERODYNAMICS](../A2-AERODYNAMICS/README.md)
-- [C1-COCKPIT.CABIN,CARGO](../C1-COCKPIT.CABIN,CARGO/README.md)
-- [C2-CIRCULAR (FUEL LIFECYCLE)](../C2-CIRCULAR (FUEL LIFECYCLE)/README.md)
+- [C1-COCKPIT_CABIN_CARGO](../C1-COCKPIT_CABIN_CARGO/README.md)
+- [C2-CIRCULAR_CRYOGENIC_SYSTEMS](../C2-CIRCULAR_CRYOGENIC_SYSTEMS/README.md)
 - [D-DATA](../D-DATA/README.md)
 - [E1-ENVIRONMENT](../E1-ENVIRONMENT/README.md)
 - [E2-ENERGY](../E2-ENERGY/README.md)
 - [E3-ELECTRONICS](../E3-ELECTRONICS/README.md)
-- [I2-INFORMATION&INTELLIGENCE](../I2-INFORMATION&INTELLIGENCE/README.md)
+- [I2-I+D](../I2-I+D/README.md)
 - [L1-LOGICS](../L1-LOGICS/README.md)
 - [L2-LINKS](../L2-LINKS/README.md)
 - [M-MECHANICS](../M-MECHANICS/README.md)
