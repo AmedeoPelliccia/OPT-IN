@@ -11,4 +11,4 @@ effectivity:
 traceability:
   source_cad_link: "CAD-MASTER-ASSY_rev5.6.0.catpart"
 integrity:
-  checksum: { algorithm: "sha256", value: "a1b2c3d4..." }
+  checksum: { algorithm: "sha256", value: "REPLACE_WITH_ACTUAL_SHA256_HASH" }
