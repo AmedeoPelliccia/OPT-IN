@@ -24,7 +24,7 @@
   - Fire watch personnel on standby
 
 ### 4.0 Success Criteria
-- Vacuum pressure in the insulation annulus is less than 10⁻⁵ mbar.
+- Vacuum pressure in the insulation annulus is less than 10<sup>-5</sup> mbar.
 - Hydrogen boil-off rate is within specification (< 0.5% per day at ambient temperature).
 - Thermal imaging shows no hot spots indicating insulation damage (temperature gradient < 5°C across tank surface).
 - If any criteria fail, refer to AMM `28-60-00` for corrective action and potential tank depressurization procedure.
