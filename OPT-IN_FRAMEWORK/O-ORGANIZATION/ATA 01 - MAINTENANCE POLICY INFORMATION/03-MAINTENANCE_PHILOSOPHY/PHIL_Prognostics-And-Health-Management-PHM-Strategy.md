@@ -6,7 +6,7 @@ The AMPEL360 maintenance program is fundamentally data-driven. The Prognostics a
 
 ## 2.0 Key Systems under PHM
 The following systems are primary candidates for PHM, with the goal of replacing hard-time component replacements with on-condition prognostics:
-- **ATA 24-33 (Solid-CO₂ Batteries):** Remaining Useful Life (RUL) models predict cell degradation based on charge cycles, temperature profiles, and internal resistance.
+- **ATA 24-33 (Solid-CO<sub>2</sub> Batteries):** Remaining Useful Life (RUL) models predict cell degradation based on charge cycles, temperature profiles, and internal resistance.
 - **ATA 29 (Hydraulic Power):** Actuator performance degradation is monitored by analyzing pressure, flow, and response times.
 - **ATA 72 (Engine):** Turbine blade life is estimated using real-time operating temperature and stress data, rather than just flight cycles.
 
