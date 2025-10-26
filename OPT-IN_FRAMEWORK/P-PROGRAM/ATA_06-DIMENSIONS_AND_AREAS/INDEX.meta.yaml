@@ -25,6 +25,7 @@ traceability:
   cad_master: "CAD-MASTER-ASSY_rev5.6.0.catpart"
 integrity:
   checksum_algorithm: "sha256"
+  # The checksum values below are placeholders for demonstration purposes.
 files:
   - id: "DATA_Principal-Dimensions-Table_rev2.1.0_20280401.md"
     sha256: "a1b2c3d4..."
