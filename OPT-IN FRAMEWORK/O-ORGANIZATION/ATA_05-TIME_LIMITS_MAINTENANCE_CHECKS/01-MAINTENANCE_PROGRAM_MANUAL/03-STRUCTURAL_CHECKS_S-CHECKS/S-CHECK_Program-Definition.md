@@ -299,7 +299,7 @@ Quantum scheduling (ATA 42-60) and CO2 battery (ATA 24-33) support structures:
 
 ### 11.1 Source Documents
 S-Check tasks originate from:
-- ALS (Airworthiness Limitations Section) - ATA 04
+- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
 - Supplemental Inspection Programs
 - Corrosion Prevention and Control Program (CPCP)
 - Fatigue and Damage Tolerance Evaluation
@@ -313,7 +313,7 @@ Complete task-to-source mapping in:
 ## 12.0 References
 
 - MPM_Master-Document_rev1.0.0_20280701.md
-- ATA 04: Airworthiness Limitations Section (ALS)
+- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
 - SRM (Structural Repair Manual)
 - NDT Manual
 - Composite Repair Manual

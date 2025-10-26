@@ -196,4 +196,4 @@ If parts are replaced during this check:
 
 ---
 
-*Refs: ATA 01 (MPD), ATA 04 (ALS), ATA 12 (Servicing)*
+*Refs: [ATA 01](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md) (MPD), [ATA 04](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md) (ALS), [ATA 12](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md) (Servicing)*

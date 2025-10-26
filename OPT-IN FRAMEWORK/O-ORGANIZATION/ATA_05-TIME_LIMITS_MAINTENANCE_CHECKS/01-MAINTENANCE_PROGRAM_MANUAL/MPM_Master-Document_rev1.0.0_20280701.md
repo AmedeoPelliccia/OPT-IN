@@ -169,9 +169,9 @@ Must be approved by the NAA before implementation.
 ## 7.0 References
 
 ### 7.1 Source Documents
-- ATA 01: Maintenance Planning Document (MPD)
-- ATA 04: Airworthiness Limitations Section (ALS)
-- ATA 12: Servicing procedures
+- [ATA 01 - MAINTENANCE POLICY INFORMATION](../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md): Maintenance Planning Document (MPD)
+- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
+- [ATA 12 - SERVICING](../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md): Servicing procedures
 
 ### 7.2 Related Documents
 - AMM (Aircraft Maintenance Manual) - for task procedures
@@ -194,4 +194,4 @@ Must be approved by the NAA before implementation.
 
 ---
 
-*Cross-references: ATA 01 (MPD), ATA 04 (ALS), ATA 12 (Servicing), ATA 45 (OMS)*
+*Cross-references: [ATA 01](../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md) (MPD), [ATA 04](../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md) (ALS), [ATA 12](../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md) (Servicing), [ATA 45](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/I2-INFORMATION&INTELLIGENCE/ATA%2045%20-%20ONBOARD%20MAINTENANCE%20SYSTEMS%20(OMS)/README.md) (OMS)*

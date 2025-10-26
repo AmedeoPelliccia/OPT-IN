@@ -214,8 +214,8 @@ BWB (Blended Wing Body) composite structures require:
 
 ### 9.1 Source Tasks
 C-Check tasks originate from:
-- MPD (Maintenance Planning Document) - ATA 01
-- ALS (Airworthiness Limitations Section) - ATA 04
+- [ATA 01 - MAINTENANCE POLICY INFORMATION](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md): Maintenance Planning Document (MPD)
+- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
 - Airworthiness Directives (ADs)
 - Service Bulletins (SBs)
 
@@ -228,9 +228,9 @@ Task-to-source mapping maintained in:
 ## 10.0 References
 
 - MPM_Master-Document_rev1.0.0_20280701.md
-- ATA 01: Maintenance Planning Document
-- ATA 04: Airworthiness Limitations Section
-- ATA 12: Servicing procedures
+- [ATA 01 - MAINTENANCE POLICY INFORMATION](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md): Maintenance Planning Document
+- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section
+- [ATA 12 - SERVICING](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md): Servicing procedures
 - AMM (Aircraft Maintenance Manual)
 - SRM (Structural Repair Manual)
 - WDM (Wiring Diagram Manual)
