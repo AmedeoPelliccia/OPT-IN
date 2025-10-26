@@ -6,10 +6,10 @@ on:
     branches:
       - main
     paths:
-      - "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS/**"
+      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS/**"
   pull_request:
     paths:
-      - "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS/**"
+      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS/**"
 
 jobs:
   verify:
@@ -23,7 +23,7 @@ jobs:
       - name: Verify top-level folder numeration
         run: |
           echo "Verifying top-level folder numeric prefixes..."
-          cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
+          cd "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
           
           # Find all directories (excluding hidden and the parent directory itself)
           found_invalid=false
@@ -53,7 +53,7 @@ jobs:
       - name: Verify required directories exist
         run: |
           echo "Verifying required directory structure..."
-          cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
+          cd "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
           
           required_dirs=(
             "01-QUALIFICATION_AND_CERTIFICATION"
@@ -88,7 +88,7 @@ jobs:
       - name: Verify required files exist
         run: |
           echo "Verifying required files..."
-          cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
+          cd "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
           
           required_files=(
             "00_README.md"
@@ -121,7 +121,7 @@ jobs:
       - name: Verify QTG test references to aircraft data
         run: |
           echo "Verifying QTG test cross-references to aircraft data package..."
-          cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
+          cd "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
           
           # Find all QTG test files
           qtg_files=$(find 01-QUALIFICATION_AND_CERTIFICATION/02-QUALIFICATION_TEST_GUIDE_QTG -name "QTG-TEST_*.md" 2>/dev/null || echo "")
@@ -164,7 +164,7 @@ jobs:
       - name: Verify ATA cross-references
         run: |
           echo "Verifying ATA cross-references in documentation..."
-          cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
+          cd "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
           
           # Check README for required ATA cross-references
           if [ -f "00_README.md" ]; then
@@ -201,7 +201,7 @@ jobs:
       - name: Verify JSON file syntax
         run: |
           echo "Verifying JSON file syntax..."
-          cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
+          cd "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS"
           
           json_files=$(find . -iname "*.json" 2>/dev/null || echo "")
           

@@ -1,0 +1,7 @@
+Equipment,Part_Number,Description,Calibration_Frequency,Last_Calibration_Date,Next_Due_Date,Calibration_Lab,Certificate_Number,Status
+Spectroradiometer,T-VS-001,Visual system color and brightness measurement,Annual,2028-11-15,2029-11-15,ISO/IEC 17025 Lab #12345,CAL-2028-VS-001,VALID
+SPL Meter,T-AU-001,Class 1 sound pressure level meter for aural system,Annual,2028-10-20,2029-10-20,ISO/IEC 17025 Lab #12345,CAL-2028-AU-001,VALID
+Force Gauge,T-CL-001,Calibrated force gauge for control loading,Annual,2028-09-10,2029-09-10,ISO/IEC 17025 Lab #12345,CAL-2028-CL-001,VALID
+Accelerometer,T-MT-001,3-axis accelerometer for motion platform,Annual,2028-12-01,2029-12-01,ISO/IEC 17025 Lab #12345,CAL-2028-MT-001,VALID
+Gyroscope,T-MT-002,3-axis gyroscope for motion platform,Annual,2028-12-01,2029-12-01,ISO/IEC 17025 Lab #12345,CAL-2028-MT-002,VALID
+Tripod,T-VS-002,Measurement tripod for visual calibration,N/A,N/A,N/A,N/A,N/A,N/A
