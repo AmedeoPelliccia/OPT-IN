@@ -49,4 +49,4 @@ For the complete audit-ready directory structure, see [`00_README.md`](00_README
 
 *Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*
 
-[📚 Framework Documentation](../../README.md) | [🏠 Repository Root](../../../README.md)
+[📚 Framework Documentation](../../../README.md) | [🏠 Repository Root](../../../README.md)
