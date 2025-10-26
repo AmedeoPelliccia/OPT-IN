@@ -1,0 +1,103 @@
+DXF Version: AC1024
+Drawing Name: AMPEL360 Towbarless NLG Capture Envelope
+Revision: 1.0.0
+Effective Date: 2028-08-01
+
+DESCRIPTION:
+This DXF file defines the capture envelope for towbarless tug operations
+on the AMPEL360 aircraft. It specifies the geometric limits within which
+the nose landing gear must be positioned for safe capture by towbarless
+tugs. Includes:
+- NLG capture zone (top view and side view)
+- Approach angles for towbarless tug
+- Tire contact points in cradle
+- Clearance envelopes for gear doors and structure
+
+VIEWS INCLUDED:
+- Top View: Plan view showing lateral capture limits
+- Side View: Profile showing vertical capture limits and approach angle
+- Front View: Tire position in cradle
+- Detail View: Critical clearances during lift
+
+LAYERS:
+Layer 0: Nose landing gear outline (reference)
+Layer 1: Capture envelope (acceptable zone for tug approach)
+Layer 2: Tire positions (inflated and deflated states)
+Layer 3: Tug cradle geometry (generic, based on approved tugs)
+Layer 4: Clearance zones (structure, gear doors, ground)
+Layer 5: Dimensions and tolerances
+Layer 6: Notes and warnings
+
+DATUM:
+NLG center (axle): FS 12.5m, BL 0.0, WL variable (depends on strut extension)
+Typical WL with normal strut extension: 1.2m
+
+UNITS: Meters (m)
+
+CAPTURE ENVELOPE DIMENSIONS:
+- Lateral tolerance: ±0.15m from centerline
+- Longitudinal tolerance: ±0.10m from nominal position
+- Vertical (strut extension): 1.0m to 1.4m WL (normal range)
+- Approach angle: 0° to 5° from aircraft centerline
+
+CRITICAL PARAMETERS:
+- Tire size: 40x14 (standard for AMPEL360)
+- Tire pressure: Must be 12-16 bar (within ±5% of specification)
+- Nose gear load: Maximum 60,000 kg for approved towbarless tugs
+- Strut extension: Must be within normal range (not collapsed or over-extended)
+
+APPROVED TOWBARLESS TUGS:
+- Mototok Spacer 8600 (cradle width: 850mm)
+- TLD NMC-1450 (cradle width: 830mm)
+
+CLEARANCES:
+- Gear door clearance during lift: Minimum 50mm
+- Cradle to nose radome: Minimum 200mm
+- Cradle to lower fuselage: Minimum 100mm
+
+OPERATIONAL NOTES:
+- Aircraft must be on level surface (±0.5° pitch/roll)
+- NLG strut must be in normal extended position
+- Tires must be properly inflated
+- No ice, snow, or contamination on tires
+- Verify capture envelope before lift initiation
+
+CROSS-REFERENCES:
+- ATA 06: NLG location and aircraft datums
+- ATA 08: Nose gear loading at various weights and CG
+- ATA 32: NLG dimensions, tire specifications
+- DATA_Towbar-And-Adapter-Specs_rev1.0.0.md (towbarless tug specs)
+- PROC_Towing-Towbarless-ADB_rev1.1.0_20280801.md
+
+VIEWING:
+Use CAD software (AutoCAD, DraftSight, LibreCAD) to view and measure.
+Recommended print scale: 1:10
+
+WARNINGS:
+⚠ Capture envelope must be verified before every towbarless tow
+⚠ Improper positioning can result in:
+   - Damage to NLG structure
+   - Damage to gear doors
+   - Tire damage
+   - Unstable lift leading to aircraft tipping
+⚠ If NLG is outside capture envelope, reposition aircraft before attempting capture
+
+INSPECTION AFTER CAPTURE:
+After every towbarless tow, inspect:
+- Tire sidewalls for scuff marks or damage
+- Wheel rims for contact marks
+- Gear doors for interference marks
+- NLG strut for proper extension after release
+
+---
+[This is a placeholder for the actual DXF binary/ASCII data]
+To create actual DXF, coordinate with towbarless tug manufacturers
+and use NLG engineering drawings from ATA 32.
+---
+
+Document Control:
+Version: 1.0.0
+Last Updated: 2028-08-01
+Owner: Ground Operations Engineering
+Approved: Structures Engineering, Ground Operations, Landing Gear Engineering
+Classification: OPERATIONAL - Controlled Document

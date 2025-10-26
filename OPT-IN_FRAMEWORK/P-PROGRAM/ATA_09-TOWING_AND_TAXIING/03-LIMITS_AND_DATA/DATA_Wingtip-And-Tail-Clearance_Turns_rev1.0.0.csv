@@ -1,0 +1,7 @@
+Turn_Radius_m,Speed_kmh,Wingtip_Clearance_Inner_m,Wingtip_Clearance_Outer_m,Tail_Clearance_m,Notes
+15.2,5,2.1,58.3,8.5,"Minimum turn radius, very slow speed, parking maneuvering"
+18.0,8,2.8,60.1,9.2,"Tight turn, pushback operations"
+25.0,10,4.5,63.8,11.5,"Standard turn radius for most taxiways"
+35.0,15,7.2,68.5,14.8,"Wide turn, moderate speed"
+50.0,20,11.8,75.2,19.3,"Gentle turn, higher taxi speed"
+75.0,25,18.5,84.6,25.1,"Very wide turn, maximum tow speed on curves"

@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.amedeopelliccia.it/schemas/procedure.meta.schema.json",
+  "title": "Procedure Metadata Schema",
+  "description": "Schema for procedure metadata sidecar files (*.meta.yaml)",
+  "type": "object",
+  "required": ["schema_version", "id", "document", "effectivity", "approvals"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Schema version (e.g., '1.1')"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the procedure document"
+    },
+    "document": {
+      "type": "object",
+      "required": ["type", "title", "revision", "effective_date"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["PROC", "CHK", "DATA", "FIG", "REPORT", "LOG"],
+          "description": "Document type"
+        },
+        "title": {
+          "type": "string",
+          "description": "Document title"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Semantic version (MAJOR.MINOR.PATCH)"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Effective date (YYYY-MM-DD)"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn"],
+      "properties": {
+        "msn": {
+          "oneOf": [
+            { "type": "string", "enum": ["ALL"] },
+            { "type": "array", "items": { "type": "string" } }
+          ],
+          "description": "Manufacturer Serial Numbers (MSN) or 'ALL'"
+        }
+      }
+    },
+    "operations": {
+      "type": "object",
+      "properties": {
+        "nws_pin_required": {
+          "type": "boolean",
+          "description": "Whether nose wheel steering pin is required"
+        },
+        "brake_rider_required": {
+          "type": "boolean",
+          "description": "Whether brake rider is required"
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "wind_knots_max": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum wind speed in knots"
+        },
+        "slope_percent_max": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum slope percentage"
+        }
+      }
+    },
+    "limits_ref": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "References to limits data files"
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "ata06_rev": { "type": "string" },
+        "ata07_rev": { "type": "string" },
+        "ata08_rev": { "type": "string" }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": { "type": "string" },
+          "status": { "type": "string", "enum": ["Released", "Draft", "Superseded"] },
+          "date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "properties": {
+        "checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": { "type": "string", "enum": ["sha256"] },
+            "value": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

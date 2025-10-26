@@ -1,0 +1,6 @@
+Taxi_Route,Distance_m,Avg_Speed_kmh,Duration_s,Turns_Count,Brake_Applications,Brake_Energy_kJ,GW_kg,Notes
+Gate_A12_to_RWY_09L,1850,18,370,4,8,2450,195000,"Standard taxi, moderate traffic"
+Gate_B7_to_RWY_27R,2340,15,560,7,12,3120,205000,"Long taxi, multiple turns, high weight"
+RWY_09L_to_Gate_C3,1620,20,290,3,6,2180,188000,"Post-landing taxi, lighter weight"
+Gate_A12_to_RWY_27R,3100,16,697,9,15,4580,210000,"Maximum weight, long route, frequent stops"
+Gate_D1_to_RWY_09L,980,22,160,2,4,1340,175000,"Short taxi, light weight, minimal braking"

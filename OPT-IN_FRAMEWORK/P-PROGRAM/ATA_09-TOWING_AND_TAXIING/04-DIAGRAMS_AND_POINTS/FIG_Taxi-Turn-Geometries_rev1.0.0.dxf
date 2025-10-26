@@ -1,0 +1,52 @@
+DXF Version: AC1024
+Drawing Name: AMPEL360 Taxi Turn Geometries
+Revision: 1.0.0
+Effective Date: 2028-08-01
+
+DESCRIPTION:
+This DXF file contains detailed geometry data for taxi turn clearances
+for the AMPEL360 aircraft. It includes:
+- Wing tip sweep paths for various turn radii
+- Tail clearance envelopes during turns
+- Main landing gear track paths
+- Critical clearance points
+
+VIEWS INCLUDED:
+- Plan View: Top-down view showing wing tip and tail paths
+- Detail Views: Critical turn geometries at 15m, 25m, 50m radii
+- Clearance Zones: Safety margins for various turn scenarios
+
+LAYERS:
+Layer 0: Aircraft outline (centerline position)
+Layer 1: Wing tip paths (inner and outer)
+Layer 2: Tail clearance envelope
+Layer 3: Main gear track
+Layer 4: Critical clearance dimensions
+Layer 5: Notes and annotations
+
+DATUM:
+Aircraft datum point: Nose at FS 0.0, centered at BL 0.0
+
+UNITS: Meters
+
+CROSS-REFERENCES:
+- ATA 06: Aircraft dimensions (wingspan, length, tail height)
+- DATA_Wingtip-And-Tail-Clearance_Turns_rev1.0.0.csv
+
+VIEWING:
+Use CAD software (AutoCAD, DraftSight, LibreCAD) to view and measure.
+
+NOTES:
+- All clearances include 0.5m safety margin
+- Turn geometries based on nose wheel steering at specified angles
+- Consult with airport/ramp engineer for specific taxiway/apron layouts
+
+---
+[This is a placeholder for the actual DXF binary/ASCII data]
+To create actual DXF, use CAD software with ATA 06 dimension data.
+---
+
+Document Control:
+Version: 1.0.0
+Last Updated: 2028-08-01
+Owner: Ground Operations Engineering
