@@ -1,0 +1,50 @@
+schema_version: "1.1"
+id: "ALS_LIMIT_32-10-01"
+document:
+  type: "ALS-LIMIT"
+  title: "Main Landing Gear Life Limit"
+  revision: "1.0.0"
+  effective_date: "2028-04-01"
+effectivity:
+  msn: "ALL"
+  fleet_group: "AMPEL360-BWB-H2"
+interval:
+  basis: "FC"
+  value: 40000
+  tolerance:
+    plus: 0
+    minus: 0
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-03-15"
+    reference: "EASA.21.J.XXX"
+  - authority: "FAA"
+    status: "Approved"
+    date: "2028-03-20"
+    reference: "FAA-ALS-XXX-2028"
+traceability:
+  certification_basis:
+    - "CS 25.571"
+    - "FAR 25.571"
+  source_reports:
+    - "STR-RPT-32-005"
+  amm_tasks:
+    - "32-10-00-710-001"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "f4422a614498df2da9d8318750013fb0529edce98e35b6a6ce0ab3b4f0763f39"
+  signature_required: true
+  signature_file: "ALS_LIMIT_32-10-01_Landing-Gear-Life-Limit.md.sig"
+component:
+  part_number: "MLG-AP360-001"
+  description: "Main Landing Gear Assembly"
+  location: "Fuselage Station 580-640"
+  life_limit_type: "safe-life"
+dpp_integration:
+  tracking_enabled: true
+  compliance_reporting: "Real-time via ATA 95 DPP API"
+  alert_threshold:
+    warning_percent: 95
+    critical_percent: 98.75

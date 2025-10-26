@@ -1,0 +1,32 @@
+schema_version: "1.1"
+chapter: "ATA_04"
+title: "Airworthiness Limitations"
+description: "Mandatory airworthiness limitations including safe-life limits, damage tolerance inspections, and certification basis traceability"
+effective_date: "2028-01-01"
+status: "Active"
+subdirectories:
+  - name: "01-SAFE_LIFE_LIMITS_COMPONENTS"
+    description: "Mandatory life limits for components"
+  - name: "02-DAMAGE_TOLERANCE_STRUCTURAL_INSPECTIONS"
+    description: "Mandatory structural inspections"
+  - name: "03-FUEL_SYSTEM_LIMITATIONS_CDCCL"
+    description: "Critical design configuration limitations for fuel system ignition prevention"
+  - name: "04-WIDESPREAD_FATIGUE_DAMAGE"
+    description: "Widespread fatigue damage monitoring and inspection program"
+  - name: "05-CERTIFICATION_BASIS_AND_TRACEABILITY"
+    description: "Traceability matrix for all limitations to their certification basis"
+compliance:
+  standards:
+    - "CS 25.571"
+    - "FAA AC 25-19"
+    - "EASA CS-25"
+  regulations:
+    - "FAA Part 25.571"
+    - "EASA Part 21"
+ownership:
+  responsible_organization: "AMPEL360 Engineering"
+  point_of_contact: "Chief Airworthiness Engineer"
+revision_control:
+  version: "1.0.0"
+  last_updated: "2028-01-01"
+  approved_by: "EASA, FAA"
