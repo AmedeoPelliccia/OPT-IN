@@ -1,5 +1,0 @@
-Defect_ID,Date_Reported,System,Subsystem,Description,Severity,Status,Assigned_To,Resolution,Date_Closed
-DEF-2029-001,2029-01-12,Visual,Projector_Right,Minor color shift on right projector at edges,Low,CLOSED,Visual_Tech_01,Recalibrated color matrix,2029-01-15
-DEF-2029-002,2029-01-08,Motion,Actuator_3,Slight noise during extension (actuator 3),Medium,CLOSED,Motion_Tech_02,Lubricated ball screw,2029-01-10
-DEF-2028-045,2028-12-20,Aural,Speaker_LFE2,Low frequency speaker intermittent dropout,Medium,CLOSED,Audio_Tech_01,Replaced speaker amplifier,2028-12-22
-DEF-2028-044,2028-12-18,Control_Loading,Yoke_Pitch,Breakout force slightly high (10N vs 8N target),Low,CLOSED,Control_Tech_01,Adjusted actuator gain,2028-12-20
