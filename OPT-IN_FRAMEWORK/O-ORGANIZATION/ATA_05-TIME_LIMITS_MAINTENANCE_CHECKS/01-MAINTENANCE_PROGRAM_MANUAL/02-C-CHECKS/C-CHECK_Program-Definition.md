@@ -136,7 +136,7 @@ C-Check packages contain:
 1. Initial walk-around inspection
 2. Document pre-existing damage
 3. Position aircraft in hangar
-4. De-energize systems per [AMM](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md)
+4. De-energize systems per [AMM](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/README.md)
 5. Begin access panel removal
 6. Set up work platforms
 
@@ -214,13 +214,13 @@ BWB (Blended Wing Body) composite structures require:
 
 ### 9.1 Source Tasks
 C-Check tasks originate from:
-- [ATA 01 - MAINTENANCE POLICY INFORMATION](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md): Maintenance Planning Document (MPD)
-- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
+- [ATA_01-MAINTENANCE_POLICY_INFORMATION](../../../../O-ORGANIZATION/ATA_01-MAINTENANCE_POLICY_INFORMATION/README.md): Maintenance Planning Document (MPD)
+- [ATA_04-AIRWORTHINESS_LIMITATIONS](../../../../O-ORGANIZATION/ATA_04-AIRWORTHINESS_LIMITATIONS/README.md): Airworthiness Limitations Section (ALS)
 - Airworthiness Directives (ADs)
 - Service Bulletins (SBs)
 
 ### 9.2 Traceability Matrix
-Task-to-source mapping maintained in:
+Task-to-source mapping maintained in:  
 `../../02-TRACEABILITY_AND_COMPLIANCE/TRACE_Matrix-MPD-ALS-to-Checks.csv`
 
 ---
@@ -228,13 +228,14 @@ Task-to-source mapping maintained in:
 ## 10.0 References
 
 - MPM_Master-Document_rev1.0.0_20280701.md
-- [ATA 01 - MAINTENANCE POLICY INFORMATION](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md): Maintenance Planning Document
-- [ATA 04 - AIRWORTHINESS LIMITATIONS](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md): Airworthiness Limitations Section
-- [ATA 12 - SERVICING](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md): Servicing procedures
-- [AMM (Aircraft Maintenance Manual)](../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md)
+- [ATA_01-MAINTENANCE_POLICY_INFORMATION](../../../../O-ORGANIZATION/ATA_01-MAINTENANCE_POLICY_INFORMATION/README.md): Maintenance Planning Document
+- [ATA_04-AIRWORTHINESS_LIMITATIONS](../../../../O-ORGANIZATION/ATA_04-AIRWORTHINESS_LIMITATIONS/README.md): Airworthiness Limitations Section
+- [ATA_12-SERVICING](../../../../P-PROGRAM/ATA_12-SERVICING/README.md): Servicing procedures
+- [AMM (Aircraft Maintenance Manual)](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/README.md)
 - SRM (Structural Repair Manual)
 - WDM (Wiring Diagram Manual)
 
 ---
 
 *Part of the AMPEL360 Maintenance Program - ATA 05*
+
