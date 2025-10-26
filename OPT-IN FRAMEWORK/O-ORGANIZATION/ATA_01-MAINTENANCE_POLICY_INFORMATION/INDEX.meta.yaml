@@ -1,0 +1,14 @@
+schema_version: "1.1"
+folder: "ATA_01-MAINTENANCE_POLICY_INFORMATION"
+purpose: "Defines maintenance policies, philosophies, and programs governing the AMPEL360 maintenance lifecycle. Contains the MRBR and MPD as the basis for the approved maintenance program."
+owners: ["Maintenance Planning", "Airworthiness", "Reliability Engineering"]
+approvers:
+  - role: "Head of Airworthiness"
+    name: "TBD"
+  - role: "Chief Maintenance Officer"
+    name: "TBD"
+effective_date: "2028-05-15"
+data_classes: ["PUBLIC", "INTERNAL", "REGULATED"]
+retention_policy: { default_years: "Aircraft_Lifetime", regulatory_minimum: 10 }
+regulatory_basis: ["FAA AC 120-16", "EASA Part-M", "ATA MSG-3"]
+crossrefs: ["ATA_00", "ATA_04", "ATA_05", "ATA_45", "ATA_92", "ATA_95"]
