@@ -81,7 +81,8 @@ This release provides enhanced visual fidelity and performance optimizations spe
 
 2. **Install New Software:**
    ```bash
-   cd /home/runner/work/OPT-IN/OPT-IN/"OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM/04-SOFTWARE_AND_MODELS/01-IMAGE_GENERATOR_SW/v6.2.0"
+   # Navigate to the installation directory from repository root
+   cd "OPT-IN FRAMEWORK/I-INFRASTRUCTURES/ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM/04-SOFTWARE_AND_MODELS/01-IMAGE_GENERATOR_SW/v6.2.0"
    sudo ./install_IG_AMPEL360_v6.2.0.sh
    ```
 
