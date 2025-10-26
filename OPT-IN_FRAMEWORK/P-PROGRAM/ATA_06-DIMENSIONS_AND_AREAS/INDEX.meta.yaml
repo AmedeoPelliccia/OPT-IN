@@ -28,6 +28,6 @@ integrity:
   # The checksum values below are placeholders for demonstration purposes.
 files:
   - id: "DATA_Principal-Dimensions-Table_rev2.1.0_20280401.md"
-    sha256: "a1b2c3d4..."
+    sha256: "0cbcd53673faab308f21901621f6a4063c14dd254599be96f479504ae1c7d536"
   - id: "FIG_Three-View-Drawing_rev2.0.0_20280315.dxf"
-    sha256: "<ACTUAL_SHA256_HASH>"
+    sha256: "e419a06fee2b3b7c015a383749e0735da742ed629b60e6975d7113d0667e2e6d"

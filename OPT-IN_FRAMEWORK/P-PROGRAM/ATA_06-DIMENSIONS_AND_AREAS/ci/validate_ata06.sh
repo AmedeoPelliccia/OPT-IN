@@ -64,40 +64,21 @@ echo ""
 echo "Validating metadata files..."
 SCHEMA_ERRORS=0
 
+# Path to the Python validation script
+VALIDATE_SCRIPT="${SCRIPT_DIR}/validate_metadata.py"
+
+if [[ ! -f "${VALIDATE_SCRIPT}" ]]; then
+    echo "Error: Validation script not found at ${VALIDATE_SCRIPT}"
+    exit 1
+fi
+
 # Find all .meta.yaml files and validate them
 while IFS= read -r -d '' meta_file; do
     filename=$(basename "$meta_file")
     echo "  Checking: $filename"
-    # Use Python to validate YAML against JSON schema
-    if ! python3 -c "
-import sys
-import yaml
-import json
-from pathlib import Path
-
-try:
-    # Simple validation that file is valid YAML
-    with open('$meta_file', 'r') as f:
-        data = yaml.safe_load(f)
     
-    # Different validation for INDEX.meta.yaml vs document sidecars
-    if '$filename' == 'INDEX.meta.yaml':
-        # INDEX file has different required fields
-        required = ['schema_version', 'id', 'program', 'chapter']
-    else:
-        # Document sidecars require these fields
-        required = ['schema_version', 'id', 'document', 'effectivity', 'traceability', 'integrity']
-    
-    for field in required:
-        if field not in data:
-            print(f'  Missing required field: {field}', file=sys.stderr)
-            sys.exit(1)
-    
-    print('  ✓ Valid')
-except Exception as e:
-    print(f'  ✗ Error: {e}', file=sys.stderr)
-    sys.exit(1)
-" 2>&1; then
+    # Use the external Python script for validation
+    if ! python3 "${VALIDATE_SCRIPT}" "$meta_file" 2>&1; then
         SCHEMA_ERRORS=$((SCHEMA_ERRORS + 1))
     fi
 done < <(find "${ATA06_ROOT}" -name "*.meta.yaml" -type f -print0)
