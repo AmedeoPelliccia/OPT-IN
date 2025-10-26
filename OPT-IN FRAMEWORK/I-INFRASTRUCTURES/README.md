@@ -16,8 +16,23 @@ Authoritative ground infrastructure and support content organized by ATA chapter
 - [ATA_13-HARDWARE_AND_GENERAL_TOOLS](ATA_13-HARDWARE_AND_GENERAL_TOOLS/)  
   Hardware and consumables catalogs, general tools, inventory and control.
 
-- [ATA_85-90-INFRASTRUCTURE_INTERFACE_STANDARDS](ATA_85-90-INFRASTRUCTURE_INTERFACE_STANDARDS/)  
-  Normative airport interfaces: fluids, HVDC power, datalink, physical envelopes, compliance tests.
+- [ATA_85-FLUID_INTERFACES_AND_SERVICING](ATA_85-FLUID_INTERFACES_AND_SERVICING/)  
+  Standards for LH₂ and LCO₂: interfaces, couplings, and servicing procedures.
+
+- [ATA_86-ELECTRICAL_AND_DATA_INTERFACES](ATA_86-ELECTRICAL_AND_DATA_INTERFACES/)  
+  Standards for HVDC power and gate data link: connectors, protocols, security.
+
+- [ATA_87-PHYSICAL_AND_AIRFRAME_INTERFACES](ATA_87-PHYSICAL_AND_AIRFRAME_INTERFACES/)  
+  Standards for gate compatibility, physical envelopes, and automated docking.
+
+- [ATA_88-GROUND_OPERATIONS_AUTOMATION](ATA_88-GROUND_OPERATIONS_AUTOMATION/)  
+  Roadmap for ground operations automation.
+
+- [ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION](ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION/)  
+  AMPEL360-Ready certification program and compliance test procedures.
+
+- [ATA_90-RESERVED](ATA_90-RESERVED/)  
+  Reserved for future expansion of infrastructure standards.
 
 - [ATA_115-FLIGHT_SIMULATOR_SYSTEMS](ATA_115-FLIGHT_SIMULATOR_SYSTEMS/)  
   Qualification (QTG), aircraft data packages, simulator architecture, ops & maintenance, software, logs.

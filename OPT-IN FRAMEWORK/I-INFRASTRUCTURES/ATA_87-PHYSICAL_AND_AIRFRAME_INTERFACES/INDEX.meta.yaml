@@ -1,0 +1,35 @@
+schema_version: "1.1"
+id: "ATA_87-PHYSICAL_AND_AIRFRAME_INTERFACES"
+document:
+  type: "INDEX"
+  title: "Physical and Airframe Interfaces - ATA 87"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+description: |
+  ATA 87 chapter defining standards for physical and structural interfaces
+  between the AMPEL360 aircraft and ground infrastructure.
+subsections:
+  - id: "01-GATE_COMPATIBILITY"
+    title: "Gate Compatibility"
+    description: "Standards for boarding gate compatibility"
+  - id: "02-AUTOMATED_DOCKING"
+    title: "Automated Docking"
+    description: "Standards for automated docking systems"
+governance:
+  lifecycle_states:
+    - "DRAFT"
+    - "CANDIDATE"
+    - "RATIFIED"
+    - "DEPRECATED"
+  verification: "Verifiable compliance through TEST_STD-89-xxx"
+  security_by_design: true
+crossrefs:
+  - "../ATA_53-FUSELAGE"
+  - "../ATA_10-PARKING_MOORING_STORAGE_RTS"
+  - "../ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-01-15T10:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-01-15T10:00:00Z"

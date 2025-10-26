@@ -1,0 +1,36 @@
+schema_version: "1.1"
+id: "ATA_86-ELECTRICAL_AND_DATA_INTERFACES"
+document:
+  type: "INDEX"
+  title: "Electrical and Data Interfaces - ATA 86"
+  revision: "1.0.0"
+  effective_date: "2029-06-01"
+  status: "CANDIDATE"
+description: |
+  ATA 86 chapter defining standards for electrical and data interfaces
+  between the AMPEL360 aircraft and ground infrastructure.
+subsections:
+  - id: "01-HIGH_VOLTAGE_DC_GROUND_POWER"
+    title: "High Voltage DC Ground Power"
+    description: "Standards for HVDC ground power"
+  - id: "02-HIGH_BANDWIDTH_GATE_INTERFACE"
+    title: "High Bandwidth Gate Interface"
+    description: "Standards for high-bandwidth gate data link"
+governance:
+  lifecycle_states:
+    - "DRAFT"
+    - "CANDIDATE"
+    - "RATIFIED"
+    - "DEPRECATED"
+  verification: "Verifiable compliance through TEST_STD-89-xxx"
+  security_by_design: true
+crossrefs:
+  - "../ATA_24-ELECTRICAL_POWER"
+  - "../ATA_46-INFORMATION_SYSTEMS"
+  - "../ATA_95-DIGITAL_PRODUCT_PASSPORT"
+  - "../ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION"
+audit:
+  created_by: "AMPEL360 Infrastructure Standards Team"
+  created_utc: "2029-01-15T10:00:00Z"
+  modified_by: "AMPEL360 Infrastructure Standards Team"
+  modified_utc: "2029-01-15T10:00:00Z"
