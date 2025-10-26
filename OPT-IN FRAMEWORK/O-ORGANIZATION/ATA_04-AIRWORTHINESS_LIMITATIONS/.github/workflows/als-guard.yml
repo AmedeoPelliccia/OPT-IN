@@ -94,8 +94,25 @@ jobs:
             DOC_FILE="${META_FILE%.meta.yaml}"
             
             if [ -f "$DOC_FILE" ]; then
-              # Use Python to extract checksum from YAML
-              EXPECTED_CHECKSUM=$(python3 -c "import yaml; data = yaml.safe_load(open('$META_FILE')); print(data.get('integrity', {}).get('checksum', {}).get('value', ''))")
+              # Use Python to extract checksum from YAML with error handling
+              EXPECTED_CHECKSUM=$(python3 -c "
+import yaml
+import sys
+try:
+    with open('$META_FILE', 'r') as f:
+        data = yaml.safe_load(f)
+        print(data.get('integrity', {}).get('checksum', {}).get('value', ''))
+except Exception as e:
+    print('ERROR', file=sys.stderr)
+    sys.exit(1)
+" 2>&1)
+              
+              if [ $? -ne 0 ]; then
+                echo "  ✗ Failed to parse metadata: $(basename "$META_FILE")"
+                CHECKSUM_ERRORS=$((CHECKSUM_ERRORS + 1))
+                continue
+              fi
+              
               ACTUAL_CHECKSUM=$(sha256sum "$DOC_FILE" | awk '{print $1}')
               
               if [ "$EXPECTED_CHECKSUM" = "$ACTUAL_CHECKSUM" ]; then
@@ -113,7 +130,7 @@ jobs:
           
           if [ $CHECKSUM_ERRORS -gt 0 ]; then
             echo ""
-            echo "✗ Found $CHECKSUM_ERRORS checksum mismatches"
+            echo "✗ Found $CHECKSUM_ERRORS checksum errors"
             exit 1
           fi
         continue-on-error: true
@@ -126,8 +143,24 @@ jobs:
           MISMATCHES=0
           
           while IFS= read -r META_FILE; do
-            # Use Python to extract ID from YAML
-            ID=$(python3 -c "import yaml; data = yaml.safe_load(open('$META_FILE')); print(data.get('id', ''))")
+            # Use Python to extract ID from YAML with error handling
+            ID=$(python3 -c "
+import yaml
+import sys
+try:
+    with open('$META_FILE', 'r') as f:
+        data = yaml.safe_load(f)
+        print(data.get('id', ''))
+except Exception as e:
+    print('ERROR', file=sys.stderr)
+    sys.exit(1)
+" 2>&1)
+            
+            if [ $? -ne 0 ]; then
+              echo "  ✗ Failed to parse metadata: $(basename "$META_FILE")"
+              MISMATCHES=$((MISMATCHES + 1))
+              continue
+            fi
             
             # Extract ID from filename
             BASENAME=$(basename "$META_FILE" .md.meta.yaml)
