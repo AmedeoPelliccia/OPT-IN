@@ -498,3 +498,152 @@ OPT-IN FRAMEWORK/
 
   * [`SDS_MIL-PRF-23377_Primer.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/05-SAFETY_DATA/safety_data_sheets/SDS_MIL-PRF-23377_Primer.md)
   * [`SDS_BMS-3-26_Grease.md`](OPT-IN%20FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/05-SAFETY_DATA/safety_data_sheets/SDS_BMS-3-26_Grease.md)
+
+---
+
+## **`O-ORGANIZATION / ATA 18 – VIBRATION AND NOISE ANALYSIS`**
+
+This chapter governs all vibration and acoustic monitoring across the AMPEL360 fleet. It defines how vibration and sound data are acquired, analyzed, and used to detect early failures in propulsion and structure, and to maintain passenger-comfort and certification limits.
+
+### **Governance and Purpose**
+
+* **Propulsion Health:** Early detection of open-fan propulsor, gearbox, and turbine anomalies.
+* **Structural Integrity:** Tracking abnormal airframe vibration or potential flutter conditions in the BWB.
+* **Passenger Comfort:** Management of cabin acoustic levels and support for active noise-cancellation systems.
+* **Data-Driven Maintenance:** Supplies condition-monitoring inputs for ATA 92 (Model-Based Maintenance) and ATA 95 (DPP).
+
+---
+
+### **Audit-Ready Directory Structure**
+
+```
+/O-ORGANIZATION
+└── /ATA_18-VIBRATION_AND_NOISE_ANALYSIS
+    ├── 00_README.md
+    ├── INDEX.meta.yaml
+    ├── /01-PROGRAM_PLAN_AND_GOVERNANCE
+    │   └── PLAN_Vibration-And-Noise-Management-Program.md
+    ├── /02-SYSTEM_ARCHITECTURE_AND_DESCRIPTION
+    │   ├── ARCH_Data-Acquisition-And-Processing-Unit.md
+    │   └── MAP_Sensor-Locations-And-Part-Numbers.md
+    ├── /03-OPERATIONAL_AND_MAINTENANCE_PROCEDURES
+    │   ├── /01-FLIGHT_OPERATIONS
+    │   │   └── FCOM-REF_In-Flight-Vibration-Monitoring-Procedures.md
+    │   └── /02-MAINTENANCE
+    │       ├── PROC_Ground-Vibration-Survey-GVS.md
+    │       ├── PROC_Routine-Data-Download-And-Analysis.md
+    │       └── PROC_Open-Fan-Propulsor-Balancing.md
+    ├── /04-BASELINE_SIGNATURES_AND_LIMITS
+    │   ├── SIG_Baseline-Vibration-Signature-Open-Fan.json
+    │   ├── SIG_Baseline-Acoustic-Signature-Cabin.json
+    │   └── LIMITS_Vibration-And-Noise-Alert-Levels.md
+    └── /05-ANALYSIS_DATA_AND_REPORTS
+        ├── /incident_reports
+        │   └── INCIDENT_MSN-001_High-Vib-Event_20290315.md
+        └── /fleet_trending_reports
+            └── REPORT_Fleet-Vibration-Trend-Analysis_2029-Q1.md
+```
+
+---
+
+### **Baseline Alert Limits**
+
+*(File – `LIMITS_Vibration-And-Noise-Alert-Levels.md`)*
+
+| Subsystem          | Metric               | Green  | Amber (Action)                    | Red (Ground)                  |
+| ------------------ | -------------------- | ------ | --------------------------------- | ----------------------------- |
+| Open-Fan Propulsor | 1× synchronous (ips) | ≤ 0.15 | 0.16–0.25 (complete within 10 FH) | > 0.25 (immediate inspection) |
+| Gearbox            | BPFO/BPFI (g RMS)    | ≤ 0.20 | 0.21–0.35 (trend 7 days)          | > 0.35                        |
+| Turbine Core       | 1× spool (ips)       | ≤ 0.10 | 0.11–0.18                         | > 0.18                        |
+| Cabin (Seat 25C)   | dB(A) Cruise         | ≤ 78   | 79–82 (adjust ANC)                | > 82 (root-cause analysis)    |
+
+*(Replace placeholder values with certified limits.)*
+
+---
+
+### **Sensor Mapping Guidelines**
+
+*(File – `MAP_Sensor-Locations-And-Part-Numbers.md`)*
+
+| Rule            | Example                                                                           |
+| --------------- | --------------------------------------------------------------------------------- |
+| Naming          | `VIB_<ATA>-<LOC>-<AXIS>-<IDX>` → `VIB_61-NAC_L-AX_01`                             |
+| Types           | IEPE 10 mV/g (propulsor), triax 100 mV/g (airframe), optical tach, acoustic array |
+| Sampling        | 25.6 kHz (rotating), 2 kHz (structure), 48 kHz/24-bit (acoustic)                  |
+| Synchronization | IEEE-1588 PTP / TAI timestamps                                                    |
+
+---
+
+### **Program Plan (Excerpt)**
+
+*(File – `PLAN_Vibration-And-Noise-Management-Program.md`)*
+
+* **Objectives:** safety, efficiency, comfort.
+* **On-Board Flow:** sensors → DAU → CMS (ATA 45) alerts.
+* **Ground Flow:** full data download ≤ 24 h; ingested into analytics platform; archived to DPP (ATA 95).
+* **Retention:** raw 24 months, features 10 years, critical events indefinite.
+
+---
+
+### **Routine Data Analysis Procedure (Excerpt)**
+
+*(File – `PROC_Routine-Data-Download-And-Analysis.md`)*
+
+* **KPIs:** RMS, kurtosis, crest factor, spectral kurtosis, envelope analysis, cepstrum.
+* **Order tracking:** 1×, 2×, ½× with sidebands ± N× fₘₒd.
+* **Trend rule:** EWMA λ = 0.2; alert if z-score > 3 for 3 consecutive flights.
+* **Outputs:** HUMS summary + DPP update + ATA 92 RUL input.
+
+---
+
+### **Metadata Sidecar Example**
+
+*(File – `PLAN_Vibration-And-Noise-Management-Program.md.meta.yaml`)*
+
+```yaml
+schema_version: "1.1"
+id: "PLAN_Vibration-And-Noise-Management-Program"
+document:
+  type: "PLAN"
+  title: "Vibration and Noise Management Program Plan"
+  revision: "1.0.0"
+  effective_date: "2028-04-15"
+effectivity:
+  scope: "Program-Wide"
+approvals:
+  - authority: "Airworthiness Engineering"
+    status: "Released"
+    date: "2028-04-10"
+traceability:
+  crossrefs: ["ATA 61", "ATA 72", "ATA 45", "ATA 92", "ATA 95"]
+integrity:
+  checksum: { algorithm: "sha256", value: "<sha256>" }
+```
+
+---
+
+### **CI Validation Rules**
+
+* Verify all `.meta.yaml` sidecars follow schema v1.1.
+* Confirm every `INCIDENT_*.md` includes MSN, phase, violated limit, corrective action, DPP link.
+* Validate `.json` signatures against checksums in `INDEX.meta.yaml`.
+* Ensure each sensor record defines PN, range, sensitivity, position, and routing to ATA 91 network.
+
+---
+
+### **Extended Fields for Baseline Signatures**
+
+```yaml
+environment: { oew_kg: <int>, fuel_state: "<SAF/H2 mix>", temp_C: <int>, wind_kts: <int> }
+repeatability: { runs: 3, max_delta_percent: 5 }
+instrumentation: { gse_id: "AP360-T020", calibration_due: "YYYY-MM-DD" }
+```
+
+---
+
+**Cross-References:**
+
+* ATA 61 / 72 / 79 (engine and propulsion health)
+* ATA 03 (GSE tooling)
+* ATA 92 / 95 (for predictive maintenance and data traceability)
+* ATA 05 (for scheduled GVS integration)

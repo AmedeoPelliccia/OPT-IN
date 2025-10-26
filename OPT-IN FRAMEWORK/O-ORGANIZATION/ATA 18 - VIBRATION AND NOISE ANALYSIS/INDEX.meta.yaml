@@ -1,0 +1,39 @@
+schema_version: "1.1"
+folder: "ATA_18-VIBRATION_AND_NOISE_ANALYSIS"
+purpose: "Governs all vibration and acoustic monitoring across the AMPEL360 fleet, defining data acquisition, analysis, and usage for early failure detection in propulsion and structure."
+owners: ["Airworthiness Engineering", "Propulsion Engineering", "Structural Analysis", "Maintenance Planning"]
+approvers:
+  - role: "Head of Airworthiness"
+    name: "TBD"
+    effective_date: "2028-04-15"
+  - role: "Chief Engineer - Propulsion"
+    name: "TBD"
+    effective_date: "2028-04-15"
+data_classes: ["INTERNAL", "REGULATED", "OPERATIONAL"]
+retention_policy: 
+  raw_data_months: 24
+  features_years: 10
+  critical_events: "indefinite"
+crypto: 
+  sig_algo: "ed25519"
+  hash_algo: "sha256"
+  transparency_log: true
+crossrefs: ["ATA_45", "ATA_61", "ATA_72", "ATA_79", "ATA_92", "ATA_95", "ATA_03", "ATA_05"]
+standards: ["FAA AC 36-4", "ICAO Annex 16", "SAE ARP5050", "IEEE 1588"]
+alert_thresholds:
+  open_fan_propulsor:
+    green_ips: 0.15
+    amber_ips: 0.25
+    red_ips: 0.25
+  gearbox:
+    green_g_rms: 0.20
+    amber_g_rms: 0.35
+    red_g_rms: 0.35
+  turbine_core:
+    green_ips: 0.10
+    amber_ips: 0.18
+    red_ips: 0.18
+  cabin_acoustic:
+    green_dba: 78
+    amber_dba: 82
+    red_dba: 82
