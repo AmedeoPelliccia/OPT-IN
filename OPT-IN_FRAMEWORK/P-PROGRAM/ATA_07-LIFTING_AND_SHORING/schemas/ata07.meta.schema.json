@@ -1,0 +1,212 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata07.meta.schema.json",
+  "title": "ATA 07 Metadata Schema",
+  "description": "Schema for metadata sidecars in ATA 07 Lifting and Shoring chapter",
+  "type": "object",
+  "required": ["schema_version", "id", "document", "effectivity", "safety", "approvals", "traceability", "integrity"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Schema version in MAJOR.MINOR format"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the document"
+    },
+    "document": {
+      "type": "object",
+      "required": ["type", "title", "revision", "effective_date"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["PROC", "CHK", "DATA", "FIG"],
+          "description": "Document type"
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable title"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Semantic version"
+        },
+        "effective_date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "description": "Date when this revision becomes effective (YYYY-MM-DD)"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number applicability (e.g., 'ALL', '001-050')"
+        },
+        "config": {
+          "type": "string",
+          "description": "Configuration applicability"
+        }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "required": ["hazards", "criticality"],
+      "properties": {
+        "hazards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of identified hazards"
+        },
+        "criticality": {
+          "type": "string",
+          "enum": ["Low", "Medium", "High", "Critical"],
+          "description": "Overall criticality level"
+        }
+      }
+    },
+    "gse_required": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["part_number", "qty"],
+        "properties": {
+          "part_number": {
+            "type": "string"
+          },
+          "qty": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Ground Support Equipment required"
+    },
+    "stability": {
+      "type": "object",
+      "properties": {
+        "min_points": {
+          "type": "integer",
+          "minimum": 3,
+          "description": "Minimum support points required"
+        },
+        "attitude_tolerance_deg": {
+          "type": "object",
+          "properties": {
+            "pitch": {
+              "type": "number"
+            },
+            "roll": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "wind_knots_max": {
+          "type": "number",
+          "description": "Maximum wind speed in knots"
+        },
+        "temp_range_C": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Temperature range [min, max] in Celsius"
+        }
+      }
+    },
+    "floor_loading": {
+      "type": "object",
+      "properties": {
+        "min_base_diameter_mm": {
+          "type": "number",
+          "description": "Minimum base diameter in millimeters"
+        },
+        "mat_spec": {
+          "type": "string",
+          "description": "Reference to floor mat specification"
+        }
+      }
+    },
+    "recovery_proc": {
+      "type": "string",
+      "description": "Reference to recovery procedure"
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Draft", "Review", "Released", "Superseded"]
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "required": ["source_reports"],
+      "properties": {
+        "source_reports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source engineering reports"
+        },
+        "srm_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Structural Repair Manual references"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["checksum"],
+      "properties": {
+        "checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256", "sha512"]
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-f0-9]+$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

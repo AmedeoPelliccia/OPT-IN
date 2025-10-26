@@ -1,0 +1,65 @@
+schema_version: "1.1"
+id: "PROC_Jacking-Full-Aircraft-Level"
+document:
+  type: "PROC"
+  title: "Full Aircraft Jacking (Level Attitude)"
+  revision: "1.2.0"
+  effective_date: "2028-05-10"
+effectivity:
+  msn: "ALL"
+  config: "All configurations"
+safety:
+  hazards:
+    - "Structural Overload"
+    - "Instability/Tipping"
+    - "Personnel Crush Injury"
+    - "Equipment Failure"
+  criticality: "High"
+gse_required:
+  - part_number: "AP360-H003"
+    qty: 2
+    description: "Hydraulic jack, main gear capacity"
+  - part_number: "AP360-H004"
+    qty: 1
+    description: "Hydraulic jack, nose gear capacity"
+  - part_number: "AP360-JACK-NOS-001"
+    qty: 1
+    description: "Nose jack adapter"
+  - part_number: "AP360-JACK-MLH-001"
+    qty: 1
+    description: "Main jack adapter, left"
+  - part_number: "AP360-JACK-MRH-001"
+    qty: 1
+    description: "Main jack adapter, right"
+stability:
+  min_points: 3
+  attitude_tolerance_deg:
+    pitch: 0.1
+    roll: 0.1
+environment:
+  wind_knots_max: 15
+  temp_range_C: [-20, 50]
+floor_loading:
+  min_base_diameter_mm: 500
+  mat_spec: "See DATA_Shoring-Floor-Load-Mats_rev1.0.0"
+recovery_proc: "PROC_Recovery-Off-Jacks_rev1.0.0_20280610.md"
+approvals:
+  - authority: "Structural Engineering"
+    status: "Released"
+    date: "2028-05-08"
+  - authority: "Quality Assurance"
+    status: "Released"
+    date: "2028-05-08"
+  - authority: "Chief Engineer"
+    status: "Released"
+    date: "2028-05-09"
+traceability:
+  source_reports:
+    - "STR-RPT-07-001_Jacking-Load-Analysis"
+  srm_refs:
+    - "SRM 07-10-00"
+    - "SRM 07-20-00"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "placeholder_to_be_calculated_after_file_finalization"

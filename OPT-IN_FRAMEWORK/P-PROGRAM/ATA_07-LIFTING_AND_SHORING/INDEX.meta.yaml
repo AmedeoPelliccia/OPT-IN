@@ -1,0 +1,53 @@
+schema_version: "1.1"
+id: "ATA_07_INDEX"
+chapter: "ATA 07 - LIFTING AND SHORING"
+governance:
+  permits_required:
+    - "Pre-Lift Permit"
+    - "W&B Approval"
+limits:
+  wind_knots:
+    jacking_max: 15
+    shoring_max: 25
+  seismic: "No lifts during local seismic advisory"
+  temp_range_C: [-20, 50]
+traceability:
+  srm_refs:
+    - "SRM 07-10-00"
+    - "SRM 07-20-00"
+  analyses:
+    - "STR-RPT-07-001"
+    - "W&B-ENVELOPE-08-003"
+calibration:
+  gse_due_if_within_days: 30
+integrity:
+  checksum_algorithm: "sha256"
+files:
+  - id: "DATA_Max-Jacking-Loads-vs-CG_rev1.1.0_20280428.csv"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "FIG_Jacking-And-Shoring-Points_rev2.0.0_20280430.dxf"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "CHK_Jacking-PrePost-Checklist_rev1.0.0_20280510.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "PROC_Jacking-Full-Aircraft-Level_rev1.2.0_20280510.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "PROC_Jacking-Single-Wheel-Change_rev1.1.0_20280515.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "DATA_Shoring-Floor-Load-Mats_rev1.0.0_20280518.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "PROC_Shoring-Landing-Gear-Retraction-Test_rev1.0.0_20280520.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "PROC_Shoring-Long-Term-Storage_rev1.0.0_20280525.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "DATA_Sling-Calc-and-WLL_rev1.0.0_20280530.xlsx"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "PROC_Hoisting-Main-Battery-Pack_rev1.0.0_20280605.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "PROC_Hoisting-Open-Fan-Propulsor_rev1.0.0_20280601.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "DATA_Ballast-Planning-Tables_rev1.0.0_20280512.csv"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "DATA_Environmental-Limits_rev1.0.0_20280512.md"
+    sha256: "placeholder_checksum_to_be_calculated"
+  - id: "FIG_Hoisting-Sling-Attachments_rev1.5.0_20280505.dxf"
+    sha256: "placeholder_checksum_to_be_calculated"

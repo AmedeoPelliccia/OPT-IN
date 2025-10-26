@@ -1,0 +1,36 @@
+# DATA_Sling-Calc-and-WLL Excel File Placeholder
+**Revision:** 1.0.0  
+**Effective Date:** 2028-05-30  
+**Document ID:** DATA_Sling-Calc-and-WLL_rev1.0.0_20280530.xlsx
+
+## Notice
+This is a placeholder for the Excel spreadsheet file. The actual Excel file (.xlsx) contains:
+
+### Worksheets:
+1. **Instructions** - How to use the spreadsheet
+2. **Sling Database** - Approved slings with WLL ratings
+3. **Angle Calculator** - Calculate load reduction based on angles
+4. **Component Lifts** - Pre-calculated configurations for common lifts
+5. **Custom Calculator** - Enter custom parameters for unique lifts
+6. **Load Test Records** - Sling inspection and load test log
+
+### Key Features:
+- Automatic calculation of angle-reduced WLL
+- Safety factor verification (minimum 5:1)
+- Load distribution for multi-leg configurations
+- Visual angle reference diagrams
+- Warning flags for unsafe configurations
+
+### To Obtain:
+The actual Excel file must be obtained from:
+- **Source:** Engineering Document Control
+- **Contact:** doc-control@ampel360.com
+- **File Name:** DATA_Sling-Calc-and-WLL_rev1.0.0_20280530.xlsx
+- **Format:** Microsoft Excel 2016 or later (.xlsx)
+
+### Alternative:
+For field use without Excel access, refer to the markdown version:
+`DATA_Sling-Calc-and-WLL_rev1.0.0_20280530.md`
+
+---
+*This placeholder ensures file naming consistency in the repository structure.*

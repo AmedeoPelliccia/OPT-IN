@@ -1,0 +1,191 @@
+# Jacking and Shoring Points Drawing
+**Revision:** 2.0.0  
+**Effective Date:** 2028-04-30  
+**Document ID:** FIG_Jacking-And-Shoring-Points_rev2.0.0_20280430
+
+## Purpose
+This is a placeholder for the engineering drawing showing all approved jacking and shoring points for the AMPEL360 aircraft.
+
+## Drawing Content (DXF Format)
+
+**NOTE:** The actual CAD file is in DXF format and should be opened with appropriate CAD software (AutoCAD, DraftSight, LibreCAD, etc.).
+
+### Drawing Includes:
+
+1. **Primary Jacking Points**
+   - Nose jack point (Station 8.5)
+   - Main jack point LH (Station 30.0, port side)
+   - Main jack point RH (Station 30.0, starboard side)
+   - Jack adapter specifications
+   - Load limits and capacities
+
+2. **Auxiliary Jacking Points**
+   - Tail jack point (Station 55.0)
+   - Wing jack points (if applicable)
+   - Emergency jacking locations
+
+3. **Shoring Support Points**
+   - Forward fuselage shoring (Station 45)
+   - Mid-fuselage shoring (Station 85, port and starboard)
+   - Aft fuselage shoring (Station 112, port and starboard)
+   - Tail support (Station 145)
+   - Wing support points (Stations WS 3.5m, WS 8.0m)
+
+4. **Floor Load Distribution**
+   - Jack pad footprint dimensions
+   - Floor loading diagrams
+   - Mat placement requirements
+
+5. **Clearance Envelopes**
+   - Minimum clearances during jacking
+   - Landing gear retraction clearances
+   - Equipment access zones
+
+### Drawing Specifications
+
+- **File Format:** AutoCAD DXF R2018
+- **Units:** Millimeters
+- **Scale:** 1:100 for overall aircraft, 1:20 for detail views
+- **Views Included:**
+  - Side view (profile)
+  - Plan view (top)
+  - Front view
+  - Detail sections (jack points)
+- **Layers:**
+  - JACK-PRIMARY: Primary jacking points
+  - JACK-AUX: Auxiliary jacking points
+  - SHORE-POINTS: Shoring support locations
+  - LOAD-DATA: Load limit annotations
+  - CLEARANCE: Clearance zones
+  - STATIONS: Fuselage station lines
+  - TITLE-BLOCK: Drawing title block
+
+### Usage Instructions
+
+1. Open DXF file in CAD software
+2. Review applicable sections for operation being performed
+3. Print at specified scale for field use
+4. Verify revision matches this document
+5. Cross-reference with load data in DATA_Max-Jacking-Loads-vs-CG
+
+### File Location
+The actual DXF file should be stored at:
+`/04-DIAGRAMS_AND_LOAD_DATA/FIG_Jacking-And-Shoring-Points_rev2.0.0_20280430.dxf`
+
+## Key Jacking Point Specifications
+
+### Nose Jack Point
+- **Location:** Fuselage Station 8.5, centerline
+- **Jack Adapter:** AP360-JACK-NOS-001
+- **Maximum Load:** 12,500 kg (at forward CG)
+- **Minimum Load:** 2,500 kg (at aft CG)
+- **Jack Pad Diameter:** 300mm minimum
+- **Floor Mat Required:** Type B or C
+
+### Main Jack Point - LH (Port)
+- **Location:** Fuselage Station 30.0, 2.5m port of centerline
+- **Jack Adapter:** AP360-JACK-MLH-001
+- **Maximum Load:** 22,000 kg
+- **Jack Pad Diameter:** 500mm minimum
+- **Floor Mat Required:** Type A or B
+
+### Main Jack Point - RH (Starboard)
+- **Location:** Fuselage Station 30.0, 2.5m starboard of centerline
+- **Jack Adapter:** AP360-JACK-MRH-001
+- **Maximum Load:** 22,000 kg
+- **Jack Pad Diameter:** 500mm minimum
+- **Floor Mat Required:** Type A or B
+
+### Tail Jack Point (Auxiliary)
+- **Location:** Fuselage Station 55.0, centerline
+- **Jack Adapter:** AP360-JACK-TAL-001
+- **Maximum Load:** 8,000 kg
+- **Usage:** Aft CG configurations, component removal
+- **Floor Mat Required:** Type B or C
+
+## Shoring Point Specifications
+
+### Forward Fuselage Shoring
+- **Location:** Station 45, frame reinforcement
+- **Load Capacity:** 15,000 kg
+- **Contact Area:** 200mm diameter pad required
+- **Usage:** CG shift prevention, long-term storage
+
+### Mid-Fuselage Shoring (Port/Starboard)
+- **Location:** Station 85, floor beam attachment
+- **Load Capacity:** 15,000 kg each
+- **Symmetry Required:** Both sides must be installed together
+- **Usage:** Fuselage sag prevention during gear retraction tests
+
+### Wing Support Points
+- **Inboard (WS 3.5m):** 
+  - Load capacity 5,000 kg
+  - Lower wing skin reinforced area
+  - Neoprene padding required (10mm)
+- **Outboard (WS 8.0m):**
+  - Load capacity 3,000 kg
+  - Lower wing skin reinforced area
+  - Neoprene padding required (10mm)
+
+## Critical Dimensions
+
+| Parameter | Dimension | Tolerance |
+| :--- | :--- | :--- |
+| Nose to main jack spacing | 21,500 mm | ±50 mm |
+| Main jack lateral spacing | 5,000 mm | ±50 mm |
+| Ground clearance (jacked) | 800 mm min | — |
+| Main gear retraction clearance | 1,200 mm min | — |
+| Nose gear retraction clearance | 900 mm min | — |
+
+## Jacking Sequence Notes
+
+**Shown on drawing:**
+1. Initial contact sequence (all jacks simultaneously)
+2. Progressive lifting increments (marked on side view)
+3. Attitude tolerance zones (±0.1° from level)
+4. Safety stand positions for backup support
+
+## Coordinate System
+
+- **Longitudinal (X):** Fuselage stations, nose = 0, positive aft
+- **Lateral (Y):** Centerline = 0, positive to starboard
+- **Vertical (Z):** Ground datum, positive up
+
+## Inspection and Maintenance
+
+All jacking and shoring points must be inspected:
+- **Before each use:** Visual inspection for damage, corrosion, foreign objects
+- **After hard landing:** Complete visual and dimensional inspection
+- **Annually:** NDT inspection (ultrasonic or magnetic particle)
+- **After any structural repair in area:** Engineering verification
+
+## References
+- Engineering Drawing: 07-00-001 (Aircraft General Arrangement)
+- Engineering Drawing: 07-10-001 (Jacking Points Detail)
+- Engineering Drawing: 07-20-001 (Shoring Points Detail)
+- STR-RPT-07-001 (Jacking Load Analysis)
+- DATA_Max-Jacking-Loads-vs-CG_rev1.1.0_20280428.csv
+
+## Revision History
+
+| Revision | Date | Description |
+| :--- | :--- | :--- |
+| 1.0.0 | 2027-12-15 | Initial release |
+| 1.5.0 | 2028-02-20 | Added auxiliary tail jack point |
+| 2.0.0 | 2028-04-30 | Added wing shoring points, updated load limits |
+
+## Approval
+
+| Authority | Status | Date |
+| :--- | :--- | :--- |
+| Structural Engineering | Released | 2028-04-28 |
+| Stress Analysis | Released | 2028-04-29 |
+| Quality Assurance | Released | 2028-04-29 |
+
+---
+*This is a controlled document. The actual DXF file must be obtained from Engineering Document Control.*
+
+**To obtain the DXF file:**
+Contact: Document Control at doc-control@ampel360.com
+Reference: FIG_Jacking-And-Shoring-Points_rev2.0.0_20280430
+Priority: CRITICAL SAFETY DOCUMENT
