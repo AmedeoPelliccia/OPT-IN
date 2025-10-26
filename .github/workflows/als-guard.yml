@@ -102,8 +102,14 @@ try:
     with open('$META_FILE', 'r') as f:
         data = yaml.safe_load(f)
         print(data.get('integrity', {}).get('checksum', {}).get('value', ''))
+except FileNotFoundError:
+    print('File not found: $META_FILE', file=sys.stderr)
+    sys.exit(1)
+except yaml.YAMLError as e:
+    print('YAML parse error in $META_FILE: {}'.format(e), file=sys.stderr)
+    sys.exit(1)
 except Exception as e:
-    print('ERROR', file=sys.stderr)
+    print('Error reading $META_FILE: {}'.format(e), file=sys.stderr)
     sys.exit(1)
 " 2>&1)
               
@@ -151,8 +157,14 @@ try:
     with open('$META_FILE', 'r') as f:
         data = yaml.safe_load(f)
         print(data.get('id', ''))
+except FileNotFoundError:
+    print('File not found: $META_FILE', file=sys.stderr)
+    sys.exit(1)
+except yaml.YAMLError as e:
+    print('YAML parse error in $META_FILE: {}'.format(e), file=sys.stderr)
+    sys.exit(1)
 except Exception as e:
-    print('ERROR', file=sys.stderr)
+    print('Error reading $META_FILE: {}'.format(e), file=sys.stderr)
     sys.exit(1)
 " 2>&1)
             
