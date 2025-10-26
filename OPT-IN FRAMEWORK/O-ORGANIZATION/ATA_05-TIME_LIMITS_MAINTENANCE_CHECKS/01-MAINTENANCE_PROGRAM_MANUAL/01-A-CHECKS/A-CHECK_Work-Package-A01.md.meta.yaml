@@ -1,0 +1,47 @@
+schema_version: "1.1"
+id: "A-CHECK_Work-Package-A01"
+document:
+  type: "MAINT-CHECK"
+  title: "A-Check Work Package A01"
+  revision: "1.0.0"
+  effective_date: "2028-07-15"
+effectivity:
+  msn: "ALL"
+  operator_id: "ANY" # Can be customized per operator
+interval:
+  basis: "FH"
+  value: 1000
+  tolerance:
+    plus: 100    # Can be performed up to 100 FH late
+    minus: 0     # Must not be performed early without approval
+approvals:
+  - authority: "EASA" # Or relevant NAA for the operator
+    status: "Approved"
+    date: "2028-07-01"
+traceability:
+  source_documents:
+    - "MPM_Master-Document_rev1.0.0"
+    - "MPD_Master-Document_rev1.0.0"
+  source_tasks:
+    - "MPD_TASK_24-10-01"
+    - "MPD_TASK_27-11-05"
+    - "MPD_TASK_32-00-01"
+    - "MPD_TASK_79-20-01"
+    - "MPD_TASK_21-00-01"
+    - "MPD_TASK_29-10-01"
+    - "MPD_TASK_52-00-01"
+    - "MPD_TASK_33-00-01"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<calculated-on-commit>"
+metadata:
+  owner: "Maintenance Engineering"
+  custodian: "Line Maintenance"
+  classification: "Controlled"
+  estimated_duration_hours: 12
+  location_requirement: "Line maintenance facility"
+  special_requirements:
+    - "Standard GSE"
+    - "Calibrated torque wrenches"
+    - "Oil servicing equipment"

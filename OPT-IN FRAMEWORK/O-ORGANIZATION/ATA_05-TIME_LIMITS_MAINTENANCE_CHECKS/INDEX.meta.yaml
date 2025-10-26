@@ -1,0 +1,60 @@
+schema_version: "1.1"
+id: "ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS"
+document:
+  type: "ATA-CHAPTER"
+  title: "Time Limits and Maintenance Checks"
+  chapter: "05"
+  revision: "1.0.0"
+  effective_date: "2028-07-01"
+  status: "Active"
+
+description: >
+  Operator-approved scheduled maintenance program consolidating MPD (ATA 01) 
+  and ALS (ATA 04) requirements into executable work packages (A/C/S checks).
+
+governance:
+  regulatory_basis:
+    - "FAA AC 120-16"
+    - "EASA Part-M"
+    - "ATA MSG-3"
+  approval_required: true
+  approval_authority: "NAA"
+
+contents:
+  - id: "01-MAINTENANCE_PROGRAM_MANUAL"
+    path: "01-MAINTENANCE_PROGRAM_MANUAL/"
+    description: "Master Maintenance Program Manual with check packages"
+  - id: "02-TRACEABILITY_AND_COMPLIANCE"
+    path: "02-TRACEABILITY_AND_COMPLIANCE/"
+    description: "Traceability matrices and compliance documentation"
+  - id: "03-PROGRAM_CUSTOMIZATION_AND_DEVIATIONS"
+    path: "03-PROGRAM_CUSTOMIZATION_AND_DEVIATIONS/"
+    description: "Deviation procedures and approved customizations"
+
+dependencies:
+  source_chapters:
+    - "ATA_01-MAINTENANCE_POLICY_INFORMATION"
+    - "ATA_04-AIRWORTHINESS_LIMITATIONS"
+  related_chapters:
+    - "ATA_12-SERVICING"
+    - "ATA_45-ONBOARD_MAINTENANCE_SYSTEMS"
+
+traceability:
+  upstream:
+    - "ATA_01/MPD_Master-Document"
+    - "ATA_04/ALS_Master-Document"
+  downstream:
+    - "Maintenance work packages"
+    - "Aircraft maintenance records"
+
+metadata:
+  owner: "Maintenance Engineering"
+  custodian: "Continuing Airworthiness"
+  classification: "Controlled"
+  retention_period: "Life of aircraft + 10 years"
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<calculated-on-commit>"
+  last_verified: "2028-07-01"
