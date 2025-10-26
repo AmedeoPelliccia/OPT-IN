@@ -36,7 +36,7 @@ All required GSE is available per the task requirements:
 - Safety equipment (gloves, safety glasses)
 
 ### 2.3 Documentation
-- [Aircraft Maintenance Manual (AMM)](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md)
+- [Aircraft Maintenance Manual (AMM)](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/README.md)
 - Illustrated Parts Catalog (IPC)
 - Aircraft technical log
 - Maintenance tracking system access
@@ -47,14 +47,14 @@ All required GSE is available per the task requirements:
 
 | Task ID | Description | Source (MPD/ALS) | AMM Reference | Sign-off (Name/Date) |
 | :--- | :--- | :--- | :--- | :--- |
-| A01-24-01 | Operational Check of Main AC Electrical System | MPD_TASK_24-10-01 | [24-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E2-ENERGY/ATA%2024%20-%20ELECTRICAL%20POWER%20(INCL.%2024-45-xx%20EWIS%20MONITORING)/README.md) | |
-| A01-27-01 | Lubrication of Flight Control Surface Actuators | MPD_TASK_27-11-05 | [27-11-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2027%20-%20FLIGHT%20CONTROLS%20(ACTUATION%20SYSTEMS)/README.md) | |
-| A01-32-01 | General Visual Inspection of Landing Gear | MPD_TASK_32-00-01 | [32-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2032%20-%20LANDING%20GEAR/README.md) | |
-| A01-79-01 | Engine Oil Servicing | MPD_TASK_79-20-01 | [79-20-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/P-PROPULSION/ATA%2079%20-%20OIL%20(INCL.%2079-30-xx%20OPEN-FAN%20GEARBOX%20OIL%20SYSTEM)/README.md) | |
-| A01-21-01 | Air Conditioning System Operational Check | MPD_TASK_21-00-01 | [21-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/E1-ENVIRONMENT/ATA%2021%20-%20AIR%20CONDITIONING%20&%20PRESSURIZATION/README.md) | |
-| A01-29-01 | Hydraulic System Pressure Check | MPD_TASK_29-10-01 | [29-10-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2029%20-%20HYDRAULIC%20POWER/README.md) | |
-| A01-52-01 | Door Operation and Safety Check | MPD_TASK_52-00-01 | [52-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/ATA%2052%20-%20DOORS/README.md) | |
-| A01-33-01 | Interior and Exterior Lighting Check | MPD_TASK_33-00-01 | [33-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C1-COCKPIT.CABIN,CARGO/ATA%2033%20-%20LIGHTS/README.md) | |
+| A01-24-01 | Operational Check of Main AC Electrical System | MPD_TASK_24-10-01 | [24-10-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_24-ELECTRICAL_POWER/README.md) | |
+| A01-27-01 | Lubrication of Flight Control Surface Actuators | MPD_TASK_27-11-05 | [27-11-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_27-FLIGHT_CONTROLS_ACTUATION_SYSTEMS/README.md) | |
+| A01-32-01 | General Visual Inspection of Landing Gear | MPD_TASK_32-00-01 | [32-00-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_32-LANDING_GEAR/README.md) | |
+| A01-79-01 | Engine Oil Servicing | MPD_TASK_79-20-01 | [79-20-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_79-OIL_INCL_79-30-xx_OPEN-FAN_GEARBOX_OIL_SYSTEM/README.md) | |
+| A01-21-01 | Air Conditioning System Operational Check | MPD_TASK_21-00-01 | [21-00-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/README.md) | |
+| A01-29-01 | Hydraulic System Pressure Check | MPD_TASK_29-10-01 | [29-10-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_29-HYDRAULIC_POWER/README.md) | |
+| A01-52-01 | Door Operation and Safety Check | MPD_TASK_52-00-01 | [52-00-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/README.md) | |
+| A01-33-01 | Interior and Exterior Lighting Check | MPD_TASK_33-00-01 | [33-00-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_33-LIGHTS/README.md) | |
 
 ---
 
@@ -75,9 +75,9 @@ All required GSE is available per the task requirements:
 
 ### 4.2 Task A01-27-01: Flight Control Lubrication
 **Procedure:**
-1. Access flight control actuators per [AMM 27-11-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2027%20-%20FLIGHT%20CONTROLS%20(ACTUATION%20SYSTEMS)/README.md)
+1. Access flight control actuators per [AMM 27-11-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_27-FLIGHT_CONTROLS_ACTUATION_SYSTEMS/README.md)
 2. Clean lubrication points
-3. Apply approved lubricant per [AMM 27-11-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2027%20-%20FLIGHT%20CONTROLS%20(ACTUATION%20SYSTEMS)/README.md) specifications
+3. Apply approved lubricant per [AMM 27-11-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_27-FLIGHT_CONTROLS_ACTUATION_SYSTEMS/README.md) specifications
 4. Verify smooth operation of controls
 5. Close and secure access panels
 
@@ -93,14 +93,14 @@ All required GSE is available per the task requirements:
 5. Inspect gear doors and mechanisms
 
 **Inspection Points:**
-- Tire pressure within [AMM 32-00-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/ATA%2032%20-%20LANDING%20GEAR/README.md) limits
+- Tire pressure within [AMM 32-00-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_32-LANDING_GEAR/README.md) limits
 - Brake pad thickness >3mm
 - No hydraulic leaks
 - All fasteners secure
 
 ### 4.4 Task A01-79-01: Engine Oil Servicing
 **Procedure:**
-1. Check engine oil level per [AMM 79-20-00](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/P-PROPULSION/ATA%2079%20-%20OIL%20(INCL.%2079-30-xx%20OPEN-FAN%20GEARBOX%20OIL%20SYSTEM)/README.md)
+1. Check engine oil level per [AMM 79-20-00](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_79-OIL_INCL_79-30-xx_OPEN-FAN_GEARBOX_OIL_SYSTEM/README.md)
 2. Add oil if below minimum mark
 3. Inspect for oil leaks
 4. Record oil quantity added
@@ -124,7 +124,7 @@ All required GSE is available per the task requirements:
 - FOD prevention measures in place
 
 ### 5.3 Quality Requirements
-- All torque values per [AMM](../../../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/README.md) specifications
+- All torque values per [AMM](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/README.md) specifications
 - Calibrated tools used where specified
 - Independent inspection for safety-critical items
 - Duplicate inspection for flight controls
@@ -196,4 +196,5 @@ If parts are replaced during this check:
 
 ---
 
-*Refs: [ATA 01](../../../../O-ORGANIZATION/ATA%2001%20-%20MAINTENANCE%20POLICY%20INFORMATION/README.md) (MPD), [ATA 04](../../../../O-ORGANIZATION/ATA%2004%20-%20AIRWORTHINESS%20LIMITATIONS/README.md) (ALS), [ATA 12](../../../../P-PROGRAM/ATA%2012%20-%20SERVICING/README.md) (Servicing)*
+*Refs: [ATA_01-MAINTENANCE_POLICY_INFORMATION](../../../../O-ORGANIZATION/ATA_01-MAINTENANCE_POLICY_INFORMATION/README.md) (MPD), [ATA_04-AIRWORTHINESS_LIMITATIONS](../../../../O-ORGANIZATION/ATA_04-AIRWORTHINESS_LIMITATIONS/README.md) (ALS), [ATA_12-SERVICING](../../../../P-PROGRAM/ATA_12-SERVICING/README.md) (Servicing)*
+
