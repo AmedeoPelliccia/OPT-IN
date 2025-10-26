@@ -89,9 +89,9 @@ This Airworthiness Limitation has been approved by:
 
 ## 8.0 Related Documentation
 
-- **AMM Task:** 72-30-00-710-001 - Turbine Disk Removal/Installation
-- **AMM Task:** 72-30-00-600-001 - Turbine Disk Borescope Inspection
-- **AMM Task:** 72-30-00-600-002 - Turbine Disk Fluorescent Penetrant Inspection
+- **AMM Task:** [72-30-00-710-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/P-PROPULSION/72-ENGINE/AMM/72-30-00-710-001.md) - Turbine Disk Removal/Installation
+- **AMM Task:** [72-30-00-600-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/P-PROPULSION/72-ENGINE/AMM/72-30-00-600-001.md) - Turbine Disk Borescope Inspection
+- **AMM Task:** [72-30-00-600-002](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/P-PROPULSION/72-ENGINE/AMM/72-30-00-600-002.md) - Turbine Disk Fluorescent Penetrant Inspection
 - **IPC:** 72-30-01 - Turbine Section Parts List
 - **Engineering Report:** ENG-RPT-72-030
 

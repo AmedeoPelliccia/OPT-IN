@@ -38,7 +38,7 @@ traceability:
 integrity:
   checksum:
     algorithm: "sha256"
-    value: "9573963937b9d54ba5f4525997ae162dbc1aad1f0d1066056230bd2b2ffab02b"
+    value: "bdf2b09829342629f662708fae0f51c08ed75ab1d354453ad32bc4abc1ab4405"
   signature_required: true
   signature_file: "ALS_INSP_57-50-01_Outboard-Wing-Joint-Inspection.md.sig"
 inspection:

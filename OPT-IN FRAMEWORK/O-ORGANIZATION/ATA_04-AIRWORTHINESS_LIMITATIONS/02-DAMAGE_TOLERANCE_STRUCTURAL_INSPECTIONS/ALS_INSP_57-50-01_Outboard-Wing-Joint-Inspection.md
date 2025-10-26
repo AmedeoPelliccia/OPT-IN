@@ -65,7 +65,7 @@ The inspection must cover **100% of the following areas:**
 
 ### 4.2 Access Requirements
 
-- **Access Panels:** Remove panels 570L, 570R, 571L, 571R per AMM 57-50-00-400-001
+- **Access Panels:** Remove panels 570L, 570R, 571L, 571R per [AMM 57-50-00-400-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-400-001.md)
 - **Wing Fuel:** Defuel outboard wing tanks (tanks 2L and 2R)
 - **Environmental Control:** Maintain inspection area at 15-30°C
 - **Lighting:** Minimum 1000 lux for visual inspection
@@ -74,9 +74,9 @@ The inspection must cover **100% of the following areas:**
 
 ### 5.1 Primary Method: Detailed Visual Inspection (DVI)
 
-- **Procedure:** AMM 57-50-00-600-001
+- **Procedure:** [AMM 57-50-00-600-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-600-001.md)
 - **Magnification:** 10X minimum for critical areas
-- **Cleaning:** All surfaces must be cleaned per AMM 20-10-10 before inspection
+- **Cleaning:** All surfaces must be cleaned per [AMM 20-10-10](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/20-STANDARD_PRACTICES_AIRFRAME/AMM/20-10-10.md) before inspection
 - **Acceptance Criteria:**
   - No cracks, corrosion, or deformation
   - No fastener looseness or rotation
@@ -92,8 +92,8 @@ The inspection must cover **100% of the following areas:**
 **Requirements:**
 - **Method:** Pulse-echo ultrasonic inspection
 - **Frequency:** 5 MHz for aluminum structure
-- **Procedure:** AMM 57-50-00-600-002
-- **Equipment:** Calibrated UT instrument per AMM 57-50-00-600-003
+- **Procedure:** [AMM 57-50-00-600-002](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-600-002.md)
+- **Equipment:** Calibrated UT instrument per [AMM 57-50-00-600-003](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-600-003.md)
 - **Reference Standards:** STD-UT-57-01 (contains 0.5, 1.0, 2.0 mm flat-bottom holes)
 
 ### 5.3 Probability of Detection (PoD)
@@ -158,10 +158,10 @@ This Airworthiness Limitation has been approved by:
 
 ## 10.0 Related Documentation
 
-- **AMM Task:** 57-50-00-400-001 - Outboard Wing Access Panel Removal/Installation
-- **AMM Task:** 57-50-00-600-001 - Outboard Wing Joint Detailed Visual Inspection
-- **AMM Task:** 57-50-00-600-002 - Outboard Wing Joint Ultrasonic Inspection
-- **AMM Task:** 57-50-00-600-003 - Ultrasonic Equipment Calibration
+- **AMM Task:** [57-50-00-400-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-400-001.md) - Outboard Wing Access Panel Removal/Installation
+- **AMM Task:** [57-50-00-600-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-600-001.md) - Outboard Wing Joint Detailed Visual Inspection
+- **AMM Task:** [57-50-00-600-002](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-600-002.md) - Outboard Wing Joint Ultrasonic Inspection
+- **AMM Task:** [57-50-00-600-003](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/57_WINGS/AMM/57-50-00-600-003.md) - Ultrasonic Equipment Calibration
 - **SRM:** Section 57-50 - Outboard Wing Joint Structural Repairs
 - **Engineering Report:** STR-RPT-57-050
 

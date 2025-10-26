@@ -64,9 +64,9 @@ Prior to LOV, the following monitoring activities are required:
 
 | Flight Cycles | Activity | Reference |
 |:--------------|:---------|:----------|
-| **30,000 FC** | Baseline WFD structural survey on lead aircraft | AMM 51-00-00-900-001 |
-| **40,000 FC** | Enhanced structural inspection on 10% of fleet | AMM 51-00-00-900-002 |
-| **45,000 FC** | Pre-LOV comprehensive inspection on lead aircraft | AMM 51-00-00-900-003 |
+| **30,000 FC** | Baseline WFD structural survey on lead aircraft | [AMM 51-00-00-900-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-001.md) |
+| **40,000 FC** | Enhanced structural inspection on 10% of fleet | [AMM 51-00-00-900-002](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-002.md) |
+| **45,000 FC** | Pre-LOV comprehensive inspection on lead aircraft | [AMM 51-00-00-900-003](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-003.md) |
 
 ## 7.0 Lead-the-Fleet Aircraft
 
@@ -83,7 +83,7 @@ Prior to LOV, the following monitoring activities are required:
 Upon activation of the WFD program (at LOV), an inspection of **one lead-the-fleet aircraft** is required:
 
 - **Inspection Scope:** 100% of PSEs (Principal Structural Elements)
-- **Inspection Method:** Per AMM 51-00-00-900-004 "WFD Initial Survey"
+- **Inspection Method:** Per [AMM 51-00-00-900-004](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-004.md) "WFD Initial Survey"
 - **Timeline:** Within 500 FC of reaching LOV
 
 ### 7.3 Subsequent Sampling
@@ -144,11 +144,11 @@ All WFD inspections must:
 ### 9.3 Detailed Procedures
 
 Detailed WFD inspection procedures are defined in:
-- **AMM 51-00-00-900-001** - Baseline WFD Structural Survey
-- **AMM 51-00-00-900-002** - Enhanced Structural Inspection
-- **AMM 51-00-00-900-003** - Pre-LOV Comprehensive Inspection
-- **AMM 51-00-00-900-004** - WFD Initial Survey (at LOV)
-- **AMM 51-00-00-900-005** - WFD Recurring Inspection Program
+- [**AMM 51-00-00-900-001**](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-001.md) - Baseline WFD Structural Survey
+- [**AMM 51-00-00-900-002**](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-002.md) - Enhanced Structural Inspection
+- [**AMM 51-00-00-900-003**](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-003.md) - Pre-LOV Comprehensive Inspection
+- [**AMM 51-00-00-900-004**](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-004.md) - WFD Initial Survey (at LOV)
+- [**AMM 51-00-00-900-005**](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/51-00-00-900-005.md) - WFD Recurring Inspection Program
 
 ## 10.0 Findings and Corrective Actions
 
@@ -246,7 +246,7 @@ This WFD program has been approved by:
 
 - **Engineering Report:** STR-RPT-50-001 "WFD Analysis and Sampling Methodology"
 - **Full-Scale Test Report:** FST-RPT-50-002 "AMPEL360 Fatigue Test Results"
-- **AMM:** Section 51-00-00-900 "WFD Inspection Procedures"
+- **AMM:** [Section 51-00-00-900](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/51_STANDARD_STRUCTURES/AMM/) "WFD Inspection Procedures"
 - **SRM:** Structural Repair Manual - WFD-related repairs
 
 ## 16.0 Revision History

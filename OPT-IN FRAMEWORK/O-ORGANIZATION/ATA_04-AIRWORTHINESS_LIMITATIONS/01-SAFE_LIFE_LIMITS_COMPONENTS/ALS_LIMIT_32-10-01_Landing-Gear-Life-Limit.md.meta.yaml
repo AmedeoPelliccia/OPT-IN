@@ -34,7 +34,7 @@ traceability:
 integrity:
   checksum:
     algorithm: "sha256"
-    value: "f4422a614498df2da9d8318750013fb0529edce98e35b6a6ce0ab3b4f0763f39"
+    value: "b35715fce58dcf3ec9e5ba9a45e115df87d25d32f7809f68d4f687786bc3f635"
   signature_required: true
   signature_file: "ALS_LIMIT_32-10-01_Landing-Gear-Life-Limit.md.sig"
 component:

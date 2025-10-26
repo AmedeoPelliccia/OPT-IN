@@ -36,7 +36,7 @@ traceability:
 integrity:
   checksum:
     algorithm: "sha256"
-    value: "55fac471ec3f0df9636f656b02be48d28e05e2e6b9b647f5bc21aa3cb39adf81"
+    value: "f0b495db0d07e2ee8e5df1256147182d50ffbbd953a43b3cb7ad70b523d25d76"
   signature_required: true
   signature_file: "ALS_INSP_53-10-01_BWB-Wing-Root-Fatigue-Inspection.md.sig"
 inspection:

@@ -39,7 +39,7 @@ traceability:
 integrity:
   checksum:
     algorithm: "sha256"
-    value: "1884043f126712d1fa074c4883ffafebe46c91638c51d01ec472ae23ad293236"
+    value: "474bcc37591d3cac561e6c34a286fae582992cf002b838b473c22b934eca5d23"
   signature_required: true
   signature_file: "ALS_LIMIT_72-30-01_Turbine-Disk-Life-Limit.md.sig"
 component:

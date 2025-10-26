@@ -62,7 +62,7 @@ The inspection must cover **100% of the following critical areas:**
 
 ### 4.2 Access Requirements
 
-- **Access Panels:** Remove panels 530L, 530R, 531L, 531R per AMM 53-10-00-400-001
+- **Access Panels:** Remove panels 530L, 530R, 531L, 531R per [AMM 53-10-00-400-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/53_FUSELAGE/AMM/53-10-00-400-001.md)
 - **Environmental Control:** Inspection area must be maintained at 15-30°C, <70% RH
 - **Lighting:** Minimum 1000 lux at inspection surface
 
@@ -72,8 +72,8 @@ The inspection must cover **100% of the following critical areas:**
 
 - **Primary Method:** High Frequency Eddy Current (HFEC) Inspection
 - **Frequency:** 500 kHz to 2 MHz (depending on material thickness)
-- **Equipment:** Calibrated HFEC instrument per AMM 53-10-00-600-001
-- **Procedure:** Follow AMM 53-10-00-600-002
+- **Equipment:** Calibrated HFEC instrument per [AMM 53-10-00-600-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/53_FUSELAGE/AMM/53-10-00-600-001.md)
+- **Procedure:** Follow [AMM 53-10-00-600-002](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/53_FUSELAGE/AMM/53-10-00-600-002.md)
 
 ### 5.2 Probability of Detection (PoD)
 
@@ -126,9 +126,9 @@ This Airworthiness Limitation has been approved by:
 
 ## 9.0 Related Documentation
 
-- **AMM Task:** 53-10-00-400-001 - Wing Root Access Panel Removal/Installation
-- **AMM Task:** 53-10-00-600-001 - HFEC Equipment Calibration
-- **AMM Task:** 53-10-00-600-002 - BWB Wing Root HFEC Inspection Procedure
+- **AMM Task:** [53-10-00-400-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/53_FUSELAGE/AMM/53-10-00-400-001.md) - Wing Root Access Panel Removal/Installation
+- **AMM Task:** [53-10-00-600-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/53_FUSELAGE/AMM/53-10-00-600-001.md) - HFEC Equipment Calibration
+- **AMM Task:** [53-10-00-600-002](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/A-AIRFRAME/53_FUSELAGE/AMM/53-10-00-600-002.md) - BWB Wing Root HFEC Inspection Procedure
 - **SRM:** Section 53-10 - Wing Root Structural Repairs
 - **Engineering Report:** STR-RPT-53-010
 

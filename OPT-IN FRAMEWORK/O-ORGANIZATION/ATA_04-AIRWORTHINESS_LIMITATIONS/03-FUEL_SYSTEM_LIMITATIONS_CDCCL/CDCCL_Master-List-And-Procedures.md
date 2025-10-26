@@ -70,16 +70,16 @@ All CDCCL items must be verified:
 
 | CDCCL ID | ATA | Component/Area | Feature to be Maintained | Tooling PN | Material Spec | Verification Step | AMM Task | AMM_Link_OK |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---:|
-| **CDCCL-001** | 28-42 | Fuel Pump Wiring | Separation distance > 25mm from structure. | `AP360-T015` | N/A | Measure separation | `28-42-11` | Y |
-| **CDCCL-002** | 28-42 | Fuel Pump Mounting | Bonding jumper installed at pump mounting flange. | N/A | `AS5211/6` | Verify bonding strap present | `28-42-12` | Y |
-| **CDCCL-003** | 28-60 | H₂ Tank Bonding Straps | Bonding resistance < 0.001 Ohms. | `AP360-T008` | N/A | 4-wire resistance check | `28-60-15` | Y |
-| **CDCCL-004** | 28-60 | H₂ Tank Insulation | Vacuum-insulated double-wall maintained. No breaches. | N/A | N/A | Vacuum pressure check < 10⁻⁵ mbar | `28-60-20` | Y |
-| **CDCCL-005** | 28-30 | Fuel Quantity Indicating System (FQIS) Probes | FQIS probes must maintain > 10mm clearance from tank walls. | `AP360-T022` | N/A | Measure clearance with go/no-go gauge | `28-30-35` | Y |
-| **CDCCL-006** | 28-11 | Fuel Tank Vent System | Flame arrestor screens installed in all vent outlets. | N/A | `AMS 5511` | Visual inspection + mesh count verification | `28-11-40` | Y |
-| **CDCCL-007** | 28-44 | Fuel System Electrical Connectors | Only approved sparkproof connectors permitted in fuel tank area. | N/A | `MIL-DTL-38999` | Verify connector part number | `28-44-25` | Y |
-| **CDCCL-008** | 28-50 | Fuel Tank Access Panels | Conductive sealant applied to all fasteners. | N/A | `PR-1776` | Visual inspection + resistance check < 1 Ohm | `28-50-10` | Y |
-| **CDCCL-009** | 28-24 | Fuel Pump Impeller Material | Impeller must be non-sparking material (aluminum bronze). | N/A | `SAF 2205` | Verify material cert on replacement | `28-24-31` | Y |
-| **CDCCL-010** | 28-60 | H₂ Tank Pressure Relief | Pressure relief valve set to 6.0 ± 0.2 bar. | `AP360-T050` | N/A | Pressure test per AMM | `28-60-45` | Y |
+| **CDCCL-001** | 28-42 | Fuel Pump Wiring | Separation distance > 25mm from structure. | `AP360-T015` | N/A | Measure separation | [`28-42-11`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-42-11.md) | Y |
+| **CDCCL-002** | 28-42 | Fuel Pump Mounting | Bonding jumper installed at pump mounting flange. | N/A | `AS5211/6` | Verify bonding strap present | [`28-42-12`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-42-12.md) | Y |
+| **CDCCL-003** | 28-60 | H₂ Tank Bonding Straps | Bonding resistance < 0.001 Ohms. | `AP360-T008` | N/A | 4-wire resistance check | [`28-60-15`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-60-15.md) | Y |
+| **CDCCL-004** | 28-60 | H₂ Tank Insulation | Vacuum-insulated double-wall maintained. No breaches. | N/A | N/A | Vacuum pressure check < 10⁻⁵ mbar | [`28-60-20`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-60-20.md) | Y |
+| **CDCCL-005** | 28-30 | Fuel Quantity Indicating System (FQIS) Probes | FQIS probes must maintain > 10mm clearance from tank walls. | `AP360-T022` | N/A | Measure clearance with go/no-go gauge | [`28-30-35`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-30-35.md) | Y |
+| **CDCCL-006** | 28-11 | Fuel Tank Vent System | Flame arrestor screens installed in all vent outlets. | N/A | `AMS 5511` | Visual inspection + mesh count verification | [`28-11-40`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-11-40.md) | Y |
+| **CDCCL-007** | 28-44 | Fuel System Electrical Connectors | Only approved sparkproof connectors permitted in fuel tank area. | N/A | `MIL-DTL-38999` | Verify connector part number | [`28-44-25`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-44-25.md) | Y |
+| **CDCCL-008** | 28-50 | Fuel Tank Access Panels | Conductive sealant applied to all fasteners. | N/A | `PR-1776` | Visual inspection + resistance check < 1 Ohm | [`28-50-10`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-50-10.md) | Y |
+| **CDCCL-009** | 28-24 | Fuel Pump Impeller Material | Impeller must be non-sparking material (aluminum bronze). | N/A | `SAF 2205` | Verify material cert on replacement | [`28-24-31`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-24-31.md) | Y |
+| **CDCCL-010** | 28-60 | H₂ Tank Pressure Relief | Pressure relief valve set to 6.0 ± 0.2 bar. | `AP360-T050` | N/A | Pressure test per AMM | [`28-60-45`](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/C2-CIRCULAR/28-FUEL_SYSTEMS/AMM/28-60-45.md) | Y |
 
 ### 5.3 CDCCL Items Under Development
 

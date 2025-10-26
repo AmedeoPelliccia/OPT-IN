@@ -65,7 +65,7 @@ This Airworthiness Limitation has been approved by:
 
 ## 7.0 Related Documentation
 
-- **AMM Task:** 32-10-00-710-001 - Main Landing Gear Removal/Installation
+- **AMM Task:** [32-10-00-710-001](../../../T-TECHNOLOGY%20(AMEDEOPELLICCIA%20-%20ON%20BOARD%20SYS)/M-MECHANICS/32-LANDING_GEAR/AMM/32-10-00-710-001.md) - Main Landing Gear Removal/Installation
 - **IPC:** 32-10-01 - Main Landing Gear Assembly Parts List
 - **Engineering Report:** STR-RPT-32-005
 
