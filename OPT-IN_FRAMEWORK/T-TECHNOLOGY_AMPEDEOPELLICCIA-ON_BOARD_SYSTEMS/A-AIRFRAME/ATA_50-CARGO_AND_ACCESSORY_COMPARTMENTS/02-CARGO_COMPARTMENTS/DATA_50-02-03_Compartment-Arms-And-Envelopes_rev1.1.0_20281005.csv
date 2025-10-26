@@ -1,0 +1,4 @@
+Compartment_ID,Zone,Arm_FS_m,Arm_BL_m,Arm_WL_m,Max_Payload_kg,Min_kg,Max_kg,Notes
+FWD_CARGO,191,18.500,1.500,2.800,15000,0,15000,"Input to ATA 08 Load Sheet"
+AFT_CARGO,192,35.200,0.000,3.100,10000,0,10000,"Bulk loaded, centered on BL0"
+AVIONICS_BAY,151,10.100,0.000,2.100,500,0,500,"Equipment only, no cargo"

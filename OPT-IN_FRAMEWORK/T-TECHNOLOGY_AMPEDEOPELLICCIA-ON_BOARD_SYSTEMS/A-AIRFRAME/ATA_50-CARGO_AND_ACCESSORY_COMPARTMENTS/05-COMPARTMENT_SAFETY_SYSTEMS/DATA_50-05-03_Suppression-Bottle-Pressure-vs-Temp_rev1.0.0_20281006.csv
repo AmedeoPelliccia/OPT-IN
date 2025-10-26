@@ -1,0 +1,11 @@
+Compartment_ID,Temp_C,Pressure_bar,Bottle_PN,Notes
+FWD_CARGO,-40,170,26-50-100,"Below minimum operating temp"
+FWD_CARGO,0,190,26-50-100,"Standard ground temp"
+FWD_CARGO,21,200,26-50-100,"Normal operating range"
+FWD_CARGO,50,215,26-50-100,"Maximum operating temp"
+FWD_CARGO,71,230,26-50-100,"Maximum certified limit - do not exceed"
+AFT_CARGO,-40,170,26-50-100,"Below minimum operating temp"
+AFT_CARGO,0,190,26-50-100,"Standard ground temp"
+AFT_CARGO,21,200,26-50-100,"Normal operating range"
+AFT_CARGO,50,215,26-50-100,"Maximum operating temp"
+AFT_CARGO,71,230,26-50-100,"Maximum certified limit - do not exceed"

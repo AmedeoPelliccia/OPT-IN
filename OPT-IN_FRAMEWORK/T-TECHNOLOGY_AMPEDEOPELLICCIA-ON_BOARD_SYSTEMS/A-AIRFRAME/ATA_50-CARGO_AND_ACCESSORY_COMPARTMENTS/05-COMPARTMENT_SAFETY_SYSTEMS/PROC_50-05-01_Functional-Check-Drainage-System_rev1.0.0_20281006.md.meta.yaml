@@ -1,0 +1,17 @@
+schema_version: "1.1"
+id: "PROC_50-05-01_Functional-Check-Drainage-System_rev1.0.0_20281006"
+document:
+  type: "PROC"
+  title: "50-05-01: Functional Check of Drainage System"
+  revision: "1.0.0"
+  effective_date: "2028-10-06"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Water accumulation", "Corrosion", "Equipment damage"]
+  criticality: "Medium"
+approvals:
+  - { authority: "Maintenance Engineering", status: "Released", date: "2028-10-01" }
+traceability:
+  source_documents: ["AMM-50-05-00"]
+  crossrefs: ["ATA 53"]
+integrity: { checksum: { algorithm: "sha256", value: "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3" } }

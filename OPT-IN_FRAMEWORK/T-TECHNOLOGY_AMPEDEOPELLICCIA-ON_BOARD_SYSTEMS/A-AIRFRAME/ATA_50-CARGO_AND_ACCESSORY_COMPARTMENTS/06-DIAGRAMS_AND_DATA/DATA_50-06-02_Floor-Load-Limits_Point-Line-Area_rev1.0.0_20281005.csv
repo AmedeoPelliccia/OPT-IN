@@ -1,0 +1,5 @@
+Type,Metric,Limit,Unit,Test_Method,Notes
+Point,Max_Pressure,1400,kPa,"Indentor test to SRM 51-10-01","Pad required if exceeded, see Wheel-Patch-Library"
+Line,Max_Load_per_300mm,1800,N,Beam method,
+Area,Max_Distributed_Load,730,kg/m2,Panel shear/bending calculation,
+Seat_Track,Max_Tension_per_Fitting,8900,N,"Static proof load test"

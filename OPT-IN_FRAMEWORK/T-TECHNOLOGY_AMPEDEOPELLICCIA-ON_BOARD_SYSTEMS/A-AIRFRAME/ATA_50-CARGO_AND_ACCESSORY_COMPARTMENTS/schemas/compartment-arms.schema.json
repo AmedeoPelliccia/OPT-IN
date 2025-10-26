@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata50/compartment-arms.schema.json",
+  "title": "Compartment Arms and Envelopes",
+  "type": "object",
+  "properties": {
+    "compartmentId": {
+      "type": "string"
+    },
+    "zone": {
+      "type": "string",
+      "pattern": "^[0-9]{3}$"
+    },
+    "armFS": {
+      "type": "number",
+      "description": "Fuselage Station arm in meters"
+    },
+    "armBL": {
+      "type": "number",
+      "description": "Buttock Line arm in meters"
+    },
+    "armWL": {
+      "type": "number",
+      "description": "Water Line arm in meters"
+    },
+    "maxPayloadKg": {
+      "type": "number",
+      "minimum": 0
+    },
+    "minKg": {
+      "type": "number",
+      "minimum": 0
+    },
+    "maxKg": {
+      "type": "number",
+      "minimum": 0
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": ["compartmentId", "zone", "armFS", "armBL", "armWL", "maxPayloadKg"]
+}

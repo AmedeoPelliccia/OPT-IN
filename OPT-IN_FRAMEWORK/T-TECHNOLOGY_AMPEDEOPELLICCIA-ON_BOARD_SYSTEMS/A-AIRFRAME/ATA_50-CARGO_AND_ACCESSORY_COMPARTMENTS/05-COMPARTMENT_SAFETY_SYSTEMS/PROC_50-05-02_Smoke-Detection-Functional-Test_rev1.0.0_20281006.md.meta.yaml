@@ -1,0 +1,18 @@
+schema_version: "1.1"
+id: "PROC_50-05-02_Smoke-Detection-Functional-Test_rev1.0.0_20281006"
+document:
+  type: "PROC"
+  title: "50-05-02: Smoke Detection Functional Test"
+  revision: "1.0.0"
+  effective_date: "2028-10-06"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Undetected fire", "Accidental suppression discharge"]
+  criticality: "Critical"
+approvals:
+  - { authority: "Fire Protection Engineering", status: "Released", date: "2028-10-02" }
+  - { authority: "Flight Safety", status: "Approved", date: "2028-10-03" }
+traceability:
+  source_documents: ["AMM-26-12-00", "CS-25.858"]
+  crossrefs: ["ATA 25", "ATA 26"]
+integrity: { checksum: { algorithm: "sha256", value: "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4" } }

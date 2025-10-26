@@ -1,0 +1,4 @@
+Compartment_ID,Zone,Max_Volume_m3,Max_Payload_kg,Max_Density_kg_m3,Floor_Area_m2,Notes
+FWD_CARGO,191,45.2,15000,332,28.5,"Class C compartment, containerized or bulk"
+AFT_CARGO,192,32.8,10000,305,21.0,"Class C compartment, bulk only"
+AVIONICS_BAY,151,8.5,500,59,6.2,"Equipment compartment, not for cargo"

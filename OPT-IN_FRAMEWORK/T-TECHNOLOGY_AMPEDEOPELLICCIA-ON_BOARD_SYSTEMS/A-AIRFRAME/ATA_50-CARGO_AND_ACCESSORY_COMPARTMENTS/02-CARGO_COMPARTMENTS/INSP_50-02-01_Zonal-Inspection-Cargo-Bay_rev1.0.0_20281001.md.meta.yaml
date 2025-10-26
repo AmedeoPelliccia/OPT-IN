@@ -1,0 +1,16 @@
+schema_version: "1.1"
+id: "INSP_50-02-01_Zonal-Inspection-Cargo-Bay_rev1.0.0_20281001"
+document:
+  type: "INSP"
+  title: "50-02-01: Zonal Inspection of Main Cargo Compartment"
+  revision: "1.0.0"
+  effective_date: "2028-10-01"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Undetected structural damage", "Compromised fire containment"]
+  criticality: "Medium"
+approvals:
+  - { authority: "Maintenance Engineering", status: "Released", date: "2028-09-20" }
+traceability:
+  source_reports: ["STR-RPT-50-001_Floor-Load-Analysis"]
+integrity: { checksum: { algorithm: "sha256", value: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2" } }
