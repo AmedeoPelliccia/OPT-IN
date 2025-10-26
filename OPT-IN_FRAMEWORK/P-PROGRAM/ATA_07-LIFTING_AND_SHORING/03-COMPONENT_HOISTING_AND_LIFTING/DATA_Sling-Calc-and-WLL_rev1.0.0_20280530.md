@@ -125,13 +125,13 @@ Where:
 - Angle factor = cos(30°) = 0.866
 - Required WLL per sling = 1,500 kg / 0.866 = 1,732 kg
 - Actual WLL = 4,000 kg
-- Safety Factor = 4,000 / 1,732 = 2.3 (INSUFFICIENT - use heavier sling or reduce angle)
+- Safety Factor = 4,000 / 1,732 = 2.3 (**REJECTED - does not meet minimum 5:1 safety factor. Use heavier sling or reduce angle**)
 
 **Corrected:**
 - Reduce angle to 15°
 - Angle factor = cos(15°) = 0.966
 - Required WLL = 1,500 kg / 0.966 = 1,553 kg
-- Safety Factor = 4,000 / 1,553 = 2.6 (INSUFFICIENT - use wire rope sling)
+- Safety Factor = 4,000 / 1,553 = 2.6 (**REJECTED - does not meet minimum 5:1 safety factor. Use wire rope sling**)
 
 **Final Selection:**
 - Use Type WR-2 (WLL 5,000 kg)
