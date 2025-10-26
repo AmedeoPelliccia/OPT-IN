@@ -1,0 +1,23 @@
+DXF File Placeholder: FIG_52-D1-01_Door-And-Exit-Locations_rev1.0.0_20280901.dxf
+
+This is a placeholder for the actual DXF drawing file.
+In a production environment, this would be a CAD drawing showing:
+- All door locations on the aircraft
+- Exit locations and types
+- Reference coordinates for each door
+- Maintenance access points
+- Rigging datum points
+
+File Format: AutoCAD DXF R2018
+Drawing Scale: 1:100
+Units: Millimeters
+
+Drawing Content:
+- Side view of aircraft with door locations
+- Door designations (L1, R1, L2, R2, etc.)
+- Emergency exit locations
+- Service door locations
+- Cargo door locations
+- Coordinate system reference
+
+This placeholder should be replaced with actual DXF file for production use.

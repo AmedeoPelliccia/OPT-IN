@@ -1,0 +1,6 @@
+Test_ID,Subject,Condition,Measurement,Limit,Unit,Pass_Fail_Evidence
+ATP-52-001,Seal_Leak,ΔP=7 kPa,Leak_Rate,<=500,sccm/m,ULS Trace ID
+ATP-52-002,Indication,Door_Closed_Locked,Sensor_State,=LOCKED,N/A,EICAS Screenshot
+ATP-52-003,Cycle_Time,3 Cycles,Time,5-9,s,Video Timecode
+ATP-52-004,Manual_Force,Closing,Peak_Force,<=180,N,Force Gauge Reading
+ATP-52-005,Backlash,Latch_Mechanism,Angle,<=2.0,deg,Protractor Gauge Photo

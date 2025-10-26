@@ -1,0 +1,11 @@
+schema_version: "1.1"
+id: "DATA_52-A2-01_Tolerances-And-Limits_rev1.2.0_20280905"
+document:
+  type: "DATA"
+  title: "52-A2-01: Tolerances and Limits"
+  revision: "1.2.0"
+  effective_date: "2028-09-05"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-09-01" }
+integrity: { checksum: { algorithm: "sha256", value: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b4" } }

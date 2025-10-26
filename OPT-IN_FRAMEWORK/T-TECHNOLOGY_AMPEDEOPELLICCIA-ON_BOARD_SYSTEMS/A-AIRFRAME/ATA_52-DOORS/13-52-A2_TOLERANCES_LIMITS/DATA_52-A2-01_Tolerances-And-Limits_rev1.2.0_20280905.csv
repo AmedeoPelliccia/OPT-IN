@@ -1,0 +1,7 @@
+Limit_ID,Description,ATA_Subject,Nominal_Value,Unit,Min,Max,Method_Reference
+TOL-52-001,"Seal Leak Rate @ ΔP=7 kPa",52-60,450,sccm/m,N/A,500,PROC_52-60-01
+TOL-52-002,"Latch Pin Engagement Depth",52-10,20.0,mm,19.0,21.0,Depth Gauge
+TOL-52-003,"Manual Close Force @ Handle",52-10,150,N,N/A,180,Force Gauge
+TOL-52-004,"Hinge Radial Play",52-50,0.1,mm,N/A,0.5,Dial Indicator
+TOL-52-005,"Proximity Sensor Gap (Closed)",52-70,3.0,mm,2.5,3.5,Feeler Gauge
+TOL-52-006,"Door Cycle Time (Open→Locked)",52-10,7.0,s,5.0,9.0,Stopwatch

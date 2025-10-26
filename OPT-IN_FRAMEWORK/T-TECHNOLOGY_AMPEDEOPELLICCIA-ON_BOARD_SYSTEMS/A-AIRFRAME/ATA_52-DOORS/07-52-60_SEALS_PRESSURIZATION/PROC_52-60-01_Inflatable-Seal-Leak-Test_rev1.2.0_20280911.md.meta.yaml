@@ -1,0 +1,14 @@
+schema_version: "1.1"
+id: "PROC_52-60-01_Inflatable-Seal-Leak-Test_rev1.2.0_20280911"
+document:
+  type: "PROC"
+  title: "52-60-01: Inflatable Seal Leak Test"
+  revision: "1.2.0"
+  effective_date: "2028-09-11"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Pressurization System Failure"]
+  criticality: "High"
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-09-08" }
+integrity: { checksum: { algorithm: "sha256", value: "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1" } }

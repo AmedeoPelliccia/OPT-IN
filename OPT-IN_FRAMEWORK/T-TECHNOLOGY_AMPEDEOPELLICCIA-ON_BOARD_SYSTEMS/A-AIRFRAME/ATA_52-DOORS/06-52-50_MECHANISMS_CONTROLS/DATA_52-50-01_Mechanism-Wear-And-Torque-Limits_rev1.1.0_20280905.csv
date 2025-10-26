@@ -1,0 +1,6 @@
+Item,Location,Metric,Limit_Min,Limit_Max,Unit,Tool,Notes
+Hinge_Radial_Play,L1_Upper,Play,0.0,0.5,mm,Dial_Indicator,Measure @ 12/6 o'clock
+Hinge_Axial_Play,L1_Upper,Play,0.0,0.8,mm,Feeler,Shim if >0.8
+Latch_Backlash,Main_Lock,Angle,0.0,2.0,deg,Protractor,With handle detent
+Torque_Tube_Torque,Drive,Shaft_Torque,12,16,N·m,Cal_Torque_Wrench,Dry thread
+Counterbalance_Spring,Assist,Force,180,220,N,Force_Gauge,At mid-stroke

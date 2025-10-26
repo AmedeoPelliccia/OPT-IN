@@ -1,0 +1,19 @@
+schema_version: "1.1"
+id: "INSP_52-90-01_Zonal-Inspection-Door-Surrounds_rev1.0.0_20280920"
+document:
+  type: "INSP"
+  title: "52-90-01: Zonal Inspection - Door Surrounds"
+  revision: "1.0.0"
+  effective_date: "2028-09-20"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Structural Failure", "Rapid Decompression"]
+  criticality: "Critical"
+inspection_interval:
+  basis: "FH"
+  value: 3000
+  tolerance: { plus: 150, minus: 0 }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-09-15" }
+  - { authority: "NDT Engineering", status: "Released", date: "2028-09-15" }
+integrity: { checksum: { algorithm: "sha256", value: "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d5" } }

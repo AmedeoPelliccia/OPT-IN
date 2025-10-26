@@ -1,0 +1,21 @@
+schema_version: "1.1"
+id: "REP_52-R1-01_Seal-Seat-Touch-Up_rev1.0.0_20280925"
+document:
+  type: "REP"
+  title: "52-R1-01: Seal Seat Touch-Up"
+  revision: "1.0.0"
+  effective_date: "2028-09-25"
+effectivity: { msn: "ALL" }
+repair_classification: "Minor"
+approval_level: "Technician + Inspector"
+safety:
+  hazards: ["Chemical Exposure", "Seal Damage"]
+  criticality: "Medium"
+limitations:
+  max_depth: "0.5 mm"
+  max_repairs_per_area: 3
+  requires_engineering_if_exceeded: true
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-09-20" }
+  - { authority: "Materials Engineering", status: "Released", date: "2028-09-20" }
+integrity: { checksum: { algorithm: "sha256", value: "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e7" } }

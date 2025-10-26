@@ -1,0 +1,15 @@
+schema_version: "1.1"
+id: "PROC_52-40-01_Functional-Check-Overwing-Exit_rev1.0.0_20280918"
+document:
+  type: "PROC"
+  title: "52-40-01: Functional Check - Overwing Exit"
+  revision: "1.0.0"
+  effective_date: "2028-09-18"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Emergency Evacuation Failure"]
+  criticality: "Critical"
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-09-15" }
+  - { authority: "Flight Safety", status: "Released", date: "2028-09-15" }
+integrity: { checksum: { algorithm: "sha256", value: "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5" } }

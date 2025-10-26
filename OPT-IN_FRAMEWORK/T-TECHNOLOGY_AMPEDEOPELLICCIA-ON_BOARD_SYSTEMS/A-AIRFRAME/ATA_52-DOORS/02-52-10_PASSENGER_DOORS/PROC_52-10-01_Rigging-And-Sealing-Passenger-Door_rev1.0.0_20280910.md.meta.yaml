@@ -1,0 +1,16 @@
+schema_version: "1.1"
+id: "PROC_52-10-01_Rigging-And-Sealing-Passenger-Door_rev1.0.0_20280910"
+document:
+  type: "PROC"
+  title: "52-10-01: Rigging and Sealing - Passenger Door"
+  revision: "1.0.0"
+  effective_date: "2028-09-10"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Explosive Decompression", "Inadvertent Slide Deployment"]
+  criticality: "High"
+gse_required:
+  - { part_number: "AP360-T050", description: "Door Rigging Pin Set" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-09-01" }
+integrity: { checksum: { algorithm: "sha256", value: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2" } }

@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "CAT_52-A3-01_Tools-And-GSE-Catalog_rev1.0.0_20280901"
+document:
+  type: "CAT"
+  title: "52-A3-01: Tools and GSE Catalog"
+  revision: "1.0.0"
+  effective_date: "2028-09-01"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Tool Control Engineering", status: "Released", date: "2028-08-25" }
+  - { authority: "Quality Assurance", status: "Released", date: "2028-08-25" }
+integrity: { checksum: { algorithm: "sha256", value: "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c5" } }

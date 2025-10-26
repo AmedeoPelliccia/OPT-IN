@@ -1,0 +1,22 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "title": "Limits and Tolerances Schema",
+  "type":"object",
+  "required":["items"],
+  "properties":{
+    "items":{"type":"array","items":{
+      "type":"object",
+      "required":["id","desc","subject","nom","unit","min","max","method"],
+      "properties":{
+        "id":{"type":"string"},
+        "desc":{"type":"string"},
+        "subject":{"type":"string"},
+        "nom":{"type":["number", "null"]},
+        "unit":{"type":"string"},
+        "min":{"type":["number", "null"]},
+        "max":{"type":["number", "null"]},
+        "method":{"type":"string"}
+      }
+    }}
+  }
+}

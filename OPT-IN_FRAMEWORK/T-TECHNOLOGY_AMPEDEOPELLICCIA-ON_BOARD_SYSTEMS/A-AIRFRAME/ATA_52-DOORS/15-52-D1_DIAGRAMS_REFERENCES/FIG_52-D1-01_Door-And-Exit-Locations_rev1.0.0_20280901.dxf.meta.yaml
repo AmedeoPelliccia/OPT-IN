@@ -1,0 +1,16 @@
+schema_version: "1.1"
+id: "FIG_52-D1-01_Door-And-Exit-Locations_rev1.0.0_20280901"
+document:
+  type: "FIG"
+  title: "52-D1-01: Door and Exit Locations"
+  revision: "1.0.0"
+  effective_date: "2028-09-01"
+  format: "DXF"
+effectivity: { msn: "ALL" }
+drawing_info:
+  scale: "1:100"
+  units: "mm"
+  cad_version: "AutoCAD R2018"
+approvals:
+  - { authority: "Design Engineering", status: "Released", date: "2028-08-28" }
+integrity: { checksum: { algorithm: "sha256", value: "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d6" } }

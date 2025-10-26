@@ -1,0 +1,4 @@
+Sensor,Type,State_Condition,MAINT_Page_Text,EICAS_Message,Setpoint,Unit,Debounce_ms
+L1_Lock_Prox,Proximity,Door_Locked,LOCKED,DOOR L1 LOCKED,3.0,mm,200
+L1_Handle_Switch,Discrete,Handle_Stowed,CLOSED,DOOR L1 OPEN (if not stowed),N/A,N/A,100
+Inflatable_Seal_Press,Analog,Seal_Pressurized,SEAL OK,DOOR L1 SEAL LOW (if < setpoint),7.0,kPa,500

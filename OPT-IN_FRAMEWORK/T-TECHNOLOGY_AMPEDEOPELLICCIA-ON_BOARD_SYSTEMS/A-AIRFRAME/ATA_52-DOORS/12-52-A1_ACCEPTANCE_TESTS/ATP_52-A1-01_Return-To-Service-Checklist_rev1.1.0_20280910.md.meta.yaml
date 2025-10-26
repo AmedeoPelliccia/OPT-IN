@@ -1,0 +1,15 @@
+schema_version: "1.1"
+id: "ATP_52-A1-01_Return-To-Service-Checklist_rev1.1.0_20280910"
+document:
+  type: "ATP"
+  title: "52-A1-01: Door Return-to-Service Checklist"
+  revision: "1.1.0"
+  effective_date: "2028-09-10"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Incomplete Maintenance", "Flight Safety"]
+  criticality: "Critical"
+approvals:
+  - { authority: "Quality Assurance", status: "Released", date: "2028-09-08" }
+  - { authority: "Flight Safety", status: "Released", date: "2028-09-08" }
+integrity: { checksum: { algorithm: "sha256", value: "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f7" } }

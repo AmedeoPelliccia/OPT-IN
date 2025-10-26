@@ -1,0 +1,14 @@
+schema_version: "1.1"
+id: "ATA_52_INDEX"
+chapter: "ATA 52 - DOORS"
+governance:
+  owner_role: "Structures Engineering"
+  review_board: ["Airworthiness", "Systems", "MRO Support"]
+tolerances_ref: "/13-52-A2_TOLERANCES_LIMITS/DATA_52-A2-01_Tolerances-And-Limits_rev1.2.0_20280905.csv"
+acceptance_matrix_ref: "/12-52-A1_ACCEPTANCE_TESTS/DATA_52-A1-01_Acceptance-Test-Matrix_rev1.1.0_20280910.csv"
+environment:
+  temp_C: [10, 35]
+  wind_knots_max: 15
+  cabin_deltaP_kPa: 0
+permits_required: ["Door Rigging Permit", "Slide Safe Permit"]
+integrity: { checksum_algorithm: "sha256" }

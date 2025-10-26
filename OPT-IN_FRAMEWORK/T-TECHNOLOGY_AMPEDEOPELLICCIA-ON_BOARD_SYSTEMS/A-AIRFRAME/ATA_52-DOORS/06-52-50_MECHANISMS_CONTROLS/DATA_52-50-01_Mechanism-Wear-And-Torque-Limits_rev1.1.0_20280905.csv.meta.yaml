@@ -1,0 +1,11 @@
+schema_version: "1.1"
+id: "DATA_52-50-01_Mechanism-Wear-And-Torque-Limits_rev1.1.0_20280905"
+document:
+  type: "DATA"
+  title: "52-50-01: Mechanism Wear and Torque Limits"
+  revision: "1.1.0"
+  effective_date: "2028-09-05"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-09-01" }
+integrity: { checksum: { algorithm: "sha256", value: "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6" } }
