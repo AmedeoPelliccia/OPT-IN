@@ -35,7 +35,7 @@ echo "3. Validating JSON schemas..."
 if command -v python3 &> /dev/null; then
   for schema in "$root"/01-52-00_GENERAL/schemas/*.json; do
     if [ -f "$schema" ]; then
-      if python3 -c "import json; json.load(open('$schema'))" 2>/dev/null; then
+      if python3 -c "import json, sys; json.load(open(sys.argv[1]))" "$schema" 2>/dev/null; then
         echo "✅ Valid JSON schema: $(basename "$schema")"
       else
         echo "❌ ERROR: Invalid JSON syntax in $(basename "$schema")"
