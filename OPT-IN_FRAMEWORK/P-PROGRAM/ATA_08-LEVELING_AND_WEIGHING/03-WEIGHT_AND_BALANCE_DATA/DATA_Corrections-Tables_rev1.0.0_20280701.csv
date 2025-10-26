@@ -1,7 +1,7 @@
 Category,Item,Quantity,Measured,Unit,Arm_FS_m,Delta_Mass_kg,Delta_Moment_kgm,Source,Unc_1sigma_kg
 Fluids,Hydraulic Fluid,Full,Yes,kg,25.500,0.0,0.0,Std Config,0.0
 Fluids,Potable Water,Actual,Yes,kg,-15.200,-12.4,-188.48,Scale,0.2
-Cryo,Helium Inerting Mass,Computed,No,kg,30.100,+4.6,+138.46,rho_He(P_T)*V,0.3
+Cryo,Helium Inerting Mass,Computed,No,kg,30.100,+4.6,+138.46,rho_He(P,T)*V,0.3
 Batteries,SOC Adjustment,Computed,No,kg,28.000,-8.2,-229.60,k_SOC_model,1.0
 Cabin,Removable Equipment,Listed,Yes,kg,12.500,-5.0,-62.50,Inventory,0.5
 Corrections,Air Buoyancy,Computed,No,kg,26.500,-55.0,-1457.50,rho_air_model,2.5
