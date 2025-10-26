@@ -1,0 +1,55 @@
+schema_version: "1.1"
+id: "ALS_LIMIT_72-30-01"
+document:
+  type: "ALS-LIMIT"
+  title: "High-Pressure Turbine Disk Life Limit"
+  revision: "1.0.0"
+  effective_date: "2028-04-01"
+effectivity:
+  msn: "ALL"
+  fleet_group: "AMPEL360-BWB-H2"
+interval:
+  basis: "FC"
+  value: 25000
+  tolerance:
+    plus: 0
+    minus: 0
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-03-15"
+    reference: "EASA.21.J.XXX"
+  - authority: "FAA"
+    status: "Approved"
+    date: "2028-03-20"
+    reference: "FAA-ALS-XXX-2028"
+traceability:
+  certification_basis:
+    - "CS 25.571"
+    - "CS-E 520"
+    - "FAA AC 33.14-1"
+  source_reports:
+    - "ENG-RPT-72-030"
+  amm_tasks:
+    - "72-30-00-710-001"
+    - "72-30-00-600-001"
+    - "72-30-00-600-002"
+  related_als:
+    - "ALS_INSP_72-30-02"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "474bcc37591d3cac561e6c34a286fae582992cf002b838b473c22b934eca5d23"
+  signature_required: true
+  signature_file: "ALS_LIMIT_72-30-01_Turbine-Disk-Life-Limit.md.sig"
+component:
+  part_number: "TRB-HP-DISK-360-01"
+  description: "High-Pressure Turbine Disk (Stage 1)"
+  location: "Engine Station 450-480, ATA 72"
+  life_limit_type: "safe-life"
+dpp_integration:
+  tracking_enabled: true
+  compliance_reporting: "Real-time via ATA 95 DPP API with component-level tracking"
+  alert_threshold:
+    warning_percent: 95
+    critical_percent: 98.75

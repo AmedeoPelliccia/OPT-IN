@@ -1,0 +1,59 @@
+schema_version: "1.1"
+id: "ALS_INSP_57-50-01"
+document:
+  type: "ALS-INSP"
+  title: "Outboard Wing Joint Inspection"
+  revision: "1.0.0"
+  effective_date: "2028-04-01"
+effectivity:
+  msn: "ALL"
+  fleet_group: "AMPEL360-BWB-H2"
+interval:
+  basis: "FC"
+  value: 12000
+  tolerance:
+    plus: 0
+    minus: 0
+approvals:
+  - authority: "EASA"
+    status: "Approved"
+    date: "2028-03-15"
+    reference: "EASA.21.J.XXX"
+  - authority: "FAA"
+    status: "Approved"
+    date: "2028-03-20"
+    reference: "FAA-ALS-XXX-2028"
+traceability:
+  certification_basis:
+    - "CS 25.571"
+    - "CS 25.613"
+    - "FAA AC 25.571-1D"
+  source_reports:
+    - "STR-RPT-57-050"
+  amm_tasks:
+    - "57-50-00-400-001"
+    - "57-50-00-600-001"
+    - "57-50-00-600-002"
+    - "57-50-00-600-003"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "bdf2b09829342629f662708fae0f51c08ed75ab1d354453ad32bc4abc1ab4405"
+  signature_required: true
+  signature_file: "ALS_INSP_57-50-01_Outboard-Wing-Joint-Inspection.md.sig"
+inspection:
+  method: "Detailed Visual Inspection (DVI) + Ultrasonic Testing (UT)"
+  coverage: "100% of critical areas per INSP-DWG-57-50-01 and INSP-DWG-57-50-02"
+  pod:
+    minimum: 0.95
+    confidence: 0.95
+    crack_size_mm: 1.5
+  drawing_references:
+    - "INSP-DWG-57-50-01 (Rev. A)"
+    - "INSP-DWG-57-50-02 (Rev. A)"
+dpp_integration:
+  tracking_enabled: true
+  compliance_reporting: "Real-time inspection status via ATA 95 DPP API"
+  alert_threshold:
+    warning_percent: 95
+    critical_percent: 100

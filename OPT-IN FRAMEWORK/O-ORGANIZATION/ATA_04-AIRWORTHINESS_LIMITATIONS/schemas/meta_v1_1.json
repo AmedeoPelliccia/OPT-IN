@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "ALS Document Metadata Schema v1.1",
+  "description": "Validation schema for AMPEL360 Airworthiness Limitations Section document metadata sidecars",
+  "type": "object",
+  "required": ["schema_version", "id", "document", "effectivity", "interval", "approvals", "traceability", "integrity"],
+  "properties": {
+    "schema_version": {
+      "const": "1.1",
+      "description": "Metadata schema version"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^ALS_(LIMIT|INSP)_\\d{2}-\\d{2}-\\d{2}$",
+      "description": "Unique ALS document identifier (e.g., ALS_LIMIT_32-10-01)"
+    },
+    "document": {
+      "type": "object",
+      "required": ["type", "title", "revision", "effective_date"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ALS-LIMIT", "ALS-INSP", "ALS-CDCCL", "ALS-WFD", "ALS-TRACE"]
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable title of the limitation"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version (e.g., 1.0.0)"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when this limitation becomes effective (YYYY-MM-DD)"
+        },
+        "supersedes": {
+          "type": "string",
+          "description": "ID of the document this supersedes"
+        },
+        "superseded_by": {
+          "type": "string",
+          "description": "ID of the document that supersedes this one"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn", "fleet_group"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number applicability (e.g., 'ALL', '001-050')"
+        },
+        "fleet_group": {
+          "type": "string",
+          "description": "Fleet group designation (e.g., 'AMPEL360-BWB-H2')"
+        },
+        "mod_status": {
+          "type": "string",
+          "description": "Modification status applicability"
+        }
+      }
+    },
+    "interval": {
+      "type": "object",
+      "required": ["basis", "value", "tolerance"],
+      "properties": {
+        "basis": {
+          "type": "string",
+          "enum": ["FC", "FH", "CAL"],
+          "description": "Interval basis: FC (Flight Cycles), FH (Flight Hours), CAL (Calendar)"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Interval value"
+        },
+        "tolerance": {
+          "type": "object",
+          "required": ["plus", "minus"],
+          "properties": {
+            "plus": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Positive tolerance (typically 0 for ALS)"
+            },
+            "minus": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Negative tolerance (typically 0 for ALS)"
+            }
+          }
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit for calendar intervals (e.g., 'days', 'months', 'years')"
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Regulatory approval records",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {
+            "type": "string",
+            "enum": ["EASA", "FAA", "TCCA", "CASA", "Other"],
+            "description": "Airworthiness authority"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Approved", "Pending", "Rejected", "Withdrawn"],
+            "description": "Approval status"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Approval date"
+          },
+          "reference": {
+            "type": "string",
+            "description": "Approval reference number"
+          }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "required": ["certification_basis"],
+      "properties": {
+        "certification_basis": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "description": "Certification requirements (e.g., CS 25.571, FAR 25.571)"
+        },
+        "source_reports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source engineering reports"
+        },
+        "related_als": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related ALS document IDs"
+        },
+        "amm_tasks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related Aircraft Maintenance Manual task references"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["checksum"],
+      "properties": {
+        "checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256", "sha512"],
+              "description": "Hash algorithm used"
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64,128}$",
+              "description": "Hexadecimal checksum value"
+            }
+          }
+        },
+        "signature_required": {
+          "type": "boolean",
+          "description": "Whether digital signature is required"
+        },
+        "signature_file": {
+          "type": "string",
+          "description": "Path to detached signature file"
+        }
+      }
+    },
+    "inspection": {
+      "type": "object",
+      "description": "Inspection-specific metadata (for ALS-INSP documents)",
+      "properties": {
+        "method": {
+          "type": "string",
+          "description": "Inspection method (e.g., HFEC, Visual, Ultrasonic)"
+        },
+        "coverage": {
+          "type": "string",
+          "description": "Coverage requirements"
+        },
+        "pod": {
+          "type": "object",
+          "description": "Probability of Detection requirements",
+          "properties": {
+            "minimum": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "crack_size_mm": {
+              "type": "number",
+              "description": "Detectable crack size in millimeters"
+            }
+          }
+        },
+        "drawing_references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Inspection drawing references"
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "description": "Component-specific metadata (for ALS-LIMIT documents)",
+      "properties": {
+        "part_number": {
+          "type": "string",
+          "description": "Component part number"
+        },
+        "description": {
+          "type": "string",
+          "description": "Component description"
+        },
+        "location": {
+          "type": "string",
+          "description": "Installation location"
+        },
+        "life_limit_type": {
+          "type": "string",
+          "enum": ["safe-life", "hard-time", "on-condition"],
+          "description": "Type of life limitation"
+        }
+      }
+    },
+    "dpp_integration": {
+      "type": "object",
+      "description": "Digital Product Passport integration metadata",
+      "properties": {
+        "tracking_enabled": {
+          "type": "boolean",
+          "description": "Whether DPP tracking is enabled"
+        },
+        "compliance_reporting": {
+          "type": "string",
+          "description": "Compliance reporting requirements"
+        },
+        "alert_threshold": {
+          "type": "object",
+          "description": "Alert thresholds for DPP system",
+          "properties": {
+            "warning_percent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "critical_percent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        }
+      }
+    }
+  }
+}
