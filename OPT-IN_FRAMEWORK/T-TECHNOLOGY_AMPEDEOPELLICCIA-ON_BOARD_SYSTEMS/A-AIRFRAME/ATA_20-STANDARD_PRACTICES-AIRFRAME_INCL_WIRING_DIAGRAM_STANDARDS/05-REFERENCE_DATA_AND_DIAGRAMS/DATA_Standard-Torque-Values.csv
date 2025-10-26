@@ -1,0 +1,33 @@
+Part_Family,Diameter,Lube_State,Torque_Nm,Torque_Angle_deg,Notes
+AN-Bolt,1/4-28,Dry,6.8,N/A,Cad-plated steel
+AN-Bolt,1/4-28,Lubricated,5.4,N/A,MIL-PRF-81322 grease
+AN-Bolt,5/16-24,Dry,13.6,N/A,Cad-plated steel
+AN-Bolt,5/16-24,Lubricated,10.8,N/A,MIL-PRF-81322 grease
+AN-Bolt,3/8-24,Dry,23.7,N/A,Cad-plated steel
+AN-Bolt,3/8-24,Lubricated,18.9,N/A,MIL-PRF-81322 grease
+AN-Bolt,1/2-20,Dry,54.2,N/A,Cad-plated steel
+AN-Bolt,1/2-20,Lubricated,43.4,N/A,MIL-PRF-81322 grease
+Metric-Bolt-8.8,M4,Dry,3.0,N/A,Zinc-plated steel
+Metric-Bolt-8.8,M4,Lubricated,2.3,N/A,Light oil
+Metric-Bolt-8.8,M5,Dry,5.8,N/A,Zinc-plated steel
+Metric-Bolt-8.8,M5,Lubricated,4.4,N/A,Light oil
+Metric-Bolt-8.8,M6,Dry,10.0,N/A,Zinc-plated steel
+Metric-Bolt-8.8,M6,Lubricated,7.5,N/A,Light oil
+Metric-Bolt-8.8,M8,Dry,24.0,N/A,Zinc-plated steel
+Metric-Bolt-8.8,M8,Lubricated,18.0,N/A,Light oil
+Metric-Bolt-10.9,M6,Dry,12.0,N/A,High-strength steel
+Metric-Bolt-10.9,M6,Lubricated,9.0,N/A,Light oil
+Metric-Bolt-10.9,M8,Dry,29.0,N/A,High-strength steel
+Metric-Bolt-10.9,M8,Lubricated,22.0,N/A,Light oil
+Metric-Bolt-10.9,M10,Dry,58.0,N/A,High-strength steel
+Metric-Bolt-10.9,M10,Lubricated,43.0,N/A,Light oil
+CFRP-Joint-Bolt,M6,Lubricated,8.0,45,Torque to 8 Nm then add 45 degrees. Do not exceed final torque of 12 Nm.
+CFRP-Joint-Bolt,M8,Lubricated,15.0,90,"Torque to 15 Nm, then add 90 degrees. Do not exceed final torque of 25 Nm."
+CFRP-Joint-Bolt,M10,Lubricated,28.0,90,Torque to 28 Nm then add 90 degrees. Do not exceed final torque of 45 Nm.
+Titanium-Bolt,1/4-28,Dry,5.4,N/A,Ti-6Al-4V alloy
+Titanium-Bolt,1/4-28,Lubricated,4.3,N/A,MIL-PRF-81322 grease
+Titanium-Bolt,5/16-24,Dry,10.8,N/A,Ti-6Al-4V alloy
+Titanium-Bolt,5/16-24,Lubricated,8.6,N/A,MIL-PRF-81322 grease
+Hi-Lok,HL11-6,N/A,2.3,N/A,Install until collar breaks off
+Hi-Lok,HL11-8,N/A,4.5,N/A,Install until collar breaks off
+Hi-Lok,HL70-6,N/A,9.0,N/A,"High-strength, install until collar breaks off"

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Procedure Metadata Schema",
+  "type": "object",
+  "required": ["schema_version", "id", "document", "effectivity"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "id": {"type": "string"},
+    "document": {
+      "type": "object",
+      "required": ["type", "title", "revision"],
+      "properties": {
+        "type": {"type": "string"},
+        "title": {"type": "string"},
+        "revision": {"type": "string"},
+        "effective_date": {"type": "string"}
+      }
+    },
+    "effectivity": {"type": "object"},
+    "safety": {"type": "object"},
+    "compliance": {"type": "object"},
+    "workmanship_record_required": {"type": "boolean"},
+    "approvals": {"type": "array"},
+    "integrity": {"type": "object"}
+  }
+}

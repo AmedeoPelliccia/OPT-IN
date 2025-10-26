@@ -1,0 +1,17 @@
+schema_version: "1.1"
+id: "PROC_Wire-Termination-Crimping-And-Splicing_rev1.0.0_20280901"
+document:
+  type: "PROC"
+  title: "EWIS Procedure - Wire Termination (Crimping and Splicing)"
+  revision: "1.0.0"
+  effective_date: "2028-09-01"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Arc Fault", "Electrical Fire", "Loss of System Function"]
+  criticality: "High"
+compliance:
+  standards: ["SAE AS50881", "FAA AC 43.13-1B"]
+workmanship_record_required: true
+approvals:
+  - { authority: "EWIS Engineering", status: "Released", date: "2028-08-25" }
+integrity: { checksum: { algorithm: "sha256", value: "abcdef123456abcdef123456abcdef123456abcdef123456abcdef123456abcd" } }
