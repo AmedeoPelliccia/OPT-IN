@@ -30,4 +30,4 @@ files:
   - id: "DATA_Principal-Dimensions-Table_rev2.1.0_20280401.md"
     sha256: "a1b2c3d4..."
   - id: "FIG_Three-View-Drawing_rev2.0.0_20280315.dxf"
-    sha256: "e5f6g7h8..."
+    sha256: "<ACTUAL_SHA256_HASH>"
