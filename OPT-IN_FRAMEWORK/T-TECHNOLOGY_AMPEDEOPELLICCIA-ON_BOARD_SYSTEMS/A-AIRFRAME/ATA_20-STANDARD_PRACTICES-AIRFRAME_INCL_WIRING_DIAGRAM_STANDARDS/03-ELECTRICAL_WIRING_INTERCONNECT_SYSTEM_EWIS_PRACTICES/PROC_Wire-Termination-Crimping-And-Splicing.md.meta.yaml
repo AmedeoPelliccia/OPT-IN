@@ -14,4 +14,4 @@ compliance:
 workmanship_record_required: true
 approvals:
   - { authority: "EWIS Engineering", status: "Released", date: "2028-08-25" }
-integrity: { checksum: { algorithm: "sha256", value: "abcdef123456abcdef123456abcdef123456abcdef123456abcdef123456abcd" } }
+integrity: { checksum: { algorithm: "sha256", value: "<ACTUAL_SHA256_HASH_OF_MD_FILE>" } }
