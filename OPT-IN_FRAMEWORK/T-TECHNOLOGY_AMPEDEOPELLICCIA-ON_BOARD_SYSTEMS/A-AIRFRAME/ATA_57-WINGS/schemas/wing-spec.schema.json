@@ -25,7 +25,7 @@
     },
     "geometry": {
       "type": "object",
-      "required": ["span", "area", "aspect_ratio"],
+      "required": ["span_m", "area_m2", "aspect_ratio"],
       "properties": {
         "span_m": {"type": "number", "description": "Wing span in meters"},
         "area_m2": {"type": "number", "description": "Wing area in square meters"},
