@@ -106,7 +106,7 @@ for schema in "${schema_files[@]}"; do
     schema_path="$ATA57_DIR/schemas/$schema"
     if [ -f "$schema_path" ]; then
         # Validate JSON syntax
-        if python3 -m json.tool "$schema_path" > /dev/null 2>&1; then
+        if jq . "$schema_path" > /dev/null 2>&1; then
             success "Schema valid: $schema"
         else
             error "Invalid JSON in schema: $schema"
