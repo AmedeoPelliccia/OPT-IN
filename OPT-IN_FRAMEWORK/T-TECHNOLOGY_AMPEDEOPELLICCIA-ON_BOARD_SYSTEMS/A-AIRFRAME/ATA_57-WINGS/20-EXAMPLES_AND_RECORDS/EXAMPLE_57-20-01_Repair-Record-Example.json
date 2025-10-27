@@ -47,7 +47,7 @@
       "unit": "yards",
       "coc_number": "COC-2025-BMS8-276-0123",
       "fuel_compatible": false,
-      "shelf_life_expiry": "2025-10-27"
+      "shelf_life_expiry": "2026-04-27"
     },
     {
       "part_number": "BMS5-101-Type-I",
@@ -58,7 +58,7 @@
       "unit": "square_feet",
       "coc_number": "COC-2025-BMS5-101-0089",
       "fuel_compatible": false,
-      "shelf_life_expiry": "2025-10-27"
+      "shelf_life_expiry": "2026-01-27"
     }
   ],
   "tooling": [
