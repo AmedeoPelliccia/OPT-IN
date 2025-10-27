@@ -2,7 +2,7 @@
 
 **Document Type:** PROC  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-09-01
+**Effective Date:** 2028-09-01 _(Future Effective Date)_
 
 ## 1. Purpose
 This procedure establishes requirements for maintaining proper separation between incompatible systems when routed in the same area.
