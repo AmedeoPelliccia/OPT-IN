@@ -1,0 +1,7 @@
+Material_Type,Specification,Grade,Supplier,Thickness_Range_Inch,Temperature_Range_F,Light_Transmission_Percent_Min,Approved_Use
+Aluminosilicate Glass,ASTM C1036,Type I,Corning,0.100-0.250,-65 to 160,75,Windshields
+Soda-Lime Glass,ASTM C1036,Type II,PPG,0.100-0.200,-40 to 150,78,Side Windows
+Stretched Acrylic,MIL-PRF-25690,Type II,Rohm,0.100-0.250,-65 to 180,85,Cabin Windows
+Acrylic PMMA,ASTM D4802,Cast,Plexiglas,0.125-0.375,-40 to 180,92,Vision Panels
+Polycarbonate,ASTM D3935,Grade 1,Sabic,0.187-0.250,-40 to 250,89,Inspection Windows
+PVB Interlayer,ASTM F1233,Standard,Saflex,0.015-0.060,-40 to 180,90,Laminate Interlayer

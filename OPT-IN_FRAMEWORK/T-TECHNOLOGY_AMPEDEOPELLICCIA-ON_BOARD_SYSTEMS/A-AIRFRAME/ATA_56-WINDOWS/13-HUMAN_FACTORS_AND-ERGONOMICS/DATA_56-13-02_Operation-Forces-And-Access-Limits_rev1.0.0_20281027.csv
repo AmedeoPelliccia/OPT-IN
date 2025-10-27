@@ -1,0 +1,4 @@
+Component,Operation,Force_Limit_lbf,Access_Requirement,Crew_Reach_Category
+Heater_Switch,Toggle,5,Within pilot reach envelope,Primary
+Emergency_Exit_Handle,Pull,20-40,Reachable from seat,Secondary
+Vision_Panel_Latch,Rotate,10,Ground access,Maintenance

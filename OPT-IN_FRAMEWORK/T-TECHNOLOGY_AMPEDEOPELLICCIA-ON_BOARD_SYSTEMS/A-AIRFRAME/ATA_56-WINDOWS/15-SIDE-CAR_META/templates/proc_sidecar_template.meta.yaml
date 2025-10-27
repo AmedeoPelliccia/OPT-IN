@@ -1,0 +1,43 @@
+# Procedure Metadata Template
+# Extended template for PROC documents with additional safety and tool information
+
+schema_version: "1.1"
+id: "{PROCEDURE_ID}"
+document:
+  type: "PROC"
+  title: "{TITLE}"
+  revision: "{X.Y.Z}"
+  effective_date: "YYYY-MM-DD"
+effectivity:
+  msn: "{MSN_RANGE}"
+  config: "{CONFIG}"
+safety:
+  hazards:
+    - "{HAZARD_1}"  # e.g., "Pressurization hazard"
+    - "{HAZARD_2}"  # e.g., "Sharp edges"
+  criticality: "{LEVEL}"
+  ppe_required:
+    - "{PPE_1}"  # e.g., "Safety glasses"
+    - "{PPE_2}"  # e.g., "Cut-resistant gloves"
+tools_required:
+  - id: "{TOOL_ID}"
+    description: "{TOOL_DESC}"
+    calibration_required: true/false
+materials_required:
+  - part_number: "{PN}"
+    description: "{DESC}"
+    specification: "{SPEC}"
+approvals:
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "YYYY-MM-DD"
+  - authority: "Structures Engineering"
+    status: "Released"
+    date: "YYYY-MM-DD"
+traceability:
+  source_documents: []
+  crossrefs: ["ATA 20", "ATA 51"]  # Typical cross-refs
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "{SHA256_HASH}"

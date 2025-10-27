@@ -1,0 +1,8 @@
+Test_Name,Test_Spec,Sample_Size,Pass_Criteria,Failure_Mode,Action_on_Failure
+Static_Pressure,FAR 25.775,3,No failure @ 12.9 psi,Crack or permanent deformation,Redesign
+Pressure_Fatigue,FAR 25.775,3,55000 cycles no failure,Crack initiation,Life limit reduction
+Bird_Strike,FAR 25.775,3,No penetration,Penetration or loss of vision,Redesign
+Thermal_Cycle,DO-160 Sec 4,2,No degradation,Delamination or crack,Material change
+Optical_Distortion,SAE AS25936,5,< 2 arc-min,Excessive distortion,Process improvement
+Heater_Life,Internal,2,1000 cycles no failure,Open or short,Heater redesign
+Lightning_Strike,DO-160 Sec 23,3,Continuity maintained,Continuity loss,LSP enhancement

@@ -1,0 +1,26 @@
+schema_version: "1.1"
+id: "DESC_56-02-01_Pane-Construction-And-Layering_rev1.0.0_20251027"
+document:
+  type: "DESC"
+  title: "56-02-01: Pane Construction and Layering"
+  revision: "1.0.0"
+  effective_date: "2025-10-27"
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  criticality: "Critical"
+approvals:
+  - authority: "Structures Engineering"
+    status: "Released"
+    date: "2025-10-20"
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "2025-10-22"
+traceability:
+  source_documents: ["AMPEL360-WINDOWS-SPEC-001"]
+  crossrefs: ["ATA 20", "ATA 51", "ATA 52", "ATA 53"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "CALCULATED_AT_COMMIT"

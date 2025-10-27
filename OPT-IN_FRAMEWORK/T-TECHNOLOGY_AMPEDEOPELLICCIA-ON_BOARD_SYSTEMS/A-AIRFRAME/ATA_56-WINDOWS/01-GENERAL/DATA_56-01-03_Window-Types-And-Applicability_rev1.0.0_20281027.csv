@@ -1,0 +1,11 @@
+Window_Location,Part_Number,Type,Material,Construction,MSN_Applicability,Config,Heated,LSP_Required,Inspection_Interval_FH
+FWD-CTR-01,WND-56-001-A,Windshield,Laminated Glass,Multi-layer,ALL,BWB-360-PAX,Yes,Yes,1000
+FWD-CTR-02,WND-56-001-A,Windshield,Laminated Glass,Multi-layer,ALL,BWB-360-PAX,Yes,Yes,1000
+FWD-LH-01,WND-56-002-B,Side Window,Laminated Glass,Multi-layer,ALL,BWB-360-PAX,Yes,Yes,1500
+FWD-RH-01,WND-56-002-B,Side Window,Laminated Glass,Multi-layer,ALL,BWB-360-PAX,Yes,Yes,1500
+CABIN-LH-01A,WND-56-010-C,Cabin Window,Stretched Acrylic,Dual-pane,ALL,BWB-360-PAX,No,No,2000
+CABIN-LH-02A,WND-56-010-C,Cabin Window,Stretched Acrylic,Dual-pane,ALL,BWB-360-PAX,No,No,2000
+CABIN-RH-01A,WND-56-010-C,Cabin Window,Stretched Acrylic,Dual-pane,ALL,BWB-360-PAX,No,No,2000
+DOOR-1L-VISION,WND-56-020-D,Vision Panel,Acrylic,Monolithic,ALL,BWB-360-PAX,No,No,1500
+DOOR-1R-VISION,WND-56-020-D,Vision Panel,Acrylic,Monolithic,ALL,BWB-360-PAX,No,No,1500
+DOOR-3L-EXIT,WND-56-030-E,Emergency Exit,Stretched Acrylic,Dual-pane,ALL,BWB-360-PAX,No,No,1000

@@ -1,0 +1,7 @@
+Inspection_Type,Window_Location,Interval_FH,Interval_FC,Method,Acceptance_Criteria
+GVI,Windshield,1000,N/A,Visual,No cracks or delamination
+GVI,Side Window,1500,N/A,Visual,Scratches < 0.002"
+GVI,Cabin Window,2000,N/A,Visual,Scratches < 0.005"
+DVI,Windshield,5000,N/A,Detailed Visual,Per PROC_56-07-01
+C-Scan,Windshield,N/A,N/A,On-Condition,Delamination < 0.25" dia
+Seal Leak,All,N/A,N/A,On-Condition,< 0.1 CFM @ 8.6 psi

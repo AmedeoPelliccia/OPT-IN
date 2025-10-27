@@ -1,0 +1,5 @@
+Material_Type,Part_Number,Specification,Supplier,Cure_Time_Hours,Cure_Temp_F,Shelf_Life_Months,Application
+Acrylic Adhesive,ADH-56-001,MIL-A-5092,3M,24,Room,12,Acrylic Patch
+Edge Sealant,SEAL-56-100,MIL-S-8802,PPG,168,Room,18,Laminate Edge
+Polishing Compound,POL-56-001,Commercial,Novus,N/A,N/A,24,Acrylic Polish
+Surface Cleaner,CLN-56-001,IPA 99%,Multiple,N/A,N/A,Indefinite,General Cleaning

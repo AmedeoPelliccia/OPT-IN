@@ -1,0 +1,4 @@
+LSP_Type,Material,Sheet_Resistance_Ohm_per_Sq_Min,Sheet_Resistance_Ohm_per_Sq_Max,Continuity_Resistance_Ohm_Max,Application,Repair_Method
+ITO_Coating,Indium Tin Oxide,1.0,10.0,0.003,Windshield,Coating Repair
+Metal_Mesh,Embedded Copper,0.1,1.0,0.003,Windshield,Replace Pane
+Conductive_Film,Silver Nanowire,2.0,15.0,0.003,Side Window,Film Replacement

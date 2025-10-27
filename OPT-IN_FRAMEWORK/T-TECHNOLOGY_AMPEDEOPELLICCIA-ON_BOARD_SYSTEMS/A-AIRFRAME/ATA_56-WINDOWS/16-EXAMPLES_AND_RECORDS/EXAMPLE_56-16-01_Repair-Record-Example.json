@@ -1,0 +1,86 @@
+{
+  "record_id": "WR-56-2025-001234",
+  "timestamp": "2025-10-27T14:30:00Z",
+  "msn": "MSN-001",
+  "config": "BWB-360-PAX",
+  "window_location": "FWD-LH-01",
+  "pane_type": "laminate",
+  "pane_serial": "WP-56-001-A-12345",
+  "pane_part_number": "WND-56-002-B",
+  "work_scope": "Scratch polishing",
+  "damage_classification": {
+    "type": "scratch",
+    "severity": "minor",
+    "location": "lower right quadrant"
+  },
+  "optical_quality_score": 8.5,
+  "scratch_depth": {
+    "max_depth_inch": 0.0018,
+    "location": "2 inches from bottom edge",
+    "acceptance_limit_inch": 0.002,
+    "within_limits": true
+  },
+  "heater_resistance": {
+    "measured_ohms": 2.1,
+    "spec_min_ohms": 1.5,
+    "spec_max_ohms": 2.5,
+    "within_spec": true,
+    "test_method": "4-wire_kelvin"
+  },
+  "seal_torque": {
+    "fastener_count": 16,
+    "torque_values_nm": [5.0, 5.1, 4.9, 5.0, 5.2, 4.8, 5.0, 5.1, 5.0, 4.9, 5.1, 5.0, 5.0, 4.9, 5.1, 5.0],
+    "spec_torque_nm": 5.0,
+    "tolerance_percent": 6,
+    "all_within_spec": true
+  },
+  "lsp_continuity": {
+    "resistance_ohms": 0.0025,
+    "limit_ohms": 0.003,
+    "test_method": "4-wire",
+    "coating_type": "ITO",
+    "within_limits": true
+  },
+  "ndt_file_hashes": [
+    {
+      "filename": "WR-56-2025-001234_before.jpg",
+      "hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+      "type": "visual_inspection"
+    },
+    {
+      "filename": "WR-56-2025-001234_after.jpg",
+      "hash": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+      "type": "visual_inspection"
+    }
+  ],
+  "effectivity": {
+    "msn": "MSN-001",
+    "config": "BWB-360-PAX",
+    "mod_status": "MOD-56-001 embodied"
+  },
+  "materials_used": [
+    {
+      "part_number": "POL-56-001",
+      "description": "Acrylic polishing compound",
+      "lot_number": "LOT-2025-456",
+      "quantity": 1,
+      "cofc_ref": "COFC-2025-456"
+    }
+  ],
+  "tools_used": [
+    {
+      "tool_id": "DMM-001",
+      "description": "4-wire Digital Multimeter",
+      "calibration_due": "2026-01-15"
+    },
+    {
+      "tool_id": "TRQ-010",
+      "description": "Torque Wrench 0-50 Nm",
+      "calibration_due": "2026-02-01"
+    }
+  ],
+  "operator": "TECH-789",
+  "inspector": "QA-456",
+  "procedure_reference": "PROC_56-05-02_Polishing-And-Refurbishment_rev1.0.0_20251027.md",
+  "remarks": "Scratch successfully polished to within limits. Optical quality restored. Heater and LSP continuity verified."
+}

@@ -1,0 +1,27 @@
+# Document Metadata Template
+# This template should be copied and customized for each technical document
+
+schema_version: "1.1"
+id: "{DOCUMENT_ID}"  # e.g., "PROC_56-08-01_Acrylic-Patch-Repair_rev1.0.0_20251027"
+document:
+  type: "{TYPE}"  # DESC, PROC, INSP, DATA, TESTPLAN, DIAG, EXAMPLE
+  title: "{TITLE}"  # e.g., "56-08-01: Acrylic Patch Repair"
+  revision: "{X.Y.Z}"  # Semantic versioning
+  effective_date: "YYYY-MM-DD"
+effectivity:
+  msn: "{MSN_RANGE}"  # e.g., "001-999" or "ALL"
+  config: "{CONFIG}"  # e.g., "BWB-360-PAX" or "ALL"
+safety:
+  hazards: []  # List of potential hazards if applicable
+  criticality: "{LEVEL}"  # Non-Critical, Critical, Flight-Safety
+approvals:
+  - authority: "{ROLE}"  # e.g., "Structures Engineering"
+    status: "{STATUS}"  # Draft, Released, Approved, Superseded
+    date: "YYYY-MM-DD"
+traceability:
+  source_documents: []  # List of source requirement/analysis documents
+  crossrefs: []  # List of related ATA chapters
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "{SHA256_HASH}"  # Calculate at commit time

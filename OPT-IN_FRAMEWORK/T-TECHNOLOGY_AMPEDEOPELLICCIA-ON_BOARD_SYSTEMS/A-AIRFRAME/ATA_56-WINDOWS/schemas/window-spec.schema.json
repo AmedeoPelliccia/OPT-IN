@@ -1,0 +1,300 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Window Specification Schema",
+  "description": "Comprehensive window specification including materials, dimensions, load limits, optical properties, and installation requirements",
+  "type": "object",
+  "required": ["part_number", "window_type", "pane_material", "dimensions", "structural_limits", "optical_properties"],
+  "properties": {
+    "part_number": {
+      "type": "string",
+      "description": "Window assembly part number"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]+$"
+    },
+    "window_type": {
+      "type": "string",
+      "enum": [
+        "cockpit_windshield",
+        "cockpit_side_window",
+        "cabin_window_fixed",
+        "cabin_window_emergency_exit",
+        "door_vision_panel",
+        "inspection_window"
+      ]
+    },
+    "pane_material": {
+      "type": "object",
+      "required": ["type", "construction"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["acrylic", "glass", "laminate", "stretched_acrylic", "polycarbonate"]
+        },
+        "construction": {
+          "type": "string",
+          "enum": ["monolithic", "dual_pane", "multi_layer_laminate"]
+        },
+        "layers": {
+          "type": "array",
+          "description": "Layer-by-layer construction details",
+          "items": {
+            "type": "object",
+            "properties": {
+              "layer_number": {
+                "type": "integer"
+              },
+              "material": {
+                "type": "string"
+              },
+              "thickness_inch": {
+                "type": "number"
+              },
+              "function": {
+                "type": "string",
+                "enum": ["structural", "interlayer", "coating", "heating_element"]
+              }
+            }
+          }
+        },
+        "total_thickness_inch": {
+          "type": "number"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["length_inch", "width_inch"],
+      "properties": {
+        "length_inch": {
+          "type": "number"
+        },
+        "width_inch": {
+          "type": "number"
+        },
+        "thickness_inch": {
+          "type": "number"
+        },
+        "curvature_radius_inch": {
+          "type": "number",
+          "description": "Radius of curvature if window is curved"
+        },
+        "area_sq_inch": {
+          "type": "number"
+        }
+      }
+    },
+    "structural_limits": {
+      "type": "object",
+      "properties": {
+        "design_pressure_psi": {
+          "type": "number",
+          "description": "Design cabin differential pressure"
+        },
+        "ultimate_pressure_psi": {
+          "type": "number",
+          "description": "Ultimate pressure capability"
+        },
+        "bird_strike_rating": {
+          "type": "object",
+          "properties": {
+            "bird_weight_lb": {
+              "type": "number"
+            },
+            "speed_keas": {
+              "type": "number"
+            }
+          }
+        },
+        "thermal_limits": {
+          "type": "object",
+          "properties": {
+            "min_temp_celsius": {
+              "type": "number"
+            },
+            "max_temp_celsius": {
+              "type": "number"
+            },
+            "thermal_shock_rating_celsius": {
+              "type": "number"
+            }
+          }
+        },
+        "load_path": {
+          "type": "string",
+          "description": "Description of structural load path"
+        }
+      }
+    },
+    "optical_properties": {
+      "type": "object",
+      "properties": {
+        "transmittance_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Visible light transmittance percentage"
+        },
+        "haze_percent_max": {
+          "type": "number",
+          "description": "Maximum allowable haze per ASTM D1003"
+        },
+        "distortion_arc_minutes_max": {
+          "type": "number",
+          "description": "Maximum optical distortion in arc minutes"
+        },
+        "uv_protection": {
+          "type": "boolean"
+        },
+        "anti_reflective_coating": {
+          "type": "boolean"
+        }
+      }
+    },
+    "heating_system": {
+      "type": "object",
+      "properties": {
+        "heating_required": {
+          "type": "boolean"
+        },
+        "heater_type": {
+          "type": "string",
+          "enum": ["embedded_element", "conductive_coating", "heating_blanket", "none"]
+        },
+        "power_rating_watts": {
+          "type": "number"
+        },
+        "resistance_ohms": {
+          "type": "object",
+          "properties": {
+            "nominal": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          }
+        },
+        "voltage_vdc": {
+          "type": "number"
+        },
+        "power_density_w_per_sq_in": {
+          "type": "number"
+        }
+      }
+    },
+    "lightning_protection": {
+      "type": "object",
+      "properties": {
+        "lsp_required": {
+          "type": "boolean"
+        },
+        "protection_type": {
+          "type": "string",
+          "enum": ["ITO_coating", "metal_mesh", "conductive_film", "none"]
+        },
+        "continuity_resistance_ohm_max": {
+          "type": "number"
+        }
+      }
+    },
+    "seal_system": {
+      "type": "object",
+      "properties": {
+        "seal_material": {
+          "type": "string"
+        },
+        "seal_part_number": {
+          "type": "string"
+        },
+        "fastener_type": {
+          "type": "string"
+        },
+        "fastener_count": {
+          "type": "integer"
+        },
+        "torque_spec_nm": {
+          "type": "number"
+        },
+        "torque_tolerance_percent": {
+          "type": "number"
+        }
+      }
+    },
+    "installation": {
+      "type": "object",
+      "properties": {
+        "frame_part_number": {
+          "type": "string"
+        },
+        "installation_procedure": {
+          "type": "string",
+          "description": "Reference to installation procedure"
+        },
+        "special_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "inspection_interval_fh": {
+          "type": "integer",
+          "description": "Inspection interval in flight hours"
+        },
+        "inspection_procedure": {
+          "type": "string"
+        },
+        "life_limit_fc": {
+          "type": "integer",
+          "description": "Life limit in flight cycles (if applicable)"
+        }
+      }
+    },
+    "regulatory": {
+      "type": "object",
+      "properties": {
+        "tso_authorization": {
+          "type": "string"
+        },
+        "test_reports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "applicable_standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "properties": {
+        "msn_range": {
+          "type": "string"
+        },
+        "configuration": {
+          "type": "string"
+        },
+        "mod_applicability": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
