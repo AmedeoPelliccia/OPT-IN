@@ -433,7 +433,7 @@ Operator-approved scheduled maintenance program. Consolidates MPD (ATA_01) and A
 - [`INDEX.meta.yaml`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/INDEX.meta.yaml)
 
 ## 01 — Maintenance Program Manual (MPM)
-- [`MPM_Master-Document_rev1.0.0_20280701.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/MPM_MASTER-DOCUMENT_REV100_20280701.md)
+- [`MPM_Master-Document_rev1.0.0_20250701.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/MPM_MASTER-DOCUMENT_REV100_20250701.md)
 - **01-A-CHECKS**
   - [`A-CHECK_Program-Definition.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/01-A-CHECKS/A-CHECK_PROGRAM-DEFINITION.md)
   - [`A-CHECK_Work-Package-A01.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/01-A-CHECKS/A-CHECK_WORK-PACKAGE-A01.md)
@@ -629,13 +629,13 @@ document:
   type: "PLAN"
   title: "Vibration and Noise Management Program Plan"
   revision: "1.0.0"
-  effective_date: "2028-04-15"
+  effective_date: "2025-04-15"
 effectivity:
   scope: "Program-Wide"
 approvals:
   - authority: "Airworthiness Engineering"
     status: "Released"
-    date: "2028-04-10"
+    date: "2025-04-10"
 traceability:
   crossrefs: ["ATA 61", "ATA 72", "ATA 45", "ATA 92", "ATA 95"]
 integrity:
@@ -779,8 +779,8 @@ All files follow the pattern:
 ```
 
 Examples:
-- `PROC_52-02-01_General-Visual-Inspection-GVI_rev1.0.0_20281027.md`
-- `DATA_52-04-03_Latch-Torque-Charts_rev1.0.0_20281027.csv`
+- `PROC_52-02-01_General-Visual-Inspection-GVI_rev1.0.0_20251027.md`
+- `DATA_52-04-03_Latch-Torque-Charts_rev1.0.0_20251027.csv`
 
 ### **Validation**
 

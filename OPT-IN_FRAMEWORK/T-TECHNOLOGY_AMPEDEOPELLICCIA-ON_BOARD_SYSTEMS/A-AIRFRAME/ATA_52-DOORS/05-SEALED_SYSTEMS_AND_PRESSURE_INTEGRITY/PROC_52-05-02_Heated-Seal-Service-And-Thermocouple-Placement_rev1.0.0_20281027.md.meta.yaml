@@ -1,10 +1,10 @@
 schema_version: "1.1"
-id: "PROC_52-05-02_Heated-Seal-Service-And-Thermocouple-Placement_rev1.0.0_20281027"
+id: "PROC_52-05-02_Heated-Seal-Service-And-Thermocouple-Placement_rev1.0.0_20251027"
 document:
   type: "PROC"
   title: "52-05-02: Heated Seal Service And Thermocouple Placement"
   revision: "1.0.0"
-  effective_date: "2028-10-27"
+  effective_date: "2025-10-27"
 effectivity:
   msn: "ALL"
   configurations: ["BASELINE", "CARGO", "VIP"]
@@ -14,10 +14,10 @@ safety:
 approvals:
   - authority: "Structures Engineering"
     status: "Released"
-    date: "2028-10-27"
+    date: "2025-10-27"
   - authority: "Quality Assurance"
     status: "Approved"
-    date: "2028-10-27"
+    date: "2025-10-27"
 traceability:
   source_documents: ["AMM-52-XX-XX"]
   crossrefs: ["ATA 20", "ATA 51"]

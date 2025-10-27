@@ -5,7 +5,7 @@
 - **ATA Chapter:** 52 - DOORS
 - **Section:** 08 - CARGO DOORS AND BLOWOUT PANELS
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-10-27
+- **Effective Date:** 2025-10-27
 
 ## Purpose
 
@@ -41,7 +41,7 @@ This document provides 52-08-02: Blowout Panel Inspection And Repair procedures/
 
 | Revision | Date       | Description    | Author                 |
 |----------|------------|----------------|------------------------|
-| 1.0.0    | 2028-10-27 | Initial release| Structures Engineering |
+| 1.0.0    | 2025-10-27 | Initial release| Structures Engineering |
 
 ---
 

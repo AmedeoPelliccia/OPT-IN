@@ -5,7 +5,7 @@
 - **ATA Chapter:** 52 - DOORS
 - **Section:** 05 - SEALED SYSTEMS AND PRESSURE INTEGRITY
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-10-27
+- **Effective Date:** 2025-10-27
 
 ## Purpose
 
@@ -41,7 +41,7 @@ This document provides 52-05-01: Seal Replacement And Pressure Test procedures/i
 
 | Revision | Date       | Description    | Author                 |
 |----------|------------|----------------|------------------------|
-| 1.0.0    | 2028-10-27 | Initial release| Structures Engineering |
+| 1.0.0    | 2025-10-27 | Initial release| Structures Engineering |
 
 ---
 

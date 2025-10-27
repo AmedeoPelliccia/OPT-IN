@@ -109,7 +109,7 @@ This script verifies:
 
 | Revision | Date       | Author              | Description                      |
 |----------|------------|---------------------|----------------------------------|
-| 1.0.0    | 2028-10-27 | Structures Engineering | Initial release for ATA 52      |
+| 1.0.0    | 2025-10-27 | Structures Engineering | Initial release for ATA 52      |
 
 ---
 

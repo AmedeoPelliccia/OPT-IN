@@ -5,7 +5,7 @@
 - **ATA Chapter:** 52 - DOORS
 - **Section:** 01 - GENERAL
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-10-27
+- **Effective Date:** 2025-10-27
 
 ## Purpose
 
@@ -136,7 +136,7 @@ Door identifiers follow the format: `[POSITION]-[SIDE][NUMBER]`
 
 | Revision | Date       | Description                    | Author                  |
 |----------|------------|--------------------------------|-------------------------|
-| 1.0.0    | 2028-10-27 | Initial release                | Structures Engineering  |
+| 1.0.0    | 2025-10-27 | Initial release                | Structures Engineering  |
 
 ---
 

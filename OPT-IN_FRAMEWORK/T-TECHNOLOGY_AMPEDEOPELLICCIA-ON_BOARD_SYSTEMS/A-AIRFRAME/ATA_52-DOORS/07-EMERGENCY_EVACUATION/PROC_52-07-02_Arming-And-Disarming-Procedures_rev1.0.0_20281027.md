@@ -5,7 +5,7 @@
 - **ATA Chapter:** 52 - DOORS
 - **Section:** 07 - EMERGENCY EVACUATION
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-10-27
+- **Effective Date:** 2025-10-27
 
 ## Purpose
 
@@ -41,7 +41,7 @@ This document provides 52-07-02: Arming And Disarming Procedures procedures/info
 
 | Revision | Date       | Description    | Author                 |
 |----------|------------|----------------|------------------------|
-| 1.0.0    | 2028-10-27 | Initial release| Structures Engineering |
+| 1.0.0    | 2025-10-27 | Initial release| Structures Engineering |
 
 ---
 
