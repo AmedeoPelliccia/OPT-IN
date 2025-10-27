@@ -1,5 +1,5 @@
 NCR_Number,Date_Initiated,MSN,Work_Order,Description,Severity,Disposition,Status,Approver,Notes
-NCR-53-001,2028-06-15,AMP360-001,WO-12345,"Crack found in frame FR-150 flange",Critical,Replace,"Closed",J.Smith_PE,"Frame replaced per EO-53-001"
-NCR-53-002,2028-07-22,AMP360-003,WO-12389,"Delamination in skin panel >25mm",Major,Repair,"Closed",M.Johnson_PE,"Bonded scarf repair per ATA 51-10-02"
-NCR-53-003,2028-08-10,AMP360-005,WO-12445,"Wrong adhesive used (AF-191 vs AF-163)",Moderate,Use-As-Is,"Closed",K.Williams_PE,"Analysis shows AF-191 acceptable, properties equivalent"
-NCR-53-004,2028-09-05,AMP360-007,WO-12501,"Fastener torque 15% below spec",Minor,Rework,"Closed",R.Davis_PE,"Re-torqued all fasteners, verified with calibrated wrench"
+NCR-53-001,2025-06-15,AMP360-001,WO-12345,"Crack found in frame FR-150 flange",Critical,Replace,"Closed",J.Smith_PE,"Frame replaced per EO-53-001"
+NCR-53-002,2025-07-22,AMP360-003,WO-12389,"Delamination in skin panel >25mm",Major,Repair,"Closed",M.Johnson_PE,"Bonded scarf repair per ATA 51-10-02"
+NCR-53-003,2025-08-10,AMP360-005,WO-12445,"Wrong adhesive used (AF-191 vs AF-163)",Moderate,Use-As-Is,"Closed",K.Williams_PE,"Analysis shows AF-191 acceptable, properties equivalent"
+NCR-53-004,2025-09-05,AMP360-007,WO-12501,"Fastener torque 15% below spec",Minor,Rework,"Closed",R.Davis_PE,"Re-torqued all fasteners, verified with calibrated wrench"
