@@ -1,0 +1,7 @@
+schema_version: "1.1"
+id: "DESC_55-04-01_Control-Surface-Design-And-Interfaces_rev1.0.0_20251027"
+document: { type: "DESC", title: "55-04-01: Control Surface Design and Interfaces", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL" }
+approvals: [{ authority: "Flight Controls Engineering", status: "Released", date: "2025-10-24" }]
+traceability: { crossrefs: ["ATA 27", "ATA 29"] }
+integrity: { checksum: { algorithm: "sha256", value: "e5e6e7e8e9e0f1f2f3f4f5f6f7f8f9f0a1a2a3a4a5a6a7a8a9a0b1b2b3b4b5b6" } }

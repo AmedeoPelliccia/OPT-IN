@@ -1,0 +1,230 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata55/damage-classification.schema.json",
+  "title": "Stabilizer Damage Classification",
+  "description": "Schema for classifying and categorizing damage to stabilizer structures and components",
+  "type": "object",
+  "properties": {
+    "damageRecordId": {
+      "type": "string",
+      "description": "Unique damage record identifier",
+      "pattern": "^DMG-55-[0-9]{4}-[0-9]{6}$"
+    },
+    "discoveryDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date damage was discovered"
+    },
+    "component": {
+      "type": "string",
+      "enum": ["H-Stab", "V-Stab", "Elevator_Left", "Elevator_Right", "Rudder", "Trim_Tab", "Hinge", "Bearing", "Actuator", "Attachment_Fitting"],
+      "description": "Component with damage"
+    },
+    "damageType": {
+      "type": "string",
+      "enum": [
+        "Impact",
+        "Corrosion",
+        "Fatigue_Crack",
+        "Delamination",
+        "Void",
+        "Disbond",
+        "Lightning_Strike",
+        "Foreign_Object_Damage",
+        "Manufacturing_Defect",
+        "Wear",
+        "Erosion",
+        "Other"
+      ],
+      "description": "Type of damage"
+    },
+    "severityClassification": {
+      "type": "string",
+      "enum": ["Minor", "Moderate", "Major", "Critical"],
+      "description": "Damage severity per damage tolerance assessment"
+    },
+    "location": {
+      "type": "object",
+      "description": "Damage location",
+      "properties": {
+        "stationNumber": {
+          "type": "number",
+          "description": "Station number"
+        },
+        "buttockLine": {
+          "type": "number",
+          "description": "Buttock line (lateral position)"
+        },
+        "waterLine": {
+          "type": "number",
+          "description": "Water line (vertical position)"
+        },
+        "spanPercentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of span from root to tip"
+        },
+        "zoneIdentifier": {
+          "type": "string",
+          "description": "Aircraft zone identifier"
+        }
+      },
+      "required": ["stationNumber"]
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Damage dimensions",
+      "properties": {
+        "length": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Length of damage"
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Width of damage"
+        },
+        "depth": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Depth of damage"
+        },
+        "area": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Area of damage"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["mm", "cm", "in"],
+          "description": "Unit of measurement"
+        }
+      },
+      "required": ["unit"]
+    },
+    "structuralAssessment": {
+      "type": "object",
+      "description": "Structural assessment of damage",
+      "properties": {
+        "affectsPrimaryLoadPath": {
+          "type": "boolean",
+          "description": "Whether damage affects primary load path"
+        },
+        "residualStrength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Estimated residual strength as percentage of design ultimate load"
+        },
+        "growthPotential": {
+          "type": "string",
+          "enum": ["None", "Low", "Moderate", "High"],
+          "description": "Potential for damage growth"
+        },
+        "immediateAction": {
+          "type": "string",
+          "enum": ["None", "Monitor", "Repair_Next_Maintenance", "Repair_Immediately", "Ground_Aircraft"],
+          "description": "Required immediate action"
+        }
+      },
+      "required": ["affectsPrimaryLoadPath", "immediateAction"]
+    },
+    "compositeSpecificData": {
+      "type": "object",
+      "description": "Additional data for composite damage",
+      "properties": {
+        "delaminationType": {
+          "type": "string",
+          "enum": ["Interply", "Intraply", "Skin_Stringer", "Skin_Core"],
+          "description": "Type of delamination"
+        },
+        "affectedPlies": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "List of affected ply numbers"
+        },
+        "voidContentPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Void content percentage"
+        },
+        "moistureIngress": {
+          "type": "boolean",
+          "description": "Whether moisture ingress is detected"
+        }
+      }
+    },
+    "metallicSpecificData": {
+      "type": "object",
+      "description": "Additional data for metallic damage",
+      "properties": {
+        "crackType": {
+          "type": "string",
+          "enum": ["Fatigue", "Stress_Corrosion", "Corrosion", "Impact"],
+          "description": "Type of crack for metallic components"
+        },
+        "crackOrientation": {
+          "type": "string",
+          "enum": ["Longitudinal", "Transverse", "Oblique"],
+          "description": "Crack orientation relative to primary stress direction"
+        },
+        "corrosionType": {
+          "type": "string",
+          "enum": ["Surface", "Pitting", "Intergranular", "Exfoliation", "Crevice"],
+          "description": "Type of corrosion"
+        }
+      }
+    },
+    "detectionMethod": {
+      "type": "string",
+      "enum": ["Visual", "Routine_Inspection", "Special_Inspection", "NDT", "Pilot_Report", "Incident_Investigation"],
+      "description": "How damage was detected"
+    },
+    "photoDocumentation": {
+      "type": "array",
+      "description": "Photo documentation of damage",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "description": "Photo file name"
+          },
+          "fileHash": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$",
+            "description": "SHA-256 hash of photo file"
+          },
+          "captureDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date photo was captured"
+          }
+        },
+        "required": ["fileName", "fileHash"]
+      }
+    },
+    "dispositionRequired": {
+      "type": "boolean",
+      "description": "Whether engineering disposition is required"
+    },
+    "dispositionNumber": {
+      "type": "string",
+      "description": "Engineering disposition number if applicable"
+    }
+  },
+  "required": [
+    "damageRecordId",
+    "discoveryDate",
+    "component",
+    "damageType",
+    "severityClassification",
+    "location",
+    "structuralAssessment"
+  ]
+}

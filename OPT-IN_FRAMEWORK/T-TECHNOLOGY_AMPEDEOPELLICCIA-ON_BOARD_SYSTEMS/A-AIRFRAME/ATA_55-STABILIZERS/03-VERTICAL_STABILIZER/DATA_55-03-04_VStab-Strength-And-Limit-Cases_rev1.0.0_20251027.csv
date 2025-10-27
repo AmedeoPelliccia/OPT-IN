@@ -1,0 +1,5 @@
+Load_Case,Description,Limit_Load_lbf,Ultimate_Load_lbf,Factor_of_Safety,Test_Status
+LC-11,Max_Rudder_Deflection_25deg,75000,112500,1.5,Certified
+LC-12,Crosswind_Landing_30kt,60000,90000,1.5,Certified
+LC-13,Engine_Out_Yaw,55000,82500,1.5,Certified
+LC-14,Lateral_Gust_44fps,50000,75000,1.5,Certified

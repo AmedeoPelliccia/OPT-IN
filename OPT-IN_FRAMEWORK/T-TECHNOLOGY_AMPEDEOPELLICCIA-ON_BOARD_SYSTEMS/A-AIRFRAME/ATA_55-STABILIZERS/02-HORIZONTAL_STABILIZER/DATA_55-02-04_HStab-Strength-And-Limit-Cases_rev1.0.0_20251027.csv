@@ -1,0 +1,7 @@
+Load_Case,Description,Limit_Load_lbf,Ultimate_Load_lbf,Factor_of_Safety,Test_Status
+LC-01,Symmetric_Pull_Up_3.75g,125000,187500,1.5,Certified
+LC-02,Symmetric_Push_Over_1.5g,-50000,-75000,1.5,Certified
+LC-03,Asymmetric_Roll_2.5g,95000,142500,1.5,Certified
+LC-04,Vertical_Gust_66fps,85000,127500,1.5,Certified
+LC-05,Lateral_Gust_44fps,60000,90000,1.5,Certified
+LC-06,Ground_Handling_Max,40000,60000,1.5,Certified

@@ -1,0 +1,5 @@
+Component,Parameter,Nominal,Min_Tolerance,Max_Tolerance,Unit,Torque_in_lbf
+Hinge_Pin_Inboard,Diameter,1.250,1.248,1.252,in,450-500
+Hinge_Pin_Outboard,Diameter,1.000,0.998,1.002,in,350-400
+Bearing_Radial_Clearance,Clearance,0.005,0.002,0.015,in,N/A
+Hinge_Attachment_Bolt,Torque,N/A,N/A,N/A,N/A,800-850

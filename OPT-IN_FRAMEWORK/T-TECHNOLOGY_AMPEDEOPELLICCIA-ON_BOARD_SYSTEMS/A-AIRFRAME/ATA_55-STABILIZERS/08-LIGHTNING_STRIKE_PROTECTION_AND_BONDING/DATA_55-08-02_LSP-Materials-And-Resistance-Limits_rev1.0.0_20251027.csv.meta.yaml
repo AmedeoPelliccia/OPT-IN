@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "DATA_55-08-02_LSP-Materials-And-Resistance-Limits_rev1.0.0_20251027"
+document:
+  type: "DATA"
+  title: "DATA 55-08-02 LSP-Materials-And-Resistance-Limits"
+  revision: "1.0.0"
+  effective_date: "2025-10-27"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-23" }
+integrity:
+  checksum: { algorithm: "sha256", value: "410efe93a51f3d1f0e02e7e91e43de6537dc1e4c93312b6551f4be9cffa7a6ea" }

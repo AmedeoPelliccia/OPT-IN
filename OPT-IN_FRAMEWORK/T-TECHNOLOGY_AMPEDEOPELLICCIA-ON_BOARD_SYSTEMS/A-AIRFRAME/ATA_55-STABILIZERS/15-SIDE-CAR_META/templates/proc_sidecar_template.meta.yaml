@@ -1,0 +1,82 @@
+schema_version: "1.1"
+id: "PROC_<ATA>-<SECTION>-<SUBSECTION>_<Title-With-Dashes>_rev<X.Y.Z>_<YYYYMMDD>"
+document:
+  type: "PROC"
+  title: "<ATA>-<SECTION>-<SUBSECTION>: <Human-Readable Procedure Title>"
+  revision: "<X.Y.Z>"
+  effective_date: "<YYYY-MM-DD>"
+  
+# Procedure-specific metadata
+procedure:
+  category: "<CATEGORY>"  # One of: Maintenance, Inspection, Repair, Removal_Installation, Functional_Test, Calibration
+  skill_level: "<LEVEL>"  # Required technician skill level: Basic, Intermediate, Advanced, Specialist
+  estimated_duration: "<DURATION>"  # e.g., "2 hours", "30 minutes"
+  special_tools_required: []  # List of special tools needed
+  consumables_required: []  # List of consumables needed
+  personnel_required: <NUMBER>  # Number of personnel required
+  
+effectivity:
+  msn: "<MSN_RANGE>"  # e.g., "ALL", "001-050"
+  config: "<CONFIG_ID>"  # Optional: specific configuration
+  
+safety:
+  hazards:
+    - "<HAZARD_1>"  # e.g., "High voltage exposure"
+    - "<HAZARD_2>"  # e.g., "Confined space entry"
+  criticality: "<LEVEL>"  # Critical, Major, Minor, Not_Safety_Related
+  ppe_required: []  # Personal protective equipment required
+  lockout_tagout: <true/false>  # Whether LOTO procedures apply
+  
+approvals:
+  - authority: "Engineering"
+    status: "Released"
+    date: "<YYYY-MM-DD>"
+  - authority: "Safety"
+    status: "Approved"
+    date: "<YYYY-MM-DD>"
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "<YYYY-MM-DD>"
+    
+traceability:
+  source_documents:
+    - "<SOURCE_DOC_1>"  # e.g., "AMM 55-02-02"
+    - "<SOURCE_DOC_2>"  # e.g., "SRM 55-06-01"
+  crossrefs:
+    - "<ATA_REF_1>"  # e.g., "ATA 20"
+    - "<ATA_REF_2>"  # e.g., "ATA 51"
+  related_procedures: []  # Related or prerequisite procedures
+  supersedes: "<PREVIOUS_PROC_ID>"  # Optional: if this supersedes another procedure
+  
+quality:
+  inspection_required: <true/false>  # Whether QA inspection is required
+  inspection_points: []  # List of inspection hold points
+  rii_required: <true/false>  # Required Inspection Item
+  
+materials_and_processes:
+  materials_required: []  # List of materials with specs (e.g., "AMS 5643 per DATA_55-10-01")
+  cofc_required: <true/false>  # Certificate of Conformance required
+  shelf_life_items: []  # Time-sensitive materials
+  
+environmental:
+  temperature_range:
+    min: <NUMBER>  # Minimum ambient temperature (°C or °F)
+    max: <NUMBER>  # Maximum ambient temperature
+    unit: "<C/F>"
+  humidity_limit: <NUMBER>  # Maximum relative humidity (%)
+  cleanliness_level: "<LEVEL>"  # Required cleanliness level
+  
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<SHA256_HASH>"
+    
+revision_history:
+  - revision: "<X.Y.Z>"
+    date: "<YYYY-MM-DD>"
+    author: "<AUTHOR_NAME>"
+    description: "<CHANGE_DESCRIPTION>"
+    
+notes: |
+  Additional procedure notes, warnings, or cautions.
+  Use this section for any special instructions or context.

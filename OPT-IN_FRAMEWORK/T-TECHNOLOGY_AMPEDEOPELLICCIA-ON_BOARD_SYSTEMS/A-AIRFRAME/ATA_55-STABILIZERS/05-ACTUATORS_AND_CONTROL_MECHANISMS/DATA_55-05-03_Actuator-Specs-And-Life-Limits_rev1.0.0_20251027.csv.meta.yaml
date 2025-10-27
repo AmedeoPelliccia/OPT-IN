@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "DATA_55-05-03_Actuator-Specs-And-Life-Limits_rev1.0.0_20251027"
+document:
+  type: "DATA"
+  title: "DATA 55-05-03 Actuator-Specs-And-Life-Limits"
+  revision: "1.0.0"
+  effective_date: "2025-10-27"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-23" }
+integrity:
+  checksum: { algorithm: "sha256", value: "747c984a855d7899eb7465f27a9edbcf8fb90e433057f96390b37b71dfd55f83" }
