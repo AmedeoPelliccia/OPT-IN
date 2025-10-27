@@ -1,0 +1,7 @@
+Test_Type,Temperature_Range_C,Humidity_%RH,Duration_Hours,Cycles,Acceptance_Criteria,Notes
+Hot_Wet_Aging,70,85,5000,N/A,"<5% strength loss, no delamination","Accelerated environmental aging"
+Cold_Temperature,"-55",N/A,168,N/A,"No brittle failure, properties >90% of RT","Extreme cold exposure"
+Temperature_Cycling,"-55 to +85",Ambient,N/A,1000,"No delamination, no coating failure","Simulates flight cycles"
+Freeze_Thaw,"-55 to +25",Saturated,N/A,100,"No delamination, no water ingress","Water+freeze cycles"
+UV_Exposure,85,0,2000,N/A,"No coating degradation >10% gloss loss","Direct sun simulation"
+Salt_Fog,35,100,1000,N/A,"No corrosion on metal parts, coatings intact","Maritime environment"

@@ -1,0 +1,12 @@
+Parameter,Value,Unit,Source,Notes
+Fuselage_Length,42.5,m,Drawing_FUS-001-A,"Overall fuselage length"
+Maximum_Width,21.0,m,Drawing_FUS-001-A,"At widest point of BWB"
+Maximum_Height,6.5,m,Drawing_FUS-001-A,"Ground to top of fuselage"
+Cabin_Length,35.0,m,Drawing_FUS-002-B,"Usable cabin length"
+Cabin_Width_Max,18.0,m,Drawing_FUS-002-B,"Maximum cabin width"
+Cabin_Height,2.2,m,Drawing_FUS-002-B,"Standard ceiling height"
+Frame_Spacing_Typical,0.50,m,Drawing_FUS-010-C,"Standard frame pitch"
+Frame_Spacing_Critical,0.35,m,Drawing_FUS-010-C,"At doors and windows"
+Stringer_Spacing,0.15,m,Drawing_FUS-011-D,"Longitudinal stringer pitch"
+Skin_Thickness_Min,4.0,mm,Drawing_FUS-020-E,"Low load areas"
+Skin_Thickness_Max,12.0,mm,Drawing_FUS-020-E,"High load areas, landing gear mounts"

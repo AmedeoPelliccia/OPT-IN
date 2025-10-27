@@ -1,0 +1,40 @@
+This is a placeholder for EXAMPLE_53-17-03_NDT-Report-Sample.pdf
+
+This file would contain a sample NDT inspection report in PDF format showing:
+
+NDT INSPECTION REPORT
+Report Number: NDT-53-AMP360-005-20280817-001
+Date: 2028-08-17
+Inspector: Robert Williams, Level II UT
+Certification: SNT-TC-1A Level II (Ultrasonic)
+
+Aircraft: AMPEL360
+MSN: AMP360-005
+Location: Station 1250, Frame 125, Stringer L12
+
+Inspection Type: Ultrasonic Pulse-Echo
+Inspection Reason: Post-Repair Verification
+Repair Reference: REP-53-AMP360-005-20280815-001
+
+Equipment:
+- Model: Olympus 38DL PLUS
+- Serial Number: UT-2024-089
+- Transducer: 5 MHz, 0.5" diameter
+- Calibration Date: 2028-07-01
+- Calibration Due: 2029-07-01
+
+Inspection Results:
+- Repair area scanned with 100% coverage
+- No delaminations detected
+- Bond quality: Excellent (>90% amplitude)
+- No porosity or voids detected
+- Repair edges blend smoothly with parent structure
+
+Acceptance Criteria: Per PROC_53-08-02
+Result: ACCEPTABLE
+
+A-scan waveforms and C-scan images would be included as attachments.
+
+Inspector Signature: R. Williams
+Date: 2028-08-17
+Stamp: RW-9012

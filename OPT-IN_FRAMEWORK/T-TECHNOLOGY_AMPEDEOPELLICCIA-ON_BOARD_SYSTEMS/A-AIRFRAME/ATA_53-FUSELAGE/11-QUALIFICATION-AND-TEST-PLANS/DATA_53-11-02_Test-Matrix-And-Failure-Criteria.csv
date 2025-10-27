@@ -1,0 +1,9 @@
+Test_ID,Description,Method,Acceptance_Criteria,Report_Reference
+QUAL-53-001,"Ultimate Pressure Test",Static Test Article,"No failure at 1.5x Limit Pressure (2.0x Normal Op)",STR-RPT-53-001
+QUAL-53-002,"Fatigue Test (Flight Cycles)",Full-Scale Fatigue Test,"2x Design Service Objective (DSO) without widespread fatigue damage",STR-RPT-53-002
+QUAL-53-003,"Damage Tolerance Test (Cutout)",Component Test Rig,"Demonstrate slow crack growth from artificial flaw",STR-RPT-53-003
+QUAL-53-004,"Door Cutout Ultimate Load",Component Test,"Ultimate load >2.0x limit load without failure",STR-RPT-53-004
+QUAL-53-005,"Window Reinforcement Strength",Component Test,"No failure at 1.5x limit load",STR-RPT-53-005
+QUAL-53-006,"Bonded Repair Validation",Coupon and Panel Tests,"Repair strength >90% of virgin structure",STR-RPT-53-006
+QUAL-53-007,"Lightning Strike Simulation",High Voltage Test,"No structural damage, LSP continuity maintained",STR-RPT-53-007
+QUAL-53-008,"Environmental Conditioning",Moisture and Temperature Cycling,"Properties retained after 5000 hours exposure",STR-RPT-53-008

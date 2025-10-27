@@ -1,0 +1,5 @@
+Test_Type,Test_Pressure_psi,Hold_Time_min,Max_Leak_Rate_CFM,Max_Pressure_Decay_psi,Test_Frequency,Notes
+Normal_Ops,8.5,30,100,0.5,"After major repairs","Routine pressure verification"
+Limit_Test,11.3,15,150,0.7,"After structural repairs","Required after Cat 4 damage repair"
+Ultimate_Test,17.0,10,N/A,N/A,"Certification only","Destructive test, certification article only"
+Acceptance_Test,8.5,60,80,0.3,"Production acceptance","New aircraft delivery"

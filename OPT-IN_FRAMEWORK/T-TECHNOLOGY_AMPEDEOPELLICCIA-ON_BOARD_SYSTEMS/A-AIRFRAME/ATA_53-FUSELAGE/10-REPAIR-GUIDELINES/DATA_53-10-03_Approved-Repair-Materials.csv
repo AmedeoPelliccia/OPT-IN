@@ -1,0 +1,10 @@
+Material_Type,Specification,Manufacturer,Form,Application,Approval_Status,Notes
+CFRP_Prepreg,Toray_T800S/3900-2,Toray,Unidirectional_Tape,"Structural repair",Approved,"Match base material properties"
+CFRP_Prepreg,Cytec_5320-1,Cytec,Unidirectional_Tape,"Structural repair",Approved,"Alternate, equivalent to T800S/3900-2"
+Adhesive_Film,3M_AF-163-2,3M,Film_Adhesive,"Bonded repairs, doublers",Approved,"Standard structural adhesive"
+Adhesive_Paste,Hysol_EA-9394,Henkel,Paste_Adhesive,"Fillet bonding, small repairs",Approved,"Room temp or elevated cure"
+Sealant,PR-1440_Class_B,PPG,Paste_Sealant,"Pressure sealing",Approved,"Fuel tank and pressure vessel sealant"
+LSP_Mesh,Copper_AMS-4641,Various,Woven_Mesh,"Lightning strike protection",Approved,"Standard LSP mesh"
+Core,Hexcel_HRH-10-1/8-3.0,Hexcel,Honeycomb,"Sandwich panel repair",Approved,"Aluminum honeycomb core"
+Fastener,Hi-Lok_HL70,Hi-Shear,Fastener,"Mechanical attachment",Approved,"Standard fuselage fastener"
+Primer,Akzo_CA-7233,Akzo_Nobel,Epoxy_Primer,"Corrosion protection",Approved,"Two-part epoxy primer"

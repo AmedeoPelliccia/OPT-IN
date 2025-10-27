@@ -1,0 +1,6 @@
+Material_Type,Specification,Resistance_Limit_milliohm,Application,Supplier,Notes
+Copper_Mesh,AMS-4641,N/A,"Outer skin LSP","Standard aerospace suppliers","Standard LSP mesh"
+Aluminum_Mesh,AMS-4184,N/A,"Outer skin LSP (alternate)","Standard aerospace suppliers","Lighter weight option"
+Bonding_Strap,MIL-B-5087,<1.0,"Structural bonding","Standard aerospace suppliers","Copper or aluminum"
+Conductive_Adhesive,3M-EC-2216,<10.0,"Mesh attachment","3M Aerospace","Two-part epoxy with metal filler"
+Conductive_Sealant,PR-1776,<50.0,"Fastener sealing with conductivity","PPG Aerospace","Class B sealant"
