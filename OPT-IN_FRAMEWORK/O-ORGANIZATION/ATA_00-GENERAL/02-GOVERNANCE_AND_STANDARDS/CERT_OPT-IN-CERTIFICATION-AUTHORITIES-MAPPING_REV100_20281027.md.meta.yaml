@@ -43,7 +43,7 @@ integrity:
   algorithm: "SHA256"
 revision_history:
   - version: "1.0.0"
-    date: "2028-10-27"
+    date: "2024-06-07"
     changes: "Initial release of OPT-IN certification authorities mapping document"
     author: "Airworthiness Engineering Team"
 references:
