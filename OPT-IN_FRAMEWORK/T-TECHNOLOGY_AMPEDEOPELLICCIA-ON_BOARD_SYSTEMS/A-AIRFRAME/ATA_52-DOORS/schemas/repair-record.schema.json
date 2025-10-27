@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata52/repair-record.schema.json",
+  "title": "Door Repair Record",
+  "description": "Schema for documenting door repair records with door-specific fields",
+  "type": "object",
+  "properties": {
+    "recordId": {
+      "type": "string",
+      "description": "Unique repair record identifier"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of repair"
+    },
+    "aircraftRegistration": {
+      "type": "string",
+      "description": "Aircraft registration number"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer serial number"
+    },
+    "doorIdentifier": {
+      "type": "string",
+      "description": "Door identifier (e.g., FWD-L1, AFT-R2, CARGO-FWD)"
+    },
+    "doorType": {
+      "type": "string",
+      "enum": ["PASSENGER", "CARGO", "EMERGENCY", "SERVICE", "BLOWOUT_PANEL"],
+      "description": "Type of door"
+    },
+    "repairType": {
+      "type": "string",
+      "enum": ["STRUCTURAL", "SEAL", "HINGE", "LATCH", "ACTUATOR", "ELECTRICAL", "COMPOSITE"],
+      "description": "Category of repair performed"
+    },
+    "damageDescription": {
+      "type": "string",
+      "description": "Detailed description of the damage"
+    },
+    "repairProcedure": {
+      "type": "string",
+      "description": "Reference to approved repair procedure (e.g., PROC_52-10-01)"
+    },
+    "sealType": {
+      "type": "string",
+      "description": "Type of seal installed or repaired (if applicable)"
+    },
+    "leakageCFM": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Measured leakage in cubic feet per minute (post-repair pressure test)"
+    },
+    "latchTorque": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["in-lb", "ft-lb", "Nm"]
+        },
+        "specification": {
+          "type": "string",
+          "description": "Torque specification reference"
+        }
+      },
+      "description": "Latch torque measurements if applicable"
+    },
+    "actuatorHours": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total operating hours on actuator (for powered doors)"
+    },
+    "slideSerial": {
+      "type": "string",
+      "description": "Serial number of evacuation slide/raft (if applicable)"
+    },
+    "ndtFileHashes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "hashAlgorithm": {
+            "type": "string",
+            "enum": ["sha256", "sha512"]
+          },
+          "hashValue": {
+            "type": "string"
+          }
+        },
+        "required": ["filename", "hashAlgorithm", "hashValue"]
+      },
+      "description": "Hashes of NDT (Non-Destructive Testing) report files"
+    },
+    "materialsUsed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "partNumber": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0
+          },
+          "batchLot": {
+            "type": "string"
+          },
+          "certificateOfConformance": {
+            "type": "string"
+          }
+        },
+        "required": ["partNumber", "description", "quantity"]
+      }
+    },
+    "mechanicLicense": {
+      "type": "string",
+      "description": "License number of certified mechanic who performed repair"
+    },
+    "inspectorLicense": {
+      "type": "string",
+      "description": "License number of inspector who verified repair"
+    },
+    "approvalAuthority": {
+      "type": "string",
+      "description": "Approval authority (e.g., DER, NAA)"
+    },
+    "returnToServiceDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date aircraft was returned to service"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional remarks or notes"
+    }
+  },
+  "required": [
+    "recordId",
+    "date",
+    "aircraftRegistration",
+    "msn",
+    "doorIdentifier",
+    "doorType",
+    "repairType",
+    "damageDescription",
+    "repairProcedure",
+    "mechanicLicense",
+    "inspectorLicense",
+    "returnToServiceDate"
+  ]
+}

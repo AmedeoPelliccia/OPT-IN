@@ -1,0 +1,9 @@
+# Pressure Test Log Example
+# ATA 52 - DOORS
+# Revision: 1.0.0
+# Effective Date: 2028-10-27
+Date,Aircraft_Registration,MSN,Door_ID,Test_Type,Pressure_psi,Leakage_CFM,Pass_Fail,Technician,Inspector
+2028-10-15,N360AP,MSN-001,FWD-L1,Post-Repair,8.5,0.12,PASS,A&P-123456,IA-789012
+2028-10-15,N360AP,MSN-001,FWD-R1,Routine,8.5,0.08,PASS,A&P-123456,IA-789012
+2028-10-15,N360AP,MSN-001,AFT-L1,Routine,8.5,0.10,PASS,A&P-123456,IA-789012
+2028-10-15,N360AP,MSN-001,AFT-R1,Routine,8.5,0.09,PASS,A&P-123456,IA-789012
