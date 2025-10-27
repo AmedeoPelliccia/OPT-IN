@@ -1,0 +1,9 @@
+Material_ID,Material_Spec,Form,Manufacturer,Certificate_Required,Storage_Condition,Shelf_Life_Months,Notes
+CFRP-001,Toray_T800S/3900-2,Prepreg_Tape,Toray,CoC+Test_Report,"Freezer -18°C",12,"Structural prepreg"
+CFRP-002,Cytec_5320-1,Prepreg_Tape,Cytec,CoC+Test_Report,"Freezer -18°C",12,"Structural prepreg alternate"
+ADHESIVE-001,3M_AF-163-2,Film,3M,CoC,"Freezer -18°C",24,"Structural film adhesive"
+ADHESIVE-002,Hysol_EA-9394,Paste,Henkel,CoC,"Room temp",12,"Paste adhesive"
+SEALANT-001,PR-1440_Class_B,Paste,PPG,CoC,"Room temp",6,"Pressure sealant, limited shelf life"
+FASTENER-001,Hi-Lok_HL70-6-8,Hardware,Hi-Shear,Certificate,"Room temp",Unlimited,"Standard fastener"
+AL-SHEET-001,2024-T3_0.040,Sheet,Alcoa,CoC+Certs,"Room temp",Unlimited,"Metallic repair material"
+TI-SHEET-001,Ti-6Al-4V_0.063,Sheet,Various,CoC+Certs+Test,"Room temp",Unlimited,"Titanium for fittings"

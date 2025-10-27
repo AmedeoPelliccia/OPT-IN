@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Inspection Schema",
+  "type": "object",
+  "required": ["inspection_id", "timestamp_utc", "msn", "inspector", "inspection_type", "result"],
+  "properties": {
+    "inspection_id": { "type": "string" },
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "msn": { "type": "string" },
+    "inspector": {
+      "type": "object",
+      "required": ["name", "certification"],
+      "properties": {
+        "name": { "type": "string" },
+        "certification": { "type": "string" },
+        "badge_number": { "type": "string" }
+      }
+    },
+    "inspection_type": {
+      "type": "string",
+      "enum": ["GVI", "DVI", "Ultrasonic", "C-Scan", "Eddy_Current", "Dye_Penetrant", "X-Ray", "Visual"]
+    },
+    "location": {
+      "type": "object",
+      "required": ["zone", "station"],
+      "properties": {
+        "zone": { "type": "string" },
+        "station": { "type": "string" },
+        "frame_id": { "type": "string" },
+        "stringer_id": { "type": "string" }
+      }
+    },
+    "result": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "CONDITIONAL"]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "finding_id": { "type": "string" },
+          "description": { "type": "string" },
+          "severity": { "type": "string" }
+        }
+      }
+    },
+    "equipment": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string" },
+        "serial_number": { "type": "string" },
+        "calibration_date": { "type": "string", "format": "date" }
+      }
+    },
+    "acceptance_criteria": { "type": "string" },
+    "report_reference": { "type": "string" }
+  }
+}

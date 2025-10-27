@@ -1,0 +1,5 @@
+Structure_Type,Location,Damage_Type,Limit_Dimension_mm,Limit_Depth_mm,Action
+CFRP_Skin,General,Dent,<=25,<=0.25,"Negligible, record in log"
+CFRP_Skin,General,Delamination,<=15,N/A,"Repairable per ATA 51"
+CFRP_Frame,Flange,Crack,0,N/A,"Not Repairable, requires Engineering Disposition"
+AL_Floor_Beam,Web,Corrosion_Pit,N/A,<=0.2,"Blend and re-protect"

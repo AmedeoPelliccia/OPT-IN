@@ -1,0 +1,8 @@
+Zone,Component,Inspection_Type,Interval_FH,Interval_Months,Acceptance,Reject,Notes
+General,Fuselage_Skin,GVI,1000,12,"No visible damage","Cracks, delamination >15mm","Routine visual"
+Critical,Door_Reinforcement,DVI+UT,3000,36,"No defects","Any crack or delamination >15mm","Enhanced inspection"
+Critical,Window_Frame,DVI+UT,3000,36,"No defects","Cracks or delamination","Enhanced inspection"
+General,Frame_Flange,GVI,1000,12,"No cracks","Visible cracks","Visual only"
+Critical,Landing_Gear_Fitting,DVI+EC,2000,24,"No cracks","Any crack indication","Eddy current required"
+General,Floor_Beam,GVI,1000,12,"No damage","Cracks, corrosion","Visual inspection"
+Critical,Pressure_Bulkhead,DVI,2000,24,"No damage","Cracks, corrosion >light","Detailed visual"

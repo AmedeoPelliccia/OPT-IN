@@ -1,0 +1,115 @@
+{
+  "record_id": "REP-53-AMP360-005-20250815-001",
+  "timestamp_utc": "2025-08-15T14:30:00Z",
+  "msn": "AMP360-005",
+  "location": {
+    "zone": "Zone_2_Fuselage",
+    "station": "STA-1250",
+    "frame_id": "FR-125",
+    "stringer_id": "STR-L12"
+  },
+  "skin_layup_ref": "SKIN-LAY-002-RevA",
+  "splice_ref": null,
+  "repair_procedure_ref": "PROC_53-10-02_Composite-Scarf-Repair-For-Fuselage-Ref-ATA51",
+  "damage_description": "Impact damage from ground equipment, 45mm x 30mm delamination, depth 3.2mm (40% of skin thickness)",
+  "damage_classification": {
+    "structure_type": "CFRP_Skin",
+    "damage_type": "Delamination",
+    "severity": "Repairable",
+    "action_required": "Repair_Per_SRM"
+  },
+  "repair_details": {
+    "repair_type": "Bonded_Scarf_Repair",
+    "repair_class": "Class_B",
+    "scarf_ratio": "50:1",
+    "repair_area_cm2": 156,
+    "patch_plies": 8,
+    "adhesive_used": "3M_AF-163-2",
+    "cure_method": "Room_Temperature",
+    "cure_duration_hours": 48,
+    "cure_temperature_C": 22
+  },
+  "materials_used": [
+    {
+      "material_id": "CFRP-002",
+      "specification": "Cytec_5320-1",
+      "batch_lot": "LOT-5320-20250612",
+      "quantity": "8 plies, 200mm x 250mm each"
+    },
+    {
+      "material_id": "ADHESIVE-001",
+      "specification": "3M_AF-163-2",
+      "batch_lot": "AF163-20250401",
+      "quantity": "1 sheet, 250mm x 300mm"
+    }
+  ],
+  "personnel": {
+    "technician": {
+      "name": "John Smith",
+      "certification": "Composite Repair Level 2",
+      "badge": "TECH-1234"
+    },
+    "inspector": {
+      "name": "Mary Johnson",
+      "certification": "QA Inspector Level III",
+      "badge": "INSP-5678",
+      "stamp": "MJ-5678"
+    }
+  },
+  "inspections": [
+    {
+      "type": "Visual",
+      "inspector": "Mary Johnson",
+      "timestamp": "2025-08-15T10:00:00Z",
+      "result": "Damage documented, repair approved",
+      "report_hash": "a1b2c3d4e5f6g7h8i9j0"
+    },
+    {
+      "type": "NDT",
+      "method": "Ultrasonic",
+      "inspector": "Robert Williams",
+      "timestamp": "2025-08-17T16:00:00Z",
+      "result": "Repair bond quality acceptable, no voids detected",
+      "report_hash": "k1l2m3n4o5p6q7r8s9t0",
+      "equipment": {
+        "model": "Olympus_38DL_PLUS",
+        "serial": "UT-2024-089",
+        "calibration_date": "2025-07-01"
+      }
+    }
+  ],
+  "pressure_test_result": {
+    "test_date": "2025-08-18T09:00:00Z",
+    "test_pressure_psi": 8.5,
+    "hold_time_minutes": 30,
+    "leak_rate": 45.2,
+    "result": "PASS",
+    "inspector": "Mary Johnson"
+  },
+  "lsp_restoration": {
+    "completed": true,
+    "continuity_test_result": "PASS",
+    "resistance_milliohm": 3.2
+  },
+  "approvals": {
+    "maintenance_release": {
+      "inspector": "Mary Johnson",
+      "stamp": "MJ-5678",
+      "date": "2025-08-18T14:00:00Z"
+    },
+    "return_to_service": {
+      "date": "2025-08-18T15:00:00Z",
+      "aircraft_total_time": 1247.5,
+      "aircraft_cycles": 423
+    }
+  },
+  "photos": [
+    "REP-53-005-001_damage_initial.jpg",
+    "REP-53-005-002_damage_measured.jpg",
+    "REP-53-005-003_scarf_prepared.jpg",
+    "REP-53-005-004_repair_layup.jpg",
+    "REP-53-005-005_repair_cured.jpg",
+    "REP-53-005-006_repair_final.jpg"
+  ],
+  "remarks": "Repair completed per ATA 51-10-02 with fuselage-specific requirements per PROC_53-10-02. Pressure test confirms integrity of repair. LSP continuity verified. Aircraft released to service."
+}

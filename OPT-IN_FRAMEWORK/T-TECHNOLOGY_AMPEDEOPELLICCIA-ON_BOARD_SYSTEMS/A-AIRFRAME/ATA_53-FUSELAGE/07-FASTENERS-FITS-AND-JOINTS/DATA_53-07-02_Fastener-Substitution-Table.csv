@@ -1,0 +1,6 @@
+Original_Fastener,Substitution_Allowed,Material,Diameter,Length_Range,Strength,Application,Notes
+HL70-6-8,HL71-6-8,Titanium,3/16",0.500"-1.000",Shear,"General structure","Same grip range required"
+HL70-8-10,HL71-8-10,Titanium,1/4",0.625"-1.250",Shear,"General structure","Same grip range required"
+AN470AD4-6,NAS1097AD4-6,Aluminum,1/8",0.375"-0.500",Low,"Non-critical only","Rivet substitution"
+Cherry_Max_CR3243-5-3,Cherry_Max_CR3213-5-3,Steel,5/32",0.188"-0.375",Medium,"Access panels","Blind rivet"
+LISI_LGP_1464-6,Huck_ML1464-6,Steel,3/16",0.375"-0.750",High,"Critical joints","Lockbolt equivalent"

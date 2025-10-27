@@ -1,0 +1,49 @@
+schema_version: "1.1"
+id: "PROC_XX-XX-XX_PROCEDURE_NAME"
+document_type: "PROC"
+title: "Procedure Title"
+revision: "1.0.0"
+date: "YYYYMMDD"
+authors:
+  - name: "Procedure Author"
+    role: "Maintenance Engineer"
+approvers:
+  - name: "Chief of Structures"
+    role: "Chief Engineer"
+    date: "YYYYMMDD"
+  - name: "QA Manager"
+    role: "Quality Assurance"
+    date: "YYYYMMDD"
+procedure_metadata:
+  skill_level: "Technician|Inspector|Engineer"
+  estimated_time_hours: 0.0
+  required_personnel: 1
+  special_tools:
+    - "Tool description"
+  required_materials:
+    - material_id: "MATERIAL-XXX"
+      quantity: "TBD"
+      specification: "Material spec"
+  safety_precautions:
+    - "Safety precaution description"
+  environmental_requirements:
+    temperature_range: "10-30 C"
+    humidity_max: "65% RH"
+related_documents:
+  - id: "ATA_51-10-02"
+    relationship: "references"
+  - id: "ATA_20-XX-XX"
+    relationship: "references"
+status: "released"
+effectivity:
+  msn_range: ["AMP360-001", "onwards"]
+  config: "All"
+tags: ["structural", "repair", "composite", "metallic"]
+checksum:
+  algorithm: "sha256"
+  value: "PLACEHOLDER_HASH"
+revision_history:
+  - revision: "1.0.0"
+    date: "YYYYMMDD"
+    author: "Author Name"
+    changes: "Initial release"

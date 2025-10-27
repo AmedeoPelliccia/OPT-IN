@@ -1,0 +1,6 @@
+Beam_ID,Location,Beam_Type,Ultimate_Load_kN,Limit_Load_kN,Distributed_Load_kg_m2,Material,Notes
+FB-010,Row-01-02,I-Beam,125,83,1500,CFRP,"Forward cabin floor beam"
+FB-020,Row-03-04,I-Beam,125,83,1500,CFRP,"Mid cabin floor beam"
+FB-030,Row-05-06,I-Beam,125,83,1500,CFRP,"Aft cabin floor beam"
+FB-040,Cargo-Bay,Heavy-Beam,200,133,2500,AL-7075-T6,"Cargo compartment beam"
+FB-050,Galley,I-Beam,150,100,2000,CFRP,"Galley area reinforced beam"

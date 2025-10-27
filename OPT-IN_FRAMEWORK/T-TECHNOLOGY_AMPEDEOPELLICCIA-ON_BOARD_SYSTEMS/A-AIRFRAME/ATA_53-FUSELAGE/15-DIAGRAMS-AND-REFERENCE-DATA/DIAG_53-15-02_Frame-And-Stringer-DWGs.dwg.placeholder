@@ -1,0 +1,14 @@
+This is a placeholder for DIAG_53-15-02_Frame-And-Stringer-DWGs.dwg
+
+This file would contain CAD drawings in AutoCAD DWG format showing:
+- Frame cross-section details for all frame types
+- Stringer cross-section and attachment details
+- Frame-stringer intersection details
+- Fastener patterns and spacing
+- Material callouts and specifications
+- Critical dimensions and tolerances
+
+Format: AutoCAD DWG (compatible with AutoCAD 2020+)
+Drawing Numbers: FUS-FR-001 through FUS-FR-050, FUS-STR-001 through FUS-STR-030
+Revision: A
+Date: 2025-10-27

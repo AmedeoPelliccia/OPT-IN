@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Damage Classification Schema",
+  "type": "object",
+  "required": ["structure_type", "location", "damage_type", "severity"],
+  "properties": {
+    "structure_type": {
+      "type": "string",
+      "enum": ["CFRP_Skin", "CFRP_Frame", "AL_Floor_Beam", "Stringer", "Bulkhead", "Splice"]
+    },
+    "location": {
+      "type": "object",
+      "required": ["zone", "station"],
+      "properties": {
+        "zone": { "type": "string" },
+        "station": { "type": "string" },
+        "frame_id": { "type": "string" },
+        "stringer_id": { "type": "string" }
+      }
+    },
+    "damage_type": {
+      "type": "string",
+      "enum": ["Dent", "Delamination", "Crack", "Corrosion_Pit", "Impact", "Scratch", "Lightning_Strike"]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Negligible", "Minor", "Repairable", "Major", "Critical"]
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "length_mm": { "type": "number" },
+        "width_mm": { "type": "number" },
+        "depth_mm": { "type": "number" }
+      }
+    },
+    "action_required": {
+      "type": "string",
+      "enum": ["Monitor", "Record", "Repair_Per_SRM", "Engineering_Disposition", "Replace"]
+    }
+  }
+}

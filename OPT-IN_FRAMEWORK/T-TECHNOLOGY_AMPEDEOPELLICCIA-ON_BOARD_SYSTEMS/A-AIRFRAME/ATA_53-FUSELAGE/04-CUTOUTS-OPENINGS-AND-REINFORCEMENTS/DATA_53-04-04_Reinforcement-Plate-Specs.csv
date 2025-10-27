@@ -1,0 +1,5 @@
+Cutout_ID,Cutout_Type,Frame_Range,Plate_Material,Thickness_mm,Fastener_Type,Fastener_Qty,Corner_Radius_mm,Notes
+CO-001,Main_Door,FR-120_to_FR-140,Ti-6Al-4V,6.4,Hi-Lok_HL70-8,128,100,"Primary passenger door"
+CO-002,Window,FR-200,CFRP,4.8,Hi-Lok_HL70-6,24,50,"Standard window opening"
+CO-003,Access_Panel,FR-250,AL-2024-T3,3.2,Hi-Lok_HL70-5,16,25,"Equipment bay access"
+CO-004,Emergency_Exit,FR-300_to_FR-310,Ti-6Al-4V,6.4,Hi-Lok_HL70-8,96,100,"Emergency exit door"

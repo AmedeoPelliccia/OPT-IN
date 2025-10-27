@@ -1,0 +1,6 @@
+Frame_Location,Stringer_ID,Ultimate_Load_kN,Limit_Load_kN,Frame_Type,Material_Spec,Notes
+FR-100,STR-L01,450,300,Standard,CFRP-Grade-A,"Typical frame"
+FR-150,STR-L05,680,453,Reinforced,CFRP-Grade-A,"Door cutout reinforcement"
+FR-200,STR-L10,450,300,Standard,CFRP-Grade-A,"Typical frame"
+FR-250,STR-L15,750,500,Heavy,CFRP-Grade-A,"Main landing gear attachment"
+FR-300,STR-L20,450,300,Standard,CFRP-Grade-A,"Typical frame"

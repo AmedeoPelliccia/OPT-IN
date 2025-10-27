@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fuselage Repair Record Schema",
+  "type": "object",
+  "required": ["record_id", "timestamp_utc", "msn", "location", "repair_procedure_ref", "inspections"],
+  "properties": {
+    "record_id": { "type": "string" },
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "msn": { "type": "string" },
+    "location": {
+      "type": "object",
+      "required": ["zone", "station", "frame_id", "stringer_id"],
+      "properties": {
+        "zone": { "type": "string" },
+        "station": { "type": "string" },
+        "frame_id": { "type": "string" },
+        "stringer_id": { "type": "string" }
+      }
+    },
+    "skin_layup_ref": { "type": "string" },
+    "splice_ref": { "type": "string" },
+    "repair_procedure_ref": { "type": "string" },
+    "pressure_test_result": { "type": "object", "properties": {"leak_rate": {"type": "number"}, "result": {"enum":["PASS", "FAIL"]}} },
+    "inspections": { "type": "array", "items": {"type": "object", "properties": {"type": {"enum": ["NDT", "Visual"]}, "report_hash": {"type": "string"}}} }
+  }
+}
