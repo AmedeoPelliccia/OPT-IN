@@ -10,8 +10,8 @@ integrity:
   checksum_algorithm: "sha256"
 files:
   - id: "PROC_Torqueing-Procedures.md"
-    sha256: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256_OF_PROC_TORQUEING_PROCEDURES_MD"
   - id: "STD_HV-Creepage-Clearance-And-Isolation.md"
-    sha256: "f0e9d8c7b6a5f0e9d8c7b6a5f0e9d8c7b6a5f0e9d8c7b6a5f0e9d8c7b6a5f0e9"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256_OF_STD_HV_CREEPAGE_CLEARANCE_AND_ISOLATION_MD"
   - id: "DATA_Standard-Torque-Values.csv"
-    sha256: "1234abcd56781234abcd56781234abcd56781234abcd56781234abcd56781234"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256_OF_DATA_STANDARD_TORQUE_VALUES_CSV"
