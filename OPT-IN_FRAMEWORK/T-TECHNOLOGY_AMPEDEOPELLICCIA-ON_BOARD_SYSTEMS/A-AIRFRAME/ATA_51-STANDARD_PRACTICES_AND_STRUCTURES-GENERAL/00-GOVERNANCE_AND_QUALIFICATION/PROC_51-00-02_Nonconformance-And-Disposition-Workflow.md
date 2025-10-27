@@ -81,5 +81,5 @@ A Nonconformance Report (NCR) shall be raised when:
 **Document Control:**
 - **Owner:** Structural Repair Engineering
 - **Approved By:** Chief Engineer, Airworthiness
-- **Effective Date:** 2028-01-01
-- **Next Review:** 2030-01-01
+- **Effective Date:** 2025-10-27
+- **Next Review:** 2027-10-27

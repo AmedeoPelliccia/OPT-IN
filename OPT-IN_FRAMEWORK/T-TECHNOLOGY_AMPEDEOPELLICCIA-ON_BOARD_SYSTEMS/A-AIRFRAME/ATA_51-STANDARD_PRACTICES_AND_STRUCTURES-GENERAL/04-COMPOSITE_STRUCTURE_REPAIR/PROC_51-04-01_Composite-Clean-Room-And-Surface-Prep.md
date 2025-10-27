@@ -132,5 +132,5 @@ All composite repairs performed on AMPEL360 aircraft, including:
 **Document Control:**
 - **Owner:** Composite Repair Engineering
 - **Approved By:** Chief Engineer, Quality Assurance
-- **Effective Date:** 2028-04-01
-- **Next Review:** 2030-04-01
+- **Effective Date:** 2025-10-27
+- **Next Review:** 2027-10-27

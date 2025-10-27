@@ -1,6 +1,6 @@
 {
   "record_id": "RR-AMP360-001-53-0123",
-  "timestamp_utc": "2029-11-15T18:30:00Z",
+  "timestamp_utc": "2025-10-27T18:30:00Z",
   "msn": "AMP360-001",
   "location": {
     "zone": "200",
@@ -16,8 +16,8 @@
     "engineering_order": null
   },
   "materials": [
-    { "spec": "CFRP-PLY-01", "batch_lot": "B-98765", "expiry_date": "2030-05-20" },
-    { "spec": "ADH-FILM-01", "batch_lot": "A-12345", "expiry_date": "2030-04-11" }
+    { "spec": "CFRP-PLY-01", "batch_lot": "B-98765", "expiry_date": "2026-05-20" },
+    { "spec": "ADH-FILM-01", "batch_lot": "A-12345", "expiry_date": "2026-04-11" }
   ],
   "process_log": {
     "hot_bonder_id": "HB-007",

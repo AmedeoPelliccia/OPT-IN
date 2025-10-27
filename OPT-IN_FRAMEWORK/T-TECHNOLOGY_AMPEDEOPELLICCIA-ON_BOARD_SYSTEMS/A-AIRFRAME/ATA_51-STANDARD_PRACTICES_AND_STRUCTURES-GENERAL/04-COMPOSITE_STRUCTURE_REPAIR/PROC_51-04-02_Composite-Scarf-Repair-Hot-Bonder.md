@@ -154,5 +154,5 @@ Repair of through-thickness damage and deep delaminations in carbon fiber compos
 **Document Control:**
 - **Owner:** Composite Repair Engineering
 - **Approved By:** Chief Engineer
-- **Effective Date:** 2028-04-01
-- **Next Review:** 2030-04-01
+- **Effective Date:** 2025-10-27
+- **Next Review:** 2027-10-27

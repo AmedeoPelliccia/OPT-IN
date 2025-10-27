@@ -122,5 +122,5 @@ This procedure defines the methodology for ultrasonic C-Scan inspection of compo
 **Document Control:**
 - **Owner:** NDT Engineering
 - **Approved By:** Chief Engineer, Quality Assurance
-- **Effective Date:** 2028-02-01
-- **Next Review:** 2030-02-01
+- **Effective Date:** 2025-10-27
+- **Next Review:** 2027-10-27

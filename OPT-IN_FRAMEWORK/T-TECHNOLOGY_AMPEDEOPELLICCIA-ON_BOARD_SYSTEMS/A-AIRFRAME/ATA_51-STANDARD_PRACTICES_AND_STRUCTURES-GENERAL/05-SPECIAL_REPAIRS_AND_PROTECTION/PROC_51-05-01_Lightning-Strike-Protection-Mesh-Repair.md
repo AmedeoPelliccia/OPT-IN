@@ -134,5 +134,5 @@ Record in repair record:
 **Document Control:**
 - **Owner:** Electrical & Structural Engineering
 - **Approved By:** Chief Engineer, Electrical Systems Engineer
-- **Effective Date:** 2028-05-01
-- **Next Review:** 2030-05-01
+- **Effective Date:** 2025-10-27
+- **Next Review:** 2027-10-27

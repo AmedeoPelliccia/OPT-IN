@@ -149,5 +149,5 @@ Record in repair record:
 **Document Control:**
 - **Owner:** Structural Repair Engineering
 - **Approved By:** Chief Engineer, EHS Manager
-- **Effective Date:** 2028-05-01
-- **Next Review:** 2030-05-01
+- **Effective Date:** 2025-10-27
+- **Next Review:** 2027-10-27
