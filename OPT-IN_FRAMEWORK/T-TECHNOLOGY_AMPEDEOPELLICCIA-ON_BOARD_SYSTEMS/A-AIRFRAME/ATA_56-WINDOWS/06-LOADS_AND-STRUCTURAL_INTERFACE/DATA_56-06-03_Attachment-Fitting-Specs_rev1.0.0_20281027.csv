@@ -1,0 +1,4 @@
+Fastener_Location,Fastener_Type,Size,Material,Torque_Nm,Torque_Tolerance_Nm,Quantity,Anti_Seize_Required
+Windshield_Frame,Bolt,M6,Ti-6Al-4V,8.0,±0.5,24,Yes
+Side_Window_Frame,Bolt,M5,Stainless,5.0,±0.3,16,Yes
+Cabin_Window_Clip,Screw,M4,Stainless,3.0,±0.2,12,No

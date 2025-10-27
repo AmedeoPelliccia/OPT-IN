@@ -1,0 +1,3 @@
+NCR_Number,Date,MSN,Window_Location,Nonconformance_Type,Description,Severity,Disposition,Engineer_ID,Closure_Date
+NCR-56-2028-001,2028-10-15,001,FWD-CTR-01,Scratch,Scratch 0.0035" deep,Moderate,Rework (polish),ENG-123,2028-10-16
+NCR-56-2028-002,2028-10-18,002,CABIN-LH-03A,Delamination,Edge delam 0.150",Major,Replace,ENG-124,2028-10-20

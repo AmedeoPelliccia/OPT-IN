@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Window Damage Classification Schema",
+  "description": "Schema for classifying and documenting window damage to determine repair action",
+  "type": "object",
+  "required": ["damage_id", "timestamp", "window_location", "damage_type", "severity", "repairability"],
+  "properties": {
+    "damage_id": {
+      "type": "string",
+      "description": "Unique damage report identifier",
+      "pattern": "^WD-56-[0-9]{4}-[0-9]{6}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "window_location": {
+      "type": "string",
+      "pattern": "^(FWD|CABIN|DOOR|INSP)-(LH|RH|CTR)-[A-Z0-9]+$"
+    },
+    "pane_serial": {
+      "type": "string"
+    },
+    "damage_type": {
+      "type": "string",
+      "enum": [
+        "scratch_surface",
+        "scratch_deep",
+        "crack_edge",
+        "crack_through",
+        "delamination_internal",
+        "delamination_edge",
+        "seal_degradation",
+        "seal_leak",
+        "heater_element_open",
+        "heater_element_short",
+        "coating_damage",
+        "frame_crack",
+        "frame_corrosion",
+        "fastener_failure",
+        "impact_damage",
+        "thermal_stress"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["minor", "moderate", "major", "critical"],
+      "description": "Minor: cosmetic, field repairable. Moderate: functional impact, field repairable. Major: requires shop repair. Critical: flight safety, immediate replacement"
+    },
+    "measurements": {
+      "type": "object",
+      "properties": {
+        "scratch_depth_inch": {
+          "type": "number"
+        },
+        "crack_length_inch": {
+          "type": "number"
+        },
+        "delamination_diameter_inch": {
+          "type": "number"
+        },
+        "delamination_edge_length_inch": {
+          "type": "number"
+        },
+        "area_affected_sq_inch": {
+          "type": "number"
+        }
+      }
+    },
+    "location_detail": {
+      "type": "object",
+      "properties": {
+        "zone": {
+          "type": "string",
+          "enum": ["center", "edge", "corner", "seal_interface", "heater_element"]
+        },
+        "distance_from_edge_inch": {
+          "type": "number"
+        },
+        "pilot_vision_area": {
+          "type": "boolean",
+          "description": "True if damage is in critical pilot vision area"
+        }
+      }
+    },
+    "repairability": {
+      "type": "string",
+      "enum": ["field_repair", "shop_repair", "replace_only", "monitor", "no_action"],
+      "description": "Recommended action based on damage classification"
+    },
+    "acceptance_limits": {
+      "type": "object",
+      "description": "Applicable acceptance limits for this damage",
+      "properties": {
+        "limit_type": {
+          "type": "string"
+        },
+        "limit_value": {
+          "type": "number"
+        },
+        "actual_value": {
+          "type": "number"
+        },
+        "within_limits": {
+          "type": "boolean"
+        },
+        "reference": {
+          "type": "string",
+          "description": "Reference to acceptance criteria document"
+        }
+      }
+    },
+    "photos": {
+      "type": "array",
+      "description": "Photo documentation",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ndt_required": {
+      "type": "boolean"
+    },
+    "ndt_methods": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["visual", "ultrasonic_c_scan", "dye_penetrant", "eddy_current", "thermography", "tap_test"]
+      }
+    },
+    "flight_safety_impact": {
+      "type": "boolean",
+      "description": "True if damage affects flight safety"
+    },
+    "mel_cdl_reference": {
+      "type": "string",
+      "description": "Reference to MEL or CDL if applicable"
+    },
+    "inspector_id": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "string"
+    }
+  }
+}

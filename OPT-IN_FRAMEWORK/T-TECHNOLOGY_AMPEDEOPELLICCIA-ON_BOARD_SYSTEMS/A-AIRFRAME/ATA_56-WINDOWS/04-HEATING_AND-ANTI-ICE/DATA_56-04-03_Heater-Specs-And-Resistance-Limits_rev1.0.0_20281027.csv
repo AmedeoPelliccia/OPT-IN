@@ -1,0 +1,5 @@
+Window_Location,Part_Number,Nominal_Resistance_Ohm,Min_Resistance_Ohm,Max_Resistance_Ohm,Power_Rating_W,Voltage_VDC,Current_A_Nominal
+FWD-CTR-01,HTR-56-001,1.0,0.8,1.2,500,28,28.0
+FWD-CTR-02,HTR-56-001,1.0,0.8,1.2,500,28,28.0
+FWD-LH-01,HTR-56-002,2.0,1.5,2.5,250,28,14.0
+FWD-RH-01,HTR-56-002,2.0,1.5,2.5,250,28,14.0

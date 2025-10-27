@@ -1,0 +1,184 @@
+schema_version: "1.1"
+id: "ATA_56_INDEX"
+chapter: "ATA 56 - WINDOWS"
+governance:
+  owner_role: "Structures Engineering"
+  review_board: ["Materials & Processes", "Systems Integration", "Certification", "Quality Assurance"]
+traceability:
+  crossrefs: 
+    - "ATA 20"  # Standard Practices - Airframe (torque values, fastener specs, general repair)
+    - "ATA 51"  # Structures General (composite repair methods, FEA requirements)
+    - "ATA 52"  # Doors (door window integration)
+    - "ATA 53"  # Fuselage (window cutout reinforcement, pressure vessel interface)
+    - "ATA 30"  # Ice & Rain Protection (anti-ice system integration)
+    - "ATA 24"  # Electrical Power (heating element power supply)
+integrity:
+  checksum_algorithm: "sha256"
+  
+# Schema files
+schemas:
+  - id: "repair-record.schema.json"
+    sha256: "CHECKSUM_TO_BE_CALCULATED_repair-record"
+    description: "Window-specific repair record schema with pane type, serial, optical quality, scratch depth, heater resistance, seal torque, NDT hashes, effectivity"
+  - id: "damage-classification.schema.json"
+    sha256: "CHECKSUM_TO_BE_CALCULATED_damage-classification"
+    description: "Damage classification schema for window assessment and repair decision"
+  - id: "window-spec.schema.json"
+    sha256: "CHECKSUM_TO_BE_CALCULATED_window-spec"
+    description: "Window specification schema including materials, dimensions, load limits, optical properties"
+  - id: "inspection.schema.json"
+    sha256: "CHECKSUM_TO_BE_CALCULATED_inspection"
+    description: "Inspection record schema for window visual and NDT inspections"
+
+# CI validation
+ci:
+  - id: "validate_ata56.sh"
+    sha256: "CHECKSUM_TO_BE_CALCULATED_validate_ata56"
+    description: "Validation script for ATA 56 directory structure, naming conventions, and metadata completeness"
+
+# Key acceptance criteria embedded in INDEX
+acceptance_criteria:
+  optical_quality:
+    distortion_arc_minutes_max: 2
+    haze_percent_max: 3
+    transmittance_percent_min: 70
+  structural_limits:
+    scratch_depth_acrylic_single_face_inch_max: 0.005
+    scratch_depth_acrylic_through_thickness_inch_max: 0.008
+    scratch_depth_glass_inch_max: 0.002
+    delamination_diameter_inch_max: 0.25
+    edge_delamination_inch_max: 0.125
+  heating_systems:
+    heater_resistance_ohm_min: 0.8
+    heater_resistance_ohm_max: 1.2
+    power_density_w_per_sq_in_min: 10
+    power_density_w_per_sq_in_max: 15
+    temperature_uniformity_celsius_tolerance: 10
+  seal_performance:
+    leakage_rate_cfm_max: 0.1
+    leakage_pressure_psi: 8.6
+    torque_retention_percent_min: 85
+  lightning_strike_protection:
+    continuity_resistance_ohm_max: 0.003
+    coating_resistance_ohm_per_square_min: 1
+    coating_resistance_ohm_per_square_max: 10
+
+# Effectivity
+effectivity:
+  scope: "All AMPEL360 configurations"
+  msn: "ALL"
+
+# Regulatory basis
+regulatory:
+  - "FAA Part 25.773 - Pilot Compartment View"
+  - "FAA Part 25.775 - Windshields and Windows"
+  - "FAA Part 25.783 - Fuselage Doors"
+  - "SAE AS25936 - Transparent Enclosures for Aircraft"
+  - "RTCA DO-160 - Environmental Conditions and Test Procedures"
+
+# Document inventory (to be populated as files are created)
+documents:
+  01_general:
+    - id: "DESC_56-01-01_Scope-Governance-And-Effectivity.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DESC_56-01-02_Definitions-And-Taxonomy.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-01-03_Window-Types-And-Applicability.csv"
+      sha256: "CHECKSUM_PENDING"
+  02_panes_and_laminates:
+    - id: "DESC_56-02-01_Pane-Construction-And-Layering.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-02-02_Pane-Removal-And-Replacement.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-02-03_Delamination-Detection-And-Repair.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-02-04_Approved-Glass-And-Acrylic-Specs.csv"
+      sha256: "CHECKSUM_PENDING"
+  03_seals_and_frames:
+    - id: "PROC_56-03-01_Seal-Inspection-And-Replacement.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-03-02_Frame-Removal-And-Refit.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-03-03_Seal-Specs-And-Cure-Schedules.csv"
+      sha256: "CHECKSUM_PENDING"
+  04_heating_and_anti_ice:
+    - id: "DESC_56-04-01_Window-Heaters-And-Blankets.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-04-02_Heater-Continuity-Checks-And-Repair.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-04-03_Heater-Specs-And-Resistance-Limits.csv"
+      sha256: "CHECKSUM_PENDING"
+  05_optics_and_visibility:
+    - id: "PROC_56-05-01_Optical-Inspection-And-Scratch-Acceptance.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-05-02_Polishing-And-Refurbishment.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-05-03_Optical-Quality-Limits.csv"
+      sha256: "CHECKSUM_PENDING"
+  06_loads_and_structural:
+    - id: "DESC_56-06-01_Window-Load-Path-And-Attachment.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-06-02_Frame-Reinforcement-And-Bolt-Torque.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-06-03_Attachment-Fitting-Specs.csv"
+      sha256: "CHECKSUM_PENDING"
+  07_ndt_and_inspection:
+    - id: "PROC_56-07-01_General-Visual-Inspection-GVI.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-07-02_Ultrasonic-C-Scan-For-Laminate-Delam.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-07-03_Dye-Penetrant-And-Eddy-Current.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-07-04_Inspection-Intervals-And-Acceptance.csv"
+      sha256: "CHECKSUM_PENDING"
+  08_repair_methods:
+    - id: "PROC_56-08-01_Acrylic-Patch-Repair.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-08-02_Laminated-Glass-Edge-Repair.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-08-03_Approved-Repair-Materials-And-M&P.csv"
+      sha256: "CHECKSUM_PENDING"
+  09_lsp_and_bonding:
+    - id: "PROC_56-09-01_LSP-Restoration-And-Continuity-Test.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-09-02_LSP-Materials-And-Resistance-Limits.csv"
+      sha256: "CHECKSUM_PENDING"
+  10_qualification_and_test:
+    - id: "TESTPLAN_56-10-01_Window-Qualification-And-Certification-Plan.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-10-02_Test-Matrix-And-Failure-Criteria.csv"
+      sha256: "CHECKSUM_PENDING"
+  11_materials_traceability:
+    - id: "DATA_56-11-01_Material-Specs-And-CofC-Requirements.csv"
+      sha256: "CHECKSUM_PENDING"
+    - id: "PROC_56-11-02_M&P-Traceability-And-Storage.md"
+      sha256: "CHECKSUM_PENDING"
+  12_nonconformance:
+    - id: "PROC_56-12-01_Nonconformance-Handling-And-Engineering-Disposition.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-12-02_NCR-Template.csv"
+      sha256: "CHECKSUM_PENDING"
+  13_human_factors:
+    - id: "DESC_56-13-01_Optical-Requirements-And-Crew-Visibility.md"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-13-02_Operation-Forces-And-Access-Limits.csv"
+      sha256: "CHECKSUM_PENDING"
+  14_diagrams:
+    - id: "DIAG_56-14-01_Window-Exploded-Views.pdf"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DIAG_56-14-02_Frame-And-Laminate-DWGs.dwg"
+      sha256: "CHECKSUM_PENDING"
+    - id: "DATA_56-14-03_Reference-Tables.csv"
+      sha256: "CHECKSUM_PENDING"
+  15_sidecar_meta:
+    - id: "templates/document.meta.yaml"
+      sha256: "CHECKSUM_PENDING"
+    - id: "templates/proc_sidecar_template.meta.yaml"
+      sha256: "CHECKSUM_PENDING"
+  16_examples:
+    - id: "EXAMPLE_56-16-01_Repair-Record-Example.json"
+      sha256: "CHECKSUM_PENDING"
+    - id: "EXAMPLE_56-16-02_Optical-Test-Log.csv"
+      sha256: "CHECKSUM_PENDING"
+    - id: "EXAMPLE_56-16-03_NDT-Report-Sample.pdf"
+      sha256: "CHECKSUM_PENDING"

@@ -1,0 +1,7 @@
+Material,Specification,Grade,CofC_Required,Lot_Traceability_Required,Shelf_Life_Months,Storage_Conditions
+Laminated_Glass,SAE AS25936,Type I,Yes,Yes,Indefinite,Room temp dry
+Acrylic_PMMA,MIL-PRF-25690,Type II,Yes,Yes,Indefinite,Room temp dark
+Silicone_Seal,AMS 3325,N/A,Yes,Yes,24,< 80F
+Edge_Sealant,MIL-S-8802,Class A,Yes,Yes,18,< 75F
+Acrylic_Adhesive,MIL-A-5092,Type I,Yes,Yes,12,40-80F
+ITO_Coating,Internal,N/A,Yes,Yes,N/A,N/A

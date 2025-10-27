@@ -1,0 +1,323 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Window Inspection Record Schema",
+  "description": "Schema for documenting window visual and NDT inspection results",
+  "type": "object",
+  "required": ["inspection_id", "timestamp", "window_location", "inspection_type", "inspector_id", "findings"],
+  "properties": {
+    "inspection_id": {
+      "type": "string",
+      "description": "Unique inspection identifier",
+      "pattern": "^WI-56-[0-9]{4}-[0-9]{6}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "msn": {
+      "type": "string"
+    },
+    "window_location": {
+      "type": "string",
+      "pattern": "^(FWD|CABIN|DOOR|INSP)-(LH|RH|CTR)-[A-Z0-9]+$"
+    },
+    "pane_serial": {
+      "type": "string"
+    },
+    "pane_part_number": {
+      "type": "string"
+    },
+    "inspection_type": {
+      "type": "string",
+      "enum": [
+        "general_visual_inspection",
+        "detailed_visual_inspection",
+        "ultrasonic_c_scan",
+        "dye_penetrant",
+        "eddy_current",
+        "thermography",
+        "tap_test",
+        "optical_quality_check",
+        "heater_continuity_test",
+        "seal_leak_test",
+        "lsp_continuity_test"
+      ]
+    },
+    "inspection_basis": {
+      "type": "string",
+      "enum": ["scheduled", "unscheduled", "post_repair", "post_incident", "pre_flight", "post_flight"],
+      "description": "Reason for inspection"
+    },
+    "procedure_reference": {
+      "type": "string",
+      "description": "Reference to inspection procedure used"
+    },
+    "findings": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["serviceable", "serviceable_with_monitoring", "action_required", "unserviceable"],
+          "description": "Overall inspection status"
+        },
+        "defects_found": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "defect_type": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "severity": {
+                "type": "string",
+                "enum": ["minor", "moderate", "major", "critical"]
+              },
+              "measurements": {
+                "type": "object"
+              },
+              "photo_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "description": "Specific measurements taken during inspection",
+      "properties": {
+        "optical_quality": {
+          "type": "object",
+          "properties": {
+            "distortion_arc_minutes": {
+              "type": "number"
+            },
+            "haze_percent": {
+              "type": "number"
+            },
+            "transmittance_percent": {
+              "type": "number"
+            },
+            "within_limits": {
+              "type": "boolean"
+            }
+          }
+        },
+        "scratch_measurements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string"
+              },
+              "depth_inch": {
+                "type": "number"
+              },
+              "length_inch": {
+                "type": "number"
+              },
+              "within_limits": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "delamination_measurements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string"
+              },
+              "diameter_inch": {
+                "type": "number"
+              },
+              "depth_layer": {
+                "type": "string"
+              },
+              "within_limits": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "heater_resistance_ohms": {
+          "type": "number"
+        },
+        "heater_resistance_within_spec": {
+          "type": "boolean"
+        },
+        "seal_leak_rate_cfm": {
+          "type": "number"
+        },
+        "seal_leak_within_spec": {
+          "type": "boolean"
+        },
+        "lsp_continuity_ohms": {
+          "type": "number"
+        },
+        "lsp_continuity_within_spec": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ndt_data": {
+      "type": "object",
+      "description": "NDT-specific data",
+      "properties": {
+        "ultrasonic_c_scan": {
+          "type": "object",
+          "properties": {
+            "scan_files": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "filename": {
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-fA-F0-9]{64}$"
+                  }
+                }
+              }
+            },
+            "indications_found": {
+              "type": "boolean"
+            },
+            "indication_details": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "thermography": {
+          "type": "object",
+          "properties": {
+            "image_files": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "hot_spots_detected": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "equipment_used": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "equipment_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "calibration_due": {
+            "type": "string",
+            "format": "date"
+          },
+          "calibration_status": {
+            "type": "string",
+            "enum": ["current", "expired"]
+          }
+        },
+        "required": ["equipment_id", "calibration_due", "calibration_status"]
+      }
+    },
+    "environmental_conditions": {
+      "type": "object",
+      "properties": {
+        "temperature_celsius": {
+          "type": "number"
+        },
+        "humidity_percent": {
+          "type": "number"
+        },
+        "lighting_conditions": {
+          "type": "string"
+        }
+      }
+    },
+    "inspector_id": {
+      "type": "string",
+      "description": "ID of inspector who performed inspection"
+    },
+    "inspector_qualification": {
+      "type": "string",
+      "description": "Inspector qualification/certification level"
+    },
+    "next_inspection_due": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "flight_hours": {
+          "type": "integer"
+        },
+        "flight_cycles": {
+          "type": "integer"
+        }
+      }
+    },
+    "corrective_action_required": {
+      "type": "boolean"
+    },
+    "corrective_action": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["immediate", "before_next_flight", "within_24h", "within_7days", "next_scheduled_maintenance"]
+        },
+        "work_order_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "remarks": {
+      "type": "string"
+    }
+  }
+}

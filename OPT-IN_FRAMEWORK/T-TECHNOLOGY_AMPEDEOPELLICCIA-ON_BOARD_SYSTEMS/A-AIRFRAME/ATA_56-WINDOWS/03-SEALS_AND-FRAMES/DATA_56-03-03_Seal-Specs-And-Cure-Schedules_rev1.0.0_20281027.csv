@@ -1,0 +1,6 @@
+Seal_Type,Part_Number,Material,Hardness_Shore_A,Temperature_Range_F,Compression_Set_Max_Percent,Cure_Time_Hours,Cure_Temp_F,Application
+Primary Seal,SEAL-56-001,Silicone,40-50,-65 to 400,25,24,Room,Windshield
+Secondary Seal,SEAL-56-002,Fluorosilicone,50-60,-65 to 350,20,48,Room,Windshield
+Cabin Window Seal,SEAL-56-010,EPDM,45-55,-40 to 250,30,N/A,N/A,Cabin Windows
+Door Seal,SEAL-56-020,Neoprene,50-60,-40 to 200,25,N/A,N/A,Vision Panels
+Edge Sealant,SEAL-56-100,Polysulfide,N/A,-65 to 250,N/A,168,Room,Delamination Repair

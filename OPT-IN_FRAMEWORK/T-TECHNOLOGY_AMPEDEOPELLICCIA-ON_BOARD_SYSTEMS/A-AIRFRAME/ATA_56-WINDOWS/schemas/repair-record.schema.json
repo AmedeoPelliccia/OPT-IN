@@ -1,0 +1,325 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Window Repair Record Schema",
+  "description": "Comprehensive repair record schema for aircraft window systems including window-specific fields for pane type, serial tracking, optical quality, scratch depth, heater resistance, seal torque, NDT file hashes, and effectivity",
+  "type": "object",
+  "required": [
+    "record_id",
+    "timestamp",
+    "msn",
+    "window_location",
+    "pane_type",
+    "pane_serial",
+    "work_scope",
+    "operator",
+    "inspector",
+    "optical_quality_score",
+    "ndt_file_hashes",
+    "effectivity"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "description": "Unique repair record identifier (e.g., WR-56-2028-001234)",
+      "pattern": "^WR-56-[0-9]{4}-[0-9]{6}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of repair completion"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number of aircraft"
+    },
+    "config": {
+      "type": "string",
+      "description": "Aircraft configuration identifier (e.g., BWB-360-PAX, CONV-360-CARGO)",
+      "enum": ["BWB-360-PAX", "BWB-360-CARGO", "CONV-360-PAX", "CONV-360-CARGO", "ALL"]
+    },
+    "window_location": {
+      "type": "string",
+      "description": "Window location identifier (e.g., FWD-LH-01, CABIN-RH-15A, DOOR-1L-VISION)",
+      "pattern": "^(FWD|CABIN|DOOR|INSP)-(LH|RH|CTR)-[A-Z0-9]+$"
+    },
+    "pane_type": {
+      "type": "string",
+      "description": "Type of window pane material and construction",
+      "enum": ["acrylic", "glass", "laminate", "stretched_acrylic", "multi_layer_glass", "polycarbonate"]
+    },
+    "pane_serial": {
+      "type": "string",
+      "description": "Pane serial number traceable to manufacturing lot and certification data"
+    },
+    "pane_part_number": {
+      "type": "string",
+      "description": "Part number of the window pane"
+    },
+    "work_scope": {
+      "type": "string",
+      "description": "Description of repair work performed",
+      "examples": [
+        "Scratch polishing",
+        "Delamination edge seal",
+        "Pane replacement",
+        "Seal replacement",
+        "Heater element repair",
+        "LSP restoration"
+      ]
+    },
+    "damage_classification": {
+      "type": "object",
+      "description": "Damage classification per damage-classification.schema.json",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["scratch", "crack", "delamination", "seal_failure", "heater_failure", "coating_damage", "frame_damage"]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["minor", "moderate", "major", "critical"]
+        },
+        "location": {
+          "type": "string",
+          "description": "Location of damage on the window (e.g., center, edge, corner)"
+        }
+      }
+    },
+    "optical_quality_score": {
+      "type": "number",
+      "description": "Optical quality score: 1-10 (10 = perfect). Must be >= 7 for cockpit windows, >= 6 for cabin",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "scratch_depth": {
+      "type": "object",
+      "description": "Scratch depth measurements in inches",
+      "properties": {
+        "max_depth_inch": {
+          "type": "number",
+          "description": "Maximum scratch depth measured"
+        },
+        "location": {
+          "type": "string",
+          "description": "Location of deepest scratch"
+        },
+        "acceptance_limit_inch": {
+          "type": "number",
+          "description": "Acceptance limit for this pane type and location"
+        },
+        "within_limits": {
+          "type": "boolean",
+          "description": "True if scratch depth is within acceptance limits"
+        }
+      },
+      "required": ["max_depth_inch", "acceptance_limit_inch", "within_limits"]
+    },
+    "heater_resistance": {
+      "type": "object",
+      "description": "Heater element resistance measurements (if applicable)",
+      "properties": {
+        "measured_ohms": {
+          "type": "number",
+          "description": "Measured resistance in ohms"
+        },
+        "spec_min_ohms": {
+          "type": "number",
+          "description": "Minimum acceptable resistance"
+        },
+        "spec_max_ohms": {
+          "type": "number",
+          "description": "Maximum acceptable resistance"
+        },
+        "within_spec": {
+          "type": "boolean",
+          "description": "True if resistance is within specification"
+        },
+        "test_method": {
+          "type": "string",
+          "description": "Test method used (e.g., 4-wire Kelvin)",
+          "enum": ["2-wire", "4-wire_kelvin", "bridge_method"]
+        }
+      }
+    },
+    "seal_torque": {
+      "type": "object",
+      "description": "Seal fastener torque measurements",
+      "properties": {
+        "fastener_count": {
+          "type": "integer",
+          "description": "Number of fasteners checked"
+        },
+        "torque_values_nm": {
+          "type": "array",
+          "description": "Array of torque values in Newton-meters",
+          "items": {
+            "type": "number"
+          }
+        },
+        "spec_torque_nm": {
+          "type": "number",
+          "description": "Specified torque value"
+        },
+        "tolerance_percent": {
+          "type": "number",
+          "description": "Acceptable tolerance percentage"
+        },
+        "all_within_spec": {
+          "type": "boolean",
+          "description": "True if all torque values are within specification"
+        }
+      }
+    },
+    "lsp_continuity": {
+      "type": "object",
+      "description": "Lightning Strike Protection continuity test results",
+      "properties": {
+        "resistance_ohms": {
+          "type": "number",
+          "description": "Measured continuity resistance in ohms"
+        },
+        "limit_ohms": {
+          "type": "number",
+          "description": "Maximum acceptable resistance (typically 0.003 ohms)"
+        },
+        "test_method": {
+          "type": "string",
+          "description": "Test method (should be 4-wire for accuracy)",
+          "enum": ["4-wire", "2-wire"]
+        },
+        "coating_type": {
+          "type": "string",
+          "description": "Type of conductive coating or mesh",
+          "enum": ["ITO", "metal_mesh", "conductive_film", "none"]
+        },
+        "within_limits": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ndt_file_hashes": {
+      "type": "array",
+      "description": "SHA-256 hashes of associated NDT files (C-scan images, reports, etc.)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "NDT file name"
+          },
+          "hash": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$",
+            "description": "SHA-256 hash of the file"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of NDT",
+            "enum": ["ultrasonic_c_scan", "visual_inspection", "dye_penetrant", "eddy_current", "thermography"]
+          }
+        },
+        "required": ["filename", "hash", "type"]
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "Effectivity information for this repair",
+      "required": ["msn", "config"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Specific MSN or 'ALL'"
+        },
+        "config": {
+          "type": "string",
+          "description": "Configuration applicability"
+        },
+        "mod_status": {
+          "type": "string",
+          "description": "Modification status (e.g., MOD-56-001 embodied)"
+        }
+      }
+    },
+    "materials_used": {
+      "type": "array",
+      "description": "Materials and parts used in the repair",
+      "items": {
+        "type": "object",
+        "properties": {
+          "part_number": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "lot_number": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "cofc_ref": {
+            "type": "string",
+            "description": "Certificate of Conformance reference"
+          }
+        },
+        "required": ["part_number", "description", "quantity"]
+      }
+    },
+    "tools_used": {
+      "type": "array",
+      "description": "Tools and equipment used",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tool_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "calibration_due": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": ["tool_id", "calibration_due"]
+      }
+    },
+    "operator": {
+      "type": "string",
+      "description": "Technician ID who performed the work"
+    },
+    "inspector": {
+      "type": "string",
+      "description": "Inspector ID who verified the work"
+    },
+    "engineering_disposition": {
+      "type": "object",
+      "description": "Engineering disposition if non-conformance exists",
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "ncr_number": {
+          "type": "string"
+        },
+        "disposition": {
+          "type": "string",
+          "enum": ["accept_as_is", "rework", "repair", "scrap", "use_as_is"]
+        },
+        "engineer_id": {
+          "type": "string"
+        }
+      }
+    },
+    "procedure_reference": {
+      "type": "string",
+      "description": "Reference to procedure used (e.g., PROC_56-08-01_Acrylic-Patch-Repair_rev1.0.0_20281015.md)"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional remarks or notes"
+    }
+  }
+}
