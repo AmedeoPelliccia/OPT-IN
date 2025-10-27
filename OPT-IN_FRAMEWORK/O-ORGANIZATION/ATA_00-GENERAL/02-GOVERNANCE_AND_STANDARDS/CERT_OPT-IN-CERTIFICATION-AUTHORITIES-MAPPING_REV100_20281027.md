@@ -2,7 +2,7 @@
 
 **Document ID:** CERT_OPT-IN-CERTIFICATION-AUTHORITIES-MAPPING  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-27  
+**Effective Date:** 2024-06-10  
 **Classification:** Governance / Certification Mapping  
 **Owner:** Airworthiness Engineering  
 
