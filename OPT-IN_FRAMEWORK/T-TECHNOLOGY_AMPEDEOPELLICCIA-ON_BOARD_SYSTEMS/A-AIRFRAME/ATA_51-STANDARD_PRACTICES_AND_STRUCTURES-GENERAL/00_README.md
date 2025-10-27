@@ -14,9 +14,9 @@ This chapter serves as the foundation for the Structural Repair Manual (SRM). It
 ```mermaid
 graph TD
     A[Damage Discovered] --> B{Assess Damage};
-    B --> C{Is it Negligible? per DATA_51-01-02};
+    B --> C{Is it Negligible? per DATA_51-01-01_Damage-Classification-Limits.csv};
     C -- Yes --> D[Record in Log & Blend Out];
-    C -- No --> E{Is it Repairable? per DATA_51-01-02};
+    C -- No --> E{Is it Repairable? per DATA_51-01-01_Damage-Classification-Limits.csv};
     E -- Yes --> F[Perform Standard Repair per ATA 51-57];
     F --> G[Complete Repair Record & Post-Repair NDT];
     G --> H[Return to Service];
