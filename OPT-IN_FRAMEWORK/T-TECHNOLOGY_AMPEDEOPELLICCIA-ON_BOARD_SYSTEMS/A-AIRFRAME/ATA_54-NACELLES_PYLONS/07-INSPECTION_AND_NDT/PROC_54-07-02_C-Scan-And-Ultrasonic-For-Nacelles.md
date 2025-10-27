@@ -64,4 +64,4 @@ This procedure describes ultrasonic and C-scan inspection methods for CFRP nacel
 - ATA 51: NDT methods for composites
 - ASTM E2533: Standard Practice for C-scan
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

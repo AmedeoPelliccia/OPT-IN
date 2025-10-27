@@ -110,4 +110,4 @@ This procedure describes the inspection and functional testing of thrust reverse
 - DATA 54-04-03: Specifications and tolerances
 - ATA 71: Engine ground test procedures
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

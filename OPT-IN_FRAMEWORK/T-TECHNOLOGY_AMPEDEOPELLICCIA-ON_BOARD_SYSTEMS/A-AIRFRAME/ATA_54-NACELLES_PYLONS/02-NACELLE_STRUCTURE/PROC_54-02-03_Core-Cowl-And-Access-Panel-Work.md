@@ -85,4 +85,4 @@ When any panel is removed, inspect:
 - ATA 26: Fire protection system precautions
 - ATA 75: Bleed air system servicing
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

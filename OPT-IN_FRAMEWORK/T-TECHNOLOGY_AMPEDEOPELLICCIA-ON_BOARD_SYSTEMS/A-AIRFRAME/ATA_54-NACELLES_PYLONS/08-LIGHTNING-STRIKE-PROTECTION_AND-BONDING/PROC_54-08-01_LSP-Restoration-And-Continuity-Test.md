@@ -96,4 +96,4 @@ If resistance > 2.5 milliohms:
 - SAE ARP5412: Lightning Strike Protection
 - DATA 54-08-02: LSP materials and specifications
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

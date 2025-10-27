@@ -139,4 +139,4 @@ If heat treatment required:
 - ATA 20: Standard material handling practices
 - Company Quality Manual: Material control procedures
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

@@ -37,8 +37,8 @@ All procedures, repairs, and modifications within ATA 54 require review and appr
 
 ### Revision Control
 - **Current Revision:** 1.0.0
-- **Effective Date:** 2028-12-05
-- **Next Scheduled Review:** 2029-12-05
+- **Effective Date:** 2025-10-27
+- **Next Scheduled Review:** 2025-10-27
 
 ## Related Documents
 - ATA 20: Standard Practices - Airframe

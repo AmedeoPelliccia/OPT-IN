@@ -130,4 +130,4 @@ For all fitting repairs:
 - DATA 54-01-03: Design load cases
 - FAA Part 25.571: Damage tolerance requirements
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

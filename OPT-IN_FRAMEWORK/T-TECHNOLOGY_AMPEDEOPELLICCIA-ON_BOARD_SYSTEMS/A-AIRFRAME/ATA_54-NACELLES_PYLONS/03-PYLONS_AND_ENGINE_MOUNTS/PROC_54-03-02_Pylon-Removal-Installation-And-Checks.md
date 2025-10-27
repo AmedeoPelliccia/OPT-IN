@@ -201,4 +201,4 @@ This procedure describes the removal and installation of the complete engine pyl
 - PROC 54-07-03: NDT procedures
 - DATA 54-03-04: Pylon specifications and torque values
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

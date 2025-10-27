@@ -89,4 +89,4 @@ All materials per DATA 54-09-04:
 - **PROC 54-07-02:** Ultrasonic inspection
 - **DATA 54-09-04:** Approved materials
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

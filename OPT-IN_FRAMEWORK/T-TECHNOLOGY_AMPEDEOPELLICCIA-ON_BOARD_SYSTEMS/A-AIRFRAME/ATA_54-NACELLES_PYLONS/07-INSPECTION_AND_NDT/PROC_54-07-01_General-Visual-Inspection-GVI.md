@@ -109,4 +109,4 @@ For any finding:
 - ATA 51: Structural damage classification
 - `/schemas/damage-classification.schema.json`
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release

@@ -2,7 +2,7 @@
 
 **Document Type:** Test Plan  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-12-05  
+**Effective Date:** 2025-10-27  
 **Status:** Released for Certification
 
 ## 1. Introduction
@@ -219,16 +219,16 @@ Any test failure or anomaly requires:
 
 | Milestone | Target Date | Status |
 |-----------|-------------|--------|
-| Test Plan Approval | 2028-12-05 | Complete |
-| Test Articles Fabrication | 2029-03-01 | Planned |
-| Static Ultimate Load Test | 2029-06-01 | Planned |
-| FBO Test | 2029-07-15 | Planned |
-| Acoustic Fatigue Test Start | 2029-04-01 | Planned |
-| Acoustic Fatigue Test Complete | 2030-10-01 | Planned |
-| Thrust Reverser Endurance | 2029-09-01 | Planned |
-| Environmental Tests | 2029-08-01 | Planned |
-| Damage Tolerance Tests | 2029-05-01 | Planned |
-| Final Certification Report | 2030-12-01 | Planned |
+| Test Plan Approval | 2025-10-27 | Complete |
+| Test Articles Fabrication | 2025-10-27 | Planned |
+| Static Ultimate Load Test | 2025-10-27 | Planned |
+| FBO Test | 2025-10-27 | Planned |
+| Acoustic Fatigue Test Start | 2025-10-27 | Planned |
+| Acoustic Fatigue Test Complete | 2025-10-27 | Planned |
+| Thrust Reverser Endurance | 2025-10-27 | Planned |
+| Environmental Tests | 2025-10-27 | Planned |
+| Damage Tolerance Tests | 2025-10-27 | Planned |
+| Final Certification Report | 2025-10-27 | Planned |
 
 ## 8. References
 - FAA Part 25: Airworthiness Standards
@@ -249,4 +249,4 @@ Any test failure or anomaly requires:
 **Document Control:**  
 Document ID: TESTPLAN_54-10-01  
 Revision: 1.0.0  
-Effective: 2028-12-05
+Effective: 2025-10-27

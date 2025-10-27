@@ -1,6 +1,6 @@
 {
-  "record_id": "REP-54-20290815-001",
-  "timestamp_utc": "2029-08-15T14:32:00Z",
+  "record_id": "REP-54-20251027-001",
+  "timestamp_utc": "2025-10-27T14:32:00Z",
   "msn": "AMP360-012",
   "location": {
     "part_number": "AP360-54-1001",
@@ -23,19 +23,19 @@
     {
       "material_id": "MAT-54-004",
       "description": "CFRP Prepreg IM7/8552",
-      "batch_number": "BMS8276-2029-045",
+      "batch_number": "BMS8276-2025-045",
       "quantity": "12 plies, 200mm x 300mm"
     },
     {
       "material_id": "MAT-54-006",
       "description": "Aramid Honeycomb 4.0 pcf",
-      "batch_number": "HC-2029-089",
+      "batch_number": "HC-2025-089",
       "quantity": "100mm x 150mm x 8mm"
     },
     {
       "material_id": "MAT-54-011",
       "description": "Copper LSP Mesh",
-      "roll_number": "MESH-2029-012",
+      "roll_number": "MESH-2025-012",
       "quantity": "250mm x 350mm"
     }
   ],
@@ -43,21 +43,21 @@
     "name": "John Smith",
     "certification": "CFRP Repair Level 3",
     "cert_number": "CFRP-L3-00456",
-    "cert_expiry": "2030-12-31"
+    "cert_expiry": "2025-10-27"
   },
   "inspections": [
     {
       "type": "NDT",
       "method": "Ultrasonic C-Scan",
       "inspector": "Jane Doe",
-      "date": "2029-08-14T10:00:00Z",
+      "date": "2025-10-27T10:00:00Z",
       "result": "Delamination confirmed, 75mm x 45mm",
       "report_hash": "sha256:abc123def456..."
     },
     {
       "type": "Visual",
       "inspector": "QA Inspector Mike Johnson",
-      "date": "2029-08-15T16:00:00Z",
+      "date": "2025-10-27T16:00:00Z",
       "result": "Repair surface smooth, no voids visible",
       "report_hash": "sha256:def789ghi012..."
     },
@@ -65,7 +65,7 @@
       "type": "NDT",
       "method": "Ultrasonic C-Scan",
       "inspector": "Jane Doe",
-      "date": "2029-08-16T09:00:00Z",
+      "date": "2025-10-27T09:00:00Z",
       "result": "No delamination detected, repair complete",
       "report_hash": "sha256:ghi345jkl678..."
     }
@@ -75,13 +75,13 @@
     "temperature_f": 250,
     "duration_hours": 2,
     "vacuum_inhg": -22,
-    "chart_reference": "CURE-2029-08-15-001.pdf"
+    "chart_reference": "CURE-2025-10-27-001.pdf"
   },
   "lsp_continuity_resistance_mohms": 1.8,
   "final_acceptance": {
     "qa_inspector": "Mike Johnson",
-    "qa_stamp": "QA-54-2029-0156",
-    "date": "2029-08-16T14:00:00Z",
+    "qa_stamp": "QA-54-2025-0156",
+    "date": "2025-10-27T14:00:00Z",
     "status": "Accepted"
   },
   "next_inspection_due": {
@@ -91,10 +91,10 @@
   },
   "engineering_disposition": null,
   "photos": [
-    "REP-54-20290815-001_photo1_damage.jpg",
-    "REP-54-20290815-001_photo2_scarfed.jpg",
-    "REP-54-20290815-001_photo3_layup.jpg",
-    "REP-54-20290815-001_photo4_complete.jpg"
+    "REP-54-20251027-001_photo1_damage.jpg",
+    "REP-54-20251027-001_photo2_scarfed.jpg",
+    "REP-54-20251027-001_photo3_layup.jpg",
+    "REP-54-20251027-001_photo4_complete.jpg"
   ],
   "notes": "Repair completed in accordance with PROC 54-09-02 and ATA 51. Acoustic performance verified post-repair. LSP continuity within limits."
 }

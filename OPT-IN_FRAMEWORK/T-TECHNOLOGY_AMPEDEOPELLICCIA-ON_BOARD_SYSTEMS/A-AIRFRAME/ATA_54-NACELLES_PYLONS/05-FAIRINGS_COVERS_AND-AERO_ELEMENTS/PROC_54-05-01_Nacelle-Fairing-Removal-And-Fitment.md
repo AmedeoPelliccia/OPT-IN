@@ -41,4 +41,4 @@ This procedure covers removal, installation, and adjustment of aerodynamic fairi
 - DATA 54-05-02: Fairing specifications and fastener data
 - ATA 20: Standard fastening practices
 
-**Rev 1.0.0 (2028-12-05):** Initial release
+**Rev 1.0.0 (2025-10-27):** Initial release
