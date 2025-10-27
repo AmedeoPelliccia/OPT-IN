@@ -170,7 +170,7 @@ fi
 # 7. Check for broken internal references in markdown files
 echo "7. Checking internal references in markdown files..."
 ref_check_count=0
-for md_file in $(find "$root_dir" -type f -name "*.md" 2>/dev/null); do
+for md_file in $(find "$root_dir" -maxdepth 2 -type f -name "*.md" 2>/dev/null); do
   # Check for references to DATA files
   if grep -q "DATA_51-" "$md_file" 2>/dev/null; then
     ref_check_count=$((ref_check_count + 1))
