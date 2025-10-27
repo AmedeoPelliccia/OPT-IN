@@ -4,7 +4,7 @@ chapter: "ATA 57 - WINGS"
 governance:
   owner_role: "Structures Engineering"
   review_board: ["Structures", "Materials & Processes", "Flight Test", "Quality Assurance"]
-  effective_date: "2028-01-01"
+  effective_date: "2025-10-27"
   revision: "1.0.0"
 
 traceability:

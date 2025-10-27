@@ -3,7 +3,7 @@
 ## Document Information
 - **Document ID:** PROC_57-02-03
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-01-01
+- **Effective Date:** 2025-10-27
 
 ## Scope
 This procedure covers removal and installation of wing box assembly for major repair or replacement.

@@ -4,7 +4,7 @@
 - **Document ID:** DESC_57-01-01
 - **Title:** Scope, Governance, and Effectivity
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-01-01
+- **Effective Date:** 2025-10-27
 - **ATA Chapter:** 57 - Wings
 
 ## 1. Scope
@@ -247,7 +247,7 @@ Minimum retention periods:
 
 | Revision | Date       | Description                  | Approved By          |
 |----------|------------|------------------------------|----------------------|
-| 1.0.0    | 2028-01-01 | Initial Release              | Chief Engineer       |
+| 1.0.0    | 2025-10-27 | Initial Release              | Chief Engineer       |
 
 ---
 
@@ -256,4 +256,4 @@ Minimum retention periods:
 - **Airworthiness Engineering:** [Signature Required]
 - **Quality Assurance:** [Signature Required]
 
-**Next Review Date:** 2029-01-01
+**Next Review Date:** 2026-10-27

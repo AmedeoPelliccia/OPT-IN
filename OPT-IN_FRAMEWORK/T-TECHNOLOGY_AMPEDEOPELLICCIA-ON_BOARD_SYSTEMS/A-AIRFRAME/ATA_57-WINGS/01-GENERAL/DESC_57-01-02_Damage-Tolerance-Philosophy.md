@@ -4,7 +4,7 @@
 - **Document ID:** DESC_57-01-02
 - **Title:** Damage Tolerance Philosophy
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-01-01
+- **Effective Date:** 2025-10-27
 - **ATA Chapter:** 57 - Wings
 
 ## 1. Introduction
@@ -289,7 +289,7 @@ Monitor for:
 
 | Revision | Date       | Description                  | Approved By          |
 |----------|------------|------------------------------|----------------------|
-| 1.0.0    | 2028-01-01 | Initial Release              | Chief Engineer       |
+| 1.0.0    | 2025-10-27 | Initial Release              | Chief Engineer       |
 
 ---
 
@@ -297,4 +297,4 @@ Monitor for:
 - **Structures Engineering:** [Signature Required]
 - **Airworthiness Engineering:** [Signature Required]
 
-**Next Review Date:** 2029-01-01
+**Next Review Date:** 2026-10-27

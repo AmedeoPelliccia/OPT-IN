@@ -4,7 +4,7 @@
 - **Document ID:** PROC_57-02-02
 - **Title:** Spar and Rib Inspection Procedure
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-01-01
+- **Effective Date:** 2025-10-27
 - **ATA Chapter:** 57-02 - Wing Box and Primary Structure
 
 ## 1. Scope
@@ -184,7 +184,7 @@ Intervals may be adjusted based on service experience or regulatory directive.
 
 | Revision | Date       | Description     | Approved By           |
 |----------|------------|-----------------|-----------------------|
-| 1.0.0    | 2028-01-01 | Initial Release | Structures Engineering |
+| 1.0.0    | 2025-10-27 | Initial Release | Structures Engineering |
 
 ---
 
@@ -192,4 +192,4 @@ Intervals may be adjusted based on service experience or regulatory directive.
 - **Structures Engineering:** [Signature Required]
 - **Quality Assurance:** [Signature Required]
 
-**Next Review Date:** 2029-01-01
+**Next Review Date:** 2026-10-27

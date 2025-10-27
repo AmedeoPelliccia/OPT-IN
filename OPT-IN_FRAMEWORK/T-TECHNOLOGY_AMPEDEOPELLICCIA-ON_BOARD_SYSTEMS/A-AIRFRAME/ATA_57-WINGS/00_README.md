@@ -125,5 +125,5 @@ All documentation includes:
 
 **Authority:** Structures Engineering, Airworthiness Engineering  
 **Review Board:** Structures, Materials & Processes, Flight Test, Quality Assurance  
-**Effective Date:** 2028-01-01  
+**Effective Date:** 2025-10-27  
 **Revision:** 1.0.0

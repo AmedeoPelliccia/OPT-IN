@@ -4,7 +4,7 @@
 - **Document ID:** DESC_57-02-01
 - **Title:** Wing Box Architecture and Load Path
 - **Revision:** 1.0.0
-- **Effective Date:** 2028-01-01
+- **Effective Date:** 2025-10-27
 - **ATA Chapter:** 57-02 - Wing Box and Primary Structure
 
 ## 1. Wing Box Overview
@@ -181,11 +181,11 @@ The wing box is the primary load-carrying structure of the wing, designed to wit
 
 | Revision | Date       | Description     | Approved By    |
 |----------|------------|-----------------|----------------|
-| 1.0.0    | 2028-01-01 | Initial Release | Chief Engineer |
+| 1.0.0    | 2025-10-27 | Initial Release | Chief Engineer |
 
 ---
 
 **Approval:**
 - **Structures Engineering:** [Signature Required]
 
-**Next Review Date:** 2029-01-01
+**Next Review Date:** 2026-10-27

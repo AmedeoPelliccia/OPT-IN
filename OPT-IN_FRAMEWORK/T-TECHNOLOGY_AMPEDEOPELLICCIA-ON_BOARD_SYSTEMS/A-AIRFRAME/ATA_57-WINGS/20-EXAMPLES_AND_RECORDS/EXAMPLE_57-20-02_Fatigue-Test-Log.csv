@@ -1,5 +1,5 @@
 Test_ID,Specimen_ID,Material,Load_Type,Max_Load_kN,Min_Load_kN,Frequency_Hz,Cycles_Applied,Cycles_to_Failure,Failure_Mode,Date,Operator
-FT-001,SPAR-CAP-001,Al-7075-T6,Tension-Tension,150,15,10,2500000,2487350,Crack_initiation_at_fastener_hole,2027-11-15,J.Smith
-FT-002,SPAR-CAP-002,Al-7075-T6,Tension-Tension,150,15,10,2500000,2534200,Crack_initiation_at_radius,2027-11-20,J.Smith
-FT-003,SKIN-PANEL-001,CFRP,Compression-Compression,-100,-10,5,5000000,5234000,Delamination,2027-12-01,M.Jones
-FT-004,RIB-WEB-001,Al-2024-T3,Tension-Compression,50,-25,8,1000000,1045600,Web_buckling,2027-12-10,M.Jones
+FT-001,SPAR-CAP-001,Al-7075-T6,Tension-Tension,150,15,10,2500000,2487350,Crack_initiation_at_fastener_hole,2025-10-27,J.Smith
+FT-002,SPAR-CAP-002,Al-7075-T6,Tension-Tension,150,15,10,2500000,2534200,Crack_initiation_at_radius,2025-10-27,J.Smith
+FT-003,SKIN-PANEL-001,CFRP,Compression-Compression,-100,-10,5,5000000,5234000,Delamination,2025-10-27,M.Jones
+FT-004,RIB-WEB-001,Al-2024-T3,Tension-Compression,50,-25,8,1000000,1045600,Web_buckling,2025-10-27,M.Jones
