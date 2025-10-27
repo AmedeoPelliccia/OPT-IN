@@ -1,0 +1,35 @@
+{
+  "record_id": "RR-AMP360-001-53-0123",
+  "timestamp_utc": "2025-10-27T18:30:00Z",
+  "msn": "AMP360-001",
+  "location": {
+    "zone": "200",
+    "station": "FS 25.500, BL 3.200",
+    "description": "Upper wing-body skin, LH side"
+  },
+  "damage_assessment": {
+    "report_id": "DR-0881",
+    "classification": "Repairable"
+  },
+  "repair_procedure": {
+    "srm_ref": "SRM 53-10-05, Repair 2",
+    "engineering_order": null
+  },
+  "materials": [
+    { "spec": "CFRP-PLY-01", "batch_lot": "B-98765", "expiry_date": "2026-05-20" },
+    { "spec": "ADH-FILM-01", "batch_lot": "A-12345", "expiry_date": "2026-04-11" }
+  ],
+  "process_log": {
+    "hot_bonder_id": "HB-007",
+    "cure_cycle_log_hash": "sha256:a1b2..."
+  },
+  "personnel": {
+    "technician_id": "TECH-1138",
+    "inspector_id": "INSP-007"
+  },
+  "inspections": [
+    { "type": "NDT", "report_id": "NDT-PRE-555", "result": "PASS" },
+    { "type": "NDT", "report_id": "NDT-POST-556", "result": "PASS" }
+  ],
+  "disposition": "Return to Service"
+}

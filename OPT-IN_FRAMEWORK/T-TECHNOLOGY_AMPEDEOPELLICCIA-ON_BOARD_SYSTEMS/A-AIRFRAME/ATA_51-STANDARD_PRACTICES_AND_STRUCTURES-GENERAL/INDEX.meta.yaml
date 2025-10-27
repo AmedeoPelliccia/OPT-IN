@@ -1,0 +1,16 @@
+schema_version: "1.1"
+id: "ATA_51_INDEX"
+chapter: "ATA 51 - STANDARD PRACTICES AND STRUCTURES - GENERAL"
+governance:
+  owner_role: "Structural Repair Engineering"
+  review_board: ["Airworthiness", "Materials & Process", "NDT Engineering"]
+effectivity:
+  - config: "Block A"
+    msn_range: ["AMP360-001", "AMP360-050"]
+    baseline_rev: "1.0.0"
+  - config: "Block B"
+    msn_range: ["AMP360-051", "onwards"]
+    baseline_rev: "1.1.0"
+traceability:
+  crossrefs: ["ATA 04", "ATA 20", "ATA 53", "ATA 54", "ATA 55", "ATA 56", "ATA 57"]
+integrity: { checksum_algorithm: "sha256" }
