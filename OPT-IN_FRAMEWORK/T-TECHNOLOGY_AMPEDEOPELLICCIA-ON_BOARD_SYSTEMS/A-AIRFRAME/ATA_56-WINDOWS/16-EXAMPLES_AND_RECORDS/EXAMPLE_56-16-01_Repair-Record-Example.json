@@ -1,6 +1,6 @@
 {
-  "record_id": "WR-56-2028-001234",
-  "timestamp": "2028-10-27T14:30:00Z",
+  "record_id": "WR-56-2025-001234",
+  "timestamp": "2025-10-27T14:30:00Z",
   "msn": "MSN-001",
   "config": "BWB-360-PAX",
   "window_location": "FWD-LH-01",
@@ -43,12 +43,12 @@
   },
   "ndt_file_hashes": [
     {
-      "filename": "WR-56-2028-001234_before.jpg",
+      "filename": "WR-56-2025-001234_before.jpg",
       "hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
       "type": "visual_inspection"
     },
     {
-      "filename": "WR-56-2028-001234_after.jpg",
+      "filename": "WR-56-2025-001234_after.jpg",
       "hash": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
       "type": "visual_inspection"
     }
@@ -62,25 +62,25 @@
     {
       "part_number": "POL-56-001",
       "description": "Acrylic polishing compound",
-      "lot_number": "LOT-2028-456",
+      "lot_number": "LOT-2025-456",
       "quantity": 1,
-      "cofc_ref": "COFC-2028-456"
+      "cofc_ref": "COFC-2025-456"
     }
   ],
   "tools_used": [
     {
       "tool_id": "DMM-001",
       "description": "4-wire Digital Multimeter",
-      "calibration_due": "2029-01-15"
+      "calibration_due": "2026-01-15"
     },
     {
       "tool_id": "TRQ-010",
       "description": "Torque Wrench 0-50 Nm",
-      "calibration_due": "2029-02-01"
+      "calibration_due": "2026-02-01"
     }
   ],
   "operator": "TECH-789",
   "inspector": "QA-456",
-  "procedure_reference": "PROC_56-05-02_Polishing-And-Refurbishment_rev1.0.0_20281027.md",
+  "procedure_reference": "PROC_56-05-02_Polishing-And-Refurbishment_rev1.0.0_20251027.md",
   "remarks": "Scratch successfully polished to within limits. Optical quality restored. Heater and LSP continuity verified."
 }

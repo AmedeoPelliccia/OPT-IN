@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_56-05-01  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-27
+**Effective Date:** 2025-10-27
 
 ## Optical Quality Criteria
 ### Distortion

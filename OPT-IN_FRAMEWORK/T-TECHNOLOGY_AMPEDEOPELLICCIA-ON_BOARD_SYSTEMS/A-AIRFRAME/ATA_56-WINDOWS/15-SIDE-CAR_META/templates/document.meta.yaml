@@ -2,7 +2,7 @@
 # This template should be copied and customized for each technical document
 
 schema_version: "1.1"
-id: "{DOCUMENT_ID}"  # e.g., "PROC_56-08-01_Acrylic-Patch-Repair_rev1.0.0_20281027"
+id: "{DOCUMENT_ID}"  # e.g., "PROC_56-08-01_Acrylic-Patch-Repair_rev1.0.0_20251027"
 document:
   type: "{TYPE}"  # DESC, PROC, INSP, DATA, TESTPLAN, DIAG, EXAMPLE
   title: "{TITLE}"  # e.g., "56-08-01: Acrylic Patch Repair"

@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_56-02-02  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-27
+**Effective Date:** 2025-10-27
 
 ## Scope
 Procedure for removal and replacement of aircraft window panes.

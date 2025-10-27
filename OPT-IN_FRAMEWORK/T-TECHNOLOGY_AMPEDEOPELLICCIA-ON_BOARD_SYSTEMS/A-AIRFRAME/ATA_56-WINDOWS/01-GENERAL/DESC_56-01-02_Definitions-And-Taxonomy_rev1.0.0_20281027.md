@@ -2,7 +2,7 @@
 
 **Document ID:** DESC_56-01-02  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-27
+**Effective Date:** 2025-10-27
 
 ## Window Terminology
 

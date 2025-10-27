@@ -163,7 +163,7 @@ Example repair records, optical test logs, and NDT report samples demonstrating 
 
 | Revision | Date       | Author              | Description                     |
 |----------|------------|---------------------|---------------------------------|
-| 1.0.0    | 2028-10-27 | Structures Engineering | Initial release - Complete ATA 56 structure |
+| 1.0.0    | 2025-10-27 | Structures Engineering | Initial release - Complete ATA 56 structure |
 
 ---
 

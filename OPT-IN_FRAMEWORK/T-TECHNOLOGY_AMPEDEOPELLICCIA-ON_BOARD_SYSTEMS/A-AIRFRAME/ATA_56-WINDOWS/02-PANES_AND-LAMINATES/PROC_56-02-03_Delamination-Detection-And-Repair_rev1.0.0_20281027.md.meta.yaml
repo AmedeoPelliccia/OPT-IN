@@ -1,10 +1,10 @@
 schema_version: "1.1"
-id: "PROC_56-02-03_Delamination-Detection-And-Repair_rev1.0.0_20281027"
+id: "PROC_56-02-03_Delamination-Detection-And-Repair_rev1.0.0_20251027"
 document:
   type: "PROC"
   title: "56-02-03: Delamination Detection and Repair"
   revision: "1.0.0"
-  effective_date: "2028-10-27"
+  effective_date: "2025-10-27"
 effectivity:
   msn: "ALL"
   config: "ALL"
@@ -13,10 +13,10 @@ safety:
 approvals:
   - authority: "Structures Engineering"
     status: "Released"
-    date: "2028-10-20"
+    date: "2025-10-20"
   - authority: "Quality Assurance"
     status: "Approved"
-    date: "2028-10-22"
+    date: "2025-10-22"
 traceability:
   source_documents: ["AMPEL360-WINDOWS-SPEC-001"]
   crossrefs: ["ATA 20", "ATA 51", "ATA 52", "ATA 53"]

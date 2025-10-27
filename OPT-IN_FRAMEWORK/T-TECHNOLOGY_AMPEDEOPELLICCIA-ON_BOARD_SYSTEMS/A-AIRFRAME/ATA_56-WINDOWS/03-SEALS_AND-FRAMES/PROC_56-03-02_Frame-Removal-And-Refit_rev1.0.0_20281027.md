@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_56-03-02  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-27
+**Effective Date:** 2025-10-27
 
 ## Scope
 Procedure for removing and refitting window frame assemblies.

@@ -2,7 +2,7 @@
 
 **Document ID:** DESC_56-01-01  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-27  
+**Effective Date:** 2025-10-27  
 **ATA Chapter:** 56 — WINDOWS
 
 ## 1. Scope
@@ -119,7 +119,7 @@ All documents follow the convention:
 {PREFIX}_56-{SECTION}-{NUMBER}_{Title}_rev{X.Y.Z}_{YYYYMMDD}.{ext}
 ```
 
-Example: `PROC_56-02-02_Pane-Removal-And-Replacement_rev1.0.0_20281027.md`
+Example: `PROC_56-02-02_Pane-Removal-And-Replacement_rev1.0.0_20251027.md`
 
 ### 4.3 Metadata Sidecars
 
@@ -222,5 +222,5 @@ This governance framework is subject to periodic review and improvement:
 
 **Prepared by:** Structures Engineering  
 **Approved by:** Chief Engineer — Airframe  
-**Effective Date:** 2028-10-27  
-**Next Review:** 2029-10-27
+**Effective Date:** 2025-10-27  
+**Next Review:** 2026-10-27

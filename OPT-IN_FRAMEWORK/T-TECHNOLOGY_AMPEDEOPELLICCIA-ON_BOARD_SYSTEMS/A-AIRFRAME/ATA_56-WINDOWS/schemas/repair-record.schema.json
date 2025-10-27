@@ -20,7 +20,7 @@
   "properties": {
     "record_id": {
       "type": "string",
-      "description": "Unique repair record identifier (e.g., WR-56-2028-001234)",
+      "description": "Unique repair record identifier (e.g., WR-56-2025-001234)",
       "pattern": "^WR-56-[0-9]{4}-[0-9]{6}$"
     },
     "timestamp": {
@@ -315,7 +315,7 @@
     },
     "procedure_reference": {
       "type": "string",
-      "description": "Reference to procedure used (e.g., PROC_56-08-01_Acrylic-Patch-Repair_rev1.0.0_20281015.md)"
+      "description": "Reference to procedure used (e.g., PROC_56-08-01_Acrylic-Patch-Repair_rev1.0.0_20251015.md)"
     },
     "remarks": {
       "type": "string",

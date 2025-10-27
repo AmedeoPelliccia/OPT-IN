@@ -2,7 +2,7 @@
 
 **Document ID:** DESC_56-02-01  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-27
+**Effective Date:** 2025-10-27
 
 ## Overview
 This document describes the construction and layering of aircraft window panes used in AMPEL360 aircraft.
