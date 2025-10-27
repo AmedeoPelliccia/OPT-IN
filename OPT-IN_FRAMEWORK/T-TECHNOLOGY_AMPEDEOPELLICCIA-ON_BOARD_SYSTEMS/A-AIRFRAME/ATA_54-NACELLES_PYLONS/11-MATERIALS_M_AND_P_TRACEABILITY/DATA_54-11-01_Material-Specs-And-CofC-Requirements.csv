@@ -1,0 +1,14 @@
+Material_ID,Material_Spec,Description,COC_Required,Storage_Conditions,Shelf_Life_Months,Supplier_Approval,Traceability
+MAT-54-001,AMS-QQ-A-250/12,Aluminum 2024-T3 Sheet,Yes,Room temp dry,Unlimited,Approved List,Heat/Lot number
+MAT-54-002,AMS-QQ-A-250/24,Aluminum 7075-T6 Sheet,Yes,Room temp dry,Unlimited,Approved List,Heat/Lot number
+MAT-54-003,AMS 4911,Titanium Ti-6Al-4V Sheet,Yes,Room temp dry,Unlimited,Approved List,Heat/Lot number
+MAT-54-004,BMS 8-276,CFRP Prepreg IM7/8552,Yes,-18C freezer,12,Approved List,Batch/Roll number
+MAT-54-005,BMS 8-297,CFRP Prepreg IM7/977-3,Yes,-18C freezer,18,Approved List,Batch/Roll number
+MAT-54-006,BMS 8-133,Aramid Honeycomb 4.0pcf,Yes,Room temp dry,Unlimited,Approved List,Batch number
+MAT-54-007,BMS 5-101,Adhesive Film FM 300-2,Yes,-18C freezer,12,Approved List,Batch number
+MAT-54-008,BMS 5-95,Sealant PR-1782,Yes,Room temp,24,Approved List,Batch number
+MAT-54-009,NAS1919,Hi-Lok Fasteners CRES,Yes,Room temp dry,Unlimited,Approved List,Lot number
+MAT-54-010,NAS1352,Lockbolt Titanium,Yes,Room temp dry,Unlimited,Approved List,Lot number
+MAT-54-011,MIL-DTL-83420,Copper LSP Mesh,Yes,Room temp dry,Unlimited,Approved List,Roll number
+MAT-54-012,MIL-PRF-23377,Primer Zinc Chromate,Yes,Room temp,24,Approved List,Batch number
+MAT-54-013,BMS 10-11,Polyurethane Paint,Yes,Room temp,18,Approved List,Batch number

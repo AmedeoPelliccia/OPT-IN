@@ -1,0 +1,9 @@
+Fairing_ID,Description,Material,Fastener_Type,Fastener_Qty,Torque_Nm,Weight_kg,Part_Number
+FAIR-101,Pylon Upper Fairing,GFRP,Screw,18,8,12.3,AP360-54-5101
+FAIR-102,Pylon Lower Fairing,GFRP,Screw,18,8,11.8,AP360-54-5102
+FAIR-201,Pylon-Fuselage Aft Left,GFRP,Dzus,8,N/A,4.2,AP360-54-5201
+FAIR-202,Pylon-Fuselage Aft Right,GFRP,Dzus,8,N/A,4.1,AP360-54-5202
+FAIR-301,Nacelle-Pylon Transition Upper,CFRP,Screw,12,10,8.5,AP360-54-5301
+FAIR-302,Nacelle-Pylon Transition Lower,CFRP,Screw,12,10,8.3,AP360-54-5302
+FAIR-401,Wing Leading Edge Extension,CFRP,Hi-Lok,24,18,15.6,AP360-54-5401
+SEAL-101,Fairing Edge Seal,Silicone,N/A,N/A,N/A,0.3,AP360-54-5501

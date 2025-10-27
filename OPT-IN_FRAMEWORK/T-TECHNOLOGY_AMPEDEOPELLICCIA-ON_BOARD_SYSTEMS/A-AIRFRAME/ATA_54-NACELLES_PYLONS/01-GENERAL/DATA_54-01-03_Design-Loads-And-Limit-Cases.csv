@@ -1,0 +1,11 @@
+Load_Case_ID,Description,Direction,Limit_Load_kN,Ultimate_Load_kN,Notes
+LC-54-001,Maximum Forward Thrust,Axial (+X),850,1275,Takeoff power at sea level
+LC-54-002,Maximum Reverse Thrust,Axial (-X),-650,-975,Full reverser deployment at landing
+LC-54-003,Maximum Vertical Gust,Vertical (+Z),420,630,50 ft/s gust at cruise
+LC-54-004,Maximum Side Gust,Lateral (+Y),380,570,25 ft/s crosswind at takeoff
+LC-54-005,Engine Seizure,Torsional,180,270,Instantaneous torque reversal
+LC-54-006,Asymmetric Thrust,Combined,N/A,N/A,One engine out at takeoff
+LC-54-007,Hard Landing Impact,Vertical (+Z),520,780,9 ft/s sink rate at MLW
+LC-54-008,Ground Maneuver,Lateral (+Y),290,435,Maximum taxi turn rate
+LC-54-009,Fan Blade Out (FBO),Radial/Axial,N/A,N/A,Per certification requirements
+LC-54-010,Bird Strike,Local Impact,N/A,N/A,4 lb bird at cruise speed

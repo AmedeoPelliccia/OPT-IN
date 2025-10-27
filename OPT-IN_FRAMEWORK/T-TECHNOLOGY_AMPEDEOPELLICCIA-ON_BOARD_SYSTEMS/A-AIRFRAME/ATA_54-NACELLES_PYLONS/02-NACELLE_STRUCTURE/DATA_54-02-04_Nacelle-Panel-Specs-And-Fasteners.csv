@@ -1,0 +1,15 @@
+Panel_ID,Description,Material,Fastener_Type,Fastener_Qty,Torque_Nm,Weight_kg,Part_Number
+FAN-001,Fan Cowl Upper Half,CFRP/Al Honeycomb,Hinge Pin,2,85,145.2,AP360-54-1001
+FAN-002,Fan Cowl Lower Half,CFRP/Al Honeycomb,Hinge Pin,2,85,143.8,AP360-54-1002
+CORE-101,Core Cowl Upper,Al 2024-T3,Hinge Pin,3,75,112.5,AP360-54-2101
+CORE-102,Core Cowl Lower Left,Al 2024-T3,Dzus,12,N/A,45.3,AP360-54-2102
+CORE-103,Core Cowl Lower Right,Al 2024-T3,Dzus,12,N/A,45.1,AP360-54-2103
+ACC-201,Accessory Access Panel,Al 2024-T3,Phillips Screw,8,12,3.2,AP360-54-3201
+ACC-202,Fire Bottle Access Panel,Al 2024-T3,Phillips Screw,6,12,2.8,AP360-54-3202
+ACC-203,Bleed Air Valve Access,Al 2024-T3,Dzus,4,N/A,1.9,AP360-54-3203
+INLET-301,Acoustic Inlet Panel 1,CFRP/Honeycomb,Screw,16,8,12.4,AP360-54-4301
+INLET-302,Acoustic Inlet Panel 2,CFRP/Honeycomb,Screw,16,8,12.6,AP360-54-4302
+INLET-303,Acoustic Inlet Panel 3,CFRP/Honeycomb,Screw,16,8,12.5,AP360-54-4303
+FWD-RING,Forward Inlet Ring,CFRP,Hi-Lok,48,22,68.9,AP360-54-5001
+HINGE-001,Fan Cowl Hinge Fitting,Ti-6Al-4V,Bolt,4,95,8.2,AP360-54-6001
+LATCH-001,Cowl Latch Assembly,Steel/Al,Rivet,N/A,N/A,1.5,AP360-54-7001

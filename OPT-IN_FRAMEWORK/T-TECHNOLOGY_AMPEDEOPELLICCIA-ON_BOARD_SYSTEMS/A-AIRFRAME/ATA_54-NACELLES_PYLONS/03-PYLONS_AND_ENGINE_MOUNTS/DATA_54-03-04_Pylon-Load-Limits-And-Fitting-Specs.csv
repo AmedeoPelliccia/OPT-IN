@@ -1,0 +1,14 @@
+Component,Part_Number,Material,Ultimate_Load_kN,Limit_Load_kN,Torque_Nm,Service_Life_FH,Notes
+Forward Mount Fitting,AP360-54-8001,Ti-6Al-4V,1900,1275,1200,30000,Spherical bearing type
+Aft Mount Fitting,AP360-54-8002,Ti-6Al-4V,1900,1275,1200,30000,Pinned thrust link
+Torque Link Left,AP360-54-8003,Ti-6Al-4V,855,570,850,30000,Side load restraint
+Torque Link Right,AP360-54-8004,Ti-6Al-4V,855,570,850,30000,Side load restraint
+Forward Attach Bolt L,MS20004H24,Steel AISI 4340,N/A,N/A,850,Single-use,Replace at each removal
+Forward Attach Bolt R,MS20004H24,Steel AISI 4340,N/A,N/A,850,Single-use,Replace at each removal
+Aft Attach Bolt,MS20004H28,Steel AISI 4340,N/A,N/A,950,Single-use,Replace at each removal
+Pylon Forward Spar,AP360-54-9001,Al-7075-T7351,1900,1275,N/A,Damage-tolerant,Inspect per ATA 05
+Pylon Aft Spar,AP360-54-9002,Al-7075-T7351,1900,1275,N/A,Damage-tolerant,Inspect per ATA 05
+Diagonal Brace,AP360-54-9003,Al-7075-T6,570,380,N/A,Safe-life,Replace at 50000 FH
+Engine Support Beam,AP360-54-9004,Ti-6Al-4V,1900,1275,N/A,Damage-tolerant,Inspect per ATA 05
+Failsafe Bushing Fwd,AP360-54-9101,Bronze/Steel,N/A,N/A,N/A,30000,Secondary load path
+Failsafe Bushing Aft,AP360-54-9102,Bronze/Steel,N/A,N/A,N/A,30000,Secondary load path

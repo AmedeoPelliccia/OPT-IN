@@ -1,0 +1,9 @@
+Material_Type,Description,Part_Number,Specification,Application,Max_Resistance_Milliohms,Notes
+Copper Mesh,Expanded copper mesh for CFRP,AP360-54-8001,MIL-DTL-83420,Embedded in composite repairs,1.0,80 mesh
+Aluminum Foil,Lightning diverter strip,AP360-54-8002,QQ-A-1876,Leading edge protection,0.5,0.010" thick
+Bonding Jumper,Copper braid 6 AWG,MS21042-6,MIL-DTL-27500,Panel bonding,2.5,Crimped terminals
+Conductive Adhesive,Epoxy with silver filler,AP360-54-8101,BMS-5-101,Bonding mesh,N/A,Pot life 45 min
+Conductive Sealant,Polysulfide conductive,AP360-54-8102,MIL-S-81733,Joint sealing,10.0,Two-part
+Bonding Terminal,Copper lug crimp type,MS25036,MIL-DTL-7928,Strap termination,N/A,Various sizes
+Test Point,Brass stud permanent,AP360-54-8201,N/A,Resistance test access,N/A,M6 thread
+Conductive Primer,Zinc chromate primer,MIL-PRF-23377,MIL-PRF-23377,Surface prep before paint,N/A,Apply 0.001" thick

@@ -1,0 +1,16 @@
+Reference_ID,Description,Value,Unit,Notes
+REF-54-001,Fan Cowl Maximum Diameter,4200,mm,At widest point
+REF-54-002,Core Cowl Length,2800,mm,Overall assembly
+REF-54-003,Pylon Length (Fwd attach to Aft attach),3500,mm,Primary structure
+REF-54-004,Pylon Width,850,mm,Maximum width
+REF-54-005,Pylon Height,1200,mm,Maximum height
+REF-54-006,Engine Mount Spacing (Fwd to Aft),2200,mm,Centerline to centerline
+REF-54-007,Thrust Reverser Travel,380,mm,Translating cowl stroke
+REF-54-008,Nacelle Total Weight,950,kg,Including all components
+REF-54-009,Pylon Total Weight,420,kg,Primary structure only
+REF-54-010,Engine Mount Set Weight,65,kg,All fittings and hardware
+REF-54-011,Acoustic Panel Total Area,12.5,sq m,All panels combined
+REF-54-012,Cowl Latch Force Required,250,N,Per latch
+REF-54-013,Hinge Pin Torque,85,Nm,Fan cowl hinges
+REF-54-014,Bonding Resistance Max,2.5,milliohm,LSP continuity
+REF-54-015,Fastener Torque (General),8-95,Nm,Range depending on size

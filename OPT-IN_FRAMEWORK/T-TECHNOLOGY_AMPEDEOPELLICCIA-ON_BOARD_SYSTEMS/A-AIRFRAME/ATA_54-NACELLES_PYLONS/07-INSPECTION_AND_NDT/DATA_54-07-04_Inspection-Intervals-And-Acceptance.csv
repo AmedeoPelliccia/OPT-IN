@@ -1,0 +1,15 @@
+Component,Inspection_Type,Method,Interval_FH,Threshold_FH,Acceptance_Criteria,Reference_Procedure
+Fan Cowl Panels,Visual,GVI,1000,N/A,No cracks or delamination,PROC_54-07-01
+Fan Cowl Panels,NDT,Ultrasonic C-Scan,7500,15000,No delamination >25mm dia,PROC_54-07-02
+Core Cowl,Visual,GVI,1000,N/A,No cracks or corrosion,PROC_54-07-01
+Engine Mount Fittings,Visual,GVI,500,N/A,No visible cracks,PROC_54-07-01
+Engine Mount Fittings,NDT,Eddy Current,2500,5000,Zero tolerance for cracks,PROC_54-07-03
+Engine Mount Fittings,NDT,Liquid Penetrant,2500,5000,Zero tolerance for cracks,PROC_54-07-03
+Pylon Structure,Visual,GVI,1000,N/A,No cracks or corrosion,PROC_54-07-01
+Pylon Attach Fittings,NDT,Eddy Current,5000,10000,Zero tolerance for cracks,PROC_54-07-03
+Thrust Reverser Actuators,Visual,Leak Check,500,N/A,No hydraulic leaks,PROC_54-04-02
+Thrust Reverser Locks,Functional,Operational Test,500,N/A,Positive engagement,PROC_54-04-02
+Hinge Pins,Visual,GVI,2500,N/A,No wear >0.5mm dia,PROC_54-07-01
+Acoustic Panels,Visual,GVI,2500,N/A,No damage or separation,PROC_54-07-01
+Fairings,Visual,GVI,2500,N/A,No cracks or loose fasteners,PROC_54-07-01
+LSP Bonding,Electrical,Resistance Test,5000,N/A,<2.5 milliohms,PROC_54-08-01
