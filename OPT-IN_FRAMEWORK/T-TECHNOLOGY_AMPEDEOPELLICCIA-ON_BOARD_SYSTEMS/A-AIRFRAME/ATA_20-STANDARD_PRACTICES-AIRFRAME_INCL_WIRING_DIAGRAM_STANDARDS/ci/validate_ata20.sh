@@ -10,7 +10,7 @@ error_count=0
 
 # 1. Validate filenames against convention: REV_DATE.ext
 echo "1. Checking filenames for rev/date convention..."
-noncompliant_files=$(find "$root_dir" -type f -not -path "*/ci/*" -not -path "*.git*" | grep -vE 'rev[0-9]+\.[0-9]+\.[0-9]+_[0-9]{8}\.' || true)
+noncompliant_files=$(find "$root_dir" -type f \
 if [[ -n "$noncompliant_files" ]]; then
   echo "❌ ERROR: The following files do not match the naming convention:"
   echo "$noncompliant_files"
