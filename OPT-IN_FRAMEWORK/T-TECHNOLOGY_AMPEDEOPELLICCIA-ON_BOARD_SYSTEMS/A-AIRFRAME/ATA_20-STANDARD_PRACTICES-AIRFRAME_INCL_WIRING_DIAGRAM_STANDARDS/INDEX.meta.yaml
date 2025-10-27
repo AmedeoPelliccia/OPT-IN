@@ -1,0 +1,17 @@
+schema_version: "1.1"
+id: "ATA_20_INDEX"
+chapter: "ATA 20 - STANDARD PRACTICES - AIRFRAME & EWIS"
+governance:
+  owner_role: "Maintenance Engineering"
+  review_board: ["Structures", "EWIS Engineering", "Quality Assurance"]
+traceability:
+  crossrefs: ["ALL_AMM_CHAPTERS", "SRM", "ATA 03", "ATA 13"]
+integrity:
+  checksum_algorithm: "sha256"
+files:
+  - id: "PROC_Torqueing-Procedures.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256_OF_PROC_TORQUEING_PROCEDURES_MD"
+  - id: "STD_HV-Creepage-Clearance-And-Isolation.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256_OF_STD_HV_CREEPAGE_CLEARANCE_AND_ISOLATION_MD"
+  - id: "DATA_Standard-Torque-Values.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256_OF_DATA_STANDARD_TORQUE_VALUES_CSV"
