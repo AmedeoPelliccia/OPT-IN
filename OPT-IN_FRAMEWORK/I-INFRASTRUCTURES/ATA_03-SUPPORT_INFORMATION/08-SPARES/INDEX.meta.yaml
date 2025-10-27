@@ -5,7 +5,7 @@ owners: ["Supply Chain", "Ground Ops", "Maintenance"]
 approvers:
   - role: "Supply Chain Manager"
     name: "TBD"
-effective_date: "2028-08-01"
+effective_date: "2025-10-27"
 doc_policy:
   naming: "IPC_<GSE-ID>_<Subject>_rev<SEMVER>_<YYYYMMDD>.xml"
   formats: ["xml", "csv", "json"]

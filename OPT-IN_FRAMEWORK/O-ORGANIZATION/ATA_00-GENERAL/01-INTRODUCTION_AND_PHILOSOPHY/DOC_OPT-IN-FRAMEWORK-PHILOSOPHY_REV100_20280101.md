@@ -1,7 +1,7 @@
 # The OPT-IN Framework Philosophy
 
 **Revision:** 1.0.0  
-**Effective Date:** 2028-01-01  
+**Effective Date:** 2025-10-27  
 **Document ID:** DOC_OPT-IN-Framework-Philosophy
 
 ---
@@ -236,7 +236,7 @@ This framework ensures that all stakeholders—engineers, operators, maintainers
 **Document Control:**
 - **Owner:** Chief Engineering Office
 - **Approver:** Program Director
-- **Next Review:** 2029-01-01
+- **Next Review:** 2025-10-27
 
 ---
 

@@ -2,13 +2,13 @@
   "document_id": "basic_empty_weight_config",
   "version": "1.0.0",
   "aircraft": "AMPEL360",
-  "effective_date": "2028-10-01",
+  "effective_date": "2025-10-27",
   "description": "Basic Empty Weight (BEW) and moment data for AMPEL360 BWB-H2 configuration",
   
   "metadata": {
     "certification_basis": "EASA CS-25, FAA 14 CFR Part 25",
     "approved_by": ["EASA", "FAA"],
-    "approval_date": "2028-09-25",
+    "approval_date": "2025-10-27",
     "units": {
       "weight": "kg",
       "arm": "meters from datum",

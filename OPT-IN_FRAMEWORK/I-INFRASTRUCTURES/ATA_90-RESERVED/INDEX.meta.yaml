@@ -4,7 +4,7 @@ document:
   type: "INDEX"
   title: "Reserved for Future Expansion - ATA 90"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "RESERVED"
 description: |
   ATA 90 chapter reserved for future expansion of infrastructure interface
@@ -17,6 +17,6 @@ crossrefs:
   - "../ATA_88-GROUND_OPERATIONS_AUTOMATION"
 audit:
   created_by: "AMPEL360 Infrastructure Standards Team"
-  created_utc: "2029-01-15T10:00:00Z"
+  created_utc: "2025-10-27T10:00:00Z"
   modified_by: "AMPEL360 Infrastructure Standards Team"
-  modified_utc: "2029-01-15T10:00:00Z"
+  modified_utc: "2025-10-27T10:00:00Z"

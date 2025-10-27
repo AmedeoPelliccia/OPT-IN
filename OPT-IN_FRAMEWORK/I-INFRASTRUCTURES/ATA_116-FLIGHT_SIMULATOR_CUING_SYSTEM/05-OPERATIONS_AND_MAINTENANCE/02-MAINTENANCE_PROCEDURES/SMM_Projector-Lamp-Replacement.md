@@ -2,7 +2,7 @@
 
 **Document ID:** SMM-ATA116-05-01  
 **Revision:** 1.1.0  
-**Effective Date:** 2029-01-01  
+**Effective Date:** 2025-10-27  
 **Simulator ID:** FFS-001
 
 ---
@@ -203,7 +203,7 @@ Replace projector lamp when:
 **Author:** Visual Systems Technician  
 **Reviewed by:** Chief Simulator Engineer  
 **Approved by:** Simulator Engineering Authority  
-**Approval Date:** 2028-12-15  
+**Approval Date:** 2025-10-27  
 
 **Signature:** ______________________
 

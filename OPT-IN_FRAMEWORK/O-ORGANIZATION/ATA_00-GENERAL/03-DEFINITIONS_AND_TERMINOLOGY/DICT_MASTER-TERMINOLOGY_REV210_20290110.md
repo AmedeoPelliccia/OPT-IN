@@ -1,7 +1,7 @@
 # Master Terminology Dictionary
 
 **Revision:** 2.1.0  
-**Effective Date:** 2029-01-10  
+**Effective Date:** 2025-10-27  
 **Document ID:** DICT_Master-Terminology
 
 ---
@@ -300,17 +300,17 @@ If conflicting definitions exist:
 
 | Version | Date | Changes | Author |
 | :--- | :--- | :--- | :--- |
-| 2.1.0 | 2029-01-10 | Added QIS, BWB enhanced definition, Provisional Code | Terminology Committee |
-| 2.0.0 | 2028-11-01 | Major revision aligned with OPT-IN framework | Terminology Committee |
-| 1.5.0 | 2028-08-15 | Added hydrogen and fuel cell terminology | Terminology Committee |
-| 1.0.0 | 2028-03-01 | Initial release | Terminology Committee |
+| 2.1.0 | 2025-10-27 | Added QIS, BWB enhanced definition, Provisional Code | Terminology Committee |
+| 2.0.0 | 2025-10-27 | Major revision aligned with OPT-IN framework | Terminology Committee |
+| 1.5.0 | 2025-10-27 | Added hydrogen and fuel cell terminology | Terminology Committee |
+| 1.0.0 | 2025-10-27 | Initial release | Terminology Committee |
 
 ---
 
 **Document Control:**
 - **Owner:** Terminology Committee
 - **Approver:** Chief Engineering Office
-- **Next Review:** 2030-01-10
+- **Next Review:** 2025-10-27
 
 ---
 

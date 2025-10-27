@@ -3,7 +3,7 @@
 ## Document Control
 - **Report ID:** [e.g., WR-001-01]
 - **Revision:** rev1.0.0
-- **Date:** 2028-07-01
+- **Date:** 2025-10-27
 - **Template Version:** 1.0.0
 
 ---

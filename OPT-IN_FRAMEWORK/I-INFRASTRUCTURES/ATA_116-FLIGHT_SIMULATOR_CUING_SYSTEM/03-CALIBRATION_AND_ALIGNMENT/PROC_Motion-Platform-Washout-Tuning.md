@@ -2,7 +2,7 @@
 
 **Document ID:** PROC-ATA116-03-02  
 **Revision:** 1.3.0  
-**Effective Date:** 2029-01-01  
+**Effective Date:** 2025-10-27  
 **Simulator ID:** FFS-001
 
 ---
@@ -243,7 +243,7 @@ The classical washout algorithm consists of:
 **Author:** Motion Systems Engineer  
 **Reviewed by:** Chief Simulator Engineer  
 **Approved by:** Simulator Engineering Authority  
-**Approval Date:** 2028-12-15  
+**Approval Date:** 2025-10-27  
 
 **Signature:** ______________________
 

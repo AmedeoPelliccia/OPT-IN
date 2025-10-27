@@ -2,7 +2,7 @@
 
 **Document ID:** INSP_50-03-01_Inspection-Avionics-Bay_rev1.0.0_20281003  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-03
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This inspection covers the periodic inspection of the avionics bay (Zone 151) to ensure proper cooling, mounting security, and environmental protection of avionics equipment.

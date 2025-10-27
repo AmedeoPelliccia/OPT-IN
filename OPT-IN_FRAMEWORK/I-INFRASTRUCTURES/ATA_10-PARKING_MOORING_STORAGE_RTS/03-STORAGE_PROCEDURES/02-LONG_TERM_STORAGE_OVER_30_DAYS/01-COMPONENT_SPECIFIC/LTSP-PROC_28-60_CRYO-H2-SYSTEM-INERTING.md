@@ -4,7 +4,7 @@
 **ATA Chapter**: 28-60 (Cryogenic Hydrogen Storage & Distribution)  
 **Storage Type**: Long-Term Storage Component-Specific  
 **Revision**: 1.0.0  
-**Date**: 2028-12-01
+**Date**: 2025-10-27
 
 ---
 
@@ -372,4 +372,4 @@ Name: _______________ Signature: _______________ Date: _______________
 ---
 
 **Approval**: Chief Engineer - Fuel Systems  
-**Next Review**: 2029-06-01
+**Next Review**: 2025-10-27

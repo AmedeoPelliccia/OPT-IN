@@ -2,13 +2,13 @@
   "document_id": "cg_envelope_BWB",
   "version": "1.0.0",
   "aircraft": "AMPEL360 BWB-H2",
-  "effective_date": "2028-10-01",
+  "effective_date": "2025-10-27",
   "description": "Center of Gravity envelope for AMPEL360 Blended Wing Body configuration",
   
   "metadata": {
     "certification_basis": "EASA CS-25, FAA 14 CFR Part 25",
     "approved_by": ["EASA", "FAA"],
-    "approval_date": "2028-09-25",
+    "approval_date": "2025-10-27",
     "units": {
       "cg_position": "percent MAC (Mean Aerodynamic Chord)",
       "weight": "kg"

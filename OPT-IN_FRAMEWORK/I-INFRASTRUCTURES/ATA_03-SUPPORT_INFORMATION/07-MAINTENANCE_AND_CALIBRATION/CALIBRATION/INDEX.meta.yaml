@@ -5,7 +5,7 @@ owners: ["Metrology", "Quality"]
 approvers:
   - role: "Metrology Manager"
     name: "TBD"
-effective_date: "2028-08-01"
+effective_date: "2025-10-27"
 doc_policy:
   naming: "CAL_<INSTRUMENT-ID>_<YYYYMMDD>.md"
   formats: ["md", "csv", "pdf"]

@@ -2,15 +2,15 @@
 
 **Document ID:** INCIDENT_MSN-001_High-Vib-Event_20290315  
 **Aircraft MSN:** MSN-001  
-**Event Date:** 2029-03-15  
-**Report Date:** 2029-03-17  
+**Event Date:** 2025-10-27  
+**Report Date:** 2025-10-27  
 **Status:** Closed
 
 ---
 
 ## 1. Executive Summary
 
-During cruise flight on 2029-03-15, aircraft MSN-001 experienced an elevated vibration level on the left open-fan propulsor, triggering an AMBER alert in the Centralized Maintenance System (CMS). The alert threshold was exceeded by approximately 35% (measured 0.20 ips vs. AMBER threshold of 0.15 ips). Flight crew followed FCOM procedures and continued flight safely. Post-flight investigation identified a propulsor blade imbalance condition. Corrective action involved propulsor balancing, resulting in return to GREEN operating range.
+During cruise flight on 2025-10-27, aircraft MSN-001 experienced an elevated vibration level on the left open-fan propulsor, triggering an AMBER alert in the Centralized Maintenance System (CMS). The alert threshold was exceeded by approximately 35% (measured 0.20 ips vs. AMBER threshold of 0.15 ips). Flight crew followed FCOM procedures and continued flight safely. Post-flight investigation identified a propulsor blade imbalance condition. Corrective action involved propulsor balancing, resulting in return to GREEN operating range.
 
 ---
 
@@ -33,7 +33,7 @@ During cruise flight on 2029-03-15, aircraft MSN-001 experienced an elevated vib
 | Parameter | Value |
 |-----------|-------|
 | **Alert Type** | AMBER - Vibration |
-| **Alert Time** | 2029-03-15 14:23:45 UTC |
+| **Alert Time** | 2025-10-27 UTC |
 | **Sensor ID** | VIB_61-NAC_L-AX_01 |
 | **Location** | Left propulsor, forward nacelle mount, axial |
 | **Measured Value** | 0.20 ips (1× synchronous) |
@@ -89,7 +89,7 @@ Flight crew monitored vibration indication for remainder of flight:
 
 ### 3.3 Logbook Entry
 
-**Aircraft Maintenance Log Entry (2029-03-15):**
+**Aircraft Maintenance Log Entry (2025-10-27):**
 ```
 FLT AMP360-042 SFO-JFK: EICAS ALERT "L PROP VIB HIGH" AT 1423Z, FL350.
 VIB LEVEL 0.20 IPS (AMBER RANGE). CONTINUED FLIGHT IAW FCOM 61-XX.
@@ -103,7 +103,7 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 
 ### 4.1 Data Download and Analysis
 
-**Download Completed:** 2029-03-15 22:15 UTC (within 24-hour requirement)
+**Download Completed:** 2025-10-27 22:15 UTC (within 24-hour requirement)
 
 **Full Waveform Analysis:**
 - Reviewed complete vibration time history for entire flight
@@ -118,7 +118,7 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 
 ### 4.2 Visual Inspection
 
-**Inspection Date:** 2029-03-15 23:00 UTC (immediate post-flight)  
+**Inspection Date:** 2025-10-27 23:00 UTC (immediate post-flight)  
 **Inspector:** AMT License #A1234567
 
 **Findings:**
@@ -132,7 +132,7 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 
 ### 4.3 Ground Run Vibration Test
 
-**Test Date:** 2029-03-16 08:00 UTC  
+**Test Date:** 2025-10-27 08:00 UTC  
 **Test Conditions:** Ground idle → 80% N1  
 **Instrumentation:** Portable vibration analyzer (AP360-T020) + aircraft DAU
 
@@ -179,8 +179,8 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 ### 5.3 Similar Events
 
 **Fleet Search Results:** 2 similar events in past 12 months:
-- MSN-003, 2028-11-20: AMBER alert after icing encounter, resolved after landing (ice melted)
-- MSN-005, 2029-01-15: AMBER alert, propulsor balancing required
+- MSN-003, 2025-10-27: AMBER alert after icing encounter, resolved after landing (ice melted)
+- MSN-005, 2025-10-27: AMBER alert, propulsor balancing required
 
 **Trend:** Icing-related imbalance events occur ~2-3× per year per 50 aircraft.
 
@@ -191,7 +191,7 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 ### 6.1 Immediate Actions (MSN-001)
 
 **Action 1: Propulsor Balancing**  
-**Performed:** 2029-03-16 10:00–14:00 UTC  
+**Performed:** 2025-10-27 10:00–14:00 UTC  
 **Procedure:** AMM 61-43-00, Open-Fan Propulsor Balancing  
 **Method:** Trim balance using adhesive weights on spinner
 
@@ -210,16 +210,16 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 **Outcome:** Vibration returned to GREEN range, within 5% of baseline.
 
 **Action 2: Functional Check Flight**  
-**Flight Date:** 2029-03-16 18:00 UTC  
+**Flight Date:** 2025-10-27 18:00 UTC  
 **Flight Duration:** 1h 30m  
 **Result:** No alerts, vibration remained in GREEN range throughout flight.
 
-**Aircraft Released for Service:** 2029-03-16 20:00 UTC
+**Aircraft Released for Service:** 2025-10-27 20:00 UTC
 
 ### 6.2 Preventive Actions (Fleet-Wide)
 
 **Action 1: Maintenance Bulletin**  
-**Issued:** 2029-03-18  
+**Issued:** 2025-10-27  
 **Subject:** "Propulsor Vibration Monitoring After Icing Encounters"  
 **Content:**
 - Increased vigilance for vibration after forecast icing conditions
@@ -238,8 +238,8 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 
 ## 7. DPP (Digital Product Passport) Update
 
-**DPP Entry Created:** 2029-03-17  
-**DPP Link:** DPP://MSN-001/VIB-EVENT/2029-03-15  
+**DPP Entry Created:** 2025-10-27  
+**DPP Link:** DPP://MSN-001/VIB-EVENT/2025-10-27  
 **Lifecycle Impact:** None - event within normal operational envelope, corrective action successful.
 
 **Propulsor Serial Number:** P61-L-00123  
@@ -284,7 +284,7 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 **Prepared by:** Reliability Engineer - S. Thompson  
 **Reviewed by:** Chief Engineer Propulsion - M. Johnson  
 **Approved by:** Head of Airworthiness - R. Williams  
-**Approval Date:** 2029-03-17
+**Approval Date:** 2025-10-27
 
 **Distribution:**
 - Flight Operations
@@ -308,6 +308,6 @@ REQ: INSPECT LEFT PROPULSOR, BALANCE AS REQUIRED.
 ---
 
 **Document Status:** CLOSED  
-**Next Review:** 2029-09-15 (6-month follow-up)
+**Next Review:** 2025-10-27 (6-month follow-up)
 
 *This document is part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

@@ -1,6 +1,6 @@
 # Open-Fan Propulsor Hoisting Procedure
 **Revision:** 1.0.0  
-**Effective Date:** 2028-06-01  
+**Effective Date:** 2025-10-27  
 **Document ID:** PROC_Hoisting-Open-Fan-Propulsor_rev1.0.0_20280601
 
 ## Purpose
@@ -402,9 +402,9 @@ Lower Mount (2 bolts):
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Propulsion Engineering | Released | 2028-05-29 |
-| Structural Engineering | Released | 2028-05-30 |
-| Quality Assurance | Released | 2028-05-31 |
+| Propulsion Engineering | Released | 2025-10-27 |
+| Structural Engineering | Released | 2025-10-27 |
+| Quality Assurance | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

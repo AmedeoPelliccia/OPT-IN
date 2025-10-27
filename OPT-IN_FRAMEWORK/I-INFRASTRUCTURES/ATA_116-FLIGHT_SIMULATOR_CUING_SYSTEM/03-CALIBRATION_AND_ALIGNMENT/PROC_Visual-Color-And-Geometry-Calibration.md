@@ -2,7 +2,7 @@
 
 **Document ID:** PROC-ATA116-03-01  
 **Revision:** 1.5.0  
-**Effective Date:** 2029-01-01  
+**Effective Date:** 2025-10-27  
 **Simulator ID:** FFS-001
 
 ---
@@ -229,7 +229,7 @@ To calibrate and align the multi-projector visual system for seamless brightness
 **Author:** Visual Systems Engineer  
 **Reviewed by:** Chief Simulator Engineer  
 **Approved by:** Simulator Engineering Authority  
-**Approval Date:** 2028-12-15  
+**Approval Date:** 2025-10-27  
 
 **Signature:** ______________________
 

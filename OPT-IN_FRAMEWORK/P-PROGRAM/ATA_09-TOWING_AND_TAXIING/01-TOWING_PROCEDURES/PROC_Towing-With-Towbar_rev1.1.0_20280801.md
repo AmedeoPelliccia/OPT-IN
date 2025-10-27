@@ -1,6 +1,6 @@
 # Towing with Towbar Procedure
 **Revision:** 1.1.0  
-**Effective Date:** 2028-08-01  
+**Effective Date:** 2025-10-27  
 **Document Type:** PROC  
 **Effectivity:** ALL MSN
 
@@ -296,14 +296,14 @@ Inspect for:
 
 | Version | Date | Changes | Approved By |
 | :--- | :--- | :--- | :--- |
-| 1.0.0 | 2028-06-01 | Initial release | Ground Ops Engineering |
-| 1.1.0 | 2028-08-01 | Added detailed turn procedures, updated shear pin guidance | Ground Ops Engineering |
+| 1.0.0 | 2025-10-27 | Initial release | Ground Ops Engineering |
+| 1.1.0 | 2025-10-27 | Added detailed turn procedures, updated shear pin guidance | Ground Ops Engineering |
 
 ---
 
 **Document Control:**
 - Version: 1.1.0
-- Last Updated: 2028-08-01
-- Next Review: 2029-08-01
+- Last Updated: 2025-10-27
+- Next Review: 2025-10-27
 - Owner: Ground Operations Engineering
 - Classification: OPERATIONAL - Controlled Document

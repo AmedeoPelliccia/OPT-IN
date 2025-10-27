@@ -1,2 +1,2 @@
 MSN,Date,ReportId,ProcedureRev,ConfigHash,Ambient_P_hPa,Ambient_T_C,RH_pct,Wind_kt,BEW_kg,CG_FS_m,CG_pctMAC,U95_pct,Approvals
-AMP360-001,2028-08-15,WR-001-01,1.5.0,a1b2c3d4,1012.5,22.1,45.2,1,185250.4,26.551,25.12,0.08,"QA-J.Doe;WBE-S.Smith"
+AMP360-001,2025-10-27,WR-001-01,1.5.0,a1b2c3d4,1012.5,22.1,45.2,1,185250.4,26.551,25.12,0.08,"QA-J.Doe;WBE-S.Smith"

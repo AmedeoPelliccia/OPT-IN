@@ -2,7 +2,7 @@
 
 **Document ID**: PROC_Mooring-High-Wind-BWB  
 **Revision**: 1.3.0  
-**Date**: 2028-11-05  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 02 - MOORING
 
@@ -232,15 +232,15 @@ Do not attempt if:
 
 | Version | Date | Changes | Approved By |
 |---------|------|---------|-------------|
-| 1.3.0 | 2028-11-05 | Added continuous monitoring requirements | Safety Manager |
-| 1.2.0 | 2028-09-15 | Updated BWB tie-down locations | Structures Engineer |
-| 1.1.0 | 2028-07-20 | Enhanced tension specifications | Ground Ops Manager |
-| 1.0.0 | 2028-05-10 | Initial BWB high-wind procedure | Chief Engineer |
+| 1.3.0 | 2025-10-27 | Added continuous monitoring requirements | Safety Manager |
+| 1.2.0 | 2025-10-27 | Updated BWB tie-down locations | Structures Engineer |
+| 1.1.0 | 2025-10-27 | Enhanced tension specifications | Ground Ops Manager |
+| 1.0.0 | 2025-10-27 | Initial BWB high-wind procedure | Chief Engineer |
 
 ---
 
 **Approval**: Chief of Maintenance & BWB Fleet Manager  
-**Next Review**: 2029-05-05  
+**Next Review**: 2025-10-27  
 **Distribution**: All Line Stations, Emergency Response Teams, Training Department
 
 **⚠️ CRITICAL PROCEDURE - BWB AIRCRAFT SPECIFIC - DO NOT USE FOR CONVENTIONAL AIRCRAFT**

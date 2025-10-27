@@ -6,7 +6,7 @@ ata_chapter: "02"
 title: "AMPEL360 Quick Reference Handbook - Digital Version"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 effectivity:
   msn: "AMP360-001 through AMP360-999"
   configuration_id: "BWB-H2-CFG-02"
@@ -19,7 +19,7 @@ distribution: "Flight Crew - EFB Only"
 build_info:
   source_file: "source_data/qrh_procedures.xml"
   source_version: "1.0.0"
-  build_date: "2028-09-30T10:00:00Z"
+  build_date: "2025-10-27T10:00:00Z"
   build_tool: "QRH-Generator"
   build_tool_version: "2.1.0"
   builder: "AMPEL360 Documentation Build Server"
@@ -30,21 +30,21 @@ digital_signature:
   algorithm: "RSA-4096"
   public_key_fingerprint: "SHA256:a1b2c3d4e5f6..."
   signed_by: "AMPEL360 Documentation Authority"
-  signing_date: "2028-09-30T12:00:00Z"
+  signing_date: "2025-10-27T12:00:00Z"
   purpose: "EFB integrity verification before each flight"
 
 approvals:
   - authority: "EASA"
     approval_reference: "EASA.QRH.001"
     status: "Approved"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-QRH-2028-001"
     status: "Approved"
-    date: "2028-09-28"
+    date: "2025-10-27"
   - authority: "AMPEL360 Flight Operations"
     status: "Released"
-    date: "2028-09-30"
+    date: "2025-10-27"
     approved_by: "Chief Pilot"
 
 # Content Summary

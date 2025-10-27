@@ -4,7 +4,7 @@
 **ATA Chapter**: 10  
 **Subsection**: 05 - DIAGRAMS AND DATA  
 **Revision**: 1.0.0  
-**Date**: 2028-12-01
+**Date**: 2025-10-27
 
 ---
 
@@ -235,5 +235,5 @@ Test these fluids before storage:
 ---
 
 **Approval**: Chief Engineer - Systems  
-**Next Review**: 2029-06-01  
+**Next Review**: 2025-10-27  
 **Distribution**: All Maintenance Bases, Storage Facilities

@@ -3,7 +3,7 @@
 
 **Document Number:** PLAN-CERT-AMPEL360-FFS-001  
 **Revision:** 1.0.0  
-**Date:** 2028-01-15  
+**Date:** 2025-10-27  
 **Classification:** Controlled - Regulatory Submission
 
 ---
@@ -164,8 +164,8 @@ All simulator data must be traceable to the official ADP:
 | Initial QTG Development | 2028-Q1 | Complete |
 | Pre-Certification Testing | 2028-Q2-Q3 | Complete |
 | EASA Evaluation | 2028-Q4 | Complete |
-| Certificate Issued | 2029-01-15 | Complete |
-| First Recurrent Evaluation | 2030-01-15 | Planned |
+| Certificate Issued | 2025-10-27 | Complete |
+| First Recurrent Evaluation | 2025-10-27 | Planned |
 
 ## 10. Risk Management
 

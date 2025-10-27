@@ -16,16 +16,16 @@ owner:
   department: "Maintenance Control & Flight Operations"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 approval_status: "APPROVED"
 
 regulatory_approvals:
   - authority: "EASA"
     approval_reference: "EASA.MEL.001"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-MEL-2028-001"
-    date: "2028-09-28"
+    date: "2025-10-27"
 
 ampel360_specific_items:
   - "Fuel Cell Stacks: Minimum number for dispatch"

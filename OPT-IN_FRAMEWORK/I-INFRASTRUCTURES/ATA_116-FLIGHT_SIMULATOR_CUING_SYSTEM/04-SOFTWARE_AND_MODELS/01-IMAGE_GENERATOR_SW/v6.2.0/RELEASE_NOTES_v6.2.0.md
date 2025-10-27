@@ -1,6 +1,6 @@
 # Release Notes: Image Generator Software v6.2.0
 
-**Release Date:** 2029-01-15  
+**Release Date:** 2025-10-27  
 **Software Version:** 6.2.0  
 **Applicable Simulator:** FFS-001 (AMPEL360)  
 **Vendor:** Advanced Visual Systems Inc.
@@ -169,10 +169,10 @@ If issues arise after installation:
 
 | Version | Date | Summary |
 |---------|------|---------|
-| v6.2.0 | 2029-01-15 | AMPEL360 BWB-specific features, latency reduction |
-| v6.1.5 | 2028-10-01 | Performance optimization, bug fixes |
-| v6.1.0 | 2028-06-15 | Initial AMPEL360 support, hybrid propulsion visuals |
-| v6.0.0 | 2028-01-01 | Major release, new rendering engine |
+| v6.2.0 | 2025-10-27 | AMPEL360 BWB-specific features, latency reduction |
+| v6.1.5 | 2025-10-27 | Performance optimization, bug fixes |
+| v6.1.0 | 2025-10-27 | Initial AMPEL360 support, hybrid propulsion visuals |
+| v6.0.0 | 2025-10-27 | Major release, new rendering engine |
 
 ---
 
@@ -180,7 +180,7 @@ If issues arise after installation:
 
 **Release Manager:** A. Johnson, Advanced Visual Systems Inc.  
 **Simulator Engineering Approval:** Chief Simulator Engineer, FFS-001  
-**Approval Date:** 2029-01-15  
+**Approval Date:** 2025-10-27  
 
 **Signature:** ______________________
 

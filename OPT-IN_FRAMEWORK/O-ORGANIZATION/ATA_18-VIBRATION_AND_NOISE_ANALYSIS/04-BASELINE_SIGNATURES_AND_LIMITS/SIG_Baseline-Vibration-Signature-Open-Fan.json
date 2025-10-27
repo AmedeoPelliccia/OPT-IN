@@ -4,12 +4,12 @@
   "document": {
     "title": "Baseline Vibration Signature - Open-Fan Propulsor",
     "revision": "1.0.0",
-    "effective_date": "2028-04-15",
+    "effective_date": "2025-10-27",
     "type": "BASELINE_SIGNATURE"
   },
   "test_configuration": {
     "aircraft_msn": "MSN-001",
-    "test_date": "2028-03-20",
+    "test_date": "2025-10-27",
     "test_location": "AMPEL360 Flight Test Center",
     "test_type": "Ground Vibration Survey (GVS)",
     "environment": {
@@ -23,7 +23,7 @@
     "instrumentation": {
       "gse_id": "AP360-T020",
       "dau_serial": "DAU-00001",
-      "calibration_due": "2029-03-15",
+      "calibration_due": "2025-10-27",
       "reference_accelerometer": "PCB-394C06-SN12345"
     }
   },
@@ -200,11 +200,11 @@
     "performed_by": "Flight Test Engineer - J. Smith",
     "reviewed_by": "Chief Engineer Propulsion - M. Johnson",
     "approved_by": "Head of Airworthiness - R. Williams",
-    "approval_date": "2028-04-10"
+    "approval_date": "2025-10-27"
   },
   "traceability": {
     "test_report_id": "TR-AMP360-GVS-001",
-    "dpp_link": "DPP://MSN-001/GVS/2028-03-20",
+    "dpp_link": "DPP://MSN-001/GVS/2025-10-27",
     "crossrefs": ["ATA_61", "ATA_79", "ATA_05"]
   },
   "integrity": {

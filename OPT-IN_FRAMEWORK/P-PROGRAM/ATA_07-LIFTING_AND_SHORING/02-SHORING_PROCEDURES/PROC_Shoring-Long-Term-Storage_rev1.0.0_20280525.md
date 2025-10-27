@@ -1,6 +1,6 @@
 # Long-Term Storage Shoring Procedure
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-25  
+**Effective Date:** 2025-10-27  
 **Document ID:** PROC_Shoring-Long-Term-Storage_rev1.0.0_20280525
 
 ## Purpose
@@ -308,9 +308,9 @@ Applicable to all AMPEL360 aircraft (MSN: ALL) in long-term storage, maintenance
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Structural Engineering | Released | 2028-05-23 |
-| Maintenance Planning | Released | 2028-05-24 |
-| Quality Assurance | Released | 2028-05-24 |
+| Structural Engineering | Released | 2025-10-27 |
+| Maintenance Planning | Released | 2025-10-27 |
+| Quality Assurance | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

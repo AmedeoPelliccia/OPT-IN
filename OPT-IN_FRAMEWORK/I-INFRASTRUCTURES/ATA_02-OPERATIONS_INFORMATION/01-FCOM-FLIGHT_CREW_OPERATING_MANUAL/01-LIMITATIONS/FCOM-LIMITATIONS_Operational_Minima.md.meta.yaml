@@ -8,7 +8,7 @@ title: "Operational Minima and Dispatch Requirements"
 
 # Revision and Effectivity Control
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 supersedes: null
 effectivity:
   msn: "AMP360-001 through AMP360-999"
@@ -32,14 +32,14 @@ approvals:
   - authority: "EASA"
     approval_reference: "EASA.FCOM.OPMIN.001"
     status: "Approved"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-FCOM-OPMIN-001"
     status: "Approved"
-    date: "2028-09-28"
+    date: "2025-10-27"
   - authority: "AMPEL360 Flight Operations"
     status: "Released"
-    date: "2028-09-30"
+    date: "2025-10-27"
     approved_by: "Chief Pilot & Director of Operations"
 
 # Content Summary
@@ -79,7 +79,7 @@ checksum:
 # Audit Trail
 change_history:
   - version: "1.0.0"
-    date: "2028-09-30"
+    date: "2025-10-27"
     description: "Initial release establishing operational minima for AMPEL360"
     author: "Flight Operations Documentation Team"
     approved_by: "Chief Pilot & Director of Operations"

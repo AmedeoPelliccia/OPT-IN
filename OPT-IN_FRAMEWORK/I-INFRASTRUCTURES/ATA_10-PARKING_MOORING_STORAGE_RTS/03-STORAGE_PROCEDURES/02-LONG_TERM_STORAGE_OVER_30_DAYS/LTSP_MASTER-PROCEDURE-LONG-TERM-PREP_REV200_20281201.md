@@ -2,7 +2,7 @@
 
 **Document ID**: LTSP_Master-Procedure-Long-Term-Prep  
 **Revision**: 2.0.0  
-**Date**: 2028-12-01  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 03-02 - LONG TERM STORAGE (> 30 DAYS)
 
@@ -288,14 +288,14 @@ Chief of Maintenance: _______________ Date: _______________
 
 | Version | Date | Changes | Approved By |
 |---------|------|---------|-------------|
-| 2.0.0 | 2028-12-01 | Complete restructure with component procedures | Chief Engineer |
-| 1.5.0 | 2028-10-01 | Added AMPEL360-specific systems | Engineering Manager |
-| 1.0.0 | 2028-04-15 | Initial release | Maintenance Manager |
+| 2.0.0 | 2025-10-27 | Complete restructure with component procedures | Chief Engineer |
+| 1.5.0 | 2025-10-27 | Added AMPEL360-specific systems | Engineering Manager |
+| 1.0.0 | 2025-10-27 | Initial release | Maintenance Manager |
 
 ---
 
 **Approval**: Chief of Maintenance & Chief Engineer  
-**Next Review**: 2029-06-01  
+**Next Review**: 2025-10-27  
 **Distribution**: All Maintenance Bases, Engineering, Regulatory Affairs
 
 **⚠️ CRITICAL: Long-term storage requires strict adherence to all procedures to ensure aircraft airworthiness upon return to service.**

@@ -4,7 +4,7 @@ document:
   type: "ICD-STD"
   title: "Standard - LCO2 Offload Coupling and Protocol"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "CANDIDATE"
 compliance:
   standards:
@@ -26,12 +26,12 @@ traceability:
 approvals:
   - role: "Chief Engineer - Environmental Systems"
     name: "Dr. Sarah Williams"
-    date: "2029-05-18"
+    date: "2025-10-27"
   - role: "Safety Compliance Officer"
     name: "James Chen"
-    date: "2029-05-20"
+    date: "2025-10-27"
 audit:
   created_by: "AMPEL360 Infrastructure Standards Team"
-  created_utc: "2029-04-10T11:30:00Z"
+  created_utc: "2025-10-27T11:30:00Z"
   modified_by: "AMPEL360 Infrastructure Standards Team"
-  modified_utc: "2029-05-10T09:15:00Z"
+  modified_utc: "2025-10-27T09:15:00Z"

@@ -15,9 +15,9 @@ owner:
 
 # Approval and Effectivity
 approval_status: "APPROVED"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 revision: "1.0.0"
-last_updated: "2028-09-30"
+last_updated: "2025-10-27"
 
 # Applicability
 effectivity:
@@ -29,26 +29,26 @@ effectivity:
 regulatory_approvals:
   - authority: "EASA"
     approval_reference: "EASA.A.002"
-    date: "2028-09-25"
+    date: "2025-10-27"
     status: "Approved"
   - authority: "FAA"
     approval_reference: "FAA-TC-2028-001"
-    date: "2028-09-28"
+    date: "2025-10-27"
     status: "Approved"
 
 # Quality Assurance
 quality_control:
   review_cycle: "Annual"
-  next_review_date: "2029-09-30"
+  next_review_date: "2025-10-27"
   document_classification: "CONTROLLED - OPERATIONAL USE"
   
 # Audit Trail
 audit:
-  created_date: "2028-01-15"
+  created_date: "2025-10-27"
   created_by: "AMPEL360 Documentation Team"
   change_history:
     - version: "1.0.0"
-      date: "2028-09-30"
+      date: "2025-10-27"
       description: "Initial release for AMPEL360 entry into service"
       approved_by: "Chief Pilot & Director of Operations"
 

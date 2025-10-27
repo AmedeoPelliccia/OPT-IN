@@ -4,14 +4,14 @@ document:
   type: "INSP"
   title: "50-03-01: Inspection of Avionics Bay"
   revision: "1.0.0"
-  effective_date: "2028-10-03"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Equipment overheating", "Moisture damage", "ESD damage"]
   criticality: "Medium"
 approvals:
-  - { authority: "Avionics Engineering", status: "Released", date: "2028-09-22" }
-  - { authority: "Maintenance Engineering", status: "Approved", date: "2028-09-23" }
+  - { authority: "Avionics Engineering", status: "Released", date: "2025-10-27" }
+  - { authority: "Maintenance Engineering", status: "Approved", date: "2025-10-27" }
 traceability:
   source_documents: ["AMM-50-03-00", "Avionics Installation Manual"]
   crossrefs: ["ATA 20", "ATA 21", "ATA 31"]

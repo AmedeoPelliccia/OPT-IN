@@ -9,7 +9,7 @@ ATA 26-40
 
 Document ID: NNP_26-40_H2_Leak_In_Flight
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 

@@ -4,7 +4,7 @@ document:
   type: "INDEX"
   title: "ATA 12 - Servicing Index"
   revision: "1.0.0"
-  effective_date: "2028-08-25"
+  effective_date: "2025-10-27"
 
 effectivity:
   scope: "Program-Wide"
@@ -65,13 +65,13 @@ structure:
 approvals:
   - authority: "Chief Engineer - Aircraft Servicing"
     status: "Released"
-    date: "2028-08-25"
+    date: "2025-10-27"
   - authority: "Safety Officer - Ground Operations"
     status: "Approved"
-    date: "2028-08-24"
+    date: "2025-10-27"
   - authority: "Quality Assurance Manager"
     status: "Verified"
-    date: "2028-08-23"
+    date: "2025-10-27"
 
 traceability:
   related_ata_chapters:
@@ -103,12 +103,12 @@ integrity:
   
 validation:
   ci_script: "ci/validate_ata12.sh"
-  last_validated: "2028-08-25"
+  last_validated: "2025-10-27"
   validation_status: "PASS"
 
 revision_history:
   - version: "1.0.0"
-    date: "2028-08-25"
+    date: "2025-10-27"
     author: "System Integration Team"
     changes: "Initial audit-ready release"
 

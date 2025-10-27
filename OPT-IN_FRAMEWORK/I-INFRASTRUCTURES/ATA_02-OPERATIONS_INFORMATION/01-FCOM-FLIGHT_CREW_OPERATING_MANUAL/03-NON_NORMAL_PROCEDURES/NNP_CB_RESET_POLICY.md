@@ -8,7 +8,7 @@ CIRCUIT BREAKER RESET POLICY
 
 Document ID: NNP_CB_RESET_POLICY
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 

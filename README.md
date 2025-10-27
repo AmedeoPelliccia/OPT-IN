@@ -629,13 +629,13 @@ document:
   type: "PLAN"
   title: "Vibration and Noise Management Program Plan"
   revision: "1.0.0"
-  effective_date: "2028-04-15"
+  effective_date: "2025-10-27"
 effectivity:
   scope: "Program-Wide"
 approvals:
   - authority: "Airworthiness Engineering"
     status: "Released"
-    date: "2028-04-10"
+    date: "2025-10-27"
 traceability:
   crossrefs: ["ATA 61", "ATA 72", "ATA 45", "ATA 92", "ATA 95"]
 integrity:

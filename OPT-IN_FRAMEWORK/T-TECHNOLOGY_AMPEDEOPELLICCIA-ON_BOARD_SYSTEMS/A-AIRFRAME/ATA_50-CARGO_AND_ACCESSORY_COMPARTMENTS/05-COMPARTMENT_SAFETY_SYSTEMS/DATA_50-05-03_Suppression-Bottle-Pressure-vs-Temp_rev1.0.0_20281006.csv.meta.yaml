@@ -4,13 +4,13 @@ document:
   type: "DATA"
   title: "50-05-03: Fire Suppression Bottle Pressure vs Temperature"
   revision: "1.0.0"
-  effective_date: "2028-10-06"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Over-pressure condition", "Under-pressure condition", "Suppression system failure"]
   criticality: "Critical"
 approvals:
-  - { authority: "Fire Protection Engineering", status: "Released", date: "2028-10-01" }
+  - { authority: "Fire Protection Engineering", status: "Released", date: "2025-10-27" }
 traceability:
   source_documents: ["CS-25.851", "BOTTLE-QUAL-TEST-001"]
   crossrefs: ["ATA 26"]

@@ -6,7 +6,7 @@ ata_chapter: "02"
 title: "LH₂ Area Monitoring - O₂ and H₂ Sensors"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 applicability: "All ground personnel - H₂ refueling operations"
 
 classification: "CONTROLLED - SAFETY CRITICAL"
@@ -30,14 +30,14 @@ approvals:
   - authority: "EASA"
     approval_reference: "EASA.GOPS.H2.SENS.001"
     status: "Approved"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-GOPS-H2-SENS-001"
     status: "Approved"
-    date: "2028-09-28"
+    date: "2025-10-27"
   - authority: "AMPEL360 Ground Safety"
     status: "Released"
-    date: "2028-09-20"
+    date: "2025-10-27"
     approved_by: "Director of Ground Safety"
 
 # Cross-References
@@ -84,7 +84,7 @@ checksum:
 # Audit Trail
 change_history:
   - version: "1.0.0"
-    date: "2028-09-30"
+    date: "2025-10-27"
     description: "Initial release for AMPEL360 H₂ refueling operations"
     author: "Ground Safety Team"
     approved_by: "Director of Ground Safety"

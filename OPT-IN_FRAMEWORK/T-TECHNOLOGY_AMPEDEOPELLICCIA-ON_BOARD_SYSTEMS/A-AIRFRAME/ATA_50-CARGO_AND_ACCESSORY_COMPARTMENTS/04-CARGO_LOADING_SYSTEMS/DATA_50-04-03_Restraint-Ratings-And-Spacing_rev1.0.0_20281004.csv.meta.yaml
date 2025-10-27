@@ -4,13 +4,13 @@ document:
   type: "DATA"
   title: "50-04-03: Restraint Ratings and Spacing"
   revision: "1.0.0"
-  effective_date: "2028-10-04"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Cargo shift in flight", "Restraint failure"]
   criticality: "Critical"
 approvals:
-  - { authority: "Structures Engineering", status: "Released", date: "2028-09-27" }
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-27" }
 traceability:
   source_documents: ["CS-25.787", "RESTRAINT-TEST-RPT-001"]
   crossrefs: ["ATA 52"]

@@ -2,7 +2,7 @@
 
 **Document ID:** ICD-ATA116-02-01  
 **Revision:** 3.0.0  
-**Effective Date:** 2029-01-01  
+**Effective Date:** 2025-10-27  
 **Simulator ID:** FFS-001
 
 ---
@@ -154,9 +154,9 @@ This Interface Control Document (ICD) defines the data interface between the Sim
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2027-01-01 | Motion SW Team | Initial release |
-| 2.0.0 | 2028-03-15 | Motion SW Team | Added buffet and turbulence fields |
-| 3.0.0 | 2029-01-01 | Motion SW Team | AMPEL360 BWB-specific tuning, increased update rate to 1000 Hz |
+| 1.0.0 | 2025-10-27 | Motion SW Team | Initial release |
+| 2.0.0 | 2025-10-27 | Motion SW Team | Added buffet and turbulence fields |
+| 3.0.0 | 2025-10-27 | Motion SW Team | AMPEL360 BWB-specific tuning, increased update rate to 1000 Hz |
 
 ---
 
@@ -179,7 +179,7 @@ This Interface Control Document (ICD) defines the data interface between the Sim
 **Author:** Motion Software Engineer  
 **Reviewed by:** Chief Simulator Engineer  
 **Approved by:** Simulator Engineering Authority  
-**Approval Date:** 2028-12-15  
+**Approval Date:** 2025-10-27  
 
 **Signature:** ______________________
 

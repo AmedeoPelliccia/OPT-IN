@@ -3,7 +3,7 @@
   "passport_id": "urn:ampel360:msn:001",
   "type": "AircraftPassport",
   "revision": 157,
-  "last_updated_utc": "2029-04-15T18:00:00Z",
+  "last_updated_utc": "2025-10-27T18:00:00Z",
   "identity": {
     "msn": "AMP360-001",
     "registration": "D-AMPL",

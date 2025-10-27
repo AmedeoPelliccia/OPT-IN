@@ -1,6 +1,6 @@
 # Jacking Pre/Post-Operation Checklist
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-10  
+**Effective Date:** 2025-10-27  
 **Document ID:** CHK_Jacking-PrePost-Checklist_rev1.0.0_20280510
 
 ## Purpose

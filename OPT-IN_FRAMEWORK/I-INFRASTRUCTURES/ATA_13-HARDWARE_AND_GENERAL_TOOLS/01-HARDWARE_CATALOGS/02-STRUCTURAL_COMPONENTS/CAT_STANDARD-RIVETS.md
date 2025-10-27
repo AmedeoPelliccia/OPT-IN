@@ -122,6 +122,6 @@ This catalog contains standard aerospace rivets approved for use in AMPEL360 str
 ---
 
 *Revision History:*
-- 2.5.0 (2029-01-15): Added Cherrymax blind rivets and safety notes
-- 2.4.0 (2028-10-05): Updated quality control criteria
-- 2.3.0 (2028-06-15): Initial AMPEL360 catalog release
+- 2.5.0 (2025-10-27): Added Cherrymax blind rivets and safety notes
+- 2.4.0 (2025-10-27): Updated quality control criteria
+- 2.3.0 (2025-10-27): Initial AMPEL360 catalog release

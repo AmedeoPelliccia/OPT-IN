@@ -3,7 +3,7 @@
 ## Document Control
 - **Document ID:** DATA_Standard-Weighing-Configuration-Definition
 - **Revision:** 1.0.0
-- **Date:** 2028-07-01
+- **Date:** 2025-10-27
 - **Owner:** Weight & Balance Engineer
 
 ## Purpose

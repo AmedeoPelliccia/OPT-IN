@@ -1,9 +1,9 @@
 defect_id,date_reported,reporter,severity,system,description,status,resolution_date,resolution_notes
-DEF-2029-001,2029-10-15,J.Smith,MINOR,VISUAL,Right rear projector shows slight color imbalance in twilight conditions,OPEN,,Scheduled for next maintenance window
-DEF-2029-002,2029-10-12,M.Johnson,MINOR,INSTRUCTOR_STATION,Touchscreen intermittently requires double-tap on weather control panel,OPEN,,Workaround: Use mouse. Replacement screen ordered
-DEF-2029-003,2029-10-10,R.Williams,COSMETIC,COCKPIT,Captain's seat armrest fabric shows wear,OPEN,,Non-safety item. Reupholstery scheduled for annual maintenance
-DEF-2029-004,2029-09-28,S.Chen,MAJOR,MOTION,Actuator #3 showing increased hydraulic pressure fluctuation,CLOSED,2029-10-05,Hydraulic servo valve replaced. System tested OK. QTG motion tests passed.
-DEF-2029-005,2029-09-20,T.Anderson,MINOR,SOUND,H₂ fuel cell sound signature volume slightly low in left speaker zone,CLOSED,2029-09-25,Audio amplifier gain adjusted. Sound check passed.
-DEF-2029-006,2029-09-15,L.Thompson,MAJOR,HOST_COMPUTER,IMA partition timing showing 15ms jitter under high load,CLOSED,2029-09-22,Software patch v2.5.1a applied. Timing now within specification.
-DEF-2029-007,2029-08-30,K.Martinez,MINOR,VISUAL,Runway lighting intensity in foggy conditions 5% below specification,CLOSED,2029-09-10,Visual database updated to v4.3.0. Lighting now compliant.
-DEF-2029-008,2029-08-15,P.Garcia,CRITICAL,MOTION,Motion system emergency stop activated during session - hydraulic leak detected,CLOSED,2029-08-20,Hydraulic line replaced. System pressure tested. Full QTG motion suite re-executed and passed.
+DEF-2029-001,2025-10-27,J.Smith,MINOR,VISUAL,Right rear projector shows slight color imbalance in twilight conditions,OPEN,,Scheduled for next maintenance window
+DEF-2029-002,2025-10-27,M.Johnson,MINOR,INSTRUCTOR_STATION,Touchscreen intermittently requires double-tap on weather control panel,OPEN,,Workaround: Use mouse. Replacement screen ordered
+DEF-2029-003,2025-10-27,R.Williams,COSMETIC,COCKPIT,Captain's seat armrest fabric shows wear,OPEN,,Non-safety item. Reupholstery scheduled for annual maintenance
+DEF-2029-004,2025-10-27,S.Chen,MAJOR,MOTION,Actuator #3 showing increased hydraulic pressure fluctuation,CLOSED,2025-10-27,Hydraulic servo valve replaced. System tested OK. QTG motion tests passed.
+DEF-2029-005,2025-10-27,T.Anderson,MINOR,SOUND,H₂ fuel cell sound signature volume slightly low in left speaker zone,CLOSED,2025-10-27,Audio amplifier gain adjusted. Sound check passed.
+DEF-2029-006,2025-10-27,L.Thompson,MAJOR,HOST_COMPUTER,IMA partition timing showing 15ms jitter under high load,CLOSED,2025-10-27,Software patch v2.5.1a applied. Timing now within specification.
+DEF-2029-007,2025-10-27,K.Martinez,MINOR,VISUAL,Runway lighting intensity in foggy conditions 5% below specification,CLOSED,2025-10-27,Visual database updated to v4.3.0. Lighting now compliant.
+DEF-2029-008,2025-10-27,P.Garcia,CRITICAL,MOTION,Motion system emergency stop activated during session - hydraulic leak detected,CLOSED,2025-10-27,Hydraulic line replaced. System pressure tested. Full QTG motion suite re-executed and passed.

@@ -8,7 +8,7 @@ title: "Hydrogen Leak - In Flight"
 
 # Revision and Effectivity Control
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 supersedes: null
 effectivity:
   msn: "AMP360-001 through AMP360-999"
@@ -42,16 +42,16 @@ approvals:
   - authority: "EASA"
     approval_reference: "EASA.NNP.26-40.001"
     status: "Approved"
-    date: "2028-09-15"
+    date: "2025-10-27"
     approved_by: "Chief Engineer, Certification"
   - authority: "FAA"
     approval_reference: "FAA-NNP-26-40-001"
     status: "Approved"
-    date: "2028-09-18"
+    date: "2025-10-27"
     approved_by: "FAA DER"
   - authority: "AMPEL Engineering"
     status: "Released"
-    date: "2028-09-10"
+    date: "2025-10-27"
     approved_by: "Chief Engineer, Fuel Systems"
 
 # Procedural Linkage
@@ -101,7 +101,7 @@ checksum:
 # Audit Trail
 change_history:
   - version: "1.0.0"
-    date: "2028-09-30"
+    date: "2025-10-27"
     description: "Initial release for AMPEL360 entry into service"
     author: "Flight Safety Documentation Team"
     approved_by: "Chief Pilot & Safety Manager"

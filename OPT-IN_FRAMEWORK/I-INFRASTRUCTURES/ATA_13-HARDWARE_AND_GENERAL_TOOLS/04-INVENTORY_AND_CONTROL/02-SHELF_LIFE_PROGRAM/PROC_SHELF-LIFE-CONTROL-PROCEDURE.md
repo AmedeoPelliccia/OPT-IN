@@ -345,6 +345,6 @@ This procedure applies to all shelf-life-limited materials including:
 ---
 
 *Revision History:*
-- 2.2.0 (2029-01-15): Added opened shelf life management and frozen materials procedures
-- 2.1.0 (2028-08-25): Updated storage requirements and extension procedures
-- 2.0.0 (2028-04-15): Initial AMPEL360 procedure release
+- 2.2.0 (2025-10-27): Added opened shelf life management and frozen materials procedures
+- 2.1.0 (2025-10-27): Updated storage requirements and extension procedures
+- 2.0.0 (2025-10-27): Initial AMPEL360 procedure release

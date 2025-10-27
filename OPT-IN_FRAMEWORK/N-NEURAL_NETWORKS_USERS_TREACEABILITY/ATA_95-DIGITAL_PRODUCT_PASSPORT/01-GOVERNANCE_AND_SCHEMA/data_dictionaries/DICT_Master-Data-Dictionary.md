@@ -1,7 +1,7 @@
 # Master Data Dictionary
 **Document ID:** DICT_Master-Data-Dictionary  
 **Version:** 1.0.0  
-**Last Updated:** 2028-12-10  
+**Last Updated:** 2025-10-27  
 **Owner:** Data Governance Board
 
 ## Purpose
@@ -51,8 +51,8 @@ All dates and times use **ISO 8601 format in UTC**.
 
 | Field | Format | Description | Example |
 |:------|:-------|:------------|:--------|
-| **Date** | `YYYY-MM-DD` | Calendar date | `2029-04-15` |
-| **DateTime** | `YYYY-MM-DDTHH:MM:SSZ` | Timestamp with timezone | `2029-04-15T18:00:00Z` |
+| **Date** | `YYYY-MM-DD` | Calendar date | `2025-10-27` |
+| **DateTime** | `YYYY-MM-DDTHH:MM:SSZ` | Timestamp with timezone | `2025-10-27T18:00:00Z` |
 | **Duration** | ISO 8601 Duration | Time span | `P1Y6M` (1 year, 6 months) |
 
 ---
@@ -74,8 +74,8 @@ All dates and times use **ISO 8601 format in UTC**.
 |:------|:------------|:--------|
 | **Certificate of Airworthiness ID** | Unique identifier issued by authority | `EASA.AW.12345` |
 | **Issuing Authority** | Regulatory body | `EASA`, `FAA`, `TCCA` |
-| **Effective Date** | Date certificate becomes valid | `2028-01-15` |
-| **Expiry Date** | Date certificate expires | `2029-01-15` |
+| **Effective Date** | Date certificate becomes valid | `2025-10-27` |
+| **Expiry Date** | Date certificate expires | `2025-10-27` |
 
 ---
 
@@ -199,8 +199,8 @@ Events recorded in the Event Ledger use standardized action types:
 ## Document Control
 
 - **Version History:**
-  - v1.0.0 (2028-12-10): Initial release
-- **Next Review Date:** 2029-06-10
+  - v1.0.0 (2025-10-27): Initial release
+- **Next Review Date:** 2025-10-27
 - **Related Documents:**
   - `GOV_Data-Governance-Policy_rev2.0.0_20281210.md`
   - Schema files in `/01-GOVERNANCE_AND_SCHEMA/schemas/`

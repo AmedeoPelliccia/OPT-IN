@@ -4,7 +4,7 @@ document:
   type: "SPEC-STD"
   title: "Specification - Jet Bridge Interface Envelope BWB"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "CANDIDATE"
 compliance:
   standards:
@@ -26,12 +26,12 @@ traceability:
 approvals:
   - role: "Chief Airframe Engineer"
     name: "Dr. Jennifer Lee"
-    date: "2029-05-17"
+    date: "2025-10-27"
   - role: "Airport Infrastructure Manager"
     name: "Carlos Rodriguez"
-    date: "2029-05-19"
+    date: "2025-10-27"
 audit:
   created_by: "AMPEL360 Infrastructure Standards Team"
-  created_utc: "2029-04-08T12:00:00Z"
+  created_utc: "2025-10-27T12:00:00Z"
   modified_by: "AMPEL360 Infrastructure Standards Team"
-  modified_utc: "2029-05-17T11:30:00Z"
+  modified_utc: "2025-10-27T11:30:00Z"

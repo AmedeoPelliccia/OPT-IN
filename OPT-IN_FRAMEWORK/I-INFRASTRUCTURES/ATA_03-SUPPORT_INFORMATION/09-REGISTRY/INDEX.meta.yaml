@@ -7,7 +7,7 @@ approvers:
     name: "TBD"
   - role: "Maintenance Manager"
     name: "TBD"
-effective_date: "2028-08-01"
+effective_date: "2025-10-27"
 doc_policy:
   naming: "REG_<TYPE>_<YYYYMMDD>.json or REG_<TYPE>_<YYYYMMDD>.csv"
   formats: ["json", "csv"]

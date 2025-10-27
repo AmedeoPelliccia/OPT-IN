@@ -1,6 +1,6 @@
 # Shoring Floor Load Distribution Mats
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-18  
+**Effective Date:** 2025-10-27  
 **Document ID:** DATA_Shoring-Floor-Load-Mats_rev1.0.0_20280518
 
 ## Purpose
@@ -163,8 +163,8 @@ Calculation:
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Structural Engineering | Released | 2028-05-16 |
-| Ground Operations | Released | 2028-05-17 |
+| Structural Engineering | Released | 2025-10-27 |
+| Ground Operations | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

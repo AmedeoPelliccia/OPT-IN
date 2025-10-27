@@ -1,6 +1,6 @@
 Date,System,Subsystem,Procedure,Technician,Result,Next_Due_Date,Notes
-2029-01-15,Visual,Projectors,PROC_Visual-Color-And-Geometry-Calibration.md,Visual_Tech_01,PASS,2029-04-15,Full calibration after right projector color shift issue. All channels now within ΔE<2.0
-2028-12-20,Control_Loading,All_Axes,Force_Calibration,Control_Tech_01,PASS,2029-06-20,Adjusted yoke pitch breakout force from 10N to 8N. All axes within tolerance.
-2028-12-15,Motion,Platform,PROC_Motion-Platform-Washout-Tuning.md,Motion_Tech_02,PASS,2029-06-15,Full washout tuning validation. Test pilot rated all maneuvers 4-5. No changes needed.
-2029-01-05,Aural,Speakers,SPL_Calibration,Audio_Tech_01,PASS,2030-01-05,Annual SPL calibration. All channels 65-75dB at design eye point. No adjustments needed.
-2028-11-15,Visual,IG_System,Latency_Test,Visual_Tech_01,PASS,2029-11-15,Visual latency measured at 28ms (well below 40ms spec). No action required.
+2025-10-27,Visual,Projectors,PROC_Visual-Color-And-Geometry-Calibration.md,Visual_Tech_01,PASS,2025-10-27,Full calibration after right projector color shift issue. All channels now within ΔE<2.0
+2025-10-27,Control_Loading,All_Axes,Force_Calibration,Control_Tech_01,PASS,2025-10-27,Adjusted yoke pitch breakout force from 10N to 8N. All axes within tolerance.
+2025-10-27,Motion,Platform,PROC_Motion-Platform-Washout-Tuning.md,Motion_Tech_02,PASS,2025-10-27,Full washout tuning validation. Test pilot rated all maneuvers 4-5. No changes needed.
+2025-10-27,Aural,Speakers,SPL_Calibration,Audio_Tech_01,PASS,2025-10-27,Annual SPL calibration. All channels 65-75dB at design eye point. No adjustments needed.
+2025-10-27,Visual,IG_System,Latency_Test,Visual_Tech_01,PASS,2025-10-27,Visual latency measured at 28ms (well below 40ms spec). No action required.

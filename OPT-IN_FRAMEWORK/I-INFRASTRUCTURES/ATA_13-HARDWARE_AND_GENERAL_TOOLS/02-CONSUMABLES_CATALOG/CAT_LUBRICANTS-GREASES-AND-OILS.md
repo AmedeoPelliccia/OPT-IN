@@ -295,6 +295,6 @@ This catalog contains approved lubricants, greases, and oils for AMPEL360 mainte
 ---
 
 *Revision History:*
-- 3.8.0 (2029-01-15): Added dry film lubricants and compatibility chart
-- 3.7.0 (2028-11-10): Updated storage requirements and safety guidelines
-- 3.6.0 (2028-08-05): Initial AMPEL360 catalog release
+- 3.8.0 (2025-10-27): Added dry film lubricants and compatibility chart
+- 3.7.0 (2025-10-27): Updated storage requirements and safety guidelines
+- 3.6.0 (2025-10-27): Initial AMPEL360 catalog release

@@ -1,6 +1,6 @@
 # Single Wheel Change Jacking Procedure
 **Revision:** 1.1.0  
-**Effective Date:** 2028-05-15  
+**Effective Date:** 2025-10-27  
 **Document ID:** PROC_Jacking-Single-Wheel-Change_rev1.1.0_20280515
 
 ## Purpose
@@ -158,8 +158,8 @@ Applicable to all AMPEL360 aircraft (MSN: ALL) requiring single wheel/tire repla
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Maintenance Engineering | Released | 2028-05-14 |
-| Quality Assurance | Released | 2028-05-14 |
+| Maintenance Engineering | Released | 2025-10-27 |
+| Quality Assurance | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

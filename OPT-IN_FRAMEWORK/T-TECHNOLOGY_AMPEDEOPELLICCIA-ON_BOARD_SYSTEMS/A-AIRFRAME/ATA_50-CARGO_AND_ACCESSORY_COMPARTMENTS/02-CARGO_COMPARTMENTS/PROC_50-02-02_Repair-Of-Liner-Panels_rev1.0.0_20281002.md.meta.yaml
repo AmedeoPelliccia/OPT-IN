@@ -4,14 +4,14 @@ document:
   type: "PROC"
   title: "50-02-02: Repair of Liner Panels"
   revision: "1.0.0"
-  effective_date: "2028-10-02"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Fire containment compromise", "Improper part installation"]
   criticality: "High"
 approvals:
-  - { authority: "Maintenance Engineering", status: "Released", date: "2028-09-25" }
-  - { authority: "Quality Assurance", status: "Approved", date: "2028-09-26" }
+  - { authority: "Maintenance Engineering", status: "Released", date: "2025-10-27" }
+  - { authority: "Quality Assurance", status: "Approved", date: "2025-10-27" }
 traceability:
   source_documents: ["AMM-50-02-00", "CS-25.855"]
   crossrefs: ["ATA 20", "ATA 26", "ATA 53"]

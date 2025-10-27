@@ -2,7 +2,7 @@
 chapter: ATA-10
 title: PARKING, MOORING, STORAGE & RETURN TO SERVICE
 version: 2.0.0
-last_updated: 2028-12-01
+last_updated: 2025-10-27
 status: active
 framework: OPT-IN
 category: I-INFRASTRUCTURES
@@ -106,6 +106,6 @@ maintainers:
 
 approval:
   status: approved
-  date: 2028-12-01
+  date: 2025-10-27
   authority: AMPEL360 Chief Engineer
   certificate: ATA-10-CERT-2024-001

@@ -6,7 +6,7 @@ ata_chapter: "02"
 title: "AMPEL360 Configuration Deviation List (CDL)"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 applicability: "All aircraft, all crews, maintenance control"
 
 classification: "CONTROLLED - OPERATIONAL USE"
@@ -14,10 +14,10 @@ classification: "CONTROLLED - OPERATIONAL USE"
 approvals:
   - authority: "EASA"
     status: "Approved"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     status: "Approved"
-    date: "2028-09-28"
+    date: "2025-10-27"
 
 checksum:
   algorithm: "sha256"

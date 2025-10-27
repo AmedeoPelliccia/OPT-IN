@@ -1,11 +1,11 @@
 session_id,date,start_time,end_time,duration_hours,session_type,instructor,student_pilot,training_module,flight_hours_logged,notes
-SES-2029-1001,2029-10-25,08:00:00,11:30:00,3.5,TYPE_RATING,Capt. Williams,FO Martinez,Initial Type Rating - Module 4,3.5,BWB ground effect training emphasized
-SES-2029-1000,2029-10-24,13:00:00,16:00:00,3.0,RECURRENT,Capt. Chen,Capt. Anderson,Annual Recurrent - Emergency Procedures,3.0,H2 fuel cell failure scenarios
-SES-2029-0999,2029-10-24,08:30:00,11:30:00,3.0,TYPE_RATING,Capt. Thompson,FO Garcia,Initial Type Rating - Module 3,3.0,Normal operations and systems
-SES-2029-0998,2029-10-23,14:00:00,17:30:00,3.5,INSTRUCTOR,Capt. Williams,Capt. Kumar,Instructor Training - BWB Characteristics,3.5,New instructor familiarization
-SES-2029-0997,2029-10-23,08:00:00,11:00:00,3.0,TYPE_RATING,Capt. Chen,FO Larsen,Initial Type Rating - Module 5,3.0,Abnormal and emergency procedures
-SES-2029-0996,2029-10-22,13:30:00,16:30:00,3.0,RECURRENT,Capt. Thompson,FO Mitchell,Annual Recurrent - Line Operations,3.0,Amsterdam to Frankfurt scenarios
-SES-2029-0995,2029-10-22,08:00:00,11:30:00,3.5,TYPE_RATING,Capt. Williams,FO Santos,Initial Type Rating - Module 2,3.5,Takeoff and landing practice
-SES-2029-0994,2029-10-21,14:00:00,17:00:00,3.0,MAINTENANCE,N/A,N/A,Maintenance Test,0.0,Post-maintenance functional check after visual system update
-SES-2029-0993,2029-10-21,08:30:00,12:00:00,3.5,TYPE_RATING,Capt. Chen,FO Yamamoto,Initial Type Rating - Module 4,3.5,Instrument approaches and go-arounds
-SES-2029-0992,2029-10-20,13:00:00,16:00:00,3.0,RECURRENT,Capt. Thompson,Capt. Dubois,Annual Recurrent - UPRT,3.0,Upset prevention and recovery training
+SES-2029-1001,2025-10-27,08:00:00,11:30:00,3.5,TYPE_RATING,Capt. Williams,FO Martinez,Initial Type Rating - Module 4,3.5,BWB ground effect training emphasized
+SES-2029-1000,2025-10-27,13:00:00,16:00:00,3.0,RECURRENT,Capt. Chen,Capt. Anderson,Annual Recurrent - Emergency Procedures,3.0,H2 fuel cell failure scenarios
+SES-2029-0999,2025-10-27,08:30:00,11:30:00,3.0,TYPE_RATING,Capt. Thompson,FO Garcia,Initial Type Rating - Module 3,3.0,Normal operations and systems
+SES-2029-0998,2025-10-27,14:00:00,17:30:00,3.5,INSTRUCTOR,Capt. Williams,Capt. Kumar,Instructor Training - BWB Characteristics,3.5,New instructor familiarization
+SES-2029-0997,2025-10-27,08:00:00,11:00:00,3.0,TYPE_RATING,Capt. Chen,FO Larsen,Initial Type Rating - Module 5,3.0,Abnormal and emergency procedures
+SES-2029-0996,2025-10-27,13:30:00,16:30:00,3.0,RECURRENT,Capt. Thompson,FO Mitchell,Annual Recurrent - Line Operations,3.0,Amsterdam to Frankfurt scenarios
+SES-2029-0995,2025-10-27,08:00:00,11:30:00,3.5,TYPE_RATING,Capt. Williams,FO Santos,Initial Type Rating - Module 2,3.5,Takeoff and landing practice
+SES-2029-0994,2025-10-27,14:00:00,17:00:00,3.0,MAINTENANCE,N/A,N/A,Maintenance Test,0.0,Post-maintenance functional check after visual system update
+SES-2029-0993,2025-10-27,08:30:00,12:00:00,3.5,TYPE_RATING,Capt. Chen,FO Yamamoto,Initial Type Rating - Module 4,3.5,Instrument approaches and go-arounds
+SES-2029-0992,2025-10-27,13:00:00,16:00:00,3.0,RECURRENT,Capt. Thompson,Capt. Dubois,Annual Recurrent - UPRT,3.0,Upset prevention and recovery training

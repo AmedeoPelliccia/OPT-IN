@@ -4,7 +4,7 @@ document:
   type: "TEST-STD"
   title: "Test Procedure - Gate Datalink API Compliance Test"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "CANDIDATE"
 compliance:
   standards:
@@ -27,12 +27,12 @@ traceability:
 approvals:
   - role: "Chief Test Engineer"
     name: "Dr. Hans Schmidt"
-    date: "2029-05-23"
+    date: "2025-10-27"
   - role: "Chief Information Security Officer"
     name: "Lisa Anderson"
-    date: "2029-05-24"
+    date: "2025-10-27"
 audit:
   created_by: "AMPEL360 Testing & Certification Team"
-  created_utc: "2029-05-07T11:00:00Z"
+  created_utc: "2025-10-27T11:00:00Z"
   modified_by: "AMPEL360 Testing & Certification Team"
-  modified_utc: "2029-05-23T15:45:00Z"
+  modified_utc: "2025-10-27T15:45:00Z"

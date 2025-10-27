@@ -1,7 +1,7 @@
 # Required Toolchain Specification
 
 **Revision:** 1.3.0  
-**Effective Date:** 2028-04-05  
+**Effective Date:** 2025-10-27  
 **Document ID:** SPEC_Required-Toolchain
 
 ---
@@ -460,7 +460,7 @@ updates:
 **Document Control:**
 - **Owner:** DevOps and Tooling Team
 - **Approver:** Chief Engineering Office
-- **Next Review:** 2029-04-05
+- **Next Review:** 2025-10-27
 
 ---
 

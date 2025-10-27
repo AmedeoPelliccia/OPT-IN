@@ -166,6 +166,6 @@ All wire available in standard colors: White (9), Black (19), Red (2), Blue (6),
 ---
 
 *Revision History:*
-- 3.1.0 (2029-01-15): Added shielded cable series and wire selection guidelines
-- 3.0.0 (2028-10-10): Major revision for AMPEL360 program
-- 2.5.0 (2028-06-01): Updated specifications and color coding
+- 3.1.0 (2025-10-27): Added shielded cable series and wire selection guidelines
+- 3.0.0 (2025-10-27): Major revision for AMPEL360 program
+- 2.5.0 (2025-10-27): Updated specifications and color coding

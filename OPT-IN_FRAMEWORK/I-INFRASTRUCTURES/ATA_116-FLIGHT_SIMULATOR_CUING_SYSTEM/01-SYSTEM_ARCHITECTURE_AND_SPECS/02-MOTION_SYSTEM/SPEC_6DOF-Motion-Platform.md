@@ -2,7 +2,7 @@
 
 **Document ID:** SPEC-ATA116-02-01  
 **Revision:** 2.5.0  
-**Effective Date:** 2029-01-01  
+**Effective Date:** 2025-10-27  
 **Simulator ID:** FFS-001
 
 ---
@@ -166,7 +166,7 @@ The motion platform is a synergistic hexapod (Stewart platform) configuration pr
 **Author:** Motion Systems Engineer  
 **Reviewed by:** Chief Simulator Engineer  
 **Approved by:** Simulator Engineering Authority  
-**Approval Date:** 2028-12-15  
+**Approval Date:** 2025-10-27  
 
 **Signature:** ______________________
 

@@ -9,7 +9,7 @@ ATA 24-33
 
 Document ID: NNP_24-33_Battery_Thermal_Runaway
 Revision: 1.1.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 

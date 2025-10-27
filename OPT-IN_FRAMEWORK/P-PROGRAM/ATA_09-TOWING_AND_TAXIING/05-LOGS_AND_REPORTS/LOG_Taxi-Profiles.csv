@@ -1,4 +1,4 @@
 profile_id,timestamp,msn,operator,origin,destination,distance_m,surface,visibility_m,wind_kt,temperature_c,duration_s,avg_speed_kmh,max_speed_kmh,brake_energy_kj,gross_weight_kg,cg_percent_mac,notes
-TXP-2028-001,2028-08-01T08:15:00Z,MSN-001,AMPEL-AIR,Gate-A12,RWY-09L,1850,dry,5000,8,22,370,18,28,2450,195000,28.5,"Normal taxi, light traffic"
-TXP-2028-002,2028-08-01T09:45:00Z,MSN-002,AMPEL-AIR,RWY-27R,Gate-B7,2100,dry,8000,5,24,420,18,25,2680,188000,27.2,"Post-landing taxi"
-TXP-2028-003,2028-08-01T11:30:00Z,MSN-001,AMPEL-AIR,Gate-C3,RWY-09L,980,dry,10000,12,26,160,22,30,1340,175000,26.8,"Short taxi, departure"
+TXP-2028-001,2025-10-27T08:15:00Z,MSN-001,AMPEL-AIR,Gate-A12,RWY-09L,1850,dry,5000,8,22,370,18,28,2450,195000,28.5,"Normal taxi, light traffic"
+TXP-2028-002,2025-10-27T09:45:00Z,MSN-002,AMPEL-AIR,RWY-27R,Gate-B7,2100,dry,8000,5,24,420,18,25,2680,188000,27.2,"Post-landing taxi"
+TXP-2028-003,2025-10-27T11:30:00Z,MSN-001,AMPEL-AIR,Gate-C3,RWY-09L,980,dry,10000,12,26,160,22,30,1340,175000,26.8,"Short taxi, departure"

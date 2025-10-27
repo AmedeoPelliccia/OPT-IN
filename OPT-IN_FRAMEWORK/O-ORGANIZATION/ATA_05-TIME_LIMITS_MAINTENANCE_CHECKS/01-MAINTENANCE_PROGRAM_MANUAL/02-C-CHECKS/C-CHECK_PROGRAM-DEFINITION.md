@@ -1,7 +1,7 @@
 # C-Check Program Definition
 
 **Revision:** 1.0.0  
-**Effective Date:** 2028-07-15  
+**Effective Date:** 2025-10-27  
 **Document ID:** C-CHECK_Program-Definition
 
 ---

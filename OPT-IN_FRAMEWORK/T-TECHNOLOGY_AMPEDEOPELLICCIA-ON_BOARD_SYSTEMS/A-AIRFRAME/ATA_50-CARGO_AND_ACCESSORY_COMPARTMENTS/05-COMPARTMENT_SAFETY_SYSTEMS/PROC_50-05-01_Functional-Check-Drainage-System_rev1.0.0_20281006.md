@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_50-05-01_Functional-Check-Drainage-System_rev1.0.0_20281006  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-06
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This procedure covers the functional check of cargo compartment drainage systems to ensure proper water removal and prevent moisture accumulation.

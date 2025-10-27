@@ -1,6 +1,6 @@
 # PROC - Servicing Engine Oil
 **Revision:** 1.0.0  
-**Effective Date:** 2028-08-20  
+**Effective Date:** 2025-10-27  
 **System:** ATA 12 - SERVICING / ATA 79 - OIL  
 
 ## Purpose
@@ -64,4 +64,4 @@ Applies to oil servicing for all installed turbine engines.
 ---
 **Checksum (SHA256):** TBD  
 **Approved by:** Chief Engineer - Powerplant  
-**Next Review:** 2029-08-20
+**Next Review:** 2025-10-27

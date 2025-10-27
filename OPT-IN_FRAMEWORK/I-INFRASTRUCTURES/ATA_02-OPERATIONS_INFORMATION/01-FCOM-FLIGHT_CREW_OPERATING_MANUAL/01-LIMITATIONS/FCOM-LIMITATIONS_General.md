@@ -6,7 +6,7 @@ LIMITATIONS - GENERAL
 
 Document ID: FCOM-LIMITATIONS_General
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 This document would contain the general operational limitations for the AMPEL360 aircraft,
 including but not limited to:

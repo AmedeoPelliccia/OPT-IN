@@ -2,7 +2,7 @@
 
 **Document Type:** STD  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-09-01
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This standard defines requirements for handling composite materials and performing minor repairs on carbon fiber reinforced polymer (CFRP) structures.

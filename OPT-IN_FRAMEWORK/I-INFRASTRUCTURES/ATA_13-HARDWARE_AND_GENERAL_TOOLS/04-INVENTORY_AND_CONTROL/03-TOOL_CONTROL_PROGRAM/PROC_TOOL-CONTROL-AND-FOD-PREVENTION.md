@@ -343,6 +343,6 @@ This procedure applies to all personnel performing maintenance, inspection, or s
 ---
 
 *Revision History:*
-- 3.0.0 (2029-01-15): Major revision for AMPEL360 program with enhanced FOD procedures
-- 2.5.0 (2028-09-10): Added ESD control and composite tool control sections
-- 2.0.0 (2028-05-01): Updated calibration management and lost tool procedures
+- 3.0.0 (2025-10-27): Major revision for AMPEL360 program with enhanced FOD procedures
+- 2.5.0 (2025-10-27): Added ESD control and composite tool control sections
+- 2.0.0 (2025-10-27): Updated calibration management and lost tool procedures

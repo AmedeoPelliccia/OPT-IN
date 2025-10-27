@@ -1,6 +1,6 @@
 # Emergency Stop and Return to Gate Procedure
 **Revision:** 1.0.0  
-**Effective Date:** 2028-08-01  
+**Effective Date:** 2025-10-27  
 **Document Type:** PROC  
 **Effectivity:** ALL MSN
 
@@ -349,7 +349,7 @@ After any emergency stop or return to gate:
 
 **Document Control:**
 - Version: 1.0.0
-- Last Updated: 2028-08-01
-- Next Review: 2029-08-01
+- Last Updated: 2025-10-27
+- Next Review: 2025-10-27
 - Owner: Flight Operations
 - Classification: OPERATIONAL - Controlled Document

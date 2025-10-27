@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2028-11-01T00:00:00Z",
+  "generated_utc": "2025-10-27T00:00:00Z",
   "schema_version": "1.0",
   "fleet": [
     {
@@ -9,12 +9,12 @@
       "location": "GSE Bay A, Hangar 3",
       "availability": "IN_SERVICE",
       "status_detail": "Operational - Available for dispatch",
-      "next_pm": "2029-01-15",
+      "next_pm": "2025-10-27",
       "hours": 812,
       "cycles": 156,
-      "last_service": "2028-10-20",
+      "last_service": "2025-10-27",
       "open_defects": ["DEF-2028-145"],
-      "notes": "H2 sensor calibration due 2029-01-15"
+      "notes": "H2 sensor calibration due 2025-10-27"
     },
     {
       "gse_id": "AP360-T003",
@@ -23,12 +23,12 @@
       "location": "Maintenance Facility, Dock 5",
       "availability": "AOG",
       "status_detail": "AOG - CAN bus interface fault",
-      "next_pm": "2028-12-10",
+      "next_pm": "2025-10-27",
       "hours": 233,
       "cycles": 89,
-      "last_service": "2028-09-05",
+      "last_service": "2025-10-27",
       "open_defects": ["DEF-2028-219", "DEF-2028-223"],
-      "notes": "Awaiting replacement CAN controller board - ETA 2028-11-05"
+      "notes": "Awaiting replacement CAN controller board - ETA 2025-10-27"
     },
     {
       "gse_id": "AP360-S002",
@@ -37,12 +37,12 @@
       "location": "GSE Bay B, Hangar 3",
       "availability": "IN_SERVICE",
       "status_detail": "Operational - Available for dispatch",
-      "next_pm": "2028-12-01",
+      "next_pm": "2025-10-27",
       "hours": 1034,
       "cycles": 201,
-      "last_service": "2028-08-15",
+      "last_service": "2025-10-27",
       "open_defects": [],
-      "notes": "Coupling seals replaced 2028-10-01, next replacement due 2029-10-01"
+      "notes": "Coupling seals replaced 2025-10-27, next replacement due 2025-10-27"
     }
   ],
   "summary": {

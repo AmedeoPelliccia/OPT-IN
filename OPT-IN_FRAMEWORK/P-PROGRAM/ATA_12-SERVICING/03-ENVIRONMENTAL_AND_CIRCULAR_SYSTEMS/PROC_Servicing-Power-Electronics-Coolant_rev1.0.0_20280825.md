@@ -1,6 +1,6 @@
 # PROC - Servicing Power Electronics Coolant
 **Revision:** 1.0.0  
-**Effective Date:** 2028-08-25  
+**Effective Date:** 2025-10-27  
 **System:** ATA 12 - SERVICING / ATA 24 - ELECTRICAL POWER  
 
 ## Purpose
@@ -57,4 +57,4 @@ Applies to coolant servicing for inverters, motor controllers, and battery therm
 ---
 **Checksum (SHA256):** TBD  
 **Approved by:** Chief Engineer - Electrical Systems  
-**Next Review:** 2029-08-25
+**Next Review:** 2025-10-27

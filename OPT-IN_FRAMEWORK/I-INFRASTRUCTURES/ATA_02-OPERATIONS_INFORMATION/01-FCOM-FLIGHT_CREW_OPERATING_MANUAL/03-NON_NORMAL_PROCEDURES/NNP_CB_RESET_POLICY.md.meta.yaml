@@ -6,7 +6,7 @@ ata_chapter: "24-00"
 title: "Circuit Breaker Reset Policy"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 effectivity:
   msn: "AMP360-001 through AMP360-999"
   configuration_id: "BWB-H2-CFG-02"
@@ -18,10 +18,10 @@ safety_critical: true
 approvals:
   - authority: "EASA"
     status: "Approved"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     status: "Approved"
-    date: "2028-09-28"
+    date: "2025-10-27"
 
 qrh_reference:
   section: "GENERAL-1"

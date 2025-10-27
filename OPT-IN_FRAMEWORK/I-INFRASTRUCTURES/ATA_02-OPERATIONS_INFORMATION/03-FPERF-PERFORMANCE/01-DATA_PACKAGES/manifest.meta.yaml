@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0.0",
   "aircraft": "AMPEL360",
-  "effective_date": "2028-10-01",
+  "effective_date": "2025-10-27",
   "description": "Performance data package manifest for EFB applications",
   
   "data_packages": [
@@ -13,7 +13,7 @@
       "signature_file": "takeoff_performance.json.sig",
       "checksum": "1234abcd5678efgh9012ijkl3456mnop7890qrst1234uvwx5678yzab9012cdef",
       "size_bytes": 2457600,
-      "last_updated": "2028-09-28"
+      "last_updated": "2025-10-27"
     },
     {
       "package_id": "landing_performance",
@@ -23,7 +23,7 @@
       "signature_file": "landing_performance.json.sig",
       "checksum": "2345bcde6789fghi0123jklm4567nopq8901rstu2345vwxy6789zabc0123defg",
       "size_bytes": 1843200,
-      "last_updated": "2028-09-28"
+      "last_updated": "2025-10-27"
     },
     {
       "package_id": "cruise_performance",
@@ -33,7 +33,7 @@
       "signature_file": "cruise_performance.json.sig",
       "checksum": "3456cdef7890ghij1234klmn5678opqr9012stuv3456wxyz7890abcd1234efgh",
       "size_bytes": 3276800,
-      "last_updated": "2028-09-28"
+      "last_updated": "2025-10-27"
     }
   ],
   

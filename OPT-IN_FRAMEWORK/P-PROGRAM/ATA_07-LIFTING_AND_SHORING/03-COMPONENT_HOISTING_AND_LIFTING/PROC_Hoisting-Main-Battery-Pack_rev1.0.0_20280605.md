@@ -1,6 +1,6 @@
 # Main Battery Pack Hoisting Procedure
 **Revision:** 1.0.0  
-**Effective Date:** 2028-06-05  
+**Effective Date:** 2025-10-27  
 **Document ID:** PROC_Hoisting-Main-Battery-Pack_rev1.0.0_20280605
 
 ## Purpose
@@ -284,9 +284,9 @@ Applicable to all AMPEL360 aircraft (MSN: ALL) during battery pack replacement, 
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Electrical Engineering | Released | 2028-06-02 |
-| Safety Department | Released | 2028-06-03 |
-| Quality Assurance | Released | 2028-06-04 |
+| Electrical Engineering | Released | 2025-10-27 |
+| Safety Department | Released | 2025-10-27 |
+| Quality Assurance | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

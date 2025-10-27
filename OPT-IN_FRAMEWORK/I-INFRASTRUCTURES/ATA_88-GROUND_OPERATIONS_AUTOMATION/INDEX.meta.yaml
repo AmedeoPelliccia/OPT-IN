@@ -4,7 +4,7 @@ document:
   type: "INDEX"
   title: "Ground Operations Automation - ATA 88"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "DRAFT"
 description: |
   ATA 88 chapter defining the roadmap and future standards for
@@ -24,6 +24,6 @@ crossrefs:
   - "../ATA_89-INFRASTRUCTURE_COMPLIANCE_AND_CERTIFICATION"
 audit:
   created_by: "AMPEL360 Infrastructure Standards Team"
-  created_utc: "2029-01-15T10:00:00Z"
+  created_utc: "2025-10-27T10:00:00Z"
   modified_by: "AMPEL360 Infrastructure Standards Team"
-  modified_utc: "2029-01-15T10:00:00Z"
+  modified_utc: "2025-10-27T10:00:00Z"

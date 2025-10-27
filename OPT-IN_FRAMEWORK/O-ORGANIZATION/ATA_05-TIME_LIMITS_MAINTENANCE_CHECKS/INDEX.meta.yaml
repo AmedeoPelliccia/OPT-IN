@@ -5,7 +5,7 @@ document:
   title: "Time Limits and Maintenance Checks"
   chapter: "05"
   revision: "1.0.0"
-  effective_date: "2028-07-01"
+  effective_date: "2025-10-27"
   status: "Active"
 
 description: >
@@ -57,4 +57,4 @@ integrity:
   checksum:
     algorithm: "sha256"
     value: "<calculated-on-commit>"
-  last_verified: "2028-07-01"
+  last_verified: "2025-10-27"

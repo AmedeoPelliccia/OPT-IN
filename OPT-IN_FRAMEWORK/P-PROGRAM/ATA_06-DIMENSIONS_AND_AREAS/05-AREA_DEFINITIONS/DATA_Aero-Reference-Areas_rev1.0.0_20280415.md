@@ -1,6 +1,6 @@
 # Aerodynamic Reference Areas
 **Revision:** 1.0.0
-**Effective Date:** 2028-04-15
+**Effective Date:** 2025-10-27
 
 ## Primary Reference Areas
 

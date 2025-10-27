@@ -6,7 +6,7 @@ ata_chapter: "42-60"
 title: "Quantum-Inspired Scheduler - Operational Overview"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 effectivity:
   msn: "AMP360-001 through AMP360-999"
   configuration_id: "BWB-H2-CFG-02"
@@ -17,10 +17,10 @@ classification: "CONTROLLED - FLIGHT OPERATIONS"
 approvals:
   - authority: "EASA"
     status: "Approved"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "AMPEL Engineering"
     status: "Released"
-    date: "2028-09-20"
+    date: "2025-10-27"
 
 related_ata_chapters:
   - "ATA-42-00: Integrated Modular Avionics"

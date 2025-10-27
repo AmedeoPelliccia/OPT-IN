@@ -261,6 +261,6 @@ This catalog defines the standard hand tools required for AMPEL360 maintenance o
 ---
 
 *Revision History:*
-- 1.5.0 (2029-01-15): Added avionics tool kit and expanded miscellaneous tools
-- 1.4.0 (2028-09-10): Updated quality standards and tool control requirements
-- 1.3.0 (2028-05-25): Initial AMPEL360 catalog release
+- 1.5.0 (2025-10-27): Added avionics tool kit and expanded miscellaneous tools
+- 1.4.0 (2025-10-27): Updated quality standards and tool control requirements
+- 1.3.0 (2025-10-27): Initial AMPEL360 catalog release

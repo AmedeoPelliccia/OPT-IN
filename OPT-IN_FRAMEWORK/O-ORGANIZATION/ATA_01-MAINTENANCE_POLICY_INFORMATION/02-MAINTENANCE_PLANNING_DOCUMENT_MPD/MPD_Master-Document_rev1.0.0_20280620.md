@@ -1,7 +1,7 @@
 # Maintenance Planning Document (MPD) - Master Document
 **Aircraft Type:** AMPEL360 Blended-Wing Body Hydrogen Aircraft  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-06-20  
+**Effective Date:** 2025-10-27  
 **Document ID:** MPD_Master-Document_rev1.0.0_20280620
 
 ---
@@ -203,7 +203,7 @@ All adjustments require regulatory approval.
 
 | Revision | Date | Description | Approved By |
 |----------|------|-------------|-------------|
-| 1.0.0 | 2028-06-20 | Initial Release | Chief Maintenance Officer |
+| 1.0.0 | 2025-10-27 | Initial Release | Chief Maintenance Officer |
 
 ---
 
@@ -211,8 +211,8 @@ All adjustments require regulatory approval.
 
 | Authority | Approval Date | Reference |
 |-----------|---------------|-----------|
-| EASA | 2028-06-15 | EASA.21J.XXX |
-| FAA | 2028-06-18 | FAA DOA Auth XXX |
+| EASA | 2025-10-27 | EASA.21J.XXX |
+| FAA | 2025-10-27 | FAA DOA Auth XXX |
 
 ---
 

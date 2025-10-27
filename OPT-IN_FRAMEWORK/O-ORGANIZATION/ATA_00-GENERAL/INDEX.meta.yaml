@@ -31,9 +31,9 @@ subdirectories:
 approvals:
   - authority: "Chief Engineering Office"
     status: "Released"
-    date: "2028-01-01"
+    date: "2025-10-27"
 revision_history:
   - version: "1.0.0"
-    date: "2028-01-01"
+    date: "2025-10-27"
     changes: "Initial release of ATA 00 governance framework"
     author: "Documentation Architecture Team"

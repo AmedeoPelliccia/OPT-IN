@@ -192,6 +192,6 @@ This catalog contains MIL-DTL-38999 series connectors approved for use in AMPEL3
 ---
 
 *Revision History:*
-- 2.3.0 (2029-01-15): Added Series III and detailed installation procedures
-- 2.2.0 (2028-09-12): Expanded contact arrangements and accessories
-- 2.1.0 (2028-05-05): Initial AMPEL360 catalog release
+- 2.3.0 (2025-10-27): Added Series III and detailed installation procedures
+- 2.2.0 (2025-10-27): Expanded contact arrangements and accessories
+- 2.1.0 (2025-10-27): Initial AMPEL360 catalog release

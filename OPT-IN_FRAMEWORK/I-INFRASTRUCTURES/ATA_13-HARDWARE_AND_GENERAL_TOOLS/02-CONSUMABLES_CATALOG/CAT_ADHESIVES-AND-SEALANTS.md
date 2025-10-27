@@ -228,6 +228,6 @@ This catalog contains approved adhesives and sealants for AMPEL360 maintenance a
 ---
 
 *Revision History:*
-- 4.5.0 (2029-01-15): Added RTV silicone and updated application guidelines
-- 4.4.0 (2028-10-25): Updated shelf life and storage requirements
-- 4.3.0 (2028-07-10): Initial AMPEL360 catalog release
+- 4.5.0 (2025-10-27): Added RTV silicone and updated application guidelines
+- 4.4.0 (2025-10-27): Updated shelf life and storage requirements
+- 4.3.0 (2025-10-27): Initial AMPEL360 catalog release

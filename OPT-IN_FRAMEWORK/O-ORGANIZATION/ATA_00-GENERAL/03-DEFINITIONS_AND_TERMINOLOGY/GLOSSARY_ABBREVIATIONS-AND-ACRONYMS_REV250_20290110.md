@@ -1,7 +1,7 @@
 # Glossary of Abbreviations and Acronyms
 
 **Revision:** 2.5.0  
-**Effective Date:** 2029-01-10  
+**Effective Date:** 2025-10-27  
 **Document ID:** GLOSSARY_Abbreviations-And-Acronyms
 
 ---
@@ -178,12 +178,12 @@ This document provides the authoritative glossary of abbreviations and acronyms 
 
 | Version | Date | Changes | Author |
 | :--- | :--- | :--- | :--- |
-| 2.5.0 | 2029-01-10 | Added QIS, SAF, and updated DPP definition | Terminology Committee |
-| 2.4.0 | 2028-11-15 | Added CI/CD, IMA, and BWB enhanced definition | Terminology Committee |
-| 2.3.0 | 2028-09-01 | Added LH₂ and fuel cell related terms | Terminology Committee |
-| 2.2.0 | 2028-06-15 | Added ASD-STE100, DO-178C, DO-254 | Terminology Committee |
-| 2.1.0 | 2028-03-20 | Added metadata and configuration management terms | Terminology Committee |
-| 2.0.0 | 2028-01-01 | Major revision with OPT-IN framework integration | Terminology Committee |
+| 2.5.0 | 2025-10-27 | Added QIS, SAF, and updated DPP definition | Terminology Committee |
+| 2.4.0 | 2025-10-27 | Added CI/CD, IMA, and BWB enhanced definition | Terminology Committee |
+| 2.3.0 | 2025-10-27 | Added LH₂ and fuel cell related terms | Terminology Committee |
+| 2.2.0 | 2025-10-27 | Added ASD-STE100, DO-178C, DO-254 | Terminology Committee |
+| 2.1.0 | 2025-10-27 | Added metadata and configuration management terms | Terminology Committee |
+| 2.0.0 | 2025-10-27 | Major revision with OPT-IN framework integration | Terminology Committee |
 
 ---
 
@@ -199,7 +199,7 @@ This document provides the authoritative glossary of abbreviations and acronyms 
 **Document Control:**
 - **Owner:** Terminology Committee
 - **Approver:** Chief Engineering Office
-- **Next Review:** 2030-01-10
+- **Next Review:** 2025-10-27
 
 ---
 

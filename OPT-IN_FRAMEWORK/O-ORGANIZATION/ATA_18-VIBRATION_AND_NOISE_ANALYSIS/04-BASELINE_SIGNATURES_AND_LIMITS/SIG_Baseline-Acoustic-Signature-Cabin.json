@@ -4,12 +4,12 @@
   "document": {
     "title": "Baseline Acoustic Signature - Cabin",
     "revision": "1.0.0",
-    "effective_date": "2028-04-15",
+    "effective_date": "2025-10-27",
     "type": "BASELINE_SIGNATURE"
   },
   "test_configuration": {
     "aircraft_msn": "MSN-001",
-    "test_date": "2028-03-22",
+    "test_date": "2025-10-27",
     "test_location": "AMPEL360 Flight Test Center - Acoustic Flight",
     "test_type": "Acoustic Certification Flight",
     "flight_conditions": {
@@ -229,11 +229,11 @@
     "performed_by": "Acoustics Engineer - L. Chen",
     "reviewed_by": "Chief Engineer Cabin Systems - K. Patel",
     "approved_by": "Head of Airworthiness - R. Williams",
-    "approval_date": "2028-04-10"
+    "approval_date": "2025-10-27"
   },
   "traceability": {
     "test_report_id": "TR-AMP360-ACO-001",
-    "dpp_link": "DPP://MSN-001/ACOUSTIC/2028-03-22",
+    "dpp_link": "DPP://MSN-001/ACOUSTIC/2025-10-27",
     "crossrefs": ["ATA_25", "ATA_21", "ATA_61"]
   },
   "integrity": {

@@ -64,5 +64,5 @@ This catalog contains standard aerospace bolts conforming to MS (Military Standa
 ---
 
 *Revision History:*
-- 2.1.0 (2029-01-15): Initial catalog release for AMPEL360
-- 2.0.0 (2028-06-01): Updated specifications and added NAS6603 series
+- 2.1.0 (2025-10-27): Initial catalog release for AMPEL360
+- 2.0.0 (2025-10-27): Updated specifications and added NAS6603 series

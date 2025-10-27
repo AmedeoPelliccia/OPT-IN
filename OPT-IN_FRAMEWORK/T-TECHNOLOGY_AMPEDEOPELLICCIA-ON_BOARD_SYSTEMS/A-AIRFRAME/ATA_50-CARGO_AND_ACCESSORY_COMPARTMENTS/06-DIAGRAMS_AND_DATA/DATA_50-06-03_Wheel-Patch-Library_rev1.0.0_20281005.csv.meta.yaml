@@ -4,13 +4,13 @@ document:
   type: "DATA"
   title: "50-06-03: Wheel Patch Library for Ground Equipment"
   revision: "1.0.0"
-  effective_date: "2028-10-05"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Floor damage from concentrated loads"]
   criticality: "Medium"
 approvals:
-  - { authority: "Ground Operations", status: "Released", date: "2028-09-30" }
+  - { authority: "Ground Operations", status: "Released", date: "2025-10-27" }
 traceability:
   source_documents: ["GROUND-OPS-MANUAL", "FLOOR-LOAD-ANALYSIS"]
   crossrefs: ["ATA 09"]

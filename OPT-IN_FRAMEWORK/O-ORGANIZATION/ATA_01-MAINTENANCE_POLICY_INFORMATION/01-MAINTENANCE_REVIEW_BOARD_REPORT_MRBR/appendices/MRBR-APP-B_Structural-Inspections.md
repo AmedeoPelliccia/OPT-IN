@@ -1,7 +1,7 @@
 # MRBR Appendix B: Structural Inspection Tasks
 **Parent Document:** MRBR_Master-Document_rev1.0.0_20280515  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-15
+**Effective Date:** 2025-10-27
 
 ---
 

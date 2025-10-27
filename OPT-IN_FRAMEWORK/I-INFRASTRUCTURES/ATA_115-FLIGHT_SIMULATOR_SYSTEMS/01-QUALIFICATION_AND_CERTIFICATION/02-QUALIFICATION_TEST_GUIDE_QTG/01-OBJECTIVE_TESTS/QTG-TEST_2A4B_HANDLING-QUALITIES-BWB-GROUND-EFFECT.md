@@ -54,6 +54,6 @@ To validate that the simulator accurately models the unique aerodynamic ground e
 ### 9. Revision History
 | Revision | Date | Author | Changes |
 |----------|------|--------|---------|
-| 1.0.0 | 2028-03-15 | J. Smith | Initial version |
-| 1.1.0 | 2028-11-20 | M. Johnson | Updated tolerances based on FTR-AE-360-778 |
-| 1.2.0 | 2029-03-10 | K. Williams | Added ground effect onset height criterion |
+| 1.0.0 | 2025-10-27 | J. Smith | Initial version |
+| 1.1.0 | 2025-10-27 | M. Johnson | Updated tolerances based on FTR-AE-360-778 |
+| 1.2.0 | 2025-10-27 | K. Williams | Added ground effect onset height criterion |

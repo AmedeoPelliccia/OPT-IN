@@ -4,7 +4,7 @@ document:
   type: "API-STD"
   title: "Standard - DPP Ground Sync API"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "CANDIDATE"
 compliance:
   standards:
@@ -28,12 +28,12 @@ traceability:
 approvals:
   - role: "Chief Data Architect"
     name: "Dr. Maria Garcia"
-    date: "2029-05-20"
+    date: "2025-10-27"
   - role: "Chief Information Security Officer"
     name: "Lisa Anderson"
-    date: "2029-05-21"
+    date: "2025-10-27"
 audit:
   created_by: "AMPEL360 Infrastructure Standards Team"
-  created_utc: "2029-04-22T10:30:00Z"
+  created_utc: "2025-10-27T10:30:00Z"
   modified_by: "AMPEL360 Infrastructure Standards Team"
-  modified_utc: "2029-05-22T16:00:00Z"
+  modified_utc: "2025-10-27T16:00:00Z"

@@ -2,7 +2,7 @@
 
 **Document ID**: PROC_Gate-Positioning-BWB  
 **Revision**: 1.1.0  
-**Date**: 2028-11-10  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 01 - PARKING AND MANEUVERING
 
@@ -154,11 +154,11 @@ Immediate stop if:
 
 | Version | Date | Changes | Approved By |
 |---------|------|---------|-------------|
-| 1.1.0 | 2028-11-10 | Updated door offset dimensions | BWB Ops Lead |
-| 1.0.0 | 2028-08-15 | Initial BWB procedure | Chief Ground Ops |
+| 1.1.0 | 2025-10-27 | Updated door offset dimensions | BWB Ops Lead |
+| 1.0.0 | 2025-10-27 | Initial BWB procedure | Chief Ground Ops |
 
 ---
 
 **Approval**: BWB Operations Manager  
-**Next Review**: 2029-05-10  
+**Next Review**: 2025-10-27  
 **Distribution**: BWB-Equipped Stations, Training Department

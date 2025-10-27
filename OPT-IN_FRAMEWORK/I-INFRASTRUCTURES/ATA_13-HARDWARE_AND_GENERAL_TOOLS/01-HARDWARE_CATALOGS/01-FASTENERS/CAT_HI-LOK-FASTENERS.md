@@ -108,6 +108,6 @@ Hi-Lok fasteners are high-strength, two-piece mechanical fasteners used in aeros
 ---
 
 *Revision History:*
-- 3.2.0 (2029-01-15): Added HLT titanium series and expanded installation notes
-- 3.1.0 (2028-11-10): Updated grip ranges and added quality control section
-- 3.0.0 (2028-07-01): Major revision for AMPEL360 program
+- 3.2.0 (2025-10-27): Added HLT titanium series and expanded installation notes
+- 3.1.0 (2025-10-27): Updated grip ranges and added quality control section
+- 3.0.0 (2025-10-27): Major revision for AMPEL360 program

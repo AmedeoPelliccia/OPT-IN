@@ -4,7 +4,7 @@
   "prev_event_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2",
   "merkle_root": "e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8e5f6a7b8",
   "log_index": 102394,
-  "timestamp_utc": "2029-04-15T17:30:10Z",
+  "timestamp_utc": "2025-10-27T17:30:10Z",
   "actor": {
     "type": "MRO",
     "id": "MRO-1234",

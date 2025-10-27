@@ -1,6 +1,6 @@
 # Safety Data Sheet: BMS 3-26 High Load Grease  
 **Revision:** 1.0  
-**Date:** 2029-01-15
+**Date:** 2025-10-27
 
 ---
 
@@ -338,7 +338,7 @@
 - PPE: B (Safety glasses, gloves)
 
 ### Preparation Date
-- 2029-01-15
+- 2025-10-27
 
 ### Revision Notes
 - Initial SDS for AMPEL360 program

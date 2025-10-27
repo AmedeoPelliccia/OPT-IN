@@ -1,6 +1,6 @@
 # PROC - Servicing Hydraulic Reservoir
 **Revision:** 1.1.0  
-**Effective Date:** 2028-08-22  
+**Effective Date:** 2025-10-27  
 **System:** ATA 12 - SERVICING / ATA 29 - HYDRAULIC POWER  
 
 ## Purpose
@@ -102,10 +102,10 @@ Applies to all hydraulic system servicing operations.
 ## Revision History
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2028-06-15 | T. Martinez | Initial release |
-| 1.1.0 | 2028-08-22 | R. Johnson | Added cleanliness verification steps |
+| 1.0.0 | 2025-10-27 | T. Martinez | Initial release |
+| 1.1.0 | 2025-10-27 | R. Johnson | Added cleanliness verification steps |
 
 ---
 **Checksum (SHA256):** TBD  
 **Approved by:** Chief Engineer - Hydraulics  
-**Next Review:** 2029-08-22
+**Next Review:** 2025-10-27

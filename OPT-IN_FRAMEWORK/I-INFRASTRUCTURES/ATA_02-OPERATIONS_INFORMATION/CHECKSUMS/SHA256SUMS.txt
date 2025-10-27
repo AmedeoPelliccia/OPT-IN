@@ -1,5 +1,5 @@
 # Integrity manifest for AMPEL360 ATA-02 EFB Data Packages, Rev 1.0.0
-# Generated: 2028-10-01T12:00:00Z by build_server_01
+# Generated: 2025-10-27T12:00:00Z by build_server_01
 # 
 # This file contains SHA256 checksums for all controlled documents and data packages
 # in the ATA 02 - OPERATIONS INFORMATION directory.
@@ -41,5 +41,5 @@ def0123456789abcdef0123456789abcdef0123456789abcdef012345678  06-GROUND_OPS-Grou
 ef0123456789abcdef0123456789abcdef0123456789abcdef0123456789  06-GROUND_OPS-Ground_Operations_Manual/01-Refueling_and_Offload/LH2_Cryogenic_Refueling/LH2_Area_Monitoring_O2_H2_Sensors.md
 
 # END OF CHECKSUM MANIFEST
-# Last updated: 2028-10-01T12:00:00Z
+# Last updated: 2025-10-27T12:00:00Z
 # Total files: 16

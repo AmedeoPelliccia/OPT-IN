@@ -3,7 +3,7 @@
 ## Procedure Metadata
 - **Procedure ID:** PROC_Aircraft-Weighing-On-Load-Cells
 - **Revision:** rev1.5.0
-- **Date:** 2028-07-15
+- **Date:** 2025-10-27
 - **Category:** WEIGHING
 - **Owner:** Weight & Balance Engineer
 
@@ -313,12 +313,12 @@ All of the following must be satisfied:
 
 | Revision | Date | Changes | Approved By |
 |----------|------|---------|-------------|
-| rev1.0.0 | 2028-06-01 | Initial release | WBE-001 |
-| rev1.1.0 | 2028-06-15 | Added stabilization check | WBE-001 |
-| rev1.2.0 | 2028-06-22 | Enhanced repeatability procedure | WBE-001 |
-| rev1.3.0 | 2028-06-28 | Added abort criteria | WBE-001 |
-| rev1.4.0 | 2028-07-05 | Updated correction references | WBE-001 |
-| rev1.5.0 | 2028-07-15 | Finalized for certification | WBE-001, QA-001 |
+| rev1.0.0 | 2025-10-27 | Initial release | WBE-001 |
+| rev1.1.0 | 2025-10-27 | Added stabilization check | WBE-001 |
+| rev1.2.0 | 2025-10-27 | Enhanced repeatability procedure | WBE-001 |
+| rev1.3.0 | 2025-10-27 | Added abort criteria | WBE-001 |
+| rev1.4.0 | 2025-10-27 | Updated correction references | WBE-001 |
+| rev1.5.0 | 2025-10-27 | Finalized for certification | WBE-001, QA-001 |
 
 ---
 

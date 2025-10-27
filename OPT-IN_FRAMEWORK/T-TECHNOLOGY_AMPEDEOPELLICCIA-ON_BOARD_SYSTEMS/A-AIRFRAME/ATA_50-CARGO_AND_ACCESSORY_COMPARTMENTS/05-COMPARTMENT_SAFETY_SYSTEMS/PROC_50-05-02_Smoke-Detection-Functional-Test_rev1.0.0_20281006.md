@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_50-05-02_Smoke-Detection-Functional-Test_rev1.0.0_20281006  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-06
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This procedure covers the functional test of cargo compartment smoke detection systems to verify proper operation and response time.

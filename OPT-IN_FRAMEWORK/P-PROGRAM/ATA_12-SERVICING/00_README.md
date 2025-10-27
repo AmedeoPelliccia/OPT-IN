@@ -2,7 +2,7 @@
 
 **OPT-IN Framework – P-PROGRAM**  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-08-25  
+**Effective Date:** 2025-10-27  
 
 ## Overview
 
@@ -187,10 +187,10 @@ The script validates:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2028-08-25 | System Integration Team | Initial audit-ready release |
+| 1.0.0 | 2025-10-27 | System Integration Team | Initial audit-ready release |
 
 ---
 
 **Approved by:** Chief Engineer - Aircraft Servicing  
-**Next Review:** 2029-08-25  
+**Next Review:** 2025-10-27  
 **Checksum (SHA256):** TBD

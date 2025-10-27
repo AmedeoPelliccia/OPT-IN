@@ -74,5 +74,5 @@ This test validates integration between:
 ### 10. Revision History
 | Revision | Date | Author | Changes |
 |----------|------|--------|---------|
-| 1.0.0 | 2028-06-01 | R. Anderson | Initial version |
-| 1.1.0 | 2029-01-15 | L. Thompson | Added QIS scheduler validation criteria |
+| 1.0.0 | 2025-10-27 | R. Anderson | Initial version |
+| 1.1.0 | 2025-10-27 | L. Thompson | Added QIS scheduler validation criteria |

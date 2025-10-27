@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_50-04-01_Operational-Check-Power-Drive-Unit_rev1.0.0_20281004  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-04
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This procedure covers the operational check of the cargo compartment power drive unit (PDU) used to operate the motorized cargo handling system.

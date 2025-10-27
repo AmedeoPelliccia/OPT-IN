@@ -4,13 +4,13 @@ document:
   type: "DESC"
   title: "50-00-01: Compartment Layout and Zoning"
   revision: "1.0.0"
-  effective_date: "2028-09-28"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Improper zoning identification", "Compartment misuse"]
   criticality: "Low"
 approvals:
-  - { authority: "Systems Engineering", status: "Released", date: "2028-09-15" }
+  - { authority: "Systems Engineering", status: "Released", date: "2025-10-27" }
 traceability:
   source_documents: ["AMPEL360-SDM-CH3", "CS-25.855", "ATA-iSpec-2200"]
   crossrefs: ["ATA 08", "ATA 21", "ATA 26", "ATA 52", "ATA 53"]

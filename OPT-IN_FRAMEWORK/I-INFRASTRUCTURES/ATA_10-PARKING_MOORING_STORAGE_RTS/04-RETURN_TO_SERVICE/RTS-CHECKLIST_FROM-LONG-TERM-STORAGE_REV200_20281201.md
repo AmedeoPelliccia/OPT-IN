@@ -2,7 +2,7 @@
 
 **Document ID**: RTS-Checklist_From-Long-Term-Storage  
 **Revision**: 2.0.0  
-**Date**: 2028-12-01  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 04 - RETURN TO SERVICE
 
@@ -428,4 +428,4 @@ First Officer: _______________ Signature: _______________ Date: _______________
 ---
 
 **Approval**: Chief of Maintenance & Chief Engineer  
-**Next Review**: 2029-06-01
+**Next Review**: 2025-10-27
