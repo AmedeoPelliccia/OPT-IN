@@ -1,0 +1,4 @@
+Material,Specification,Form,CoC_Required,Batch_Traceability,Shelf_Life_Control,Application
+Al-7075-T6,AMS_4123,Plate/Extrusion,Yes,Yes,No,Spar_Caps
+Al-2024-T3,AMS_4037,Sheet,Yes,Yes,No,Skin/Ribs
+CFRP_Prepreg,BMS_8-276,Tape,Yes,Yes,Yes,Composite_Skins

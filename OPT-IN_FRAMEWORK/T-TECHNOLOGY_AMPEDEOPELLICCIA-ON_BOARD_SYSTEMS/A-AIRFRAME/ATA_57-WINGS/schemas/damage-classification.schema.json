@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Wing Damage Classification Schema",
+  "description": "Schema for classifying and documenting wing structural damage",
+  "type": "object",
+  "required": [
+    "damage_id",
+    "timestamp",
+    "msn",
+    "location",
+    "damage_type",
+    "severity",
+    "classification"
+  ],
+  "properties": {
+    "damage_id": {
+      "type": "string",
+      "description": "Unique damage record identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of damage discovery"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number"
+    },
+    "location": {
+      "type": "object",
+      "required": ["wing", "station"],
+      "properties": {
+        "wing": {"type": "string", "enum": ["left", "right"]},
+        "station": {"type": "number"},
+        "spanwise_loc": {"type": "string"},
+        "spar_id": {"type": "string"},
+        "rib_id": {"type": "string"},
+        "component": {"type": "string", "description": "Component affected (e.g., skin, spar cap, rib web)"}
+      }
+    },
+    "damage_type": {
+      "type": "string",
+      "enum": [
+        "crack",
+        "delamination",
+        "dent",
+        "corrosion",
+        "impact-damage",
+        "lightning-strike",
+        "fastener-hole-elongation",
+        "wear",
+        "burn-through",
+        "missing-fastener",
+        "foreign-object-damage",
+        "disbond",
+        "erosion"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["minor", "major", "critical"],
+      "description": "Damage severity classification"
+    },
+    "classification": {
+      "type": "object",
+      "required": ["category", "action_required"],
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "allowable-no-action",
+            "monitor-next-inspection",
+            "repair-next-scheduled-maintenance",
+            "repair-before-next-flight",
+            "ground-aircraft-immediate-repair"
+          ]
+        },
+        "action_required": {"type": "string"},
+        "time_limit_fh": {"type": "number", "description": "Maximum flight hours before repair"},
+        "time_limit_fc": {"type": "number", "description": "Maximum flight cycles before repair"}
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "properties": {
+        "crack_length_mm": {"type": "number"},
+        "crack_depth_mm": {"type": "number"},
+        "delamination_area_mm2": {"type": "number"},
+        "delamination_depth_plies": {"type": "integer"},
+        "dent_depth_mm": {"type": "number"},
+        "dent_diameter_mm": {"type": "number"},
+        "corrosion_area_mm2": {"type": "number"},
+        "corrosion_depth_mm": {"type": "number"},
+        "hole_elongation_mm": {"type": "number"},
+        "wear_dimension_mm": {"type": "number"}
+      }
+    },
+    "limits": {
+      "type": "object",
+      "description": "Applicable allowable limits",
+      "properties": {
+        "max_crack_length_mm": {"type": "number"},
+        "max_delamination_area_mm2": {"type": "number"},
+        "max_dent_depth_mm": {"type": "number"},
+        "max_corrosion_depth_mm": {"type": "number"},
+        "residual_thickness_min_mm": {"type": "number"},
+        "limit_reference": {"type": "string", "description": "Reference to limit document"}
+      }
+    },
+    "structural_impact": {
+      "type": "object",
+      "properties": {
+        "load_path_affected": {"type": "boolean"},
+        "fuel_tank_affected": {"type": "boolean"},
+        "lsp_affected": {"type": "boolean", "description": "Lightning Strike Protection affected"},
+        "control_surface_affected": {"type": "boolean"},
+        "flight_safety_critical": {"type": "boolean"}
+      }
+    },
+    "discovery": {
+      "type": "object",
+      "required": ["method", "discovered_by"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "visual-inspection",
+            "scheduled-inspection",
+            "ndt-inspection",
+            "pilot-report",
+            "maintenance-action",
+            "incident-investigation"
+          ]
+        },
+        "discovered_by": {"type": "string"},
+        "inspection_type": {"type": "string", "description": "Type of inspection (e.g., GVI, DET, SPE)"},
+        "flight_phase": {"type": "string", "enum": ["ground", "taxi", "takeoff", "cruise", "landing", "unknown"]}
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "properties": {
+        "photo_hashes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "SHA-256 hashes of damage photos"
+        },
+        "ndt_file_hashes": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "incident_report": {"type": "string"},
+        "engineering_evaluation": {"type": "string"}
+      }
+    },
+    "disposition": {
+      "type": "object",
+      "properties": {
+        "approved_action": {"type": "string"},
+        "repair_procedure_ref": {"type": "string"},
+        "engineering_order": {"type": "string"},
+        "ncr_number": {"type": "string"},
+        "approved_by": {"type": "string"},
+        "approval_date": {"type": "string", "format": "date"}
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "related_damage_ids": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Related or adjacent damage records"
+        },
+        "repair_record_id": {"type": "string", "description": "Link to repair record if repaired"},
+        "dpp_link": {"type": "string"}
+      }
+    }
+  }
+}

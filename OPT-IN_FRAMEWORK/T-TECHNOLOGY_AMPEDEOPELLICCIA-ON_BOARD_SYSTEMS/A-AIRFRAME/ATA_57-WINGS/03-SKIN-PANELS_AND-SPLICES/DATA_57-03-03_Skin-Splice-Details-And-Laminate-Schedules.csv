@@ -1,0 +1,4 @@
+Zone,Material,Thickness_mm,Ply_Count,Layup_Sequence,Splice_Type,Fastener_Pattern
+Inboard_Upper,CFRP,4.5,18,[45/0/-45/90]2s,Bonded,N/A
+Outboard_Upper,CFRP,3.0,12,[45/0/-45/90]s,Bonded,N/A
+Inboard_Lower,Al-2024-T3,2.0,N/A,N/A,Riveted,Double-row

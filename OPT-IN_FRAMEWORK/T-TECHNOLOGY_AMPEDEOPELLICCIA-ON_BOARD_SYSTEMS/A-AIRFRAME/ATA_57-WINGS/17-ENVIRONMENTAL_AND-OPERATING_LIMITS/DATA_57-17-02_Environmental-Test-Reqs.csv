@@ -1,0 +1,4 @@
+Test_Type,Condition,Duration,Acceptance_Criteria,Reference
+Temperature_Cycling,-55C_to_+85C,1000_cycles,No_delamination,RTCA_DO-160
+Salt_Fog,5%_NaCl_35C,1000_hours,Corrosion_rating_<3,ASTM_B117
+Humidity,95%RH_60C,1000_hours,No_moisture_ingress,MIL-STD-810

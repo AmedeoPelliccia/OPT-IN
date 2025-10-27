@@ -1,0 +1,345 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Wing Repair Record Schema",
+  "description": "Comprehensive schema for wing structural repair records with wing-specific fields",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "msn",
+    "config",
+    "repair_id",
+    "work_scope",
+    "location",
+    "effectivity",
+    "materials",
+    "tooling",
+    "personnel",
+    "process_control",
+    "inspection_results",
+    "traceability"
+  ],
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of repair completion"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number"
+    },
+    "config": {
+      "type": "string",
+      "description": "Aircraft configuration identifier"
+    },
+    "repair_id": {
+      "type": "string",
+      "description": "Unique repair record identifier"
+    },
+    "work_scope": {
+      "type": "string",
+      "description": "Repair type (e.g., Spar Cap Reinforcement, Skin Bonded Repair, Fastener Replacement)"
+    },
+    "location": {
+      "type": "object",
+      "required": ["wing", "station", "spanwise_loc"],
+      "properties": {
+        "wing": {
+          "type": "string",
+          "enum": ["left", "right"],
+          "description": "Wing side"
+        },
+        "station": {
+          "type": "number",
+          "description": "Wing station (inches or mm from centerline)"
+        },
+        "spanwise_loc": {
+          "type": "string",
+          "description": "Spanwise location descriptor (e.g., Inboard, Mid-span, Outboard)"
+        },
+        "spar_id": {
+          "type": "string",
+          "description": "Spar identifier (e.g., Front Spar, Rear Spar, Mid Spar)"
+        },
+        "rib_id": {
+          "type": "string",
+          "description": "Rib identifier or number"
+        },
+        "fuel_tank_id": {
+          "type": "string",
+          "description": "Fuel tank identifier if repair is within fuel tank boundary"
+        },
+        "zone": {
+          "type": "string",
+          "description": "Zone identifier per aircraft zone map"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["effective_date"],
+      "properties": {
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO date when repair becomes effective"
+        },
+        "expiry_date": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO date when repair requires re-inspection or replacement (if applicable)"
+        },
+        "life_limit_fh": {
+          "type": "number",
+          "description": "Life limit in flight hours (if applicable)"
+        },
+        "life_limit_fc": {
+          "type": "number",
+          "description": "Life limit in flight cycles (if applicable)"
+        }
+      }
+    },
+    "structural_details": {
+      "type": "object",
+      "description": "Structural-specific repair details",
+      "properties": {
+        "laminate_schedule": {
+          "type": "array",
+          "description": "Composite laminate layup schedule",
+          "items": {
+            "type": "object",
+            "required": ["ply_number", "material", "orientation", "thickness"],
+            "properties": {
+              "ply_number": {"type": "integer"},
+              "material": {"type": "string"},
+              "orientation": {"type": "number", "description": "Ply orientation in degrees"},
+              "thickness": {"type": "number", "description": "Ply thickness in mm or inches"}
+            }
+          }
+        },
+        "skin_ply_book": {
+          "type": "string",
+          "description": "Reference to skin ply book or laminate specification"
+        },
+        "load_path_affected": {
+          "type": "boolean",
+          "description": "Whether primary load path is affected by repair"
+        },
+        "fea_reference": {
+          "type": "string",
+          "description": "Reference to FEA analysis document (required if load_path_affected is true)"
+        },
+        "test_coupon_id": {
+          "type": "string",
+          "description": "Test coupon identifier (required for load path repairs)"
+        }
+      }
+    },
+    "fasteners": {
+      "type": "array",
+      "description": "Fastener installation records",
+      "items": {
+        "type": "object",
+        "required": ["fastener_pn", "location", "torque_applied", "torque_spec"],
+        "properties": {
+          "fastener_pn": {"type": "string", "description": "Fastener part number"},
+          "location": {"type": "string"},
+          "torque_applied": {"type": "number", "description": "Applied torque in N⋅m or in⋅lbf"},
+          "torque_spec": {"type": "number", "description": "Specified torque value"},
+          "torque_unit": {"type": "string", "enum": ["Nm", "in-lbf", "ft-lbf"]},
+          "retention_check": {"type": "number", "description": "Torque retention percentage after settling"}
+        }
+      }
+    },
+    "actuators": {
+      "type": "array",
+      "description": "Actuator records (for control surface repairs)",
+      "items": {
+        "type": "object",
+        "required": ["serial_number", "part_number", "hours"],
+        "properties": {
+          "serial_number": {"type": "string"},
+          "part_number": {"type": "string"},
+          "hours": {"type": "number", "description": "Accumulated operating hours"},
+          "cycles": {"type": "number", "description": "Accumulated cycles"}
+        }
+      }
+    },
+    "materials": {
+      "type": "array",
+      "description": "Materials used in repair",
+      "items": {
+        "type": "object",
+        "required": ["part_number", "lot_number", "quantity", "coc_number"],
+        "properties": {
+          "part_number": {"type": "string"},
+          "description": {"type": "string"},
+          "lot_number": {"type": "string"},
+          "batch_number": {"type": "string"},
+          "quantity": {"type": "number"},
+          "unit": {"type": "string"},
+          "coc_number": {"type": "string", "description": "Certificate of Conformity number"},
+          "fuel_compatible": {"type": "boolean", "description": "Required true for fuel tank repairs"},
+          "shelf_life_expiry": {"type": "string", "format": "date"}
+        }
+      }
+    },
+    "tooling": {
+      "type": "array",
+      "description": "Tooling and GSE used",
+      "items": {
+        "type": "object",
+        "required": ["tool_id", "calibration_due"],
+        "properties": {
+          "tool_id": {"type": "string"},
+          "description": {"type": "string"},
+          "calibration_due": {"type": "string", "format": "date"},
+          "calibration_cert": {"type": "string", "description": "Calibration certificate number"}
+        }
+      }
+    },
+    "cure_control": {
+      "type": "object",
+      "description": "Cure process control (for composite repairs)",
+      "properties": {
+        "cure_method": {"type": "string", "enum": ["oven", "autoclave", "vacuum-bag", "room-temp"]},
+        "temperature_profile": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "time_min": {"type": "number"},
+              "temperature_C": {"type": "number"},
+              "thermocouple_location": {"type": "string"}
+            }
+          }
+        },
+        "vacuum_level_inHg": {"type": "number"},
+        "oven_qualification": {"type": "string", "description": "Oven/autoclave qualification reference"},
+        "spc_log_ref": {"type": "string", "description": "Statistical Process Control log reference"}
+      }
+    },
+    "personnel": {
+      "type": "object",
+      "required": ["technician_id", "inspector_id"],
+      "properties": {
+        "technician_id": {"type": "string"},
+        "technician_cert": {"type": "string"},
+        "inspector_id": {"type": "string"},
+        "inspector_cert": {"type": "string"},
+        "engineer_approval": {"type": "string", "description": "Engineering approval for non-standard repairs"}
+      }
+    },
+    "process_control": {
+      "type": "object",
+      "required": ["tamper_proof_timestamp", "batch_traceability"],
+      "properties": {
+        "tamper_proof_timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Cryptographically signed timestamp"
+        },
+        "batch_traceability": {"type": "string"},
+        "spc_chart_ref": {"type": "string", "description": "SPC monitoring chart reference"},
+        "process_deviation": {"type": "boolean"},
+        "deviation_ref": {"type": "string", "description": "NCR or deviation number if applicable"}
+      }
+    },
+    "inspection_results": {
+      "type": "object",
+      "required": ["visual_inspection"],
+      "properties": {
+        "visual_inspection": {
+          "type": "object",
+          "required": ["result", "inspector"],
+          "properties": {
+            "result": {"type": "string", "enum": ["pass", "fail", "conditional"]},
+            "inspector": {"type": "string"},
+            "notes": {"type": "string"}
+          }
+        },
+        "ndt_inspections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["method", "result", "file_hash"],
+            "properties": {
+              "method": {"type": "string", "enum": ["ultrasonic-c-scan", "shearography", "thermography", "eddy-current", "radiography", "visual-gvi"]},
+              "result": {"type": "string", "enum": ["pass", "fail", "conditional"]},
+              "void_fraction": {"type": "number", "description": "Void fraction percentage for C-scan"},
+              "delamination_area": {"type": "number", "description": "Delamination area in square inches or mm²"},
+              "crack_length": {"type": "number", "description": "Detected crack length"},
+              "file_hash": {"type": "string", "description": "SHA-256 hash of NDT data file"},
+              "inspector": {"type": "string"},
+              "equipment_id": {"type": "string"}
+            }
+          }
+        },
+        "bond_strength_test": {
+          "type": "object",
+          "properties": {
+            "peel_strength_pli": {"type": "number", "description": "Peel strength in pounds per linear inch"},
+            "tensile_strength_psi": {"type": "number", "description": "Tensile strength in PSI"},
+            "test_method": {"type": "string"}
+          }
+        },
+        "continuity_test": {
+          "type": "object",
+          "description": "4-wire resistance test for LSP",
+          "properties": {
+            "resistance_mohms": {"type": "number"},
+            "target_resistance_mohms": {"type": "number"},
+            "test_equipment_id": {"type": "string"},
+            "test_points": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "pressure_test": {
+          "type": "object",
+          "description": "Fuel tank pressure test (if applicable)",
+          "properties": {
+            "test_pressure_psi": {"type": "number"},
+            "duration_minutes": {"type": "number"},
+            "leak_rate": {"type": "number", "description": "Leak rate (units as specified)"},
+            "result": {"type": "string", "enum": ["pass", "fail"]}
+          }
+        }
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "properties": {
+        "photo_hashes": {
+          "type": "array",
+          "description": "SHA-256 hashes of repair photos",
+          "items": {"type": "string"}
+        },
+        "ndt_file_hashes": {
+          "type": "array",
+          "description": "SHA-256 hashes of NDT data files",
+          "items": {"type": "string"}
+        },
+        "engineering_order": {"type": "string"},
+        "repair_procedure_ref": {"type": "string"},
+        "srm_reference": {"type": "string", "description": "Structural Repair Manual reference"}
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "required": ["dpp_link"],
+      "properties": {
+        "dpp_link": {"type": "string", "description": "Link to Digital Product Passport (ATA-95)"},
+        "parent_repair_id": {"type": "string", "description": "Parent repair if this is a re-repair"},
+        "related_ncr": {"type": "string", "description": "Related non-conformance report"},
+        "work_order": {"type": "string"}
+      }
+    },
+    "checksum": {
+      "type": "object",
+      "required": ["algorithm", "value"],
+      "properties": {
+        "algorithm": {"type": "string", "enum": ["sha256", "sha512"]},
+        "value": {"type": "string", "description": "Checksum of the entire record"}
+      }
+    }
+  }
+}

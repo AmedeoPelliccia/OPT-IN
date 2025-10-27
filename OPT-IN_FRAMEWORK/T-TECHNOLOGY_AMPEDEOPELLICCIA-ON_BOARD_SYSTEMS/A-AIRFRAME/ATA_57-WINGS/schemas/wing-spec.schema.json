@@ -1,0 +1,250 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Wing Specification Schema",
+  "description": "Schema for wing structural specifications and design data",
+  "type": "object",
+  "required": [
+    "wing_id",
+    "aircraft_type",
+    "configuration",
+    "geometry",
+    "structural_design"
+  ],
+  "properties": {
+    "wing_id": {
+      "type": "string",
+      "description": "Wing assembly identifier"
+    },
+    "aircraft_type": {
+      "type": "string",
+      "description": "Aircraft type designation"
+    },
+    "configuration": {
+      "type": "string",
+      "description": "Wing configuration (e.g., Standard, Extended Range, High Capacity)"
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["span", "area", "aspect_ratio"],
+      "properties": {
+        "span_m": {"type": "number", "description": "Wing span in meters"},
+        "area_m2": {"type": "number", "description": "Wing area in square meters"},
+        "aspect_ratio": {"type": "number"},
+        "taper_ratio": {"type": "number"},
+        "sweep_deg": {"type": "number", "description": "Wing sweep angle in degrees"},
+        "dihedral_deg": {"type": "number"},
+        "root_chord_m": {"type": "number"},
+        "tip_chord_m": {"type": "number"},
+        "mac_m": {"type": "number", "description": "Mean Aerodynamic Chord"}
+      }
+    },
+    "structural_design": {
+      "type": "object",
+      "required": ["design_philosophy", "primary_structure"],
+      "properties": {
+        "design_philosophy": {
+          "type": "string",
+          "enum": ["safe-life", "damage-tolerant", "fail-safe", "hybrid"]
+        },
+        "primary_structure": {
+          "type": "object",
+          "properties": {
+            "wing_box": {
+              "type": "object",
+              "properties": {
+                "spar_count": {"type": "integer"},
+                "spar_locations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "spar_id": {"type": "string"},
+                      "chord_position_pct": {"type": "number"}
+                    }
+                  }
+                },
+                "rib_pitch_mm": {"type": "number"},
+                "construction": {"type": "string", "enum": ["metallic", "composite", "hybrid"]}
+              }
+            },
+            "skin": {
+              "type": "object",
+              "properties": {
+                "type": {"type": "string", "enum": ["metallic", "composite"]},
+                "thickness_mm": {
+                  "type": "object",
+                  "properties": {
+                    "min": {"type": "number"},
+                    "max": {"type": "number"},
+                    "typical": {"type": "number"}
+                  }
+                },
+                "material_spec": {"type": "string"}
+              }
+            }
+          }
+        },
+        "materials": {
+          "type": "object",
+          "properties": {
+            "spar_caps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "material": {"type": "string"},
+                  "specification": {"type": "string"},
+                  "location": {"type": "string"}
+                }
+              }
+            },
+            "skin_panels": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "material": {"type": "string"},
+                  "specification": {"type": "string"},
+                  "zone": {"type": "string"}
+                }
+              }
+            },
+            "ribs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "material": {"type": "string"},
+                  "specification": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "load_limits": {
+          "type": "object",
+          "properties": {
+            "limit_load_factor": {"type": "number"},
+            "ultimate_load_factor": {"type": "number"},
+            "max_wing_bending_moment_Nm": {"type": "number"},
+            "max_shear_force_N": {"type": "number"},
+            "max_torsion_Nm": {"type": "number"}
+          }
+        }
+      }
+    },
+    "control_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["surface_type", "location"],
+        "properties": {
+          "surface_type": {
+            "type": "string",
+            "enum": ["aileron", "flap", "slat", "spoiler", "airbrake", "trim-tab"]
+          },
+          "location": {"type": "string"},
+          "span_start_m": {"type": "number"},
+          "span_end_m": {"type": "number"},
+          "chord_pct": {"type": "number"},
+          "deflection_range_deg": {
+            "type": "object",
+            "properties": {
+              "up": {"type": "number"},
+              "down": {"type": "number"}
+            }
+          },
+          "actuation_type": {"type": "string", "enum": ["hydraulic", "electric", "mechanical"]}
+        }
+      }
+    },
+    "fuel_system": {
+      "type": "object",
+      "properties": {
+        "fuel_tanks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["tank_id", "capacity_L"],
+            "properties": {
+              "tank_id": {"type": "string"},
+              "capacity_L": {"type": "number"},
+              "location": {"type": "string"},
+              "station_start": {"type": "number"},
+              "station_end": {"type": "number"},
+              "fuel_type": {"type": "string", "enum": ["Jet-A", "SAF", "H2-LH2", "H2-gaseous"]}
+            }
+          }
+        },
+        "total_capacity_L": {"type": "number"}
+      }
+    },
+    "systems_integration": {
+      "type": "object",
+      "properties": {
+        "ice_protection": {
+          "type": "object",
+          "properties": {
+            "leading_edge_type": {"type": "string", "enum": ["bleed-air", "electric", "electro-thermal", "none"]},
+            "coverage": {"type": "string"}
+          }
+        },
+        "lightning_protection": {
+          "type": "object",
+          "properties": {
+            "type": {"type": "string", "enum": ["mesh", "foil", "conductive-coating", "hybrid"]},
+            "zones": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "inspection_intervals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "inspection_type": {"type": "string"},
+              "interval_fh": {"type": "number"},
+              "interval_fc": {"type": "number"},
+              "interval_months": {"type": "number"}
+            }
+          }
+        },
+        "life_limits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "component": {"type": "string"},
+              "limit_fh": {"type": "number"},
+              "limit_fc": {"type": "number"}
+            }
+          }
+        }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "certification_basis": {"type": "string"},
+        "type_certificate": {"type": "string"},
+        "test_report_refs": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "design_drawing_refs": {"type": "array", "items": {"type": "string"}},
+        "stress_report_refs": {"type": "array", "items": {"type": "string"}},
+        "test_report_refs": {"type": "array", "items": {"type": "string"}},
+        "dpp_link": {"type": "string"}
+      }
+    }
+  }
+}

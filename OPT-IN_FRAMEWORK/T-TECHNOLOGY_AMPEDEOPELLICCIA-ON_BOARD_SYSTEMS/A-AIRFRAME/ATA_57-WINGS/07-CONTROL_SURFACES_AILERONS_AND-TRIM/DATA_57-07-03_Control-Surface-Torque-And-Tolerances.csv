@@ -1,0 +1,3 @@
+Surface,Hinge_Type,Torque_Nm,Tolerance_Nm,Play_Max_mm,Bearing_Wear_Limit_mm
+Aileron_Inboard,Sealed_Bearing,45,3,0.5,0.25
+Aileron_Outboard,Sealed_Bearing,35,3,0.5,0.25

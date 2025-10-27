@@ -1,0 +1,4 @@
+Material_Type,Specification,Application,CoC_Required,Fuel_Compatible,Shelf_Life_Months
+Aluminum_Sheet,AMS_4037,Doubler_Plates,Yes,Yes,N/A
+Epoxy_Adhesive,BMS_5-101,Bonded_Repairs,Yes,Yes,12
+Sealant,BMS_5-95,Fuel_Tank,Yes,Yes,6

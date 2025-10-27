@@ -1,0 +1,169 @@
+{
+  "timestamp": "2028-03-15T14:30:00Z",
+  "msn": "MSN-001",
+  "config": "Standard",
+  "repair_id": "WING-REPAIR-2028-001",
+  "work_scope": "Composite Skin Scarf Repair - Impact Damage",
+  "location": {
+    "wing": "left",
+    "station": 4500,
+    "spanwise_loc": "Mid-span",
+    "spar_id": "N/A",
+    "rib_id": "Rib-15",
+    "fuel_tank_id": "N/A",
+    "zone": "Zone-230"
+  },
+  "effectivity": {
+    "effective_date": "2028-03-15",
+    "expiry_date": null,
+    "life_limit_fh": null,
+    "life_limit_fc": null
+  },
+  "structural_details": {
+    "laminate_schedule": [
+      {"ply_number": 1, "material": "BMS8-276 Type V", "orientation": 45, "thickness": 0.25},
+      {"ply_number": 2, "material": "BMS8-276 Type V", "orientation": 0, "thickness": 0.25},
+      {"ply_number": 3, "material": "BMS8-276 Type V", "orientation": -45, "thickness": 0.25},
+      {"ply_number": 4, "material": "BMS8-276 Type V", "orientation": 90, "thickness": 0.25},
+      {"ply_number": 5, "material": "BMS8-276 Type V", "orientation": 90, "thickness": 0.25},
+      {"ply_number": 6, "material": "BMS8-276 Type V", "orientation": -45, "thickness": 0.25},
+      {"ply_number": 7, "material": "BMS8-276 Type V", "orientation": 0, "thickness": 0.25},
+      {"ply_number": 8, "material": "BMS8-276 Type V", "orientation": 45, "thickness": 0.25}
+    ],
+    "skin_ply_book": "AMPEL360-WING-SKIN-PLY-BOOK-REV-C",
+    "load_path_affected": false,
+    "fea_reference": "N/A",
+    "test_coupon_id": "TC-WING-2028-001"
+  },
+  "fasteners": [],
+  "actuators": [],
+  "materials": [
+    {
+      "part_number": "BMS8-276-Type-V-12in",
+      "description": "CFRP Prepreg Tape, 12 inch width",
+      "lot_number": "LOT-2028-0123",
+      "batch_number": "BATCH-456",
+      "quantity": 2.5,
+      "unit": "yards",
+      "coc_number": "COC-2028-BMS8-276-0123",
+      "fuel_compatible": false,
+      "shelf_life_expiry": "2028-06-15"
+    },
+    {
+      "part_number": "BMS5-101-Type-I",
+      "description": "Film Adhesive",
+      "lot_number": "LOT-2028-0089",
+      "batch_number": "BATCH-789",
+      "quantity": 0.5,
+      "unit": "square_feet",
+      "coc_number": "COC-2028-BMS5-101-0089",
+      "fuel_compatible": false,
+      "shelf_life_expiry": "2028-05-01"
+    }
+  ],
+  "tooling": [
+    {
+      "tool_id": "OVEN-COMPOSITE-01",
+      "description": "Composite Cure Oven",
+      "calibration_due": "2028-06-01",
+      "calibration_cert": "CAL-CERT-2028-001"
+    },
+    {
+      "tool_id": "VACUUM-PUMP-02",
+      "description": "Vacuum Pump System",
+      "calibration_due": "2028-05-01",
+      "calibration_cert": "CAL-CERT-2028-002"
+    },
+    {
+      "tool_id": "THERMOCOUPLE-SET-A",
+      "description": "Type-K Thermocouples",
+      "calibration_due": "2028-07-01",
+      "calibration_cert": "CAL-CERT-2028-003"
+    }
+  ],
+  "cure_control": {
+    "cure_method": "oven",
+    "temperature_profile": [
+      {"time_min": 0, "temperature_C": 25, "thermocouple_location": "Part surface"},
+      {"time_min": 60, "temperature_C": 120, "thermocouple_location": "Part surface"},
+      {"time_min": 180, "temperature_C": 120, "thermocouple_location": "Part surface"},
+      {"time_min": 240, "temperature_C": 25, "thermocouple_location": "Part surface"}
+    ],
+    "vacuum_level_inHg": 22,
+    "oven_qualification": "OVEN-QUAL-2027-001",
+    "spc_log_ref": "SPC-LOG-2028-Q1-015"
+  },
+  "personnel": {
+    "technician_id": "TECH-12345",
+    "technician_cert": "A&P Certificate #1234567",
+    "inspector_id": "INSP-67890",
+    "inspector_cert": "QA Inspector Level II #7890123",
+    "engineer_approval": "N/A"
+  },
+  "process_control": {
+    "tamper_proof_timestamp": "2028-03-15T18:45:00Z",
+    "batch_traceability": "BATCH-TRACE-2028-001",
+    "spc_chart_ref": "SPC-CHART-CURE-2028-Q1",
+    "process_deviation": false,
+    "deviation_ref": "N/A"
+  },
+  "inspection_results": {
+    "visual_inspection": {
+      "result": "pass",
+      "inspector": "INSP-67890",
+      "notes": "Surface finish acceptable, no voids visible, edges properly feathered"
+    },
+    "ndt_inspections": [
+      {
+        "method": "ultrasonic-c-scan",
+        "result": "pass",
+        "void_fraction": 0.8,
+        "delamination_area": 0,
+        "crack_length": null,
+        "file_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "inspector": "INSP-67890",
+        "equipment_id": "UT-CSCAN-05"
+      },
+      {
+        "method": "visual-gvi",
+        "result": "pass",
+        "void_fraction": null,
+        "delamination_area": null,
+        "crack_length": null,
+        "file_hash": "a7b8c9d0e1f2345678901234567890abcdef1234567890abcdef1234567890ab",
+        "inspector": "INSP-67890",
+        "equipment_id": "N/A"
+      }
+    ],
+    "bond_strength_test": {
+      "peel_strength_pli": 45,
+      "tensile_strength_psi": 5200,
+      "test_method": "ASTM-D1876"
+    },
+    "continuity_test": null,
+    "pressure_test": null
+  },
+  "documentation": {
+    "photo_hashes": [
+      "1a2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890",
+      "2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890ab",
+      "3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890abcd"
+    ],
+    "ndt_file_hashes": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "engineering_order": "N/A",
+    "repair_procedure_ref": "PROC_57-13-02",
+    "srm_reference": "SRM 57-13-02-001"
+  },
+  "traceability": {
+    "dpp_link": "DPP://ATA95/MSN-001/WING-REPAIR-2028-001",
+    "parent_repair_id": null,
+    "related_ncr": null,
+    "work_order": "WO-2028-0234"
+  },
+  "checksum": {
+    "algorithm": "sha256",
+    "value": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+  }
+}

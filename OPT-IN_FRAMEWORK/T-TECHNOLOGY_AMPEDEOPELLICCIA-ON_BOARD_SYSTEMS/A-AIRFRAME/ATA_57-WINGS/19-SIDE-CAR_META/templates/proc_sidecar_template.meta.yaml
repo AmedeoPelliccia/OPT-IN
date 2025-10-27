@@ -1,0 +1,78 @@
+schema_version: "1.1"
+id: "TEMPLATE_PROCEDURE_SIDECAR"
+document:
+  type: "PROC"
+  title: "Procedure Title"
+  ata_chapter: "57"
+  ata_section: "XX"
+  ata_subject: "YY"
+  revision: "1.0.0"
+  effective_date: "YYYY-MM-DD"
+
+procedure_specific:
+  task_type: "Inspection|Repair|Removal/Installation|Calibration|Test"
+  skill_level: "Technician|Inspector Level I|Inspector Level II|Inspector Level III|Engineer"
+  estimated_time_hours: 0.0
+  personnel_required: 1
+  
+  safety_critical: true|false
+  quality_critical: true|false
+  
+  required_tooling:
+    - tool_id: "Tool ID"
+      description: "Tool description"
+      calibration_required: true|false
+      
+  required_materials:
+    - part_number: "PN"
+      description: "Description"
+      quantity: 1
+      coc_required: true|false
+      
+  required_consumables:
+    - item: "Consumable name"
+      specification: "Spec"
+      
+  safety_precautions:
+    - "LOTO required"
+    - "Fall protection required"
+    - "Confined space entry protocols"
+    
+  environmental_controls:
+    - parameter: "Temperature"
+      range: "15-30°C"
+      critical: true|false
+    - parameter: "Humidity"
+      range: "< 70% RH"
+      critical: true|false
+
+effectivity:
+  msn_range: "ALL"
+  config: "ALL"
+  
+approvals:
+  - authority: "Structures Engineering"
+    status: "Released"
+    date: "YYYY-MM-DD"
+  - authority: "Quality Assurance"
+    status: "Released"
+    date: "YYYY-MM-DD"
+
+traceability:
+  crossrefs:
+    - "ATA-20: Standard Practices"
+  amm_reference: "AMM XX-XX-XX"
+  srm_reference: "SRM XX-XX-XX"
+  regulatory_basis:
+    - "14 CFR §43.13"
+
+quality_requirements:
+  inspector_sign_off_required: true|false
+  quality_stamp_required: true|false
+  photographic_documentation: true|false
+  test_records_required: true|false
+  
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "CALCULATE_ACTUAL_SHA256_HASH"

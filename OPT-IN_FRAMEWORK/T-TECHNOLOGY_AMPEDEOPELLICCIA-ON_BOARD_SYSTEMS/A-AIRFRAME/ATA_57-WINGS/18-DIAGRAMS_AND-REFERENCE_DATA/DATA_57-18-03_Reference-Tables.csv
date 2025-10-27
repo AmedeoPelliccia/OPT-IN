@@ -1,0 +1,6 @@
+Table_Name,Parameter,Value,Unit,Reference
+Wing_Geometry,Span,40.0,m,Design_Drawing_001
+Wing_Geometry,Area,250.0,m2,Design_Drawing_001
+Wing_Geometry,Aspect_Ratio,6.4,dimensionless,Design_Drawing_001
+Load_Factors,Limit_Positive,2.5,g,25.337
+Load_Factors,Limit_Negative,-1.0,g,25.337

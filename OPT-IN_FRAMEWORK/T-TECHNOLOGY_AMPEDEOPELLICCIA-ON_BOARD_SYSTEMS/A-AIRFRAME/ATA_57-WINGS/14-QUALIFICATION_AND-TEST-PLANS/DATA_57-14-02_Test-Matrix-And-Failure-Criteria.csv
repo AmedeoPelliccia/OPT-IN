@@ -1,0 +1,4 @@
+Test_ID,Load_Case,Load_Factor,Duration,Success_Criteria,Reference
+WT-01,Symmetric_Pull_Up,2.5g,Sustained,No_permanent_deformation,25.337
+WT-02,Ultimate_Load,3.75g,3_seconds,No_failure,25.305
+WT-03,Fatigue,Variable,2xDSG,No_cracks>critical_size,25.571

@@ -1,0 +1,3 @@
+Spoiler_Number,Position,Deflection_Deg,Deploy_Time_Sec,Retract_Time_Sec,Sequence_Priority
+Spoiler_1,Inboard,45,2.0,3.0,1
+Spoiler_2,Mid,45,2.0,3.0,2

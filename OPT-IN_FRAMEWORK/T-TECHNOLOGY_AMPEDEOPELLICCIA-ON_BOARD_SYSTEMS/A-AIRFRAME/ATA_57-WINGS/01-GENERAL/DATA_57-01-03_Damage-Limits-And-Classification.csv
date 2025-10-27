@@ -1,0 +1,36 @@
+Component,Location,Damage_Type,Material,Max_Allowable_Length_mm,Max_Allowable_Area_mm2,Max_Allowable_Depth_mm,Action_Required,Time_Limit_FH,Inspection_Method,Reference
+Spar Cap,Inboard,Crack,Al-7075-T6,25.4,N/A,N/A,Repair before next flight,0,Eddy Current,§25.571
+Spar Cap,Midspan,Crack,Al-7075-T6,12.7,N/A,N/A,Repair within 50 FH,50,Eddy Current,DTE-WING-001
+Spar Cap,Outboard,Crack,Al-7075-T6,25.4,N/A,N/A,Repair within 100 FH,100,Eddy Current,DTE-WING-001
+Spar Web,Any,Crack,Al-2024-T3,50.8,N/A,N/A,Repair within 200 FH,200,Visual/Eddy Current,SRM 57-10-01
+Rib,Any,Crack,Al-2024-T3,76.2,N/A,N/A,Repair next scheduled maint,N/A,Visual,SRM 57-10-02
+Upper Skin,Fuel Tank Area,Crack,Al-2024-T3,12.7,N/A,N/A,Repair before next flight,0,Dye Penetrant,Fuel leak risk
+Upper Skin,Non-Fuel Area,Crack,Al-2024-T3,25.4,N/A,N/A,Repair within 100 FH,100,Visual,SRM 57-10-03
+Lower Skin,Fuel Tank Area,Crack,Al-2024-T3,12.7,N/A,N/A,Repair before next flight,0,Dye Penetrant,Fuel leak risk
+Lower Skin,Non-Fuel Area,Crack,Al-2024-T3,50.8,N/A,N/A,Repair within 200 FH,200,Visual,SRM 57-10-04
+Composite Skin,Any,Delamination,CFRP,N/A,645.2,N/A,Repair within 100 FH,100,Ultrasonic C-scan,1 inch diameter limit
+Composite Skin,Any,Impact Damage,CFRP,N/A,1290.3,3.0,Repair within 50 FH,50,Visual + C-scan,2 inch diameter limit
+Leading Edge,Slat Area,Dent,Al-2024-T3,N/A,N/A,1.5,Repair next scheduled maint,N/A,Visual,Cosmetic damage
+Leading Edge,Fixed Section,Dent,Al-2024-T3,N/A,N/A,3.0,Monitor next inspection,N/A,Visual,No sharp edges
+Trailing Edge,Any,Crack,Al-2024-T3,25.4,N/A,N/A,Repair within 100 FH,100,Visual,SRM 57-10-05
+Aileron,Hinge Line,Crack,Al-7075-T6,6.4,N/A,N/A,Replace component,0,Magnetic Particle,Flight control critical
+Aileron,Non-Critical,Crack,Al-2024-T3,12.7,N/A,N/A,Repair within 50 FH,50,Visual,SRM 57-10-06
+Flap,Track Support,Crack,Steel 4340,3.2,N/A,N/A,Replace component,0,Magnetic Particle,High load area
+Flap,Panel,Crack,Al-2024-T3,25.4,N/A,N/A,Repair within 100 FH,100,Visual,SRM 57-10-07
+Slat,Track Support,Crack,Steel 4340,3.2,N/A,N/A,Replace component,0,Magnetic Particle,High load area
+Slat,Panel,Crack,Al-2024-T3,25.4,N/A,N/A,Repair within 100 FH,100,Visual,SRM 57-10-08
+Spoiler,Hinge,Crack,Al-7075-T6,6.4,N/A,N/A,Replace component,0,Magnetic Particle,Flight control critical
+Spoiler,Panel,Crack,Al-2024-T3,25.4,N/A,N/A,Repair within 100 FH,100,Visual,SRM 57-10-09
+Wing Root Fitting,Any,Crack,Ti-6Al-4V,1.6,N/A,N/A,Replace component,0,Ultrasonic + Fluorescent Penetrant,Critical attachment
+Pylon Attach Fitting,Any,Crack,Steel 4340,1.6,N/A,N/A,Replace component,0,Magnetic Particle,Engine attach point
+Fastener Hole,Primary Structure,Elongation,Any,0.5,N/A,N/A,Repair or oversize fastener,N/A,Visual + Pin Gauge,Per SRM limits
+Fastener Hole,Secondary Structure,Elongation,Any,1.0,N/A,N/A,Oversize fastener acceptable,N/A,Visual + Pin Gauge,Per SRM limits
+Any,Fuel Tank,Corrosion Pitting,Al-2024-T3,N/A,N/A,0.25,Clean and treat,N/A,Visual,10% thickness loss
+Any,Fuel Tank,Corrosion Pitting,Al-2024-T3,N/A,N/A,0.50,Repair required,N/A,Visual + Ultrasonic,20% thickness loss
+Any,Non-Fuel,Corrosion Pitting,Al-2024-T3,N/A,N/A,0.50,Clean and treat,N/A,Visual,10% thickness loss
+Any,Non-Fuel,Corrosion Pitting,Al-2024-T3,N/A,N/A,1.00,Repair required,N/A,Visual + Ultrasonic,20% thickness loss
+Spar Cap,Any,Corrosion,Al-7075-T6,N/A,N/A,0.25,Engineering evaluation,0,Ultrasonic thickness,5% thickness loss
+Composite,Any,Moisture in Core,Honeycomb,N/A,N/A,N/A,Dry out or replace,N/A,Ultrasonic + Tap test,Water ingress detected
+Composite,Any,Fiber Breakage,CFRP,12.7,N/A,Through thickness,Repair within 50 FH,50,Visual + C-scan,Surface fiber damage
+LSP Mesh,Any,Damage,Copper Mesh,N/A,100.0,N/A,Repair before next flight,0,Continuity Test,Continuity loss > 2.5 mΩ
+Fuel Tank Sealant,Any,Crack/Separation,Polysulfide,N/A,N/A,N/A,Reseal before next flight,0,Visual + Pressure Test,Any fuel leak indication

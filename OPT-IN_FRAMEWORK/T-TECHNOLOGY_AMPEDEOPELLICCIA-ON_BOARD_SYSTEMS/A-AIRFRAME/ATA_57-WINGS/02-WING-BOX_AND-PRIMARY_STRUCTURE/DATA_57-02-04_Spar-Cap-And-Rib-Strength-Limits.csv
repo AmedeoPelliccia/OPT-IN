@@ -1,0 +1,6 @@
+Component,Location,Material,Ultimate_Tensile_Strength_MPa,Yield_Strength_MPa,Allowable_Stress_MPa,Safety_Factor,Reference
+Front Spar Cap,Root,Al-7075-T6,572,503,381,1.5,AMS 4123
+Front Spar Cap,Mid,Al-7075-T6,572,503,381,1.5,AMS 4123
+Rear Spar Cap,Root,Al-7075-T6,572,503,381,1.5,AMS 4123
+Main Rib,Station 100,Al-7075-T6,572,503,381,1.5,AMS 4123
+Rib Web,Typical,Al-2024-T3,483,345,322,1.5,AMS 4037

@@ -1,0 +1,3 @@
+Material,Type,Thickness_mm,Resistance_Target_mOhms,Max_Acceptable_mOhms,Application
+Copper_Mesh,Expanded,0.1,0.5,2.5,Wing_Leading_Edge
+Aluminum_Foil,Solid,0.05,1.0,2.5,Wing_Skin

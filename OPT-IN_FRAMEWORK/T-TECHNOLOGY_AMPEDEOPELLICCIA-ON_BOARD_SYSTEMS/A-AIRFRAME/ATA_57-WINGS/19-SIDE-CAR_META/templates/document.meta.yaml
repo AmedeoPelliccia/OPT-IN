@@ -1,0 +1,62 @@
+schema_version: "1.1"
+id: "TEMPLATE_DOCUMENT_META"
+document:
+  type: "[DESC|PROC|DATA|TESTPLAN|DIAG|EXAMPLE]"
+  title: "Document Title"
+  ata_chapter: "57"
+  ata_section: "XX"
+  ata_subject: "YY"
+  revision: "1.0.0"
+  effective_date: "YYYY-MM-DD"
+  
+effectivity:
+  msn_range: "MSN-XXX to MSN-YYY or ALL"
+  config: "Standard|Extended Range|High Capacity|ALL"
+  modification_state: "Pre-MOD-XXX|Post-MOD-XXX|N/A"
+  scope: "Fleet-Wide|Specific Aircraft"
+
+authorship:
+  author: "Author Name"
+  author_org: "Structures Engineering|M&P Engineering|Quality"
+  creation_date: "YYYY-MM-DD"
+  
+approvals:
+  - authority: "Structures Engineering"
+    approver: "Name"
+    status: "Draft|In Review|Approved|Released"
+    date: "YYYY-MM-DD"
+  - authority: "Airworthiness Engineering"
+    approver: "Name"
+    status: "Draft|In Review|Approved|Released"
+    date: "YYYY-MM-DD"
+  - authority: "Quality Assurance"
+    approver: "Name"
+    status: "Draft|In Review|Approved|Released"
+    date: "YYYY-MM-DD"
+
+traceability:
+  crossrefs:
+    - "ATA-XX: Description"
+  supersedes: "Previous document ID or N/A"
+  related_documents:
+    - "Related document ID"
+  regulatory_basis:
+    - "14 CFR §25.XXX"
+    - "EASA CS-25.XXX"
+
+change_history:
+  - revision: "1.0.0"
+    date: "YYYY-MM-DD"
+    description: "Initial Release"
+    approved_by: "Name"
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "CALCULATE_ACTUAL_SHA256_HASH"
+  
+review_schedule:
+  next_review_date: "YYYY-MM-DD"
+  review_interval_months: 12
+  
+metadata_version: "1.0"

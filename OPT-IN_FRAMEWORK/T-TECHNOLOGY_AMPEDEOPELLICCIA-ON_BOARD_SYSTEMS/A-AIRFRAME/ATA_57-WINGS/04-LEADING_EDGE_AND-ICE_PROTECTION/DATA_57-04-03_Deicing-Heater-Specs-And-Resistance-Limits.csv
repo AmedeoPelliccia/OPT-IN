@@ -1,0 +1,3 @@
+Zone,Heater_Type,Rated_Power_W,Resistance_Ohms,Tolerance_Pct,Max_Temp_C
+Slat_Inboard,Electrothermal,1200,15.0,5,180
+Slat_Outboard,Electrothermal,800,22.5,5,180

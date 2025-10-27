@@ -1,0 +1,290 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Wing Inspection Record Schema",
+  "description": "Schema for wing inspection records and NDT results",
+  "type": "object",
+  "required": [
+    "inspection_id",
+    "timestamp",
+    "msn",
+    "inspection_type",
+    "location",
+    "inspector",
+    "results"
+  ],
+  "properties": {
+    "inspection_id": {
+      "type": "string",
+      "description": "Unique inspection record identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of inspection"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number"
+    },
+    "inspection_type": {
+      "type": "string",
+      "enum": [
+        "GVI",
+        "DET",
+        "SPE",
+        "ultrasonic-c-scan",
+        "shearography",
+        "thermography",
+        "eddy-current",
+        "radiography",
+        "magnetic-particle",
+        "liquid-penetrant",
+        "visual-borescope"
+      ],
+      "description": "GVI=General Visual Inspection, DET=Detailed, SPE=Special Detailed"
+    },
+    "inspection_basis": {
+      "type": "string",
+      "enum": [
+        "scheduled-maintenance",
+        "pre-flight",
+        "post-flight",
+        "incident-investigation",
+        "engineering-directive",
+        "ad-compliance",
+        "sb-compliance"
+      ]
+    },
+    "location": {
+      "type": "object",
+      "required": ["wing"],
+      "properties": {
+        "wing": {"type": "string", "enum": ["left", "right", "both"]},
+        "station_start": {"type": "number"},
+        "station_end": {"type": "number"},
+        "spanwise_loc": {"type": "string"},
+        "spar_id": {"type": "string"},
+        "rib_id": {"type": "string"},
+        "component": {"type": "string"},
+        "zone": {"type": "string"}
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "required": ["id", "certification"],
+      "properties": {
+        "id": {"type": "string"},
+        "name": {"type": "string"},
+        "certification": {"type": "string", "description": "NDT certification level (e.g., Level II UT)"},
+        "cert_expiry": {"type": "string", "format": "date"}
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["equipment_id", "calibration_due"],
+        "properties": {
+          "equipment_id": {"type": "string"},
+          "description": {"type": "string"},
+          "manufacturer": {"type": "string"},
+          "model": {"type": "string"},
+          "serial_number": {"type": "string"},
+          "calibration_due": {"type": "string", "format": "date"},
+          "calibration_cert": {"type": "string"}
+        }
+      }
+    },
+    "inspection_procedure": {
+      "type": "object",
+      "properties": {
+        "procedure_ref": {"type": "string", "description": "Reference to inspection procedure document"},
+        "amm_ref": {"type": "string"},
+        "srm_ref": {"type": "string"},
+        "engineering_order": {"type": "string"}
+      }
+    },
+    "results": {
+      "type": "object",
+      "required": ["overall_result"],
+      "properties": {
+        "overall_result": {
+          "type": "string",
+          "enum": ["pass", "fail", "conditional", "inconclusive"]
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["finding_type", "location_detail"],
+            "properties": {
+              "finding_type": {
+                "type": "string",
+                "enum": [
+                  "crack",
+                  "delamination",
+                  "corrosion",
+                  "dent",
+                  "impact-damage",
+                  "wear",
+                  "disbond",
+                  "void",
+                  "inclusion",
+                  "porosity",
+                  "no-findings"
+                ]
+              },
+              "location_detail": {"type": "string"},
+              "severity": {"type": "string", "enum": ["minor", "major", "critical"]},
+              "measurements": {
+                "type": "object",
+                "properties": {
+                  "length_mm": {"type": "number"},
+                  "width_mm": {"type": "number"},
+                  "depth_mm": {"type": "number"},
+                  "area_mm2": {"type": "number"},
+                  "void_fraction_pct": {"type": "number"}
+                }
+              },
+              "acceptance_criteria": {
+                "type": "object",
+                "properties": {
+                  "limit_value": {"type": "number"},
+                  "limit_unit": {"type": "string"},
+                  "meets_criteria": {"type": "boolean"},
+                  "criteria_ref": {"type": "string"}
+                }
+              },
+              "disposition": {
+                "type": "string",
+                "enum": [
+                  "acceptable-no-action",
+                  "monitor-next-inspection",
+                  "repair-required",
+                  "engineering-review-required"
+                ]
+              }
+            }
+          }
+        },
+        "ndt_specific_results": {
+          "type": "object",
+          "properties": {
+            "ultrasonic": {
+              "type": "object",
+              "properties": {
+                "scan_type": {"type": "string", "enum": ["A-scan", "B-scan", "C-scan"]},
+                "frequency_mhz": {"type": "number"},
+                "void_fraction_pct": {"type": "number"},
+                "max_void_size_mm": {"type": "number"},
+                "delamination_count": {"type": "integer"},
+                "data_file_hash": {"type": "string"}
+              }
+            },
+            "shearography": {
+              "type": "object",
+              "properties": {
+                "loading_method": {"type": "string"},
+                "vacuum_level_mbar": {"type": "number"},
+                "defect_count": {"type": "integer"},
+                "data_file_hash": {"type": "string"}
+              }
+            },
+            "thermography": {
+              "type": "object",
+              "properties": {
+                "heating_method": {"type": "string"},
+                "temperature_delta_C": {"type": "number"},
+                "defect_count": {"type": "integer"},
+                "data_file_hash": {"type": "string"}
+              }
+            },
+            "eddy_current": {
+              "type": "object",
+              "properties": {
+                "probe_type": {"type": "string"},
+                "frequency_khz": {"type": "number"},
+                "crack_indications": {"type": "integer"},
+                "data_file_hash": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "required": ["acceptance_criteria_met"],
+      "properties": {
+        "acceptance_criteria_met": {"type": "boolean"},
+        "acceptance_criteria_ref": {"type": "string"},
+        "deviations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "deviation_description": {"type": "string"},
+              "engineering_disposition": {"type": "string"},
+              "ncr_number": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "environmental_conditions": {
+      "type": "object",
+      "properties": {
+        "temperature_C": {"type": "number"},
+        "humidity_pct": {"type": "number"},
+        "lighting_lux": {"type": "number"},
+        "surface_condition": {"type": "string"}
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "properties": {
+        "photo_hashes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "SHA-256 hashes of inspection photos"
+        },
+        "ndt_file_hashes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "SHA-256 hashes of NDT data files"
+        },
+        "report_ref": {"type": "string"},
+        "inspection_record": {"type": "string"}
+      }
+    },
+    "follow_up": {
+      "type": "object",
+      "properties": {
+        "follow_up_required": {"type": "boolean"},
+        "follow_up_action": {"type": "string"},
+        "follow_up_date": {"type": "string", "format": "date"},
+        "next_inspection_due": {"type": "string", "format": "date"},
+        "next_inspection_interval_fh": {"type": "number"},
+        "next_inspection_interval_fc": {"type": "number"}
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "work_order": {"type": "string"},
+        "related_inspections": {"type": "array", "items": {"type": "string"}},
+        "damage_record_id": {"type": "string"},
+        "repair_record_id": {"type": "string"},
+        "dpp_link": {"type": "string"}
+      }
+    },
+    "checksum": {
+      "type": "object",
+      "required": ["algorithm", "value"],
+      "properties": {
+        "algorithm": {"type": "string", "enum": ["sha256", "sha512"]},
+        "value": {"type": "string"}
+      }
+    }
+  }
+}

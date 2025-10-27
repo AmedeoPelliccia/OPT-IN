@@ -1,0 +1,4 @@
+Inspection_Type,Component,Interval_FH,Interval_FC,Method,Acceptance_Criteria,Reference
+GVI,Wing_Skins,500,N/A,Visual,No_visible_cracks,ATA_05
+DET,Spar_Caps,5000,N/A,Visual+Eddy_Current,No_indications>0.010in,SSI_Schedule
+SDI,Root_Fittings,12000,N/A,Fluorescent_Penetrant,No_indications,SSI_Schedule
