@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata52/damage-classification.schema.json",
+  "title": "Door Damage Classification",
+  "description": "Schema for classifying and categorizing door damage",
+  "type": "object",
+  "properties": {
+    "damageId": {
+      "type": "string",
+      "description": "Unique damage record identifier"
+    },
+    "inspectionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date damage was identified"
+    },
+    "aircraftRegistration": {
+      "type": "string",
+      "description": "Aircraft registration number"
+    },
+    "doorIdentifier": {
+      "type": "string",
+      "description": "Door identifier (e.g., FWD-L1, AFT-R2, CARGO-FWD)"
+    },
+    "damageCategory": {
+      "type": "string",
+      "enum": [
+        "STRUCTURAL_CRACK",
+        "CORROSION",
+        "IMPACT_DAMAGE",
+        "SEAL_DEGRADATION",
+        "HINGE_WEAR",
+        "LATCH_MALFUNCTION",
+        "ACTUATOR_FAILURE",
+        "ELECTRICAL_FAULT",
+        "PAINT_COATING_DAMAGE",
+        "FASTENER_ISSUES",
+        "COMPOSITE_DELAMINATION",
+        "LIGHTNING_STRIKE_DAMAGE"
+      ],
+      "description": "Primary category of damage"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["MINOR", "MAJOR", "CRITICAL"],
+      "description": "Damage severity level"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "zone": {
+          "type": "string",
+          "description": "Aircraft zone (e.g., ZONE-520)"
+        },
+        "stationRange": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "type": "number"
+            },
+            "to": {
+              "type": "number"
+            }
+          }
+        },
+        "component": {
+          "type": "string",
+          "description": "Specific component affected (e.g., upper hinge, seal segment 3)"
+        }
+      },
+      "required": ["component"]
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0
+        },
+        "depth": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["mm", "in"]
+        }
+      },
+      "description": "Physical dimensions of damage"
+    },
+    "allowableLimits": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "type": "string",
+          "description": "Reference to allowable limits document (e.g., DATA_52-01-03)"
+        },
+        "withinLimits": {
+          "type": "boolean",
+          "description": "Whether damage is within allowable limits"
+        },
+        "exceedanceDetails": {
+          "type": "string",
+          "description": "Details of how limits are exceeded (if applicable)"
+        }
+      },
+      "required": ["reference", "withinLimits"]
+    },
+    "actionRequired": {
+      "type": "string",
+      "enum": [
+        "MONITOR",
+        "REPAIR_NEXT_CHECK",
+        "REPAIR_BEFORE_FLIGHT",
+        "IMMEDIATE_GROUNDING",
+        "DEFER_PER_MEL"
+      ],
+      "description": "Required action based on damage assessment"
+    },
+    "melReference": {
+      "type": "string",
+      "description": "MEL (Minimum Equipment List) reference if deferral is applicable"
+    },
+    "ndtMethod": {
+      "type": "string",
+      "enum": ["VISUAL", "EDDY_CURRENT", "ULTRASONIC", "RADIOGRAPHIC", "DYE_PENETRANT", "THERMOGRAPHY"],
+      "description": "NDT method used for inspection"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": ["filename", "sha256"]
+      },
+      "description": "Photographic evidence of damage"
+    },
+    "reportedBy": {
+      "type": "string",
+      "description": "Name/license of person who reported damage"
+    },
+    "verifiedBy": {
+      "type": "string",
+      "description": "Name/license of inspector who verified damage"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional notes or observations"
+    }
+  },
+  "required": [
+    "damageId",
+    "inspectionDate",
+    "aircraftRegistration",
+    "doorIdentifier",
+    "damageCategory",
+    "severity",
+    "location",
+    "allowableLimits",
+    "actionRequired",
+    "reportedBy"
+  ]
+}

@@ -433,7 +433,7 @@ Operator-approved scheduled maintenance program. Consolidates MPD (ATA_01) and A
 - [`INDEX.meta.yaml`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/INDEX.meta.yaml)
 
 ## 01 — Maintenance Program Manual (MPM)
-- [`MPM_Master-Document_rev1.0.0_20280701.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/MPM_MASTER-DOCUMENT_REV100_20280701.md)
+- [`MPM_Master-Document_rev1.0.0_20250701.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/MPM_MASTER-DOCUMENT_REV100_20250701.md)
 - **01-A-CHECKS**
   - [`A-CHECK_Program-Definition.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/01-A-CHECKS/A-CHECK_PROGRAM-DEFINITION.md)
   - [`A-CHECK_Work-Package-A01.md`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/01-MAINTENANCE_PROGRAM_MANUAL/01-A-CHECKS/A-CHECK_WORK-PACKAGE-A01.md)
@@ -629,13 +629,13 @@ document:
   type: "PLAN"
   title: "Vibration and Noise Management Program Plan"
   revision: "1.0.0"
-  effective_date: "2028-04-15"
+  effective_date: "2025-04-15"
 effectivity:
   scope: "Program-Wide"
 approvals:
   - authority: "Airworthiness Engineering"
     status: "Released"
-    date: "2028-04-10"
+    date: "2025-04-10"
 traceability:
   crossrefs: ["ATA 61", "ATA 72", "ATA 45", "ATA 92", "ATA 95"]
 integrity:
@@ -669,3 +669,149 @@ instrumentation: { gse_id: "AP360-T020", calibration_due: "YYYY-MM-DD" }
 * ATA 03 (GSE tooling)
 * ATA 92 / 95 (for predictive maintenance and data traceability)
 * ATA 05 (for scheduled GVS integration)
+
+---
+
+## **T-TECHNOLOGY / A-AIRFRAME / ATA 52 – DOORS**
+
+This chapter provides comprehensive maintenance, repair, and qualification documentation for all door systems on AMPEL360 aircraft, including passenger, cargo, emergency evacuation, and blowout panels.
+
+### **Scope and Purpose**
+
+* **Passenger Doors:** Entry, service, and emergency exit doors with evacuation equipment
+* **Cargo Doors:** Main deck and bulk cargo doors with loading systems
+* **Emergency Systems:** Evacuation slides, rafts, and arming mechanisms
+* **Structural Elements:** Hinges, latches, seals, actuators, and lightning protection
+* **Safety Compliance:** FAA Part 25.783, 25.807, 25.809 and EASA CS-25 equivalents
+
+### **Audit-Ready Directory Structure**
+
+```
+/T-TECHNOLOGY/A-AIRFRAME
+└── /ATA_52-DOORS
+    ├── 00_README.md
+    ├── ci
+    │   └── validate_ata52.sh
+    ├── INDEX.meta.yaml
+    ├── schemas
+    │   ├── repair-record.schema.json
+    │   ├── damage-classification.schema.json
+    │   └── door-spec.schema.json
+    ├── /01-GENERAL
+    │   ├── DESC_52-01-01_Door-Taxonomy-and-Definitions.md
+    │   ├── DESC_52-01-02_Governance-Effectivity-And-Configuration.md
+    │   └── DATA_52-01-03_Damage-Limits.csv
+    ├── /02-INSPECTION_AND_TEST
+    │   ├── PROC_52-02-01_General-Visual-Inspection-GVI.md
+    │   ├── PROC_52-02-02_Pressure-Leak-Test-And-Seal-Verification.md
+    │   ├── PROC_52-02-03_NDT-Methods-For-Doors.md
+    │   └── DATA_52-02-04_Inspection-Intervals.csv
+    ├── /03-DOOR_REMOVAL_AND_INSTALLATION
+    │   ├── PROC_52-03-01_Door-Removal-And-Installation.md
+    │   └── PROC_52-03-02_Handle-And-Interior-Trim-Removal.md
+    ├── /04-HINGES_LATCHES_AND_MECHANISMS
+    │   ├── PROC_52-04-01_Hinge-And-Latch-Inspection.md
+    │   ├── PROC_52-04-02_Hinge-Pin-Replacement-And-Tolerances.md
+    │   └── DATA_52-04-03_Latch-Torque-Charts.csv
+    ├── /05-SEALED_SYSTEMS_AND_PRESSURE_INTEGRITY
+    │   ├── PROC_52-05-01_Seal-Replacement-And-Pressure-Test.md
+    │   ├── PROC_52-05-02_Heated-Seal-Service-And-Thermocouple-Placement.md
+    │   └── DATA_52-05-03_Seal-Specs-And-Cure-Schedules.csv
+    ├── /06-POWERED_SYSTEMS_AND_ELECTRICAL
+    │   ├── PROC_52-06-01_Actuator-Removal-Installation.md
+    │   ├── PROC_52-06-02_Electrical-Fault-Finding-And-EMC-Checks.md
+    │   └── DATA_52-06-03_Actuator-And-Controller-Specs.csv
+    ├── /07-EMERGENCY_EVACUATION
+    │   ├── PROC_52-07-01_Slide-Raft-Service-And-Functional-Test.md
+    │   ├── PROC_52-07-02_Arming-And-Disarming-Procedures.md
+    │   └── DATA_52-07-03_Slide-Service-Log.csv
+    ├── /08-CARGO_DOORS_AND_BLOWOUT_PANELS
+    │   ├── PROC_52-08-01_Cargo-Door-Operation-And-Load-Test.md
+    │   ├── PROC_52-08-02_Blowout-Panel-Inspection-And-Repair.md
+    │   └── DATA_52-08-03_Cargo-Sill-Load-Limits.csv
+    ├── /09-LIGHTNING_STRIKE_PROTECTION
+    │   ├── PROC_52-09-01_LSP-Restoration-And-Continuity-Test.md
+    │   └── DATA_52-09-02_LSP-Materials-And-Resistance-Limits.csv
+    ├── /10-REPAIR_GUIDELINES
+    │   ├── PROC_52-10-01_Metallic-Bolted-Repair-For-Doors.md
+    │   ├── PROC_52-10-02_Composite-Door-Scarf-Repair-Reference-ATA51.md
+    │   └── DATA_52-10-03_Approved-Repair-Materials.csv
+    ├── /11-QUALIFICATION_AND_TEST_PLANS
+    │   ├── TESTPLAN_52-11-01_Door-Qualification-And-Certification-Plan.md
+    │   └── DATA_52-11-02_Test-Matrix.csv
+    ├── /12-MATERIALS_M_AND_P_TRACEABILITY
+    │   ├── DATA_52-12-01_Door-Material-And-Fastener-Specs.csv
+    │   └── PROC_52-12-02_M&P-Traceability-And-CofC.md
+    ├── /13-NONCONFORMANCE_AND-DEVIATION
+    │   ├── PROC_52-13-01_Nonconformance-Handling-And-Engineering-Disposition.md
+    │   └── DATA_52-13-02_NCR-Template.csv
+    ├── /14-DIAGRAMS_AND_REFERENCE_DATA
+    │   ├── DIAG_52-14-01_Door-Exploded-Views.pdf
+    │   ├── DIAG_52-14-02_Hinge-And-Latch-Detail-DWG.dwg
+    │   └── DATA_52-14-03_Reference-Tables.csv
+    ├── /15-SIDE-CAR_META
+    │   └── templates
+    │       ├── document.meta.yaml
+    │       └── proc_sidecar_template.meta.yaml
+    └── /16-EXAMPLES_AND_RECORDS
+        ├── EXAMPLE_52-16-01_Repair-Record-Example.json
+        ├── EXAMPLE_52-16-02_Pressure-Test-Log.csv
+        └── EXAMPLE_52-16-03_NDT-Report-Sample.pdf
+```
+
+### **Key Requirements**
+
+* **Metadata Sidecars:** Every PROC and DATA file must have a matching `.meta.yaml` sidecar in `/15-SIDE-CAR_META/templates` or alongside the document.
+* **Door-Specific Schema Fields:** `schemas/repair-record.schema.json` includes:
+  - `sealType`: Type of door seal (silicone, inflatable, heated)
+  - `leakageCFM`: Measured leakage in cubic feet per minute
+  - `latchTorque`: Torque specifications and measurements
+  - `actuatorHours`: Operating hours on powered door actuators
+  - `slideSerial`: Serial number of evacuation slide/raft
+  - `ndtFileHashes`: SHA-256 hashes of NDT inspection files
+* **Cross-References:** ATA-20 (standard practices), ATA-51 (structural repairs), and effectivity by MSN/config/serial ranges documented in `INDEX.meta.yaml`
+
+### **Document Naming Convention**
+
+All files follow the pattern:
+```
+{TYPE}_{ATA}-{SECTION}-{SEQ}_{Title}_rev{X.Y.Z}_{YYYYMMDD}.{ext}
+```
+
+Examples:
+- `PROC_52-02-01_General-Visual-Inspection-GVI_rev1.0.0_20251027.md`
+- `DATA_52-04-03_Latch-Torque-Charts_rev1.0.0_20251027.csv`
+
+### **Validation**
+
+Run the CI validation script to ensure compliance:
+```bash
+./ci/validate_ata52.sh
+```
+
+This validates:
+- Filename compliance with naming conventions
+- Presence of required `.meta.yaml` sidecars
+- JSON schema validity
+- Cross-reference integrity (ATA 20, ATA 51)
+- Door-specific fields in repair-record schema
+
+### **Regulatory Basis**
+
+- **FAA Part 25.783:** Door design and operation
+- **FAA Part 25.807:** Emergency exit requirements
+- **FAA Part 25.809:** Emergency exit arrangement
+- **CS-25 (EASA):** European equivalents
+- **AC 25.783-1:** Advisory circular on door design and test criteria
+
+### **Cross-References**
+
+* **ATA 20:** Standard Practices — Airframe (torque, fasteners, sealant)
+* **ATA 51:** Standard Practices and Structures — General (repairs)
+* **ATA 21:** Air Conditioning and Pressurization (seal testing)
+* **ATA 24:** Electrical Power (powered door systems)
+* **ATA 26:** Fire Protection (cargo door suppression)
+* **ATA 50:** Cargo and Accessory Compartments (integration)
+* **ATA 53:** Fuselage (structural attachment)
+
+---

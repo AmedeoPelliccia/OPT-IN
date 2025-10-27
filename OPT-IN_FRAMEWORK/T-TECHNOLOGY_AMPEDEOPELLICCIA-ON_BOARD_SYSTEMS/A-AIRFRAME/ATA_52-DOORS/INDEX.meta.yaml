@@ -1,0 +1,151 @@
+schema_version: "1.1"
+id: "ATA_52_INDEX_rev1.0.0_20251027"
+chapter: "ATA 52 - DOORS"
+governance:
+  owner_role: "Structures Engineering"
+  review_board: ["Airworthiness Engineering", "Systems Engineering", "Safety", "Quality Assurance"]
+effectivity:
+  msn: "ALL"
+  configurations: ["BASELINE", "CARGO", "VIP"]
+  serial_ranges:
+    - start: "MSN-001"
+      end: "MSN-999"
+traceability:
+  crossrefs: 
+    - "ATA 20"  # Standard practices for torque, fasteners, sealant application
+    - "ATA 51"  # Composite and metallic structural repairs
+    - "ATA 21"  # Pressurization and seal testing
+    - "ATA 24"  # Electrical power for powered doors
+    - "ATA 26"  # Fire protection for cargo doors
+    - "ATA 50"  # Cargo compartment integration
+    - "ATA 53"  # Fuselage structural attachment
+  source_documents:
+    - "AMM-52-00-00"
+    - "SRM-52-00-00"
+    - "FAA Part 25.783"
+    - "FAA Part 25.807"
+    - "FAA Part 25.809"
+    - "CS-25.783"
+    - "AC 25.783-1"
+integrity:
+  checksum_algorithm: "sha256"
+files:
+  # Schemas
+  - id: "schemas/repair-record.schema.json"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "schemas/damage-classification.schema.json"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "schemas/door-spec.schema.json"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 01-GENERAL
+  - id: "DESC_52-01-01_Door-Taxonomy-and-Definitions_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DESC_52-01-02_Governance-Effectivity-And-Configuration_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-01-03_Damage-Limits_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 02-INSPECTION_AND_TEST
+  - id: "PROC_52-02-01_General-Visual-Inspection-GVI_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-02-02_Pressure-Leak-Test-And-Seal-Verification_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-02-03_NDT-Methods-For-Doors_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-02-04_Inspection-Intervals_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 03-DOOR_REMOVAL_AND_INSTALLATION
+  - id: "PROC_52-03-01_Door-Removal-And-Installation_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-03-02_Handle-And-Interior-Trim-Removal_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 04-HINGES_LATCHES_AND_MECHANISMS
+  - id: "PROC_52-04-01_Hinge-And-Latch-Inspection_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-04-02_Hinge-Pin-Replacement-And-Tolerances_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-04-03_Latch-Torque-Charts_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 05-SEALED_SYSTEMS_AND_PRESSURE_INTEGRITY
+  - id: "PROC_52-05-01_Seal-Replacement-And-Pressure-Test_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-05-02_Heated-Seal-Service-And-Thermocouple-Placement_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-05-03_Seal-Specs-And-Cure-Schedules_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 06-POWERED_SYSTEMS_AND_ELECTRICAL
+  - id: "PROC_52-06-01_Actuator-Removal-Installation_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-06-02_Electrical-Fault-Finding-And-EMC-Checks_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-06-03_Actuator-And-Controller-Specs_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 07-EMERGENCY_EVACUATION
+  - id: "PROC_52-07-01_Slide-Raft-Service-And-Functional-Test_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-07-02_Arming-And-Disarming-Procedures_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-07-03_Slide-Service-Log_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 08-CARGO_DOORS_AND_BLOWOUT_PANELS
+  - id: "PROC_52-08-01_Cargo-Door-Operation-And-Load-Test_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-08-02_Blowout-Panel-Inspection-And-Repair_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-08-03_Cargo-Sill-Load-Limits_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 09-LIGHTNING_STRIKE_PROTECTION
+  - id: "PROC_52-09-01_LSP-Restoration-And-Continuity-Test_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-09-02_LSP-Materials-And-Resistance-Limits_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 10-REPAIR_GUIDELINES
+  - id: "PROC_52-10-01_Metallic-Bolted-Repair-For-Doors_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-10-02_Composite-Door-Scarf-Repair-Reference-ATA51_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-10-03_Approved-Repair-Materials_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 11-QUALIFICATION_AND_TEST_PLANS
+  - id: "TESTPLAN_52-11-01_Door-Qualification-And-Certification-Plan_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-11-02_Test-Matrix_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 12-MATERIALS_M_AND_P_TRACEABILITY
+  - id: "DATA_52-12-01_Door-Material-And-Fastener-Specs_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "PROC_52-12-02_M&P-Traceability-And-CofC_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 13-NONCONFORMANCE_AND-DEVIATION
+  - id: "PROC_52-13-01_Nonconformance-Handling-And-Engineering-Disposition_rev1.0.0_20251027.md"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-13-02_NCR-Template_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 14-DIAGRAMS_AND_REFERENCE_DATA
+  - id: "DIAG_52-14-01_Door-Exploded-Views_rev1.0.0_20251027.pdf"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DIAG_52-14-02_Hinge-And-Latch-Detail-DWG_rev1.0.0_20251027.dwg"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "DATA_52-14-03_Reference-Tables_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  
+  # 16-EXAMPLES_AND_RECORDS
+  - id: "EXAMPLE_52-16-01_Repair-Record-Example_rev1.0.0_20251027.json"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "EXAMPLE_52-16-02_Pressure-Test-Log_rev1.0.0_20251027.csv"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"
+  - id: "EXAMPLE_52-16-03_NDT-Report-Sample_rev1.0.0_20251027.pdf"
+    sha256: "REPLACE_WITH_ACTUAL_SHA256"

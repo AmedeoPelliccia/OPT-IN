@@ -1,0 +1,41 @@
+{
+  "recordId": "RR-52-2025-001",
+  "date": "2025-10-15",
+  "aircraftRegistration": "N360AP",
+  "msn": "MSN-001",
+  "doorIdentifier": "FWD-L1",
+  "doorType": "PASSENGER",
+  "repairType": "SEAL",
+  "damageDescription": "Pressure seal degradation found during routine inspection. Seal showing signs of compression set and minor cracking in segment 3.",
+  "repairProcedure": "PROC_52-05-01_Seal-Replacement-And-Pressure-Test_rev1.0.0_20251027",
+  "sealType": "Silicone inflatable seal P/N AP360-52-001-05",
+  "leakageCFM": 0.12,
+  "latchTorque": {
+    "value": 45,
+    "unit": "in-lb",
+    "specification": "40-50 in-lb per DATA_52-04-03"
+  },
+  "actuatorHours": null,
+  "slideSerial": "ESS-52-001-2025",
+  "ndtFileHashes": [
+    {
+      "filename": "door-seal-inspection-20251015.pdf",
+      "hashAlgorithm": "sha256",
+      "hashValue": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+    }
+  ],
+  "materialsUsed": [
+    {
+      "partNumber": "AP360-52-001-05",
+      "description": "Door pressure seal - silicone inflatable",
+      "quantity": 1,
+      "batchLot": "LOT-2025-Q3-052",
+      "certificateOfConformance": "COC-2025-1234"
+    }
+  ],
+  "mechanicLicense": "A&P-123456",
+  "inspectorLicense": "IA-789012",
+  "approvalAuthority": "DER-AP360-001",
+  "returnToServiceDate": "2025-10-16",
+  "remarks": "Pressure test performed post-repair. Leakage rate 0.12 CFM, within acceptable limits (< 0.15 CFM). Aircraft returned to service."
+}
