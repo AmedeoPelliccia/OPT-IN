@@ -1,0 +1,13 @@
+Test_ID,Description,Method,Acceptance_Criteria,Report_Reference
+QUAL-54-001,"Ultimate Load Test (Pylon)",Static Test Rig,"No failure at 1.5x Limit Load cases (Gust, Thrust, Inertia)",STR-RPT-54-001
+QUAL-54-002,"Fan Blade Out (FBO) Test",Component Test Rig,"Containment of debris, pylon maintains structural integrity",STR-RPT-54-002
+QUAL-54-003,"Acoustic Fatigue Test (Nacelle)",Acoustic Chamber,"No cracking after 10 million cycles at max SPL",STR-RPT-54-003
+QUAL-54-004,"Thrust Reverser Endurance Test",Ground Test Bed,"5000 successful deployment cycles without failure",SYS-RPT-54-004
+QUAL-54-005,"Cold Temperature Soak",Environmental Chamber,"Functional at -55C, no material degradation",ENV-RPT-54-001
+QUAL-54-006,"Hot Temperature Soak",Environmental Chamber,"Functional at +70C, sealants remain effective",ENV-RPT-54-001
+QUAL-54-007,"Salt Fog Corrosion",ASTM B117 Chamber,"No corrosion after 1000 hours exposure",ENV-RPT-54-002
+QUAL-54-008,"Rain Erosion Test",Erosion Test Rig,"Coating maintains integrity per ASTM G73",ENV-RPT-54-003
+QUAL-54-009,"Damage Tolerance (Pylon)",Fatigue Test Rig,"2-lifetime crack growth demonstrated",DT-RPT-54-001
+QUAL-54-010,"Damage Tolerance (Mount)",Fatigue Test Rig,"Crack detected before critical size",DT-RPT-54-002
+QUAL-54-011,"Lightning Strike Test",High Voltage Lab,"No damage to structure, LSP effective",LSP-RPT-54-001
+QUAL-54-012,"Vibration Survey (GVS)",Aircraft Ground Test,"Modal frequencies within predicted range",VIB-RPT-54-001

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nacelle/Pylon Repair Record Schema",
+  "type": "object",
+  "required": ["record_id", "timestamp_utc", "msn", "location", "repair_procedure_ref", "inspections"],
+  "properties": {
+    "record_id": { "type": "string" },
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "msn": { "type": "string" },
+    "location": {
+      "type": "object",
+      "properties": {
+        "part_number": { "type": "string" },
+        "serial_number": { "type": "string" },
+        "station": { "type": "string" }
+      }
+    },
+    "attachment_fitting_ids": { "type": "array", "items": { "type": "string" } },
+    "final_mount_torque_nm": { "type": "number" },
+    "actuator_hours_at_repair": { "type": "number" },
+    "reverser_serial_number": { "type": "string" },
+    "lsp_continuity_resistance_mohms": { "type": "number" },
+    "repair_procedure_ref": { "type": "string" },
+    "inspections": { "type": "array", "items": { "type": "object", "properties": { "type": { "enum": ["NDT", "Visual"] }, "report_hash": { "type": "string" } } } }
+  }
+}

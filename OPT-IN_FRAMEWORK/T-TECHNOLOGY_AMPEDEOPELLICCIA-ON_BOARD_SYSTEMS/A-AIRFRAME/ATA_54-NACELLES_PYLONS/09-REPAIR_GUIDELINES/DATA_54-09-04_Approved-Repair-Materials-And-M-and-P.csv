@@ -1,0 +1,14 @@
+Material_Category,Material_Specification,Trade_Name,Application,Temp_Range_C,Qualification_Status,Notes
+Aluminum Sheet,AMS-QQ-A-250/12,Al 2024-T3 Bare,Core cowl doubler plates,-55 to 175,Qualified,Standard structural alloy
+Aluminum Sheet,AMS-QQ-A-250/24,Al 7075-T6 Clad,High-strength doubler plates,-55 to 175,Qualified,For high-stress areas
+Titanium Sheet,AMS 4911,Ti-6Al-4V,High-temp applications,-55 to 315,Qualified,Near engine hot areas
+CFRP Prepreg,BMS 8-276,IM7/8552,Fan cowl structural repair,-55 to 120,Qualified,Standard aero prepreg
+CFRP Prepreg,BMS 8-297,IM7/977-3,High-temp composite repair,-55 to 177,Qualified,For core cowl if CFRP
+Honeycomb Core,BMS 8-133,Aramid 4.0 pcf,Sandwich panel core,-55 to 120,Qualified,Acoustic panels
+Adhesive Film,BMS 5-101,FM 300-2,Composite bonding,-55 to 120,Qualified,Two-part film
+Sealant,BMS 5-95,PR-1782,Fuel tank sealing,-55 to 135,Qualified,Class B fuel sealant
+Fastener,NAS1919,Hi-Lok CRES,General structural fastening,-55 to 175,Qualified,Various diameters
+Fastener,NAS1352,Lockbolt titanium,High-load applications,-55 to 315,Qualified,Interference fit
+LSP Mesh,MIL-DTL-83420,Copper Mesh 80,Lightning protection,N/A,Qualified,For composite repairs
+Primer,MIL-PRF-23377,Zinc Chromate,Corrosion protection,-55 to 175,Qualified,Type I epoxy primer
+Paint,BMS 10-11,Polyurethane Topcoat,Final finish,-55 to 90,Qualified,Per color spec

@@ -1,0 +1,15 @@
+NCR_Number,Date,Aircraft_MSN,Component,Part_Number,Description,Severity,Disposition,Disposition_Date,Status
+NCR-54-001,YYYY-MM-DD,AMP360-XXX,Component Name,PNXXXXX,Brief description of nonconformance,Minor/Major/Critical,Use-as-is/Rework/Repair/Scrap,YYYY-MM-DD,Open/Closed
+,,,,,,,,,
+,,,,,,,,,
+Instructions:,,,,,,,,
+Fill in NCR_Number with sequential number (e.g. NCR-54-001),,,,,,,
+Date format: YYYY-MM-DD,,,,,,,,
+Aircraft_MSN: Manufacturer Serial Number,,,,,,,
+Component: Name of affected component,,,,,,,
+Part_Number: Component part number,,,,,,,
+Description: Detailed description of nonconformance,,,,,,,
+Severity: Select Minor Major or Critical,,,,,,,
+Disposition: Engineering decision (Use-as-is Rework Repair or Scrap),,,,,,
+Disposition_Date: Date Engineering provided disposition,,,,,,,
+Status: Open (pending action) or Closed (complete),,,,,,,

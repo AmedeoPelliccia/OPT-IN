@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nacelle Specification Schema",
+  "type": "object",
+  "required": ["part_number", "serial_number", "material", "weight_kg"],
+  "properties": {
+    "part_number": { "type": "string" },
+    "serial_number": { "type": "string" },
+    "material": { "type": "string" },
+    "weight_kg": { "type": "number" },
+    "acoustic_treatment": { "type": "boolean" },
+    "coating_type": { "type": "string" }
+  }
+}

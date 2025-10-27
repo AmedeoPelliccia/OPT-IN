@@ -1,0 +1,41 @@
+schema_version: "1.1"
+id: "DOCUMENT_ID_PLACEHOLDER"
+document:
+  type: "PROC|DESC|DATA|DIAG|TESTPLAN"
+  title: "Document Title"
+  revision: "1.0.0"
+  effective_date: "YYYY-MM-DD"
+  status: "Draft|Released|Superseded"
+author:
+  name: "Author Name"
+  role: "Engineering Role"
+  organization: "Propulsion Integration Engineering"
+effectivity:
+  scope: "All Aircraft|Block A|Specific MSN"
+  msn_range: ["AMP360-001", "AMP360-050"]
+approvals:
+  - authority: "Structures Engineering"
+    approver: "Name TBD"
+    status: "Pending|Approved|Rejected"
+    date: "YYYY-MM-DD"
+  - authority: "Airworthiness Engineering"
+    approver: "Name TBD"
+    status: "Pending|Approved|Rejected"
+    date: "YYYY-MM-DD"
+traceability:
+  crossrefs: ["ATA 20", "ATA 51", "ATA 71"]
+  supersedes: "Previous document ID (if applicable)"
+  related_docs: ["List of related document IDs"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<computed sha256 hash of document>"
+  digital_signature:
+    signer: "Name"
+    timestamp: "YYYY-MM-DDTHH:MM:SSZ"
+    signature: "<digital signature>"
+revision_history:
+  - revision: "1.0.0"
+    date: "YYYY-MM-DD"
+    author: "Name"
+    changes: "Initial release"

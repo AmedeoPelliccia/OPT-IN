@@ -1,0 +1,11 @@
+DWG Placeholder File
+This file represents a CAD drawing in DWG format.
+In production, this would contain:
+- Pylon structure assembly drawings
+- Engine mount fitting details
+- Attachment interface drawings
+- Bill of materials
+- Installation specifications
+
+File format: AutoCAD DWG
+Drawing Numbers: AP360-54-DWG-001 through AP360-54-DWG-050

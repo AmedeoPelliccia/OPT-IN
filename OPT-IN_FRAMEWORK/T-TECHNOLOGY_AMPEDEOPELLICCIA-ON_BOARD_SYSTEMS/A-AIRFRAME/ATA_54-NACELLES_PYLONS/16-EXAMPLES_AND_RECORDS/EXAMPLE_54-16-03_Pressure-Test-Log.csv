@@ -1,0 +1,6 @@
+Test_Date,Test_ID,Aircraft_MSN,Component,Test_Type,Test_Pressure_PSI,Test_Duration_Min,Leak_Rate_cc_min,Result,Inspector,Notes
+2025-10-27,PRESS-54-001,AMP360-012,Thrust Reverser Actuator Left,Hydraulic Pressure,3000,30,0.0,Pass,John Smith,No leaks detected
+2025-10-27,PRESS-54-002,AMP360-012,Thrust Reverser Actuator Right,Hydraulic Pressure,3000,30,0.0,Pass,John Smith,No leaks detected
+2025-10-27,PRESS-54-003,AMP360-012,Fuel Supply Line,Fuel System Pressure,600,15,0.0,Pass,Jane Doe,Pressure held steady
+2025-10-27,PRESS-54-004,AMP360-012,Bleed Air Duct,Pneumatic Pressure,450,20,2.5,Pass,Jane Doe,Minor leak at joint within tolerance
+2025-10-27,PRESS-54-005,AMP360-012,Hydraulic Return Line,Hydraulic Pressure,500,15,0.0,Pass,Mike Johnson,System integrity verified

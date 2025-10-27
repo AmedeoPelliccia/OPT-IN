@@ -1,0 +1,14 @@
+Component,Part_Number,Material,Operating_Pressure_PSI,Stroke_mm,Seal_Type,Service_Life_Cycles,Notes
+Actuator Left Primary,AP360-54-4001,Steel/Al,3000,380,Nitrile,50000,Dual-channel control
+Actuator Left Secondary,AP360-54-4002,Steel/Al,3000,380,Nitrile,50000,Backup system
+Actuator Right Primary,AP360-54-4003,Steel/Al,3000,380,Nitrile,50000,Dual-channel control
+Actuator Right Secondary,AP360-54-4004,Steel/Al,3000,380,Nitrile,50000,Backup system
+Translating Cowl,AP360-54-4101,Al 2024-T3,N/A,N/A,Silicone Seal,N/A,Weight 185 kg
+Blocker Door Left,AP360-54-4201,CFRP,N/A,N/A,Silicone Seal,N/A,Weight 22 kg
+Blocker Door Right,AP360-54-4202,CFRP,N/A,N/A,Silicone Seal,N/A,Weight 22 kg
+Cascade Vane Set,AP360-54-4301,Titanium,N/A,N/A,N/A,N/A,28 vanes per set
+Stow Lock Left,AP360-54-4401,Steel,N/A,N/A,N/A,100000,Spring loaded
+Stow Lock Right,AP360-54-4402,Steel,N/A,N/A,N/A,100000,Spring loaded
+Deploy Lock Left,AP360-54-4501,Steel,N/A,N/A,N/A,100000,Spring loaded
+Deploy Lock Right,AP360-54-4502,Steel,N/A,N/A,N/A,100000,Spring loaded
+Position Sensor LVDT,MS28024-2,Steel/Electronics,N/A,N/A,N/A,N/A,Redundant channels

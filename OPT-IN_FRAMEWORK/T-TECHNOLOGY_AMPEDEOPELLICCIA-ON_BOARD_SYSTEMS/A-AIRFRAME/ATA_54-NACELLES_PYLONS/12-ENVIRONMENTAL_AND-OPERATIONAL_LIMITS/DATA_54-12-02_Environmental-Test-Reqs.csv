@@ -1,0 +1,11 @@
+Test_Type,Test_Spec,Temperature_C,Humidity_Percent,Duration_Hours,Acceptance_Criteria,Reference
+Cold Soak,MIL-STD-810,- 55,N/A,24,No degradation of materials or function,ENV-RPT-54-001
+Hot Soak,MIL-STD-810,+70,N/A,24,No degradation of materials or function,ENV-RPT-54-001
+Thermal Cycling,MIL-STD-810,-55 to +70,N/A,50 cycles,No cracking or delamination,ENV-RPT-54-001
+High Humidity,MIL-STD-810,+50,95,500,No corrosion or fungus growth,ENV-RPT-54-002
+Salt Fog,ASTM B117,+35,100 (salt fog),1000,Corrosion rating < 8 per ASTM D1654,ENV-RPT-54-002
+Rain Erosion,ASTM G73,+20,Rain simulation,Per spec,Coating remains effective,ENV-RPT-54-003
+Icing,ARP5903,0 to -20,Supercooled droplets,Per spec,Anti-ice system effective,ENV-RPT-54-004
+Sand/Dust,MIL-STD-810,+50,Dust cloud,6,No degradation of seals or bearings,ENV-RPT-54-005
+Vibration,RTCA DO-160,N/A,N/A,Per spec,No loosening of fasteners,ENV-RPT-54-006
+Acoustic,ARP5903,+20,N/A,10M cycles,No structural degradation,STR-RPT-54-003

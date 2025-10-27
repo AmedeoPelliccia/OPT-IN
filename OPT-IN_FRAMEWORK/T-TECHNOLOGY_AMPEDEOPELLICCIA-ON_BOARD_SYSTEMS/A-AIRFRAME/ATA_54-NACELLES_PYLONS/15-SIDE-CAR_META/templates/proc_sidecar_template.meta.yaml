@@ -1,0 +1,48 @@
+schema_version: "1.1"
+id: "PROC_ID_PLACEHOLDER"
+document:
+  type: "PROC"
+  title: "Procedure Title"
+  revision: "1.0.0"
+  effective_date: "YYYY-MM-DD"
+  status: "Released"
+procedure:
+  safety_critical: true|false
+  certification_required: true|false
+  training_required: true|false
+  estimated_duration_hours: 0.0
+  personnel_required: 1
+  tool_requirements:
+    - tool_id: "TOOL-001"
+      description: "Tool description"
+      calibration_required: true|false
+  material_requirements:
+    - material_id: "MAT-54-001"
+      description: "Material description"
+      quantity: "As required"
+effectivity:
+  scope: "All Aircraft"
+  msn_range: ["AMP360-001", "AMP360-050"]
+approvals:
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "YYYY-MM-DD"
+  - authority: "Engineering"
+    status: "Approved"
+    date: "YYYY-MM-DD"
+traceability:
+  crossrefs: ["ATA 20", "ATA 51"]
+  repair_record_schema: "/schemas/repair-record.schema.json"
+  damage_classification_schema: "/schemas/damage-classification.schema.json"
+quality:
+  qa_inspection_required: true|false
+  qa_hold_points: ["Step numbers requiring QA hold"]
+  acceptance_criteria_ref: "Section in procedure"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<sha256 hash>"
+revision_history:
+  - revision: "1.0.0"
+    date: "YYYY-MM-DD"
+    changes: "Initial release"
