@@ -1,0 +1,4 @@
+ULD_Or_Device,Footprint_L_mm,Footprint_W_mm,Contact_Area_m2,Pad_Required_If_Pressure_Exceeds_kPa
+GPU_Cart,280,180,0.0504,900
+Pallet_Jack,100,50,0.0050,400
+Service_Cart,150,80,0.0120,600

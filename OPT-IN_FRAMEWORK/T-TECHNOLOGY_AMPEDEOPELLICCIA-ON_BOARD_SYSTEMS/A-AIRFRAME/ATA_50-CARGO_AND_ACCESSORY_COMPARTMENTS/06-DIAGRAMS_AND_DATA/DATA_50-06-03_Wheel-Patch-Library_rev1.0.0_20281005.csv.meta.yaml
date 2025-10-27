@@ -1,0 +1,17 @@
+schema_version: "1.1"
+id: "DATA_50-06-03_Wheel-Patch-Library_rev1.0.0_20281005"
+document:
+  type: "DATA"
+  title: "50-06-03: Wheel Patch Library for Ground Equipment"
+  revision: "1.0.0"
+  effective_date: "2028-10-05"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Floor damage from concentrated loads"]
+  criticality: "Medium"
+approvals:
+  - { authority: "Ground Operations", status: "Released", date: "2028-09-30" }
+traceability:
+  source_documents: ["GROUND-OPS-MANUAL", "FLOOR-LOAD-ANALYSIS"]
+  crossrefs: ["ATA 09"]
+integrity: { checksum: { algorithm: "sha256", value: "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1" } }

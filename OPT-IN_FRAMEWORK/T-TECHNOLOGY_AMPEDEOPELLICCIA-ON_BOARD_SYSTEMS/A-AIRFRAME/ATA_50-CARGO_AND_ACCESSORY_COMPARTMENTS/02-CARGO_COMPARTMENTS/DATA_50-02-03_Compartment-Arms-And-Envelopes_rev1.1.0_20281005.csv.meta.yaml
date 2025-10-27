@@ -1,0 +1,17 @@
+schema_version: "1.1"
+id: "DATA_50-02-03_Compartment-Arms-And-Envelopes_rev1.1.0_20281005"
+document:
+  type: "DATA"
+  title: "50-02-03: Compartment Arms and Envelopes"
+  revision: "1.1.0"
+  effective_date: "2028-10-05"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Incorrect CG calculation", "Overload condition"]
+  criticality: "Critical"
+approvals:
+  - { authority: "Weight & Balance Engineering", status: "Released", date: "2028-09-28" }
+traceability:
+  source_reports: ["WB-ANALYSIS-001", "CG-ENVELOPE-BWB-2028"]
+  crossrefs: ["ATA 08"]
+integrity: { checksum: { algorithm: "sha256", value: "1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b" } }

@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "ATA_50_INDEX_rev1.0.0_20280928"
+chapter: "ATA 50 - CARGO AND ACCESSORY COMPARTMENTS"
+governance:
+  owner_role: "Structures Engineering"
+  review_board: ["Weight & Balance", "Systems Engineering", "Safety"]
+traceability:
+  crossrefs: ["ATA 08", "ATA 21", "ATA 24", "ATA 26", "ATA 52"]
+integrity: { checksum_algorithm: "sha256" }

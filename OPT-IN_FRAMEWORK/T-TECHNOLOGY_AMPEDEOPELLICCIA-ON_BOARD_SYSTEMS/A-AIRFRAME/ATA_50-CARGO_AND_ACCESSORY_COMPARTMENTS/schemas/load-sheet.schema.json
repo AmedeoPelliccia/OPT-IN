@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata50/load-sheet.schema.json",
+  "title": "Cargo Load Sheet",
+  "type": "object",
+  "properties": {
+    "flightNumber": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "aircraftRegistration": {
+      "type": "string"
+    },
+    "loads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "compartmentId": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["kg", "lbs"]
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": ["compartmentId", "weight", "unit"]
+      }
+    },
+    "totalWeight": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cgPosition": {
+      "type": "object",
+      "properties": {
+        "longitudinal": {
+          "type": "number"
+        },
+        "lateral": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": ["flightNumber", "date", "aircraftRegistration", "loads"]
+}
