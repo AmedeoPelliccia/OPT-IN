@@ -65,19 +65,19 @@
     {
       "tool_id": "OVEN-COMPOSITE-01",
       "description": "Composite Cure Oven",
-      "calibration_due": "2025-10-27",
+      "calibration_due": "2026-10-27",
       "calibration_cert": "CAL-CERT-2025-001"
     },
     {
       "tool_id": "VACUUM-PUMP-02",
       "description": "Vacuum Pump System",
-      "calibration_due": "2025-10-27",
+      "calibration_due": "2026-10-27",
       "calibration_cert": "CAL-CERT-2025-002"
     },
     {
       "tool_id": "THERMOCOUPLE-SET-A",
       "description": "Type-K Thermocouples",
-      "calibration_due": "2025-10-27",
+      "calibration_due": "2026-10-27",
       "calibration_cert": "CAL-CERT-2025-003"
     }
   ],
