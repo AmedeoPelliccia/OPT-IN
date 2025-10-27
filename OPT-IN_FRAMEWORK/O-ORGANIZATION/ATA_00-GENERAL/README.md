@@ -57,6 +57,7 @@ It is the constitutional layer of the OPT-IN architecture, ensuring uniformity a
 | [`GOV_Configuration-Management-Plan_rev1.2.0_20280215.md`](02-GOVERNANCE_AND_STANDARDS/GOV_Configuration-Management-Plan_rev1.2.0_20280215.md) | Document control and revision management policy. |
 | [`STD_Numbering-And-Naming-Conventions_rev1.1.0_20280220.md`](02-GOVERNANCE_AND_STANDARDS/STD_Numbering-And-Naming-Conventions_rev1.1.0_20280220.md) | Standardized numbering and naming conventions. |
 | [`STD_Metadata-Schema-Guide_rev1.1.0_20280220.md`](02-GOVERNANCE_AND_STANDARDS/STD_Metadata-Schema-Guide_rev1.1.0_20280220.md) | Rules for `.meta.yaml` composition and validation. |
+| [`CERT_OPT-IN-CERTIFICATION-AUTHORITIES-MAPPING_REV100_20281027.md`](02-GOVERNANCE_AND_STANDARDS/CERT_OPT-IN-CERTIFICATION-AUTHORITIES-MAPPING_REV100_20281027.md) | OPT-IN framework mapping to EASA, FAA, ICAO certification authorities and standards. |
 | [`GLOSSARY_Abbreviations-And-Acronyms_rev2.5.0_20290110.md`](03-DEFINITIONS_AND_TERMINOLOGY/GLOSSARY_Abbreviations-And-Acronyms_rev2.5.0_20290110.md) | Approved abbreviations and acronyms. |
 | [`DICT_Master-Terminology_rev2.1.0_20290110.md`](03-DEFINITIONS_AND_TERMINOLOGY/DICT_Master-Terminology_rev2.1.0_20290110.md) | Master terminology dictionary with technical terms. |
 | [`POLICY_System-Safety-Program-Plan_rev1.0.0_20280301.md`](04-SAFETY_AND_AIRWORTHINESS/POLICY_System-Safety-Program-Plan_rev1.0.0_20280301.md) | System safety governance policy. |

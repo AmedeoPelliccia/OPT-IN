@@ -1,0 +1,80 @@
+schema_version: "1.1"
+id: "CERT_OPT-IN-Certification-Authorities-Mapping"
+document:
+  type: "CERT"
+  title: "OPT-IN Framework Certification Authorities Mapping"
+  revision: "1.0.0"
+  effective_date: "2028-10-27"
+  subject: "Systematic mapping of OPT-IN subsystems to EASA, FAA, ICAO certification authorities and standards"
+  ata_chapter: "00"
+  category: "Governance and Standards"
+effectivity:
+  scope: "Program-Wide"
+  aircraft_types:
+    - "AMPEL360 BWB"
+  applicability:
+    - "Airworthiness Engineering"
+    - "Certification Team"
+    - "Systems Engineering"
+    - "Quality Assurance"
+    - "Design Organization"
+approvals:
+  - authority: "Chief Engineer, Airworthiness"
+    status: "Released"
+    date: "2028-10-27"
+  - authority: "Certification Manager"
+    status: "Approved"
+    date: "2028-10-27"
+  - authority: "Quality Assurance"
+    status: "Reviewed"
+    date: "2028-10-27"
+traceability:
+  requirements:
+    - "REQ-CERT-001: OPT-IN Framework Certification Mapping"
+    - "REQ-CERT-002: EASA-FAA TIP Compliance"
+    - "REQ-CERT-003: International Standards Harmonization"
+  crossrefs:
+    - "ATA 00-05: Organization"
+    - "ATA 06-12: Program"
+    - "All T-TECHNOLOGY subsystems"
+    - "ATA 95: Neural Networks and Traceability"
+integrity:
+  checksum: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  algorithm: "SHA256"
+revision_history:
+  - version: "1.0.0"
+    date: "2024-06-07"
+    changes: "Initial release of OPT-IN certification authorities mapping document"
+    author: "Airworthiness Engineering Team"
+references:
+  standards:
+    - "EASA CS-23, CS-25, CS-27, CS-29"
+    - "EASA Part-21, Part-M, Part-145"
+    - "FAA 14 CFR Parts 21, 23, 25, 33"
+    - "DO-178C / ED-12C"
+    - "DO-254 / ED-80"
+    - "ARP4754A, ARP4761"
+    - "DO-387, ED-215"
+    - "ICAO Annex 8, Annex 19"
+    - "ISO 9001, AS9100D"
+  regulatory_documents:
+    - "FAA-EASA TIP Rev 6 with Amendments"
+    - "EASA-FAA MAG Change 8"
+  related_documents:
+    - "GOV_Configuration-Management-Plan_rev1.2.0_20280215.md"
+    - "STD_Metadata-Schema-Guide_rev1.1.0_20280220.md"
+    - "STD_Numbering-And-Naming-Conventions_rev1.1.0_20280220.md"
+compliance:
+  certification_basis:
+    - "EASA CS-25 (Large Aeroplane)"
+    - "FAA 14 CFR Part 25"
+    - "Special Conditions for Hydrogen Propulsion"
+    - "Special Conditions for AI/ML Systems"
+  international_recognition:
+    - "FAA-EASA Bilateral Agreement"
+    - "ICAO Annex 8 Compliance"
+    - "TCCA Validation"
+    - "CASA Recognition"
+security_classification: "Public - Technical Documentation"
+review_cycle: "Annual"
+next_review_date: "2029-10-27"
