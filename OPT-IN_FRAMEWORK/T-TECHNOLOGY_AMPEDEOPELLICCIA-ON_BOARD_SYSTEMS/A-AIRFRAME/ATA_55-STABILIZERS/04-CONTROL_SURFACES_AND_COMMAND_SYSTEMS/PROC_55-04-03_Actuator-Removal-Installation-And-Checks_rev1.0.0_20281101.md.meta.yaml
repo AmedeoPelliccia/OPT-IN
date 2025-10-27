@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "PROC_55-04-03_Actuator-Removal-Installation-And-Checks_rev1.0.0_20281101"
+document: { type: "PROC", title: "55-04-03: Actuator Removal, Installation, and Checks", revision: "1.0.0", effective_date: "2028-11-01" }
+procedure: { category: "Removal_Installation", skill_level: "Advanced", estimated_duration: "3 hours", personnel_required: 2 }
+effectivity: { msn: "ALL" }
+safety: { hazards: ["Hydraulic pressure"], criticality: "Major" }
+approvals: [{ authority: "Flight Controls Engineering", status: "Released", date: "2028-10-26" }]
+quality: { inspection_required: true, rii_required: true }
+integrity: { checksum: { algorithm: "sha256", value: "a7a8a9a0b1b2b3b4b5b6b7b8b9b0c1c2c3c4c5c6c7c8c9c0d1d2d3d4d5d6d7d8" } }

@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "DATA_55-10-01_Material-Specs-And-CofC-Requirements_rev1.0.0_20281101"
+document:
+  type: "DATA"
+  title: "DATA 55-10-01 Material-Specs-And-CofC-Requirements"
+  revision: "1.0.0"
+  effective_date: "2028-11-01"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-10-25" }
+integrity:
+  checksum: { algorithm: "sha256", value: "764bc58a3da9a61a27be9c9ff1740c3eeb38dd455d1ec4e52390364ef3af5504" }

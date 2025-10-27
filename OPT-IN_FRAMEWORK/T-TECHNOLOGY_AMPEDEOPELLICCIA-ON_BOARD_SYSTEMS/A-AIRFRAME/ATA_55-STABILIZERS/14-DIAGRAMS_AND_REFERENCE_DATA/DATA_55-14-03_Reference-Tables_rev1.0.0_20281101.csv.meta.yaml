@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "DATA_55-14-03_Reference-Tables_rev1.0.0_20281101"
+document:
+  type: "DATA"
+  title: "DATA 55-14-03 Reference-Tables"
+  revision: "1.0.0"
+  effective_date: "2028-11-01"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-10-25" }
+integrity:
+  checksum: { algorithm: "sha256", value: "f57db1eb0adf6ee6e4845f276942d17792e87be75e65f70fffff750cacf798cf" }

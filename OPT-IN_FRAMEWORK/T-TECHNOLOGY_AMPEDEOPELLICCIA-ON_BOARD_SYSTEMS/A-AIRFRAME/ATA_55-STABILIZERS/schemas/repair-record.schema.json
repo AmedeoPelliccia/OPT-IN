@@ -1,0 +1,491 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata55/repair-record.schema.json",
+  "title": "Stabilizer Repair Record",
+  "description": "Comprehensive repair record schema for ATA 55 stabilizer structural and component repairs with full traceability",
+  "type": "object",
+  "properties": {
+    "repairRecordId": {
+      "type": "string",
+      "description": "Unique repair record identifier",
+      "pattern": "^RR-55-[0-9]{4}-[0-9]{6}$"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number (aircraft effectivity)"
+    },
+    "configurationId": {
+      "type": "string",
+      "description": "Aircraft configuration identifier"
+    },
+    "repairDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date repair was completed (ISO 8601)"
+    },
+    "component": {
+      "type": "string",
+      "enum": ["H-Stab", "V-Stab", "Elevator_Left", "Elevator_Right", "Rudder", "Trim_Tab_Elevator", "Trim_Tab_Rudder"],
+      "description": "Stabilizer component being repaired"
+    },
+    "spanwiseLocation": {
+      "type": "object",
+      "description": "Spanwise location of the repair",
+      "properties": {
+        "stationNumber": {
+          "type": "number",
+          "description": "Station number (fuselage station or wing station)"
+        },
+        "spanPercentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of span from root (0%) to tip (100%)"
+        },
+        "spanwiseCoordinates": {
+          "type": "string",
+          "description": "Detailed spanwise coordinates (e.g., 'FS 2450, BL 120')"
+        }
+      },
+      "required": ["stationNumber", "spanPercentage"]
+    },
+    "controlSurfaceId": {
+      "type": "object",
+      "description": "Control surface identification (elevator, rudder, trim tab)",
+      "properties": {
+        "partNumber": {
+          "type": "string",
+          "description": "Control surface part number"
+        },
+        "serialNumber": {
+          "type": "string",
+          "description": "Control surface serial number"
+        },
+        "description": {
+          "type": "string",
+          "description": "Control surface description"
+        }
+      },
+      "required": ["partNumber", "serialNumber"]
+    },
+    "hingeIds": {
+      "type": "array",
+      "description": "Hinge identifications if repair affects hinge components",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hingePosition": {
+            "type": "string",
+            "description": "Hinge position (e.g., 'Inboard', 'Midspan', 'Outboard')"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Hinge part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Hinge serial number"
+          },
+          "installationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Hinge installation date"
+          },
+          "operatingHours": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total operating hours on hinge"
+          }
+        },
+        "required": ["hingePosition", "partNumber", "serialNumber"]
+      }
+    },
+    "bearingIds": {
+      "type": "array",
+      "description": "Bearing identifications if repair affects bearing components",
+      "items": {
+        "type": "object",
+        "properties": {
+          "bearingPosition": {
+            "type": "string",
+            "description": "Bearing position (e.g., 'Forward', 'Aft', 'Upper', 'Lower')"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Bearing part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Bearing serial number"
+          },
+          "installationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Bearing installation date"
+          },
+          "operatingHours": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total operating hours on bearing"
+          }
+        },
+        "required": ["bearingPosition", "partNumber", "serialNumber"]
+      }
+    },
+    "actuatorData": {
+      "type": "array",
+      "description": "Actuator identification and usage data",
+      "items": {
+        "type": "object",
+        "properties": {
+          "actuatorType": {
+            "type": "string",
+            "enum": ["Primary_Hydraulic", "Backup_Hydraulic", "Electric", "Trim"],
+            "description": "Type of actuator"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Actuator part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Actuator serial number"
+          },
+          "totalHours": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total operating hours on actuator"
+          },
+          "totalCycles": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total operating cycles on actuator"
+          },
+          "lastCalibrationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of last calibration"
+          }
+        },
+        "required": ["actuatorType", "partNumber", "serialNumber", "totalHours", "totalCycles"]
+      }
+    },
+    "trimTabSettings": {
+      "type": "object",
+      "description": "Trim tab rigging positions before and after repair",
+      "properties": {
+        "preRepairPosition": {
+          "type": "number",
+          "description": "Pre-repair trim tab position (degrees)"
+        },
+        "postRepairPosition": {
+          "type": "number",
+          "description": "Post-repair trim tab position (degrees)"
+        },
+        "neutralPosition": {
+          "type": "number",
+          "description": "Neutral (zero) trim tab position (degrees)"
+        },
+        "riggingTolerance": {
+          "type": "number",
+          "description": "Allowable rigging tolerance (degrees)"
+        }
+      },
+      "required": ["postRepairPosition", "neutralPosition"]
+    },
+    "damageClassification": {
+      "type": "object",
+      "description": "Classification of damage requiring repair",
+      "properties": {
+        "damageType": {
+          "type": "string",
+          "enum": ["Impact", "Corrosion", "Fatigue_Crack", "Delamination", "Lightning_Strike", "Foreign_Object", "Manufacturing_Defect", "Other"],
+          "description": "Type of damage"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["Minor", "Moderate", "Major", "Critical"],
+          "description": "Severity classification"
+        },
+        "affectedArea": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Affected area in square inches or square centimeters"
+        },
+        "affectedAreaUnit": {
+          "type": "string",
+          "enum": ["in2", "cm2"],
+          "description": "Unit of affected area measurement"
+        }
+      },
+      "required": ["damageType", "severity"]
+    },
+    "repairMethod": {
+      "type": "object",
+      "description": "Repair method and procedure references",
+      "properties": {
+        "repairType": {
+          "type": "string",
+          "enum": ["Metallic_Splice", "Bolted_Repair", "Composite_Scarf", "Composite_External_Patch", "Bonded_Doubler", "Fastener_Replacement", "Sealant_Restoration"],
+          "description": "Type of repair performed"
+        },
+        "procedureReference": {
+          "type": "string",
+          "description": "Reference to repair procedure (e.g., PROC_55-06-01)"
+        },
+        "ata51Reference": {
+          "type": "string",
+          "description": "Reference to ATA-51 composite repair procedure if applicable"
+        },
+        "feaRequired": {
+          "type": "boolean",
+          "description": "Whether FEA analysis was required for this repair (true for primary load path changes)"
+        },
+        "feaReportId": {
+          "type": "string",
+          "description": "FEA report identifier if FEA was performed"
+        }
+      },
+      "required": ["repairType", "procedureReference"]
+    },
+    "materialsUsed": {
+      "type": "array",
+      "description": "Materials and processes used in repair",
+      "items": {
+        "type": "object",
+        "properties": {
+          "materialSpec": {
+            "type": "string",
+            "description": "Material specification (e.g., AMS, BMS, MMPDS)"
+          },
+          "materialDescription": {
+            "type": "string",
+            "description": "Description of material"
+          },
+          "lotNumber": {
+            "type": "string",
+            "description": "Material lot or batch number"
+          },
+          "certificateOfConformance": {
+            "type": "string",
+            "description": "Certificate of Conformance (CofC) number"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Material expiry date (for time-sensitive materials)"
+          }
+        },
+        "required": ["materialSpec", "materialDescription", "lotNumber", "certificateOfConformance"]
+      }
+    },
+    "ndtResults": {
+      "type": "array",
+      "description": "Non-Destructive Testing results with file hashes",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ndtMethod": {
+            "type": "string",
+            "enum": ["Visual", "Ultrasonic", "C-Scan", "Eddy_Current", "Dye_Penetrant", "Magnetic_Particle", "Radiographic"],
+            "description": "NDT method used"
+          },
+          "inspectionDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of NDT inspection"
+          },
+          "inspector": {
+            "type": "string",
+            "description": "Inspector name and certification level"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "Conditional"],
+            "description": "NDT result"
+          },
+          "reportFileName": {
+            "type": "string",
+            "description": "NDT report file name"
+          },
+          "fileHash": {
+            "type": "string",
+            "description": "SHA-256 hash of NDT report file",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          }
+        },
+        "required": ["ndtMethod", "inspectionDate", "result", "reportFileName", "fileHash"]
+      }
+    },
+    "acceptanceCriteria": {
+      "type": "object",
+      "description": "Numeric acceptance criteria verified post-repair",
+      "properties": {
+        "hingeWearDepth": {
+          "type": "number",
+          "description": "Measured hinge wear depth (inches or mm)"
+        },
+        "hingeWearLimit": {
+          "type": "number",
+          "description": "Maximum allowable hinge wear depth"
+        },
+        "bearingRadialClearance": {
+          "type": "number",
+          "description": "Measured bearing radial clearance (inches or mm)"
+        },
+        "bearingClearanceLimit": {
+          "type": "number",
+          "description": "Maximum allowable bearing clearance"
+        },
+        "actuatorEndPlay": {
+          "type": "number",
+          "description": "Measured actuator end play (inches or mm)"
+        },
+        "actuatorEndPlayLimit": {
+          "type": "number",
+          "description": "Maximum allowable actuator end play"
+        },
+        "rivetPullThroughStrength": {
+          "type": "number",
+          "description": "Measured rivet pull-through strength (lbf or N)"
+        },
+        "rivetPullThroughLimit": {
+          "type": "number",
+          "description": "Minimum required rivet pull-through strength"
+        },
+        "delaminationArea": {
+          "type": "number",
+          "description": "Measured delamination area (in2 or cm2)"
+        },
+        "delaminationLimit": {
+          "type": "number",
+          "description": "Maximum allowable delamination area"
+        },
+        "voidContent": {
+          "type": "number",
+          "description": "Measured void content percentage"
+        },
+        "voidContentLimit": {
+          "type": "number",
+          "description": "Maximum allowable void content percentage"
+        },
+        "torqueRetention": {
+          "type": "array",
+          "description": "Torque retention measurements for critical fasteners",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fastenerLocation": {
+                "type": "string",
+                "description": "Location of fastener"
+              },
+              "appliedTorque": {
+                "type": "number",
+                "description": "Applied torque value (in-lbf or Nm)"
+              },
+              "minTorque": {
+                "type": "number",
+                "description": "Minimum allowable torque"
+              },
+              "maxTorque": {
+                "type": "number",
+                "description": "Maximum allowable torque"
+              }
+            },
+            "required": ["fastenerLocation", "appliedTorque", "minTorque", "maxTorque"]
+          }
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "Effectivity and applicability of this repair",
+      "properties": {
+        "msnRange": {
+          "type": "string",
+          "description": "MSN range (e.g., '001-050', 'ALL')"
+        },
+        "configApplicability": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Applicable aircraft configurations"
+        },
+        "expiryCondition": {
+          "type": "string",
+          "description": "Condition under which repair must be re-evaluated (FH, FC, calendar)"
+        }
+      },
+      "required": ["msnRange"]
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Traceability to DPP and other records",
+      "properties": {
+        "dppEntryId": {
+          "type": "string",
+          "description": "Digital Product Passport entry identifier (ATA-95)"
+        },
+        "workOrderNumber": {
+          "type": "string",
+          "description": "Maintenance work order number"
+        },
+        "engineeringOrderNumber": {
+          "type": "string",
+          "description": "Engineering order or disposition number (if applicable)"
+        },
+        "performedBy": {
+          "type": "string",
+          "description": "Technician or engineer who performed repair"
+        },
+        "inspectedBy": {
+          "type": "string",
+          "description": "Inspector who verified repair"
+        },
+        "approvedBy": {
+          "type": "string",
+          "description": "Engineering authority who approved repair"
+        }
+      },
+      "required": ["dppEntryId", "workOrderNumber", "performedBy", "inspectedBy", "approvedBy"]
+    },
+    "nextInspectionDue": {
+      "type": "object",
+      "description": "Next inspection due for this repair",
+      "properties": {
+        "inspectionType": {
+          "type": "string",
+          "description": "Type of next inspection (e.g., GVI, DET, NDT)"
+        },
+        "dueAtHours": {
+          "type": "number",
+          "description": "Next inspection due at flight hours"
+        },
+        "dueAtCycles": {
+          "type": "number",
+          "description": "Next inspection due at flight cycles"
+        },
+        "dueDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Next inspection due by calendar date"
+        }
+      },
+      "required": ["inspectionType"]
+    }
+  },
+  "required": [
+    "repairRecordId",
+    "msn",
+    "repairDate",
+    "component",
+    "spanwiseLocation",
+    "damageClassification",
+    "repairMethod",
+    "materialsUsed",
+    "ndtResults",
+    "effectivity",
+    "traceability"
+  ]
+}

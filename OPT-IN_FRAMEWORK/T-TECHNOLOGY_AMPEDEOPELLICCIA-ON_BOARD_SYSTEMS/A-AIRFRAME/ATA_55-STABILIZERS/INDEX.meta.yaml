@@ -1,0 +1,99 @@
+schema_version: "1.1"
+id: "ATA_55_INDEX_rev1.0.0_20281101"
+chapter: "ATA 55 - STABILIZERS"
+governance:
+  owner_role: "Structures Engineering / Flight Controls Engineering"
+  review_board: ["Airworthiness Engineering", "Safety Engineering", "Systems Integration", "Materials & Processes"]
+  regulatory_basis: ["FAA Part 25.491", "FAA Part 25.561", "FAA Part 25.571", "EASA CS-25"]
+traceability:
+  crossrefs:
+    - "ATA 20"  # Standard Practices - Airframe (torque, fasteners, bonding, sealing)
+    - "ATA 27"  # Flight Controls (rigging, control law interaction)
+    - "ATA 51"  # Standard Practices and Structures - General (composite repair methods, FEA)
+    - "ATA 52"  # Doors (actuator interface standards)
+    - "ATA 53"  # Fuselage (attachment fittings, load transfer)
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "STRUCT-SPEC-55-001: Stabilizer Structural Design Specification"
+    - "MAINT-PLAN-55-001: Stabilizer Maintenance Program"
+    - "CERT-PLAN-55-001: Stabilizer Certification Test Plan"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Structural failure of primary load path"
+    - "Control surface detachment or jamming"
+    - "Actuator failure leading to loss of control authority"
+    - "Hinge/bearing wear exceeding limits"
+    - "Lightning strike damage to primary structure"
+    - "Delamination or void growth in composite structure"
+  airworthiness_limitation_items:
+    - "Horizontal stabilizer attachment fittings"
+    - "Vertical stabilizer spar caps"
+    - "Elevator/rudder hinge fittings"
+    - "Control surface actuator mounts"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata55.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, and taxonomy"
+    - name: "02-HORIZONTAL_STABILIZER"
+      description: "H-Stab architecture, load path, removal/installation, inspections, strength data"
+    - name: "03-VERTICAL_STABILIZER"
+      description: "V-Stab architecture, load path, removal/installation, rudder inspection, strength data"
+    - name: "04-CONTROL_SURFACES_AND_COMMAND_SYSTEMS"
+      description: "Control surface design, interfaces, hinge/bearing inspections, tolerances"
+    - name: "05-ACTUATORS_AND_CONTROL_MECHANISMS"
+      description: "Electro-hydraulic actuators, cable routing, tensioning, specs, life limits"
+    - name: "06-STRUCTURAL_REPAIRS"
+      description: "Metallic splice/bolted repairs, composite scarf repairs (ref ATA-51), approved materials"
+    - name: "07-NDT_AND_INSPECTION"
+      description: "GVI, ultrasonic C-scan, eddy current, dye penetrant, inspection intervals"
+    - name: "08-LIGHTNING_STRIKE_PROTECTION_AND_BONDING"
+      description: "LSP restoration, continuity testing, materials, resistance limits"
+    - name: "09-QUALIFICATION_AND_TEST_PLANS"
+      description: "Stabilizer qualification/certification plan, test matrix, failure criteria"
+    - name: "10-MATERIALS_M_AND_P_TRACEABILITY"
+      description: "Material specs, CofC requirements, traceability, storage procedures"
+    - name: "11-HUMAN_FACTORS_AND_ERGONOMICS"
+      description: "Manual handling limits, access requirements, operation forces, ergonomic limits"
+    - name: "12-NONCONFORMANCE_AND_DEVIATION"
+      description: "Nonconformance handling, engineering disposition, NCR template"
+    - name: "13-ENVIRONMENTAL_AND_OPERATING_LIMITS"
+      description: "Temperature limits, icing conditions, corrosion limits, environmental test requirements"
+    - name: "14-DIAGRAMS_AND_REFERENCE_DATA"
+      description: "Exploded views, hinge/actuator drawings, reference tables"
+    - name: "15-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars"
+    - name: "16-EXAMPLES_AND_RECORDS"
+      description: "Example repair records, functional test logs, NDT report samples"
+  schemas:
+    - name: "repair-record.schema.json"
+      description: "Repair record schema with stabilizer-specific fields (station, span, control surface ID, hinge/bearing IDs, actuator serials, trim-tab settings, NDT hashes, effectivity)"
+    - name: "damage-classification.schema.json"
+      description: "Damage classification schema for stabilizer structural damage assessment"
+    - name: "stabilizer-spec.schema.json"
+      description: "Stabilizer component specification schema"
+    - name: "inspection.schema.json"
+      description: "Inspection record schema with acceptance criteria"
+approvals:
+  - authority: "Structures Engineering"
+    status: "Released"
+    date: "2028-10-25"
+  - authority: "Flight Controls Engineering"
+    status: "Released"
+    date: "2028-10-25"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2028-10-28"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2028-10-28"
+revision: "1.0.0"
+effective_date: "2028-11-01"
+next_review: "2029-11-01"

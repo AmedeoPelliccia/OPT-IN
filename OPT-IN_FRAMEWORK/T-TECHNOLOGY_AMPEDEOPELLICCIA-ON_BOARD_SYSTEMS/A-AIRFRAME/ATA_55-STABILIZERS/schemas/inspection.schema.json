@@ -1,0 +1,535 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata55/inspection.schema.json",
+  "title": "Stabilizer Inspection Record",
+  "description": "Comprehensive inspection record schema for stabilizer inspections including acceptance criteria",
+  "type": "object",
+  "properties": {
+    "inspectionRecordId": {
+      "type": "string",
+      "description": "Unique inspection record identifier",
+      "pattern": "^INSP-55-[0-9]{4}-[0-9]{6}$"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number (aircraft)"
+    },
+    "inspectionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of inspection"
+    },
+    "inspectionType": {
+      "type": "string",
+      "enum": [
+        "General_Visual_Inspection",
+        "Detailed_Visual_Inspection",
+        "Special_Detailed_Inspection",
+        "Ultrasonic",
+        "C-Scan",
+        "Eddy_Current",
+        "Dye_Penetrant",
+        "Magnetic_Particle",
+        "Radiographic",
+        "Functional_Test",
+        "Operational_Check"
+      ],
+      "description": "Type of inspection performed"
+    },
+    "inspectionScope": {
+      "type": "string",
+      "enum": ["A-Check", "C-Check", "S-Check", "Special_Inspection", "Post_Repair", "Pre_Flight", "Post_Flight", "AD_Compliance"],
+      "description": "Scope or reason for inspection"
+    },
+    "component": {
+      "type": "string",
+      "enum": [
+        "H-Stab_Complete",
+        "V-Stab_Complete",
+        "Elevator_Left",
+        "Elevator_Right",
+        "Rudder",
+        "Trim_Tab",
+        "Hinge_Assembly",
+        "Bearing_Assembly",
+        "Actuator_Assembly",
+        "Attachment_Fitting",
+        "Control_Surface_Skin",
+        "Spar_Assembly"
+      ],
+      "description": "Component being inspected"
+    },
+    "location": {
+      "type": "object",
+      "description": "Location of inspection area",
+      "properties": {
+        "stationNumber": {
+          "type": "number",
+          "description": "Station number"
+        },
+        "spanPercentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Span percentage from root"
+        },
+        "zoneIdentifier": {
+          "type": "string",
+          "description": "Aircraft zone identifier"
+        },
+        "accessPanel": {
+          "type": "string",
+          "description": "Access panel used for inspection"
+        }
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "description": "Inspector information",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Inspector name"
+        },
+        "certificationNumber": {
+          "type": "string",
+          "description": "Inspector certification number"
+        },
+        "certificationLevel": {
+          "type": "string",
+          "enum": ["Level_I", "Level_II", "Level_III"],
+          "description": "NDT certification level (if applicable)"
+        },
+        "certificationExpiry": {
+          "type": "string",
+          "format": "date",
+          "description": "Certification expiry date"
+        }
+      },
+      "required": ["name", "certificationNumber"]
+    },
+    "inspectionResults": {
+      "type": "object",
+      "description": "Inspection results and findings",
+      "properties": {
+        "overallResult": {
+          "type": "string",
+          "enum": ["Pass", "Fail", "Conditional", "Require_Further_Inspection"],
+          "description": "Overall inspection result"
+        },
+        "findingsCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of findings identified"
+        },
+        "findings": {
+          "type": "array",
+          "description": "List of inspection findings",
+          "items": {
+            "type": "object",
+            "properties": {
+              "findingId": {
+                "type": "string",
+                "description": "Unique finding identifier"
+              },
+              "findingType": {
+                "type": "string",
+                "enum": ["Damage", "Wear", "Corrosion", "Crack", "Delamination", "Missing_Part", "Improper_Installation", "Out_of_Tolerance"],
+                "description": "Type of finding"
+              },
+              "severity": {
+                "type": "string",
+                "enum": ["Minor", "Major", "Critical"],
+                "description": "Severity of finding"
+              },
+              "description": {
+                "type": "string",
+                "description": "Detailed description of finding"
+              },
+              "actionRequired": {
+                "type": "string",
+                "enum": ["None", "Monitor", "Repair_Next_Maintenance", "Repair_Before_Flight", "Ground_Aircraft"],
+                "description": "Required corrective action"
+              },
+              "photoReference": {
+                "type": "string",
+                "description": "Reference to photo documentation"
+              }
+            },
+            "required": ["findingId", "findingType", "severity", "description", "actionRequired"]
+          }
+        }
+      },
+      "required": ["overallResult"]
+    },
+    "acceptanceCriteria": {
+      "type": "object",
+      "description": "Acceptance criteria and measured values",
+      "properties": {
+        "visualCriteria": {
+          "type": "array",
+          "description": "Visual acceptance criteria",
+          "items": {
+            "type": "object",
+            "properties": {
+              "criterion": {
+                "type": "string",
+                "description": "Visual criterion description"
+              },
+              "result": {
+                "type": "string",
+                "enum": ["Pass", "Fail"],
+                "description": "Result for this criterion"
+              }
+            }
+          }
+        },
+        "dimensionalCriteria": {
+          "type": "array",
+          "description": "Dimensional acceptance criteria and measurements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parameter": {
+                "type": "string",
+                "description": "Parameter being measured"
+              },
+              "measuredValue": {
+                "type": "number",
+                "description": "Measured value"
+              },
+              "minLimit": {
+                "type": "number",
+                "description": "Minimum acceptable limit"
+              },
+              "maxLimit": {
+                "type": "number",
+                "description": "Maximum acceptable limit"
+              },
+              "unit": {
+                "type": "string",
+                "description": "Unit of measurement"
+              },
+              "result": {
+                "type": "string",
+                "enum": ["Within_Limits", "Out_of_Limits"],
+                "description": "Result for this measurement"
+              }
+            },
+            "required": ["parameter", "measuredValue", "unit", "result"]
+          }
+        },
+        "ndtCriteria": {
+          "type": "array",
+          "description": "NDT acceptance criteria",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ndtMethod": {
+                "type": "string",
+                "description": "NDT method used"
+              },
+              "acceptanceStandard": {
+                "type": "string",
+                "description": "Acceptance standard reference (e.g., ASTM, AMS)"
+              },
+              "indicationsFound": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Number of indications found"
+              },
+              "acceptableIndicationLimit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Maximum acceptable indications"
+              },
+              "result": {
+                "type": "string",
+                "enum": ["Pass", "Fail"],
+                "description": "NDT result"
+              }
+            },
+            "required": ["ndtMethod", "result"]
+          }
+        },
+        "functionalCriteria": {
+          "type": "array",
+          "description": "Functional test criteria",
+          "items": {
+            "type": "object",
+            "properties": {
+              "testParameter": {
+                "type": "string",
+                "description": "Functional test parameter"
+              },
+              "testResult": {
+                "type": "string",
+                "description": "Test result description"
+              },
+              "result": {
+                "type": "string",
+                "enum": ["Pass", "Fail"],
+                "description": "Pass/Fail result"
+              }
+            },
+            "required": ["testParameter", "result"]
+          }
+        }
+      }
+    },
+    "hingeWearMeasurements": {
+      "type": "array",
+      "description": "Hinge wear measurements",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hingeLocation": {
+            "type": "string",
+            "description": "Hinge location identifier"
+          },
+          "wearDepth": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Measured wear depth"
+          },
+          "wearLimit": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Maximum allowable wear depth"
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["mm", "in"],
+            "description": "Unit of measurement"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Within_Limits", "Approaching_Limit", "Exceeds_Limit"],
+            "description": "Wear assessment result"
+          }
+        },
+        "required": ["hingeLocation", "wearDepth", "wearLimit", "unit", "result"]
+      }
+    },
+    "bearingClearanceMeasurements": {
+      "type": "array",
+      "description": "Bearing clearance measurements",
+      "items": {
+        "type": "object",
+        "properties": {
+          "bearingLocation": {
+            "type": "string",
+            "description": "Bearing location identifier"
+          },
+          "radialClearance": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Measured radial clearance"
+          },
+          "axialClearance": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Measured axial clearance"
+          },
+          "clearanceLimit": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Maximum allowable clearance"
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["mm", "in"],
+            "description": "Unit of measurement"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Within_Limits", "Approaching_Limit", "Exceeds_Limit"],
+            "description": "Clearance assessment result"
+          }
+        },
+        "required": ["bearingLocation", "clearanceLimit", "unit", "result"]
+      }
+    },
+    "actuatorFunctionalTest": {
+      "type": "object",
+      "description": "Actuator functional test results",
+      "properties": {
+        "actuatorId": {
+          "type": "string",
+          "description": "Actuator identifier"
+        },
+        "endPlayLinear": {
+          "type": "number",
+          "description": "Measured linear end play"
+        },
+        "endPlayRotational": {
+          "type": "number",
+          "description": "Measured rotational end play"
+        },
+        "endPlayLimit": {
+          "type": "number",
+          "description": "Maximum allowable end play"
+        },
+        "strokeTest": {
+          "type": "object",
+          "properties": {
+            "fullStrokeAchieved": {
+              "type": "boolean",
+              "description": "Whether full stroke was achieved"
+            },
+            "strokeTime": {
+              "type": "number",
+              "description": "Time to complete full stroke (seconds)"
+            },
+            "requiredStrokeTime": {
+              "type": "number",
+              "description": "Required stroke time per spec (seconds)"
+            }
+          }
+        },
+        "leakageTest": {
+          "type": "object",
+          "properties": {
+            "leakageDetected": {
+              "type": "boolean",
+              "description": "Whether leakage was detected"
+            },
+            "leakageRate": {
+              "type": "number",
+              "description": "Leakage rate if detected"
+            },
+            "leakageUnit": {
+              "type": "string",
+              "enum": ["drops/min", "cc/min"],
+              "description": "Leakage rate unit"
+            }
+          }
+        },
+        "result": {
+          "type": "string",
+          "enum": ["Pass", "Fail"],
+          "description": "Overall actuator test result"
+        }
+      }
+    },
+    "equipmentUsed": {
+      "type": "array",
+      "description": "Test and inspection equipment used",
+      "items": {
+        "type": "object",
+        "properties": {
+          "equipmentType": {
+            "type": "string",
+            "description": "Type of equipment"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Equipment serial number"
+          },
+          "calibrationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Last calibration date"
+          },
+          "calibrationDueDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Next calibration due date"
+          }
+        },
+        "required": ["equipmentType", "serialNumber", "calibrationDueDate"]
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "description": "Inspection documentation",
+      "properties": {
+        "photos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fileName": {
+                "type": "string"
+              },
+              "fileHash": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            }
+          }
+        },
+        "reports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "reportType": {
+                "type": "string"
+              },
+              "fileName": {
+                "type": "string"
+              },
+              "fileHash": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nextInspectionDue": {
+      "type": "object",
+      "description": "Next inspection due",
+      "properties": {
+        "dueAtHours": {
+          "type": "number",
+          "description": "Due at flight hours"
+        },
+        "dueAtCycles": {
+          "type": "number",
+          "description": "Due at flight cycles"
+        },
+        "dueDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Due by calendar date"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Traceability information",
+      "properties": {
+        "workOrderNumber": {
+          "type": "string",
+          "description": "Work order number"
+        },
+        "dppEntryId": {
+          "type": "string",
+          "description": "Digital Product Passport entry ID"
+        },
+        "inspectedBy": {
+          "type": "string",
+          "description": "Inspector name"
+        },
+        "verifiedBy": {
+          "type": "string",
+          "description": "Quality verifier name"
+        }
+      },
+      "required": ["inspectedBy"]
+    }
+  },
+  "required": [
+    "inspectionRecordId",
+    "msn",
+    "inspectionDate",
+    "inspectionType",
+    "component",
+    "inspector",
+    "inspectionResults",
+    "traceability"
+  ]
+}

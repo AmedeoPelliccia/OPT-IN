@@ -1,0 +1,326 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata55/stabilizer-spec.schema.json",
+  "title": "Stabilizer Component Specification",
+  "description": "Technical specification schema for stabilizer structural components and assemblies",
+  "type": "object",
+  "properties": {
+    "componentId": {
+      "type": "string",
+      "description": "Unique component identifier"
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Component part number"
+    },
+    "description": {
+      "type": "string",
+      "description": "Component description"
+    },
+    "componentType": {
+      "type": "string",
+      "enum": [
+        "Horizontal_Stabilizer",
+        "Vertical_Stabilizer",
+        "Elevator",
+        "Rudder",
+        "Trim_Tab",
+        "Spar",
+        "Rib",
+        "Skin_Panel",
+        "Hinge",
+        "Bearing",
+        "Actuator",
+        "Attachment_Fitting",
+        "Control_Horn",
+        "Balance_Weight"
+      ],
+      "description": "Type of component"
+    },
+    "materialSpecification": {
+      "type": "object",
+      "description": "Material specification",
+      "properties": {
+        "primaryMaterial": {
+          "type": "string",
+          "description": "Primary material (e.g., Aluminum 7075-T6, CFRP, Titanium)"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "Material specification reference (AMS, BMS, MMPDS)"
+        },
+        "compositeLayup": {
+          "type": "array",
+          "description": "Composite layup schedule (if applicable)",
+          "items": {
+            "type": "object",
+            "properties": {
+              "plyNumber": {
+                "type": "integer",
+                "description": "Ply number"
+              },
+              "material": {
+                "type": "string",
+                "description": "Ply material"
+              },
+              "orientation": {
+                "type": "number",
+                "description": "Fiber orientation in degrees"
+              },
+              "thickness": {
+                "type": "number",
+                "description": "Ply thickness"
+              }
+            }
+          }
+        }
+      },
+      "required": ["primaryMaterial"]
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Component dimensions",
+      "properties": {
+        "length": {
+          "type": "number",
+          "description": "Length"
+        },
+        "width": {
+          "type": "number",
+          "description": "Width"
+        },
+        "height": {
+          "type": "number",
+          "description": "Height"
+        },
+        "thickness": {
+          "type": "number",
+          "description": "Thickness"
+        },
+        "span": {
+          "type": "number",
+          "description": "Span (for wing-like components)"
+        },
+        "chord": {
+          "type": "number",
+          "description": "Chord (for airfoil components)"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["mm", "cm", "m", "in", "ft"],
+          "description": "Unit of measurement"
+        }
+      },
+      "required": ["unit"]
+    },
+    "weight": {
+      "type": "object",
+      "description": "Component weight",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Weight value"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["kg", "lbs"],
+          "description": "Weight unit"
+        }
+      },
+      "required": ["value", "unit"]
+    },
+    "structuralProperties": {
+      "type": "object",
+      "description": "Structural properties and load limits",
+      "properties": {
+        "ultimateLoad": {
+          "type": "number",
+          "description": "Ultimate load capability"
+        },
+        "limitLoad": {
+          "type": "number",
+          "description": "Limit load capability"
+        },
+        "fatigueLife": {
+          "type": "integer",
+          "description": "Design fatigue life in cycles"
+        },
+        "safeLifeLimit": {
+          "type": "integer",
+          "description": "Safe life limit in flight hours"
+        },
+        "loadUnit": {
+          "type": "string",
+          "enum": ["lbf", "N", "kN"],
+          "description": "Load unit"
+        }
+      }
+    },
+    "tolerances": {
+      "type": "object",
+      "description": "Dimensional and geometric tolerances",
+      "properties": {
+        "dimensionalTolerance": {
+          "type": "number",
+          "description": "General dimensional tolerance"
+        },
+        "surfaceFinish": {
+          "type": "string",
+          "description": "Surface finish requirement"
+        },
+        "geometricTolerances": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "feature": {
+                "type": "string",
+                "description": "Feature being controlled"
+              },
+              "toleranceType": {
+                "type": "string",
+                "enum": ["Flatness", "Straightness", "Parallelism", "Perpendicularity", "Angularity", "Position"],
+                "description": "Type of geometric tolerance"
+              },
+              "toleranceValue": {
+                "type": "number",
+                "description": "Tolerance value"
+              }
+            }
+          }
+        }
+      }
+    },
+    "environmentalRequirements": {
+      "type": "object",
+      "description": "Environmental operating and storage requirements",
+      "properties": {
+        "operatingTempMin": {
+          "type": "number",
+          "description": "Minimum operating temperature"
+        },
+        "operatingTempMax": {
+          "type": "number",
+          "description": "Maximum operating temperature"
+        },
+        "storageTempMin": {
+          "type": "number",
+          "description": "Minimum storage temperature"
+        },
+        "storageTempMax": {
+          "type": "number",
+          "description": "Maximum storage temperature"
+        },
+        "tempUnit": {
+          "type": "string",
+          "enum": ["C", "F"],
+          "description": "Temperature unit"
+        },
+        "humidityMax": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Maximum relative humidity (%)"
+        },
+        "saltSprayResistance": {
+          "type": "boolean",
+          "description": "Whether component has salt spray resistance"
+        }
+      }
+    },
+    "surfaceProtection": {
+      "type": "object",
+      "description": "Surface protection and coating requirements",
+      "properties": {
+        "primerSpec": {
+          "type": "string",
+          "description": "Primer specification"
+        },
+        "topcoatSpec": {
+          "type": "string",
+          "description": "Topcoat specification"
+        },
+        "anodizing": {
+          "type": "string",
+          "description": "Anodizing specification if applicable"
+        },
+        "sealant": {
+          "type": "string",
+          "description": "Sealant specification if applicable"
+        }
+      }
+    },
+    "qualificationStatus": {
+      "type": "object",
+      "description": "Qualification and certification status",
+      "properties": {
+        "certificationBasis": {
+          "type": "string",
+          "description": "Certification basis (e.g., FAA Part 25, EASA CS-25)"
+        },
+        "qualificationTestsCompleted": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of completed qualification tests"
+        },
+        "typeDesignApproval": {
+          "type": "string",
+          "description": "Type design approval reference"
+        }
+      }
+    },
+    "maintenanceRequirements": {
+      "type": "object",
+      "description": "Maintenance interval and requirements",
+      "properties": {
+        "inspectionInterval": {
+          "type": "integer",
+          "description": "Inspection interval in flight hours"
+        },
+        "replacementInterval": {
+          "type": "integer",
+          "description": "Hard-time replacement interval (if applicable)"
+        },
+        "lubricationInterval": {
+          "type": "integer",
+          "description": "Lubrication interval in flight hours"
+        },
+        "specialInspectionRequirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special inspection requirements"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "Component effectivity",
+      "properties": {
+        "msnFrom": {
+          "type": "string",
+          "description": "Effective from MSN"
+        },
+        "msnTo": {
+          "type": "string",
+          "description": "Effective to MSN"
+        },
+        "modNumber": {
+          "type": "string",
+          "description": "Modification number if introduced via mod"
+        }
+      }
+    }
+  },
+  "required": [
+    "componentId",
+    "partNumber",
+    "description",
+    "componentType",
+    "materialSpecification"
+  ]
+}

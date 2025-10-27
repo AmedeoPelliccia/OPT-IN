@@ -1,0 +1,6 @@
+Test_ID,Date,MSN,Component,Test_Type,Parameter,Measured_Value,Limit_Min,Limit_Max,Unit,Result,Inspector
+FT-001,2028-11-10,001,Elevator_Left,Stroke_Test,Full_Stroke_Time,3.8,3.0,5.0,seconds,Pass,Tech-023
+FT-002,2028-11-10,001,Elevator_Left,End_Play,Linear_End_Play,0.006,0.0,0.010,in,Pass,Tech-023
+FT-003,2028-11-10,001,Elevator_Left,Leakage,Leakage_Rate,2,0,5,drops/min,Pass,Tech-023
+FT-004,2028-11-10,001,Rudder,Stroke_Test,Full_Stroke_Time,4.2,3.0,5.0,seconds,Pass,Tech-024
+FT-005,2028-11-10,001,Rudder,End_Play,Linear_End_Play,0.008,0.0,0.010,in,Pass,Tech-024

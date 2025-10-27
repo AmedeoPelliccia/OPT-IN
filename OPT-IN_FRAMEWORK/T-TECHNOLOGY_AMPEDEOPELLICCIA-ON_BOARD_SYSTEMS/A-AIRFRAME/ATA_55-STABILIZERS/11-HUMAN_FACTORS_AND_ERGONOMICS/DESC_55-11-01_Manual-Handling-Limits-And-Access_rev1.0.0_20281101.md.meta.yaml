@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "DESC_55-11-01_Manual-Handling-Limits-And-Access_rev1.0.0_20281101"
+document:
+  type: "DESC"
+  title: "DESC 55-11-01 Manual-Handling-Limits-And-Access"
+  revision: "1.0.0"
+  effective_date: "2028-11-01"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-10-25" }
+integrity:
+  checksum: { algorithm: "sha256", value: "dac0142fe4c6505a10463c574e2c44ff220b66dc782dd0faa9285dfde642c3e1" }

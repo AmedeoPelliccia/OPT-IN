@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "PROC_55-08-01_LSP-Restoration-And-Continuity-Test_rev1.0.0_20281101"
+document:
+  type: "PROC"
+  title: "PROC 55-08-01 LSP-Restoration-And-Continuity-Test"
+  revision: "1.0.0"
+  effective_date: "2028-11-01"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2028-10-25" }
+integrity:
+  checksum: { algorithm: "sha256", value: "6c50c842148ae0b1a2f71250532afcbaf98ae438751277c6d10c0c85d35acd4f" }
