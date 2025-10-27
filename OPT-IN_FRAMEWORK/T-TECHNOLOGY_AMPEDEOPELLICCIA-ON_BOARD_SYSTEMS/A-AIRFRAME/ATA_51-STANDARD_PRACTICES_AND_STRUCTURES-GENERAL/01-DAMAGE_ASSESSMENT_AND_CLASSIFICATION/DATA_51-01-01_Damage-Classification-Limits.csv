@@ -1,0 +1,19 @@
+Damage_Type,Material_Type,Max_Length_mm,Max_Width_mm,Max_Depth_mm,Classification,Notes
+Scratch,Metallic (Al),25,3,0.2,Negligible,Surface only; blend out per ATA 20
+Scratch,Metallic (Al),50,5,0.5,Repairable,Does not penetrate protective coating
+Scratch,Metallic (Al),>50,>5,>0.5,Requires Disposition,May affect fatigue life
+Dent,Metallic (Al),50,N/A,2,Negligible,Smooth contour; no sharp edges
+Dent,Metallic (Al),100,N/A,5,Repairable,Standard repair per ATA 51-03
+Dent,Metallic (Al),>100,N/A,>5,Requires Disposition,Exceeds standard limits
+Crack,Metallic,Any,Any,Any,Requires Disposition,All cracks require engineering evaluation
+Corrosion,Metallic,10,10,0.3,Negligible,Surface corrosion only
+Corrosion,Metallic,50,50,1.5,Repairable,Removal and protection required
+Corrosion,Metallic,>50,>50,>1.5,Requires Disposition,Structural integrity assessment required
+Delamination,Composite,25,25,N/A,Negligible,Single ply; edge of panel only
+Delamination,Composite,75,75,N/A,Repairable,Does not exceed 2% of panel area
+Delamination,Composite,>75,>75,N/A,Requires Disposition,Exceeds repairable area
+Impact,Composite,50,50,2,Repairable,Visible damage; no rear face damage
+Impact,Composite,>50,>50,>2,Requires Disposition,BVID (Barely Visible Impact Damage) assessment required
+Puncture,Composite,Any,Any,Any,Requires Disposition,All through-thickness damage requires engineering
+Burn,Any,10,10,Surface,Negligible,Surface discoloration only
+Burn,Any,>10,>10,Subsurface,Requires Disposition,Material degradation possible

@@ -1,0 +1,9 @@
+Test_Type,Repair_ID,Qualification_Level,Test_Method,Acceptance_Criteria,Status,Test_Report_Ref
+Coupon,REP-001,Level 1,Tensile Test (ASTM D3039),Ultimate Strength ≥ 90% of Parent Material,Qualified,TR-2028-001
+Element,REP-002,Level 2,Four-Point Bending,Stiffness ≥ 85% of Parent Material,Qualified,TR-2028-002
+Full-Scale,REP-003,Level 3,Static Load Test + Fatigue,Pass Limit Load + 2× Design Life,Qualified,TR-2028-003
+Coupon,REP-004,Level 1,Shear Test (ASTM D3846),Shear Strength ≥ 80% of Parent Material,In Progress,TBD
+Element,REP-005,Level 2,Compression After Impact,CAI Strength ≥ 200 MPa,Qualified,TR-2028-005
+Coupon,REP-006,Level 1,Peel Test (ASTM D1876),Peel Strength ≥ 25 N/mm,Qualified,TR-2028-006
+Full-Scale,REP-007,Level 3,Lightning Strike Test,No delamination beyond repair zone,Qualified,TR-2028-007
+Element,REP-008,Level 2,Fatigue Test (R=0.1),Pass 100k cycles at max operating stress,Qualified,TR-2028-008

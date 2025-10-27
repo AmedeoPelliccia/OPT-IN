@@ -1,0 +1,17 @@
+Original_PN,Original_Description,Substitute_PN,Substitute_Description,Material,Grip_Range_mm,Shear_Strength_N,Tension_Strength_N,Notes
+AN3-4A,"Bolt, Hex Head, Steel",MS20004-4,"Bolt, Hex Head, Steel, Cadmium Plated","Steel, Cad Plated","6.4-9.5",2669,4448,Direct replacement
+AN4-5A,"Bolt, Hex Head, Steel",MS20004-5,"Bolt, Hex Head, Steel","Steel, Cad Plated","7.9-11.1",4448,7117,Direct replacement
+AN470AD4-5,"Rivet, Universal Head, 2117-T4",MS20470AD4-5,"Rivet, Universal Head, 2117-T4","Al 2117-T4","4.0-6.4",890,712,Direct replacement
+AN470AD5-6,"Rivet, Universal Head, 2117-T4",MS20470AD5-6,"Rivet, Universal Head, 2117-T4","Al 2117-T4","4.8-7.9",1335,1068,Direct replacement
+BACR15CE4-5,"Hi-Lok Pin, 4130 Steel",HLSP4-5,"Hi-Lok Pin, Protruding Head","4130 Steel","4.8-6.4",5338,8896,Approved substitute; use with matching collar
+BACR15CE5-6,"Hi-Lok Pin, 4130 Steel",HLSP5-6,"Hi-Lok Pin, Protruding Head","4130 Steel","6.4-7.9",8007,13344,Approved substitute; use with matching collar
+BACR15FN4,"Hi-Lok Collar",HLSP4,"Hi-Lok Collar, Hex","Steel","N/A",N/A,N/A,Matches HLSP4-x pins
+BACR15FN5,"Hi-Lok Collar",HLSP5,"Hi-Lok Collar, Hex","Steel","N/A",N/A,N/A,Matches HLSP5-x pins
+NAS1352C416,"Hi-Tigue Fastener",HLTG4-16,"Hi-Tigue Bolt, 100° Flush Head","Alloy Steel","15.9-17.5",8896,14680,Use in high-fatigue areas; requires reaming
+NAS1352C420,"Hi-Tigue Fastener",HLTG4-20,"Hi-Tigue Bolt, 100° Flush Head","Alloy Steel","19.0-21.4",8896,14680,Use in high-fatigue areas; requires reaming
+MS20426AD4-4,"Rivet, Countersunk, 2117-T4",AN426AD4-4,"Rivet, Countersunk, 2117-T4","Al 2117-T4","4.0-5.6",801,623,Interchangeable (MS supersedes AN)
+MS20426AD5-5,"Rivet, Countersunk, 2117-T4",AN426AD5-5,"Rivet, Countersunk, 2117-T4","Al 2117-T4","5.6-7.1",1201,934,Interchangeable (MS supersedes AN)
+NAS6204-4,"Shear Pin, Titanium",HL70V4-4,"Hi-Lite Pin, Titanium","Ti-6Al-4V","4.0-5.6",6672,11120,Titanium upgrade for corrosion resistance
+NAS6204-5,"Shear Pin, Titanium",HL70V5-5,"Hi-Lite Pin, Titanium","Ti-6Al-4V","5.6-7.1",10008,16680,Titanium upgrade for corrosion resistance
+BACB30VS4K8,"Lockbolt, Tension Head",CherryMax CR3213-4-04,"Lockbolt, 100° Flush Head","A286 CRES","6.4-8.7",5338,8896,Similar installation; verify grip length
+BACB30VS5K10,"Lockbolt, Tension Head",CherryMax CR3213-5-05,"Lockbolt, 100° Flush Head","A286 CRES","7.9-10.3",8007,13344,Similar installation; verify grip length

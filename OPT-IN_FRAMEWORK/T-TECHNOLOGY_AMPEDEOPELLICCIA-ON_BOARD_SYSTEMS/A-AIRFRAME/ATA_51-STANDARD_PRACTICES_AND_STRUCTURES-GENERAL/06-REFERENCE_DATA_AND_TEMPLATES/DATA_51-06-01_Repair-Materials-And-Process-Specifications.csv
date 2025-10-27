@@ -1,0 +1,21 @@
+Material_ID,Description,Specification,Manufacturer,Storage_Condition,Shelf_Life_Days
+CFRP-PLY-01,"Carbon Prepreg, Standard Modulus, Toughened",AMPEL-M-1001,TBD,"-18°C Freezer",365
+ADH-FILM-01,"Epoxy Film Adhesive, 177°C Cure",AMPEL-M-2001,TBD,"-18°C Freezer",365
+LSP-MESH-01,"Expanded Copper Foil, 195 g/m^2",AMPEL-M-3001,TBD,"Room Temp",N/A
+PRIMER-01,"Epoxy Primer, MIL-PRF-23377 Type I",MIL-PRF-23377,TBD,"5-25°C",730
+PAINT-01,"Polyurethane Topcoat, White",AMPEL-M-4001,TBD,"5-25°C",365
+SEALANT-01,"Polysulfide Sealant, Fuel Tank (PR-1440 Class B)",PRC-DeSoto PR-1440B,TBD,"5-25°C",180
+SEALANT-02,"General Purpose Sealant (PR-1422)",PRC-DeSoto PR-1422,TBD,"5-25°C",365
+CORR-INH-01,"Corrosion Inhibitor (LPS-3)",LPS Laboratories LPS-3,TBD,"Room Temp",N/A
+AL-SHEET-01,"Aluminum Sheet, 2024-T3, 1.6mm",AMS 4037,TBD,"Room Temp",N/A
+AL-SHEET-02,"Aluminum Sheet, 7075-T6, 2.0mm",AMS 4045,TBD,"Room Temp",N/A
+RIVET-01,"Solid Rivet, 2117-T4, AN470AD4",AN470AD4,TBD,"Room Temp",N/A
+FASTENER-01,"Hi-Lok Pin, HLSP4-6",Hi-Lok HLSP4-6,TBD,"Room Temp",N/A
+FASTENER-02,"Hi-Lok Collar, HLSP4",Hi-Lok HLSP4,TBD,"Room Temp",N/A
+ADHESIVE-01,"Structural Adhesive, 2-Part Epoxy",Hysol EA 9394,TBD,"5-25°C",365
+SOLVENT-01,"Methyl Ethyl Ketone (MEK)",Industrial Grade,TBD,"Room Temp",N/A
+SOLVENT-02,"Isopropyl Alcohol (IPA), 99%",Industrial Grade,TBD,"Room Temp",N/A
+ABRASIVE-01,"Scotch-Brite Pad, Maroon (Medium)",3M,TBD,"Room Temp",N/A
+BREATHER-01,"Breather Cloth, Airweave N10",Airtech N10,TBD,"Room Temp, Dry",N/A
+RELEASE-FILM-01,"Release Film, PTFE Perforated",Airtech Release-Ease 234TFP,TBD,"Room Temp",N/A
+VACUUM-BAG-01,"Vacuum Bagging Film, Nylon",Airtech Wrightlon 5200,TBD,"Room Temp",N/A

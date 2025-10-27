@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Structural Repair Record Schema",
+  "type": "object",
+  "required": ["record_id", "timestamp_utc", "msn", "location", "damage_assessment", "repair_procedure", "materials", "process_log", "personnel", "inspections", "disposition"],
+  "properties": {
+    "record_id": { "type": "string" },
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "msn": { "type": "string" },
+    "location": { "type": "object", "properties": {"zone": {"type": "string"}, "station": {"type": "string"}, "description": {"type": "string"}} },
+    "damage_assessment": { "type": "object", "properties": {"report_id": {"type": "string"}, "classification": {"enum": ["Negligible", "Repairable", "Requires Disposition"]}} },
+    "repair_procedure": { "type": "object", "properties": {"srm_ref": {"type": "string"}, "engineering_order": {"type": "string"}} },
+    "materials": { "type": "array", "items": {"type": "object", "properties": {"spec": {"type": "string"}, "batch_lot": {"type": "string"}, "expiry_date": {"type": "string", "format": "date"}}} },
+    "process_log": { "type": "object", "properties": {"hot_bonder_id": {"type": "string"}, "cure_cycle_log_hash": {"type": "string"}} },
+    "personnel": { "type": "object", "properties": {"technician_id": {"type": "string"}, "inspector_id": {"type": "string"}} },
+    "inspections": { "type": "array", "items": {"type": "object", "properties": {"type": {"enum": ["NDT", "Visual"]}, "report_id": {"type": "string"}, "result": {"enum": ["PASS", "FAIL"]}}} },
+    "disposition": { "type": "string", "enum": ["Return to Service", "Restricted Release", "Scrap"] }
+  }
+}
