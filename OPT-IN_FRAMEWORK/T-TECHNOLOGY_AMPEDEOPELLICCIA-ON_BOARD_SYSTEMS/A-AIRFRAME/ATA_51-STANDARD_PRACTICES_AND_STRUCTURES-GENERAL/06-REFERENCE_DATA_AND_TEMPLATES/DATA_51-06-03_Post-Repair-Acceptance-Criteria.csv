@@ -1,0 +1,21 @@
+Repair_Type,Inspection_Method,Parameter,Acceptance_Criteria,Rejection_Criteria,Notes
+Metallic Bolted Repair,Visual,Fastener Installation,"All fasteners flush-seated, no gaps >0.5mm","Gaps >0.5mm, fastener not seated, damaged heads",Per ATA 20 workmanship standards
+Metallic Bolted Repair,Visual,Doubler Fit,"Doubler flush to skin, shimmed if gap >0.5mm","Gap >0.5mm unshimmed, wrinkles, buckling",Use shims per engineering if needed
+Metallic Bolted Repair,Visual,Sealant Coverage,"100% faying surface coverage, continuous fillet","Voids >10mm, incomplete coverage",Applies to fuel-wetted areas
+Metallic Bolted Repair,Torque Check,Fastener Torque,"Within ±10% of spec torque (see ATA 20 tables)","Outside ±10% range, stripped threads",Sample 10% minimum
+Metallic Bolted Repair,Eddy Current,Stop-Drill Holes,"No cracks emanating from hole edge","Crack indication >1mm from hole edge",If crack repaired by stop-drilling
+Composite Scarf Repair,C-Scan,Void Size (Single),"≤3.0mm diameter","Single void >3.0mm diameter",No voids in first or last ply
+Composite Scarf Repair,C-Scan,Total Void Area,"≤2% of repair area","Total void area >2%",Calculate from C-Scan image
+Composite Scarf Repair,C-Scan,Edge Delamination,"No delamination at repair perimeter","Delamination >5mm into parent or repair",Indicates poor scarf taper or bond
+Composite Scarf Repair,Visual,Surface Finish,"Smooth, flush (±0.5mm), correct fiber orientation","Wrinkles, ply bridging, misaligned fibers",Check against parent laminate
+Composite Scarf Repair,Visual,Ply Count,"Matches parent laminate ply count","Ply count mismatch (±1 ply)","Count plies during layup, verify with C-Scan TOF"
+Composite Wet Layup,Visual,Resin Coverage,"100% fiber wet-out, no dry spots","Dry fibers visible, resin-rich areas",Indicates improper resin ratio
+LSP Mesh Repair,Resistance,Mesh Continuity,"≤10mΩ across any 150mm span (before paint)",">10mΩ, open circuit",Use 4-wire measurement
+LSP Mesh Repair,Resistance,Mesh Continuity (After Paint),"≤15mΩ across any 150mm span",">15mΩ",Allows for paint resistance
+LSP Mesh Repair,Visual,Overlap,"≥25mm overlap at all seams","Overlap <25mm, gaps in mesh",Critical for current transfer
+Honeycomb Repair,C-Scan,Core Crushing,"No core crush >10% of cell height","Core crush >10% of height",Indicates impact damage or over-pressure during cure
+Honeycomb Repair,Visual,Facesheet Bond,"Facesheets bonded to core, no disbond >25mm","Facesheet disbond >25mm diameter",Tap test or C-Scan to verify
+All Repairs,Visual,Protective Finish,"Primer and paint coverage 100%, color match acceptable","Bare metal/composite visible, runs, sags",Per aircraft paint specification
+All Repairs,DFT Measurement,Paint Thickness,"Primer 25-40µm, Topcoat 50-75µm total","Primer <25µm or >40µm, Topcoat <50µm or >75µm",Magnetic or ultrasonic gauge
+All Repairs,Document Review,Repair Record,"All fields complete, signed by tech & inspector","Missing data, unsigned, incorrect references",Critical for traceability
+All Repairs,Continuity,Bonding (if applicable),"≤2.5mΩ to aircraft ground (bonding strap)","Resistance >2.5mΩ",For LSP and fuel tank areas

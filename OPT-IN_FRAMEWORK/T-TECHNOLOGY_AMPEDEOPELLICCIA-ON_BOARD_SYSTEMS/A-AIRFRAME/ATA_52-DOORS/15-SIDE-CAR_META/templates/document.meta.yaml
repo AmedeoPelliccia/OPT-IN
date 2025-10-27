@@ -1,0 +1,27 @@
+schema_version: "1.1"
+id: "TEMPLATE_DOCUMENT_ID"
+document:
+  type: "TYPE"  # PROC, DATA, DESC, INSP, TESTPLAN, DIAG
+  title: "Document Title"
+  revision: "1.0.0"
+  effective_date: "YYYY-MM-DD"
+effectivity:
+  msn: "ALL"  # or specific range
+  configurations: ["BASELINE", "CARGO", "VIP"]  # applicable configs
+safety:
+  hazards: ["List potential hazards"]
+  criticality: "High|Medium|Low"
+approvals:
+  - authority: "Maintenance Engineering"
+    status: "Released|Approved|Under Review"
+    date: "YYYY-MM-DD"
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "YYYY-MM-DD"
+traceability:
+  source_documents: ["AMM-52-XX-XX", "SRM-52-XX-XX"]
+  crossrefs: ["ATA 20", "ATA 51"]  # Related ATA chapters
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "REPLACE_WITH_ACTUAL_SHA256"

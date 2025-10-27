@@ -1,0 +1,46 @@
+schema_version: "1.1"
+id: "PROC_52-XX-XX_Procedure-Title_revX.X.X_YYYYMMDD"
+document:
+  type: "PROC"
+  title: "52-XX-XX: Procedure Title"
+  revision: "1.0.0"
+  effective_date: "YYYY-MM-DD"
+  procedure_type: "Maintenance|Inspection|Repair|Test"
+effectivity:
+  msn: "ALL"
+  configurations: ["BASELINE"]
+safety:
+  hazards: 
+    - "Specific hazard 1"
+    - "Specific hazard 2"
+  criticality: "High"
+  ppe_required:
+    - "Safety glasses"
+    - "Gloves"
+  special_tools: []
+approvals:
+  - authority: "Maintenance Engineering"
+    status: "Released"
+    date: "YYYY-MM-DD"
+    approver_name: "Name"
+    license: "License Number"
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "YYYY-MM-DD"
+    approver_name: "Name"
+traceability:
+  source_documents:
+    - "AMM-52-XX-XX"
+    - "SRM-52-XX-XX"
+  regulatory_basis:
+    - "FAA Part 25.783"
+  crossrefs:
+    - "ATA 20"  # Standard practices
+    - "ATA 51"  # Structural repairs
+materials_required: []
+estimated_man_hours: 0.0
+skill_level: "A&P|Specialized|Certified Repair Station"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "REPLACE_WITH_ACTUAL_SHA256"

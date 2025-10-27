@@ -1,0 +1,346 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata52/door-spec.schema.json",
+  "title": "Door Specification",
+  "description": "Schema for door specifications and configuration data",
+  "type": "object",
+  "properties": {
+    "doorId": {
+      "type": "string",
+      "description": "Unique door identifier (e.g., FWD-L1, AFT-R2, CARGO-FWD)"
+    },
+    "doorType": {
+      "type": "string",
+      "enum": ["PASSENGER", "CARGO", "EMERGENCY", "SERVICE", "BLOWOUT_PANEL"],
+      "description": "Type of door"
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Door assembly part number"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Door serial number"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Door manufacturer"
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "number",
+          "minimum": 0
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0
+        },
+        "thickness": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["mm", "in"]
+        }
+      },
+      "required": ["width", "height", "unit"]
+    },
+    "weight": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["kg", "lbs"]
+        }
+      },
+      "required": ["value", "unit"]
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "component": {
+            "type": "string",
+            "description": "Component name (e.g., outer skin, inner panel, frame)"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material specification (e.g., 2024-T3, CFRP)"
+          },
+          "thickness": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["mm", "in"]
+          }
+        },
+        "required": ["component", "material"]
+      }
+    },
+    "sealSystem": {
+      "type": "object",
+      "properties": {
+        "sealType": {
+          "type": "string",
+          "description": "Type of seal (e.g., silicone, inflatable, heated)"
+        },
+        "partNumber": {
+          "type": "string"
+        },
+        "heatedSeal": {
+          "type": "boolean",
+          "description": "Whether seal is electrically heated"
+        },
+        "powerRequirement": {
+          "type": "object",
+          "properties": {
+            "voltage": {
+              "type": "number"
+            },
+            "current": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "enum": ["VAC", "VDC"]
+            }
+          }
+        },
+        "pressureRating": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "enum": ["psi", "kPa"]
+            }
+          }
+        },
+        "maxLeakageAllowable": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "enum": ["CFM", "L/min"]
+            }
+          }
+        }
+      }
+    },
+    "hingeLatchSystem": {
+      "type": "object",
+      "properties": {
+        "hingeType": {
+          "type": "string",
+          "description": "Type of hinge mechanism"
+        },
+        "numberOfHinges": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "latchType": {
+          "type": "string",
+          "description": "Type of latch mechanism"
+        },
+        "numberOfLatches": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "latchTorqueSpec": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "enum": ["in-lb", "ft-lb", "Nm"]
+            }
+          }
+        }
+      }
+    },
+    "actuationSystem": {
+      "type": "object",
+      "properties": {
+        "actuationType": {
+          "type": "string",
+          "enum": ["MANUAL", "ELECTRIC", "HYDRAULIC", "PNEUMATIC"],
+          "description": "Type of actuation system"
+        },
+        "actuatorPartNumber": {
+          "type": "string"
+        },
+        "powerRequirement": {
+          "type": "object",
+          "properties": {
+            "voltage": {
+              "type": "number"
+            },
+            "current": {
+              "type": "number"
+            },
+            "phase": {
+              "type": "string",
+              "enum": ["DC", "1-PHASE-AC", "3-PHASE-AC"]
+            }
+          }
+        },
+        "operatingTime": {
+          "type": "object",
+          "properties": {
+            "open": {
+              "type": "number",
+              "description": "Time to open (seconds)"
+            },
+            "close": {
+              "type": "number",
+              "description": "Time to close (seconds)"
+            }
+          }
+        },
+        "controllerPartNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "evacuationSystem": {
+      "type": "object",
+      "properties": {
+        "slidePartNumber": {
+          "type": "string"
+        },
+        "slideSerialNumber": {
+          "type": "string"
+        },
+        "slideType": {
+          "type": "string",
+          "enum": ["SLIDE", "SLIDE_RAFT", "RAMP"]
+        },
+        "capacity": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Passenger capacity"
+        },
+        "inflationTime": {
+          "type": "number",
+          "description": "Maximum inflation time (seconds)"
+        },
+        "armingSystem": {
+          "type": "string",
+          "description": "Description of arming/disarming mechanism"
+        }
+      }
+    },
+    "lightningProtection": {
+      "type": "object",
+      "properties": {
+        "lspInstalled": {
+          "type": "boolean"
+        },
+        "lspMaterial": {
+          "type": "string",
+          "description": "Lightning strike protection material"
+        },
+        "lspPartNumber": {
+          "type": "string"
+        },
+        "maxResistance": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "enum": ["ohms", "milliohms"]
+            }
+          }
+        }
+      }
+    },
+    "certificationBasis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Applicable certification requirements (e.g., FAA Part 25.783, CS-25.807)"
+    },
+    "effectivity": {
+      "type": "object",
+      "properties": {
+        "msnRange": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "type": "string"
+            },
+            "to": {
+              "type": "string"
+            }
+          }
+        },
+        "configurations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "maintenanceIntervals": {
+      "type": "object",
+      "properties": {
+        "inspection": {
+          "type": "object",
+          "properties": {
+            "interval": {
+              "type": "number"
+            },
+            "basis": {
+              "type": "string",
+              "enum": ["FH", "FC", "CAL", "MONTHS"]
+            }
+          }
+        },
+        "functionalTest": {
+          "type": "object",
+          "properties": {
+            "interval": {
+              "type": "number"
+            },
+            "basis": {
+              "type": "string",
+              "enum": ["FH", "FC", "CAL", "MONTHS"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "doorId",
+    "doorType",
+    "partNumber",
+    "dimensions",
+    "weight"
+  ]
+}
