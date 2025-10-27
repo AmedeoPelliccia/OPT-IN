@@ -10,10 +10,10 @@
   "certification_status": {
     "level": "EASA CS-FSTD(A) Level D",
     "certificate_id": "EU-1234",
-    "issue_date": "2029-01-15",
-    "expiry_date": "2030-01-15",
+    "issue_date": "2025-10-27",
+    "expiry_date": "2025-10-27",
     "authority": "EASA",
-    "next_evaluation_date": "2030-01-15"
+    "next_evaluation_date": "2025-10-27"
   },
   "configuration": {
     "aircraft_type": "AMPEL360",
@@ -21,25 +21,25 @@
     "simulator_software_version": "v2.5.1",
     "visual_system_version": "v4.3.0",
     "motion_system_version": "v3.1.2",
-    "last_configuration_change": "2029-02-20",
-    "last_software_update": "2029-02-20"
+    "last_configuration_change": "2025-10-27",
+    "last_software_update": "2025-10-27"
   },
   "operational_status": {
     "overall_status": "OPERATIONAL",
     "availability": "AVAILABLE",
-    "scheduled_maintenance": "2029-10-26T08:00:00Z",
-    "last_maintenance": "2029-10-19T14:30:00Z",
-    "next_qualification_test": "2029-11-15T09:00:00Z"
+    "scheduled_maintenance": "2025-10-27T08:00:00Z",
+    "last_maintenance": "2025-10-27T14:30:00Z",
+    "next_qualification_test": "2025-10-27T09:00:00Z"
   },
   "system_health": {
     "motion_system": {
       "status": "OPERATIONAL",
-      "last_check": "2029-10-25T06:00:00Z",
-      "next_check": "2029-10-26T06:00:00Z"
+      "last_check": "2025-10-27T06:00:00Z",
+      "next_check": "2025-10-27T06:00:00Z"
     },
     "visual_system": {
       "status": "OPERATIONAL",
-      "last_check": "2029-10-25T06:00:00Z",
+      "last_check": "2025-10-27T06:00:00Z",
       "projector_lamp_hours": [1250, 1280, 1245, 1270, 1260, 1255]
     },
     "host_computer": {
@@ -50,12 +50,12 @@
     },
     "instructor_station": {
       "status": "OPERATIONAL",
-      "last_check": "2029-10-25T06:00:00Z"
+      "last_check": "2025-10-27T06:00:00Z"
     },
     "flight_controls": {
       "status": "OPERATIONAL",
-      "last_calibration": "2029-10-19T10:00:00Z",
-      "next_calibration": "2029-11-19T10:00:00Z"
+      "last_calibration": "2025-10-27T10:00:00Z",
+      "next_calibration": "2025-10-27T10:00:00Z"
     }
   },
   "utilization": {
@@ -93,6 +93,6 @@
       "phone": "+31-20-XXX-XXXZ"
     }
   },
-  "last_updated": "2029-10-25T17:42:00Z",
+  "last_updated": "2025-10-27T17:42:00Z",
   "schema_version": "1.0"
 }

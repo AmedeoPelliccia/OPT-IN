@@ -4,7 +4,7 @@ document:
   type: "ICD-STD"
   title: "Standard - HVDC Ground Power Connector"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "CANDIDATE"
 compliance:
   standards:
@@ -26,12 +26,12 @@ traceability:
 approvals:
   - role: "Chief Electrical Engineer"
     name: "Michael Johnson"
-    date: "2029-05-16"
+    date: "2025-10-27"
   - role: "Safety Compliance Officer"
     name: "James Chen"
-    date: "2029-05-20"
+    date: "2025-10-27"
 audit:
   created_by: "AMPEL360 Infrastructure Standards Team"
-  created_utc: "2029-04-12T13:00:00Z"
+  created_utc: "2025-10-27T13:00:00Z"
   modified_by: "AMPEL360 Infrastructure Standards Team"
-  modified_utc: "2029-05-12T11:20:00Z"
+  modified_utc: "2025-10-27T11:20:00Z"

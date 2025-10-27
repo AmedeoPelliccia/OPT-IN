@@ -16,7 +16,7 @@ owner:
   department: "Ground Safety & Training"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 approval_status: "APPROVED"
 
 mission_critical_procedures:
@@ -34,10 +34,10 @@ safety_emphasis:
 regulatory_approvals:
   - authority: "EASA"
     approval_reference: "EASA.GOPS.001"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-GOPS-2028-001"
-    date: "2028-09-28"
+    date: "2025-10-27"
 
 notes: |
   Ground operations significantly different from conventional aircraft.

@@ -1,7 +1,7 @@
 # Metadata Schema Guide
 
 **Revision:** 1.1.0  
-**Effective Date:** 2028-02-20  
+**Effective Date:** 2025-10-27  
 **Document ID:** STD_Metadata-Schema-Guide
 
 ---
@@ -48,7 +48,7 @@ document:
 | `type` | string | Document type prefix | `DOC`, `GOV`, `STD`, `POLICY` |
 | `title` | string | Full document title | `Fuel Cell Architecture Specification` |
 | `revision` | string | Semantic version | `2.1.0` |
-| `effective_date` | string | ISO 8601 date | `2028-03-15` |
+| `effective_date` | string | ISO 8601 date | `2025-10-27` |
 | `subject` | string | Brief description | `Hydrogen fuel cell system design` |
 | `ata_chapter` | string | ATA chapter number | `28` |
 | `category` | string | Subdirectory or category | `Fuel Systems` |
@@ -194,7 +194,7 @@ document:
   type: "DOC"
   title: "Hydrogen Fuel Cell Architecture Specification"
   revision: "2.1.0"
-  effective_date: "2028-03-15"
+  effective_date: "2025-10-27"
   subject: "Hydrogen fuel cell system design and integration"
   ata_chapter: "28"
   category: "Fuel Systems"
@@ -209,25 +209,25 @@ effectivity:
 approvals:
   - authority: "Chief Engineer - Propulsion"
     status: "Released"
-    date: "2028-03-15"
+    date: "2025-10-27"
   - authority: "Airworthiness Authority"
     status: "Approved"
-    date: "2028-03-10"
+    date: "2025-10-27"
 integrity:
   checksum:
     algorithm: "sha256"
     value: "a3f5b8c9d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8"
 revision_history:
   - version: "2.1.0"
-    date: "2028-03-15"
+    date: "2025-10-27"
     changes: "Updated thermal management requirements"
     author: "J. Smith - Propulsion Engineering"
   - version: "2.0.0"
-    date: "2028-01-10"
+    date: "2025-10-27"
     changes: "Major revision for increased power output"
     author: "J. Smith - Propulsion Engineering"
   - version: "1.0.0"
-    date: "2027-06-01"
+    date: "2025-10-27"
     changes: "Initial release"
     author: "J. Smith - Propulsion Engineering"
 references:
@@ -404,7 +404,7 @@ python ci/validate_meta.py . --schema ci/meta_v1_1.json
 **Document Control:**
 - **Owner:** Documentation Architecture Team
 - **Approver:** Chief Engineering Office
-- **Next Review:** 2029-02-20
+- **Next Review:** 2025-10-27
 
 ---
 

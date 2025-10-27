@@ -7,7 +7,7 @@ approvers:
     name: "TBD"
   - role: "Quality Manager"
     name: "TBD"
-effective_date: "2028-08-01"
+effective_date: "2025-10-27"
 doc_policy:
   naming: "MAINT_<GSE-ID>_<Subject>_rev<SEMVER>_<YYYYMMDD>.md"
   formats: ["md", "csv", "pdf"]

@@ -4,7 +4,7 @@ document:
   type: "DOC"
   title: "The OPT-IN Framework Philosophy"
   revision: "1.0.0"
-  effective_date: "2028-01-01"
+  effective_date: "2025-10-27"
   subject: "Framework definition and guiding principles"
   ata_chapter: "00"
   category: "Introduction and Philosophy"
@@ -20,17 +20,17 @@ effectivity:
 approvals:
   - authority: "Chief Engineering Office"
     status: "Released"
-    date: "2028-01-01"
+    date: "2025-10-27"
   - authority: "Program Director"
     status: "Approved"
-    date: "2028-01-01"
+    date: "2025-10-27"
 integrity:
   checksum:
     algorithm: "sha256"
     value: "602eef36390991138e90777b9ec87b64be835325f73b64c14775a848e5fd84a2"
 revision_history:
   - version: "1.0.0"
-    date: "2028-01-01"
+    date: "2025-10-27"
     changes: "Initial release of OPT-IN framework philosophy"
     author: "Documentation Architecture Team"
 references:

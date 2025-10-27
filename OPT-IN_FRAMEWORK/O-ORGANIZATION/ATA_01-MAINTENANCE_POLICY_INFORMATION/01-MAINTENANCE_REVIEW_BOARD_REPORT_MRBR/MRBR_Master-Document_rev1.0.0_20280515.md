@@ -1,7 +1,7 @@
 # Maintenance Review Board Report (MRBR) - Master Document
 **Aircraft Type:** AMPEL360 Blended-Wing Body Hydrogen Aircraft  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-15  
+**Effective Date:** 2025-10-27  
 **Document ID:** MRBR_Master-Document_rev1.0.0_20280515
 
 ---
@@ -212,7 +212,7 @@ Detailed structural inspection requirements including NDT methods and acceptance
 
 | Revision | Date | Description | Approved By |
 |----------|------|-------------|-------------|
-| 1.0.0 | 2028-05-15 | Initial Release | MRB Chairman |
+| 1.0.0 | 2025-10-27 | Initial Release | MRB Chairman |
 
 ---
 
@@ -220,8 +220,8 @@ Detailed structural inspection requirements including NDT methods and acceptance
 
 | Authority | Approval Date | Reference |
 |-----------|---------------|-----------|
-| EASA | 2028-05-10 | EASA.21J.XXX |
-| FAA | 2028-05-12 | FAA DOA Auth XXX |
+| EASA | 2025-10-27 | EASA.21J.XXX |
+| FAA | 2025-10-27 | FAA DOA Auth XXX |
 
 ---
 

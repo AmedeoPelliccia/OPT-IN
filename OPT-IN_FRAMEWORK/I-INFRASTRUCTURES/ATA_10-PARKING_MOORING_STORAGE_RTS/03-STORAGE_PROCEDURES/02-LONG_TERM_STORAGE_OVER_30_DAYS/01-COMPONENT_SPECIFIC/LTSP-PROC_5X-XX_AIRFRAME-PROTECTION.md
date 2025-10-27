@@ -4,7 +4,7 @@
 **ATA Chapter**: 5x (Airframe - Structures)  
 **Storage Type**: Long-Term Storage Component-Specific  
 **Revision**: 1.0.0  
-**Date**: 2028-12-01
+**Date**: 2025-10-27
 
 ---
 
@@ -528,4 +528,4 @@ Signature: _______________
 ---
 
 **Approval**: Chief Engineer - Structures  
-**Next Review**: 2029-06-01
+**Next Review**: 2025-10-27

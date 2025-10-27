@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_50-02-02_Repair-Of-Liner-Panels_rev1.0.0_20281002  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-02
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This procedure covers the removal and replacement of damaged cargo compartment liner panels to maintain fire containment certification.

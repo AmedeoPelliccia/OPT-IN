@@ -23,8 +23,8 @@ owner:
 
 # Version Control
 revision: "1.0.0"
-effective_date: "2028-10-01"
-last_updated: "2028-09-30"
+effective_date: "2025-10-27"
+last_updated: "2025-10-27"
 approval_status: "APPROVED"
 
 # Applicability
@@ -37,10 +37,10 @@ effectivity:
 regulatory_approvals:
   - authority: "EASA"
     approval_reference: "EASA.FCOM.002"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-FCOM-2028-001"
-    date: "2028-09-28"
+    date: "2025-10-27"
 
 # Subdirectories
 subdirectories:
@@ -67,7 +67,7 @@ document_control:
   classification: "CONTROLLED - FLIGHT OPERATIONS"
   distribution: "Flight Crew Only"
   review_cycle: "Annual"
-  next_review: "2029-09-30"
+  next_review: "2025-10-27"
 
 # Notes
 notes: |

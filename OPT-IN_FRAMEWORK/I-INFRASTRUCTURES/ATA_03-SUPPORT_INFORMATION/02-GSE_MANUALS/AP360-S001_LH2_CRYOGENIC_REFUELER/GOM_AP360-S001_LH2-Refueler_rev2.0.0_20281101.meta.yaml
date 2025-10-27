@@ -9,7 +9,7 @@ document:
   type: "GOM"
   title: "Ground Operations Manual: LH2 Cryogenic Refueling System"
   revision: "2.0.0"
-  effective_date: "2028-11-01"
+  effective_date: "2025-10-27"
   supersedes: "GOM_AP360-S001_LH2-Refueler_rev1.5.0_20280715.md"
 effectivity:
   aircraft: ["AMPEL360"]
@@ -25,7 +25,7 @@ compliance:
     - "EASA Part-145 (Maintenance Organization Approvals)"
 maintenance:
   interval: "Daily inspection, monthly calibration"
-  next_due: "2029-01-15"
+  next_due: "2025-10-27"
   responsibility: "Ground Operations & Maintenance"
 training:
   required_courses:
@@ -37,15 +37,15 @@ training:
 approvals:
   - role: "Ground Ops Manager"
     name: "TBD"
-    date: "2028-11-01"
+    date: "2025-10-27"
     signature: "Digital signature pending"
   - role: "Safety Officer"
     name: "TBD"
-    date: "2028-11-01"
+    date: "2025-10-27"
     signature: "Digital signature pending"
   - role: "Quality Manager"
     name: "TBD"
-    date: "2028-11-01"
+    date: "2025-10-27"
     signature: "Digital signature pending"
 integrity:
   checksum: "e096b9fb89275f70ecf9a5bfa6b50992717b74624f6426fa77eb2483898fe5cb"
@@ -67,9 +67,9 @@ traceability:
     - "REQ-SAFE-010: H₂ leak detection and alarm"
 audit:
   created_by: "L. Davis"
-  created_utc: "2028-11-01T09:00:00Z"
+  created_utc: "2025-10-27T09:00:00Z"
   modified_by: "L. Davis"
-  modified_utc: "2028-11-01T14:30:00Z"
+  modified_utc: "2025-10-27T14:30:00Z"
 signing:
   required: true
   signature_file: "GOM_AP360-S001_LH2-Refueler_rev2.0.0_20281101.md.sig"
@@ -77,4 +77,4 @@ signing:
 build:
   git_commit: "abc123def456"
   git_tag: "gse-docs-v2.0.0"
-  build_date: "2028-11-01T15:00:00Z"
+  build_date: "2025-10-27T15:00:00Z"

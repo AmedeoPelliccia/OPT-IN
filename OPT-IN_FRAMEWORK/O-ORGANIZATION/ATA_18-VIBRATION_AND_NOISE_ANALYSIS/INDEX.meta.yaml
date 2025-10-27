@@ -5,10 +5,10 @@ owners: ["Airworthiness Engineering", "Propulsion Engineering", "Structural Anal
 approvers:
   - role: "Head of Airworthiness"
     name: "TBD"
-    effective_date: "2028-04-15"
+    effective_date: "2025-10-27"
   - role: "Chief Engineer - Propulsion"
     name: "TBD"
-    effective_date: "2028-04-15"
+    effective_date: "2025-10-27"
 data_classes: ["INTERNAL", "REGULATED", "OPERATIONAL"]
 retention_policy: 
   raw_data_months: 24

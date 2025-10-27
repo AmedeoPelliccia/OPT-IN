@@ -2,7 +2,7 @@
 
 **Document ID:** PLAN_Vibration-And-Noise-Management-Program  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-04-15  
+**Effective Date:** 2025-10-27  
 **Status:** Released
 
 ---
@@ -273,7 +273,7 @@ The program includes provisions for:
 - Head of Maintenance: [Signature Required]
 
 **Document Control:**
-- Next Review Date: 2029-04-15
+- Next Review Date: 2025-10-27
 - Change Authority: Vibration and Noise Program Review Board
 
 ---

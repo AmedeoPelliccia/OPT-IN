@@ -42,10 +42,10 @@ This chapter covers all procedures and requirements for parking, mooring, storag
 
 | Version | Date | Description | Author |
 |---------|------|-------------|--------|
-| 2.0.0 | 2028-12-01 | Long-term storage procedures complete | AMPEL360 Tech Pubs |
-| 1.5.0 | 2028-11-18 | Short-term storage updates | AMPEL360 Tech Pubs |
-| 1.3.0 | 2028-11-05 | High-wind mooring procedures for BWB | AMPEL360 Tech Pubs |
-| 1.0.0 | 2028-10-20 | Initial release | AMPEL360 Tech Pubs |
+| 2.0.0 | 2025-10-27 | Long-term storage procedures complete | AMPEL360 Tech Pubs |
+| 1.5.0 | 2025-10-27 | Short-term storage updates | AMPEL360 Tech Pubs |
+| 1.3.0 | 2025-10-27 | High-wind mooring procedures for BWB | AMPEL360 Tech Pubs |
+| 1.0.0 | 2025-10-27 | Initial release | AMPEL360 Tech Pubs |
 
 ## Navigation
 

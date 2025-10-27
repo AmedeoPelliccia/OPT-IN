@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_Routine-Data-Download-And-Analysis  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-04-15  
+**Effective Date:** 2025-10-27  
 **Status:** Released
 
 ---
@@ -255,7 +255,7 @@ Data:
   - Red line: EWMA
   - Green band: GREEN threshold (≤0.15 ips)
   - Yellow band: AMBER threshold (0.16-0.25 ips)
-  - Annotations: "Balanced 2029-03-16" marker
+  - Annotations: "Balanced 2025-10-27" marker
 ```
 
 ---
@@ -431,7 +431,7 @@ Monthly fleet analysis:
 ---
 
 **Document Control:**
-- **Next Review:** 2029-04-15
+- **Next Review:** 2025-10-27
 - **Change Authority:** Reliability Engineering
 
 *This document is part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

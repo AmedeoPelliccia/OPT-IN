@@ -1,7 +1,7 @@
 # System Safety Program Plan
 
 **Revision:** 1.0.0  
-**Effective Date:** 2028-03-01  
+**Effective Date:** 2025-10-27  
 **Document ID:** POLICY_System-Safety-Program-Plan
 
 ---
@@ -334,7 +334,7 @@ safety_requirement:
 **Document Control:**
 - **Owner:** Chief Safety Officer
 - **Approver:** Program Director
-- **Next Review:** 2029-03-01
+- **Next Review:** 2025-10-27
 
 ---
 

@@ -76,7 +76,7 @@ approvers:
     name: "TBD"
   - role: "Safety Officer"
     name: "TBD"
-effective_date: "2028-08-01"
+effective_date: "2025-10-27"
 doc_policy:
   naming: "<DOC>_<GSE-ID>_<Subject>_rev<SEMVER>_<YYYYMMDD>.<ext>"
   formats: ["md","xml","csv","json","cdx","bin","sig","dxf"]
@@ -156,10 +156,10 @@ All `.meta.yaml` sidecar files are validated against:
 Live status of all GSE fleet items:
 ```json
 {
-  "generated_utc": "2028-11-01T00:00:00Z",
+  "generated_utc": "2025-10-27T00:00:00Z",
   "fleet": [
-    {"gse_id":"AP360-S001","serial":"S001-017","availability":"IN_SERVICE","next_pm":"2029-01-15","hours":812,"open_defects":["DEF-2028-145"]},
-    {"gse_id":"AP360-T003","serial":"T003-044","availability":"AOG","next_pm":"2028-12-10","hours":233,"open_defects":["DEF-2028-219","DEF-2028-223"]}
+    {"gse_id":"AP360-S001","serial":"S001-017","availability":"IN_SERVICE","next_pm":"2025-10-27","hours":812,"open_defects":["DEF-2028-145"]},
+    {"gse_id":"AP360-T003","serial":"T003-044","availability":"AOG","next_pm":"2025-10-27","hours":233,"open_defects":["DEF-2028-219","DEF-2028-223"]}
   ]
 }
 ```
@@ -190,7 +190,7 @@ Live status of all GSE fleet items:
 ## 3 Instruments
 | id | model | cal_due | uncertainty |
 |:---|:---|:---|:---|
-| CAL-P-015 | Wika CPG1500 | 2029-03-15 | +/- 0.1% |
+| CAL-P-015 | Wika CPG1500 | 2025-10-27 | +/- 0.1% |
 ## 4 Tests
 | TC | Description | Spec | Method | Result |
 |:---|:---|:---|:---|:---|

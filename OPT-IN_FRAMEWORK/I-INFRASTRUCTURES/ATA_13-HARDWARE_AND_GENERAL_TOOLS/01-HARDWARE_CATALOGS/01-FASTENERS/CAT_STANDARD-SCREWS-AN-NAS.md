@@ -60,5 +60,5 @@ This catalog contains standard aerospace screws conforming to AN (Air Force-Navy
 ---
 
 *Revision History:*
-- 1.8.0 (2029-01-15): Added NAS1351 series and updated usage notes
-- 1.7.0 (2028-09-20): Expanded AN500 and AN525 series listings
+- 1.8.0 (2025-10-27): Added NAS1351 series and updated usage notes
+- 1.7.0 (2025-10-27): Expanded AN500 and AN525 series listings

@@ -3,7 +3,7 @@
 
 **Document Number:** QTG-AMPEL360-FFS-001  
 **Revision:** 2.1.0  
-**Date:** 2029-03-10  
+**Date:** 2025-10-27  
 **Classification:** Controlled - Regulatory Submission
 
 ---
@@ -120,9 +120,9 @@ All simulator changes documented and assessed for QTG impact
 
 | Revision | Date | Author | Changes | Approved By |
 |----------|------|--------|---------|-------------|
-| 1.0.0 | 2028-01-15 | Engineering Team | Initial QTG | Chief Engineer |
-| 2.0.0 | 2028-10-01 | Engineering Team | Updated for ADP v3.0.0 | Chief Engineer |
-| 2.1.0 | 2029-03-10 | Engineering Team | Updated for ADP v3.2.0, added H₂ system tests | Chief Engineer |
+| 1.0.0 | 2025-10-27 | Engineering Team | Initial QTG | Chief Engineer |
+| 2.0.0 | 2025-10-27 | Engineering Team | Updated for ADP v3.0.0 | Chief Engineer |
+| 2.1.0 | 2025-10-27 | Engineering Team | Updated for ADP v3.2.0, added H₂ system tests | Chief Engineer |
 
 ---
 

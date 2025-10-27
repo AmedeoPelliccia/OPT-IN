@@ -4,17 +4,17 @@ document:
   type: "MPD"
   title: "Maintenance Planning Document - Master"
   revision: "1.0.0"
-  effective_date: "2028-06-20"
+  effective_date: "2025-10-27"
 effectivity:
   msn: "AMP360-001+"
   aircraft_config: ["AMPEL360-BWB-H2"]
 approvals:
   - authority: "EASA"
     status: "Approved"
-    date: "2028-06-15"
+    date: "2025-10-27"
   - authority: "FAA"
     status: "Accepted"
-    date: "2028-06-18"
+    date: "2025-10-27"
 traceability:
   source_document: "MRBR_Master-Document_rev1.0.0"
 integrity:

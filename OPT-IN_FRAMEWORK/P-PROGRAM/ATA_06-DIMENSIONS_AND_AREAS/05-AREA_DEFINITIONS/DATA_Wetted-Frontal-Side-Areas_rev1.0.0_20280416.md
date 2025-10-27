@@ -1,6 +1,6 @@
 # Wetted, Frontal, and Side Areas
 **Revision:** 1.0.0
-**Effective Date:** 2028-04-16
+**Effective Date:** 2025-10-27
 
 ## Wetted Area (S_wet)
 - **Total Wetted Area:** 1,425.0 m²

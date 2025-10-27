@@ -704,7 +704,7 @@ Personnel involved in certification activities shall receive training on:
 | Document Type | Certification Mapping |
 | Approval Authority | Chief Engineer, Airworthiness |
 | Review Cycle | Annual |
-| Next Review Date | 2029-10-27 |
+| Next Review Date | 2025-10-27 |
 | Distribution | All Engineering, Certification, Quality |
 
 ---

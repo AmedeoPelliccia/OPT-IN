@@ -1,6 +1,6 @@
 # PROC - Servicing LCO₂ Offload
 **Revision:** 1.0.0  
-**Effective Date:** 2028-08-25  
+**Effective Date:** 2025-10-27  
 **System:** ATA 12 - SERVICING / ATA 21-80-00 (Provisional)  
 
 ## Purpose
@@ -76,4 +76,4 @@ Applies to liquid CO₂ offload operations at qualified ground stations.
 ---
 **Checksum (SHA256):** TBD  
 **Approved by:** Chief Engineer - Environmental Systems  
-**Next Review:** 2029-08-25
+**Next Review:** 2025-10-27

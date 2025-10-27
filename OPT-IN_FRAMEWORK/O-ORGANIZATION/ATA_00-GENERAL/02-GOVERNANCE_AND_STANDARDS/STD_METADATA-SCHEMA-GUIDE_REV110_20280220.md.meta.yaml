@@ -4,7 +4,7 @@ document:
   type: "STD"
   title: "Metadata Schema Guide"
   revision: "1.1.0"
-  effective_date: "2028-02-20"
+  effective_date: "2025-10-27"
   subject: "Rules for .meta.yaml composition and validation"
   ata_chapter: "00"
   category: "Governance and Standards"
@@ -20,21 +20,21 @@ effectivity:
 approvals:
   - authority: "Documentation Architecture Team"
     status: "Released"
-    date: "2028-02-20"
+    date: "2025-10-27"
   - authority: "Chief Engineering Office"
     status: "Approved"
-    date: "2028-02-20"
+    date: "2025-10-27"
 integrity:
   checksum:
     algorithm: "sha256"
     value: "355e6936f6e54f20ca5c437291d1ba90631dda83aa8f7d876e5ca8e67027bdbe"
 revision_history:
   - version: "1.1.0"
-    date: "2028-02-20"
+    date: "2025-10-27"
     changes: "Added security classification section and enhanced validation rules"
     author: "Documentation Architecture Team"
   - version: "1.0.0"
-    date: "2028-01-01"
+    date: "2025-10-27"
     changes: "Initial release of metadata schema guide"
     author: "Documentation Architecture Team"
 references:

@@ -1,7 +1,7 @@
 # ATA 116 - FLIGHT SIMULATOR CUING SYSTEM
 
 **Revision:** 2.0.0  
-**Effective Date:** 2029-01-01  
+**Effective Date:** 2025-10-27  
 **Simulator ID:** FFS-001 (AMPEL360)
 
 ---
@@ -76,13 +76,13 @@ Must replicate the handling qualities of:
 ## Document Control
 
 **Approved by:** Simulator Engineering  
-**Approval Date:** 2028-12-15  
-**Next Review:** 2030-01-01  
+**Approval Date:** 2025-10-27  
+**Next Review:** 2025-10-27  
 
 **Change Log:**
-- v2.0.0 (2029-01-01): Complete restructure for AMPEL360 BWB simulator
-- v1.5.0 (2028-06-01): Added hybrid-electric propulsion aural model
-- v1.0.0 (2027-01-01): Initial release for Level D qualification
+- v2.0.0 (2025-10-27): Complete restructure for AMPEL360 BWB simulator
+- v1.5.0 (2025-10-27): Added hybrid-electric propulsion aural model
+- v1.0.0 (2025-10-27): Initial release for Level D qualification
 
 ---
 

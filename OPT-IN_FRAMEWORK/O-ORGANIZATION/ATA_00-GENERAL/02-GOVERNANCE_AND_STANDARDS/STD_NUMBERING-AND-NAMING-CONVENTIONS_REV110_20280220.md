@@ -1,7 +1,7 @@
 # Numbering and Naming Conventions
 
 **Revision:** 1.1.0  
-**Effective Date:** 2028-02-20  
+**Effective Date:** 2025-10-27  
 **Document ID:** STD_Numbering-And-Naming-Conventions
 
 ---
@@ -108,8 +108,8 @@ Identifiers: `alpha`, `beta`, `rc`, `draft`
 **Required Format:** `YYYYMMDD`
 
 **Examples:**
-- `20280101` - January 1, 2028
-- `20281231` - December 31, 2028
+- `20280101` - October 27, 2025
+- `20281231` - October 27, 2025
 
 **Rules:**
 - Always use 4-digit year
@@ -439,7 +439,7 @@ To request an exception to naming conventions:
 **Document Control:**
 - **Owner:** Configuration Management Team
 - **Approver:** Chief Engineering Office
-- **Next Review:** 2029-02-20
+- **Next Review:** 2025-10-27
 
 ---
 

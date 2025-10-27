@@ -5,7 +5,7 @@
 **Document Type:** Interface Control Document (ICD)  
 **GSE ID:** AP360-S001  
 **Revision:** 3.0.0  
-**Effective Date:** 2028-09-01  
+**Effective Date:** 2025-10-27  
 **Status:** Released
 
 ---
@@ -159,9 +159,9 @@
 
 | Revision | Date | Author | Changes |
 |:---------|:-----|:-------|:--------|
-| 1.0.0 | 2027-01-15 | J. Smith | Initial release |
-| 2.0.0 | 2027-08-20 | A. Jones | Added CAN FD support, updated pinout |
-| 3.0.0 | 2028-09-01 | M. Williams | Updated to IEC 62196-3, enhanced safety interlock |
+| 1.0.0 | 2025-10-27 | J. Smith | Initial release |
+| 2.0.0 | 2025-10-27 | A. Jones | Added CAN FD support, updated pinout |
+| 3.0.0 | 2025-10-27 | M. Williams | Updated to IEC 62196-3, enhanced safety interlock |
 
 ---
 
@@ -169,9 +169,9 @@
 
 | Role | Name | Signature | Date |
 |:-----|:-----|:----------|:-----|
-| Chief Engineer | TBD | ___________ | 2028-09-01 |
-| Safety Officer | TBD | ___________ | 2028-09-01 |
-| Ground Ops Manager | TBD | ___________ | 2028-09-01 |
+| Chief Engineer | TBD | ___________ | 2025-10-27 |
+| Safety Officer | TBD | ___________ | 2025-10-27 |
+| Ground Ops Manager | TBD | ___________ | 2025-10-27 |
 
 ---
 

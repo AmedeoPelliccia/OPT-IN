@@ -1,6 +1,6 @@
 # PROC - Servicing SAF Refuel/Defuel
 **Revision:** 1.2.0  
-**Effective Date:** 2028-08-20  
+**Effective Date:** 2025-10-27  
 **System:** ATA 12 - SERVICING / ATA 28 - FUEL  
 
 ## Purpose
@@ -110,11 +110,11 @@ Applies to all ground servicing operations involving SAF fuel systems.
 ## Revision History
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2028-06-15 | J. Smith | Initial release |
-| 1.1.0 | 2028-07-10 | M. Chen | Added contamination control section |
-| 1.2.0 | 2028-08-20 | A. Kumar | Updated bonding requirements, added DPP integration |
+| 1.0.0 | 2025-10-27 | J. Smith | Initial release |
+| 1.1.0 | 2025-10-27 | M. Chen | Added contamination control section |
+| 1.2.0 | 2025-10-27 | A. Kumar | Updated bonding requirements, added DPP integration |
 
 ---
 **Checksum (SHA256):** TBD  
 **Approved by:** Chief Engineer - Servicing Operations  
-**Next Review:** 2029-08-20
+**Next Review:** 2025-10-27

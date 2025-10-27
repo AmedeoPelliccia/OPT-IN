@@ -1,6 +1,6 @@
 # PROC - Servicing Lavatory Waste System
 **Revision:** 1.0.0  
-**Effective Date:** 2028-08-18  
+**Effective Date:** 2025-10-27  
 **System:** ATA 12 - SERVICING / ATA 38 - WATER/WASTE  
 
 ## Purpose
@@ -94,4 +94,4 @@ Applies to all lavatory waste servicing operations.
 ---
 **Checksum (SHA256):** TBD  
 **Approved by:** Chief Engineer - Cabin Systems  
-**Next Review:** 2029-08-18
+**Next Review:** 2025-10-27

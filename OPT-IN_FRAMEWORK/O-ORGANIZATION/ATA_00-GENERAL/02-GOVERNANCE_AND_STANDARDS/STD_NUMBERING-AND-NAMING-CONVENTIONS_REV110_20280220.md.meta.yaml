@@ -4,7 +4,7 @@ document:
   type: "STD"
   title: "Numbering and Naming Conventions"
   revision: "1.1.0"
-  effective_date: "2028-02-20"
+  effective_date: "2025-10-27"
   subject: "Standardized numbering and naming conventions for all technical artifacts"
   ata_chapter: "00"
   category: "Governance and Standards"
@@ -21,21 +21,21 @@ effectivity:
 approvals:
   - authority: "Configuration Management Team"
     status: "Released"
-    date: "2028-02-20"
+    date: "2025-10-27"
   - authority: "Chief Engineering Office"
     status: "Approved"
-    date: "2028-02-20"
+    date: "2025-10-27"
 integrity:
   checksum:
     algorithm: "sha256"
     value: "f5af76e856134943ffa56e531b2cf4d29a521cda63037d70fb8803b15af33acb"
 revision_history:
   - version: "1.1.0"
-    date: "2028-02-20"
+    date: "2025-10-27"
     changes: "Added provisional code naming and migration guidelines"
     author: "Configuration Management Team"
   - version: "1.0.0"
-    date: "2028-01-01"
+    date: "2025-10-27"
     changes: "Initial release of numbering and naming conventions"
     author: "Configuration Management Team"
 references:

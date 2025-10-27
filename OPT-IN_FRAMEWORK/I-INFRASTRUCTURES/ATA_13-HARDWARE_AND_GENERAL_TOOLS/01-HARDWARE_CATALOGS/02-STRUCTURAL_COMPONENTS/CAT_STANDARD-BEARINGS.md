@@ -134,6 +134,6 @@ This catalog contains standard aerospace bearings approved for use in AMPEL360 m
 ---
 
 *Revision History:*
-- 1.6.0 (2029-01-15): Added self-aligning bearings and lubrication recommendations
-- 1.5.0 (2028-08-20): Updated load ratings and inspection criteria
-- 1.4.0 (2028-04-10): Initial AMPEL360 catalog release
+- 1.6.0 (2025-10-27): Added self-aligning bearings and lubrication recommendations
+- 1.5.0 (2025-10-27): Updated load ratings and inspection criteria
+- 1.4.0 (2025-10-27): Initial AMPEL360 catalog release

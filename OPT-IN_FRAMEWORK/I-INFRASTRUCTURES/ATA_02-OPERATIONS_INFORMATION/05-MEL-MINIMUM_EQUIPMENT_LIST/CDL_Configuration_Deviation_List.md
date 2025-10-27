@@ -5,7 +5,7 @@ CONFIGURATION DEVIATION LIST (CDL)
 
 Document ID: CDL_Configuration_Deviation_List
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 

@@ -2,7 +2,7 @@
 
 **Document ID**: STSP_Checklist-Short-Term-Prep  
 **Revision**: 1.5.0  
-**Date**: 2028-11-18  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 03-01 - SHORT TERM STORAGE (< 30 DAYS)
 
@@ -194,13 +194,13 @@ Maintenance Manager: _______________ Date: _______________
 
 | Version | Date | Changes | Approved By |
 |---------|------|---------|-------------|
-| 1.5.0 | 2028-11-18 | Added CO₂ battery and fuel cell procedures | Engineering |
-| 1.4.0 | 2028-09-05 | Updated LH2 storage requirements | Fuel Systems Lead |
-| 1.3.0 | 2028-06-12 | Enhanced battery management | Electrical Lead |
-| 1.0.0 | 2028-03-01 | Initial release | Maintenance Manager |
+| 1.5.0 | 2025-10-27 | Added CO₂ battery and fuel cell procedures | Engineering |
+| 1.4.0 | 2025-10-27 | Updated LH2 storage requirements | Fuel Systems Lead |
+| 1.3.0 | 2025-10-27 | Enhanced battery management | Electrical Lead |
+| 1.0.0 | 2025-10-27 | Initial release | Maintenance Manager |
 
 ---
 
 **Approval**: Chief of Maintenance  
-**Next Review**: 2029-05-18  
+**Next Review**: 2025-10-27  
 **Distribution**: All Maintenance Bases, Line Stations

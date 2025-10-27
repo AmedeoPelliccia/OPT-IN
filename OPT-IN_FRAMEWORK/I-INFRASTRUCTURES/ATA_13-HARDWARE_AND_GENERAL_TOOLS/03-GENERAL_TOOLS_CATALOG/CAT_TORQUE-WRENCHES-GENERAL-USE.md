@@ -252,6 +252,6 @@ Required wrench setting = 100 × (20 / 15) = 133 ft-lbs
 ---
 
 *Revision History:*
-- 3.0.0 (2029-01-15): Major revision with expanded procedures and selection guide
-- 2.5.0 (2028-12-01): Added digital wrenches and torque multipliers
-- 2.0.0 (2028-08-15): Initial AMPEL360 catalog release
+- 3.0.0 (2025-10-27): Major revision with expanded procedures and selection guide
+- 2.5.0 (2025-10-27): Added digital wrenches and torque multipliers
+- 2.0.0 (2025-10-27): Initial AMPEL360 catalog release

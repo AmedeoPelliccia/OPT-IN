@@ -1,7 +1,7 @@
 # Configuration Management Plan
 
 **Revision:** 1.2.0  
-**Effective Date:** 2028-02-15  
+**Effective Date:** 2025-10-27  
 **Document ID:** GOV_Configuration-Management-Plan
 
 ---
@@ -427,7 +427,7 @@ traceability:
 **Document Control:**
 - **Owner:** Configuration Management Team
 - **Approver:** Chief Engineering Office
-- **Next Review:** 2029-02-15
+- **Next Review:** 2025-10-27
 
 ---
 

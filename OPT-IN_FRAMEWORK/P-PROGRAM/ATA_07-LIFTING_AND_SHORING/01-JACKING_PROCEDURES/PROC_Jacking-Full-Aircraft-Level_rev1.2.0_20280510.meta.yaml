@@ -4,7 +4,7 @@ document:
   type: "PROC"
   title: "Full Aircraft Jacking (Level Attitude)"
   revision: "1.2.0"
-  effective_date: "2028-05-10"
+  effective_date: "2025-10-27"
 effectivity:
   msn: "ALL"
   config: "All configurations"
@@ -46,13 +46,13 @@ recovery_proc: "PROC_Recovery-Off-Jacks_rev1.0.0_20280610.md"
 approvals:
   - authority: "Structural Engineering"
     status: "Released"
-    date: "2028-05-08"
+    date: "2025-10-27"
   - authority: "Quality Assurance"
     status: "Released"
-    date: "2028-05-08"
+    date: "2025-10-27"
   - authority: "Chief Engineer"
     status: "Released"
-    date: "2028-05-09"
+    date: "2025-10-27"
 traceability:
   source_reports:
     - "STR-RPT-07-001_Jacking-Load-Analysis"

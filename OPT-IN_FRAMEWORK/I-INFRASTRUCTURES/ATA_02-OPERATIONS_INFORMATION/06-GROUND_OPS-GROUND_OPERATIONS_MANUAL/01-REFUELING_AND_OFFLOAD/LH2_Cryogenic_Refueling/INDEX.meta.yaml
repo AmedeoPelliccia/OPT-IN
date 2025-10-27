@@ -16,7 +16,7 @@ owner:
   department: "Fuel Systems & Safety"
 
 revision: "1.0.0"
-effective_date: "2028-10-01"
+effective_date: "2025-10-27"
 approval_status: "APPROVED"
 
 safety_critical: true
@@ -33,10 +33,10 @@ hazards:
 regulatory_approvals:
   - authority: "EASA"
     approval_reference: "EASA.GOPS.H2.001"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-GOPS-H2-2028-001"
-    date: "2028-09-28"
+    date: "2025-10-27"
 
 notes: |
   Hydrogen refueling represents novel ground operations for commercial aviation.

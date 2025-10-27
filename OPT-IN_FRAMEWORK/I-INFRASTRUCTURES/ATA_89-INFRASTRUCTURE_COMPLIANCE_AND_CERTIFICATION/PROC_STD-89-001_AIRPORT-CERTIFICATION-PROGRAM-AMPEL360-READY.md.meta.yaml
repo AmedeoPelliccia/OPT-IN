@@ -4,7 +4,7 @@ document:
   type: "PROC-STD"
   title: "Procedure - Airport Certification Program AMPEL360-Ready"
   revision: "1.0.0"
-  effective_date: "2029-06-01"
+  effective_date: "2025-10-27"
   status: "CANDIDATE"
 compliance:
   standards: []
@@ -26,12 +26,12 @@ traceability:
 approvals:
   - role: "Director of Airport Relations"
     name: "Patricia Johnson"
-    date: "2029-05-24"
+    date: "2025-10-27"
   - role: "Chief Compliance Officer"
     name: "Robert Taylor"
-    date: "2029-05-25"
+    date: "2025-10-27"
 audit:
   created_by: "AMPEL360 Certification Team"
-  created_utc: "2029-05-10T14:00:00Z"
+  created_utc: "2025-10-27T14:00:00Z"
   modified_by: "AMPEL360 Certification Team"
-  modified_utc: "2029-05-24T16:30:00Z"
+  modified_utc: "2025-10-27T16:30:00Z"

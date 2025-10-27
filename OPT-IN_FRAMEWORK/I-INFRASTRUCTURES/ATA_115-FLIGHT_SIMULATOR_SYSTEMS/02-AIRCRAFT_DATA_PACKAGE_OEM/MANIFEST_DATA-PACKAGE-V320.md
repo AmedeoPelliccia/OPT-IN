@@ -2,7 +2,7 @@
 ## AMPEL360 - Version 3.2.0
 
 **Package ID:** ADP-AMPEL360-v3.2.0  
-**Release Date:** 2029-02-15  
+**Release Date:** 2025-10-27  
 **Classification:** Proprietary - Simulator Use Only  
 **Digital Signature:** See `MANIFEST_Data-Package-v3.2.0.sig`
 
@@ -73,7 +73,7 @@ This Aircraft Data Package (ADP) represents the official, OEM-certified source d
 
 ## 3. Change History
 
-### Version 3.2.0 (2029-02-15)
+### Version 3.2.0 (2025-10-27)
 **Changes:**
 - Updated ground effect model based on additional flight test data (FTR-AE-360-778)
 - Refined fuel cell degradation characteristics
@@ -84,12 +84,12 @@ This Aircraft Data Package (ADP) represents the official, OEM-certified source d
 - QTG Test 3.B.2 re-validation required
 - Recurrent certification evaluation scheduled for 2029-Q2
 
-### Version 3.1.0 (2028-10-01)
+### Version 3.1.0 (2025-10-27)
 **Changes:**
 - Initial production aircraft data incorporated
 - Propulsion model updated with certified engine performance
 
-### Version 3.0.0 (2028-06-01)
+### Version 3.0.0 (2025-10-27)
 **Changes:**
 - Initial release for FFS qualification
 
@@ -160,9 +160,9 @@ This data package maintains explicit linkage to:
 
 | Role | Name | Date | Signature |
 |------|------|------|-----------|
-| Data Package Manager | A. Peterson | 2029-02-15 | __________ |
-| Configuration Manager | B. Johnson | 2029-02-15 | __________ |
-| Quality Assurance | C. Williams | 2029-02-15 | __________ |
+| Data Package Manager | A. Peterson | 2025-10-27 | __________ |
+| Configuration Manager | B. Johnson | 2025-10-27 | __________ |
+| Quality Assurance | C. Williams | 2025-10-27 | __________ |
 
 ---
 

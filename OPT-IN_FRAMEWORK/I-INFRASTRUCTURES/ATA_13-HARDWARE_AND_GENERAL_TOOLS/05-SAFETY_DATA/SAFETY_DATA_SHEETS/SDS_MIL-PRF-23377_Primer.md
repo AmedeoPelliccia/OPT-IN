@@ -1,6 +1,6 @@
 # Safety Data Sheet: MIL-PRF-23377 Epoxy Primer
 **Revision:** 1.0
-**Date:** 2029-01-15
+**Date:** 2025-10-27
 
 ---
 
@@ -361,7 +361,7 @@
 ## Section 16: Other Information
 
 ### Preparation Date
-- 2029-01-15
+- 2025-10-27
 
 ### Revision Notes
 - Initial SDS for AMPEL360 program

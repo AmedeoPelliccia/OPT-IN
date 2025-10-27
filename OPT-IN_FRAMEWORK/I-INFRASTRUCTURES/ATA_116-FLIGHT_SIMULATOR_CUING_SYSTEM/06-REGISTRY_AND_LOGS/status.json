@@ -2,7 +2,7 @@
   "simulator_id": "FFS-001",
   "aircraft_type": "AMPEL360",
   "qualification_level": "EASA Level D",
-  "last_updated": "2029-01-20T08:00:00Z",
+  "last_updated": "2025-10-27T08:00:00Z",
   "cuing_systems": {
     "visual_system": {
       "status": "OPERATIONAL",
@@ -12,34 +12,34 @@
           "software_version": "v6.2.0",
           "latency_ms": 28,
           "frame_rate_hz": 60,
-          "last_tested": "2029-01-20T07:30:00Z"
+          "last_tested": "2025-10-27T07:30:00Z"
         },
         "projectors": {
           "left": {
             "status": "OPERATIONAL",
             "lamp_hours": 2450,
             "brightness_cd_m2": 92,
-            "last_calibration": "2029-01-15T10:00:00Z",
-            "next_calibration_due": "2029-04-15"
+            "last_calibration": "2025-10-27T10:00:00Z",
+            "next_calibration_due": "2025-10-27"
           },
           "center": {
             "status": "OPERATIONAL",
             "lamp_hours": 2480,
             "brightness_cd_m2": 89,
-            "last_calibration": "2029-01-15T10:00:00Z",
-            "next_calibration_due": "2029-04-15"
+            "last_calibration": "2025-10-27T10:00:00Z",
+            "next_calibration_due": "2025-10-27"
           },
           "right": {
             "status": "OPERATIONAL",
             "lamp_hours": 2520,
             "brightness_cd_m2": 87,
-            "last_calibration": "2029-01-15T10:00:00Z",
-            "next_calibration_due": "2029-04-15"
+            "last_calibration": "2025-10-27T10:00:00Z",
+            "next_calibration_due": "2025-10-27"
           }
         }
       },
-      "last_qtg_test": "2029-01-10",
-      "next_qtg_test_due": "2030-01-10"
+      "last_qtg_test": "2025-10-27",
+      "next_qtg_test_due": "2025-10-27"
     },
     "motion_system": {
       "status": "OPERATIONAL",
@@ -49,51 +49,51 @@
           "status": "OPERATIONAL",
           "software_version": "v4.5.2",
           "latency_ms": 45,
-          "last_tested": "2029-01-20T07:30:00Z"
+          "last_tested": "2025-10-27T07:30:00Z"
         },
         "actuators": {
           "actuator_1": {
             "status": "OPERATIONAL",
             "position_mm": 750,
             "force_kn": 12.3,
-            "last_maintenance": "2028-12-10"
+            "last_maintenance": "2025-10-27"
           },
           "actuator_2": {
             "status": "OPERATIONAL",
             "position_mm": 745,
             "force_kn": 12.1,
-            "last_maintenance": "2028-12-10"
+            "last_maintenance": "2025-10-27"
           },
           "actuator_3": {
             "status": "OPERATIONAL",
             "position_mm": 755,
             "force_kn": 12.5,
-            "last_maintenance": "2028-12-10"
+            "last_maintenance": "2025-10-27"
           },
           "actuator_4": {
             "status": "OPERATIONAL",
             "position_mm": 748,
             "force_kn": 12.2,
-            "last_maintenance": "2028-12-10"
+            "last_maintenance": "2025-10-27"
           },
           "actuator_5": {
             "status": "OPERATIONAL",
             "position_mm": 752,
             "force_kn": 12.4,
-            "last_maintenance": "2028-12-10"
+            "last_maintenance": "2025-10-27"
           },
           "actuator_6": {
             "status": "OPERATIONAL",
             "position_mm": 750,
             "force_kn": 12.3,
-            "last_maintenance": "2028-12-10"
+            "last_maintenance": "2025-10-27"
           }
         }
       },
-      "last_washout_tuning": "2028-12-15",
-      "next_washout_tuning_due": "2029-06-15",
-      "last_qtg_test": "2029-01-10",
-      "next_qtg_test_due": "2030-01-10"
+      "last_washout_tuning": "2025-10-27",
+      "next_washout_tuning_due": "2025-10-27",
+      "last_qtg_test": "2025-10-27",
+      "next_qtg_test_due": "2025-10-27"
     },
     "aural_system": {
       "status": "OPERATIONAL",
@@ -102,22 +102,22 @@
           "status": "OPERATIONAL",
           "software_version": "v3.1.0",
           "latency_ms": 35,
-          "last_tested": "2029-01-20T07:30:00Z"
+          "last_tested": "2025-10-27T07:30:00Z"
         },
         "speakers": {
           "status": "OPERATIONAL",
           "total_channels": 16,
           "failed_channels": 0,
-          "last_calibration": "2029-01-05"
+          "last_calibration": "2025-10-27"
         },
         "aural_model": {
           "version": "v2.1.0",
           "propulsion_modes": ["battery", "fuel_cell", "hybrid", "thermal"],
-          "last_updated": "2028-12-01"
+          "last_updated": "2025-10-27"
         }
       },
-      "last_qtg_test": "2029-01-10",
-      "next_qtg_test_due": "2030-01-10"
+      "last_qtg_test": "2025-10-27",
+      "next_qtg_test_due": "2025-10-27"
     },
     "control_loading_system": {
       "status": "OPERATIONAL",
@@ -126,25 +126,25 @@
           "status": "OPERATIONAL",
           "pitch_force_n": 75,
           "roll_force_n": 40,
-          "last_calibration": "2028-12-20"
+          "last_calibration": "2025-10-27"
         },
         "rudder_pedals": {
           "status": "OPERATIONAL",
           "force_n": 90,
-          "last_calibration": "2028-12-20"
+          "last_calibration": "2025-10-27"
         },
         "throttle_quadrant": {
           "status": "OPERATIONAL",
           "force_n": 25,
-          "last_calibration": "2028-12-20"
+          "last_calibration": "2025-10-27"
         }
       },
-      "last_qtg_test": "2029-01-10",
-      "next_qtg_test_due": "2030-01-10"
+      "last_qtg_test": "2025-10-27",
+      "next_qtg_test_due": "2025-10-27"
     }
   },
   "overall_system_status": "OPERATIONAL",
   "training_clearance": "AUTHORIZED",
-  "next_daily_check": "2029-01-21T07:00:00Z",
-  "notes": "All systems nominal. Visual system calibration completed 2029-01-15. Next quarterly calibration due 2029-04-15."
+  "next_daily_check": "2025-10-27T07:00:00Z",
+  "notes": "All systems nominal. Visual system calibration completed 2025-10-27. Next quarterly calibration due 2025-10-27."
 }

@@ -2,7 +2,7 @@
 
 **Revisión:** 1.0.0  
 **Estado:** CANDIDATE  
-**Fecha Efectiva:** 2029-06-01
+**Fecha Efectiva:** 2025-10-27
 
 ## 1. Alcance
 
@@ -60,8 +60,8 @@ Subject: CN=AMPEL360-AC-12345, O=AMPEL360, C=EU
 Issuer: CN=AMPEL360-AIRCRAFT-CA, O=AMPEL360, C=EU
 Serial Number: 0x1234567890ABCDEF
 Validity:
-  Not Before: 2029-01-01 00:00:00 UTC
-  Not After:  2030-01-01 00:00:00 UTC
+  Not Before: 2025-10-27 UTC
+  Not After:  2025-10-27 UTC
 Subject Alternative Name:
   URI: urn:ampel360:aircraft:12345
   DNS: ac-12345.ampel360.aero
@@ -114,7 +114,7 @@ Para transferencias críticas (DPP, config files, software):
     "algorithm": "ECDSA-P384-SHA384",
     "value": "<base64_encoded_signature>",
     "certificate_fingerprint": "SHA256:<hex_fingerprint>",
-    "timestamp": "2029-06-15T14:30:00Z"
+    "timestamp": "2025-10-27T14:30:00Z"
   },
   "metadata": {
     "content_type": "application/dpp+json",
@@ -152,7 +152,7 @@ Para transferencias críticas (DPP, config files, software):
 
 ```json
 {
-  "timestamp": "2029-06-15T14:30:00.123Z",
+  "timestamp": "2025-10-27T14:30:00.123Z",
   "level": "CRITICAL",
   "event_type": "AUTH_FAILURE",
   "aircraft_id": "AC-12345",
@@ -161,7 +161,7 @@ Para transferencias críticas (DPP, config files, software):
   "details": {
     "error": "Certificate expired",
     "certificate_cn": "AC-12345",
-    "expiry_date": "2029-06-01T00:00:00Z"
+    "expiry_date": "2025-10-27T00:00:00Z"
   },
   "log_signature": "HMAC-SHA256:<hex_signature>"
 }

@@ -2,7 +2,7 @@ AMPEL360 QUICK REFERENCE HANDBOOK (QRH)
 ========================================
 
 DIGITAL VERSION FOR EFB
-Revision 1.0.0 | Effective: 2028-10-01
+Revision 1.0.0 | Effective: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 This is the actual QRH document in Markdown format for GitHub readability.
@@ -116,7 +116,7 @@ WARNINGS:
 ═══════════════════════════════════════════════════════════════════
 
 END OF QRH DIGITAL VERSION
-Build: 2028-09-30T10:00:00Z | Source: qrh_procedures.xml v1.0.0
+Build: 2025-10-27T10:00:00Z | Source: qrh_procedures.xml v1.0.0
 Signature: See AMPEL360_QRH_Digital.sig
 Verify signature before use
 

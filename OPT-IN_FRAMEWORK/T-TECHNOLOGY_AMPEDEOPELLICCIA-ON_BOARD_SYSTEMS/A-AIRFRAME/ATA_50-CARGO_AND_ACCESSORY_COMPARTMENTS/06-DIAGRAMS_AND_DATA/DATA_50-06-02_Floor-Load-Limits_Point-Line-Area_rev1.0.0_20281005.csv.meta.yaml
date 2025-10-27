@@ -4,13 +4,13 @@ document:
   type: "DATA"
   title: "50-06-02: Floor Load Limits - Point, Line, Area"
   revision: "1.0.0"
-  effective_date: "2028-10-05"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Floor structural damage", "Overload condition"]
   criticality: "Critical"
 approvals:
-  - { authority: "Structures Engineering", status: "Released", date: "2028-09-30" }
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-27" }
 traceability:
   source_documents: ["SRM-51-10-01", "FLOOR-LOAD-TEST-001"]
   crossrefs: ["ATA 51", "ATA 53"]

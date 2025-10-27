@@ -119,5 +119,5 @@ For more information on metadata requirements, see `/I-INFRASTRUCTURES/ATA_03-SU
 
 ---
 
-*Last Updated: 2028-04-15*  
+*Last Updated: 2025-10-27*  
 *Part of AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

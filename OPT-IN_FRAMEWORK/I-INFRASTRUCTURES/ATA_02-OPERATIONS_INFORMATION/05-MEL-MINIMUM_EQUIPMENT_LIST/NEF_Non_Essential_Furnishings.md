@@ -5,7 +5,7 @@ NON-ESSENTIAL FURNISHINGS (NEF)
 
 Document ID: NEF_Non_Essential_Furnishings
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 

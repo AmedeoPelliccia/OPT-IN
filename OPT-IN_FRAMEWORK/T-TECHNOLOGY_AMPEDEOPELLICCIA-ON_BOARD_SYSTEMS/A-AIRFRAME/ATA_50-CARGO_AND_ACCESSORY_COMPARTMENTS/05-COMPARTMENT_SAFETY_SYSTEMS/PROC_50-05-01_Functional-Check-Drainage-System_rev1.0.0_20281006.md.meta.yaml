@@ -4,13 +4,13 @@ document:
   type: "PROC"
   title: "50-05-01: Functional Check of Drainage System"
   revision: "1.0.0"
-  effective_date: "2028-10-06"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Water accumulation", "Corrosion", "Equipment damage"]
   criticality: "Medium"
 approvals:
-  - { authority: "Maintenance Engineering", status: "Released", date: "2028-10-01" }
+  - { authority: "Maintenance Engineering", status: "Released", date: "2025-10-27" }
 traceability:
   source_documents: ["AMM-50-05-00"]
   crossrefs: ["ATA 53"]

@@ -274,6 +274,6 @@ This catalog contains approved cleaning agents and solvents for AMPEL360 mainten
 ---
 
 *Revision History:*
-- 2.4.0 (2029-01-15): Added water-based cleaners and environmental considerations
-- 2.3.0 (2028-10-15): Updated compatibility chart and safety guidelines
-- 2.2.0 (2028-06-20): Initial AMPEL360 catalog release
+- 2.4.0 (2025-10-27): Added water-based cleaners and environmental considerations
+- 2.3.0 (2025-10-27): Updated compatibility chart and safety guidelines
+- 2.2.0 (2025-10-27): Initial AMPEL360 catalog release

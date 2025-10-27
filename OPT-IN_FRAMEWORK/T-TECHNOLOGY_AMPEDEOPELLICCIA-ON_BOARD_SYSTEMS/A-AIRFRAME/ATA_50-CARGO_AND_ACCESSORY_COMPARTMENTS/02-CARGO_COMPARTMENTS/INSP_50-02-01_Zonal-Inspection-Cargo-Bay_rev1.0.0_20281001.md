@@ -2,7 +2,7 @@
 
 **Document ID:** INSP_50-02-01_Zonal-Inspection-Cargo-Bay_rev1.0.0_20281001  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-01
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This inspection covers the periodic zonal inspection of the forward and aft cargo compartments to identify damage, corrosion, and degradation of structural and protective elements.

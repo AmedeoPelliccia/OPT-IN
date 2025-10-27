@@ -9,7 +9,7 @@ ATA 42-60
 
 Document ID: SYS_42-60_QIS_Scheduler_Overview
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 

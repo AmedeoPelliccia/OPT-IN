@@ -4,14 +4,14 @@ document:
   type: "DATA"
   title: "50-06-01: Compartment Limits and Capacities"
   revision: "1.1.0"
-  effective_date: "2028-10-05"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Overload condition", "Exceeding structural limits"]
   criticality: "Critical"
 approvals:
-  - { authority: "Structures Engineering", status: "Released", date: "2028-09-30" }
-  - { authority: "Weight & Balance", status: "Approved", date: "2028-10-01" }
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-27" }
+  - { authority: "Weight & Balance", status: "Approved", date: "2025-10-27" }
 traceability:
   source_documents: ["STRUCT-ANALYSIS-50-001", "CS-25.787"]
   crossrefs: ["ATA 08", "ATA 53"]

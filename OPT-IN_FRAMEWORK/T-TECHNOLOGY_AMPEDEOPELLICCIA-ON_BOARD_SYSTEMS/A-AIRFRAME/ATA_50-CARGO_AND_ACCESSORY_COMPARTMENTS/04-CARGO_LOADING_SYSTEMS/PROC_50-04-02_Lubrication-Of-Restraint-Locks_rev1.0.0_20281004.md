@@ -2,7 +2,7 @@
 
 **Document ID:** PROC_50-04-02_Lubrication-Of-Restraint-Locks_rev1.0.0_20281004  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-10-04
+**Effective Date:** 2025-10-27
 
 ## 1. Scope
 This procedure covers the periodic lubrication of cargo restraint lock mechanisms to ensure smooth operation and prevent corrosion.

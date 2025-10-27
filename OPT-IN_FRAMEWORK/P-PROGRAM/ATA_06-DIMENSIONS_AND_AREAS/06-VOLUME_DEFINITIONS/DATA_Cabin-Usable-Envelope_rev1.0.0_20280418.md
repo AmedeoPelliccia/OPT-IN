@@ -1,6 +1,6 @@
 # Cabin Usable Envelope
 **Revision:** 1.0.0
-**Effective Date:** 2028-04-18
+**Effective Date:** 2025-10-27
 
 ## Passenger Cabin Volume
 

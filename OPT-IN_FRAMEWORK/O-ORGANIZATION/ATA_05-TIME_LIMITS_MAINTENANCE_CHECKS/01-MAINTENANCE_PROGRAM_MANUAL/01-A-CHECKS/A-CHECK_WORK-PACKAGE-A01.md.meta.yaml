@@ -4,7 +4,7 @@ document:
   type: "MAINT-CHECK"
   title: "A-Check Work Package A01"
   revision: "1.0.0"
-  effective_date: "2028-07-15"
+  effective_date: "2025-10-27"
 effectivity:
   msn: "ALL"
   operator_id: "ANY" # Can be customized per operator
@@ -17,7 +17,7 @@ interval:
 approvals:
   - authority: "EASA" # Or relevant NAA for the operator
     status: "Approved"
-    date: "2028-07-01"
+    date: "2025-10-27"
 traceability:
   source_documents:
     - "MPM_Master-Document_rev1.0.0"

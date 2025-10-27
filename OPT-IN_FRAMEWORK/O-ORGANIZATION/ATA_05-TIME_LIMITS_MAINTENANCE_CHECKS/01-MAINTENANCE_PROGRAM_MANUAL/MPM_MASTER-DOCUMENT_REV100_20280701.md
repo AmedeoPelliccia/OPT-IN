@@ -1,6 +1,6 @@
 # Maintenance Program Manual (MPM)
 **Revision:** 1.0.0  
-**Effective Date:** 2028-07-01  
+**Effective Date:** 2025-10-27  
 **Document ID:** MPM_Master-Document
 
 ---
@@ -190,7 +190,7 @@ Must be approved by the NAA before implementation.
 
 | Revision | Date | Description | Approved By |
 | :--- | :--- | :--- | :--- |
-| 1.0.0 | 2028-07-01 | Initial release | NAA |
+| 1.0.0 | 2025-10-27 | Initial release | NAA |
 
 ---
 

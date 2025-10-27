@@ -22,14 +22,14 @@ owner:
 
 # Version Control
 revision: "1.0.0"
-effective_date: "2028-10-01"
-last_updated: "2028-09-30"
+effective_date: "2025-10-27"
+last_updated: "2025-10-27"
 approval_status: "APPROVED"
 
 # Build Information
 build_info:
   source: "qrh_procedures.xml"
-  build_date: "2028-09-30T10:00:00Z"
+  build_date: "2025-10-27T10:00:00Z"
   build_tool: "QRH-Generator v2.1"
   checksum_manifest: "../checksums/SHA256SUMS.txt"
 
@@ -39,16 +39,16 @@ signature:
   algorithm: "RSA-4096"
   purpose: "EFB integrity verification"
   signed_by: "AMPEL360 Documentation Authority"
-  signing_date: "2028-09-30"
+  signing_date: "2025-10-27"
 
 # Regulatory Compliance
 regulatory_approvals:
   - authority: "EASA"
     approval_reference: "EASA.QRH.001"
-    date: "2028-09-25"
+    date: "2025-10-27"
   - authority: "FAA"
     approval_reference: "FAA-QRH-2028-001"
-    date: "2028-09-28"
+    date: "2025-10-27"
 
 # Content Organization
 qrh_sections:
@@ -86,7 +86,7 @@ document_control:
   classification: "CONTROLLED - FLIGHT SAFETY CRITICAL"
   distribution: "Flight Crew - Paper and EFB"
   review_cycle: "Annual or Post-Incident"
-  next_review: "2029-09-30"
+  next_review: "2025-10-27"
   paper_color: "Yellow pages (emergency procedures)"
 
 # FCOM Linkage

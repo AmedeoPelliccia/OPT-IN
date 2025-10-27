@@ -2,7 +2,7 @@
 
 **Document ID:** FCOM-REF_In-Flight-Vibration-Monitoring-Procedures  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-04-15  
+**Effective Date:** 2025-10-27  
 **Status:** Released
 
 ---
@@ -337,7 +337,7 @@ fuel remaining [X.X] hours."
 ---
 
 **Document Control:**
-- **Next Review:** 2029-04-15
+- **Next Review:** 2025-10-27
 - **Change Authority:** Flight Operations
 
 *This document is part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

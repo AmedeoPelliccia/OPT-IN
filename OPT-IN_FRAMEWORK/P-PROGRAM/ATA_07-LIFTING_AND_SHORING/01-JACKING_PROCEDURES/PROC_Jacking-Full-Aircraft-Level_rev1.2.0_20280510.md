@@ -1,6 +1,6 @@
 # Full Aircraft Jacking (Level Attitude)
 **Revision:** 1.2.0  
-**Effective Date:** 2028-05-10  
+**Effective Date:** 2025-10-27  
 **Document ID:** PROC_Jacking-Full-Aircraft-Level_rev1.2.0_20280510
 
 ## Purpose
@@ -180,9 +180,9 @@ Applicable to all AMPEL360 aircraft (MSN: ALL) requiring full aircraft jacking f
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Structural Engineering | Released | 2028-05-08 |
-| Quality Assurance | Released | 2028-05-08 |
-| Chief Engineer | Released | 2028-05-09 |
+| Structural Engineering | Released | 2025-10-27 |
+| Quality Assurance | Released | 2025-10-27 |
+| Chief Engineer | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

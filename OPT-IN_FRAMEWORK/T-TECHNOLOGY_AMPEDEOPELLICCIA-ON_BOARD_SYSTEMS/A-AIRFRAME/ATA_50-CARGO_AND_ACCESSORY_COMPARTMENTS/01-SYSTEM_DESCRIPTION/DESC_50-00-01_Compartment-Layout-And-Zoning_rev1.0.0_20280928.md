@@ -2,7 +2,7 @@
 
 **Document ID:** DESC_50-00-01_Compartment-Layout-And-Zoning_rev1.0.0_20280928  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-09-28
+**Effective Date:** 2025-10-27
 
 ## 1. Overview
 This document defines the layout, zoning, and general characteristics of all cargo and accessory compartments in the AMPEL360 BWB aircraft.

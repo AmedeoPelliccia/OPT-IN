@@ -2,7 +2,7 @@
 
 **Document Type:** PROC  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-09-01
+**Effective Date:** 2025-10-27
 
 ## 1. Purpose
 This procedure establishes requirements for installation and removal of structural fasteners.

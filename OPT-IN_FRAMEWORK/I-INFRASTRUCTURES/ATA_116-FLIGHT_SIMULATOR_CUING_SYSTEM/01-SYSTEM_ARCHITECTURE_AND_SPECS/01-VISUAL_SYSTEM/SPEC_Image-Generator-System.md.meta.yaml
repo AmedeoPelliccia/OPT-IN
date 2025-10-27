@@ -4,7 +4,7 @@ document:
   type: "SPEC"
   title: "Image Generator (IG) System Specification"
   revision: "3.0.0"
-  effective_date: "2029-01-01"
+  effective_date: "2025-10-27"
   
 effectivity:
   simulator_id: "FFS-001"
@@ -33,10 +33,10 @@ traceability:
 approvals:
   - authority: "Simulator Engineering"
     status: "Released"
-    date: "2028-12-15"
+    date: "2025-10-27"
     
 integrity:
   checksum:
     algorithm: "sha256"
     value: "a7b8c9d0e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8"
-  last_verified: "2029-01-01T00:00:00Z"
+  last_verified: "2025-10-27T00:00:00Z"

@@ -6,7 +6,7 @@
 **GSE ID:** AP360-S001  
 **Model:** LH2 Cryogenic Refueler  
 **Revision:** 2.0.0  
-**Effective Date:** 2028-11-01  
+**Effective Date:** 2025-10-27  
 **Status:** Released
 
 ---
@@ -280,9 +280,9 @@ All personnel operating the AP360-S001 LH2 Refueling System must complete:
 
 | Revision | Date | Author | Changes |
 |:---------|:-----|:-------|:--------|
-| 1.0.0 | 2028-03-01 | K. Brown | Initial release |
-| 1.5.0 | 2028-07-15 | K. Brown | Added troubleshooting section |
-| 2.0.0 | 2028-11-01 | L. Davis | Updated safety procedures, added training requirements |
+| 1.0.0 | 2025-10-27 | K. Brown | Initial release |
+| 1.5.0 | 2025-10-27 | K. Brown | Added troubleshooting section |
+| 2.0.0 | 2025-10-27 | L. Davis | Updated safety procedures, added training requirements |
 
 ---
 
@@ -290,9 +290,9 @@ All personnel operating the AP360-S001 LH2 Refueling System must complete:
 
 | Role | Name | Signature | Date |
 |:-----|:-----|:----------|:-----|
-| Ground Ops Manager | TBD | ___________ | 2028-11-01 |
-| Safety Officer | TBD | ___________ | 2028-11-01 |
-| Quality Manager | TBD | ___________ | 2028-11-01 |
+| Ground Ops Manager | TBD | ___________ | 2025-10-27 |
+| Safety Officer | TBD | ___________ | 2025-10-27 |
+| Quality Manager | TBD | ___________ | 2025-10-27 |
 
 ---
 

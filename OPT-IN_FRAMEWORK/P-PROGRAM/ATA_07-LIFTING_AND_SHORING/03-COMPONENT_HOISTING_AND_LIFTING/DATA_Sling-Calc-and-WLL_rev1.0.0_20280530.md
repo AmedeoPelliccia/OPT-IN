@@ -1,6 +1,6 @@
 # Sling Calculation and Working Load Limit (WLL) Data
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-30  
+**Effective Date:** 2025-10-27  
 **Document ID:** DATA_Sling-Calc-and-WLL_rev1.0.0_20280530
 
 ## Purpose
@@ -192,8 +192,8 @@ All slings must be load tested:
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Rigging Engineering | Released | 2028-05-28 |
-| Safety Department | Released | 2028-05-29 |
+| Rigging Engineering | Released | 2025-10-27 |
+| Safety Department | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

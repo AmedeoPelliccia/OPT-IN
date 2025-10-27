@@ -3,7 +3,7 @@
   "passport_id": "urn:ampel360:part:SN-ENG-L-12345",
   "type": "PartPassport",
   "revision": 34,
-  "last_updated_utc": "2029-04-15T17:30:00Z",
+  "last_updated_utc": "2025-10-27T17:30:00Z",
   "identity": {
     "serial_number": "SN-ENG-L-12345",
     "part_number": "AMPL-72-001-A",
@@ -12,7 +12,7 @@
   },
   "manufacturing": {
     "manufacturer": "AMPEL Propulsion Systems",
-    "manufacture_date": "2028-06-15",
+    "manufacture_date": "2025-10-27",
     "batch_number": "BATCH-2806-A",
     "material_certificates": [
       "CERT-MAT-2806-001",
@@ -22,15 +22,15 @@
   "status": {
     "lifecycle_state": "INSTALLED",
     "installed_on_aircraft": "urn:ampel360:msn:001",
-    "installation_date": "2028-09-01",
+    "installation_date": "2025-10-27",
     "time_since_new_hours": 1250.5,
     "cycles_since_new": 450,
     "time_since_overhaul_hours": 1250.5
   },
   "maintenance": {
-    "next_scheduled_maintenance": "2029-09-01",
+    "next_scheduled_maintenance": "2025-10-27",
     "maintenance_program_ref": "MPD-72-001-rev3",
-    "last_inspection_date": "2029-03-15"
+    "last_inspection_date": "2025-10-27"
   },
   "provenance": {
     "event_ledger_ref": "urn:ampel360:ledger:part:SN-ENG-L-12345",

@@ -2,7 +2,7 @@
 
 **Document ID**: PROC_Mooring-Standard-Conditions  
 **Revision**: 1.0.0  
-**Date**: 2028-10-20  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 02 - MOORING
 
@@ -184,10 +184,10 @@ Transition to PROC_Mooring-High-Wind-BWB if:
 
 | Version | Date | Changes | Approved By |
 |---------|------|---------|-------------|
-| 1.0.0 | 2028-10-20 | Initial release | Ground Ops Manager |
+| 1.0.0 | 2025-10-27 | Initial release | Ground Ops Manager |
 
 ---
 
 **Approval**: Chief of Maintenance  
-**Next Review**: 2029-04-20  
+**Next Review**: 2025-10-27  
 **Distribution**: All Line Stations, Maintenance Bases

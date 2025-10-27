@@ -1,6 +1,6 @@
 # Master Geometry Definition
 **Revision:** 1.0.0
-**Effective Date:** 2028-03-10
+**Effective Date:** 2025-10-27
 
 ## Overview
 This figure defines the master geometry for the AMPEL360 BWB aircraft, establishing the baseline configuration for all dimensional references.

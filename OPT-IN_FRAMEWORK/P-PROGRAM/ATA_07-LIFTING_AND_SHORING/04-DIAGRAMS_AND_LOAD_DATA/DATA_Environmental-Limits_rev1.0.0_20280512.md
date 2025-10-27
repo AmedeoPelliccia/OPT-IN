@@ -1,6 +1,6 @@
 # Environmental Limits for Lifting and Shoring Operations
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-12  
+**Effective Date:** 2025-10-27  
 **Document ID:** DATA_Environmental-Limits_rev1.0.0_20280512
 
 ## Purpose
@@ -233,9 +233,9 @@ This document defines mandatory environmental limits for all lifting, jacking, a
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Safety Department | Released | 2028-05-10 |
-| Ground Operations | Released | 2028-05-11 |
-| Quality Assurance | Released | 2028-05-11 |
+| Safety Department | Released | 2025-10-27 |
+| Ground Operations | Released | 2025-10-27 |
+| Quality Assurance | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

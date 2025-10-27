@@ -5,7 +5,7 @@ owners: ["Data Governance", "Chief Architect", "Airworthiness"]
 approvers:
   - role: "Head of Airworthiness"
     name: "TBD"
-effective_date: "2028-12-01"
+effective_date: "2025-10-27"
 data_classes: ["PUBLIC","INTERNAL","REGULATED","PII-SENSITIVE"]
 retention_policy: { default_years: 10, ledger_indefinite: true }
 crypto: { sig_algo: "ed25519", hash_algo: "sha256", transparency_log: true }

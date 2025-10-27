@@ -5,7 +5,7 @@ LH₂ AREA MONITORING - O₂ AND H₂ SENSORS
 
 Document ID: LH2_Area_Monitoring_O2_H2_Sensors
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 ═══════════════════════════════════════════════════════════════════
 

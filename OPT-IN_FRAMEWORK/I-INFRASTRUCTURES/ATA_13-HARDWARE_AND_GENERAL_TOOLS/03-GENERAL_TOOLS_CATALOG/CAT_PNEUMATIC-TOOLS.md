@@ -234,6 +234,6 @@ This catalog defines pneumatic tools approved for AMPEL360 maintenance operation
 ---
 
 *Revision History:*
-- 2.1.0 (2029-01-15): Added sanders and shears/nibblers sections
-- 2.0.0 (2028-11-05): Major revision with expanded safety requirements
-- 1.5.0 (2028-07-20): Initial AMPEL360 catalog release
+- 2.1.0 (2025-10-27): Added sanders and shears/nibblers sections
+- 2.0.0 (2025-10-27): Major revision with expanded safety requirements
+- 1.5.0 (2025-10-27): Initial AMPEL360 catalog release

@@ -1,7 +1,7 @@
 # Program Deviation Request Procedure
 
 **Revision:** 1.0.0  
-**Effective Date:** 2028-07-01  
+**Effective Date:** 2025-10-27  
 **Document ID:** PROC_Program-Deviation-Request
 
 ---

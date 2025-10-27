@@ -2,7 +2,7 @@
 
 **Document ID**: PROC_Parking-Normal-Operations  
 **Revision**: 1.2.0  
-**Date**: 2028-11-15  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 01 - PARKING AND MANEUVERING
 
@@ -110,12 +110,12 @@ Applies to all routine parking operations at gates, ramps, and designated parkin
 
 | Version | Date | Changes | Approved By |
 |---------|------|---------|-------------|
-| 1.2.0 | 2028-11-15 | Updated BWB clearances | Ops Manager |
-| 1.1.0 | 2028-09-20 | Added safety precautions | Safety Officer |
-| 1.0.0 | 2028-07-01 | Initial release | Chief Pilot |
+| 1.2.0 | 2025-10-27 | Updated BWB clearances | Ops Manager |
+| 1.1.0 | 2025-10-27 | Added safety precautions | Safety Officer |
+| 1.0.0 | 2025-10-27 | Initial release | Chief Pilot |
 
 ---
 
 **Approval**: Ground Operations Manager  
-**Next Review**: 2029-05-15  
+**Next Review**: 2025-10-27  
 **Distribution**: All Line Stations, Training Department

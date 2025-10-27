@@ -1,7 +1,7 @@
 # On-Condition and Condition-Monitoring Philosophy
 **Aircraft Type:** AMPEL360 Blended-Wing Body Hydrogen Aircraft  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-15
+**Effective Date:** 2025-10-27
 
 ---
 

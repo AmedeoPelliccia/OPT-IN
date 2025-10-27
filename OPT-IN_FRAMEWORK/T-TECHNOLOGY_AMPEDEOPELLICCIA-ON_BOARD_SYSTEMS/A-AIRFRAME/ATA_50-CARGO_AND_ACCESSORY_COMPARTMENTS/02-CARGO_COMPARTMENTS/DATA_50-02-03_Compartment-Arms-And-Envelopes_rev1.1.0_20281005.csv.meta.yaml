@@ -4,13 +4,13 @@ document:
   type: "DATA"
   title: "50-02-03: Compartment Arms and Envelopes"
   revision: "1.1.0"
-  effective_date: "2028-10-05"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Incorrect CG calculation", "Overload condition"]
   criticality: "Critical"
 approvals:
-  - { authority: "Weight & Balance Engineering", status: "Released", date: "2028-09-28" }
+  - { authority: "Weight & Balance Engineering", status: "Released", date: "2025-10-27" }
 traceability:
   source_reports: ["WB-ANALYSIS-001", "CG-ENVELOPE-BWB-2028"]
   crossrefs: ["ATA 08"]

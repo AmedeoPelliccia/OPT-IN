@@ -1,7 +1,7 @@
 # Data Governance Policy
 **Document ID:** GOV_Data-Governance-Policy  
 **Revision:** 2.0.0  
-**Effective Date:** 2028-12-10  
+**Effective Date:** 2025-10-27  
 **Owner:** Data Governance Board  
 **Classification:** INTERNAL
 
@@ -136,7 +136,7 @@ All data in the DPP system is classified according to sensitivity:
 
 **Document Control:**
 - **Version History:**
-  - v1.0.0 (2027-06-01): Initial release
-  - v2.0.0 (2028-12-10): Added PII-SENSITIVE classification, updated retention policies
-- **Next Review Date:** 2029-12-10
+  - v1.0.0 (2025-10-27): Initial release
+  - v2.0.0 (2025-10-27): Added PII-SENSITIVE classification, updated retention policies
+- **Next Review Date:** 2025-10-27
 - **Classification:** INTERNAL

@@ -1,6 +1,6 @@
 # Landing Gear Retraction Test Shoring Procedure
 **Revision:** 1.0.0  
-**Effective Date:** 2028-05-20  
+**Effective Date:** 2025-10-27  
 **Document ID:** PROC_Shoring-Landing-Gear-Retraction-Test_rev1.0.0_20280520
 
 ## Purpose
@@ -247,9 +247,9 @@ Applicable to all AMPEL360 aircraft (MSN: ALL) during landing gear system functi
 
 | Authority | Status | Date |
 | :--- | :--- | :--- |
-| Systems Engineering | Released | 2028-05-18 |
-| Structural Engineering | Released | 2028-05-19 |
-| Quality Assurance | Released | 2028-05-19 |
+| Systems Engineering | Released | 2025-10-27 |
+| Structural Engineering | Released | 2025-10-27 |
+| Quality Assurance | Released | 2025-10-27 |
 
 ---
 *This is a controlled document. Unauthorized modifications are prohibited.*

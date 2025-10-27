@@ -209,6 +209,6 @@ This catalog contains approved AN (Air Force-Navy) and MS (Military Standard) fl
 ---
 
 *Revision History:*
-- 2.7.0 (2029-01-15): Added reducer fittings and expanded installation procedures
-- 2.6.0 (2028-12-01): Updated torque specifications and quality control
-- 2.5.0 (2028-08-15): Initial AMPEL360 catalog release
+- 2.7.0 (2025-10-27): Added reducer fittings and expanded installation procedures
+- 2.6.0 (2025-10-27): Updated torque specifications and quality control
+- 2.5.0 (2025-10-27): Initial AMPEL360 catalog release

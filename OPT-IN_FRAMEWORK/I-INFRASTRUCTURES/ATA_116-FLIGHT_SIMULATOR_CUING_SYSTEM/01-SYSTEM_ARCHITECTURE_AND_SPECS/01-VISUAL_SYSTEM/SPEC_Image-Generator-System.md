@@ -2,7 +2,7 @@
 
 **Document ID:** SPEC-ATA116-01-01  
 **Revision:** 3.0.0  
-**Effective Date:** 2029-01-01  
+**Effective Date:** 2025-10-27  
 **Simulator ID:** FFS-001
 
 ---
@@ -122,7 +122,7 @@ The Image Generator system produces the out-of-cockpit visual scene, rendering t
 **Author:** Visual Systems Engineer  
 **Reviewed by:** Chief Simulator Engineer  
 **Approved by:** Simulator Engineering Authority  
-**Approval Date:** 2028-12-15  
+**Approval Date:** 2025-10-27  
 
 **Signature:** ______________________
 

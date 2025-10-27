@@ -7,7 +7,7 @@ approvers:
     name: "TBD"
   - role: "Chief Maintenance Officer"
     name: "TBD"
-effective_date: "2028-05-15"
+effective_date: "2025-10-27"
 data_classes: ["PUBLIC", "INTERNAL", "REGULATED"]
 retention_policy: { default_years: "Aircraft_Lifetime", regulatory_minimum: 10 }
 regulatory_basis: ["FAA AC 120-16", "EASA Part-M", "ATA MSG-3"]

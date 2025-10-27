@@ -2,7 +2,7 @@
 
 **Revisión:** 1.0.0  
 **Estado:** DRAFT  
-**Fecha Efectiva:** 2030-01-01
+**Fecha Efectiva:** 2025-10-27
 
 ## 1. Alcance
 

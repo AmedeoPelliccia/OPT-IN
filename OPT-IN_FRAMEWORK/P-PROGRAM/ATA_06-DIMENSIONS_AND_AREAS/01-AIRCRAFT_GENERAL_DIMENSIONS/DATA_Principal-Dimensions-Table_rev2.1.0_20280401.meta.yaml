@@ -4,7 +4,7 @@ document:
   type: "DATA"
   title: "Principal Dimensions Table"
   revision: "2.1.0"
-  effective_date: "2028-04-01"
+  effective_date: "2025-10-27"
 effectivity:
   msn: "ALL"
   config: ["Block A", "Block B"]

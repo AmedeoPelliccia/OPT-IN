@@ -7,7 +7,7 @@ approvers:
     name: "TBD"
   - role: "Ground Operations Manager"
     name: "TBD"
-effective_date: "2028-08-01"
+effective_date: "2025-10-27"
 doc_policy:
   naming: "ICD_<GSE-ID>_<Interface>_rev<SEMVER>_<YYYYMMDD>.md"
   formats: ["md", "pdf", "dxf"]

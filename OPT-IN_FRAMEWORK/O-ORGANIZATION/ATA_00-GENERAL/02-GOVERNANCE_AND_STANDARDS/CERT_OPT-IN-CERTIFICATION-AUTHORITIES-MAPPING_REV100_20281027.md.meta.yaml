@@ -4,7 +4,7 @@ document:
   type: "CERT"
   title: "OPT-IN Framework Certification Authorities Mapping"
   revision: "1.0.0"
-  effective_date: "2028-10-27"
+  effective_date: "2025-10-27"
   subject: "Systematic mapping of OPT-IN subsystems to EASA, FAA, ICAO certification authorities and standards"
   ata_chapter: "00"
   category: "Governance and Standards"
@@ -21,13 +21,13 @@ effectivity:
 approvals:
   - authority: "Chief Engineer, Airworthiness"
     status: "Released"
-    date: "2028-10-27"
+    date: "2025-10-27"
   - authority: "Certification Manager"
     status: "Approved"
-    date: "2028-10-27"
+    date: "2025-10-27"
   - authority: "Quality Assurance"
     status: "Reviewed"
-    date: "2028-10-27"
+    date: "2025-10-27"
 traceability:
   requirements:
     - "REQ-CERT-001: OPT-IN Framework Certification Mapping"
@@ -77,4 +77,4 @@ compliance:
     - "CASA Recognition"
 security_classification: "Public - Technical Documentation"
 review_cycle: "Annual"
-next_review_date: "2029-10-27"
+next_review_date: "2025-10-27"

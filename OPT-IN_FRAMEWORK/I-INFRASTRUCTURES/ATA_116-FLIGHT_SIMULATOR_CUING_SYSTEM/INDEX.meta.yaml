@@ -4,7 +4,7 @@ document:
   type: "INDEX"
   title: "ATA 116 - Flight Simulator Cuing System Master Index"
   revision: "2.0.0"
-  effective_date: "2029-01-01"
+  effective_date: "2025-10-27"
   
 effectivity:
   simulator_id: "FFS-001"
@@ -59,15 +59,15 @@ directory_structure:
 approvals:
   - authority: "Simulator Engineering"
     status: "Released"
-    date: "2028-12-15"
+    date: "2025-10-27"
     signed_by: "Chief Simulator Engineer"
   - authority: "Quality Assurance"
     status: "Approved"
-    date: "2028-12-20"
+    date: "2025-10-27"
     signed_by: "QA Manager"
     
 integrity:
   checksum:
     algorithm: "sha256"
     value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  last_verified: "2029-01-01T00:00:00Z"
+  last_verified: "2025-10-27T00:00:00Z"

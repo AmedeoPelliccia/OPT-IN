@@ -1,6 +1,6 @@
 # PROC - Servicing LH₂ System Purge and Inert
 **Revision:** 1.0.0  
-**Effective Date:** 2028-08-25  
+**Effective Date:** 2025-10-27  
 **System:** ATA 12 - SERVICING / ATA 28 - FUEL (Cryogenic)  
 
 ## Purpose
@@ -122,4 +122,4 @@ Applies to all LH₂ system servicing, maintenance, and storage preparation oper
 **Checksum (SHA256):** TBD  
 **Approved by:** Chief Engineer - Cryogenic Systems  
 **Cryo Safety Officer Approval Required**  
-**Next Review:** 2029-02-25
+**Next Review:** 2025-10-27

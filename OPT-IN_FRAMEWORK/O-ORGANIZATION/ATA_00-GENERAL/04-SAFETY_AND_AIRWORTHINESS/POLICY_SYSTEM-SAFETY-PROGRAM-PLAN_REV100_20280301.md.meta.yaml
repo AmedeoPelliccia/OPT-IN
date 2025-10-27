@@ -4,7 +4,7 @@ document:
   type: "POLICY"
   title: "System Safety Program Plan"
   revision: "1.0.0"
-  effective_date: "2028-03-01"
+  effective_date: "2025-10-27"
   subject: "System safety governance policy"
   ata_chapter: "00"
   category: "Safety and Airworthiness"
@@ -20,17 +20,17 @@ effectivity:
 approvals:
   - authority: "Chief Safety Officer"
     status: "Released"
-    date: "2028-03-01"
+    date: "2025-10-27"
   - authority: "Program Director"
     status: "Approved"
-    date: "2028-03-01"
+    date: "2025-10-27"
 integrity:
   checksum:
     algorithm: "sha256"
     value: "31605b1d3f7a88a0c9abe81a7736f8660c08bc00a67491e2b31314eec03e3cd0"
 revision_history:
   - version: "1.0.0"
-    date: "2028-03-01"
+    date: "2025-10-27"
     changes: "Initial release of system safety program plan"
     author: "Chief Safety Officer"
 references:

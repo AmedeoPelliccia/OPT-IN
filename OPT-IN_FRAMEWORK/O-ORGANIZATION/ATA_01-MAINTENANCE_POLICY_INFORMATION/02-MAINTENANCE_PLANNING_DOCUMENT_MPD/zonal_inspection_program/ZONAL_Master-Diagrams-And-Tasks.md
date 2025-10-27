@@ -1,7 +1,7 @@
 # Zonal Inspection Program - Master Diagrams and Tasks
 **Aircraft Type:** AMPEL360 Blended-Wing Body Hydrogen Aircraft  
 **Revision:** 1.0.0  
-**Effective Date:** 2028-06-20
+**Effective Date:** 2025-10-27
 
 ---
 

@@ -6,7 +6,7 @@ LIMITATIONS - OPERATIONAL MINIMA
 
 Document ID: FCOM-LIMITATIONS_Operational_Minima
 Revision: 1.0.0
-Effective Date: 2028-10-01
+Effective Date: 2025-10-27
 
 This document defines the minimum conditions under which the AMPEL360 may be operated,
 including weather, equipment, and facility requirements.

@@ -182,6 +182,6 @@ This catalog contains approved aircraft circuit breakers for AMPEL360 electrical
 ---
 
 *Revision History:*
-- 1.9.0 (2029-01-15): Added Wood Electric series and derating guidelines
-- 1.8.0 (2028-11-20): Updated testing procedures and acceptance criteria
-- 1.7.0 (2028-07-15): Initial AMPEL360 catalog release
+- 1.9.0 (2025-10-27): Added Wood Electric series and derating guidelines
+- 1.8.0 (2025-10-27): Updated testing procedures and acceptance criteria
+- 1.7.0 (2025-10-27): Initial AMPEL360 catalog release

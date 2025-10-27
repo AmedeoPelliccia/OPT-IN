@@ -4,13 +4,13 @@ document:
   type: "PROC"
   title: "50-04-02: Lubrication of Restraint Locks"
   revision: "1.0.0"
-  effective_date: "2028-10-04"
+  effective_date: "2025-10-27"
 effectivity: { msn: "ALL" }
 safety:
   hazards: ["Lock failure", "Cargo shift"]
   criticality: "High"
 approvals:
-  - { authority: "Maintenance Engineering", status: "Released", date: "2028-09-28" }
+  - { authority: "Maintenance Engineering", status: "Released", date: "2025-10-27" }
 traceability:
   source_documents: ["AMM-50-04-00", "MIL-L-46010"]
   crossrefs: ["ATA 20"]

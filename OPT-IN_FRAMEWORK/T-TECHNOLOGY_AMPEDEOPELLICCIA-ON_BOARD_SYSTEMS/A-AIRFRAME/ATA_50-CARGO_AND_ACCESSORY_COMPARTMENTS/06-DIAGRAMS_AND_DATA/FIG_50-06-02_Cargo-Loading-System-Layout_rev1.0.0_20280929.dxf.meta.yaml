@@ -4,7 +4,7 @@ document:
   type: "FIG"
   title: "50-06-02: Cargo Loading System Layout Drawing"
   revision: "1.0.0"
-  effective_date: "2028-09-29"
+  effective_date: "2025-10-27"
   format: "DXF"
   cad_software: "CATIA V6"
 effectivity: { msn: "ALL" }
@@ -12,8 +12,8 @@ safety:
   hazards: []
   criticality: "Low"
 approvals:
-  - { authority: "Design Engineering", status: "Released", date: "2028-09-20" }
-  - { authority: "Configuration Management", status: "Approved", date: "2028-09-22" }
+  - { authority: "Design Engineering", status: "Released", date: "2025-10-27" }
+  - { authority: "Configuration Management", status: "Approved", date: "2025-10-27" }
 traceability:
   source_documents: ["3D-MODEL-ASSY-50-00", "CARGO-LAYOUT-SPEC"]
   crossrefs: ["ATA 52", "ATA 53"]

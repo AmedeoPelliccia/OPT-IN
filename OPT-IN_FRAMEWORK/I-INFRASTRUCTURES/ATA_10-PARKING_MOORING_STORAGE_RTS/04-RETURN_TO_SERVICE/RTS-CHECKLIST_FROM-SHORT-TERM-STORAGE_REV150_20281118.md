@@ -2,7 +2,7 @@
 
 **Document ID**: RTS-Checklist_From-Short-Term-Storage  
 **Revision**: 1.5.0  
-**Date**: 2028-11-18  
+**Date**: 2025-10-27  
 **ATA Chapter**: 10  
 **Subsection**: 04 - RETURN TO SERVICE
 
@@ -249,4 +249,4 @@ Captain: _______________ Signature: _______________ Date: _______________
 ---
 
 **Approval**: Chief of Maintenance  
-**Next Review**: 2029-05-18
+**Next Review**: 2025-10-27
