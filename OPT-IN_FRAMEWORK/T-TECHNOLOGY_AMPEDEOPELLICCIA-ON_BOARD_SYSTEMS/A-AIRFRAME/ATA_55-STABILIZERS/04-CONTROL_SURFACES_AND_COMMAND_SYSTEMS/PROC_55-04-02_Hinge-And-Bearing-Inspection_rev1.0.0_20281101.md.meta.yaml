@@ -1,8 +1,0 @@
-schema_version: "1.1"
-id: "PROC_55-04-02_Hinge-And-Bearing-Inspection_rev1.0.0_20281101"
-document: { type: "PROC", title: "55-04-02: Hinge and Bearing Inspection", revision: "1.0.0", effective_date: "2028-11-01" }
-procedure: { category: "Inspection", skill_level: "Intermediate", estimated_duration: "4 hours", personnel_required: 2 }
-effectivity: { msn: "ALL" }
-approvals: [{ authority: "Quality Assurance", status: "Released", date: "2028-10-27" }]
-quality: { inspection_required: true }
-integrity: { checksum: { algorithm: "sha256", value: "f6f7f8f9f0a1a2a3a4a5a6a7a8a9a0b1b2b3b4b5b6b7b8b9b0c1c2c3c4c5c6c7" } }

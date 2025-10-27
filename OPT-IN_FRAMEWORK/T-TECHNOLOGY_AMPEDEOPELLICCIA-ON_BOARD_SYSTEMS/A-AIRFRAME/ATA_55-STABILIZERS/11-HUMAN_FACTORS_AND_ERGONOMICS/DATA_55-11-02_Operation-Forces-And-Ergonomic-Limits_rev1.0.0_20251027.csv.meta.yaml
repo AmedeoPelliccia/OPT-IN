@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "DATA_55-11-02_Operation-Forces-And-Ergonomic-Limits_rev1.0.0_20251027"
+document:
+  type: "DATA"
+  title: "DATA 55-11-02 Operation-Forces-And-Ergonomic-Limits"
+  revision: "1.0.0"
+  effective_date: "2025-10-27"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-23" }
+integrity:
+  checksum: { algorithm: "sha256", value: "33c48b2dbee1bd6915459627d41e422af77a238660934e824cfe68bdbb42de7e" }

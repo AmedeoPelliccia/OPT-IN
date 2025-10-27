@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "PROC_55-07-03_Eddy-Current-And-Dye-Penetrant_rev1.0.0_20251027"
+document:
+  type: "PROC"
+  title: "PROC 55-07-03 Eddy-Current-And-Dye-Penetrant"
+  revision: "1.0.0"
+  effective_date: "2025-10-27"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-23" }
+integrity:
+  checksum: { algorithm: "sha256", value: "6325c9cd21701f42a7662d8d502905f5f531e70215086f0f9dbb472b070e14ec" }

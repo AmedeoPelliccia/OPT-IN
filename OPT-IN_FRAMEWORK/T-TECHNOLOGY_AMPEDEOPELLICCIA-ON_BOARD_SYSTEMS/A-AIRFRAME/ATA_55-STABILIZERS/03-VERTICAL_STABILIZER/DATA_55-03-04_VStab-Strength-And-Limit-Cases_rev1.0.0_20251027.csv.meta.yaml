@@ -1,0 +1,7 @@
+schema_version: "1.1"
+id: "DATA_55-03-04_VStab-Strength-And-Limit-Cases_rev1.0.0_20251027"
+document: { type: "DATA", title: "55-03-04: V-Stab Strength and Limit Cases", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL" }
+safety: { criticality: "Critical" }
+approvals: [{ authority: "Structures Engineering", status: "Released", date: "2025-10-23" }]
+integrity: { checksum: { algorithm: "sha256", value: "d4d5d6d7d8d9d0e1e2e3e4e5e6e7e8e9e0f1f2f3f4f5f6f7f8f9f0a1a2a3a4a5" } }

@@ -1,9 +1,0 @@
-schema_version: "1.1"
-id: "PROC_55-03-02_VStab-Removal-And-Installation_rev1.0.0_20281101"
-document: { type: "PROC", title: "55-03-02: V-Stab Removal and Installation", revision: "1.0.0", effective_date: "2028-11-01" }
-procedure: { category: "Removal_Installation", skill_level: "Advanced", estimated_duration: "10 hours", personnel_required: 4 }
-effectivity: { msn: "ALL" }
-safety: { hazards: ["Heavy lift", "Work at height"], criticality: "Critical" }
-approvals: [{ authority: "Flight Controls Engineering", status: "Released", date: "2028-10-26" }]
-quality: { inspection_required: true, rii_required: true }
-integrity: { checksum: { algorithm: "sha256", value: "b2b3b4b5b6b7b8b9b0c1c2c3c4c5c6c7c8c9c0d1d2d3d4d5d6d7d8d9d0e1e2e3" } }

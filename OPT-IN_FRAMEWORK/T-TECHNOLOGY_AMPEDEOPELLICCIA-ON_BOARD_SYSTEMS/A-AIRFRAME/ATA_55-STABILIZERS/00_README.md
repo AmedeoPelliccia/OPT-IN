@@ -142,14 +142,14 @@ All maintenance actions on stabilizer components must be logged to the Digital P
 
 | Revision | Date       | Author                     | Description                          |
 |----------|------------|----------------------------|--------------------------------------|
-| 1.0.0    | 2028-11-01 | Structures Engineering     | Initial release - Audit-ready structure |
+| 1.0.0    | 2025-10-27 | Structures Engineering     | Initial release - Audit-ready structure |
 
 ---
 
 **Document Control:**
 - **Owner:** Structures Engineering / Flight Controls Engineering
 - **Review Board:** Airworthiness, Safety, Systems Integration
-- **Next Review:** 2029-11-01
+- **Next Review:** 2026-10-27
 
 ---
 

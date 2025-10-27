@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "PROC_55-05-02_Control-Cable-Routing-And-Tensioning_rev1.0.0_20251027"
+document:
+  type: "PROC"
+  title: "PROC 55-05-02 Control-Cable-Routing-And-Tensioning"
+  revision: "1.0.0"
+  effective_date: "2025-10-27"
+effectivity: { msn: "ALL" }
+approvals:
+  - { authority: "Structures Engineering", status: "Released", date: "2025-10-23" }
+integrity:
+  checksum: { algorithm: "sha256", value: "559e835acbe9a765c4f0109defb512258a4c819e8b2260e6385262fa78e9f5dd" }

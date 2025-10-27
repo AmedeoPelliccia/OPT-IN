@@ -1,8 +1,0 @@
-schema_version: "1.1"
-id: "DESC_55-03-01_VStab-Architecture-And-Load-Path_rev1.0.0_20281101"
-document: { type: "DESC", title: "55-03-01: V-Stab Architecture and Load Path", revision: "1.0.0", effective_date: "2028-11-01" }
-effectivity: { msn: "ALL" }
-safety: { criticality: "Critical" }
-approvals: [{ authority: "Structures Engineering", status: "Released", date: "2028-10-25" }]
-traceability: { crossrefs: ["ATA 51", "ATA 53"] }
-integrity: { checksum: { algorithm: "sha256", value: "a1a2a3a4a5a6a7a8a9a0b1b2b3b4b5b6b7b8b9b0c1c2c3c4c5c6c7c8c9c0d1d2" } }
