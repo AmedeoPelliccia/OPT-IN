@@ -27,7 +27,7 @@ Procedure for detecting and repairing delamination in laminated window panes.
 - Internal delamination > 0.25" diameter
 - Edge delamination > 0.125"
 - Any delamination in pilot critical vision area
-- Multiple delami nations totaling > 1.0 sq inch
+- Multiple delaminations totaling > 1.0 sq inch
 
 **Action:** Remove and replace pane per PROC_56-02-02
 
