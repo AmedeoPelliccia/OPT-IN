@@ -7,10 +7,9 @@ preserving format. Dry-run by default. Use --apply to write files (creates .bak)
 """
 
 import re
-import sys
 import argparse
 import os
-from datetime import datetime, date
+from datetime import datetime
 
 MONTHS_SHORT = r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)"
 MONTHS_LONG = r"(January|February|March|April|May|June|July|August|September|October|November|December)"
@@ -41,13 +40,13 @@ def try_parse(token, dayfirst=False):
     for fmt in STRPTIME_FORMATS:
         try:
             return datetime.strptime(token_stripped, fmt)
-        except Exception:
+        except ValueError:
             continue
     # optional fallback to dateutil if present
     try:
         from dateutil import parser
         return parser.parse(token_stripped, dayfirst=dayfirst)
-    except Exception:
+    except (ImportError, ValueError):
         return None
 
 def format_replacement(orig, today_dt, dayfirst=False):
@@ -93,7 +92,7 @@ def is_text_file(path):
             chunk = f.read(4096)
             if b"\0" in chunk:
                 return False
-    except Exception:
+    except (IOError, OSError):
         return False
     return True
 
@@ -107,7 +106,7 @@ def process_file(path, today_dt, apply=False, dayfirst=False):
         try:
             with open(path, "r", encoding="latin-1") as fh:
                 data = fh.read()
-        except Exception:
+        except (IOError, OSError):
             return 0, []
     changed = False
     replacements = []
