@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42/repair-record.schema.json",
+  "title": "Software Repair Record Schema",
+  "description": "Schema for software defect and repair records",
+  "type": "object",
+  "required": ["record_id", "defect_id", "date_reported", "severity", "status"],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^REPAIR-[0-9]{8}-[0-9]{4}$"
+    },
+    "defect_id": {
+      "type": "string"
+    },
+    "date_reported": {
+      "type": "string",
+      "format": "date"
+    },
+    "date_resolved": {
+      "type": "string",
+      "format": "date"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Critical", "Major", "Minor", "Cosmetic"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Open", "InProgress", "Resolved", "Verified", "Closed", "Deferred"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "root_cause": {
+      "type": "string"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "affected_components": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "test_cases_updated": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "regression_tests": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

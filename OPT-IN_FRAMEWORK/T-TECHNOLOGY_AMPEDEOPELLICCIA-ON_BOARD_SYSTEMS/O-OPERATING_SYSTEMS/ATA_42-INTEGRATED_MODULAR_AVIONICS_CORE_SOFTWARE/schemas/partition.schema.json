@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42/partition.schema.json",
+  "title": "ARINC 653 Partition Configuration Schema",
+  "description": "Schema for IMA partition configuration per ARINC 653",
+  "type": "object",
+  "required": [
+    "partition_id",
+    "partition_name",
+    "criticality_level",
+    "memory_requirements",
+    "scheduling"
+  ],
+  "properties": {
+    "partition_id": {
+      "type": "integer",
+      "description": "Unique partition identifier",
+      "minimum": 0,
+      "maximum": 255
+    },
+    "partition_name": {
+      "type": "string",
+      "description": "Partition name (uppercase alphanumeric with underscores)",
+      "pattern": "^[A-Z][A-Z0-9_]*$",
+      "maxLength": 32
+    },
+    "criticality_level": {
+      "type": "string",
+      "description": "Partition criticality per DO-178C",
+      "enum": ["DAL A", "DAL B", "DAL C", "DAL D", "DAL E"]
+    },
+    "memory_requirements": {
+      "type": "object",
+      "required": ["text_kib", "data_kib", "stack_kib"],
+      "properties": {
+        "text_kib": {
+          "type": "integer",
+          "description": "Code section size in KiB",
+          "minimum": 1
+        },
+        "data_kib": {
+          "type": "integer",
+          "description": "Data section size in KiB",
+          "minimum": 1
+        },
+        "stack_kib": {
+          "type": "integer",
+          "description": "Stack size in KiB",
+          "minimum": 4
+        },
+        "heap_kib": {
+          "type": "integer",
+          "description": "Heap size in KiB",
+          "minimum": 0
+        }
+      }
+    },
+    "scheduling": {
+      "type": "object",
+      "required": ["period_ms", "duration_ms"],
+      "properties": {
+        "period_ms": {
+          "type": "number",
+          "description": "Partition period in milliseconds",
+          "minimum": 0.1,
+          "maximum": 10000
+        },
+        "duration_ms": {
+          "type": "number",
+          "description": "Partition time window duration in milliseconds",
+          "minimum": 0.1
+        },
+        "offset_ms": {
+          "type": "number",
+          "description": "Partition window offset within major frame",
+          "minimum": 0,
+          "default": 0
+        }
+      }
+    },
+    "ports": {
+      "type": "object",
+      "properties": {
+        "sampling_ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/sampling_port"
+          }
+        },
+        "queuing_ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/queuing_port"
+          }
+        }
+      }
+    },
+    "health_monitor": {
+      "type": "object",
+      "properties": {
+        "hm_table_id": {
+          "type": "integer"
+        },
+        "error_actions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "enum": ["IGNORE", "IDLE", "COLD_START", "WARM_START", "SHUTDOWN", "RESET"]
+          }
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "properties": {
+        "signed_image_required": {
+          "type": "boolean",
+          "default": true
+        },
+        "signature_algorithm": {
+          "type": "string",
+          "enum": ["RSA-2048", "RSA-4096", "ECDSA-P256", "ECDSA-P384"]
+        },
+        "encryption_enabled": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "max_threads": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "max_semaphores": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 8
+        },
+        "max_events": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 8
+        },
+        "max_buffers": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 4
+        },
+        "max_blackboards": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 4
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "test_cases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hazards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "sampling_port": {
+      "type": "object",
+      "required": ["port_name", "direction", "message_size", "refresh_period_ms"],
+      "properties": {
+        "port_name": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["SOURCE", "DESTINATION"]
+        },
+        "message_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "refresh_period_ms": {
+          "type": "number",
+          "minimum": 0.1
+        }
+      }
+    },
+    "queuing_port": {
+      "type": "object",
+      "required": ["port_name", "direction", "message_size", "max_messages"],
+      "properties": {
+        "port_name": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["SOURCE", "DESTINATION"]
+        },
+        "message_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_messages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "discipline": {
+          "type": "string",
+          "enum": ["FIFO", "PRIORITY"],
+          "default": "FIFO"
+        }
+      }
+    }
+  }
+}

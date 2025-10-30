@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42/ncr.schema.json",
+  "title": "Non-Conformance Report Schema",
+  "description": "Schema for software non-conformance reports",
+  "type": "object",
+  "required": ["ncr_id", "date_raised", "category", "severity", "status"],
+  "properties": {
+    "ncr_id": {
+      "type": "string",
+      "pattern": "^NCR-ATA42-[0-9]{4}-[0-9]{3}$"
+    },
+    "date_raised": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "raised_by": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["CODING_STANDARD", "DESIGN_DEVIATION", "REQUIREMENT_VIOLATION", "TEST_FAILURE", "DOCUMENTATION", "PROCESS"]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Critical", "Major", "Minor"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Open", "UnderReview", "Approved", "Rejected", "Closed"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "affected_items": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "proposed_action": {
+      "type": "string"
+    },
+    "disposition": {
+      "type": "string"
+    },
+    "verification_method": {
+      "type": "string"
+    },
+    "approval_signatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {"type": "string"},
+          "name": {"type": "string"},
+          "date": {"type": "string", "format": "date"}
+        }
+      }
+    }
+  }
+}

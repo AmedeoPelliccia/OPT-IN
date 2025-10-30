@@ -1,0 +1,11 @@
+Standard,Version,Title,Applicability,Mandatory
+ARINC 653,P1-5,Avionics Application Software Standard Interface Part 1,Core OS API,Yes
+ARINC 653,P2-1,Avionics Application Software Standard Interface Part 2,Extended Services,Optional
+RTCA DO-178C,--,Software Considerations in Airborne Systems and Equipment Certification,Software Development,Yes
+RTCA DO-330,--,Software Tool Qualification Considerations,Toolchain Qualification,Yes
+RTCA DO-297,--,Integrated Modular Avionics Development Guidance and Certification Considerations,IMA Development,Yes
+EUROCAE ED-12C,--,Software Considerations in Airborne Systems and Equipment Certification,Software (EU equivalent to DO-178C),Yes
+EUROCAE ED-202A,--,Airworthiness Security Process Specification - MILS,Security Architecture,Yes
+EUROCAE ED-203,--,Airworthiness Security Methods and Considerations,Security Implementation,Yes
+RTCA DO-160G,--,Environmental Conditions and Test Procedures for Airborne Equipment,Environmental Qualification,Yes
+ISO 26262,Part 6,Road vehicles - Functional safety - Software,Reference only,No

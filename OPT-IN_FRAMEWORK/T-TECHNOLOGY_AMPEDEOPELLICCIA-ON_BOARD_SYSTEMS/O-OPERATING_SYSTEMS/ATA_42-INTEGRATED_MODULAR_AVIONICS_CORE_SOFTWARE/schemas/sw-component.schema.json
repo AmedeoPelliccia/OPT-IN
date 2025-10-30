@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42/sw-component.schema.json",
+  "title": "Software Component Schema",
+  "description": "Schema for Core OS software component metadata with DO-178C attributes",
+  "type": "object",
+  "required": ["component_id", "component_name", "version", "dal_level"],
+  "properties": {
+    "component_id": {
+      "type": "string",
+      "pattern": "^SW-COMP-[A-Z0-9-]+$"
+    },
+    "component_name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "dal_level": {
+      "type": "string",
+      "enum": ["DAL A", "DAL B", "DAL C", "DAL D", "DAL E"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "source_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "test_cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "statement": {"type": "number", "minimum": 0, "maximum": 100},
+        "branch": {"type": "number", "minimum": 0, "maximum": 100},
+        "mcdc": {"type": "number", "minimum": 0, "maximum": 100}
+      }
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

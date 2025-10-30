@@ -1,0 +1,6 @@
+Objective,Description,Verification_Method,Status,Evidence_Location
+A-1,High-level requirements,Review+Analysis,Complete,02-ARCHITECTURE_AND_SERVICES/REQUIREMENTS/
+A-2,Derived requirements,Trace Analysis,Complete,02-ARCHITECTURE_AND_SERVICES/REQUIREMENTS/
+A-3,Software architecture,Design Review,Complete,02-ARCHITECTURE_AND_SERVICES/DESIGN/
+A-4,Low-level requirements,Review+Trace,Complete,02-ARCHITECTURE_AND_SERVICES/REQUIREMENTS/
+A-7.1,MC/DC coverage,Structural Coverage Analysis,Complete,03-VERIFICATION_AND_SOFTWARE_ASSURANCE/SUBSYSTEMS_AND_COMPONENTS/03-50_STRUCTURAL_COVERAGE_ANALYSIS/

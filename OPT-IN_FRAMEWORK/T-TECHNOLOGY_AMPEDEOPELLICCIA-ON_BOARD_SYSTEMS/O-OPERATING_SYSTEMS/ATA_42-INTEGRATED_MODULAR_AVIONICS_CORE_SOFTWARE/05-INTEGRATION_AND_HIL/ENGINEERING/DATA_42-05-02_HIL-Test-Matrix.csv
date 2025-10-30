@@ -1,0 +1,9 @@
+Test_ID,Test_Name,Category,Priority,Status,Pass_Criteria
+HIL-001,Basic Boot Test,Functional,High,Passed,System boots within 5s
+HIL-002,Partition Scheduling,Functional,High,Passed,All partitions execute per schedule
+HIL-003,Sampling Port Communication,Functional,High,Passed,Data transferred correctly
+HIL-004,Queuing Port Communication,Functional,High,Passed,Messages queued and delivered
+HIL-005,Secure Boot Validation,Security,High,Passed,Invalid images rejected
+HIL-006,Partition Isolation,Safety,High,Passed,No memory access violations
+HIL-007,Timing Jitter Measurement,Performance,Medium,Passed,Jitter < 100us
+HIL-008,Fault Injection - Memory,Robustness,Medium,InProgress,Correct error handling
