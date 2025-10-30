@@ -1,2 +1,11 @@
-Parameter,Min_dBA,Max_dBA,Notes
-AlertSPL,60,85,Measured at crew ear position
+Display_Type,Priority,Target_SPL_dBA,Max_SPL_dBA,SNR_Target_dB,STI_Target,Frequency_Band_Hz,Pulse_Rate_Hz,Duty_Cycle_percent,Measurement_Distance_m,Notes
+Critical_Tone,Critical,85,110,15,,500-3000,1.5,40-60,1.0,"Measured at ear reference; short bursts; protect hearing from repeated exposure"
+Warning_Tone,Warning,78,105,12,,400-2500,1.0-1.5,30-50,1.0,"Prominent but below critical; audible over ambient"
+Caution_Tone,Caution,72,100,10,,400-2000,0.5-1.0,20-40,1.0,"Lower urgency, distinct pattern"
+Advisory_Chime,Advisory,65,95,8,,300-2000,0.2-0.6,10-30,1.0,"Short chime or soft tone for non-critical info"
+Speech_Critical,Speech,76,100,15,0.60,300-3400,, ,1.0,"Critical spoken messages; STI ≥ 0.60; ensure intelligibility"
+Cabin_Announcement,Advisory,68,95,8,0.45,300-3400,, ,1.0,"Public address for pax; STI target lower than critical speech"
+Maintenance_Test,Test,85,110,15,,500-3000,1.5,40-60,1.0,"Test signal used during maintenance; hearing protection required for staff"
+Emergency_Evacuate,Critical,88,110,16,,500-3000,1.5-2.0,40-60,1.0,"Evacuation tones must be dominant and unambiguous; verify across ear positions"
+Speech_Warning,Warning,80,105,15,0.60,300-3400,, ,1.0,"Speech paired with warning tone; STI and SNR as for speech-critical"
+Ambient_Headroom,Design,>15_dB,, , , , , ,1.0,"Minimum SNR headroom above ambient noise for critical alerts (SNR > ambient + target)"
