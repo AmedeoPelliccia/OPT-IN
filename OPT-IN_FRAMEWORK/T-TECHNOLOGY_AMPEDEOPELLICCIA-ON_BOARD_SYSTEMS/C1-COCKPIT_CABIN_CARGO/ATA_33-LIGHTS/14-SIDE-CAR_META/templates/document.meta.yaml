@@ -6,7 +6,7 @@ document:
   title: "Document Title"
   type: "DESC"  # DESC, PROC, DATA, TESTPLAN, DIAG, EXAMPLE
   revision: "A"
-  effective_date: "2025-10-30"  # ISO 8601 format YYYY-MM-DD
+  effective_date: "2025-10-28"  # ISO 8601 format YYYY-MM-DD
   owner: "Lighting Systems Engineering"
   classification: "TECHNICAL"  # PUBLIC, TECHNICAL, CONTROLLED, CONFIDENTIAL
 
@@ -49,7 +49,7 @@ integrity:
   verified_date: ""
 
 change_log:
-  - date: "2025-10-30"
+  - date: "2025-10-28"
     revision: "A"
     author: "ATA-33 Agent"
     description: "Initial release"

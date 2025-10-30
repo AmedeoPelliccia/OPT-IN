@@ -5,7 +5,7 @@
 
 ### Document Control
 - **Chapter:** ATA 33 — LIGHTS
-- **Effective Date:** 2025-10-30
+- **Effective Date:** 2025-10-28
 - **Owner:** Lighting Systems Engineering
 - **Review Board:** Airworthiness, Certification, Human Factors
 - **Classification:** Controlled Technical Data
@@ -139,7 +139,7 @@ Every document includes a `.meta.yaml` sidecar with:
 document:
   id: "DESC_33-02-01"
   title: "Cabin Interior Lighting Types"
-  effective_date: "2025-10-30"
+  effective_date: "2025-10-28"
   revision: "A"
   owner: "Lighting Systems"
   classification: "Technical"
@@ -197,7 +197,7 @@ For questions or clarifications, open an issue in the repository or contact the 
 
 | Date | Revision | Author | Description |
 |------|----------|--------|-------------|
-| 2025-10-30 | Initial | ATA-33 Agent | Created comprehensive ATA 33 structure |
+| 2025-10-28 | Initial | ATA-33 Agent | Created comprehensive ATA 33 structure |
 
 ---
 

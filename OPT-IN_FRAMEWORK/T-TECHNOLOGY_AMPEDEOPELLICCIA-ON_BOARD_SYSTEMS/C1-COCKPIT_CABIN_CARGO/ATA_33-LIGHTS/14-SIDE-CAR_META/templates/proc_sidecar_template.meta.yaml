@@ -5,7 +5,7 @@ document:
   title: "Procedure Title"
   type: "PROC"
   revision: "A"
-  effective_date: "2025-10-30"
+  effective_date: "2025-10-28"
   owner: "Lighting Systems Engineering"
   classification: "TECHNICAL"
 
@@ -63,7 +63,7 @@ integrity:
   tool: "sha256sum"
 
 change_log:
-  - date: "2025-10-30"
+  - date: "2025-10-28"
     revision: "A"
     author: "ATA-33 Agent"
     description: "Initial release"

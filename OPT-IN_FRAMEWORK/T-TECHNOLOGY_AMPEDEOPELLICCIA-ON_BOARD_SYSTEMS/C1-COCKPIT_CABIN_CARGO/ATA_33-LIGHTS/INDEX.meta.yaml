@@ -6,7 +6,7 @@ chapter:
   ata_code: "33"
   title: "LIGHTS"
   description: "Interior, Exterior, Emergency Lighting Systems and Photometric Compliance"
-  effective_date: "2025-10-30"
+  effective_date: "2025-10-28"
   revision: "A"
   status: "ACTIVE"
 
@@ -220,7 +220,7 @@ validation:
 
 integrity:
   schema_version: "1.0.0"
-  last_validated: "2025-10-30"
+  last_validated: "2025-10-28"
   validator: "ci/validate_ata33.sh"
 
 contact:
@@ -234,7 +234,7 @@ contact:
     email: "ata-support@ampel360.com"
 
 change_log:
-  - date: "2025-10-30"
+  - date: "2025-10-28"
     revision: "A"
     author: "ATA-33 Agent"
     description: "Initial release: comprehensive ATA 33 structure with audit-ready documentation"

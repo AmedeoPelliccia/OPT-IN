@@ -6,7 +6,7 @@
 ### Document Control
 - **Document ID:** DESC_33-03-01
 - **Revision:** A
-- **Effective Date:** 2025-10-30
+- **Effective Date:** 2025-10-28
 
 ---
 

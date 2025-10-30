@@ -1,6 +1,6 @@
 # PROC_33-09-01: Optic Repair and Seal Restoration
 ---
-**Document ID:** PROC_33-09-01 | **Revision:** A | **Date:** 2025-10-30
+**Document ID:** PROC_33-09-01 | **Revision:** A | **Date:** 2025-10-28
 ---
 ## 1. Scope
 Repair of lighting optics (lens) and seal restoration.

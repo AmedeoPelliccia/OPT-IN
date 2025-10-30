@@ -7,7 +7,7 @@
 - **Document ID:** DESC_33-01-02
 - **Title:** Terms and Taxonomy
 - **Revision:** A
-- **Effective Date:** 2025-10-30
+- **Effective Date:** 2025-10-28
 - **Owner:** Lighting Systems Engineering
 
 ---

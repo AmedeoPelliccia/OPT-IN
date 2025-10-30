@@ -7,7 +7,7 @@
 - **Document ID:** DESC_33-02-01
 - **Title:** Cabin Interior Lighting Types
 - **Revision:** A
-- **Effective Date:** 2025-10-30
+- **Effective Date:** 2025-10-28
 - **Owner:** Lighting Systems Engineering
 
 ---

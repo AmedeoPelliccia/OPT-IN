@@ -418,7 +418,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["filename", "sha256"],
+        "required": ["filename", "sha256", "type"],
         "properties": {
           "filename": {
             "type": "string",

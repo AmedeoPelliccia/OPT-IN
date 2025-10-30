@@ -7,7 +7,7 @@
 - **Document ID:** DESC_33-01-01
 - **Title:** Scope, Governance, and Effectivity
 - **Revision:** A
-- **Effective Date:** 2025-10-30
+- **Effective Date:** 2025-10-28
 - **Owner:** Lighting Systems Engineering
 - **Classification:** Technical
 
@@ -118,7 +118,7 @@ Unless otherwise specified in individual document sidecars:
 - **Aircraft Type:** ALL
 - **MSN Range:** ALL
 - **Configuration:** ALL
-- **Date:** 2025-10-30 and later
+- **Date:** 2025-10-28 and later
 
 ### 4.2 Part-Specific Effectivity
 
@@ -271,7 +271,7 @@ CoC required for:
 
 | Date | Revision | Author | Description |
 |------|----------|--------|-------------|
-| 2025-10-30 | A | ATA-33 Agent | Initial release |
+| 2025-10-28 | A | ATA-33 Agent | Initial release |
 
 ---
 

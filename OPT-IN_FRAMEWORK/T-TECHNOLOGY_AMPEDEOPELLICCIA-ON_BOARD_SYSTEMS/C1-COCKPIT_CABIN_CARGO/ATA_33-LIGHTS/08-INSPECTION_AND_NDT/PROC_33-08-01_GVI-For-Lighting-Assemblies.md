@@ -1,6 +1,6 @@
 # PROC_33-08-01: GVI for Lighting Assemblies
 ---
-**Document ID:** PROC_33-08-01 | **Revision:** A | **Date:** 2025-10-30
+**Document ID:** PROC_33-08-01 | **Revision:** A | **Date:** 2025-10-28
 ---
 ## 1. Scope
 General Visual Inspection (GVI) procedures for lighting assemblies.

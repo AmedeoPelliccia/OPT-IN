@@ -7,7 +7,7 @@
 - **Document ID:** PROC_33-02-02
 - **Title:** Reading and Aisle Light Removal/Installation
 - **Revision:** A
-- **Effective Date:** 2025-10-30
+- **Effective Date:** 2025-10-28
 - **Procedure Type:** Maintenance
 
 ---
