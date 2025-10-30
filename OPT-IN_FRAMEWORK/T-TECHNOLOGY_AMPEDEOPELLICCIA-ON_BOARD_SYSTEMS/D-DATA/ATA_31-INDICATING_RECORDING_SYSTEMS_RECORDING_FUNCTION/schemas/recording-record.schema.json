@@ -1,0 +1,230 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Recording Download Record Schema",
+  "description": "Schema for FDR/CVR download records with SHA-256 hashes and chain-of-custody",
+  "type": "object",
+  "required": [
+    "download_id",
+    "msn",
+    "unit",
+    "extraction_tool",
+    "files",
+    "operator",
+    "datetime",
+    "custody"
+  ],
+  "properties": {
+    "download_id": {
+      "type": "string",
+      "description": "Unique download identifier"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Aircraft manufacturer serial number"
+    },
+    "download_type": {
+      "type": "string",
+      "enum": ["routine", "incident", "accident", "maintenance"],
+      "description": "Type of download event"
+    },
+    "unit": {
+      "type": "object",
+      "required": ["id", "pn", "sn", "sw"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unit identifier"
+        },
+        "pn": {
+          "type": "string",
+          "description": "Part number"
+        },
+        "sn": {
+          "type": "string",
+          "description": "Serial number"
+        },
+        "sw": {
+          "type": "object",
+          "required": ["version", "hash"],
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "hash": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          }
+        }
+      }
+    },
+    "extraction_tool": {
+      "type": "object",
+      "required": ["name", "version", "hash"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Tool name"
+        },
+        "version": {
+          "type": "string",
+          "description": "Tool version"
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "description": "Tool executable SHA-256 hash"
+        },
+        "qualification_status": {
+          "type": "string",
+          "enum": ["qualified", "non-qualified", "pending"],
+          "description": "DO-178C tool qualification status"
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["filename", "sha256", "size_bytes"],
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "file_type": {
+            "type": "string",
+            "description": "File type (e.g., 'raw_binary', 'csv_decoded', 'audio_wav')"
+          }
+        }
+      }
+    },
+    "time_sync": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["GPS", "GNSS", "NTP", "UTC-internal", "unknown"],
+          "description": "Time synchronization source"
+        },
+        "accuracy_ms": {
+          "type": "number",
+          "description": "Time accuracy in milliseconds"
+        },
+        "tai_offset": {
+          "type": "integer",
+          "description": "TAI-UTC offset in seconds"
+        }
+      }
+    },
+    "operator": {
+      "type": "string",
+      "description": "Name of technician/operator performing download"
+    },
+    "datetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Download date/time in ISO 8601 format with timezone"
+    },
+    "location": {
+      "type": "string",
+      "description": "Download location (airport code, maintenance facility, etc.)"
+    },
+    "custody": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["by", "action", "datetime"],
+        "properties": {
+          "by": {
+            "type": "string",
+            "description": "Person responsible"
+          },
+          "action": {
+            "type": "string",
+            "enum": ["extracted", "transferred", "sealed", "archived", "released"],
+            "description": "Custody action"
+          },
+          "datetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Digital signature or reference"
+          }
+        }
+      }
+    },
+    "dpp_entry": {
+      "type": "object",
+      "properties": {
+        "dpp_id": {
+          "type": "string",
+          "description": "Digital Product Passport entry ID"
+        },
+        "dpp_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to DPP entry"
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Recorded", "Approved", "Released", "Under Review"]
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "remarks": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "incident_reference": {
+      "type": "string",
+      "description": "Incident/accident reference number if applicable"
+    },
+    "investigator_access": {
+      "type": "object",
+      "properties": {
+        "granted": {
+          "type": "boolean"
+        },
+        "authority": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional remarks"
+    }
+  }
+}

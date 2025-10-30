@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "FDR Parameter Schema",
+  "description": "Schema for FDR parameter mapping to ARINC/ICAO specifications",
+  "type": "object",
+  "required": [
+    "parameter_id",
+    "arinc_reference",
+    "units"
+  ],
+  "properties": {
+    "parameter_id": {
+      "type": "string",
+      "description": "Unique parameter identifier"
+    },
+    "arinc_reference": {
+      "type": "string",
+      "description": "ARINC or ICAO parameter reference code"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable parameter description"
+    },
+    "units": {
+      "type": "string",
+      "description": "Engineering units (e.g., kn, ft, deg, %)"
+    },
+    "sampling_rate_hz": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Sampling rate in Hz"
+    },
+    "recording_resolution": {
+      "type": "string",
+      "description": "Recording resolution specification"
+    },
+    "data_source": {
+      "type": "string",
+      "description": "Source system or sensor providing the data"
+    },
+    "bus_interface": {
+      "type": "string",
+      "enum": ["ARINC-429", "ARINC-717", "AFDX", "MIL-STD-1553", "Ethernet", "CAN", "Other"],
+      "description": "Data bus interface type"
+    },
+    "parameter_type": {
+      "type": "string",
+      "enum": ["mandatory", "optional", "additional"],
+      "description": "Parameter recording requirement level"
+    },
+    "icao_requirement": {
+      "type": "string",
+      "description": "ICAO Annex 6 requirement reference"
+    },
+    "validity_checks": {
+      "type": "object",
+      "properties": {
+        "min_value": {
+          "type": "number",
+          "description": "Minimum valid value"
+        },
+        "max_value": {
+          "type": "number",
+          "description": "Maximum valid value"
+        },
+        "validity_flag": {
+          "type": "boolean",
+          "description": "Whether parameter includes validity flag"
+        }
+      }
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional notes or remarks"
+    }
+  }
+}

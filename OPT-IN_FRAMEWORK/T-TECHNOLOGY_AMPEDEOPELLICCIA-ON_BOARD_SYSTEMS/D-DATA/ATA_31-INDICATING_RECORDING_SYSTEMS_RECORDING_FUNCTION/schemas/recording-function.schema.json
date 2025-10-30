@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Recording Function (FDR/CVR) Metadata",
+  "description": "Metadata schema for flight data and cockpit voice recording systems",
+  "type": "object",
+  "required": [
+    "id",
+    "system_type",
+    "manufacturer",
+    "part_number",
+    "serial",
+    "sw_baseline",
+    "installation_date"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the recording system unit"
+    },
+    "system_type": {
+      "type": "string",
+      "enum": ["FDR", "CVR", "Combined-Unit"],
+      "description": "Type of recording system"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Manufacturer name"
+    },
+    "part_number": {
+      "type": "string",
+      "description": "Manufacturer part number"
+    },
+    "serial": {
+      "type": "string",
+      "description": "Serial number"
+    },
+    "sw_baseline": {
+      "type": "object",
+      "required": ["version", "hash"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Software version"
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "description": "SHA-256 hash of software baseline"
+        }
+      }
+    },
+    "installation_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Installation date in ISO 8601 format"
+    },
+    "last_maintenance_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Last maintenance date in ISO 8601 format"
+    },
+    "calibration_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of calibration certificate identifiers"
+    },
+    "env_qualification": {
+      "type": "object",
+      "properties": {
+        "do160_level": {
+          "type": "string",
+          "description": "DO-160 environmental qualification level"
+        },
+        "shock_cert": {
+          "type": "string",
+          "description": "Crash shock certification reference"
+        },
+        "temperature_range": {
+          "type": "object",
+          "properties": {
+            "min_celsius": {"type": "number"},
+            "max_celsius": {"type": "number"}
+          }
+        }
+      }
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of data bus interfaces (e.g., ARINC 429, ARINC 717, Ethernet)"
+    },
+    "recording_capacity": {
+      "type": "object",
+      "properties": {
+        "duration_hours": {
+          "type": "number",
+          "description": "Recording duration capacity in hours"
+        },
+        "data_size_gb": {
+          "type": "number",
+          "description": "Total data storage capacity in GB"
+        }
+      }
+    },
+    "power_requirements": {
+      "type": "object",
+      "properties": {
+        "voltage_vdc": {
+          "type": "number"
+        },
+        "current_max_amps": {
+          "type": "number"
+        },
+        "backup_duration_min": {
+          "type": "number",
+          "description": "Backup power duration in minutes"
+        }
+      }
+    },
+    "tso_compliance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of applicable TSO standards (e.g., TSO-C124a, TSO-C123a)"
+    }
+  }
+}

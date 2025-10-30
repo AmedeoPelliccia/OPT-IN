@@ -1,0 +1,270 @@
+{
+  "download_id": "CVR-DL-20251030-002",
+  "download_type": "routine",
+  "msn": "AMPEL360-001",
+  "registration": "N-AMPEL001",
+  "unit": {
+    "id": "CVR-001",
+    "pn": "CVR-PN-200",
+    "sn": "SN-CVR-2001",
+    "type": "CVR",
+    "manufacturer": "ACME Avionics Inc.",
+    "sw": {
+      "version": "1.2.3",
+      "hash": "sha256:f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7"
+    },
+    "installation_date": "2025-01-15",
+    "last_maintenance_date": "2025-09-10",
+    "recording_capacity_hours": 4.0,
+    "channels": 4
+  },
+  "extraction_tool": {
+    "name": "CVR-Extract",
+    "version": "2.0.1",
+    "hash": "sha256:a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8",
+    "qualification_status": "qualified",
+    "tql_level": "TQL-5",
+    "qualification_date": "2025-08-01",
+    "encryption_enabled": false
+  },
+  "files": [
+    {
+      "filename": "cvr_ch1_capt_20251030.wav",
+      "sha256": "sha256:b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9",
+      "size_bytes": 230400000,
+      "file_type": "audio_wav",
+      "channel": "CH-1",
+      "channel_description": "Captain Boom Microphone",
+      "duration_seconds": 7200,
+      "sample_rate_khz": 16,
+      "bit_depth": 16,
+      "encoding": "PCM"
+    },
+    {
+      "filename": "cvr_ch2_fo_20251030.wav",
+      "sha256": "sha256:c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0",
+      "size_bytes": 230400000,
+      "file_type": "audio_wav",
+      "channel": "CH-2",
+      "channel_description": "First Officer Boom Microphone",
+      "duration_seconds": 7200,
+      "sample_rate_khz": 16,
+      "bit_depth": 16,
+      "encoding": "PCM"
+    },
+    {
+      "filename": "cvr_ch3_area1_20251030.wav",
+      "sha256": "sha256:d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1",
+      "size_bytes": 230400000,
+      "file_type": "audio_wav",
+      "channel": "CH-3",
+      "channel_description": "Cockpit Area Microphone 1 (Overhead)",
+      "duration_seconds": 7200,
+      "sample_rate_khz": 16,
+      "bit_depth": 16,
+      "encoding": "PCM"
+    },
+    {
+      "filename": "cvr_ch4_area2_20251030.wav",
+      "sha256": "sha256:e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2",
+      "size_bytes": 230400000,
+      "file_type": "audio_wav",
+      "channel": "CH-4",
+      "channel_description": "Cockpit Area Microphone 2 (Center Console)",
+      "duration_seconds": 7200,
+      "sample_rate_khz": 16,
+      "bit_depth": 16,
+      "encoding": "PCM"
+    },
+    {
+      "filename": "cvr_metadata_20251030.json",
+      "sha256": "sha256:f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3",
+      "size_bytes": 4096,
+      "file_type": "metadata"
+    },
+    {
+      "filename": "cvr_quality_report_20251030.pdf",
+      "sha256": "sha256:a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4",
+      "size_bytes": 125648,
+      "file_type": "quality_report"
+    }
+  ],
+  "time_sync": {
+    "source": "GPS",
+    "accuracy_ms": 8,
+    "first_timestamp_utc": "2025-10-30T15:00:00.000Z",
+    "last_timestamp_utc": "2025-10-30T17:00:00.000Z"
+  },
+  "recording_summary": {
+    "duration_hours": 2.0,
+    "channels_recorded": 4,
+    "erase_inhibit_status": "disabled",
+    "last_erase_date": "2025-10-29T12:00:00Z",
+    "data_quality": "excellent",
+    "bit_status": "pass"
+  },
+  "audio_quality_verification": {
+    "performed": true,
+    "test_date": "2025-10-30T17:45:00Z",
+    "test_technician": "Jane Doe",
+    "test_technician_id": "EMP-54321",
+    "channels": [
+      {
+        "channel_id": "CH-1",
+        "snr_db": 47.2,
+        "thd_percent": 0.58,
+        "frequency_response": "300Hz-8kHz within ±3dB",
+        "intelligibility_verified": true,
+        "status": "pass"
+      },
+      {
+        "channel_id": "CH-2",
+        "snr_db": 46.8,
+        "thd_percent": 0.65,
+        "frequency_response": "300Hz-8kHz within ±3dB",
+        "intelligibility_verified": true,
+        "status": "pass"
+      },
+      {
+        "channel_id": "CH-3",
+        "snr_db": 43.5,
+        "thd_percent": 0.78,
+        "frequency_response": "300Hz-8kHz within ±3dB",
+        "intelligibility_verified": true,
+        "status": "pass"
+      },
+      {
+        "channel_id": "CH-4",
+        "snr_db": 45.1,
+        "thd_percent": 0.71,
+        "frequency_response": "300Hz-8kHz within ±3dB",
+        "intelligibility_verified": true,
+        "status": "pass"
+      }
+    ],
+    "overall_status": "pass",
+    "remarks": "All channels meet ED-112 requirements. Audio quality excellent."
+  },
+  "operator": "Jane Doe",
+  "operator_id": "EMP-54321",
+  "operator_certification": "CVR-DL-CERT-2024",
+  "authorization": "AUTH-CVR-2025-10-001",
+  "authorized_by": "Chief Pilot Michael Brown",
+  "datetime": "2025-10-30T17:15:00Z",
+  "location": "KJFK",
+  "location_description": "JFK International Airport - Hangar 5 (Secure Room)",
+  "custody": [
+    {
+      "by": "Jane Doe",
+      "by_id": "EMP-54321",
+      "action": "extracted",
+      "datetime": "2025-10-30T17:15:00Z",
+      "location": "KJFK Hangar 5 Secure Room",
+      "witness": "John Smith (EMP-12345)",
+      "signature": "digital_signature_placeholder"
+    },
+    {
+      "by": "Jane Doe",
+      "by_id": "EMP-54321",
+      "action": "sealed",
+      "datetime": "2025-10-30T17:45:00Z",
+      "location": "KJFK Hangar 5 Secure Room",
+      "seal_number": "SEAL-CVR-20251030-001",
+      "secondary_seal_number": "SEAL-CVR-20251030-002",
+      "witness": "John Smith (EMP-12345)",
+      "signature": "digital_signature_placeholder"
+    },
+    {
+      "by": "Jane Doe",
+      "by_id": "EMP-54321",
+      "action": "transferred",
+      "datetime": "2025-10-30T18:00:00Z",
+      "location": "KJFK CVR Secure Storage",
+      "seal_integrity": "both seals intact",
+      "witness": "Security Officer Paul Anderson (SEC-789)",
+      "signature": "digital_signature_placeholder"
+    },
+    {
+      "by": "Jane Doe",
+      "by_id": "EMP-54321",
+      "action": "archived",
+      "datetime": "2025-10-30T18:30:00Z",
+      "location": "CVR Secure Archive Facility",
+      "archive_reference": "ARCH-CVR-2025-10-002",
+      "seal_integrity": "both seals intact",
+      "witness": "Archive Manager Sarah White (ARCH-456)",
+      "signature": "digital_signature_placeholder"
+    }
+  ],
+  "secure_deletion": {
+    "audio_deleted": true,
+    "deletion_method": "7-pass secure erase (DoD 5220.22-M)",
+    "deletion_datetime": "2025-10-30T19:00:00Z",
+    "deletion_by": "Jane Doe (EMP-54321)",
+    "manifest_retained": true,
+    "quality_report_retained": true,
+    "deletion_certificate": "DEL-CERT-CVR-20251030-001"
+  },
+  "dpp_entry": {
+    "dpp_id": "DPP-REC-CVR-20251030-002",
+    "dpp_url": "https://dpp.ampel360.com/recording/CVR-DL-20251030-002",
+    "created_at": "2025-10-30T18:45:00Z",
+    "artifacts_linked": true,
+    "audio_included": false,
+    "metadata_only": true
+  },
+  "approvals": [
+    {
+      "authority": "Data Systems Engineering",
+      "approver_name": "Dr. Alice Chen",
+      "status": "Recorded",
+      "date": "2025-10-30",
+      "remarks": "Routine test download completed, all channels verified"
+    },
+    {
+      "authority": "Flight Operations",
+      "approver_name": "Chief Pilot Michael Brown",
+      "status": "Approved",
+      "date": "2025-10-30",
+      "remarks": "Download authorized for annual audio quality verification"
+    },
+    {
+      "authority": "Quality Assurance",
+      "approver_name": "Robert Williams",
+      "status": "Approved",
+      "date": "2025-10-30",
+      "remarks": "Audio quality verified, secure deletion confirmed"
+    }
+  ],
+  "regulatory_compliance": {
+    "icao_annex_6": "compliant",
+    "faa_14_cfr_135_609": "compliant",
+    "tso_c123a": "compliant",
+    "ed_112": "compliant",
+    "minimum_duration": "compliant_2hours"
+  },
+  "privacy_protection": {
+    "cvr_audio": true,
+    "access_restricted": true,
+    "access_level": "confidential",
+    "disclosure_prohibited": true,
+    "regulatory_basis": "14 CFR 135.609",
+    "access_log_maintained": true
+  },
+  "incident_reference": null,
+  "investigator_access": {
+    "granted": false,
+    "authority": null,
+    "date": null
+  },
+  "quality_checks": {
+    "checksum_verification": "pass",
+    "completeness_check": "pass",
+    "audio_quality_verification": "pass",
+    "intelligibility_verification": "pass",
+    "secure_deletion_verified": "confirmed"
+  },
+  "retention_policy": "metadata_permanent_audio_deleted",
+  "access_level": "restricted",
+  "remarks": "Routine annual CVR audio quality verification test. All four channels passed acoustic testing with excellent results. Audio files securely deleted after verification per policy. Manifest and quality report retained permanently. No incidents or anomalies detected."
+}

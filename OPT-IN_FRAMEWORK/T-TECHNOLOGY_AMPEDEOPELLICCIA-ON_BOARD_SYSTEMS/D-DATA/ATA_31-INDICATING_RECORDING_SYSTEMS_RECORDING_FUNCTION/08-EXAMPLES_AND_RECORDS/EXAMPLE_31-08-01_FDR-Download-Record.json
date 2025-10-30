@@ -1,0 +1,153 @@
+{
+  "download_id": "FDR-DL-20251030-001",
+  "download_type": "routine",
+  "msn": "AMPEL360-001",
+  "registration": "N-AMPEL001",
+  "unit": {
+    "id": "FDR-001",
+    "pn": "FDR-PN-100",
+    "sn": "SN-FDR-1001",
+    "type": "FDR",
+    "manufacturer": "ACME Avionics Inc.",
+    "sw": {
+      "version": "1.2.3",
+      "hash": "sha256:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+    },
+    "installation_date": "2025-01-15",
+    "last_maintenance_date": "2025-09-10"
+  },
+  "extraction_tool": {
+    "name": "FDR-Extract",
+    "version": "2.0.1",
+    "hash": "sha256:b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+    "qualification_status": "qualified",
+    "tql_level": "TQL-5",
+    "qualification_date": "2025-08-01"
+  },
+  "files": [
+    {
+      "filename": "fdr_raw_20251030.bin",
+      "sha256": "sha256:c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4",
+      "size_bytes": 12458976,
+      "file_type": "raw_binary"
+    },
+    {
+      "filename": "fdr_decoded_20251030.csv",
+      "sha256": "sha256:d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5",
+      "size_bytes": 45678912,
+      "file_type": "csv_decoded"
+    },
+    {
+      "filename": "fdr_metadata_20251030.json",
+      "sha256": "sha256:e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      "size_bytes": 8192,
+      "file_type": "metadata"
+    }
+  ],
+  "time_sync": {
+    "source": "GPS",
+    "accuracy_ms": 8,
+    "tai_offset": 37,
+    "gps_lock_status": "valid",
+    "first_timestamp_utc": "2025-10-29T08:00:00.000Z",
+    "last_timestamp_utc": "2025-10-30T16:30:00.000Z"
+  },
+  "recording_summary": {
+    "duration_hours": 25.5,
+    "parameter_count": 88,
+    "frame_count": 91800,
+    "data_quality": "excellent",
+    "bit_status": "pass",
+    "errors_detected": 0
+  },
+  "operator": "John Smith",
+  "operator_id": "EMP-12345",
+  "operator_certification": "FDR-DL-CERT-2024",
+  "datetime": "2025-10-30T17:00:00Z",
+  "location": "KJFK",
+  "location_description": "JFK International Airport - Hangar 5",
+  "custody": [
+    {
+      "by": "John Smith",
+      "by_id": "EMP-12345",
+      "action": "extracted",
+      "datetime": "2025-10-30T17:00:00Z",
+      "location": "KJFK Hangar 5",
+      "signature": "digital_signature_placeholder"
+    },
+    {
+      "by": "John Smith",
+      "by_id": "EMP-12345",
+      "action": "sealed",
+      "datetime": "2025-10-30T17:15:00Z",
+      "location": "KJFK Hangar 5",
+      "seal_number": "SEAL-FDR-20251030-001",
+      "signature": "digital_signature_placeholder"
+    },
+    {
+      "by": "John Smith",
+      "by_id": "EMP-12345",
+      "action": "transferred",
+      "datetime": "2025-10-30T17:30:00Z",
+      "location": "KJFK Secure Storage",
+      "seal_integrity": "intact",
+      "signature": "digital_signature_placeholder"
+    },
+    {
+      "by": "Mary Johnson",
+      "by_id": "EMP-67890",
+      "action": "archived",
+      "datetime": "2025-10-30T18:00:00Z",
+      "location": "Data Archive Facility A",
+      "archive_reference": "ARCH-FDR-2025-10-001",
+      "seal_integrity": "intact",
+      "signature": "digital_signature_placeholder"
+    }
+  ],
+  "dpp_entry": {
+    "dpp_id": "DPP-REC-FDR-20251030-001",
+    "dpp_url": "https://dpp.ampel360.com/recording/FDR-DL-20251030-001",
+    "created_at": "2025-10-30T18:15:00Z",
+    "artifacts_linked": true
+  },
+  "approvals": [
+    {
+      "authority": "Data Systems Engineering",
+      "approver_name": "Dr. Alice Chen",
+      "status": "Recorded",
+      "date": "2025-10-30",
+      "remarks": "Routine download completed successfully, all parameters recorded"
+    },
+    {
+      "authority": "Quality Assurance",
+      "approver_name": "Robert Williams",
+      "status": "Approved",
+      "date": "2025-10-30",
+      "remarks": "Download manifest verified, checksums validated"
+    }
+  ],
+  "regulatory_compliance": {
+    "icao_annex_6": "compliant",
+    "faa_14_cfr_121_343": "compliant",
+    "tso_c124a": "compliant",
+    "arinc_717": "compliant",
+    "mandatory_parameters": "all_recorded"
+  },
+  "incident_reference": null,
+  "investigator_access": {
+    "granted": false,
+    "authority": null,
+    "date": null
+  },
+  "quality_checks": {
+    "checksum_verification": "pass",
+    "completeness_check": "pass",
+    "time_sync_verification": "pass",
+    "parameter_validation": "pass",
+    "data_integrity": "verified"
+  },
+  "retention_policy": "5_years",
+  "retention_expiration_date": "2030-10-30",
+  "access_level": "restricted",
+  "remarks": "Routine annual download for maintenance verification. All systems nominal. No incidents or anomalies detected. FDR recording quality excellent throughout the period."
+}

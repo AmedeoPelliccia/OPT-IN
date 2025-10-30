@@ -1,0 +1,5 @@
+Channel_ID,Microphone_Type,Location,Part_Number,Serial_Number,Calibration_Date,SNR_dB,THD_Percent,Intelligibility_Score,Test_Date,Test_Certificate,Retention_Hours,ED112_Compliant,Status,Remarks
+CH-1,Boom Microphone,Captain Headset,MIC-BM-100,SN-MIC-001,2025-09-15,47,0.6,92,2025-10-01,ACOU-TEST-001,4.0,Yes,Pass,Noise-cancelling electret condenser
+CH-2,Boom Microphone,First Officer Headset,MIC-BM-100,SN-MIC-002,2025-09-15,46,0.7,90,2025-10-01,ACOU-TEST-001,4.0,Yes,Pass,Noise-cancelling electret condenser
+CH-3,Area Microphone,Overhead Panel (center),MIC-AM-200,SN-MIC-003,2025-09-18,43,0.8,87,2025-10-01,ACOU-TEST-001,4.0,Yes,Pass,Omnidirectional area mic
+CH-4,Area Microphone,Center Console (near audio panel),MIC-AM-200,SN-MIC-004,2025-09-18,45,0.7,89,2025-10-01,ACOU-TEST-001,4.0,Yes,Pass,Omnidirectional area mic with radio mix
