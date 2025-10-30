@@ -1,0 +1,28 @@
+schema_version: "1.1"
+id: "DATA_16-01-02_rev1.0.0"
+document:
+  type: "DATA"
+  title: "Regulatory Impact Matrix"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+artifact_path: "OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_16-CHANGE_OF_ROLE/01-GENERAL/DATA_16-01-02_Regulatory-Impact-Matrix.csv"
+artifact_sha256: "52364e92bf431314df14beff86b23dc015382428e2cf0d8e17803297d24a6ecb"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  config: "ALL"
+approvals:
+  - role: "Configuration_Control"
+    reviewer_id: "CC-12345"
+    reviewer_name: "Alice Johnson"
+    timestamp: "2025-10-30T12:00:00Z"
+    status: "Released"
+audit_log:
+  - event: "Created"
+    actor: "Configuration Control"
+    timestamp: "2025-10-30T10:00:00Z"
+    detail: "Created regulatory matrix"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "52364e92bf431314df14beff86b23dc015382428e2cf0d8e17803297d24a6ecb"

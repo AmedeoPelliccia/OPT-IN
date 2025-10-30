@@ -1,0 +1,67 @@
+schema_version: "1.1"
+id: "DATA_16-03-02_rev1.0.0"
+document:
+  type: "DATA"
+  title: "Test Results Data"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+artifact_path: "OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_16-CHANGE_OF_ROLE/03-TESTS_AND_EVIDENCE/DATA_16-03-02_Test-Results.csv"
+artifact_sha256: "1bedadbfce85dd57b3e1992614fc35023bdab29e117fb58ed75cc5ea04a2e5b5"
+schema_id: "test-report.schema.json"
+schema_version: "1.0"
+effectivity:
+  scope: "Example test data for ATA 16 change requests"
+  msn: "ALL"
+  config: "ALL"
+  lopa: "ALL"
+  notes: "Template for recording test results with numeric criteria"
+change_request_id: "ECR-2025-0001"
+regulatory_refs:
+  - regulation: "CS-25"
+    clause: "25.1309"
+    impact: "Major_Impact"
+safety_assessment_ref: "SA-2025-0001"
+numeric_checks:
+  - parameter: "Torque"
+    threshold_min: 15.0
+    threshold_max: 20.0
+    unit: "Nm"
+    tolerance: 0.5
+    data_source: "DATA_16-03-02_Test-Results.csv"
+  - parameter: "Deflection"
+    threshold_min: -5.0
+    threshold_max: 5.0
+    unit: "mm"
+    tolerance: 0.2
+    data_source: "DATA_16-03-02_Test-Results.csv"
+approvals:
+  - role: "Configuration_Control"
+    reviewer_id: "CC-12345"
+    reviewer_name: "Alice Johnson"
+    timestamp: "2025-10-30T12:00:00Z"
+    status: "Released"
+    comment: "Test results data template approved"
+    signature: "AJ-20251030-1200"
+audit_log:
+  - event: "Created"
+    actor: "Configuration Control"
+    timestamp: "2025-10-30T10:00:00Z"
+    detail: "Created test results data template"
+  - event: "Released"
+    actor: "Alice Johnson"
+    timestamp: "2025-10-30T12:00:00Z"
+    detail: "Released as template for ATA 16 test evidence"
+traceability:
+  related_documents:
+    - doc_id: "TESTPLAN_16-03-01"
+      doc_type: "Test_Report"
+      relationship: "References"
+  parent_change_request: null
+  child_change_requests: []
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "1bedadbfce85dd57b3e1992614fc35023bdab29e117fb58ed75cc5ea04a2e5b5"
+  validation_method: "sha256sum"
+  validation_date: "2025-10-30"
+notes: "This CSV contains example test results. Units are included in column headers per ATA 16 requirements."

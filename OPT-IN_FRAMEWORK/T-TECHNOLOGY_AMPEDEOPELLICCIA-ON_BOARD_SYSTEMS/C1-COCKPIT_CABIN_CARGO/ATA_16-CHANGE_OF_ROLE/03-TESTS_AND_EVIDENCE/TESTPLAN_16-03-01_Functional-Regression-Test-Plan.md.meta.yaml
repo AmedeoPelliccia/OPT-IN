@@ -1,0 +1,29 @@
+schema_version: "1.1"
+id: "TESTPLAN_16-03-01_rev1.0.0"
+document:
+  type: "TESTPLAN"
+  title: "Functional Regression Test Plan"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+artifact_path: "OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_16-CHANGE_OF_ROLE/03-TESTS_AND_EVIDENCE/TESTPLAN_16-03-01_Functional-Regression-Test-Plan.md"
+artifact_sha256: "0d1ffdc18b1ff3ce08a519ffa16386ca97d97a938fa1522c60b48a38e6b8dfbd"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  config: "ALL"
+  lopa: "ALL"
+approvals:
+  - role: "Configuration_Control"
+    reviewer_id: "CC-12345"
+    reviewer_name: "Alice Johnson"
+    timestamp: "2025-10-30T12:00:00Z"
+    status: "Released"
+audit_log:
+  - event: "Created"
+    actor: "Configuration Control"
+    timestamp: "2025-10-30T10:00:00Z"
+    detail: "Created test plan template"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "0d1ffdc18b1ff3ce08a519ffa16386ca97d97a938fa1522c60b48a38e6b8dfbd"
