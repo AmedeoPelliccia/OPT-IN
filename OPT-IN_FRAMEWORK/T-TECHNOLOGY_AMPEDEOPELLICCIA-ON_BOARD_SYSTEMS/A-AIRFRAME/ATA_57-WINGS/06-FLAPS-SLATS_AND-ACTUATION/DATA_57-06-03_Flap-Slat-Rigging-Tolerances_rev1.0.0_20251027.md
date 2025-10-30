@@ -4,7 +4,7 @@
 **Effective Date:** 2025-10-27
 
 ## 1. Scope
-This document covers Flap /Slat /Rigging /Tolerances for ATA 57 Wings.
+This document covers Flap Slat Rigging Tolerances for ATA 57 Wings.
 
 ## 2. References
 - INDEX.meta.yaml
