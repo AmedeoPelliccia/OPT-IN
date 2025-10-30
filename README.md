@@ -29,6 +29,66 @@ The following framework ensures the critical interfaces between systems are form
 
 ---
 
+## Nota Científica: Infraestructura Documental para el Desarrollo de Aeronaves Conceptuales Open Source
+
+### Resumen
+
+El **Framework Optin** es una arquitectura documental modular que permite construir la documentación técnica completa de una aeronave conceptual, incluso antes del prototipo físico. Esta aproximación busca establecer un **estándar verificable, público y replicable** para el desarrollo y evaluación de proyectos aeronáuticos avanzados, facilitando la trazabilidad y la certificación conforme a normativas internacionales (EASA/FAA).[¹](https://arxiv.org/html/2407.06320v2)
+
+### Propósito y Motivación
+
+La iniciativa surge de la necesidad de acelerar la maduración técnica de conceptos aeronáuticos y abrir el acceso al diseño avanzado tanto a instituciones como potenciales financiadores. El sistema Optin transforma la **evidencia documental—requerimientos, análisis y entregables—en el primer producto verificable** de todo programa de avión, incluso sin prototipo físico ni inversión inicial.
+
+### Estructura Modular
+
+El Framework organiza la documentación en secciones normalizadas, orientadas a un programa de diseño conceptual (CDR):
+
+- **Requerimientos e Integración de Sistemas:** Identificadores trazables para cada requerimiento (REQ-001…REQ-00x), especificaciones funcionales, protocolos de verificación y rutas de certificación.
+- **Aerodinámica y Propulsión:** Plantillas para análisis CFD, estudios de configuración, perfiles de consumo y esquemas de motor, incluyendo variantes híbridas, eléctricas, y de hidrógeno.
+- **Estructuras y Gestión Térmica:** Modelos CAD normalizados, simulaciones de carga y fatiga, diagramas de almacenamiento energético (baterías, tanques H₂).
+- **Plan de Gestión y Configuración:** Procedimientos de control de cambios, revisión de entregables y flujo de gestión PLM/CAx abierto.
+
+Cada bloque se implementa mediante **esquemas interoperables** —diagramas, listas de chequeo, guías de buenas prácticas— que permiten reconstruir y auditar todo el ciclo de ingeniería y certificación como si el avión estuviera físicamente fabricado.[²](https://www.docs.rcaide.leadsresearchgroup.com/)
+
+### Enfoque Open Source
+
+Todo el sistema está gobernado por **licencias abiertas**, replicando la lógica de los sistemas PLM y CAx colaborativos pero en un entorno público y federado. Los entregables son auditables por terceros, con trazabilidad y control de versiones completos, permitiendo que cualquier entidad pueda replicar, revisar, o financiar el diseño basado en evidencia documental completa.[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
+
+### Aplicación Práctica (Caso BWB-H2-Hy-E)
+
+Como ejemplo, el Framework Optin se emplea en el desarrollo documental del **BWB-H2-Hy-E**:  
+- Avión conceptual de fuselaje integrado, propulsión híbrido-eléctrica e hidrógeno.
+- Permite demostrar madurez técnica mediante documentación certificable y conformidad normativa.
+- Los entregables incluyen análisis de viabilidad, simulaciones aerodinámicas, esquematización de sistemas de gestión de hidrógeno, y rutas de certificación digitalizadas.
+
+### Conclusión
+
+El Framework Optin representa la transición de la **documentación técnica integral a producto verificable**, constituyendo el equivalente técnico a un "prototipo documental" abierto. Esta infraestructura facilita la **evaluación, replicación y financiamiento de proyectos aeronáuticos avanzados** desde la evidencia documental y establece un estándar replicable para toda la industria de diseño aeronáutico abierto y colaborativo.[¹](https://arxiv.org/html/2407.06320v2)[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
+
+**Palabras Clave:** Open source, aeronaves, documentación técnica, PLM, CAx, certificación, conceptual design, hydrogen aircraft, BWB.
+
+### Referencias Complementarias
+
+- [⁴](https://europass.europa.eu/es/common-european-framework-reference-language-skills) European Framework for Language Skills
+- [⁵](https://www.antifraucv.es/wp-content/uploads/2025/04/2025_Tratado_sobre_el_Reglamento_de_IA_con_capitulo_Boix_y_Barrachina.pdf) Tratado sobre el Reglamento de IA
+- [⁶](https://e-revistas.uc3m.es/index.php/CDT/article/download/9887/7434/) Cuadernos de Derecho Transnacional
+- [⁷](https://oa.upm.es/64414/1/TFM_JORGE_FORCADA_SANZ.pdf) TFM Jorge Forcada Sanz
+- [⁸](https://www.aepd.es/documento/premio-emilio-aced-2023-yod-samuel-martin.pdf) Premio Emilio Aced 2023
+- [⁹](https://ardupilot.org/plane/) ArduPilot Open Source Autopilot
+- [¹⁰](https://ntrs.nasa.gov/api/citations/20040033924/downloads/20040033924.pdf) NASA Technical Reports Server
+- [¹¹](https://en.wikipedia.org/wiki/European_Interoperability_Framework) European Interoperability Framework
+- [¹²](https://www.frontiersin.org/journals/energy-research/articles/10.3389/fenrg.2022.993376/full) Frontiers in Energy Research
+- [¹³](https://www.crue.org/wp-content/uploads/2020/02/Formaci%C3%B3n-curricular-en-dise%C3%B1o-para-todas-las-personas-accesible-Enfermer%C3%ADa.pdf) Formación curricular en diseño para todas las personas
+- [¹⁴](https://riunet.upv.es/server/api/core/bitstreams/2cc750b4-8413-40f5-ba25-7891ab63bbc9/content) RiuNet UPV - Digital Repository
+- [¹⁵](https://riunet.upv.es/bitstream/handle/10251/198544/Gabaldon%20-%20Analisis%20de%20frameworks%20y%20soluciones%20para%20la%20IoT.pdf?sequence=1) Análisis de frameworks y soluciones para la IoT
+- [¹⁶](https://github.com/paparazzi/paparazzi) Paparazzi UAV Open Source Project
+- [¹⁷](https://www.sciencedirect.com/science/article/pii/S0376042121000191) ScienceDirect Article
+- [¹⁸](https://www.idealista.com/data/) Idealista Data Portal
+- [¹⁹](https://arc.aiaa.org/doi/10.2514/1.C036952) AIAA Journal Article
+- [²⁰](https://support.google.com/admanager/answer/9461778) Google Ad Manager Documentation
+
+---
+
 ### **Locked-Down and Final AMPEL360 ATA Chapter Mapping**
 ---
 
