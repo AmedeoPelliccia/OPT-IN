@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Oxygen System",
+  "type": "object",
+  "required": ["id","system_type","cylinders","regulators"],
+  "properties": {
+    "id": { "type": "string" },
+    "system_type": { 
+      "type": "string", 
+      "enum": ["Central GOX","Chemical","Portable","Concentrator","Hybrid"] 
+    },
+    "description": { "type": "string" },
+    "cylinders": {
+      "type": "array",
+      "items": {
+        "type":"object",
+        "required":["serial","service_pressure_bar","last_hydro_test_date","next_hydro_test_due"],
+        "properties":{
+          "serial":{"type":"string"},
+          "manufacturer":{"type":"string"},
+          "part_number":{"type":"string"},
+          "service_pressure_bar":{"type":"number"},
+          "hydrostatic_test_pressure_bar":{"type":"number"},
+          "last_hydro_test_date":{"type":"string","format":"date"},
+          "next_hydro_test_due":{"type":"string","format":"date"},
+          "coc":{"type":"string"},
+          "notes":{"type":"string"},
+          "location_station":{"type":"string"},
+          "installation_date":{"type":"string","format":"date"}
+        }
+      }
+    },
+    "regulators": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required":["id","output_pressure_kpa","tolerance_kpa"],
+        "properties": {
+          "id":{"type":"string"},
+          "type":{"type":"string"},
+          "part_number":{"type":"string"},
+          "serial":{"type":"string"},
+          "output_pressure_kpa":{"type":"number"},
+          "tolerance_kpa":{"type":"number"},
+          "flow_rate_lpm":{"type":"number"},
+          "last_calibration_date":{"type":"string","format":"date"}
+        }
+      }
+    },
+    "deployment": {
+      "type":"object",
+      "properties":{
+        "auto_deploy_trigger":{"type":"string"},
+        "mask_deployment_time_s":{"type":"number"},
+        "mask_availability_count":{"type":"integer"},
+        "deployment_altitude_ft":{"type":"number"}
+      }
+    }
+  }
+}

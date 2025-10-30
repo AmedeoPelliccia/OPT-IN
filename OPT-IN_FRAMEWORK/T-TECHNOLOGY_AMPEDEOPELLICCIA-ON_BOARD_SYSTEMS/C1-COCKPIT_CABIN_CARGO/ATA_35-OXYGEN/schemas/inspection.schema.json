@@ -1,0 +1,27 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "schema_version":"1.0",
+  "title":"Inspection Interval",
+  "type":"object",
+  "required":["component","inspection_type","interval_months","acceptance_criteria"],
+  "properties":{
+    "component":{"type":"string"},
+    "inspection_type":{
+      "type":"string",
+      "enum":["GVI","DVI","NDT","PressureTest","FunctionalTest"]
+    },
+    "interval_fh":{"type":"number"},
+    "interval_months":{"type":"number"},
+    "ndt_method":{"type":"string"},
+    "acceptance_criteria":{"type":"string"},
+    "numeric_limits":{
+      "type":"object",
+      "properties":{
+        "max_leak_rate_mbar_l_s":{"type":"number"},
+        "max_corrosion_depth_mm":{"type":"number"},
+        "max_deployment_time_s":{"type":"number"},
+        "min_purity_percent":{"type":"number"}
+      }
+    }
+  }
+}

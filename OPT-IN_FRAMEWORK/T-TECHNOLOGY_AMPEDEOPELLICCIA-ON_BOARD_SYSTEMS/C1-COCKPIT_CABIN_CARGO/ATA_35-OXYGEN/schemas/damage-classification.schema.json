@@ -1,0 +1,45 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "schema_version":"1.0",
+  "title":"Damage Classification - Oxygen Systems",
+  "type":"object",
+  "required":["damage_id","component","classification","severity"],
+  "properties":{
+    "damage_id":{"type":"string"},
+    "component":{"type":"string"},
+    "component_type":{
+      "type":"string",
+      "enum":["Cylinder","Regulator","Valve","Mask","Hose","Fitting","Sensor"]
+    },
+    "classification":{
+      "type":"string",
+      "enum":["Corrosion","Dent","Crack","Leak","Contamination","Wear","Other"]
+    },
+    "severity":{
+      "type":"string",
+      "enum":["Negligible","Minor","Major","Critical"]
+    },
+    "description":{"type":"string"},
+    "measurements":{
+      "type":"object",
+      "properties":{
+        "corrosion_depth_mm":{"type":"number"},
+        "dent_depth_mm":{"type":"number"},
+        "crack_length_mm":{"type":"number"},
+        "leak_rate_mbar_l_s":{"type":"number"}
+      }
+    },
+    "location":{"type":"string"},
+    "action_required":{
+      "type":"string",
+      "enum":["Monitor","Repair","Replace","Engineering Review"]
+    },
+    "reference_limits":{
+      "type":"object",
+      "properties":{
+        "max_allowable_depth_mm":{"type":"number"},
+        "max_allowable_length_mm":{"type":"number"}
+      }
+    }
+  }
+}

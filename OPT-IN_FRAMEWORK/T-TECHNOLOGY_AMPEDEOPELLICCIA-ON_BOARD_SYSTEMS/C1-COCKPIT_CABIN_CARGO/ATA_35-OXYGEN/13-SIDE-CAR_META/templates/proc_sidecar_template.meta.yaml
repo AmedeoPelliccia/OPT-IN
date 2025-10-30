@@ -1,0 +1,28 @@
+schema_version: "1.1"
+id: "proc_sidecar_template"
+document:
+  type: "PROC"
+  title: "TBD"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+effectivity:
+  msn: "ALL"
+  cfg: "ALL"
+safety:
+  hazards: ["Oxygen enrichment fire hazard","High pressure gas hazard","Contamination risk"]
+  criticality: "Flight-Critical"
+  warnings: ["No oil or grease on oxygen systems","No smoking or open flames","Use only oxygen-compatible materials"]
+training_required: ["OXY-SVC-L2"]
+tools_required: ["Calibrated pressure gauge","Calibrated leak detector","Oxygen-safe tools"]
+consumables: []
+approvals:
+  - authority: "Cabin Systems / Oxygen"
+    status: "Draft"
+    date: ""
+traceability:
+  source_documents: []
+  crossrefs: []
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: ""

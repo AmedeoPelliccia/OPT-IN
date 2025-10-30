@@ -1,0 +1,53 @@
+{
+  "id":"RR-35001",
+  "msn":"AMPEL360-001",
+  "component_id":"CYL-001",
+  "location_station":"FWD-BAG-01",
+  "date":"2025-10-30",
+  "damage_description":"Neck corrosion pit exceeding allowable depth of 0.5 mm. Measured pit depth: 0.8 mm.",
+  "cylinder_data":{
+    "serial":"CYL-SN-12345",
+    "part_number":"OXY-CYL-200BAR-3L",
+    "manufacturer":"ABC Aerospace Cylinders",
+    "service_pressure_bar":200,
+    "last_hydro_test_date":"2020-10-15",
+    "coc":"COC-2020-ABC-12345"
+  },
+  "materials":[
+    {
+      "part_number":"CYL-REPL-100",
+      "lot":"L-2025-01",
+      "oxygen_compatible":true
+    }
+  ],
+  "ndt_reports":[
+    {
+      "method":"Ultrasonic",
+      "file_hash":"sha256:a7b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3"
+    }
+  ],
+  "pressure_test":{
+    "test_pressure_bar":300,
+    "leak_rate_mbar_l_s":0.01,
+    "duration_minutes":30,
+    "result":"Pass"
+  },
+  "oxygen_purity":{
+    "lot_number":"OXY-LOT-2025-10-30-001",
+    "purity_percent":99.7,
+    "certificate_number":"PURITY-CERT-2025-001"
+  },
+  "disposition":"Replace",
+  "approvals":[
+    {
+      "authority":"Cabin Systems / Oxygen",
+      "status":"Released",
+      "date":"2025-10-30"
+    },
+    {
+      "authority":"Airworthiness Engineering",
+      "status":"Approved",
+      "date":"2025-10-30"
+    }
+  ]
+}
