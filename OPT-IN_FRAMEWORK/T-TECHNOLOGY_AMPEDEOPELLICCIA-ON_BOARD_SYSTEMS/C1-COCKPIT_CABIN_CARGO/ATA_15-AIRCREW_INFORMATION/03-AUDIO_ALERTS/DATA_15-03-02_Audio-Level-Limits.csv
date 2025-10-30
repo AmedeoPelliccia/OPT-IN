@@ -1,0 +1,2 @@
+Parameter,Min_dBA,Max_dBA,Notes
+AlertSPL,60,85,Measured at crew ear position

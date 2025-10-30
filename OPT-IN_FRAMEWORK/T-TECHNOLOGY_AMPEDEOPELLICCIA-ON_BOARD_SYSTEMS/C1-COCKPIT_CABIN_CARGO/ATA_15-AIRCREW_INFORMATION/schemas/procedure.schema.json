@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Procedure / SOP",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "steps": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "affected_systems": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "steps"
+    ]
+}
