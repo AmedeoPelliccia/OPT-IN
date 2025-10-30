@@ -6,18 +6,25 @@ Scope: seats, monuments, galleys, lavatories, stowage, interior panels, restrain
 Provide governance, evidence requirements and auditable artifacts for cabin furnishings and equipment. This chapter contains procedures, records, test dossiers and sidecar metadata required for airworthiness and certification.
 
 ## Cross-references
-- **ATA 11** — Placards and Markings: `../ATA_11-PLACARDS_AND_MARKINGS/00_README.md`
+- **[ATA 11 — Placards and Markings](../ATA_11-PLACARDS_AND_MARKINGS/00_README.md)**
 - **ATA 21** — ECS / Environmental Control Interfaces
-- **ATA 33** — Lights: `../ATA_33-LIGHTS/00_README.md`
-- **ATA 35** — Oxygen: `../ATA_35-OXYGEN/00_README.md`
-- **ATA 44** — Cabin Systems (incl. IFE/IFX): `../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/00_README.md`
-- **ATA 51** — Structures / Standard Practices: `../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES-GENERAL/00_README.md`
+- **[ATA 33 — Lights](../ATA_33-LIGHTS/00_README.md)**
+- **[ATA 35 — Oxygen](../ATA_35-OXYGEN/00_README.md)**
+- **[ATA 44 — Cabin Systems (incl. IFE/IFX)](../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/00_README.md)**
+- **[ATA 51 — Structures / Standard Practices](../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES-GENERAL/00_README.md)**
 
 ## Compliance
 Track CS / 14 CFR Part 25 compliance in:
-`01-GENERAL/DATA_25-01-03_Regulatory-Compliance-Matrix.csv`
+[`01-GENERAL/DATA_25-01-03_Regulatory-Compliance-Matrix.csv`](01-GENERAL/DATA_25-01-03_Regulatory-Compliance-Matrix.csv)
 
-Key regulatory refs: 14 CFR/CS-25 (§25.561, §25.562 seats, §25.601, §25.603, §25.853 flammability, §25.785 seating).
+Key regulatory refs:
+- [14 CFR Part 25.561](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-C/subject-group-ECFRe4c59b5f5506932/section-25.561) — Emergency landing conditions
+- [14 CFR Part 25.562](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-C/subject-group-ECFRe4c59b5f5506932/section-25.562) — Emergency landing dynamic conditions (seats)
+- [14 CFR Part 25.601](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR1844c20dcd511b0/section-25.601) — General structural requirements
+- [14 CFR Part 25.603](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR1844c20dcd511b0/section-25.603) — Materials
+- [14 CFR Part 25.785](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR4e799cb6d0e0e65/section-25.785) — Seats, berths, safety belts, and harnesses
+- [14 CFR Part 25.853](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR4e799cb6d0e0e65/section-25.853) — Compartment interiors (flammability)
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) — EASA equivalent standards
 
 ## Mandatory items
 - **Regulations**: Capture all applicable CS/14 CFR Part 25 clauses for the artifact.

@@ -209,11 +209,11 @@ If any acceptance criterion is not met:
 4. Initiate NCR per `09-NONCONFORMANCE_AND-DEVIATION/PROC_25-09-01_NCR-And-Engineering-Disposition.md`
 
 ## Cross-References
-- `DATA_25-02-04_Seat-Rail-Torque-And-Limits.csv` (torque specifications)
-- `02-SEATS_AND_RESTRAINTS/PROC_25-02-03_Belt-Harness-Inspection.md` (restraint inspection)
-- `12-EXAMPLES_AND_RECORDS/EXAMPLE_25-12-01_Installation-Record.json` (installation record template)
+- [`DATA_25-02-04_Seat-Rail-Torque-And-Limits.csv`](DATA_25-02-04_Seat-Rail-Torque-And-Limits.csv) (torque specifications)
+- [`PROC_25-02-03_Belt-Harness-Inspection.md`](PROC_25-02-03_Belt-Harness-Inspection.md) (restraint inspection)
+- [`../12-EXAMPLES_AND_RECORDS/EXAMPLE_25-12-01_Installation-Record.json`](../12-EXAMPLES_AND_RECORDS/EXAMPLE_25-12-01_Installation-Record.json) (installation record template)
 - **ATA 24**: Electrical power system isolation procedures
-- **ATA 44**: IFE cable routing and connection procedures
+- **[ATA 44](../../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/00_README.md)**: IFE cable routing and connection procedures
 
 ## Revision History
 

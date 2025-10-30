@@ -1,13 +1,13 @@
-# TESTPLAN 25-07-01 — Dynamic Seat Test Plan (14 CFR 25.562)
+# TESTPLAN 25-07-01 — Dynamic Seat Test Plan ([14 CFR 25.562](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-C/subject-group-ECFRe4c59b5f5506932/section-25.562))
 
 ## Purpose
-Test plan for dynamic seat testing to demonstrate compliance with 14 CFR 25.562 emergency landing dynamic conditions.
+Test plan for dynamic seat testing to demonstrate compliance with [14 CFR 25.562](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-C/subject-group-ECFRe4c59b5f5506932/section-25.562) emergency landing dynamic conditions.
 
 ## Test Configuration
 - Seat model: [Manufacturer and model]
 - Test type: Forward 16g / Rearward 14g / Combined forward + yaw
 - ATD (Anthropomorphic Test Device): Hybrid III 50th percentile male (or as specified)
-- Pulse: Peak acceleration, duration, velocity change per 25.562
+- Pulse: Peak acceleration, duration, velocity change per [25.562](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-C/subject-group-ECFRe4c59b5f5506932/section-25.562)
 - Sled configuration: Single or double row per intended installation
 
 ## Test Objectives

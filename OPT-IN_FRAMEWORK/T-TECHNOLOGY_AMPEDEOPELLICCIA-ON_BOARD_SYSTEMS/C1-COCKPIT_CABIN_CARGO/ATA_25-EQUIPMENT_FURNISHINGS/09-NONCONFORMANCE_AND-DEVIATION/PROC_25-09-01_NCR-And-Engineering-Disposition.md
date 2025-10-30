@@ -24,7 +24,7 @@ Non-Conformance Report (NCR) process for cabin furnishings and equipment.
 7. Close NCR and update records
 
 ## Cross-References
-- `DATA_25-09-02_NCR-Template.csv`
+- [`DATA_25-09-02_NCR-Template.csv`](DATA_25-09-02_NCR-Template.csv)
 - **ATA 95**: Digital Product Passport (log NCR)
 
 ## Revision History

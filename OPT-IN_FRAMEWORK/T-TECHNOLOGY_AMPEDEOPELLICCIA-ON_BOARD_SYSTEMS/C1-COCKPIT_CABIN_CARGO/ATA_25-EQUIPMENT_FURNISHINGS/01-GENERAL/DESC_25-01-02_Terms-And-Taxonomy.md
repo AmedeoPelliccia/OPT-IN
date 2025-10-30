@@ -157,10 +157,10 @@ This document defines the standard terminology and taxonomy used throughout ATA 
 | SRM          | Structural Repair Manual |
 
 ## References
-- FAA AC 25.853-1: Flammability Requirements for Aircraft Seat Cushions
-- SAE AS8049 Rev C: Performance Standard for Seats
-- ATA Spec 100: Specification for Manufacturers' Technical Data
-- ATA iSpec 2200: Information Standards for Aviation Maintenance
+- [FAA AC 25.853-1](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/22582): Flammability Requirements for Aircraft Seat Cushions
+- [SAE AS8049 Rev C](https://www.sae.org/standards/content/as8049c/): Performance Standard for Seats
+- [ATA Spec 100](https://publications.airlines.org/): Specification for Manufacturers' Technical Data
+- [ATA iSpec 2200](https://www.ispec2200.org/): Information Standards for Aviation Maintenance
 
 ## Revision History
 

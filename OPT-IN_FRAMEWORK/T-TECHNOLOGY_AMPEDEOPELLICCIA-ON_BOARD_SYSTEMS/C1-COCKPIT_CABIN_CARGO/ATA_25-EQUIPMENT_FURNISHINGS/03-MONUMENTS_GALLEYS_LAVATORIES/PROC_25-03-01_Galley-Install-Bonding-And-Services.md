@@ -37,10 +37,10 @@ Procedure for installation of galley monuments including structural attachment, 
 - Galley aligned per LOPA datum
 
 ## Cross-References
-- `DATA_25-03-03_Monument-Attach-And-Load-Paths.csv`
+- [`DATA_25-03-03_Monument-Attach-And-Load-Paths.csv`](DATA_25-03-03_Monument-Attach-And-Load-Paths.csv)
 - **ATA 21**: Water and waste system interfaces
 - **ATA 24**: Electrical system interfaces
-- **ATA 51**: Structural attach point requirements
+- **[ATA 51](../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES-GENERAL/00_README.md)**: Structural attach point requirements
 
 ## Revision History
 | Revision | Date       | Author                     | Description     |

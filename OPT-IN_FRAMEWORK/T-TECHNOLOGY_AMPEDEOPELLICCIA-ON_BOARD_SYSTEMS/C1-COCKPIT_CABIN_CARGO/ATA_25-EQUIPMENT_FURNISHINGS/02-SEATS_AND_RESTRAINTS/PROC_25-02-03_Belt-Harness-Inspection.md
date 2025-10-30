@@ -180,9 +180,9 @@ If belt is contaminated but serviceable:
 5. Document cleaning action in maintenance log
 
 ## Cross-References
-- **14 CFR 25.785**: Seats, berths, safety belts, and harnesses
-- `DATA_25-02-04_Seat-Rail-Torque-And-Limits.csv` (anchor bolt torque)
-- `08-INSPECTION_AND_MAINTENANCE/DATA_25-08-02_Inspection-Intervals-And-Acceptance.csv`
+- **[14 CFR 25.785](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR4e799cb6d0e0e65/section-25.785)**: Seats, berths, safety belts, and harnesses
+- [`DATA_25-02-04_Seat-Rail-Torque-And-Limits.csv`](DATA_25-02-04_Seat-Rail-Torque-And-Limits.csv) (anchor bolt torque)
+- [`../08-INSPECTION_AND_MAINTENANCE/DATA_25-08-02_Inspection-Intervals-And-Acceptance.csv`](../08-INSPECTION_AND_MAINTENANCE/DATA_25-08-02_Inspection-Intervals-And-Acceptance.csv)
 - Seat manufacturer's maintenance manual
 
 ## Revision History
