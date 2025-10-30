@@ -28,28 +28,28 @@ effectivity:
   notes: "Specific effectivity for procedures/parts documented in individual sidecars"
 
 regulatory_compliance:
-  - standard: "FAA 14 CFR Part 25.1381"
+  - standard: "FAA 14 CFR Part 25.1381"  # https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe4c59b5f5506932/section-25.1381
     title: "Interior lighting"
     applicability: "ALL_INTERIOR"
-  - standard: "FAA 14 CFR Part 25.1383"
+  - standard: "FAA 14 CFR Part 25.1383"  # https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe4c59b5f5506932/section-25.1383
     title: "Landing lights"
     applicability: "EXTERIOR_LANDING"
-  - standard: "FAA 14 CFR Part 25.1385"
+  - standard: "FAA 14 CFR Part 25.1385"  # https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe4c59b5f5506932/section-25.1385
     title: "Position light system"
     applicability: "EXTERIOR_POSITION"
-  - standard: "FAA 14 CFR Part 25.1389"
+  - standard: "FAA 14 CFR Part 25.1389"  # https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe4c59b5f5506932/section-25.1389
     title: "Position light distribution and intensities"
     applicability: "EXTERIOR_POSITION"
-  - standard: "FAA 14 CFR Part 25.1401"
+  - standard: "FAA 14 CFR Part 25.1401"  # https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe4c59b5f5506932/section-25.1401
     title: "Anti-collision light system"
     applicability: "EXTERIOR_ANTICOLLISION"
-  - standard: "EASA CS-25.1381"
+  - standard: "EASA CS-25.1381"  # https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27
     title: "Interior lighting (EASA)"
     applicability: "ALL_INTERIOR"
-  - standard: "EASA CS-25.1383-1401"
+  - standard: "EASA CS-25.1383-1401"  # https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27
     title: "Exterior lighting (EASA)"
     applicability: "ALL_EXTERIOR"
-  - standard: "RTCA DO-160G"
+  - standard: "RTCA DO-160G"  # https://www.rtca.org/content/standards-guidance-materials
     title: "Environmental Conditions and Test Procedures for Airborne Equipment"
     sections:
       - "Section 22: Lightning Induced Transient Susceptibility"
@@ -57,54 +57,54 @@ regulatory_compliance:
       - "Section 5: Temperature Variation"
       - "Section 16: Power Input"
     applicability: "ALL_LIGHTING"
-  - standard: "SAE AS8037"
+  - standard: "SAE AS8037"  # https://www.sae.org/standards/content/as8037d/
     title: "Minimum Performance Standards Aircraft Exterior Lighting"
     applicability: "EXTERIOR"
-  - standard: "SAE AS8038"
+  - standard: "SAE AS8038"  # https://www.sae.org/standards/content/as8038/
     title: "Aircraft Interior Lighting"
     applicability: "INTERIOR"
-  - standard: "ICAO Annex 6"
+  - standard: "ICAO Annex 6"  # https://www.icao.int/safety/airnavigation/Operations/Pages/Annex-6.aspx
     title: "Operation of Aircraft"
     applicability: "OPERATIONAL_REQUIREMENTS"
-  - standard: "FAA AC 25.1309-1A"
+  - standard: "FAA AC 25.1309-1A"  # https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/22531
     title: "System Design and Analysis"
     applicability: "SAFETY_ASSESSMENT"
-  - standard: "MIL-STD-810H"
+  - standard: "MIL-STD-810H"  # https://www.atec.army.mil/publications/mil-std-810h/
     title: "Environmental Engineering Considerations and Laboratory Tests"
     applicability: "QUALIFICATION_TESTING"
 
 cross_references:
   internal:
-    - ata_chapter: "11"
+    - ata_chapter: "11"  # ../ATA_11-PLACARDS_AND_MARKINGS/README.md
       title: "PLACARDS AND MARKINGS"
       interface: "Emergency exit signs, photoluminescent markings"
-    - ata_chapter: "20"
+    - ata_chapter: "20"  # ../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/README.md
       title: "STANDARD PRACTICES - AIRFRAME"
       interface: "Workmanship, torque specifications, potting, sealing"
-    - ata_chapter: "24"
+    - ata_chapter: "24"  # ../../E2-ENERGY/ATA_24-ELECTRICAL_POWER_INCL_24-45-XX_EWIS_MONITORING/README.md
       title: "ELECTRICAL POWER"
       interface: "28VDC supply, circuit protection, load analysis"
-    - ata_chapter: "44"
+    - ata_chapter: "44"  # ../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/README.md
       title: "CABIN SYSTEMS"
       interface: "IFE integration, cabin lighting control, dimming"
-    - ata_chapter: "51"
+    - ata_chapter: "51"  # ../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES-GENERAL/README.md
       title: "STANDARD PRACTICES - STRUCTURES"
       interface: "Composite repairs near lighting assemblies"
-    - ata_chapter: "53"
+    - ata_chapter: "53"  # ../../A-AIRFRAME/ATA_53-FUSELAGE/README.md
       title: "FUSELAGE"
       interface: "LSP bonding, mounting provisions, structural interface"
-    - ata_chapter: "57"
+    - ata_chapter: "57"  # ../../A-AIRFRAME/ATA_57-WINGS/README.md
       title: "WINGS"
       interface: "Position light mounting, wing-tip lights, inspection access"
 
   external:
-    - reference: "DO-160G Section 22"
+    - reference: "DO-160G Section 22"  # https://www.rtca.org/content/standards-guidance-materials
       description: "Lightning Strike Protection requirements"
-    - reference: "NIST Calibration Standards"
+    - reference: "NIST Calibration Standards"  # https://www.nist.gov/
       description: "Photometric instrument traceability"
-    - reference: "IEC 60529"
+    - reference: "IEC 60529"  # https://webstore.iec.ch/publication/2452
       description: "IP rating for environmental sealing"
-    - reference: "IPC-A-610"
+    - reference: "IPC-A-610"  # https://www.ipc.org/TOC/IPC-A-610.pdf
       description: "Acceptability of Electronic Assemblies"
 
 directory_structure:

@@ -145,15 +145,15 @@ All ATA 33 deliverables comply with:
 
 | Regulation | Applicability | Verification |
 |------------|---------------|--------------|
-| **FAA 14 CFR Part 25.1381-1401** | Lighting requirements | Test reports, certification basis |
-| **EASA CS-25.1381-1401** | European equivalent | EASA approval documentation |
-| **RTCA DO-160G** | Environmental qualification | Test lab reports with SHA-256 |
-| **SAE AS8037, AS8038** | Performance standards | Supplier certifications |
+| **[FAA 14 CFR Part 25.1381-1401](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe4c59b5f5506932)** | Lighting requirements | Test reports, certification basis |
+| **[EASA CS-25.1381-1401](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)** | European equivalent | EASA approval documentation |
+| **[RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials)** | Environmental qualification | Test lab reports with SHA-256 |
+| **[SAE AS8037](https://www.sae.org/standards/content/as8037d/), [AS8038](https://www.sae.org/standards/content/as8038/)** | Performance standards | Supplier certifications |
 
 ### 5.2 Internal Standards
 
-- **ATA-20:** Workmanship (torque, sealing, potting)
-- **ATA-11:** Placards & markings (emergency signs)
+- **[ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/README.md):** Workmanship (torque, sealing, potting)
+- **[ATA-11](../ATA_11-PLACARDS_AND_MARKINGS/README.md):** Placards & markings (emergency signs)
 - **Company Quality Manual:** Inspection, NDT, traceability
 
 ---
@@ -208,7 +208,7 @@ Photometric instruments and test equipment must be:
 | Task | Qualification Required |
 |------|------------------------|
 | **Photometric testing** | Trained in photometric procedures, calibrated instruments |
-| **LSP bonding restoration** | Certified in bonding/grounding per ATA-20 |
+| **LSP bonding restoration** | Certified in bonding/grounding per [ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/README.md) |
 | **LED module replacement** | Authorized maintenance personnel |
 | **NDT inspection** | Level II or III NDT certification (as applicable) |
 | **Airworthiness release** | Licensed inspector (A&P, EASA Part-66, etc.) |
@@ -219,7 +219,7 @@ Photometric instruments and test equipment must be:
 
 ### 9.1 Approved Suppliers
 
-Only approved suppliers listed in `DATA_33-11-01_Approved-Lens-And-LED-Suppliers.csv` may be used.
+Only approved suppliers listed in [`DATA_33-11-01_Approved-Lens-And-LED-Suppliers.csv`](../11-MATERIALS_M_AND_P_TRACEABILITY/DATA_33-11-01_Approved-Lens-And-LED-Suppliers.csv) may be used.
 
 ### 9.2 Certificate of Conformance (CoC)
 

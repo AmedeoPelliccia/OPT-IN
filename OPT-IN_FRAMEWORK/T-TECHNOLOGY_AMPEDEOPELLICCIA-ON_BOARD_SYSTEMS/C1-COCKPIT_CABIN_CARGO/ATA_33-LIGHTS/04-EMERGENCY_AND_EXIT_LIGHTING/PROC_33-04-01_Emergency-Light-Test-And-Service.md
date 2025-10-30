@@ -13,7 +13,7 @@
 Testing and servicing of emergency floor path lights and battery-powered emergency systems.
 
 ## 2. Regulatory Requirements
-- **FAA 14 CFR 25.812:** Emergency lighting
+- **[FAA 14 CFR 25.812](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/section-25.812):** Emergency lighting
 - **Minimum Illuminance:** 0.05 lux at floor level
 - **Duration:** 10 minutes minimum after loss of normal power
 - **Test Interval:** Per aircraft maintenance schedule (typically annual or per flight hours)

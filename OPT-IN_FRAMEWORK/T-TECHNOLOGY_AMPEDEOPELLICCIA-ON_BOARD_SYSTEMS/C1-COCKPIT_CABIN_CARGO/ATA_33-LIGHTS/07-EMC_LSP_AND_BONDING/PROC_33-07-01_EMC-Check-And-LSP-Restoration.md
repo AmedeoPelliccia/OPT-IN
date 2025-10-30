@@ -13,8 +13,8 @@
 Procedures for EMC verification and Lightning Strike Protection (LSP) bonding restoration for lighting assemblies.
 
 ## 2. Regulatory Basis
-- **RTCA DO-160G Section 22:** Lightning Induced Transient Susceptibility
-- **ATA-20:** Standard Practices - Bonding and Grounding
+- **[RTCA DO-160G Section 22](https://www.rtca.org/content/standards-guidance-materials):** Lightning Induced Transient Susceptibility
+- **[ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/README.md):** Standard Practices - Bonding and Grounding
 
 ## 3. LSP Bonding Requirements
 
@@ -52,7 +52,7 @@ If resistance >2.5 mΩ:
 1. Inspect bonding jumper for corrosion, damage
 2. Check torque on fasteners
 3. Clean bonding surfaces
-4. Re-torque bonding fasteners per ATA-20
+4. Re-torque bonding fasteners per [ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/README.md)
 5. Re-test
 6. Replace bonding jumper if still failing
 
@@ -70,12 +70,12 @@ If resistance >2.5 mΩ:
 - **Material:** Copper braid or tinned copper braid
 - **AWG Size:** Per AMM (typically 10-14 AWG)
 - **Length:** Shortest practical path
-- **Termination:** Ring terminals, crimped per ATA-20
+- **Termination:** Ring terminals, crimped per [ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/README.md)
 
 ## 7. EMC Verification
 
 ### 7.1 DO-160 Compliance
-All lighting equipment must have DO-160G qualification:
+All lighting equipment must have [DO-160G](https://www.rtca.org/content/standards-guidance-materials) qualification:
 - **Section 22:** Lightning protection
 - Test evidence with SHA-256 hash
 - Supplier test reports retained
