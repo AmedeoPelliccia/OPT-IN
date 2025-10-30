@@ -83,9 +83,8 @@ The Optin Framework represents the transition from **comprehensive technical doc
 - [¹⁵](https://riunet.upv.es/bitstream/handle/10251/198544/Gabaldon%20-%20Analisis%20de%20frameworks%20y%20soluciones%20para%20la%20IoT.pdf?sequence=1) Analysis of IoT Frameworks and Solutions
 - [¹⁶](https://github.com/paparazzi/paparazzi) Paparazzi UAV Open Source Project
 - [¹⁷](https://www.sciencedirect.com/science/article/pii/S0376042121000191) ScienceDirect Article
-- [¹⁸](https://www.idealista.com/data/) Idealista Data Portal
-- [¹⁹](https://arc.aiaa.org/doi/10.2514/1.C036952) AIAA Journal Article
-- [²⁰](https://support.google.com/admanager/answer/9461778) Google Ad Manager Documentation
+- [¹⁸](https://arc.aiaa.org/doi/10.2514/1.C036952) AIAA Journal Article
+- [¹⁹](https://support.google.com/admanager/answer/9461778) Google Ad Manager Documentation
 
 ---
 
