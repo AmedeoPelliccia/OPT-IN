@@ -24,10 +24,6 @@ Includes flightcrew displays, indicators, placards, annunciators, audio alerts, 
 ### 📚 Related ATA Chapters
 - [ATA 11 — Placards and Markings](../ATA_11-PLACARDS_AND_MARKINGS/)
 - [ATA 25 — Equipment / Furnishings](../ATA_25-EQUIPMENT_FURNISHINGS/)
-- [ATA 33 — Lights](../ATA_33-LIGHTS/)
-- [ATA 35 — Oxygen](../ATA_35-OXYGEN/)
-- [ATA 44 — Cabin Systems (incl. IFE/IFX)](../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/)
-
 ### 🌐 External Standards & Regulations
 - [FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) — Airworthiness Standards: Transport Category Airplanes
 - [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) — Certification Specifications for Large Aeroplanes
