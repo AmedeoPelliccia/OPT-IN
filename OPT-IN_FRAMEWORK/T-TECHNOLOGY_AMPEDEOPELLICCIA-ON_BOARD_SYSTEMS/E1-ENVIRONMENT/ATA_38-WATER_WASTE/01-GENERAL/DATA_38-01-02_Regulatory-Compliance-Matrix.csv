@@ -1,0 +1,7 @@
+Regulation,Authority,Reference,Requirement_Summary,Compliance_Method,Status,Notes
+FAA_AC_25-19,FAA,AC 25-19,"Potable water quality and testing requirements","Lab testing per approved methods",Compliant,"Regular bacteriological testing"
+NSF_61,NSF,NSF/ANSI 61,"Materials in contact with potable water","Material certification and CoC",Compliant,"All seals and fittings NSF certified"
+EASA_CS-25,EASA,CS-25.1439,"Waste water systems - containment and disposal","Design and testing per CS-25",Compliant,"Tank pressure testing and leak checks"
+WHO_Guidelines,WHO,WHO Drinking Water,"Microbiological and chemical water quality","Sampling and analysis per WHO",Compliant,"Zero tolerance for coliforms"
+EPA_9223,EPA,Method 9223,"Coliform testing method","Accredited lab testing",Compliant,"Monthly bacteriological sampling"
+Local_Waste_Regs,Local,Varies,"Hazardous waste handling and disposal","Certified disposal contractor",Compliant,"Waste manifest and certificates"

@@ -1,0 +1,3 @@
+Inspection_ID,Date,MSN,Tank_ID,Part_Number,Serial_Number,Inspector,Visual_Condition,Leak_Test_Result,Pressure_Test_bar,Mounting_Condition,Next_Inspection_Due,Disposition,Notes,Photo_Hash
+INS-WT-001,2025-10-20,AMPEL360-001,WT-001,WT-PN-100,SN-WT-12345,Jane Engineer,Good,PASS,0.75,Secure,2026-10-20,Serviceable,"No issues found",placeholder_sha256_hash_here
+INS-WT-002,2025-10-20,AMPEL360-001,WT-002,WT-PN-200,SN-WT-67890,Jane Engineer,Good,PASS,0.75,Secure,2026-10-20,Serviceable,"No issues found",placeholder_sha256_hash_here

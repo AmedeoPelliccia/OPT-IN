@@ -1,0 +1,10 @@
+Test_ID,Component_Type,Test_Type,Test_Condition,Acceptance_Criteria,Failure_Criteria,Reference_Standard,Notes
+T-001,Water_Tank,Pressure,"Hydro test at 1.5x service pressure","No leaks, no permanent deformation","Any leak or rupture",CS-25.1439,"5-year interval"
+T-002,Waste_Tank,Pressure,"Hydro test at 1.5x service pressure","No leaks, no permanent deformation","Any leak or rupture",CS-25.1439,"5-year interval"
+T-003,Water_Pump,Flow,"Flow test at rated conditions","Flow within ±5% of spec","Flow <90% or >110% of spec",AMM,"Bench test before installation"
+T-004,Drain_Valve,Leak,"Leak test at service pressure","Zero leakage","Any detectable leak",AMM,"After installation"
+T-005,Level_Sensor,Calibration,"Multi-point calibration check","Accuracy within ±1%","Accuracy >±2%",PROC_38-05-01,"Annual calibration"
+T-006,Water_Sample,Bacteriological,"Lab analysis for coliforms, E. coli","Zero CFU/100mL","Any positive result",EPA 9223,"Monthly sampling"
+T-007,Water_Sample,Chemical,"pH, chlorine, turbidity","Within limits per DATA_38-02-03","Exceeds any limit",WHO Guidelines,"Weekly sampling"
+T-008,Waste_Line,Pressure,"Leak test at 2x service pressure","No leaks","Any detectable leak",AMM,"After maintenance"
+T-009,System,Functional,"End-to-end operational test","All functions operational","Any malfunction",AMM,"After major work"

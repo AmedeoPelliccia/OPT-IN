@@ -1,0 +1,20 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "schema_version":"1.0",
+  "title":"Repair Record - Water/Waste",
+  "type":"object",
+  "required":["id","msn","component_id","date","disposition","approvals"],
+  "properties":{
+    "id":{"type":"string"},
+    "msn":{"type":"string"},
+    "component_id":{"type":"string"},
+    "location_station":{"type":"string"},
+    "date":{"type":"string","format":"date"},
+    "damage_description":{"type":"string"},
+    "materials":{"type":"array","items":{"type":"object","properties":{"part_number":{"type":"string"},"lot":{"type":"string"}}}},
+    "ndt_reports":{"type":"array","items":{"type":"object","properties":{"method":{"type":"string"},"file_hash":{"type":"string"}}}},
+    "pressure_test":{"type":"object","properties":{"test_pressure_bar":{"type":"number"},"leak_rate_mbar_l_s":{"type":"number"},"result":{"type":"string"}}},
+    "disposition":{"type":"string","enum":["Negligible","Repairable","Replace","Engineering Disposition"]},
+    "approvals":{"type":"array","items":{"type":"object","required":["authority","status","date"],"properties":{"authority":{"type":"string"},"status":{"type":"string"},"date":{"type":"string","format":"date"}}}}
+  }
+}

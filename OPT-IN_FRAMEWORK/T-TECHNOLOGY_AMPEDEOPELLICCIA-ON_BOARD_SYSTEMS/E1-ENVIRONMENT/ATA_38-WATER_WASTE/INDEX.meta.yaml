@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "ATA_38_INDEX"
+chapter: "ATA 38 - WATER / WASTE"
+governance:
+  owner_role: "Environmental Systems Engineering"
+  review_board: ["Airworthiness","Health & Safety","Materials & Process","Operations"]
+effectivity:
+  msn: "ALL"
+traceability:
+  crossrefs: ["ATA 21","ATA 36","WHO Potable Water Guidelines"]
+integrity:
+  checksum_algorithm: "sha256"

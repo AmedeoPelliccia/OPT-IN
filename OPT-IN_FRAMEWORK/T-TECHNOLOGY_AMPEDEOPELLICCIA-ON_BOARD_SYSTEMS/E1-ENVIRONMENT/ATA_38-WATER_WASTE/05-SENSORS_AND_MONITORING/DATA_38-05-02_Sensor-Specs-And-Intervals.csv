@@ -1,0 +1,8 @@
+Sensor_Type,Part_Number,Measurement_Range,Accuracy,Calibration_Interval_months,Next_Due_Date,Supplier,Notes
+Level_Sensor_Capacitive,LS-CAP-100,"0-1500L",±1%,12,2026-10-30,"SensorCorp","Potable water tank"
+Level_Sensor_Ultrasonic,LS-US-200,"0-1000L",±0.5%,12,2026-10-30,"SensorCorp","Waste tank non-contact"
+Pressure_Sensor,PS-100,"0-5 bar",±0.25%,12,2026-10-30,"PressureTech","Water supply pressure"
+Temperature_Sensor,TS-100,"-40 to +85°C",±0.5°C,12,2026-10-30,"TempSense","Water temperature monitoring"
+Conductivity_Sensor,CS-100,"0-2000 µS/cm",±2%,6,2026-04-30,"AquaSense","Water quality monitoring"
+Turbidity_Sensor,TU-100,"0-1000 NTU",±5%,6,2026-04-30,"AquaSense","Potable water clarity"
+Flow_Sensor,FS-100,"0-50 L/min",±2%,12,2026-10-30,"FlowMeter Inc","Water flow rate"

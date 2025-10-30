@@ -1,0 +1,58 @@
+{
+  "id": "BACT-TEST-001",
+  "msn": "AMPEL360-001",
+  "test_date": "2025-10-15",
+  "sample_location": "Forward galley water tap",
+  "sample_id": "WS-2025-10-15-001",
+  "lab": {
+    "name": "Certified Water Testing Laboratory",
+    "accreditation": "ISO 17025",
+    "certificate_number": "LAB-CERT-12345"
+  },
+  "chain_of_custody": {
+    "collected_by": "John Smith",
+    "collection_time": "2025-10-15T09:30:00Z",
+    "received_by_lab": "Jane Doe",
+    "receipt_time": "2025-10-15T14:00:00Z"
+  },
+  "test_methods": {
+    "total_coliforms": "EPA 9223 / EN ISO 9308-1",
+    "e_coli": "EPA 9223B / EN ISO 9308-1",
+    "hpc": "EN ISO 6222"
+  },
+  "results": {
+    "total_coliforms": {
+      "value": 0,
+      "unit": "CFU/100mL",
+      "limit": 0,
+      "result": "PASS"
+    },
+    "e_coli": {
+      "value": 0,
+      "unit": "CFU/100mL",
+      "limit": 0,
+      "result": "PASS"
+    },
+    "hpc": {
+      "value": 45,
+      "unit": "CFU/mL",
+      "limit": 500,
+      "result": "PASS"
+    }
+  },
+  "overall_result": "PASS",
+  "lab_report": {
+    "file_name": "lab_report_WS-2025-10-15-001.pdf",
+    "file_hash": {
+      "algorithm": "sha256",
+      "value": "placeholder_insert_actual_hash_here"
+    }
+  },
+  "approvals": [
+    {
+      "authority": "Health & Safety",
+      "status": "Approved",
+      "date": "2025-10-16"
+    }
+  ]
+}

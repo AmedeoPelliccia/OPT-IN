@@ -1,0 +1,7 @@
+Analyte,Unit,Max_Allowable,Typical_Target,Method,Sampling_Interval,Notes
+Total_Coliforms,CFU/100mL,0,0,"EPA 9223/EN ISO 9308-1",monthly,"Zero tolerance for potable water"
+E_coli,CFU/100mL,0,0,"EPA 9223B/EN ISO 9308-1",monthly,"Immediate action and retest"
+HPC,CFU/mL,500,100,"EN ISO 6222",monthly,"Heterotrophic plate count threshold"
+pH,pH_units,6.5-8.5,7.2,"pH electrode",weekly,"Monitor corrosion and taste"
+Residual_Chlorine,mg/L,0.2-2.0,0.5,"DPD method",weekly,"Disinfectant residual; verify post-flush"
+Turbidity,NTU,1.0,0.2,"Nephelometer",weekly,"Affects microbial growth and filtration"

@@ -1,0 +1,17 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "schema_version":"1.0",
+  "title":"Waste Tank",
+  "type":"object",
+  "required":["id","part_number","capacity_l","material","service_pressure_bar"],
+  "properties":{
+    "id":{"type":"string"},
+    "part_number":{"type":"string"},
+    "capacity_l":{"type":"number"},
+    "material":{"type":"string"},
+    "service_pressure_bar":{"type":"number"},
+    "hydro_test_date":{"type":"string","format":"date"},
+    "tank_mounts":{"type":"string"},
+    "inspection_interval_months":{"type":"number"}
+  }
+}
