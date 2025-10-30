@@ -36,7 +36,7 @@ Procedures for EMC verification and Lightning Strike Protection (LSP) bonding re
 ## 5. LSP Bonding Test Procedure
 
 ### 5.1 Pre-Test
-1. Verify test equipment calibration current
+1. Verify test equipment calibration status
 2. Clean bonding surfaces (remove paint, corrosion)
 3. Identify bonding points per AMM
 
