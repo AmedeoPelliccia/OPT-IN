@@ -1,0 +1,419 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata44/ife-ifx.schema.json",
+  "title": "IFE/IFX System Specification",
+  "description": "Schema for In-Flight Entertainment (IFE) and In-Flight Connectivity (IFX) systems with DO-178C/DO-254 compliance fields",
+  "type": "object",
+  "properties": {
+    "systemId": {
+      "type": "string",
+      "description": "Unique IFE/IFX system identifier",
+      "pattern": "^IFE-[A-Z0-9]{3,4}-[0-9]{4}$"
+    },
+    "systemType": {
+      "type": "string",
+      "enum": [
+        "Seat_Back_IFE",
+        "Overhead_IFE",
+        "Portable_IFE",
+        "Wireless_IFE",
+        "Cabin_Management_System",
+        "Passenger_Address_System",
+        "Cabin_Crew_Communication",
+        "Connectivity_Router",
+        "Antenna_System",
+        "Server_Unit",
+        "Media_Storage_Unit"
+      ],
+      "description": "Type of IFE/IFX system"
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "System or LRU part number"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "System or LRU serial number"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "System manufacturer"
+    },
+    "softwareBaseline": {
+      "type": "object",
+      "description": "Software baseline and DO-178C compliance",
+      "properties": {
+        "softwareVersion": {
+          "type": "string",
+          "description": "Software version identifier"
+        },
+        "softwarePartNumber": {
+          "type": "string",
+          "description": "Software part number"
+        },
+        "do178cDAL": {
+          "type": "string",
+          "enum": ["Level_A", "Level_B", "Level_C", "Level_D", "Level_E", "Not_Applicable"],
+          "description": "DO-178C Design Assurance Level"
+        },
+        "certificationBasis": {
+          "type": "string",
+          "description": "Certification basis (e.g., 'DO-178C', 'DO-178B', 'COTS acceptance')"
+        },
+        "certificationEvidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "documentType": {
+                "type": "string",
+                "enum": [
+                  "Software_Requirements_Document",
+                  "Software_Design_Document",
+                  "Software_Test_Plan",
+                  "Software_Test_Results",
+                  "Software_Configuration_Index",
+                  "Software_Accomplishment_Summary",
+                  "Software_Verification_Results"
+                ]
+              },
+              "documentId": {
+                "type": "string",
+                "description": "Document identifier"
+              },
+              "documentHash": {
+                "type": "string",
+                "description": "SHA-256 hash of document",
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            },
+            "required": ["documentType", "documentId"]
+          },
+          "description": "DO-178C certification evidence documents"
+        },
+        "softwareLoadProcedure": {
+          "type": "string",
+          "description": "Reference to software load procedure document"
+        },
+        "rollbackProcedure": {
+          "type": "string",
+          "description": "Reference to software rollback procedure"
+        },
+        "releaseDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Software release date"
+        }
+      },
+      "required": ["softwareVersion", "do178cDAL", "certificationBasis"]
+    },
+    "hardwareBaseline": {
+      "type": "object",
+      "description": "Hardware baseline and DO-254 compliance",
+      "properties": {
+        "hardwareVersion": {
+          "type": "string",
+          "description": "Hardware version identifier"
+        },
+        "hardwarePartNumber": {
+          "type": "string",
+          "description": "Hardware part number"
+        },
+        "do254AssuranceLevel": {
+          "type": "string",
+          "enum": ["Level_A", "Level_B", "Level_C", "Level_D", "Not_Applicable"],
+          "description": "DO-254 Design Assurance Level (if applicable)"
+        },
+        "certificationBasis": {
+          "type": "string",
+          "description": "Certification basis (e.g., 'DO-254', 'DO-160 only', 'COTS acceptance')"
+        },
+        "qualificationTestEvidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "testType": {
+                "type": "string",
+                "enum": [
+                  "Environmental_DO-160",
+                  "EMI_EMC_DO-160",
+                  "Power_Quality_DO-160",
+                  "Hardware_Qualification",
+                  "Thermal_Testing",
+                  "Vibration_Testing",
+                  "Shock_Testing",
+                  "Altitude_Testing"
+                ]
+              },
+              "testReportId": {
+                "type": "string",
+                "description": "Test report identifier"
+              },
+              "testReportHash": {
+                "type": "string",
+                "description": "SHA-256 hash of test report",
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            },
+            "required": ["testType", "testReportId"]
+          },
+          "description": "Hardware qualification test evidence"
+        }
+      },
+      "required": ["hardwareVersion", "do254AssuranceLevel", "certificationBasis"]
+    },
+    "cyberSecurityNotes": {
+      "type": "object",
+      "description": "Cyber security notes and compliance per DO-326A / ED-202A",
+      "properties": {
+        "securityAssessment": {
+          "type": "string",
+          "enum": ["Completed", "In_Progress", "Not_Required"],
+          "description": "Security assessment status per DO-326A"
+        },
+        "securityAssessmentReport": {
+          "type": "string",
+          "description": "Reference to security assessment report"
+        },
+        "networkIsolation": {
+          "type": "string",
+          "enum": ["Full_Isolation", "Logical_Isolation", "Physical_Gateway", "No_Isolation"],
+          "description": "Network isolation from aircraft critical systems"
+        },
+        "isolationVerification": {
+          "type": "string",
+          "description": "Reference to isolation verification test report"
+        },
+        "dataFlowAnalysis": {
+          "type": "string",
+          "description": "Reference to data flow analysis document"
+        },
+        "threatMitigations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of identified threats and mitigations"
+        }
+      },
+      "required": ["securityAssessment", "networkIsolation"]
+    },
+    "hilTestPlan": {
+      "type": "object",
+      "description": "Hardware-in-the-Loop (HIL) functional test plan",
+      "properties": {
+        "testPlanReference": {
+          "type": "string",
+          "description": "Reference to HIL test plan document"
+        },
+        "testCases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "testCaseId": {
+                "type": "string",
+                "description": "Test case identifier"
+              },
+              "testDescription": {
+                "type": "string",
+                "description": "Brief test description"
+              },
+              "acceptanceCriteria": {
+                "type": "string",
+                "description": "Acceptance criteria for test case"
+              },
+              "testStatus": {
+                "type": "string",
+                "enum": ["Pass", "Fail", "Not_Tested", "In_Progress"],
+                "description": "Test case status"
+              }
+            },
+            "required": ["testCaseId", "testDescription", "acceptanceCriteria"]
+          }
+        },
+        "testEnvironment": {
+          "type": "string",
+          "description": "Description of HIL test environment"
+        },
+        "testResultsReference": {
+          "type": "string",
+          "description": "Reference to HIL test results document"
+        }
+      },
+      "required": ["testPlanReference"]
+    },
+    "cotsAcceptance": {
+      "type": "object",
+      "description": "COTS (Commercial-Off-The-Shelf) acceptance documentation",
+      "properties": {
+        "cotsApplicable": {
+          "type": "boolean",
+          "description": "Whether component includes COTS elements"
+        },
+        "cotsAcceptancePlan": {
+          "type": "string",
+          "description": "Reference to COTS acceptance plan"
+        },
+        "cotsRationale": {
+          "type": "string",
+          "description": "Rationale for COTS acceptance"
+        },
+        "cotsQualificationEvidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of COTS qualification evidence documents"
+        }
+      },
+      "required": ["cotsApplicable"]
+    },
+    "installationLocation": {
+      "type": "object",
+      "description": "Installation location in cabin",
+      "properties": {
+        "cabinZone": {
+          "type": "string",
+          "description": "Cabin zone where IFE/IFX is installed"
+        },
+        "rackId": {
+          "type": "string",
+          "description": "Equipment rack identifier (if applicable)"
+        },
+        "seatRow": {
+          "type": "integer",
+          "description": "Seat row number (for seat-back IFE)"
+        },
+        "seatPosition": {
+          "type": "string",
+          "description": "Seat position (e.g., 'A', 'B', 'C')"
+        }
+      }
+    },
+    "wiringAndConnectivity": {
+      "type": "object",
+      "description": "Wiring and connectivity specifications",
+      "properties": {
+        "cableSpecification": {
+          "type": "string",
+          "description": "Cable specification (type, gauge, shielding)"
+        },
+        "connectorType": {
+          "type": "string",
+          "description": "Connector type and part number"
+        },
+        "separationFromCriticalSystems": {
+          "type": "number",
+          "description": "Minimum separation distance from aircraft critical systems (inches or cm)"
+        },
+        "emcCompliance": {
+          "type": "string",
+          "description": "EMC compliance reference (e.g., 'DO-160 Section 21')"
+        }
+      }
+    },
+    "maintenanceRequirements": {
+      "type": "object",
+      "description": "Maintenance and inspection requirements",
+      "properties": {
+        "softwareIntegrityCheck": {
+          "type": "object",
+          "properties": {
+            "checkInterval": {
+              "type": "number",
+              "description": "Software integrity check interval (flight hours)"
+            },
+            "checkProcedure": {
+              "type": "string",
+              "description": "Reference to software integrity check procedure"
+            }
+          }
+        },
+        "functionalTestInterval": {
+          "type": "object",
+          "properties": {
+            "flightHours": {
+              "type": "number",
+              "description": "Functional test interval in flight hours"
+            },
+            "calendarMonths": {
+              "type": "number",
+              "description": "Functional test interval in calendar months"
+            }
+          }
+        },
+        "hardwareInspectionInterval": {
+          "type": "object",
+          "properties": {
+            "flightHours": {
+              "type": "number",
+              "description": "Hardware inspection interval in flight hours"
+            },
+            "calendarMonths": {
+              "type": "number",
+              "description": "Hardware inspection interval in calendar months"
+            }
+          }
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "System effectivity and applicability",
+      "properties": {
+        "msnRange": {
+          "type": "string",
+          "description": "MSN range (e.g., '001-050', 'ALL')"
+        },
+        "cabinConfiguration": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Applicable cabin configurations"
+        }
+      },
+      "required": ["msnRange"]
+    },
+    "traceability": {
+      "type": "object",
+      "description": "System traceability",
+      "properties": {
+        "dppEntryId": {
+          "type": "string",
+          "description": "Digital Product Passport entry identifier (ATA-95)"
+        },
+        "installationDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Installation date"
+        },
+        "installationWorkOrder": {
+          "type": "string",
+          "description": "Installation work order number"
+        },
+        "approvalReferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Regulatory approval references (e.g., TSO, STC)"
+        }
+      },
+      "required": ["dppEntryId"]
+    }
+  },
+  "required": [
+    "systemId",
+    "systemType",
+    "partNumber",
+    "softwareBaseline",
+    "hardwareBaseline",
+    "cyberSecurityNotes",
+    "hilTestPlan",
+    "effectivity",
+    "traceability"
+  ]
+}

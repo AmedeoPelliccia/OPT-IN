@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata44/damage-classification.schema.json",
+  "title": "Cabin System Damage Classification",
+  "description": "Schema for classifying and categorizing damage to cabin system structures and components",
+  "type": "object",
+  "properties": {
+    "damageRecordId": {
+      "type": "string",
+      "description": "Unique damage record identifier",
+      "pattern": "^DMG-44-[0-9]{4}-[0-9]{6}$"
+    },
+    "discoveryDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date damage was discovered"
+    },
+    "component": {
+      "type": "string",
+      "enum": [
+        "Passenger_Seat",
+        "Crew_Seat",
+        "Galley",
+        "Lavatory",
+        "Monument",
+        "Overhead_Bin",
+        "Partition",
+        "Sidewall_Panel",
+        "Ceiling_Panel",
+        "Floor_Panel",
+        "IFE_Monitor",
+        "IFE_Control_Unit",
+        "Oxygen_Module",
+        "Fire_Detector",
+        "Fire_Suppression_Bottle",
+        "Wiring_Harness",
+        "Door_Trim",
+        "Emergency_Equipment"
+      ],
+      "description": "Component with damage"
+    },
+    "damageType": {
+      "type": "string",
+      "enum": [
+        "Impact",
+        "Wear",
+        "Tear",
+        "Burn_Mark",
+        "Stain",
+        "Corrosion",
+        "Crack",
+        "Delamination",
+        "Disbond",
+        "Loose_Fastener",
+        "Foreign_Object_Damage",
+        "Manufacturing_Defect",
+        "Electrical_Damage",
+        "Water_Damage",
+        "Other"
+      ],
+      "description": "Type of damage"
+    },
+    "severityClassification": {
+      "type": "string",
+      "enum": ["Minor", "Moderate", "Major", "Critical"],
+      "description": "Damage severity classification"
+    },
+    "cabinZone": {
+      "type": "string",
+      "enum": [
+        "Forward_Cabin",
+        "Mid_Cabin",
+        "Aft_Cabin",
+        "Galley_Forward",
+        "Galley_Aft",
+        "Lavatory_Forward",
+        "Lavatory_Mid",
+        "Lavatory_Aft",
+        "Entry_Door_Area",
+        "Emergency_Exit_Area",
+        "Overhead_Storage",
+        "Crew_Rest_Area"
+      ],
+      "description": "Cabin zone where damage is located"
+    },
+    "location": {
+      "type": "object",
+      "description": "Damage location",
+      "properties": {
+        "fuselageStation": {
+          "type": "number",
+          "description": "Fuselage station (FS)"
+        },
+        "waterLine": {
+          "type": "number",
+          "description": "Water line (WL)"
+        },
+        "buttLine": {
+          "type": "number",
+          "description": "Butt line (BL)"
+        },
+        "seatRow": {
+          "type": "integer",
+          "description": "Seat row number (if applicable)"
+        },
+        "seatPosition": {
+          "type": "string",
+          "description": "Seat position (if applicable)"
+        },
+        "zoneIdentifier": {
+          "type": "string",
+          "description": "Aircraft zone identifier"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Damage dimensions",
+      "properties": {
+        "length": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Length of damage"
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Width of damage"
+        },
+        "depth": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Depth of damage"
+        },
+        "area": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Area of damage"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["mm", "cm", "in"],
+          "description": "Unit of measurement"
+        }
+      },
+      "required": ["unit"]
+    },
+    "safetyAssessment": {
+      "type": "object",
+      "description": "Safety assessment of damage",
+      "properties": {
+        "affectsStructuralIntegrity": {
+          "type": "boolean",
+          "description": "Whether damage affects structural integrity (e.g., seat attachment)"
+        },
+        "affectsEmergencyEquipment": {
+          "type": "boolean",
+          "description": "Whether damage affects emergency equipment (oxygen, fire suppression)"
+        },
+        "affectsFlammabilityCompliance": {
+          "type": "boolean",
+          "description": "Whether damage affects flammability compliance per 25.853"
+        },
+        "affectsIFEIFXOperation": {
+          "type": "boolean",
+          "description": "Whether damage affects IFE/IFX operation"
+        },
+        "passengersAtRisk": {
+          "type": "boolean",
+          "description": "Whether passengers are at risk"
+        },
+        "immediateAction": {
+          "type": "string",
+          "enum": ["None", "Monitor", "Defer_To_Next_Maintenance", "Repair_Within_Days", "Repair_Immediately", "Seat_Out_Of_Service"],
+          "description": "Required immediate action"
+        }
+      },
+      "required": ["affectsStructuralIntegrity", "affectsEmergencyEquipment", "immediateAction"]
+    },
+    "compositeSpecificData": {
+      "type": "object",
+      "description": "Additional data for composite damage (panels, monuments)",
+      "properties": {
+        "delaminationType": {
+          "type": "string",
+          "enum": ["Interply", "Intraply", "Skin_Core"],
+          "description": "Type of delamination"
+        },
+        "affectedPlies": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "List of affected ply numbers"
+        },
+        "moistureIngress": {
+          "type": "boolean",
+          "description": "Whether moisture ingress is detected"
+        }
+      }
+    },
+    "upholsteryDamageData": {
+      "type": "object",
+      "description": "Additional data for upholstery damage",
+      "properties": {
+        "fabricType": {
+          "type": "string",
+          "description": "Type of fabric damaged"
+        },
+        "tearLength": {
+          "type": "number",
+          "description": "Length of tear (inches or cm)"
+        },
+        "replacementRequired": {
+          "type": "boolean",
+          "description": "Whether full replacement is required vs. repair"
+        }
+      }
+    },
+    "electricalDamageData": {
+      "type": "object",
+      "description": "Additional data for electrical/IFE damage",
+      "properties": {
+        "componentAffected": {
+          "type": "string",
+          "description": "Electrical component affected"
+        },
+        "wireHarnessDamage": {
+          "type": "boolean",
+          "description": "Whether wire harness is damaged"
+        },
+        "shortCircuitRisk": {
+          "type": "boolean",
+          "description": "Whether there is risk of short circuit"
+        }
+      }
+    },
+    "detectionMethod": {
+      "type": "string",
+      "enum": [
+        "Visual",
+        "Routine_Inspection",
+        "Special_Inspection",
+        "NDT",
+        "Passenger_Report",
+        "Crew_Report",
+        "IFE_System_Alert",
+        "Incident_Investigation"
+      ],
+      "description": "How damage was detected"
+    },
+    "photoDocumentation": {
+      "type": "array",
+      "description": "Photo documentation of damage",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "description": "Photo file name"
+          },
+          "fileHash": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$",
+            "description": "SHA-256 hash of photo file"
+          },
+          "captureDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date photo was captured"
+          }
+        },
+        "required": ["fileName", "fileHash"]
+      }
+    },
+    "dispositionRequired": {
+      "type": "boolean",
+      "description": "Whether engineering disposition is required"
+    },
+    "dispositionNumber": {
+      "type": "string",
+      "description": "Engineering disposition number if applicable"
+    },
+    "passengerImpact": {
+      "type": "object",
+      "description": "Impact on passengers",
+      "properties": {
+        "seatsOutOfService": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of seats out of service due to damage"
+        },
+        "amenitiesAffected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of affected amenities (e.g., IFE, power outlets, reading lights)"
+        }
+      }
+    }
+  },
+  "required": [
+    "damageRecordId",
+    "discoveryDate",
+    "component",
+    "damageType",
+    "severityClassification",
+    "cabinZone",
+    "safetyAssessment"
+  ]
+}

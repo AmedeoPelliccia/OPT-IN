@@ -1,0 +1,138 @@
+schema_version: "1.1"
+id: "ATA_44_INDEX_rev1.0.0_20251030"
+chapter: "ATA 44 - CABIN SYSTEMS (INCLUDING IFE / IFX)"
+governance:
+  owner_role: "Cabin Systems Engineering"
+  review_board: ["Airworthiness Engineering", "Safety Engineering", "Materials & Processes", "IFE/IFX Engineering", "Systems Integration"]
+  regulatory_basis: 
+    - "FAA 14 CFR Part 25.853"  # Compartment interiors (flammability)
+    - "FAA 14 CFR Part 25.855"  # Cargo and baggage compartments
+    - "FAA 14 CFR Part 25.856"  # Thermal/acoustic insulation materials
+    - "FAA 14 CFR Part 25.857"  # Cargo compartment classification
+    - "FAA 14 CFR Part 25.1439" # Protective breathing equipment
+    - "FAA 14 CFR Part 25.1447" # Equipment standards for oxygen dispensing units
+    - "FAA 14 CFR Part 25.1450" # Chemical oxygen generators
+    - "EASA CS-25"              # European equivalent regulations
+    - "DO-160"                  # Environmental Conditions and Test Procedures for Airborne Equipment
+    - "DO-178C"                 # Software Considerations in Airborne Systems (IFE/IFX)
+    - "DO-254"                  # Design Assurance for Airborne Electronic Hardware (IFE/IFX)
+    - "DO-326A / ED-202A"       # Airworthiness Security Process Specification (cyber)
+    - "ARP4754A"                # Guidelines for Development of Civil Aircraft and Systems
+    - "ARP4761"                 # Safety Assessment Process
+    - "ARINC 628"               # Aviation data communication standards (IFE/IFX)
+traceability:
+  crossrefs:
+    - "ATA 20"  # Standard Practices - Airframe (torque, fasteners, bonding, sealing)
+    - "ATA 21"  # Air Conditioning (environmental control systems interface)
+    - "ATA 25"  # Equipment/Furnishings (cabin interior design and installation)
+    - "ATA 33"  # Lights (cabin lighting systems)
+    - "ATA 35"  # Oxygen (crew oxygen system interface)
+    - "ATA 46"  # Information Systems (IFE/IFX data integration)
+    - "ATA 51"  # Standard Practices and Structures - General (composite repair methods, FEA)
+    - "ATA 53"  # Fuselage (attachment interfaces and load transfer)
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "CABIN-SPEC-44-001: Cabin Systems Design Specification"
+    - "IFE-SPEC-44-001: IFE/IFX System Architecture and Requirements"
+    - "MAINT-PLAN-44-001: Cabin Systems Maintenance Program"
+    - "CERT-PLAN-44-001: Cabin Systems Certification Test Plan"
+    - "FIRE-PLAN-44-001: Fire Protection and Flammability Compliance Plan"
+    - "OXYGEN-SPEC-44-001: Emergency Oxygen System Specification"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Oxygen system failure or depletion"
+    - "Fire detection system failure or false alarm"
+    - "Galley fire suppression failure"
+    - "Flammable material installation violating 25.853"
+    - "IFE/IFX software malfunction affecting passenger safety"
+    - "Seat attachment failure under crash loads"
+    - "Cabin decompression due to furnishing installation"
+    - "Toxic fume generation from non-compliant materials"
+    - "Emergency lighting or signage failure"
+    - "IFE/IFX cyber intrusion affecting aircraft systems"
+  airworthiness_limitation_items:
+    - "Passenger oxygen module replacement interval"
+    - "Fire detector sensitivity calibration"
+    - "Galley fire suppression agent replacement"
+    - "Seat attachment torque verification"
+    - "Emergency lighting functional test"
+    - "IFE/IFX software baseline integrity verification"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata44.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  cabin_variants:
+    - "Single-class economy"
+    - "Dual-class business/economy"
+    - "Premium cabin configuration"
+    - "High-density charter configuration"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, taxonomy, and regulatory compliance matrix"
+    - name: "02-CABIN_LAYOUT_AND_FURNISHINGS"
+      description: "Cabin layouts, zoning, seat removal/installation, refurbishment, seat load limits"
+    - name: "03-CABIN_ENVIRONMENTAL_AND_PRESSURIZATION"
+      description: "Cabin air distribution, ventilation, temperature control, HEPA specs, air quality"
+    - name: "04-EMERGENCY_OXYGEN_AND_LIFE-SUPPORT"
+      description: "Oxygen system inspection, PAX oxygen deployment tests, module specs, life limits"
+    - name: "05-FIRE_DETECTION_AND_SUPPRESSION"
+      description: "Cabin fire detection inspection, galley suppression service, flammability limits"
+    - name: "06-GALLEY_AND_SERVICE_SYSTEMS"
+      description: "Galley installation, sealing, electrical service, power/interface specs"
+    - name: "07-IFE_IFX_AND_CABIN_CONNECTIVITY"
+      description: "IFE/IFX system overview, SW load procedures, HIL functional tests, HW/SW baselines, cyber notes"
+    - name: "08-CABIN_CONTROLS_AND_INDICATIONS"
+      description: "Cabin control panels, indicators, annunciators, force limits"
+    - name: "09-WIRING_HARNESSES_AND_CONNECTIVITY"
+      description: "Cabin wiring inspection, EMC checks, IFE cabling, separation rules, cable specs"
+    - name: "10-NDT_AND_INSPECTION"
+      description: "General Visual Inspection (GVI), NDT for interior structures, inspection intervals"
+    - name: "11-QUALIFICATION_AND_TEST_PLANS"
+      description: "Cabin system qualification plan, test matrix, failure criteria"
+    - name: "12-MATERIALS_M_AND_P_TRACEABILITY"
+      description: "Interior material specs, CofC requirements, M&P traceability, storage procedures"
+    - name: "13-NONCONFORMANCE_AND-DEVIATION"
+      description: "Nonconformance handling, engineering disposition, NCR template"
+    - name: "14-LIGHTNING_STRIKE_PROTECTION_AND_BONDING"
+      description: "LSP restoration for cabin elements, materials, resistance limits"
+    - name: "15-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars"
+    - name: "16-DIAGRAMS_AND_REFERENCE_DATA"
+      description: "Cabin exploded views, IFE block/cabling diagrams, reference tables"
+    - name: "17-EXAMPLES_AND_RECORDS"
+      description: "Example repair records, IFE SW baseline records, pressure test logs"
+  schemas:
+    - name: "cabin-system.schema.json"
+      description: "Cabin system component specification schema (seating, furnishings, environmental)"
+    - name: "ife-ifx.schema.json"
+      description: "IFE/IFX system schema with DO-178C/DO-254 fields, SW/HW baselines, cyber security notes"
+    - name: "repair-record.schema.json"
+      description: "Repair record schema with cabin-specific fields (cabin zone, seat position, IFE component IDs, oxygen module IDs, fire zone, material flammability cert, NDT hashes, effectivity)"
+    - name: "damage-classification.schema.json"
+      description: "Damage classification schema for cabin system damage assessment"
+    - name: "inspection.schema.json"
+      description: "Inspection record schema with acceptance criteria"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "IFE/IFX Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Materials & Processes"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"
