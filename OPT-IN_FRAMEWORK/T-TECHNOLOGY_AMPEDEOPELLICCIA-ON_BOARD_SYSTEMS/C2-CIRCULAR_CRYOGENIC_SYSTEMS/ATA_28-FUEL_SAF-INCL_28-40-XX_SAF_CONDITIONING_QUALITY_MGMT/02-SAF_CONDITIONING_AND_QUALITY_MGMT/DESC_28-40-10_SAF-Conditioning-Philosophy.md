@@ -107,7 +107,6 @@ Verify material compatibility with specific SAF blend:
 
 ## Regulatory Compliance
 
-## Regulatory Compliance
 
 - [ASTM D7566](https://www.astm.org/d7566-24.html): SAF specifications
 - [ASTM D1655](https://www.astm.org/d1655-24.html): Aviation turbine fuels
