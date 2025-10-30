@@ -1,0 +1,3 @@
+Tank_ID,Part_Number,Capacity_L,Service_Pressure_bar,Vacuum_Jacket,Inspection_Interval_months,Hydro_Test_Interval_years,Notes
+WT-001,WT-PN-100,1200,0.5,false,12,5,"Forward galley waste tank"
+WT-002,WT-PN-200,800,0.5,false,12,5,"Aft lavatory waste tank"

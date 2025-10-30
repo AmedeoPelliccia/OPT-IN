@@ -1,0 +1,8 @@
+Material_Type,Part_Number,Description,NSF_Cert,Supplier,Lot_Traceability_Required,Shelf_Life_months,Storage_Conditions,Notes
+Seal_EPDM,SEAL-EPDM-01,"EPDM O-ring for potable water",NSF-61,"SealTech",Yes,60,"Cool, dry, no UV","Potable water compatible"
+Seal_Viton,SEAL-VIT-02,"Viton seal for waste system",NSF-51,"SealTech",Yes,60,"Cool, dry, no UV","Chemical resistant"
+Lubricant_Food_Grade,LUB-FG-01,"Food-grade silicone grease",NSF-H1,"LubeCo",Yes,36,"Cool, sealed container","For potable water parts"
+Adhesive_Structural,ADH-STR-01,"Structural adhesive epoxy",None,"AdhesiveCorp",Yes,12,"Cool, sealed, no moisture","Waste tank mounting"
+Gasket_Silicone,GASK-SIL-01,"Silicone gasket material",NSF-61,"GasketPro",Yes,48,"Cool, dry","Water-safe"
+Sealant_Tank,SEAL-TNK-01,"Tank sealant compound",NSF-61,"SealantInc",Yes,24,"Cool, sealed","Potable water tanks"
+Pipe_PEX,PIPE-PEX-100,"PEX tubing 1/2 inch",NSF-61,"PlumbSupply",Yes,Unlimited,"Protected from UV","Water distribution"

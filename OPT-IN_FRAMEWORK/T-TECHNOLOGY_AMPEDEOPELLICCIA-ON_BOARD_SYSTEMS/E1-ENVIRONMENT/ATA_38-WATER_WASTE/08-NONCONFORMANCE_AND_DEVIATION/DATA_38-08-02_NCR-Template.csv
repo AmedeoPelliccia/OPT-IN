@@ -1,0 +1,2 @@
+NCR_Number,Date,MSN,Component_ID,Part_Number,Serial_Number,Description,Classification,Disposition,Engineering_Approval,Quality_Approval,Airworthiness_Approval,Status,Notes
+NCR-38-001,YYYY-MM-DD,TBD,TBD,TBD,TBD,"Brief description of nonconformance","Critical|Major|Minor","Use As Is|Rework|Return|Scrap",Name/Date,Name/Date,Name/Date,"Open|Closed","Additional notes"
