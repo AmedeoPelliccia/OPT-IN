@@ -1,0 +1,67 @@
+---
+document_id: PROC_42-05-01
+title: "HIL Test Plan for Core OS"
+version: "1.0.0"
+date: "2025-10-30"
+status: "approved"
+approval:
+  date: "2025-10-30"
+  authority: "Chief Engineer"
+classification: "engineering"
+ata_chapter: "42"
+sub_section: "05"
+compliance:
+  DO-178C: "DAL-A"
+  DO-254: "applicable"
+  ARINC-653: "Part 1"
+traceability:
+  requirements:
+    - REQ-OS-001
+    - REQ-OS-002
+    - REQ-OS-003
+    - REQ-OS-004
+  verification_methods:
+    - "Hardware-in-Loop Testing"
+    - "Functional Testing"
+    - "Performance Testing"
+    - "Security Testing"
+test_categories:
+  - name: "Functional Tests"
+    description: "API compliance, feature validation"
+    priority: "High"
+  - name: "Performance Tests"
+    description: "Throughput, latency, jitter measurement"
+    priority: "High"
+  - name: "Stress Tests"
+    description: "Resource exhaustion, overload conditions"
+    priority: "Medium"
+  - name: "Robustness Tests"
+    description: "Fault injection, error recovery"
+    priority: "Medium"
+  - name: "Security Tests"
+    description: "Penetration testing, access control validation"
+    priority: "High"
+test_environment:
+  hardware: "IMA target platform (PowerPC/ARM)"
+  monitoring: "Real-time monitoring equipment"
+  capabilities: "Fault injection, data acquisition"
+  automation: "Python-based test orchestrator"
+success_criteria:
+  - "All functional tests pass"
+  - "Timing constraints met with 20% margin"
+  - "No partition isolation breaches"
+  - "Security features validated"
+artifacts:
+  logs: "artifacts/"
+  reports: "Test execution reports with SHA-256"
+  traceability: "Requirement coverage matrix"
+related_documents:
+  - DATA_42-05-02_HIL-Test-Matrix.csv
+  - DESC_Test-Automation.md
+  - DATA_Test-Scripts.csv
+sha256: ""  # Generated during build
+checksum_date: ""
+chain_of_custody:
+  created_by: "Integration Team"
+  reviewed_by: "QA Team"
+  approved_by: "Chief Engineer"
