@@ -30,6 +30,21 @@ This chapter covers the complete flight control system for aerodynamic manipulat
 - **Traceability:** All repairs, modifications, software loads, and inspections must be recorded with full traceability to Materials & Processes (M&P) certifications, NDT reports, software baselines, hardware configuration items, and Digital Product Passport (DPP) entries per ATA-95.
 - **Data Integrity:** All changes are validated by the CI script `ci/validate_ata27.sh`, which enforces schemas, naming conventions, and metadata sidecar requirements.
 
+## Web Documentation Management System
+
+An interactive web-based documentation management system is available for navigating and managing ATA 27 Flight Controls documentation:
+
+**🌐 [ATA 27 Flight Controls Documentation Management System](https://opt-in-framework-doc--amedeopelliccia.github.app/)**
+
+This comprehensive audit-ready application provides:
+- **Hierarchical Navigation:** Interactive tree view of all 16 chapters, sections, and documents
+- **Schema Viewer & Validator:** Display and validation of all 5 JSON schemas (flight-control, actuator, repair-record, damage-classification, control-law)
+- **Compliance Matrix Dashboard:** Interactive regulatory compliance mapping (FAA 14 CFR Part 25, EASA CS-25, DO-178C, DO-254, DO-160, ARP4754A, ARP4761)
+- **Document Search & Filter:** Full-text search across all documents with filtering by type (DESC, PROC, DATA, TESTPLAN, DIAG, EXAMPLE)
+- **Inspection Interval Tracker:** Calendar-based view of all inspection schedules, NDT requirements, and maintenance checkpoints
+
+The web system integrates with this repository structure and provides real-time access to documentation with audit trail visibility and compliance status tracking.
+
 ## Directory Structure
 
 ```

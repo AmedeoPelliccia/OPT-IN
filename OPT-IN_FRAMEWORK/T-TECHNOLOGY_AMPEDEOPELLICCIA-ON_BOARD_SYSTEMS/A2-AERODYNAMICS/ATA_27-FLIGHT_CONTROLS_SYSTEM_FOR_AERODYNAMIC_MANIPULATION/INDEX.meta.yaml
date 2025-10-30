@@ -51,6 +51,15 @@ safety:
 integrity:
   checksum_algorithm: "sha256"
   validation_script: "ci/validate_ata27.sh"
+web_documentation:
+  url: "https://opt-in-framework-doc--amedeopelliccia.github.app/"
+  description: "Interactive web-based documentation management system for ATA 27 Flight Controls"
+  features:
+    - "Hierarchical navigation tree for all chapters and documents"
+    - "Schema viewer and validator for all 5 JSON schemas"
+    - "Compliance matrix dashboard with regulatory mapping"
+    - "Full-text search and filtering across all documents"
+    - "Inspection interval tracker with calendar view"
 effectivity:
   scope: "All AMPEL360 BWB configurations"
   msn: "ALL"
