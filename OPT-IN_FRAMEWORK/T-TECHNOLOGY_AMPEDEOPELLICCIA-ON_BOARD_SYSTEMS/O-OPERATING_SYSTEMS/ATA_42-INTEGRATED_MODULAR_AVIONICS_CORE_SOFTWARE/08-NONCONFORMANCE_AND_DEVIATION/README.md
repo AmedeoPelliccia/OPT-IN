@@ -1,4 +1,9 @@
-# 08-NONCONFORMANCE_AND_DEVIATION
+# 08-NONCONFORMANCE AND DEVIATION
+
+← [ATA_42 Core OS](../README.md) | [🏠 Repository Root](../../../../../README.md) | [📋 Navigation](../NAVIGATION.md)
+
+---
+
 
 ## Overview
 Non-conformance reporting, deviation management, and problem resolution procedures.
@@ -13,3 +18,17 @@ Non-conformance reporting, deviation management, and problem resolution procedur
 
 ## Deviation Management
 Design deviations from requirements require formal approval and safety assessment.
+
+---
+
+## Navigation
+
+- **Previous**: [← Previous Section](../PREV/README.md)
+- **Next**: [Next Section →](../NEXT/README.md)
+- **Parent**: [← ATA_42 Core OS](../README.md)
+- [🔝 Back to Top](#top)
+
+---
+
+*Last Updated: 2025-10-30*  
+*Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

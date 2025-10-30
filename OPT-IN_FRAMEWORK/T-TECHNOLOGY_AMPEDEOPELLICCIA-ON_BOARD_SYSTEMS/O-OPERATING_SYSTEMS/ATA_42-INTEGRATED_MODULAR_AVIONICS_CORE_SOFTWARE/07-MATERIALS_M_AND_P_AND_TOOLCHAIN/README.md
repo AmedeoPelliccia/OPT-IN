@@ -1,4 +1,9 @@
-# 07-MATERIALS_M_AND_P_AND_TOOLCHAIN
+# 07-MATERIALS M AND P AND TOOLCHAIN
+
+← [ATA_42 Core OS](../README.md) | [🏠 Repository Root](../../../../../README.md) | [📋 Navigation](../NAVIGATION.md)
+
+---
+
 
 ## Overview
 Approved toolchain, compiler qualification, M&P traceability, and build environment.
@@ -11,3 +16,17 @@ Approved toolchain, compiler qualification, M&P traceability, and build environm
 
 ## M&P Traceability
 All materials and processes traceable to qualification evidence per DO-178C and DO-330.
+
+---
+
+## Navigation
+
+- **Previous**: [← Previous Section](../PREV/README.md)
+- **Next**: [Next Section →](../NEXT/README.md)
+- **Parent**: [← ATA_42 Core OS](../README.md)
+- [🔝 Back to Top](#top)
+
+---
+
+*Last Updated: 2025-10-30*  
+*Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*

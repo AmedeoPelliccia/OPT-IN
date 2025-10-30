@@ -1,4 +1,9 @@
-# 04-SECURITY_AND_UPDATE_MECHANISMS
+# 04-SECURITY AND UPDATE MECHANISMS
+
+← [ATA_42 Core OS](../README.md) | [🏠 Repository Root](../../../../../README.md) | [📋 Navigation](../NAVIGATION.md)
+
+---
+
 
 ## Overview
 Secure boot, cryptographic services, key management, and signed software update mechanisms.
@@ -14,3 +19,17 @@ Secure boot, cryptographic services, key management, and signed software update 
 - EUROCAE ED-202A (MILS)
 - EUROCAE ED-203 (Airborne Security)
 - FIPS 140-2 Level 2 (cryptographic module)
+
+---
+
+## Navigation
+
+- **Previous**: [← Previous Section](../PREV/README.md)
+- **Next**: [Next Section →](../NEXT/README.md)
+- **Parent**: [← ATA_42 Core OS](../README.md)
+- [🔝 Back to Top](#top)
+
+---
+
+*Last Updated: 2025-10-30*  
+*Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*
