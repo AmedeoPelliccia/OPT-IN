@@ -32,7 +32,6 @@ This section contains the documentation and specifications for E1-ENVIRONMENT.
 - [ATA 21-80-00 (Prov) - CO2 Capture & Processing](ATA 21-80-00 (Prov) - CO2 Capture & Processing/README.md)
 - [ATA 26 - FIRE PROTECTION](ATA 26 - FIRE PROTECTION/README.md)
 - [ATA 30 - ICE AND RAIN PROTECTION](ATA 30 - ICE AND RAIN PROTECTION/README.md)
-- [ATA 36 - PNEUMATIC](ATA 36 - PNEUMATIC/README.md)
 - [ATA 38 - WATER WASTE](ATA 38 - WATER WASTE/README.md)
 
 ---

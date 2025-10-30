@@ -25,7 +25,7 @@ Anti-icing, de-icing, and rain removal systems.
 - [ATA 21-50-xx - Power Electronics Cooling](../ATA 21-50-xx - Power Electronics Cooling/README.md)
 - [ATA 21-80-00 (Prov) - CO2 Capture & Processing](../ATA 21-80-00 (Prov) - CO2 Capture & Processing/README.md)
 - [ATA 26 - FIRE PROTECTION](../ATA 26 - FIRE PROTECTION/README.md)
-- [ATA 36 - PNEUMATIC](../ATA 36 - PNEUMATIC/README.md)
+- [ATA 36 - PNEUMATIC](../../M-MECHANICS/ATA_36-PNEUMATIC/README.md)
 - [ATA 38 - WATER WASTE](../ATA 38 - WATER WASTE/README.md)
 
 ---

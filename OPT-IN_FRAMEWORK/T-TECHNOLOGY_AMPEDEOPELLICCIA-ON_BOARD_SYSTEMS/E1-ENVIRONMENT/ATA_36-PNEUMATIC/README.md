@@ -1,33 +1,31 @@
-# ATA 36 - PNEUMATIC
+# ATA 36 - PNEUMATIC (RELOCATED)
 
-## Description
+## ⚠️ This folder has been moved
 
-Pneumatic system generation and distribution.
+**New Location:** `OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_36-PNEUMATIC`
 
-## Applicable Standards & Regulations
+**Reason for Move:** ATA 36 - PNEUMATIC has been relocated from E1-ENVIRONMENT to M-MECHANICS domain to better align with the mechanical systems classification.
 
-- SAE AIR1168
-- ISO 2533
+**Date of Move:** 2025-10-30
 
-## Related ATA Chapters
+## Moved Files
 
-- ATA 21: AIR CONDITIONING & PRESSURIZATION
-- ATA 30: ICE AND RAIN PROTECTION
+- `README.md` - ATA 36 PNEUMATIC documentation
 
-## Navigation
+## Please Update
 
-[↑ E1-ENVIRONMENT](../README.md)
+If you are accessing this folder programmatically:
+- Update your paths to point to: `../../M-MECHANICS/ATA_36-PNEUMATIC/`
+- Update any scripts, tools, or automation that reference the old path
+- Update any bookmarks or documentation
 
-### Related Sections
+## New Location Access
 
-- [ATA 21 - AIR CONDITIONING & PRESSURIZATION](../ATA 21 - AIR CONDITIONING & PRESSURIZATION/README.md)
-- [ATA 21-50-xx - Power Electronics Cooling](../ATA 21-50-xx - Power Electronics Cooling/README.md)
-- [ATA 21-80-00 (Prov) - CO2 Capture & Processing](../ATA 21-80-00 (Prov) - CO2 Capture & Processing/README.md)
-- [ATA 26 - FIRE PROTECTION](../ATA 26 - FIRE PROTECTION/README.md)
-- [ATA 30 - ICE AND RAIN PROTECTION](../ATA 30 - ICE AND RAIN PROTECTION/README.md)
-- [ATA 38 - WATER WASTE](../ATA 38 - WATER WASTE/README.md)
+[➡️ Go to ATA 36 - PNEUMATIC (M-MECHANICS)](../../M-MECHANICS/ATA_36-PNEUMATIC/README.md)
 
 ---
+
+*This redirect notice was created as part of the folder relocation process.*
 
 *Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*
 
