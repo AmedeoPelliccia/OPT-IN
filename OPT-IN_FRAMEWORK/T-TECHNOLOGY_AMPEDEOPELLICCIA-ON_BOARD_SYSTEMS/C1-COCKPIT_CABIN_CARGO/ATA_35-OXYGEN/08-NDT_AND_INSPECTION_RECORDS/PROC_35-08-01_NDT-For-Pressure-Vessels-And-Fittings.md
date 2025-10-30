@@ -147,7 +147,7 @@ This procedure applies to:
 
 ## Inspection Intervals
 
-Refer to **DATA_35-08-02_NDT-Intervals-And-Acceptance.csv** for complete schedule.
+Refer to **DATA_35-04-04_Inspection-Intervals-And-Acceptance.csv** for complete schedule.
 
 **General guidelines:**
 - **Cylinder body UT:** Every 60 months (with hydrostatic test) or after impact damage
