@@ -1,0 +1,49 @@
+schema_version: "1.1"
+id: "<PROCEDURE_ID>"  # e.g., "PROC_44-04-01_Oxygen-System-Inspection-And-Service_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "<PROCEDURE_TITLE>"  # e.g., "44-04-01: Oxygen System Inspection and Service"
+  revision: "<X.Y.Z>"
+  effective_date: "<YYYY-MM-DD>"
+procedure:
+  category: "<CATEGORY>"  # e.g., "Inspection", "Removal_Installation", "Service", "Functional_Test", "Calibration"
+  skill_level: "<SKILL_LEVEL>"  # One of: Basic, Intermediate, Advanced, Specialist
+  estimated_duration: "<DURATION>"  # e.g., "2 hours", "4 hours"
+  personnel_required: <NUMBER>  # Number of personnel required
+  special_tools: []  # List of special tools required (e.g., ["Torque wrench 0-50 in-lbf", "Oxygen pressure gauge"])
+  consumables: []  # List of consumables required (e.g., ["Sealant PR-1422", "Torque seal"])
+effectivity:
+  msn: "<MSN_RANGE>"  # e.g., "ALL", "001-050"
+  config: "<CONFIG_ID>"  # Optional: specific cabin configuration
+  applicable_components: []  # List of applicable component P/Ns or descriptions
+safety:
+  hazards:
+    - "<HAZARD_1>"  # e.g., "High pressure oxygen system", "Flammable materials near oxygen", "Heavy component lifting"
+    - "<HAZARD_2>"
+  criticality: "<CRITICALITY>"  # One of: Critical, Major, Minor, Not_Safety_Related
+  ppe_required: []  # Personal Protective Equipment required (e.g., ["Safety glasses", "Gloves", "ESD wrist strap"])
+  lockout_tagout: <BOOLEAN>  # true if lockout/tagout is required
+approvals:
+  - authority: "<APPROVING_AUTHORITY>"  # e.g., "Cabin Systems Engineering", "Safety Engineering"
+    status: "<STATUS>"  # One of: Draft, Released, Approved, Superseded
+    date: "<YYYY-MM-DD>"
+quality:
+  inspection_required: <BOOLEAN>  # true if inspection hold point is required
+  rii_required: <BOOLEAN>  # true if Required Inspection Item (RII) applies
+  test_required: <BOOLEAN>  # true if functional test is required after procedure
+  test_procedure_ref: "<TEST_PROC_REF>"  # Reference to test procedure if applicable
+traceability:
+  source_documents: []  # Source documents (e.g., ["OEM maintenance manual section X", "Engineering Order EO-44-001"])
+  crossrefs: []  # Cross-references (e.g., ["ATA 20 torque values", "ATA 35 oxygen specs", "PROC_44-10-01"])
+  supersedes: "<SUPERSEDED_DOC_ID>"  # Optional: document this supersedes
+  superseded_by: "<SUPERSEDING_DOC_ID>"  # Optional: document that supersedes this one
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<SHA256_HASH>"
+revision_history:
+  - revision: "<X.Y.Z>"
+    date: "<YYYY-MM-DD>"
+    author: "<AUTHOR_NAME>"
+    description: "<CHANGE_DESCRIPTION>"
+notes: "<ADDITIONAL_NOTES>"

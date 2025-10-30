@@ -1,0 +1,28 @@
+schema_version: "1.1"
+id: "DATA_44-14-02_LSP-Materials-And-Resistance-Limits_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "44-14-02: LSP Materials and Resistance Limits"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+effectivity:
+  msn: "ALL"
+safety:
+  hazards: []
+  criticality: "Not_Safety_Related"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-29"
+traceability:
+  source_documents: []
+  crossrefs: ["INDEX.meta.yaml"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "placeholder_checksum_to_be_calculated"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release"

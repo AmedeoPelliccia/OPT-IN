@@ -1,0 +1,19 @@
+Material_Spec,Material_Description,Application,Flammability_Class_FAR_25_853,Heat_Release_60s_kW_min_m2,Heat_Release_2min_kW_min_m2,Smoke_Density_Ds_Max,Toxicity_Test,Test_Report_Reference,CofC_Required,Notes
+BMS 8-390 Class 1,Decorative laminate,Sidewall panels and monuments,Pass,65,65,200,Pass,FR-44-001,Yes,High-pressure laminate with fire-resistant core
+BMS 8-297 Type I,Fire blocking layer,Seat cushions,Pass,N/A,N/A,N/A,Pass,FR-44-002,Yes,Installed between cushion and cover
+BMS 8-60 Type II,Polyurethane foam,Seat cushion core,Pass,65,65,200,Pass,FR-44-003,Yes,Oil-resistant grade for galley area seats
+BMS 8-79 Class A,Carpet and floor covering,Cabin floor,Pass,65,65,100,Pass,FR-44-004,Yes,Class A for main aisle and high-traffic areas
+BMS 8-126 Type I,Insulation blanket,Cabin insulation,Pass per 25.856,N/A,N/A,N/A,Pass,FR-44-005,Yes,Thermal-acoustic insulation with moisture barrier
+AMS 3320,Silicone sealant,Fire seal applications,Non-flammable,N/A,N/A,N/A,N/A,FR-44-006,Yes,Fire-resistant sealant for penetrations
+AMS 3277,Epoxy adhesive,Structural bonding,Non-flammable,N/A,N/A,N/A,N/A,FR-44-007,Yes,High-temperature epoxy for panel bonding
+BMS 5-101,Polycarbonate sheet,Window surrounds,Pass,65,65,200,Pass,FR-44-008,Yes,UV-stabilized grade
+BMS 10-11 Type I,Leather,Seat upholstery (business class),Pass,65,65,200,Pass,FR-44-009,Yes,Top-grain leather with fire-resistant backing
+BMS 10-17 Type III,Fabric (wool blend),Seat upholstery (economy),Pass,65,65,200,Pass,FR-44-010,Yes,Wool/synthetic blend meeting FAR 25.853
+BMS 8-408,Honeycomb core (Nomex),Composite panels,Pass,65,65,200,Pass,FR-44-011,Yes,Aramid honeycomb core for sandwich panels
+BMS 4-28,Carbon fiber prepreg,Structural composite parts,Pass,65,65,200,Pass,FR-44-012,Yes,Epoxy-based prepreg for primary structures
+AMS 4049,Aluminum 5052-H32,Galley and lavatory panels,Non-combustible,N/A,N/A,N/A,N/A,N/A,Yes,Metallic - inherently fire resistant
+AMS 4050,Aluminum 2024-T3,Seat tracks and fittings,Non-combustible,N/A,N/A,N/A,N/A,N/A,Yes,Structural aluminum alloy
+BMS 8-436,Phenolic resin,Galley countertops,Pass,65,65,200,Pass,FR-44-013,Yes,High-temperature resistant for hot galley applications
+Halon 1301,Fire suppression agent,Galley fire suppression bottles,N/A,N/A,N/A,N/A,N/A,N/A,Yes,Being phased out - replaced by HFC-125 in new installations
+HFC-125,Fire suppression agent (replacement),Galley fire suppression bottles,N/A,N/A,N/A,N/A,N/A,N/A,Yes,Environmentally friendly Halon replacement
+BMS 3-8,Acrylic paint,Interior paint finish,Pass,N/A,N/A,N/A,Pass,FR-44-014,Yes,Low-VOC formulation for cabin air quality

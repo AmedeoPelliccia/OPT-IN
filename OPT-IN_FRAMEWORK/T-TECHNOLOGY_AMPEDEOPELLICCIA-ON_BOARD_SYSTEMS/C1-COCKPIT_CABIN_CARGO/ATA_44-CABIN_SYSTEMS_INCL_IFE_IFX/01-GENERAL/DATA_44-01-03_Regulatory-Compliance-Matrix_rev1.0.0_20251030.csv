@@ -1,0 +1,31 @@
+Regulation,Section,Requirement,Applicable_Cabin_System,Compliance_Method,Evidence_Reference,Status,Notes
+FAA 14 CFR Part 25,25.853(a),Compartment interiors - Materials flammability,All interior panels and upholstery,Flammability testing per FAR 25 Appendix F,DATA_44-05-03_Fireproofing-And-Flammability-Limits,Compliant,Test reports on file
+FAA 14 CFR Part 25,25.853(b),Heat release rate requirements,Cabin sidewalls and ceiling panels,OSU heat release calorimeter testing,Material qualification test reports,Compliant,60 second and 2 minute values documented
+FAA 14 CFR Part 25,25.853(c),Smoke emission requirements,All cabin interior materials,NBS smoke chamber testing,Material qualification test reports,Compliant,Ds values ≤ 200
+FAA 14 CFR Part 25,25.855,Cargo and baggage compartment fire protection,Overhead bins and stowage,Class C fire detection and suppression,Fire system design docs,Compliant,Meets Class C requirements
+FAA 14 CFR Part 25,25.856,Thermal/acoustic insulation materials,Cabin insulation blankets,Radiant heat test and flame penetration,Insulation material CofC,Compliant,Passes FAR 25.856 Appendix F Part VI
+FAA 14 CFR Part 25,25.857,Cargo compartment classification,Cabin stowage areas,Classification as Class C,Design analysis,Compliant,All stowage classified as Class C
+FAA 14 CFR Part 25,25.1439,Protective breathing equipment,Cabin crew PBE stowage,Equipment qualification and accessibility,PBE installation drawings,Compliant,Crew PBE meets TSO-C116
+FAA 14 CFR Part 25,25.1447,Equipment standards for oxygen dispensing units,Passenger oxygen masks and modules,TSO-C85 compliance for masks,Oxygen module spec sheets,Compliant,PSU modules TSO-C85 certified
+FAA 14 CFR Part 25,25.1450,Chemical oxygen generators,Passenger oxygen generators,TSO-C85 compliance and expiry tracking,Generator maintenance program,Compliant,12-year expiry tracked in DPP
+EASA CS-25,CS-25.853,Compartment interiors (equivalent to FAA 25.853),All cabin interior materials,Same as FAA 25.853,Same test reports,Compliant,Dual certification
+EASA CS-25,CS-25.1447,Oxygen equipment standards,Passenger oxygen masks,TSO-C85 equivalent (ETSO-C85),Oxygen module spec sheets,Compliant,ETSO certification on file
+DO-160,Section 4,Temperature and altitude,IFE/IFX equipment,Environmental chamber testing,IFE qualification test reports,Compliant,Category B1 tested
+DO-160,Section 5,Temperature variation,IFE/IFX equipment,Thermal cycling testing,IFE qualification test reports,Compliant,Category A tested
+DO-160,Section 8,Vibration,IFE/IFX equipment,Vibration table testing,IFE qualification test reports,Compliant,Curve Y tested (typical equipment installation)
+DO-160,Section 15,Magnetic effect,IFE monitors and control units,Magnetic field testing,IFE qualification test reports,Compliant,Category Z tested
+DO-160,Section 16,Power input,IFE/IFX equipment,Power quality testing,IFE qualification test reports,Compliant,Category B tested (28V DC)
+DO-160,Section 21,Emission of RF energy,IFE/IFX equipment,Radiated emissions testing,EMC test reports,Compliant,Category M tested
+DO-160,Section 22,RF susceptibility,IFE/IFX equipment,Radiated susceptibility testing,EMC test reports,Compliant,Category T tested
+DO-178C,All sections,Software development assurance,IFE/IFX software,Design Assurance Level (DAL) per system criticality,DO-178C compliance reports,Compliant,IFE software DAL D certified
+DO-254,All sections,Hardware development assurance,IFE/IFX custom hardware,Design Assurance Level per criticality,DO-254 compliance reports,Compliant,Custom FPGA/ASIC DAL D certified
+DO-326A,All sections,Airworthiness security process,IFE/IFX network isolation,Security assessment and isolation verification,Cyber security assessment report,Compliant,Physical and logical isolation verified
+ARP4754A,All sections,Aircraft and system development,Cabin systems integration,System architecture and requirements,System safety assessment,Compliant,Cabin systems integrated per ARP4754A
+ARP4761,All sections,Safety assessment process,Cabin systems safety analysis,Functional Hazard Assessment (FHA) and Fault Tree Analysis (FTA),Safety assessment reports,Compliant,FHA and FMEA completed for critical cabin systems
+ARINC 628,Part 2,Mark 3 cabin systems,IFE/IFX data interfaces,ARINC 628 protocol compliance,IFE system interface control document,Compliant,Data bus meets ARINC 628 Part 2
+AMS 2644,All sections,Magnetic particle inspection,Metallic seat fittings and tracks,MPI procedure and acceptance criteria,NDT procedures ATA 44,Compliant,MPI used for ferromagnetic components
+ASTM E1444,All sections,Ultrasonic testing,Composite panels and monuments,UT procedure and acceptance criteria,NDT procedures ATA 44,Compliant,UT for composite thickness and delamination detection
+ASTM E1417,All sections,Liquid penetrant testing,Metallic galley and lavatory components,PT procedure and acceptance criteria,NDT procedures ATA 44,Compliant,PT for surface crack detection
+MMPDS,All chapters,Metallic material properties,Aluminum seat tracks and fittings,Material selection per MMPDS data,Material specifications,Compliant,7075-T6 and 2024-T3 aluminum used
+BMS 8-297,All sections,Fire blocking layers,Seat cushions and upholstery,Fire blocking material qualification,Material CofC,Compliant,Fire blocker meets BMS 8-297 Type I
+BMS 8-390,All sections,Decorative laminates,Cabin sidewall panels and monuments,Laminate flammability and durability,Material CofC,Compliant,Laminate meets BMS 8-390 Class 1

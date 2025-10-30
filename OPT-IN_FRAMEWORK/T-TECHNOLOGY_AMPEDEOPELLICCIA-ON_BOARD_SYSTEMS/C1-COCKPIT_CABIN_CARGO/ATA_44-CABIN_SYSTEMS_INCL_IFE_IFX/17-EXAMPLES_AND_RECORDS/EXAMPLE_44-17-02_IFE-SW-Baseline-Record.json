@@ -1,0 +1,114 @@
+{
+  "systemId": "IFE-SBK-0001",
+  "systemType": "Seat_Back_IFE",
+  "partNumber": "IFE-UNIT-001-REV-C",
+  "serialNumber": "IFE-SN-2025-00123",
+  "manufacturer": "Panasonic Avionics Corporation",
+  "softwareBaseline": {
+    "softwareVersion": "v4.5.2-BWB",
+    "softwarePartNumber": "SW-IFE-001-v4.5.2",
+    "do178cDAL": "Level_D",
+    "certificationBasis": "DO-178C",
+    "certificationEvidence": [
+      {
+        "documentType": "Software_Requirements_Document",
+        "documentId": "SRD-IFE-v4.5.2-001",
+        "documentHash": "a1a2a3a4a5a6a7a8a9a0b1b2b3b4b5b6b7b8b9b0c1c2c3c4c5c6c7c8c9c0d1d2"
+      },
+      {
+        "documentType": "Software_Test_Results",
+        "documentId": "STR-IFE-v4.5.2-001",
+        "documentHash": "b1b2b3b4b5b6b7b8b9b0c1c2c3c4c5c6c7c8c9c0d1d2d3d4d5d6d7d8d9d0e1e2"
+      },
+      {
+        "documentType": "Software_Accomplishment_Summary",
+        "documentId": "SAS-IFE-v4.5.2-001",
+        "documentHash": "c1c2c3c4c5c6c7c8c9c0d1d2d3d4d5d6d7d8d9d0e1e2e3e4e5e6e7e8e9e0f1f2"
+      }
+    ],
+    "softwareLoadProcedure": "PROC_44-07-02_IFE-Removal-Installation-And-SW-Load",
+    "rollbackProcedure": "PROC_44-07-02 Section 3.4",
+    "releaseDate": "2025-09-01"
+  },
+  "hardwareBaseline": {
+    "hardwareVersion": "HW-Rev-C",
+    "hardwarePartNumber": "IFE-HW-001-REV-C",
+    "do254AssuranceLevel": "Level_D",
+    "certificationBasis": "DO-254 and DO-160G",
+    "qualificationTestEvidence": [
+      {
+        "testType": "Environmental_DO-160",
+        "testReportId": "ENV-TEST-IFE-001-REV-C",
+        "testReportHash": "d1d2d3d4d5d6d7d8d9d0e1e2e3e4e5e6e7e8e9e0f1f2f3f4f5f6f7f8f9f0a1a2"
+      },
+      {
+        "testType": "EMI_EMC_DO-160",
+        "testReportId": "EMC-TEST-IFE-001-REV-C",
+        "testReportHash": "e1e2e3e4e5e6e7e8e9e0f1f2f3f4f5f6f7f8f9f0a1a2a3a4a5a6a7a8a9a0b1b2"
+      }
+    ]
+  },
+  "cyberSecurityNotes": {
+    "securityAssessment": "Completed",
+    "securityAssessmentReport": "CYBER-ASSESS-IFE-v4.5.2-001",
+    "networkIsolation": "Physical_Gateway",
+    "isolationVerification": "CYBER-ISOL-TEST-IFE-001",
+    "dataFlowAnalysis": "DATA-FLOW-IFE-v4.5.2-001",
+    "threatMitigations": [
+      "Physical network isolation via gateway with no routing to aircraft systems",
+      "Firewall rules prevent any IFE-to-aircraft communication",
+      "Content server isolated in DMZ with no aircraft system access",
+      "Intrusion detection system monitors IFE network for anomalies"
+    ]
+  },
+  "hilTestPlan": {
+    "testPlanReference": "PROC_44-07-03_IFE_HIL_Functional_Test",
+    "testCases": [
+      {
+        "testCaseId": "HIL-IFE-001",
+        "testDescription": "Display power-on and boot sequence",
+        "acceptanceCriteria": "Display boots within 60 seconds with no errors",
+        "testStatus": "Pass"
+      },
+      {
+        "testCaseId": "HIL-IFE-002",
+        "testDescription": "Content library loading",
+        "acceptanceCriteria": "All content categories load within 5 seconds",
+        "testStatus": "Pass"
+      },
+      {
+        "testCaseId": "HIL-IFE-003",
+        "testDescription": "Network isolation verification",
+        "acceptanceCriteria": "IFE cannot ping aircraft systems (ping fails)",
+        "testStatus": "Pass"
+      }
+    ],
+    "testEnvironment": "Boeing IFE test bench with simulated cabin network",
+    "testResultsReference": "HIL-TEST-RESULTS-IFE-v4.5.2-001"
+  },
+  "cotsAcceptance": {
+    "cotsApplicable": true,
+    "cotsAcceptancePlan": "COTS-ACCEPT-IFE-LINUX-KERNEL",
+    "cotsRationale": "Linux kernel v5.10 LTS used as base OS. Acceptance based on community support, security patches, and aerospace usage history.",
+    "cotsQualificationEvidence": [
+      "Linux kernel CVE tracking and patch management plan",
+      "DO-178C credit for open-source components per AC 20-148",
+      "Regression test results for kernel on IFE hardware"
+    ]
+  },
+  "installationLocation": {
+    "cabinZone": "Mid_Cabin",
+    "seatRow": 18,
+    "seatPosition": "C"
+  },
+  "effectivity": {
+    "msnRange": "MSN-001 to MSN-050",
+    "cabinConfiguration": ["BWB-DUAL-CLASS-V2", "BWB-SINGLE-CLASS-ECONOMY"]
+  },
+  "traceability": {
+    "dppEntryId": "DPP-IFE-2025-000123",
+    "installationDate": "2025-10-20",
+    "installationWorkOrder": "WO-2025-1250",
+    "approvalReferences": ["TSO-C139a for IFE equipment"]
+  }
+}
