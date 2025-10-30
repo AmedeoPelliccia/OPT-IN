@@ -1,0 +1,369 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata33/repair-record.schema.json",
+  "title": "ATA 33 Repair Record Schema",
+  "description": "JSON schema for lighting repair and maintenance records with traceability",
+  "type": "object",
+  "required": [
+    "record_id",
+    "date",
+    "aircraft",
+    "light_assembly",
+    "repair_type",
+    "technician",
+    "status"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^REPAIR_33-[0-9]{6}$",
+      "description": "Unique repair record ID in format REPAIR_33-XXXXXX"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Repair date and time in ISO 8601 format"
+    },
+    "aircraft": {
+      "type": "object",
+      "required": ["registration", "msn"],
+      "properties": {
+        "registration": {
+          "type": "string",
+          "description": "Aircraft registration (tail number)"
+        },
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number"
+        },
+        "model": {
+          "type": "string",
+          "description": "Aircraft model"
+        },
+        "operator": {
+          "type": "string",
+          "description": "Aircraft operator"
+        }
+      }
+    },
+    "light_assembly": {
+      "type": "object",
+      "required": ["location", "part_number"],
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Light location (e.g., cabin row 15, left reading light)"
+        },
+        "ata_code": {
+          "type": "string",
+          "pattern": "^33-[0-9]{2}-[0-9]{2}$",
+          "description": "ATA code for light assembly"
+        },
+        "part_number": {
+          "type": "string",
+          "description": "Manufacturer part number"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "Serial number (if serialized)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Light assembly description"
+        }
+      }
+    },
+    "repair_type": {
+      "type": "string",
+      "enum": [
+        "LED_MODULE_REPLACEMENT",
+        "DRIVER_REPLACEMENT",
+        "OPTIC_REPAIR",
+        "LENS_REPLACEMENT",
+        "HOUSING_REPAIR",
+        "SEAL_RESTORATION",
+        "WIRING_REPAIR",
+        "BONDING_RESTORATION",
+        "COMPLETE_ASSEMBLY_REPLACEMENT",
+        "INSPECTION_ONLY"
+      ],
+      "description": "Type of repair performed"
+    },
+    "defect": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Defect description"
+        },
+        "discovered_by": {
+          "type": "string",
+          "description": "How defect was discovered (routine inspection, crew report, etc.)"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["CRITICAL", "MAJOR", "MINOR", "MEL_ITEM"],
+          "description": "Defect severity classification"
+        },
+        "mel_reference": {
+          "type": "string",
+          "description": "MEL (Minimum Equipment List) reference if applicable"
+        }
+      }
+    },
+    "corrective_action": {
+      "type": "object",
+      "required": ["description"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Detailed corrective action taken"
+        },
+        "procedure_reference": {
+          "type": "string",
+          "description": "Reference to maintenance procedure (e.g., PROC_33-02-02)"
+        },
+        "work_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Work hours required"
+        }
+      }
+    },
+    "parts_used": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["part_number", "quantity"],
+        "properties": {
+          "part_number": {
+            "type": "string",
+            "description": "Part number"
+          },
+          "description": {
+            "type": "string",
+            "description": "Part description"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Quantity used"
+          },
+          "serial_number": {
+            "type": "string",
+            "description": "Serial number (if serialized)"
+          },
+          "batch_lot": {
+            "type": "string",
+            "description": "Batch or lot number"
+          },
+          "supplier": {
+            "type": "string",
+            "description": "Approved supplier"
+          },
+          "coc_number": {
+            "type": "string",
+            "description": "Certificate of Conformance number"
+          },
+          "shelf_life_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Shelf life expiration date (if applicable)"
+          }
+        }
+      }
+    },
+    "testing_performed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["test_type", "result"],
+        "properties": {
+          "test_type": {
+            "type": "string",
+            "enum": [
+              "FUNCTIONAL_TEST",
+              "PHOTOMETRIC_TEST",
+              "CONTINUITY_TEST",
+              "LSP_BONDING_TEST",
+              "LEAK_TEST",
+              "INSULATION_RESISTANCE",
+              "EMC_VERIFICATION"
+            ],
+            "description": "Type of test performed"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["PASS", "FAIL"],
+            "description": "Test result"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Test notes or measurements"
+          },
+          "test_equipment": {
+            "type": "string",
+            "description": "Test equipment used"
+          },
+          "calibration_due": {
+            "type": "string",
+            "format": "date",
+            "description": "Test equipment calibration due date"
+          }
+        }
+      }
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Indicates if repair involves safety-critical components"
+    },
+    "engineering_disposition": {
+      "type": "object",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "description": "Engineering disposition required"
+        },
+        "reference": {
+          "type": "string",
+          "description": "Engineering disposition reference number"
+        },
+        "engineer": {
+          "type": "string",
+          "description": "Reviewing engineer name"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Disposition date"
+        }
+      }
+    },
+    "airworthiness": {
+      "type": "object",
+      "properties": {
+        "release_required": {
+          "type": "boolean",
+          "description": "Airworthiness release required"
+        },
+        "release_number": {
+          "type": "string",
+          "description": "Airworthiness release number"
+        },
+        "inspector": {
+          "type": "string",
+          "description": "Inspector name"
+        },
+        "license": {
+          "type": "string",
+          "description": "Inspector license/certification number"
+        },
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Release to service date"
+        }
+      }
+    },
+    "technician": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Technician name"
+        },
+        "license": {
+          "type": "string",
+          "description": "License or certification number"
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Technician stamp number"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "IN_PROGRESS",
+        "AWAITING_PARTS",
+        "AWAITING_ENGINEERING",
+        "TESTING",
+        "COMPLETED",
+        "DEFERRED",
+        "CANCELLED"
+      ],
+      "description": "Repair record status"
+    },
+    "completion_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Repair completion date and time"
+    },
+    "next_inspection": {
+      "type": "object",
+      "properties": {
+        "due_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Next inspection due date"
+        },
+        "due_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Next inspection due flight hours"
+        },
+        "due_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Next inspection due flight cycles"
+        },
+        "inspection_type": {
+          "type": "string",
+          "description": "Type of next inspection"
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["filename", "sha256"],
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Attachment filename"
+          },
+          "description": {
+            "type": "string",
+            "description": "Attachment description"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "PHOTO_BEFORE",
+              "PHOTO_AFTER",
+              "TEST_REPORT",
+              "COC",
+              "ENGINEERING_DISPOSITION",
+              "AIRWORTHINESS_RELEASE",
+              "OTHER"
+            ],
+            "description": "Attachment type"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hash for file integrity"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments"
+    }
+  }
+}

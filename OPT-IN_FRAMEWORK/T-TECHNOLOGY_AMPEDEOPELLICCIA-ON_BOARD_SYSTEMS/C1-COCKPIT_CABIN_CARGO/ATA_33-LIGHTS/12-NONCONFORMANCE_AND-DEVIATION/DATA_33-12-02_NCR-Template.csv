@@ -1,0 +1,5 @@
+NCR_Number,Date_Opened,Discovered_By,Aircraft_MSN,Part_Number,Serial_Number,Defect_Description,Severity,Disposition,Disposition_By,Date_Closed
+NCR-33-000001,2025-10-30,J_Smith,12345,LT-12345-001,SN-67890,Lens_has_small_crack_5mm_length,MAJOR,SCRAP,Engineer_Doe,2025-10-31
+NCR-33-000002,2025-10-30,M_Johnson,12346,DR-45678-002,N/A,Driver_output_current_low_320mA_spec_350mA,MINOR,RETURN_TO_SUPPLIER,Engineer_Lee,2025-11-02
+NCR-33-000003,2025-10-30,Technician_A,12347,LT-23456-003,SN-11111,Illuminance_48lux_spec_min_50lux,MINOR,USE_AS_IS,Engineer_Kim,2025-11-01
+EXAMPLE,DATE,NAME,MSN,PN,SN,DESCRIPTION,CRITICAL_MAJOR_MINOR,DISPOSITION,ENGINEER,DATE

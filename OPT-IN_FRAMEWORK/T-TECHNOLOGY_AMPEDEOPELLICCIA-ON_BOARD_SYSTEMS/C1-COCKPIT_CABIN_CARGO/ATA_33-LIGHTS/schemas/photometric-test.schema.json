@@ -1,0 +1,360 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata33/photometric-test.schema.json",
+  "title": "ATA 33 Photometric Test Record Schema",
+  "description": "JSON schema for photometric test records with calibration traceability and measurement data",
+  "type": "object",
+  "required": [
+    "test_id",
+    "test_date",
+    "light_assembly",
+    "instrument",
+    "measurements",
+    "result"
+  ],
+  "properties": {
+    "test_id": {
+      "type": "string",
+      "pattern": "^PHOTO_33-[0-9]{2}-[0-9]{4}$",
+      "description": "Unique test ID in format PHOTO_33-XX-XXXX"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Test date and time in ISO 8601 format"
+    },
+    "light_assembly": {
+      "type": "object",
+      "required": ["part_number", "serial_number", "description"],
+      "properties": {
+        "part_number": {
+          "type": "string",
+          "description": "Manufacturer part number"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "Unit serial number"
+        },
+        "description": {
+          "type": "string",
+          "description": "Light assembly description"
+        },
+        "location": {
+          "type": "string",
+          "description": "Aircraft location (e.g., cabin row 12, left aisle)"
+        }
+      }
+    },
+    "instrument": {
+      "type": "object",
+      "required": [
+        "type",
+        "manufacturer",
+        "model",
+        "serial_number",
+        "calibration_id",
+        "calibration_date",
+        "calibration_due_date"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ILLUMINANCE_METER",
+            "LUMINANCE_METER",
+            "SPECTRORADIOMETER",
+            "GONIOPHOTOMETER",
+            "INTEGRATING_SPHERE"
+          ],
+          "description": "Type of photometric instrument"
+        },
+        "manufacturer": {
+          "type": "string",
+          "description": "Instrument manufacturer"
+        },
+        "model": {
+          "type": "string",
+          "description": "Instrument model number"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "Instrument serial number"
+        },
+        "calibration_id": {
+          "type": "string",
+          "description": "Calibration certificate ID (NIST-traceable)"
+        },
+        "calibration_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Last calibration date"
+        },
+        "calibration_due_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Next calibration due date"
+        },
+        "nist_traceable": {
+          "type": "boolean",
+          "description": "Indicates NIST traceability"
+        },
+        "uncertainty_percent": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Measurement uncertainty as percentage"
+        }
+      }
+    },
+    "test_setup": {
+      "type": "object",
+      "properties": {
+        "ambient_temp_celsius": {
+          "type": "number",
+          "description": "Ambient temperature during test"
+        },
+        "humidity_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Relative humidity during test"
+        },
+        "supply_voltage_v": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Supply voltage during test"
+        },
+        "warmup_time_min": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Light warmup time before measurement"
+        },
+        "distance_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Measurement distance in millimeters"
+        }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "required": ["illuminance"],
+      "properties": {
+        "illuminance": {
+          "type": "object",
+          "required": ["readings_lux"],
+          "properties": {
+            "readings_lux": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": ["point_id", "value_lux"],
+                "properties": {
+                  "point_id": {
+                    "type": "string",
+                    "description": "Measurement point identifier"
+                  },
+                  "value_lux": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Illuminance reading in lux"
+                  },
+                  "x_mm": {
+                    "type": "number",
+                    "description": "X coordinate in mm"
+                  },
+                  "y_mm": {
+                    "type": "number",
+                    "description": "Y coordinate in mm"
+                  }
+                }
+              }
+            },
+            "average_lux": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Average illuminance"
+            },
+            "min_lux": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Minimum illuminance"
+            },
+            "max_lux": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Maximum illuminance"
+            },
+            "uniformity_ratio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Uniformity ratio (min/max)"
+            }
+          }
+        },
+        "color": {
+          "type": "object",
+          "properties": {
+            "cct_kelvin": {
+              "type": "integer",
+              "minimum": 2000,
+              "maximum": 10000,
+              "description": "Correlated Color Temperature in Kelvin"
+            },
+            "cri_ra": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Color Rendering Index (Ra)"
+            },
+            "cie_x": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "CIE 1931 chromaticity x"
+            },
+            "cie_y": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "CIE 1931 chromaticity y"
+            },
+            "duv": {
+              "type": "number",
+              "description": "Distance from Planckian locus"
+            }
+          }
+        },
+        "luminous_intensity": {
+          "type": "object",
+          "properties": {
+            "center_cd": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Center beam intensity in candelas"
+            },
+            "angular_distribution": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "angle_deg": {
+                    "type": "number"
+                  },
+                  "intensity_cd": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "illuminance_min_lux": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Minimum acceptable illuminance"
+        },
+        "illuminance_max_lux": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum acceptable illuminance"
+        },
+        "uniformity_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Minimum acceptable uniformity ratio"
+        },
+        "cct_min_kelvin": {
+          "type": "integer",
+          "description": "Minimum CCT"
+        },
+        "cct_max_kelvin": {
+          "type": "integer",
+          "description": "Maximum CCT"
+        },
+        "cri_min": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Minimum CRI"
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["PASS", "FAIL", "CONDITIONAL"],
+          "description": "Overall test result"
+        },
+        "pass_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of passed criteria"
+        },
+        "fail_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of failed criteria"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes or observations"
+        }
+      }
+    },
+    "personnel": {
+      "type": "object",
+      "properties": {
+        "technician": {
+          "type": "string",
+          "description": "Technician name"
+        },
+        "engineer": {
+          "type": "string",
+          "description": "Reviewing engineer name"
+        },
+        "witness": {
+          "type": "string",
+          "description": "Witness name (if applicable)"
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["filename", "sha256"],
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Attachment filename"
+          },
+          "description": {
+            "type": "string",
+            "description": "Attachment description"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hash for file integrity"
+          }
+        }
+      }
+    }
+  }
+}

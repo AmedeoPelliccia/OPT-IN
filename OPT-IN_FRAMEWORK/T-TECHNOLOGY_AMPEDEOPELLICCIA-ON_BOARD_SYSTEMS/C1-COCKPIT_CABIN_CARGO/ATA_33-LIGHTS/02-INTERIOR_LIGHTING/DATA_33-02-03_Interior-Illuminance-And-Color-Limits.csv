@@ -1,0 +1,13 @@
+Light_Type,Location,Min_Illuminance_lux,Max_Illuminance_lux,Uniformity_Min_Ratio,CCT_Min_K,CCT_Max_K,CRI_Min_Ra,Measurement_Distance_mm,Notes
+Reading_Light_Passenger,Overhead_PSU,50,150,0.6,2700,3000,80,400,At reading material surface
+Reading_Light_Crew,Jump_Seat,100,200,0.6,3000,4000,90,400,Higher CRI for crew tasks
+Aisle_Overhead,Ceiling_Centerline,10,30,0.4,2700,3500,80,Floor_Level,General aisle illumination
+Floor_Path_Light,Aisle_Edge_Floor,2,10,0.3,2700,3500,70,Floor_Level,Low-level guidance
+Cabin_General,PSU_Integrated,50,200,0.5,2700,6500,90,Seat_Level,Tunable white mood lighting
+Galley_Work,Under_Cabinet,200,500,0.6,4000,5000,80,Work_Surface,Task lighting
+Lavatory_General,Ceiling_Wall,100,300,0.5,3000,4000,85,Mirror_Face,Good color rendering
+Cockpit_Instrument,Panel_Integrated,Dimmable,Dimmable,N/A,Variable,Variable,80,N/A,See ATA 31 for annunciators
+Cockpit_Flood,Overhead,50,200,0.4,2700,6500,85,Chart_Table,White or red selectable
+Cargo_Bay,Ceiling_Mounted,50,150,0.3,4000,5000,70,Floor_Level,IP65 sealed ruggedized
+Emergency_Exit_Sign,Exit_Door,See_ATA_33-04,See_ATA_33-04,N/A,N/A,N/A,N/A,N/A,Refer to emergency lighting data
+Emergency_Floor_Path,Floor_Aisle_Edge,0.05_minimum,N/A,N/A,N/A,N/A,N/A,Floor_Level,10-minute duration required

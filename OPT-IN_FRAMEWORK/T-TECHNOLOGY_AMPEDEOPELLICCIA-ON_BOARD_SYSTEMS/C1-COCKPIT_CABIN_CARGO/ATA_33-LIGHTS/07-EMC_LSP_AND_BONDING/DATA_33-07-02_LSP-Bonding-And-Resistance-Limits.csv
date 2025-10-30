@@ -1,0 +1,10 @@
+Light_Assembly_Type,Location,Bonding_Required,Max_Resistance_mOhm,Test_Method,Bonding_Jumper_AWG,Torque_inlbs,DO160_Section,Notes
+Reading_Light,PSU_Overhead,Yes,2.5,4-Wire_Kelvin,12,25-35,22,Conductive trim bonding
+Aisle_Light,Ceiling_Floor,Yes,2.5,4-Wire_Kelvin,12,25-35,22,Structural bonding required
+Position_Light_Wing,Wing_Tip,Yes,2.5,4-Wire_Kelvin,10,30-40,22,Critical LSP zone
+Position_Light_Tail,Vertical_Stabilizer,Yes,2.5,4-Wire_Kelvin,10,30-40,22,Critical LSP zone
+Landing_Light,Wing_Root_Nose,Yes,2.5,4-Wire_Kelvin,10,30-40,22,High current light
+Logo_Light,Fuselage,Yes,2.5,4-Wire_Kelvin,12,25-35,22,Standard bonding
+Emergency_Floor_Path,Floor_Edge,No,N/A,N/A,N/A,N/A,22,Photoluminescent no bonding
+Exit_Sign,Door_Frame,Optional,5.0,2-Wire,14,20-30,22,Low priority bonding
+Cargo_Light,Cargo_Compartment,Yes,2.5,4-Wire_Kelvin,12,25-35,22,Ruggedized installation

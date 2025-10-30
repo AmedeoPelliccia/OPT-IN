@@ -1,0 +1,445 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata33/inspection.schema.json",
+  "title": "ATA 33 Lighting Inspection Record Schema",
+  "description": "JSON schema for lighting inspection records including GVI and NDT",
+  "type": "object",
+  "required": [
+    "inspection_id",
+    "date",
+    "aircraft",
+    "light_assembly",
+    "inspection_type",
+    "inspector",
+    "result"
+  ],
+  "properties": {
+    "inspection_id": {
+      "type": "string",
+      "pattern": "^INSP_33-[0-9]{6}$",
+      "description": "Unique inspection ID in format INSP_33-XXXXXX"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Inspection date and time in ISO 8601 format"
+    },
+    "aircraft": {
+      "type": "object",
+      "required": ["registration", "msn"],
+      "properties": {
+        "registration": {
+          "type": "string",
+          "description": "Aircraft registration (tail number)"
+        },
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number"
+        },
+        "model": {
+          "type": "string",
+          "description": "Aircraft model"
+        },
+        "total_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total flight hours at inspection"
+        },
+        "total_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total flight cycles at inspection"
+        }
+      }
+    },
+    "light_assembly": {
+      "type": "object",
+      "required": ["location"],
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Light location (e.g., cabin row 10, overhead reading light)"
+        },
+        "ata_code": {
+          "type": "string",
+          "pattern": "^33-[0-9]{2}-[0-9]{2}$",
+          "description": "ATA code for light assembly"
+        },
+        "part_number": {
+          "type": "string",
+          "description": "Manufacturer part number"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "Serial number (if serialized)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Light assembly description"
+        },
+        "installation_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Installation date"
+        },
+        "hours_since_installation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Flight hours since installation"
+        }
+      }
+    },
+    "inspection_type": {
+      "type": "string",
+      "enum": [
+        "GVI_GENERAL_VISUAL",
+        "DVI_DETAILED_VISUAL",
+        "NDT_ULTRASONIC",
+        "NDT_EDDY_CURRENT",
+        "NDT_DYE_PENETRANT",
+        "FUNCTIONAL_TEST",
+        "PHOTOMETRIC_CHECK",
+        "LSP_BONDING_CHECK",
+        "SEAL_INTEGRITY_CHECK",
+        "PERIODIC_SCHEDULED",
+        "PRE_FLIGHT",
+        "POST_INCIDENT"
+      ],
+      "description": "Type of inspection performed"
+    },
+    "inspection_basis": {
+      "type": "string",
+      "enum": [
+        "SCHEDULED_MAINTENANCE",
+        "AD_COMPLIANCE",
+        "SB_COMPLIANCE",
+        "MEL_ITEM",
+        "CREW_REPORT",
+        "ENGINEERING_REQUEST",
+        "POST_REPAIR",
+        "INCIDENT_INVESTIGATION"
+      ],
+      "description": "Basis for inspection"
+    },
+    "reference_document": {
+      "type": "object",
+      "properties": {
+        "amm_reference": {
+          "type": "string",
+          "description": "Aircraft Maintenance Manual reference"
+        },
+        "procedure": {
+          "type": "string",
+          "description": "Inspection procedure reference (e.g., PROC_33-08-01)"
+        },
+        "ad_number": {
+          "type": "string",
+          "description": "Airworthiness Directive number (if applicable)"
+        },
+        "sb_number": {
+          "type": "string",
+          "description": "Service Bulletin number (if applicable)"
+        }
+      }
+    },
+    "inspection_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "result"],
+        "properties": {
+          "item": {
+            "type": "string",
+            "description": "Inspection item or checkpoint"
+          },
+          "acceptance_criteria": {
+            "type": "string",
+            "description": "Acceptance criteria for this item"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["PASS", "FAIL", "NOT_APPLICABLE"],
+            "description": "Inspection result for this item"
+          },
+          "measurement": {
+            "type": "string",
+            "description": "Measurement or observation"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes for this item"
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description", "severity"],
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Finding description"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["CRITICAL", "MAJOR", "MINOR", "OBSERVATION"],
+            "description": "Finding severity"
+          },
+          "location": {
+            "type": "string",
+            "description": "Specific location of finding"
+          },
+          "dimensions": {
+            "type": "string",
+            "description": "Dimensions (e.g., crack length, corrosion area)"
+          },
+          "corrective_action_required": {
+            "type": "boolean",
+            "description": "Indicates if corrective action is required"
+          },
+          "corrective_action_reference": {
+            "type": "string",
+            "description": "Reference to repair record or work order"
+          }
+        }
+      }
+    },
+    "visual_inspection": {
+      "type": "object",
+      "properties": {
+        "lens_condition": {
+          "type": "string",
+          "enum": ["GOOD", "SCRATCHED", "CRACKED", "DISCOLORED", "MISSING"],
+          "description": "Lens condition"
+        },
+        "housing_condition": {
+          "type": "string",
+          "enum": ["GOOD", "CORRODED", "DENTED", "CRACKED", "FASTENERS_LOOSE"],
+          "description": "Housing condition"
+        },
+        "seal_condition": {
+          "type": "string",
+          "enum": ["GOOD", "DEGRADED", "CRACKED", "MISSING", "LEAKING"],
+          "description": "Seal/gasket condition"
+        },
+        "wiring_condition": {
+          "type": "string",
+          "enum": ["GOOD", "CHAFED", "CORRODED", "BURNT", "DISCONNECTED"],
+          "description": "Wiring condition"
+        },
+        "bonding_condition": {
+          "type": "string",
+          "enum": ["GOOD", "CORRODED", "LOOSE", "MISSING"],
+          "description": "Bonding jumper condition"
+        },
+        "mounting_condition": {
+          "type": "string",
+          "enum": ["SECURE", "LOOSE", "MISSING_FASTENERS", "CRACKED_STRUCTURE"],
+          "description": "Mounting condition"
+        }
+      }
+    },
+    "functional_test": {
+      "type": "object",
+      "properties": {
+        "light_operates": {
+          "type": "boolean",
+          "description": "Light operates normally"
+        },
+        "dimming_operates": {
+          "type": "boolean",
+          "description": "Dimming function operates (if applicable)"
+        },
+        "no_flicker": {
+          "type": "boolean",
+          "description": "No flickering observed"
+        },
+        "no_abnormal_noise": {
+          "type": "boolean",
+          "description": "No abnormal noise (buzzing, humming)"
+        },
+        "emergency_mode_tested": {
+          "type": "boolean",
+          "description": "Emergency mode tested (if applicable)"
+        },
+        "emergency_duration_min": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Emergency lighting duration in minutes"
+        }
+      }
+    },
+    "photometric_measurements": {
+      "type": "object",
+      "properties": {
+        "illuminance_lux": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Measured illuminance in lux"
+        },
+        "within_limits": {
+          "type": "boolean",
+          "description": "Measurement within specified limits"
+        },
+        "instrument_used": {
+          "type": "string",
+          "description": "Photometric instrument used"
+        },
+        "calibration_due": {
+          "type": "string",
+          "format": "date",
+          "description": "Instrument calibration due date"
+        }
+      }
+    },
+    "lsp_bonding_test": {
+      "type": "object",
+      "properties": {
+        "test_performed": {
+          "type": "boolean",
+          "description": "LSP bonding test performed"
+        },
+        "resistance_milliohms": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Measured bonding resistance in milliohms"
+        },
+        "limit_milliohms": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum acceptable resistance in milliohms"
+        },
+        "within_limits": {
+          "type": "boolean",
+          "description": "Resistance within limits"
+        },
+        "test_method": {
+          "type": "string",
+          "enum": ["2-WIRE", "4-WIRE_KELVIN"],
+          "description": "Test method used"
+        }
+      }
+    },
+    "ndt_results": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": ["ULTRASONIC", "EDDY_CURRENT", "DYE_PENETRANT", "MAGNETIC_PARTICLE"],
+          "description": "NDT method used"
+        },
+        "procedure": {
+          "type": "string",
+          "description": "NDT procedure reference"
+        },
+        "indications_found": {
+          "type": "boolean",
+          "description": "Indications found during NDT"
+        },
+        "indication_details": {
+          "type": "string",
+          "description": "Details of indications"
+        },
+        "technician_level": {
+          "type": "string",
+          "enum": ["LEVEL_I", "LEVEL_II", "LEVEL_III"],
+          "description": "NDT technician certification level"
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["SERVICEABLE", "UNSERVICEABLE", "REQUIRES_REPAIR", "DEFERRED"],
+          "description": "Overall inspection result"
+        },
+        "airworthy": {
+          "type": "boolean",
+          "description": "Unit is airworthy"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Overall inspection notes"
+        }
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Inspector name"
+        },
+        "license": {
+          "type": "string",
+          "description": "License or certification number"
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Inspector stamp number"
+        },
+        "qualification": {
+          "type": "string",
+          "description": "Relevant qualification or training"
+        }
+      }
+    },
+    "next_inspection": {
+      "type": "object",
+      "properties": {
+        "due_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Next inspection due date"
+        },
+        "due_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Next inspection due flight hours"
+        },
+        "due_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Next inspection due flight cycles"
+        },
+        "inspection_type": {
+          "type": "string",
+          "description": "Type of next inspection"
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["filename", "sha256", "type"],
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Attachment filename"
+          },
+          "description": {
+            "type": "string",
+            "description": "Attachment description"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["PHOTO", "TEST_REPORT", "NDT_REPORT", "SKETCH", "OTHER"],
+            "description": "Attachment type"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hash for file integrity"
+          }
+        }
+      }
+    }
+  }
+}
