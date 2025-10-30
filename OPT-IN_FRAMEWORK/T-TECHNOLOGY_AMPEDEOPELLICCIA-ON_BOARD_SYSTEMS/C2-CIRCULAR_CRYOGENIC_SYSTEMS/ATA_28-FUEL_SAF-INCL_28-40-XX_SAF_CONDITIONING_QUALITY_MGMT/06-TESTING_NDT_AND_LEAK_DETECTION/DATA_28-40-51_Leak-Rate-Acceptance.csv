@@ -1,0 +1,7 @@
+Component_Type,Test_Method,Maximum_Leak_Rate_mbar_L_s,Measurement_Uncertainty,Probe_Type,Test_Pressure_bar,Acceptance_Criteria,Remarks
+Vacuum_Jacket_Welds,Helium_Mass_Spec,1.0E-08,±30%,Sniffer,Atmospheric,"Leak_rate_≤_limit","Critical for thermal performance"
+Tank_Primary_Welds,Helium_Mass_Spec,1.0E-06,±30%,Sniffer,1.0,"Leak_rate_≤_limit","Primary containment"
+Valve_Seats,Helium_Mass_Spec,1.0E-07,±30%,Accumulation,5.0,"Leak_rate_≤_limit","Seat leakage test"
+Fitting_Connections,Helium_Mass_Spec,1.0E-06,±30%,Sniffer,1.0,"Leak_rate_≤_limit","VCR and ConFlat fittings"
+Instrumentation_Penetrations,Helium_Mass_Spec,1.0E-08,±30%,Sniffer,Atmospheric,"Leak_rate_≤_limit","Feed-through seals"
+Emergency_Vent_Path,Pressure_Decay,1.0E-04,±50%,N/A,2.0,"Pressure_decay_<_limit","Functional vent check"

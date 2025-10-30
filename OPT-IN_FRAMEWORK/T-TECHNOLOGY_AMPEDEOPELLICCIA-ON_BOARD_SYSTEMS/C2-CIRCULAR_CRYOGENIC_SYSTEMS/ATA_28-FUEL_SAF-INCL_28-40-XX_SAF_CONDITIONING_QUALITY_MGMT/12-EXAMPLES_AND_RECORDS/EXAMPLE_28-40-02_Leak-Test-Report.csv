@@ -1,0 +1,4 @@
+Test_ID,Component_ID,Part_Number,Serial_Number,Test_Date,Test_Method,Leak_Rate_mbar_L_s,Uncertainty_Percent,Acceptance_Limit_mbar_L_s,Result,Inspector,Cal_Cert_Ref,Remarks
+LEAK-2025-001,TANK-001,TK-PN-100,S001,2025-07-05,Helium_Mass_Spec_Sniffer,3.5E-09,30,1.0E-08,PASS,Jane_Smith,CAL-MS-2025-06,"Vacuum jacket integrity test"
+LEAK-2025-002,VALVE-005,VLV-PN-050,V123,2025-07-10,Helium_Mass_Spec_Sniffer,8.2E-07,30,1.0E-06,PASS,John_Doe,CAL-MS-2025-06,"Valve seat leakage"
+LEAK-2025-003,LINE-001,LN-PN-050,L045,2025-07-12,Helium_Mass_Spec_Sniffer,2.1E-06,30,1.0E-06,FAIL,Jane_Smith,CAL-MS-2025-06,"Weld leak detected at joint J-12. NCR initiated."

@@ -1,0 +1,21 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "schema_version":"1.0",
+  "title":"Cryogenic Tank Specification",
+  "type":"object",
+  "required":["id","part_number","material","service_pressure_bar","hydro_test_pressure_bar","vacuum_jacket","capacity_l"],
+  "properties":{
+    "id":{"type":"string"},
+    "part_number":{"type":"string"},
+    "material":{"type":"string"},
+    "service_pressure_bar":{"type":"number"},
+    "hydro_test_pressure_bar":{"type":"number"},
+    "vacuum_jacket":{"type":"boolean"},
+    "insulation_type":{"type":"string"},
+    "capacity_l":{"type":"number"},
+    "max_operating_temp_C":{"type":"number"},
+    "min_operating_temp_C":{"type":"number"},
+    "coating_or_liner":{"type":"string"},
+    "coc":{"type":"string"}
+  }
+}

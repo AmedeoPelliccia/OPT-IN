@@ -1,0 +1,19 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "schema_version":"1.0",
+  "title":"Repair Record",
+  "type":"object",
+  "required":["id","component_id","repair_date","repair_type","disposition"],
+  "properties":{
+    "id":{"type":"string"},
+    "component_id":{"type":"string"},
+    "repair_date":{"type":"string","format":"date"},
+    "repair_type":{"type":"string"},
+    "disposition":{"type":"string","enum":["repaired","scrapped","use-as-is"]},
+    "repair_procedure":{"type":"string"},
+    "inspector":{"type":"string"},
+    "test_results":{"type":"object"},
+    "airworthiness_approval":{"type":"boolean"},
+    "remarks":{"type":"string"}
+  }
+}

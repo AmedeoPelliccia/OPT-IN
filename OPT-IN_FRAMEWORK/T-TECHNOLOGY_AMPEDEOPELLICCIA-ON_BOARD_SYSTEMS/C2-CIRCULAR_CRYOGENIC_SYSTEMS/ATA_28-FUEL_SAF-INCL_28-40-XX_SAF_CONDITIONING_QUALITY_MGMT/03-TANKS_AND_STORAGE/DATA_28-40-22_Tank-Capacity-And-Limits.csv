@@ -1,0 +1,3 @@
+Tank_ID,Part_Number,Capacity_L,Service_Pressure_bar,Hydro_Test_Pressure_bar,Vacuum_Jacket,Insulation_mm,Max_Operating_Temp_C,Min_Operating_Temp_C,Life_Limit_years,Remarks
+TANK-001,TK-PN-100,950,5.0,7.5,true,120,-50,-253,20,"Baseline LH2 tank"
+TANK-002,TK-PN-200,1200,5.0,7.5,true,150,-50,-253,25,"Wing-integrated tank, CFRP liner"

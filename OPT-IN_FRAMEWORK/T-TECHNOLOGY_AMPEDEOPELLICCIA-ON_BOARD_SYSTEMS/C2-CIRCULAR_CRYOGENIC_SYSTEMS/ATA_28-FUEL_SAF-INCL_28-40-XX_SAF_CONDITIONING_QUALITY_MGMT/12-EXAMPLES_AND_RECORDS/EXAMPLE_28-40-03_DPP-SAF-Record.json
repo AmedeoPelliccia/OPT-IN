@@ -1,0 +1,54 @@
+{
+  "dpp_entry_id": "DPP-SAF-BATCH-2025-Q3-001",
+  "entry_type": "SAF_Fuel_Batch",
+  "batch_info": {
+    "batch_number": "SAF-HEFA-2025-0815",
+    "fuel_type": "SAF-HEFA",
+    "specification": "ASTM D7566 Annex A1 (HEFA-SPK)",
+    "supplier": "Sustainable Fuels Corp",
+    "production_date": "2025-08-10",
+    "quantity_liters": 50000
+  },
+  "quality_data": {
+    "certificate_of_analysis": {
+      "coa_number": "CoA-2025-0815-001",
+      "issue_date": "2025-08-12",
+      "sha256": "f4a3b8c7d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5"
+    },
+    "test_results": {
+      "density_15C_kg_L": 0.782,
+      "viscosity_minus20C_mm2_s": 4.2,
+      "flash_point_C": 42,
+      "freeze_point_C": -52,
+      "water_content_ppm": 18,
+      "particulate_mg_L": 0.3,
+      "sulfur_ppm": 3,
+      "net_heat_combustion_MJ_kg": 43.5,
+      "aromatics_vol_percent": 8.5
+    },
+    "acceptance": "PASS"
+  },
+  "conditioning_records": [
+    {
+      "conditioning_id": "COND-2025-0820-001",
+      "date": "2025-08-20",
+      "facility": "Main_Fuel_Farm",
+      "storage_tank": "SAF-TANK-03",
+      "operator": "Mike Johnson",
+      "procedure": "PROC_28-40-11",
+      "filtration": "10_micron_coalescing",
+      "water_removed_L": 2.5,
+      "record_sha256": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+    }
+  ],
+  "traceability": {
+    "feedstock": "Used_cooking_oil_USA_Midwest",
+    "production_facility": "Renewable_Fuels_Plant_TX",
+    "transportation": "Rail_to_Airport_Hub",
+    "receiving_inspection": "2025-08-18",
+    "msn_usage": ["MSN-1001", "MSN-1003"]
+  },
+  "status": "In_Service",
+  "expiry_date": "2026-08-10",
+  "remarks": "First SAF batch for H2-hybrid demonstration aircraft. Blended 30% with Jet-A1 per certification."
+}
