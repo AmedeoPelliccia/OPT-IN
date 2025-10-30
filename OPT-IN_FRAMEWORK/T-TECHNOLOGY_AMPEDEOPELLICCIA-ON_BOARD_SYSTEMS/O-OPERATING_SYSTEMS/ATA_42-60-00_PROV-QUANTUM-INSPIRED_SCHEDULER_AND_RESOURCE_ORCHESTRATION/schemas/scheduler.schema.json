@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42-60/scheduler.schema.json",
+  "title": "ATA 42-60-00 Quantum-Inspired Scheduler Configuration Schema",
+  "description": "Schema for quantum-inspired scheduler configuration and state",
+  "type": "object",
+  "required": [
+    "scheduler_id",
+    "version",
+    "algorithm_type",
+    "optimization_config",
+    "constraints",
+    "partitions"
+  ],
+  "properties": {
+    "scheduler_id": {
+      "type": "string",
+      "description": "Unique identifier for the scheduler instance",
+      "pattern": "^QS-[A-Z0-9-]+$"
+    },
+    "version": {
+      "type": "string",
+      "description": "Scheduler software version",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "algorithm_type": {
+      "type": "string",
+      "description": "Type of quantum-inspired algorithm",
+      "enum": ["simulated_annealing", "quantum_annealing", "genetic_algorithm", "hybrid"]
+    },
+    "optimization_config": {
+      "type": "object",
+      "required": ["objectives", "parameters"],
+      "properties": {
+        "objectives": {
+          "type": "array",
+          "description": "Multi-objective optimization goals",
+          "items": {
+            "type": "object",
+            "required": ["name", "weight", "direction"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": ["performance", "power", "thermal", "fairness", "utilization"]
+              },
+              "weight": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "direction": {
+                "type": "string",
+                "enum": ["minimize", "maximize"]
+              }
+            }
+          }
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "temperature_initial": {
+              "type": "number",
+              "description": "Initial temperature for simulated annealing"
+            },
+            "temperature_min": {
+              "type": "number",
+              "description": "Minimum temperature threshold"
+            },
+            "cooling_rate": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "max_iterations": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "convergence_threshold": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "wcet_enforcement": {
+          "type": "boolean",
+          "description": "Enforce worst-case execution time bounds"
+        },
+        "temporal_isolation": {
+          "type": "boolean",
+          "description": "ARINC 653 temporal isolation enforcement"
+        },
+        "spatial_isolation": {
+          "type": "boolean",
+          "description": "ARINC 653 spatial isolation enforcement"
+        },
+        "deadline_guarantee": {
+          "type": "boolean",
+          "description": "Hard deadline guarantee mode"
+        },
+        "max_schedule_time_ms": {
+          "type": "number",
+          "description": "Maximum time allowed for schedule computation"
+        }
+      }
+    },
+    "partitions": {
+      "type": "array",
+      "description": "ARINC 653 partitions managed by scheduler",
+      "items": {
+        "type": "object",
+        "required": ["partition_id", "period_ms", "duration_ms", "criticality"],
+        "properties": {
+          "partition_id": {
+            "type": "string",
+            "pattern": "^P[0-9]+$"
+          },
+          "period_ms": {
+            "type": "number",
+            "minimum": 0
+          },
+          "duration_ms": {
+            "type": "number",
+            "minimum": 0
+          },
+          "criticality": {
+            "type": "string",
+            "enum": ["DAL_A", "DAL_B", "DAL_C", "DAL_D", "DAL_E"]
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+          },
+          "resource_requirements": {
+            "type": "object",
+            "properties": {
+              "cpu_percent": {"type": "number", "minimum": 0, "maximum": 100},
+              "memory_mb": {"type": "number", "minimum": 0},
+              "io_bandwidth_mbps": {"type": "number", "minimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "fallback_policy": {
+      "type": "string",
+      "description": "Fallback to classical scheduler on optimization failure",
+      "enum": ["rate_monotonic", "earliest_deadline_first", "fixed_priority"]
+    },
+    "health_monitoring": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "reporting_interval_ms": {"type": "number"},
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["cpu_utilization", "schedule_quality", "optimization_time", "deadline_misses"]
+          }
+        }
+      }
+    }
+  }
+}

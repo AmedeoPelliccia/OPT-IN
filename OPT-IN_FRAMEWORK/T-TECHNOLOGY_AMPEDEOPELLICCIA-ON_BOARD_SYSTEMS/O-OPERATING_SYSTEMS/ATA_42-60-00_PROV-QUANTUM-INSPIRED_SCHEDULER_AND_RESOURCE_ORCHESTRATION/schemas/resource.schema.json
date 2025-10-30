@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42-60/resource.schema.json",
+  "title": "ATA 42-60-00 Resource Model Schema",
+  "description": "Schema for system resource models and limits",
+  "type": "object",
+  "required": ["resource_id", "resource_type", "capacity", "units"],
+  "properties": {
+    "resource_id": {
+      "type": "string",
+      "description": "Unique resource identifier",
+      "pattern": "^RES-[A-Z0-9-]+$"
+    },
+    "resource_type": {
+      "type": "string",
+      "description": "Type of system resource",
+      "enum": ["cpu", "memory", "io_bandwidth", "network_bandwidth", "storage", "custom"]
+    },
+    "capacity": {
+      "type": "object",
+      "required": ["total", "available"],
+      "properties": {
+        "total": {
+          "type": "number",
+          "description": "Total resource capacity",
+          "minimum": 0
+        },
+        "available": {
+          "type": "number",
+          "description": "Currently available capacity",
+          "minimum": 0
+        },
+        "reserved": {
+          "type": "number",
+          "description": "Reserved capacity",
+          "minimum": 0
+        },
+        "allocated": {
+          "type": "number",
+          "description": "Allocated capacity",
+          "minimum": 0
+        }
+      }
+    },
+    "units": {
+      "type": "string",
+      "description": "Units of measurement",
+      "enum": ["percent", "mhz", "mb", "mbps", "iops", "custom"]
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "min_allocation": {
+          "type": "number",
+          "description": "Minimum allocation per partition"
+        },
+        "max_allocation": {
+          "type": "number",
+          "description": "Maximum allocation per partition"
+        },
+        "reservation_limit": {
+          "type": "number",
+          "description": "Maximum reservable capacity"
+        },
+        "oversubscription_factor": {
+          "type": "number",
+          "description": "Allowed oversubscription ratio",
+          "minimum": 1.0
+        }
+      }
+    },
+    "allocations": {
+      "type": "array",
+      "description": "Current resource allocations",
+      "items": {
+        "type": "object",
+        "required": ["partition_id", "amount"],
+        "properties": {
+          "partition_id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "guaranteed": {
+            "type": "boolean",
+            "description": "Whether allocation is guaranteed or best-effort"
+          },
+          "priority": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "performance_characteristics": {
+      "type": "object",
+      "properties": {
+        "latency_us": {
+          "type": "object",
+          "properties": {
+            "typical": {"type": "number"},
+            "worst_case": {"type": "number"}
+          }
+        },
+        "throughput": {
+          "type": "object",
+          "properties": {
+            "typical": {"type": "number"},
+            "peak": {"type": "number"}
+          }
+        },
+        "contention_behavior": {
+          "type": "string",
+          "enum": ["fair", "priority_based", "fifo", "custom"]
+        }
+      }
+    },
+    "health_status": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["healthy", "degraded", "failed", "unknown"]
+        },
+        "utilization_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "error_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "last_check_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Whether resource is safety-critical"
+    },
+    "dal_level": {
+      "type": "string",
+      "enum": ["DAL_A", "DAL_B", "DAL_C", "DAL_D", "DAL_E", "N/A"]
+    }
+  }
+}

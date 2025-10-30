@@ -1,0 +1,191 @@
+schema_version: "1.1"
+id: "ATA_42-60-00_PROV_QUANTUM_SCHEDULER_INDEX"
+chapter: "ATA 42-60-00 (Prov) - QUANTUM-INSPIRED SCHEDULER & RESOURCE ORCHESTRATION"
+governance:
+  owner_role: "IMA Software Engineering / Quantum Scheduler Development"
+  review_board: ["Airworthiness", "Software Safety", "Certification", "Systems Engineering", "Research & Development"]
+  regulatory_basis:
+    - "ARINC 653 Part 1 (Required Services)"
+    - "ARINC 653 Part 2 (Extended Services)"
+    - "RTCA DO-178C (Software Considerations in Airborne Systems)"
+    - "RTCA DO-254 (Hardware Considerations)"
+    - "RTCA DO-330 (Tool Qualification)"
+    - "RTCA DO-297 (IMA Development Guidance)"
+    - "EUROCAE ED-12C"
+    - "EUROCAE ED-202A (MILS)"
+    - "EUROCAE ED-203 (Airborne Security)"
+effectivity:
+  msn: "ALL"
+  scope: "All AMPEL360 configurations with advanced IMA scheduling capabilities"
+  status: "Provisional - Under Development and Validation"
+traceability:
+  crossrefs:
+    - "ATA 22"   # Auto Flight
+    - "ATA 27"   # Flight Controls
+    - "ATA 31"   # Indicating / Recording Systems
+    - "ATA 34"   # Navigation
+    - "ATA 40"   # Multisystem (AI Integration)
+    - "ATA 42"   # Integrated Modular Avionics (Core OS, Hardware, Network)
+    - "ATA 45"   # Onboard Maintenance Systems
+    - "ATA 95"   # Digital Product Passport
+  source_documents:
+    - "QS-SPEC-42-60-001: Quantum-Inspired Scheduler System Specification"
+    - "QS-ARCH-42-60-001: Scheduler Architecture Document"
+    - "QS-ALG-42-60-001: Quantum-Inspired Algorithm Design"
+    - "QS-SAFETY-42-60-001: Safety Assessment and Hazard Analysis"
+    - "QS-SAS-42-60-001: Software Accomplishment Summary (DO-178C)"
+    - "QS-WCET-42-60-001: Worst-Case Execution Time Analysis"
+    - "QS-SIM-42-60-001: Simulation Framework Specification"
+    - "QS-POLICY-42-60-001: Resource Policy Management Design"
+    - "QS-VERIFY-42-60-001: Verification and Validation Plan"
+    - "QS-CERT-42-60-001: Certification Evidence Package"
+    - "QS-TOOL-42-60-001: Toolchain Qualification Plan (DO-330)"
+    - "QS-HIL-42-60-001: Hardware-in-Loop Integration Test Report"
+safety:
+  criticality: "Critical - DAL A Software (Failure Catastrophic)"
+  dal_level: "DAL A"
+  hazards:
+    - "Incorrect schedule computation leading to partition timing violations"
+    - "Resource allocation failure causing safety-critical task starvation"
+    - "Optimization algorithm non-termination causing system hang"
+    - "Invalid resource policy application compromising isolation"
+    - "Schedule transition fault during runtime reconfiguration"
+    - "Quantum algorithm numerical instability affecting determinism"
+    - "Multi-objective optimization converging to unsafe configurations"
+    - "Predictive model error causing incorrect resource reservation"
+  airworthiness_limitation_items:
+    - "WCET bounds for all quantum-inspired algorithms"
+    - "Determinism guarantees for schedule generation"
+    - "Formal verification of safety-critical scheduling paths"
+    - "Resource policy validation and testing"
+    - "Algorithm stability analysis and bounds"
+    - "Fallback to classical scheduling on optimization failure"
+    - "DO-178C Level A software lifecycle compliance"
+    - "Tool qualification per DO-330 for simulation framework"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_42-60-prov.sh"
+  reproducibility_hash: "ci/compute_repro_hash.py"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, regulatory compliance, ATA-42-60 overview"
+      files:
+        - "README.md"
+        - "DESC_42-60-01_Scope-Governance-And-Effectivity.md"
+        - "DATA_42-60-02_Regulatory-Compliance-Matrix.csv"
+        - "DATA_42-60-03_Effectivity-And-Config.csv"
+    - name: "02-DESIGN_AND_ALGORITHMS"
+      description: "Quantum-inspired approach, scheduler architecture, design standards"
+      files:
+        - "README.md"
+        - "DESC_Quantum-Inspired-Approach.md"
+        - "DESC_Scheduler-Architecture.md"
+        - "PROC_42-60-01_Design-Standards-And-Interfaces.md"
+        - "DIAGRAM_Scheduler-High-Level.svg"
+    - name: "03-SIMULATION_AND_VERIFICATION"
+      description: "Simulation framework, validation methodology, test harness"
+      files:
+        - "README.md"
+        - "PROC_42-60-02_Simulation-Framework-And-Validation.md"
+        - "DATA_42-60-04_Experiment-Matrix.csv"
+      subdirectories:
+        - name: "scripts"
+          files:
+            - "sim_orchestrator.py"
+            - "bench_runner.py"
+            - "harness_utils.py"
+        - name: "examples"
+          files:
+            - "EXAMPLE_EXP_01_config.json"
+            - "EXAMPLE_RESULT_01.json"
+    - name: "04-POLICIES_AND_RESOURCE_MODELS"
+      description: "Resource policies, fairness policies, priority policies, resource limits"
+      files:
+        - "README.md"
+        - "DATA_42-60-03_Resource-Limits.csv"
+      subdirectories:
+        - name: "policy"
+          files:
+            - "POLICY_FAIRNESS.json"
+            - "POLICY_PRIORITY.json"
+        - name: "schemas"
+          files:
+            - "resource-models.json"
+    - name: "05-SAFETY_AND_CERTIFICATION_WORKBENCH"
+      description: "Safety assessment, DO-297 interface, SIL testing, formal proofs"
+      files:
+        - "README.md"
+        - "PROC_42-60-03_Safety-Assessment-And-Interface-To-DO-297.md"
+        - "DATA_42-60-05_SIL-And-Test-Matrix.csv"
+      subdirectories:
+        - name: "FORMAT_PROOFS"
+          files:
+            - "model_checking_notes.md"
+    - name: "06-TOOLS_AND_INTEGRATION"
+      description: "Toolchain, reproducible builds, HIL adapters, AFDX emulation"
+      files:
+        - "README.md"
+      subdirectories:
+        - name: "toolchain"
+          files:
+            - "build.sh"
+            - "reproducible_build.md"
+            - "requirements.txt"
+          subdirectories:
+            - name: "container"
+              files:
+                - "Dockerfile"
+                - "entrypoint.sh"
+        - name: "connectors"
+          files:
+            - "hil_adapter.py"
+            - "afdx_emulator.py"
+    - name: "07-NONCONFORMANCE_AND_DEVIATION"
+      description: "NCR handling, deviation management, problem reporting"
+      files:
+        - "README.md"
+        - "PROC_42-60-04_Nonconformance-Handling.md"
+        - "DATA_42-60-06_NCR-Template.csv"
+    - name: "08-SIDE-CAR_META"
+      description: "Metadata sidecars for documents and procedures"
+      files:
+        - "document.meta.yaml"
+        - "procedure.meta.yaml"
+    - name: "09-EXAMPLES_AND_RECORDS"
+      description: "Example experiment records and benchmark results"
+      files:
+        - "README.md"
+        - "EXAMPLE_42-60-01_Experiment-Record.json"
+        - "EXAMPLE_42-60-02_Benchmark-Results.csv"
+    - name: "10-ARTIFACTS_AND_LOGS"
+      description: "Runtime outputs, build artifacts, execution logs (gitignored)"
+      note: "This directory is not tracked in version control"
+  schemas:
+    - name: "scheduler.schema.json"
+      description: "Quantum-inspired scheduler configuration and state schema"
+    - name: "policy.schema.json"
+      description: "Resource policy definition schema"
+    - name: "resource.schema.json"
+      description: "Resource model and limits schema"
+    - name: "experiment.schema.json"
+      description: "Simulation experiment specification schema"
+    - name: "result.schema.json"
+      description: "Experiment result and metrics schema"
+approvals:
+  - authority: "IMA Quantum Scheduler Engineering"
+    status: "In Development"
+    date: "2025-10-30"
+  - authority: "Software Safety Engineering"
+    status: "Under Review"
+    date: "2025-10-30"
+  - authority: "Airworthiness Engineering"
+    status: "Pending"
+    date: "2025-10-30"
+  - authority: "Certification Engineering"
+    status: "Pending"
+    date: "2025-10-30"
+revision: "0.1.0"
+effective_date: "2025-10-30"
+next_review: "2026-01-30"
+notes: "Provisional status - Subject to validation and regulatory review before operational deployment"

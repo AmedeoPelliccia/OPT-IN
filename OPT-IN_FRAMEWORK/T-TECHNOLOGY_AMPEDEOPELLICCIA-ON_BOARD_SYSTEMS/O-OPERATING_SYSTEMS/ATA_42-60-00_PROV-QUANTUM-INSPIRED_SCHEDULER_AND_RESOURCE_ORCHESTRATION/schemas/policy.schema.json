@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42-60/policy.schema.json",
+  "title": "ATA 42-60-00 Resource Policy Schema",
+  "description": "Schema for resource allocation and scheduling policy definitions",
+  "type": "object",
+  "required": ["policy_id", "policy_type", "version", "rules"],
+  "properties": {
+    "policy_id": {
+      "type": "string",
+      "description": "Unique policy identifier",
+      "pattern": "^POLICY-[A-Z0-9-]+$"
+    },
+    "policy_type": {
+      "type": "string",
+      "description": "Type of resource policy",
+      "enum": ["fairness", "priority", "deadline", "throughput", "power", "hybrid"]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable policy description"
+    },
+    "rules": {
+      "type": "array",
+      "description": "Policy rules to be enforced",
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "condition", "action"],
+        "properties": {
+          "rule_id": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer",
+            "description": "Rule evaluation priority (higher = evaluated first)"
+          },
+          "condition": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["partition_criticality", "resource_utilization", "deadline_proximity", "always"]
+              },
+              "parameters": {
+                "type": "object"
+              }
+            }
+          },
+          "action": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["adjust_priority", "reserve_resource", "throttle", "preempt", "alert"]
+              },
+              "parameters": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "min_cpu_guarantee_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "max_response_time_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fairness_window_ms": {
+          "type": "number",
+          "description": "Time window for fairness computation"
+        }
+      }
+    },
+    "applicability": {
+      "type": "object",
+      "properties": {
+        "partitions": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "criticality_levels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["DAL_A", "DAL_B", "DAL_C", "DAL_D", "DAL_E"]
+          }
+        },
+        "flight_phases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["preflight", "taxi", "takeoff", "climb", "cruise", "descent", "approach", "landing"]
+          }
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "formal_verification": {
+          "type": "boolean",
+          "description": "Policy has been formally verified"
+        },
+        "test_coverage_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "approval_authority": {
+          "type": "string"
+        },
+        "approval_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  }
+}
