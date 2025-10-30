@@ -1,0 +1,62 @@
+schema_version: "1.1"
+id: "[UUID or unique document identifier]"
+document:
+  type: "[PROC|DATA|DESC|TESTPLAN|EXAMPLE]"
+  title: "[Human-readable document title]"
+  revision: "[X.Y.Z]"
+  effective_date: "[YYYY-MM-DD]"
+artifact_path: "[Relative path to artifact from repository root]"
+artifact_sha256: "[64-character hexadecimal SHA-256 hash]"
+schema_id: "[Schema reference if applicable, e.g., change-request.schema.json]"
+schema_version: "[Schema version]"
+effectivity:
+  scope: "[All AMPEL360 BWB configurations | Specific description]"
+  msn: "[ALL | specific MSN range]"
+  config: "[ALL | BUSINESS | ECONOMY | CARGO | specific config]"
+  lopa: "[ALL | LOPA-vX.Y | specific LOPA version]"
+  notes: "[Additional effectivity clarification]"
+change_request_id: "[ECR-YYYY-NNNN or NCR-YYYY-NNNN if applicable]"
+regulatory_refs:
+  - regulation: "[CS-25, 14 CFR Part 25, EASA Part-21, etc.]"
+    clause: "[Specific clause or section]"
+    impact: "[No_Impact | Minor_Impact | Major_Impact | Requires_Recertification]"
+safety_assessment_ref: "[SA-YYYY-NNNN if applicable]"
+numeric_checks:
+  # Include if document contains numeric criteria
+  - parameter: "[Parameter name]"
+    threshold_min: [numeric value]
+    threshold_max: [numeric value]
+    unit: "[Unit of measurement]"
+    tolerance: [numeric value]
+    data_source: "[Reference to DATA_*.csv file]"
+approvals:
+  - role: "[Configuration_Control | Airworthiness | Human_Factors | Materials_Process | Structures | Safety_Engineering]"
+    reviewer_id: "[Unique reviewer identifier]"
+    reviewer_name: "[Full name]"
+    timestamp: "[YYYY-MM-DDTHH:MM:SSZ]"
+    status: "[Draft | Released | Approved | Superseded]"
+    comment: "[Optional reviewer comment]"
+    signature: "[Digital signature or approval reference]"
+audit_log:
+  - event: "[Created | Modified | Reviewed | Approved | Released | Superseded]"
+    actor: "[Person or system name]"
+    timestamp: "[YYYY-MM-DDTHH:MM:SSZ]"
+    detail: "[Description of action taken]"
+traceability:
+  related_documents:
+    - doc_id: "[Document identifier]"
+      doc_type: "[Engineering_Drawing | Test_Report | Safety_Assessment | etc.]"
+      relationship: "[References | Supersedes | Superseded_By | Related_To]"
+      checksum:
+        algorithm: "sha256"
+        value: "[64-character hexadecimal hash]"
+  parent_change_request: "[ECR/NCR-YYYY-NNNN if this is a child change]"
+  child_change_requests:
+    - "[ECR/NCR-YYYY-NNNN]"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "[64-character hexadecimal SHA-256 hash of artifact]"
+  validation_method: "[How integrity was verified]"
+  validation_date: "[YYYY-MM-DD]"
+notes: "[Additional notes or special instructions]"

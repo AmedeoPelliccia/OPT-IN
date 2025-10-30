@@ -1,0 +1,9 @@
+Test_ID,Change_Request_Ref,Test_Type,Test_Date,Objective_ID,Parameter,Threshold_Min,Threshold_Max,Measured_Value,Unit,Tolerance,Pass_Fail,Deviation_Justification,Test_Engineer,Approved_By,Approval_Date
+FT-001,ECR-2025-0001,Functional,2025-10-15,OBJ-001,Torque,15.0,20.0,17.5,Nm,0.5,Pass,,J.Smith,A.Johnson,2025-10-16
+FT-001,ECR-2025-0001,Functional,2025-10-15,OBJ-001,Deflection,-5.0,5.0,2.3,mm,0.2,Pass,,J.Smith,A.Johnson,2025-10-16
+FT-002,ECR-2025-0001,Functional,2025-10-15,OBJ-002,Voltage,110.0,118.0,115.2,V,1.0,Pass,,J.Smith,A.Johnson,2025-10-16
+FT-002,ECR-2025-0001,Functional,2025-10-15,OBJ-002,Current,0.5,2.0,1.2,A,0.1,Pass,,J.Smith,A.Johnson,2025-10-16
+IT-001,ECR-2025-0001,Integration,2025-10-16,OBJ-003,Response_Time,0,500,245,ms,50,Pass,,K.Lee,A.Johnson,2025-10-17
+IT-001,ECR-2025-0001,Integration,2025-10-16,OBJ-003,Signal_Strength,-90,-40,-52,dBm,5,Pass,,K.Lee,A.Johnson,2025-10-17
+RT-001,ECR-2025-0001,Regression,2025-10-17,OBJ-004,Load_Capacity,0,500,450,kg,10,Pass,,J.Smith,A.Johnson,2025-10-18
+RT-001,ECR-2025-0001,Regression,2025-10-17,OBJ-004,Cycle_Time,5,15,8.5,s,1,Pass,,J.Smith,A.Johnson,2025-10-18
