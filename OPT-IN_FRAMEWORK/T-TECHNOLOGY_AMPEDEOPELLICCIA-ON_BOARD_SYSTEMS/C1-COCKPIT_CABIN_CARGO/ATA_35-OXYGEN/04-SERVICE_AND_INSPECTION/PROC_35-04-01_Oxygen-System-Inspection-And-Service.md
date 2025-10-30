@@ -192,13 +192,18 @@ Complete Oxygen System Inspection Report with the following:
 
 ## References
 
-- ATA-35-02: Oxygen System Design
-- ATA-35-03: Cylinders and Storage
-- ATA-35-08: NDT and Inspection Records
-- ATA-35-09: Repair Guidelines
-- ATA-35-11: Nonconformance and Deviation
-- FAA Part 25.1441: Oxygen equipment and supply
-- EASA CS-25.1441: Oxygen equipment and supply
+### Internal Documents
+- [ATA-35-02](../02-OXYGEN_SYSTEM_DESIGN/): Oxygen System Design
+- [ATA-35-03](../03-CYLINDERS_AND_STORAGE/): Cylinders and Storage
+- [ATA-35-08](../08-NDT_AND_INSPECTION_RECORDS/): NDT and Inspection Records
+- [ATA-35-09](../09-REPAIR_GUIDELINES/): Repair Guidelines
+- [ATA-35-11](../11-NONCONFORMANCE_AND_DEVIATION/): Nonconformance and Deviation
+- [DATA_35-02-03](../02-OXYGEN_SYSTEM_DESIGN/DATA_35-02-03_Oxygen-System-Limits-And-Parameters.csv): Oxygen System Limits and Parameters
+- [DATA_35-04-04](DATA_35-04-04_Inspection-Intervals-And-Acceptance.csv): Inspection Intervals and Acceptance
+
+### Regulations
+- [FAA Part 25.1441](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1441): Oxygen equipment and supply
+- [EASA CS-25.1441](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes): Oxygen equipment and supply
 
 ## Revision History
 

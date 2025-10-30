@@ -147,12 +147,18 @@ Complete Cylinder Handling and Storage Log with the following information:
 
 ## References
 
-- ATA-35-02: Oxygen System Design
-- ATA-35-04: Service and Inspection
-- ATA-95: Digital Product Passport
-- DOT CFR 49 Part 173: Shippers - General Requirements for Shipments and Packagings
-- ISO 11118: Transportable gas cylinders
-- CGA P-2.5: Transfilling of High Pressure Gaseous Oxygen
+### Internal Documents
+- [ATA-35-02](../02-OXYGEN_SYSTEM_DESIGN/): Oxygen System Design
+- [ATA-35-04](../04-SERVICE_AND_INSPECTION/): Service and Inspection
+- [DATA_35-02-03](../02-OXYGEN_SYSTEM_DESIGN/DATA_35-02-03_Oxygen-System-Limits-And-Parameters.csv): Oxygen System Limits and Parameters
+
+### Related ATA Chapters
+- [ATA-95](../../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/): Digital Product Passport
+
+### External Standards
+- [DOT CFR 49 Part 173](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173): Shippers - General Requirements for Shipments and Packagings
+- [ISO 11118](https://www.iso.org/standard/19077.html): Transportable gas cylinders
+- [CGA P-2.5](https://www.cganet.com/): Transfilling of High Pressure Gaseous Oxygen
 
 ## Revision History
 

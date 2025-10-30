@@ -18,15 +18,15 @@ This chapter covers the complete oxygen system for crew and passengers, includin
 
 - **Limits:** All cylinder service pressures, test pressures, regulator setpoints, leak rates, oxygen purity thresholds, flow rates, deployment times, corrosion limits, and inspection intervals are mandatory limits and cannot be exceeded without engineering disposition and airworthiness approval.
 - **Cross-Chapter Dependencies:**
-  - **ATA-04:** Airworthiness Limitations (oxygen system inspection intervals and life limits).
-  - **ATA-20:** Standard Practices (torque values, sealants, fasteners for oxygen fittings).
-  - **ATA-21:** Air Conditioning & Pressurization (cabin altitude monitoring, automatic deployment triggers).
-  - **ATA-24:** Electrical Power (oxygen sensor power, deployment solenoid power).
-  - **ATA-25:** Equipment/Furnishings (mask stowage, PSU integration).
-  - **ATA-26:** Fire Protection (oxygen storage area fire detection and suppression).
-  - **ATA-31:** Indicating/Recording Systems (oxygen pressure indication, mask deployment annunciation).
-  - **ATA-44:** Cabin Systems (passenger service unit integration, crew oxygen controls).
-  - **ATA-95:** Digital Product Passport (cylinder serial traceability, CoC, refill records).
+  - **[ATA-04](../../A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/):** Airworthiness Limitations (oxygen system inspection intervals and life limits).
+  - **[ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/):** Standard Practices (torque values, sealants, fasteners for oxygen fittings).
+  - **[ATA-21](../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING/):** Air Conditioning & Pressurization (cabin altitude monitoring, automatic deployment triggers).
+  - **[ATA-24](../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/):** Electrical Power (oxygen sensor power, deployment solenoid power).
+  - **[ATA-25](./ATA_25-EQUIPMENT_FURNISHINGS/):** Equipment/Furnishings (mask stowage, PSU integration).
+  - **[ATA-26](../../E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/):** Fire Protection (oxygen storage area fire detection and suppression).
+  - **[ATA-31](../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/):** Indicating/Recording Systems (oxygen pressure indication, mask deployment annunciation).
+  - **[ATA-44](./ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/):** Cabin Systems (passenger service unit integration, crew oxygen controls).
+  - **[ATA-95](../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/):** Digital Product Passport (cylinder serial traceability, CoC, refill records).
 - **Traceability:** All repairs, modifications, cylinder refills, pressure tests, and inspections must be recorded with full traceability to Materials & Processes (M&P) certifications, NDT reports, cylinder Certificates of Conformance (CoC), hydrostatic test certificates, oxygen purity analysis, and Digital Product Passport (DPP) entries per ATA-95.
 - **Data Integrity:** All changes are validated by the CI script `ci/validate_ata35.sh`, which enforces schemas, naming conventions, and metadata sidecar requirements.
 
@@ -64,7 +64,7 @@ This chapter covers the complete oxygen system for crew and passengers, includin
 
 ## Key Requirements
 
-### Repair Records (Schema: `repair-record.schema.json`)
+### Repair Records (Schema: [`repair-record.schema.json`](schemas/repair-record.schema.json))
 
 All oxygen system repairs must include the following specific fields:
 - **Component ID:** Cylinder serial, part number, regulator serial, valve serial
@@ -122,9 +122,84 @@ All oxygen handling and storage must:
 5. Provide adequate ventilation in storage and service areas
 6. Train personnel in oxygen fire hazards and emergency response
 
+## Cross-References
+
+### Related ATA Chapters
+
+- **[ATA-04](../../A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/):** Airworthiness Limitations (inspection intervals, life limits)
+- **[ATA-05](../../A-AIRFRAME/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/):** Time Limits & Maintenance Checks (scheduled inspections)
+- **[ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/):** Standard Practices - Airframe (torque, fasteners, bonding, sealing)
+- **[ATA-21](../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING/):** Air Conditioning & Pressurization (cabin altitude monitoring, deployment triggers)
+- **[ATA-24](../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/):** Electrical Power (sensor power, deployment solenoid power, indications)
+- **[ATA-25](./ATA_25-EQUIPMENT_FURNISHINGS/):** Equipment/Furnishings (mask stowage, PSU integration, crew stations)
+- **[ATA-26](../../E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/):** Fire Protection (oxygen storage area fire detection and suppression)
+- **[ATA-31](../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/):** Indicating/Recording Systems (pressure indication, deployment annunciation)
+- **[ATA-44](./ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/):** Cabin Systems (PSU integration, crew oxygen controls, attendant oxygen)
+- **[ATA-51](../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES-GENERAL/):** Standard Practices and Structures - General (structural repairs)
+- **[ATA-95](../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/):** Digital Product Passport (traceability, CoC, refill records, maintenance history)
+
+### Internal Document References
+
+#### Procedures
+- [PROC_35-03-01](03-CYLINDERS_AND_STORAGE/PROC_35-03-01_Cylinder-Handling-Storage-And-Traceability.md) - Cylinder Handling, Storage and Traceability
+- [PROC_35-04-01](04-SERVICE_AND_INSPECTION/PROC_35-04-01_Oxygen-System-Inspection-And-Service.md) - Oxygen System Inspection and Service
+- [PROC_35-08-01](08-NDT_AND_INSPECTION_RECORDS/PROC_35-08-01_NDT-For-Pressure-Vessels-And-Fittings.md) - NDT for Pressure Vessels and Fittings
+
+#### Descriptions
+- [DESC_35-01-01](01-GENERAL/DESC_35-01-01_Scope-Governance-And-Effectivity.md) - Scope, Governance and Effectivity
+- [DESC_35-05-01](05-REGULATORY_AND_SAFETY/DESC_35-05-01_Regulatory-References-And-Compliance.md) - Regulatory References and Compliance
+
+#### Data Tables
+- [DATA_35-02-03](02-OXYGEN_SYSTEM_DESIGN/DATA_35-02-03_Oxygen-System-Limits-And-Parameters.csv) - Oxygen System Limits and Parameters
+- [DATA_35-04-04](04-SERVICE_AND_INSPECTION/DATA_35-04-04_Inspection-Intervals-And-Acceptance.csv) - Inspection Intervals and Acceptance
+- [DATA_35-06-01](06-MATERIALS_M_AND_P/DATA_35-06-01_Approved-Materials-And-Compatibility.csv) - Approved Materials and Compatibility
+
+#### Schemas
+- [oxygen-system.schema.json](schemas/oxygen-system.schema.json) - Oxygen system specification
+- [repair-record.schema.json](schemas/repair-record.schema.json) - Repair record with oxygen-specific fields
+- [inspection.schema.json](schemas/inspection.schema.json) - Inspection interval and acceptance criteria
+- [damage-classification.schema.json](schemas/damage-classification.schema.json) - Damage assessment and classification
+
+#### Examples
+- [EXAMPLE_35-14-01](14-EXAMPLES_AND_RECORDS/EXAMPLE_35-14-01_Repair-Record-Example.json) - Repair Record Example
+- [EXAMPLE_35-14-02](14-EXAMPLES_AND_RECORDS/EXAMPLE_35-14-02_Pressure-Test-Log.csv) - Pressure Test Log
+
+### External Standards and Regulations
+
+#### FAA Regulations
+- [14 CFR Part 25.1441](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1441) - Oxygen equipment and supply
+- [14 CFR Part 25.1443](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1443) - Minimum mass flow of supplemental oxygen
+- [14 CFR Part 25.1445](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1445) - Equipment standards for oxygen dispensing units
+- [14 CFR Part 25.1447](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1447) - Equipment standards for oxygen dispensing units (crew)
+- [14 CFR Part 25.1449](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1449) - Means for determining use of oxygen
+- [14 CFR Part 25.1450](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1450) - Chemical oxygen generators
+- [14 CFR Part 25.1453](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1453) - Protection of oxygen equipment from rupture
+
+#### EASA Regulations
+- [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) - Certification Specifications for Large Aeroplanes (CS-25.1441 through CS-25.1453)
+
+#### International Standards
+- [RTCA DO-160](https://www.rtca.org/) - Environmental Conditions and Test Procedures for Airborne Equipment
+- [MIL-PRF-27210](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=35789) - Oxygen, Aviator's Breathing, Liquid and Gas
+- [DOT CFR 49 Part 173](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173) - Shippers - General Requirements for Shipments and Packagings
+- [ISO 11118](https://www.iso.org/standard/19077.html) - Transportable gas cylinders
+
+#### Material and Testing Standards
+- [AMS Specifications](https://www.sae.org/standards/content/ams/) - Aerospace Material Specifications (SAE)
+- [ASTM E1444](https://www.astm.org/e1444-16.html) - Magnetic Particle Testing
+- [ASTM E1417](https://www.astm.org/e1417_e1417m-21.html) - Liquid Penetrant Testing
+- [ASTM E1742](https://www.astm.org/e1742-21.html) - Radiographic Examination
+- [ASTM E2375](https://www.astm.org/e2375-21.html) - Ultrasonic Testing of Wrought Products
+
+#### Industry Guidelines
+- [CGA (Compressed Gas Association)](https://www.cganet.com/) - Gas handling and safety guidelines
+- CGA G-4.4 - Industrial Practices for Gaseous Oxygen Transmission and Distribution Piping Systems
+- CGA P-2.5 - Transfilling of High Pressure Gaseous Oxygen
+- CGA V-1 - Compressed Gas Cylinder Valve Outlet and Inlet Connections
+
 ## Inspection Intervals
 
-Refer to `04-SERVICE_AND_INSPECTION/DATA_35-04-04_Inspection-Intervals-And-Acceptance.csv` for the complete inspection schedule. Key intervals include:
+Refer to [`DATA_35-04-04_Inspection-Intervals-And-Acceptance.csv`](04-SERVICE_AND_INSPECTION/DATA_35-04-04_Inspection-Intervals-And-Acceptance.csv) for the complete inspection schedule. Key intervals include:
 - **General Visual Inspection (GVI):** 12 months or 1000 flight hours
 - **Detailed Inspection (DVI):** 36 months
 - **Cylinder Hydrostatic Test:** 60 months (or per manufacturer/regulatory requirement)
@@ -135,17 +210,17 @@ Refer to `04-SERVICE_AND_INSPECTION/DATA_35-04-04_Inspection-Intervals-And-Accep
 
 ## Safety and Compliance
 
-- **Regulatory Basis:** Complies with FAA Part 25.1441, 25.1443, 25.1445, 25.1447, 25.1449, 25.1450, 25.1453, and EASA CS-25 equivalents.
-- **Pressure Vessel Standards:** DOT (Department of Transportation) cylinder specifications, ISO 11118 (transportable gas cylinders).
-- **Environmental Qualification:** DO-160 (environmental conditions and test procedures).
-- **Material Standards:** MMPDS (Metallic Materials Properties Development and Standardization), AMS (Aerospace Material Specifications).
-- **NDT Standards:** ASTM E1444 (ultrasonic), ASTM E1417 (penetrant), ASTM E1742 (radiographic).
-- **Oxygen Standards:** CGA (Compressed Gas Association) guidelines, MIL-PRF-27210 (oxygen, aviator's breathing, liquid and gas).
-- **Airworthiness Limitations:** All items in this chapter that are classified as Airworthiness Limitation Items (ALIs) are cross-referenced in ATA-04 and are non-deferrable.
+- **Regulatory Basis:** Complies with [FAA 14 CFR Part 25.1441-1453](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR14d23180bde74c3/section-25.1441), and [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) equivalents. See [DESC_35-05-01](05-REGULATORY_AND_SAFETY/DESC_35-05-01_Regulatory-References-And-Compliance.md) for complete regulatory mapping.
+- **Pressure Vessel Standards:** [DOT CFR 49 Part 173](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173) (Department of Transportation cylinder specifications), [ISO 11118](https://www.iso.org/standard/19077.html) (transportable gas cylinders).
+- **Environmental Qualification:** [RTCA DO-160](https://www.rtca.org/) (environmental conditions and test procedures for airborne equipment).
+- **Material Standards:** MMPDS (Metallic Materials Properties Development and Standardization), [AMS (Aerospace Material Specifications)](https://www.sae.org/standards/content/ams/).
+- **NDT Standards:** [ASTM E1444](https://www.astm.org/e1444-16.html) (ultrasonic), [ASTM E1417](https://www.astm.org/e1417_e1417m-21.html) (penetrant), [ASTM E1742](https://www.astm.org/e1742-21.html) (radiographic).
+- **Oxygen Standards:** [CGA (Compressed Gas Association)](https://www.cganet.com/) guidelines, [MIL-PRF-27210](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=35789) (oxygen, aviator's breathing, liquid and gas).
+- **Airworthiness Limitations:** All items in this chapter that are classified as Airworthiness Limitation Items (ALIs) are cross-referenced in [ATA-04](../../A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/) and are non-deferrable.
 
 ## Digital Product Passport Integration
 
-All maintenance actions on oxygen system components must be logged to the Digital Product Passport (ATA-95) including:
+All maintenance actions on oxygen system components must be logged to the [Digital Product Passport (ATA-95)](../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/) including:
 - Cylinder serial numbers and part numbers
 - Installation/removal dates and flight hours
 - Hydrostatic test dates and results

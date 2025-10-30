@@ -187,14 +187,20 @@ NDT technicians performing oxygen pressure vessel inspections must:
 
 ## References
 
-- ASTM E1444: Standard Practice for Magnetic Particle Testing
-- ASTM E1417: Standard Practice for Liquid Penetrant Testing
-- ASTM E1742: Standard Practice for Radiographic Examination
-- ASTM E2375: Standard Practice for Ultrasonic Testing
-- AMS 2644: Inspection, Magnetic Particle
-- CGA G-4.4: Oxygen cleaning and compatibility
-- ATA-35-03: Cylinders and Storage
-- ATA-35-09: Repair Guidelines
+### Internal Documents
+- [ATA-35-03](../03-CYLINDERS_AND_STORAGE/): Cylinders and Storage
+- [ATA-35-09](../09-REPAIR_GUIDELINES/): Repair Guidelines
+- [DATA_35-02-03](../02-OXYGEN_SYSTEM_DESIGN/DATA_35-02-03_Oxygen-System-Limits-And-Parameters.csv): Oxygen System Limits and Parameters
+
+### NDT Standards
+- [ASTM E1444](https://www.astm.org/e1444-16.html): Standard Practice for Magnetic Particle Testing
+- [ASTM E1417](https://www.astm.org/e1417_e1417m-21.html): Standard Practice for Liquid Penetrant Testing
+- [ASTM E1742](https://www.astm.org/e1742-21.html): Standard Practice for Radiographic Examination
+- [ASTM E2375](https://www.astm.org/e2375-21.html): Standard Practice for Ultrasonic Testing
+- [AMS 2644](https://www.sae.org/standards/content/ams2644/): Inspection, Magnetic Particle
+
+### Industry Guidelines
+- [CGA G-4.4](https://www.cganet.com/): Oxygen cleaning and compatibility
 
 ## Revision History
 

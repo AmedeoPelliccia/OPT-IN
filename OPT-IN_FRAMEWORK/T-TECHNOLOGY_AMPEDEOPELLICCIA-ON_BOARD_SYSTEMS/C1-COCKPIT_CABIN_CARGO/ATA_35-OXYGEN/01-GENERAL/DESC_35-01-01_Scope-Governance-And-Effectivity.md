@@ -61,7 +61,7 @@ This chapter complies with the following regulations and standards:
 
 ### Airworthiness Limitations
 
-The following items are designated as Airworthiness Limitation Items (ALI) per ATA-04 and are non-deferrable:
+The following items are designated as Airworthiness Limitation Items (ALI) per [ATA-04](../../../A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/) and are non-deferrable:
 
 - Oxygen cylinder hydrostatic test intervals (typically 60 months)
 - Cylinder neck and valve NDT inspections (per life cycle or after damage)
@@ -76,7 +76,7 @@ All numeric limits, tolerances, and acceptance criteria defined in this chapter 
 1. Engineering disposition and analysis
 2. Airworthiness approval
 3. Safety assessment
-4. Documentation in Digital Product Passport (ATA-95)
+4. Documentation in [Digital Product Passport (ATA-95)](../../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/)
 
 This includes but is not limited to:
 - Cylinder service and test pressures
@@ -131,16 +131,16 @@ All retrofits, modifications, and service bulletins affecting oxygen systems mus
 
 This chapter has dependencies on and provides inputs to:
 
-- **ATA-04:** Airworthiness Limitations (inspection intervals, life limits)
-- **ATA-05:** Time Limits & Maintenance Checks (scheduled inspections)
-- **ATA-20:** Standard Practices - Airframe (torque, fasteners, sealants)
-- **ATA-21:** Air Conditioning & Pressurization (cabin altitude monitoring, deployment triggers)
-- **ATA-24:** Electrical Power (sensor power, deployment solenoid power, indications)
-- **ATA-25:** Equipment/Furnishings (mask stowage, PSU integration, crew stations)
-- **ATA-26:** Fire Protection (oxygen storage area fire detection and suppression)
-- **ATA-31:** Indicating/Recording Systems (pressure indication, deployment annunciation)
-- **ATA-44:** Cabin Systems (PSU integration, crew oxygen controls, attendant oxygen)
-- **ATA-95:** Digital Product Passport (traceability, CoC, refill records, maintenance history)
+- **[ATA-04](../../../A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/):** Airworthiness Limitations (inspection intervals, life limits)
+- **[ATA-05](../../../A-AIRFRAME/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/):** Time Limits & Maintenance Checks (scheduled inspections)
+- **[ATA-20](../../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/):** Standard Practices - Airframe (torque, fasteners, sealants)
+- **[ATA-21](../../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING/):** Air Conditioning & Pressurization (cabin altitude monitoring, deployment triggers)
+- **[ATA-24](../../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/):** Electrical Power (sensor power, deployment solenoid power, indications)
+- **[ATA-25](../../ATA_25-EQUIPMENT_FURNISHINGS/):** Equipment/Furnishings (mask stowage, PSU integration, crew stations)
+- **[ATA-26](../../../E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/):** Fire Protection (oxygen storage area fire detection and suppression)
+- **[ATA-31](../../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/):** Indicating/Recording Systems (pressure indication, deployment annunciation)
+- **[ATA-44](../../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/):** Cabin Systems (PSU integration, crew oxygen controls, attendant oxygen)
+- **[ATA-95](../../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/):** Digital Product Passport (traceability, CoC, refill records, maintenance history)
 
 ## Document Control
 
