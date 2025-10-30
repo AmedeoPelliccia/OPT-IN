@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Cryogenic Sensor Specification",
+  "description": "Specification for sensors used in cryogenic hydrogen systems",
+  "type": "object",
+  "required": [
+    "sensor_id",
+    "sensor_type",
+    "manufacturer",
+    "measurement_range",
+    "accuracy"
+  ],
+  "properties": {
+    "sensor_id": {
+      "type": "string",
+      "description": "Unique sensor identifier"
+    },
+    "sensor_type": {
+      "type": "string",
+      "enum": [
+        "Temperature - RTD",
+        "Temperature - Thermocouple",
+        "Pressure - Strain Gauge",
+        "Pressure - Capacitive",
+        "Level - Capacitive",
+        "Level - Differential Pressure",
+        "Flow - Coriolis",
+        "Flow - Ultrasonic",
+        "Flow - Thermal",
+        "Hydrogen Detector",
+        "Vacuum Gauge"
+      ]
+    },
+    "manufacturer": {
+      "type": "object",
+      "required": ["name", "model", "serial_number"],
+      "properties": {
+        "name": {"type": "string"},
+        "model": {"type": "string"},
+        "part_number": {"type": "string"},
+        "serial_number": {"type": "string"},
+        "manufacture_date": {"type": "string", "format": "date"}
+      }
+    },
+    "measurement_range": {
+      "type": "object",
+      "required": ["min", "max", "units"],
+      "properties": {
+        "min": {"type": "number"},
+        "max": {"type": "number"},
+        "units": {"type": "string"}
+      }
+    },
+    "accuracy": {
+      "type": "object",
+      "required": ["value", "units"],
+      "properties": {
+        "value": {"type": "number"},
+        "units": {"type": "string"},
+        "type": {
+          "type": "string",
+          "enum": ["Absolute", "Percent of Span", "Percent of Reading"]
+        }
+      }
+    },
+    "temperature_specifications": {
+      "type": "object",
+      "properties": {
+        "rtd_type": {
+          "type": "string",
+          "enum": ["Pt100", "Pt1000"]
+        },
+        "thermocouple_type": {
+          "type": "string",
+          "enum": ["Type E", "Type K", "Type T", "Type J"]
+        },
+        "wire_configuration": {
+          "type": "string",
+          "enum": ["2-wire", "3-wire", "4-wire"]
+        },
+        "element_material": {"type": "string"},
+        "sheath_material": {"type": "string"},
+        "response_time_seconds": {"type": "number"}
+      }
+    },
+    "pressure_specifications": {
+      "type": "object",
+      "properties": {
+        "pressure_type": {
+          "type": "string",
+          "enum": ["Absolute", "Gauge", "Differential"]
+        },
+        "sensing_element": {"type": "string"},
+        "overpressure_rating_bar": {"type": "number"},
+        "burst_pressure_bar": {"type": "number"},
+        "wetted_materials": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "level_specifications": {
+      "type": "object",
+      "properties": {
+        "probe_length_mm": {"type": "number"},
+        "probe_material": {"type": "string"},
+        "capacitance_pf": {"type": "number"},
+        "output_type": {
+          "type": "string",
+          "enum": ["Analog", "Digital", "Discrete"]
+        }
+      }
+    },
+    "flow_specifications": {
+      "type": "object",
+      "properties": {
+        "flow_rate_range_lpm": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"}
+          }
+        },
+        "line_size_inches": {"type": "number"},
+        "pressure_drop_mbar": {"type": "number"},
+        "fluid_compatibility": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "hydrogen_detector_specifications": {
+      "type": "object",
+      "properties": {
+        "detection_range_ppm": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"}
+          }
+        },
+        "alarm_thresholds": {
+          "type": "object",
+          "properties": {
+            "warning_ppm": {"type": "number"},
+            "alarm_ppm": {"type": "number"}
+          }
+        },
+        "response_time_seconds": {"type": "number"},
+        "sensor_life_months": {"type": "number"}
+      }
+    },
+    "electrical": {
+      "type": "object",
+      "required": ["output_type"],
+      "properties": {
+        "output_type": {
+          "type": "string",
+          "enum": ["4-20mA", "0-10V", "RS-485", "CANbus", "Ethernet", "Discrete"]
+        },
+        "supply_voltage_vdc": {"type": "number"},
+        "current_draw_ma": {"type": "number"},
+        "output_impedance_ohms": {"type": "number"},
+        "intrinsic_safety_rating": {"type": "string"},
+        "environmental_rating": {"type": "string"}
+      }
+    },
+    "environmental": {
+      "type": "object",
+      "properties": {
+        "operating_temperature_range_k": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"}
+          }
+        },
+        "storage_temperature_range_c": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"}
+          }
+        },
+        "vibration_rating": {"type": "string"},
+        "shock_rating": {"type": "string"},
+        "ip_rating": {"type": "string"},
+        "do160_compliance": {"type": "boolean"}
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "required": ["last_calibration_date", "next_calibration_due"],
+      "properties": {
+        "last_calibration_date": {"type": "string", "format": "date"},
+        "next_calibration_due": {"type": "string", "format": "date"},
+        "calibration_interval_months": {"type": "number"},
+        "calibration_certificate": {"type": "string"},
+        "calibration_standard": {"type": "string"},
+        "as_found_error": {"type": "number"},
+        "as_left_error": {"type": "number"}
+      }
+    },
+    "installation": {
+      "type": "object",
+      "properties": {
+        "location": {"type": "string"},
+        "installation_date": {"type": "string", "format": "date"},
+        "mounting_orientation": {"type": "string"},
+        "cable_length_meters": {"type": "number"},
+        "cable_type": {"type": "string"}
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "atex_rating": {"type": "string"},
+        "iecex_rating": {"type": "string"},
+        "ul_rating": {"type": "string"},
+        "csa_rating": {"type": "string"},
+        "certificate_numbers": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "maintenance_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "event_type"],
+        "properties": {
+          "date": {"type": "string", "format": "date"},
+          "event_type": {
+            "type": "string",
+            "enum": ["Calibration", "Repair", "Replacement", "Inspection", "Firmware Update"]
+          },
+          "description": {"type": "string"},
+          "technician": {"type": "string"},
+          "work_order": {"type": "string"}
+        }
+      }
+    },
+    "spare_parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "part_number": {"type": "string"},
+          "description": {"type": "string"},
+          "quantity_required": {"type": "integer"}
+        }
+      }
+    }
+  }
+}

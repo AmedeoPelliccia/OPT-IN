@@ -1,0 +1,58 @@
+schema_version: "1.1"
+id: "test_report_sidecar_template"
+
+test_report:
+  id: "TEST_28-60-XX"
+  title: "Test Report Title"
+  revision: "1.0.0"
+  test_date: "2025-10-30"
+  test_type: "PRESSURE"  # or VACUUM, LEAK, FUNCTIONAL, THERMAL
+
+component:
+  id: ""
+  type: "TANK"  # or VALVE, LINE, SENSOR
+  serial_number: ""
+  part_number: ""
+
+test_parameters:
+  test_pressure_bar: 0
+  hold_time_minutes: 0
+  test_medium: "Helium"  # or Water, Nitrogen
+  acceptance_criteria: ""
+
+results:
+  outcome: "PASS"  # or FAIL, CONDITIONAL
+  leak_rate_mbar_l_s: 0
+  pressure_drop_bar: 0
+  observations: []
+
+personnel:
+  technician:
+    name: ""
+    certification: ""
+    signature_hash: ""
+  inspector:
+    name: ""
+    certification: ""
+    signature_hash: ""
+
+equipment:
+  - equipment_type: ""
+    serial_number: ""
+    calibration_date: "2025-10-30"
+    calibration_due: "2026-10-30"
+
+disposition: "ACCEPTED"  # or REJECTED, REWORK_REQUIRED
+
+approvals:
+  - authority: "Quality Assurance"
+    name: ""
+    status: "APPROVED"
+    date: "2025-10-30"
+    signature_hash: ""
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: ""
+  report_file_hash: ""

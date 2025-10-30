@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Cryogenic LH₂ Tank Specification",
+  "description": "Specification for liquid hydrogen cryogenic storage tanks",
+  "type": "object",
+  "required": [
+    "tank_id",
+    "manufacturer",
+    "design_specification",
+    "materials",
+    "pressure_ratings",
+    "thermal_performance",
+    "vacuum_system"
+  ],
+  "properties": {
+    "tank_id": {
+      "type": "string",
+      "description": "Unique tank identifier"
+    },
+    "manufacturer": {
+      "type": "object",
+      "required": ["name", "part_number", "serial_number"],
+      "properties": {
+        "name": {"type": "string"},
+        "part_number": {"type": "string"},
+        "serial_number": {"type": "string"},
+        "manufacture_date": {"type": "string", "format": "date"}
+      }
+    },
+    "design_specification": {
+      "type": "object",
+      "required": ["capacity_liters", "operating_temperature_k", "design_life_years"],
+      "properties": {
+        "capacity_liters": {"type": "number", "minimum": 0},
+        "operating_temperature_k": {"type": "number", "minimum": 20, "maximum": 25},
+        "design_life_years": {"type": "number", "minimum": 1},
+        "empty_weight_kg": {"type": "number", "minimum": 0},
+        "full_weight_kg": {"type": "number", "minimum": 0}
+      }
+    },
+    "materials": {
+      "type": "object",
+      "required": ["inner_liner", "outer_shell"],
+      "properties": {
+        "inner_liner": {
+          "type": "object",
+          "required": ["material", "specification", "heat_number"],
+          "properties": {
+            "material": {"type": "string", "enum": ["316L", "Inconel 718", "Aluminum 5083"]},
+            "specification": {"type": "string"},
+            "heat_number": {"type": "string"},
+            "thickness_mm": {"type": "number"},
+            "charpy_v_notch_j": {"type": "number"}
+          }
+        },
+        "outer_shell": {
+          "type": "object",
+          "required": ["material", "specification"],
+          "properties": {
+            "material": {"type": "string"},
+            "specification": {"type": "string"},
+            "thickness_mm": {"type": "number"}
+          }
+        },
+        "composite_overwrap": {
+          "type": "object",
+          "properties": {
+            "fiber_type": {"type": "string", "enum": ["Carbon", "Glass", "Hybrid"]},
+            "resin_type": {"type": "string"},
+            "resin_lot": {"type": "string"},
+            "fiber_lot": {"type": "string"},
+            "cure_cycle_id": {"type": "string"}
+          }
+        },
+        "insulation": {
+          "type": "object",
+          "required": ["type", "layers"],
+          "properties": {
+            "type": {"type": "string", "enum": ["MLI", "Foam", "Aerogel", "Hybrid"]},
+            "layers": {"type": "integer"},
+            "material_spec": {"type": "string"}
+          }
+        }
+      }
+    },
+    "pressure_ratings": {
+      "type": "object",
+      "required": ["service_pressure_bar", "design_pressure_bar", "test_pressure_bar"],
+      "properties": {
+        "service_pressure_bar": {"type": "number", "minimum": 0},
+        "design_pressure_bar": {"type": "number", "minimum": 0},
+        "test_pressure_bar": {"type": "number", "minimum": 0},
+        "relief_valve_set_pressure_bar": {"type": "number"},
+        "burst_disc_rating_bar": {"type": "number"}
+      }
+    },
+    "thermal_performance": {
+      "type": "object",
+      "required": ["daily_boiloff_rate_percent", "heat_leak_w"],
+      "properties": {
+        "daily_boiloff_rate_percent": {"type": "number", "minimum": 0},
+        "heat_leak_w": {"type": "number", "minimum": 0},
+        "cool_down_time_hours": {"type": "number"},
+        "thermal_stratification_max_delta_k": {"type": "number"}
+      }
+    },
+    "vacuum_system": {
+      "type": "object",
+      "required": ["design_vacuum_mbar", "leak_rate_mbar_l_s"],
+      "properties": {
+        "design_vacuum_mbar": {"type": "number"},
+        "leak_rate_mbar_l_s": {"type": "number"},
+        "getter_type": {"type": "string"},
+        "getter_activation_date": {"type": "string", "format": "date"},
+        "vacuum_pump_down_date": {"type": "string", "format": "date"}
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "hydrostatic_test_date": {"type": "string", "format": "date"},
+        "hydrostatic_test_pressure_bar": {"type": "number"},
+        "helium_leak_test_date": {"type": "string", "format": "date"},
+        "helium_leak_rate_mbar_l_s": {"type": "number"},
+        "ndt_reports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["method", "date", "result"],
+            "properties": {
+              "method": {"type": "string", "enum": ["UT", "RT", "PT", "MT"]},
+              "date": {"type": "string", "format": "date"},
+              "result": {"type": "string", "enum": ["Pass", "Fail"]},
+              "report_id": {"type": "string"},
+              "file_hash": {"type": "string"}
+            }
+          }
+        },
+        "certifying_authority": {"type": "string"},
+        "certificate_number": {"type": "string"},
+        "expiry_date": {"type": "string", "format": "date"}
+      }
+    },
+    "installation": {
+      "type": "object",
+      "properties": {
+        "aircraft_msn": {"type": "string"},
+        "location_station": {"type": "string"},
+        "installation_date": {"type": "string", "format": "date"},
+        "mounting_points": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "maintenance_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "event_type"],
+        "properties": {
+          "date": {"type": "string", "format": "date"},
+          "event_type": {"type": "string"},
+          "description": {"type": "string"},
+          "technician": {"type": "string"},
+          "work_order": {"type": "string"}
+        }
+      }
+    }
+  }
+}

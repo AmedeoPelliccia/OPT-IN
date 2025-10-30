@@ -1,0 +1,54 @@
+schema_version: "1.1"
+id: "document_sidecar_template"
+
+document:
+  type: "PROC"  # or DESC, DATA, DIAG, TEST
+  title: "TBD - Document Title"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+  status: "DRAFT"  # or RELEASED, SUPERSEDED, OBSOLETE
+
+effectivity:
+  msn: "ALL"  # or specific MSN range
+  cfg: "LH2"  # LH2 configuration required
+  notes: ""
+
+governance:
+  owner_role: "Cryogenic Systems Engineering"
+  prepared_by: ""
+  reviewed_by: []
+  approved_by: ""
+
+safety:
+  hazards:
+    - "Cryogenic temperature (-253°C)"
+    - "Hydrogen flammability"
+    - "High pressure"
+  criticality: "FLIGHT_CRITICAL"
+  ppe_required:
+    - "Cryogenic-rated gloves"
+    - "Face shield"
+    - "Safety glasses"
+  training_required:
+    - "CRYO-101"
+    - "H2-SAFE-101"
+
+traceability:
+  requirements: []
+  standards: []
+  related_docs: []
+  supersedes: ""
+
+change_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: ""
+    description: "Initial release"
+
+approvals: []
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: ""
+  generated_date: "2025-10-30"

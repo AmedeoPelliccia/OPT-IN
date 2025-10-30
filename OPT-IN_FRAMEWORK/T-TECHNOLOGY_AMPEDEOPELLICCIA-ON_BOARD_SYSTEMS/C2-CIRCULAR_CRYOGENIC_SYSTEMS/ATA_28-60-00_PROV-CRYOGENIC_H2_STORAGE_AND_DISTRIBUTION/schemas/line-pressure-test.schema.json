@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Cryogenic Line Pressure Test Record",
+  "description": "Record for pressure and leak testing of cryogenic hydrogen distribution lines",
+  "type": "object",
+  "required": [
+    "test_id",
+    "line_id",
+    "test_date",
+    "test_type",
+    "test_parameters",
+    "results",
+    "disposition"
+  ],
+  "properties": {
+    "test_id": {
+      "type": "string",
+      "description": "Unique test record identifier"
+    },
+    "line_id": {
+      "type": "string",
+      "description": "Identifier for the line being tested"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of test execution"
+    },
+    "test_type": {
+      "type": "string",
+      "enum": ["Hydrostatic", "Pneumatic", "Helium Leak", "Vacuum", "Combined"],
+      "description": "Type of pressure test performed"
+    },
+    "line_specification": {
+      "type": "object",
+      "required": ["material", "nominal_diameter_inches", "design_pressure_bar"],
+      "properties": {
+        "material": {"type": "string"},
+        "nominal_diameter_inches": {"type": "number"},
+        "wall_thickness_mm": {"type": "number"},
+        "design_pressure_bar": {"type": "number"},
+        "design_temperature_k": {"type": "number"},
+        "length_meters": {"type": "number"},
+        "vacuum_jacket": {"type": "boolean"}
+      }
+    },
+    "test_parameters": {
+      "type": "object",
+      "properties": {
+        "test_pressure_bar": {"type": "number"},
+        "hold_time_minutes": {"type": "number"},
+        "test_medium": {
+          "type": "string",
+          "enum": ["Water", "Nitrogen", "Helium", "Air", "Hydrogen"]
+        },
+        "test_temperature_c": {"type": "number"},
+        "ambient_temperature_c": {"type": "number"},
+        "ambient_pressure_mbar": {"type": "number"}
+      }
+    },
+    "helium_leak_test": {
+      "type": "object",
+      "properties": {
+        "tracer_gas": {
+          "type": "string",
+          "enum": ["Helium 100%", "Helium 10% in Nitrogen", "Helium 5% in Nitrogen"]
+        },
+        "detector_type": {"type": "string"},
+        "detector_serial": {"type": "string"},
+        "detector_calibration_date": {"type": "string", "format": "date"},
+        "background_leak_rate_mbar_l_s": {"type": "number"},
+        "acceptance_criteria_mbar_l_s": {"type": "number"}
+      }
+    },
+    "vacuum_test": {
+      "type": "object",
+      "properties": {
+        "initial_vacuum_mbar": {"type": "number"},
+        "final_vacuum_mbar": {"type": "number"},
+        "pump_down_time_hours": {"type": "number"},
+        "leak_up_rate_mbar_per_hour": {"type": "number"},
+        "acceptance_vacuum_mbar": {"type": "number"}
+      }
+    },
+    "results": {
+      "type": "object",
+      "required": ["test_outcome"],
+      "properties": {
+        "test_outcome": {
+          "type": "string",
+          "enum": ["Pass", "Fail", "Conditional"]
+        },
+        "pressure_drop_bar": {"type": "number"},
+        "leak_rate_mbar_l_s": {"type": "number"},
+        "leak_locations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["location", "leak_rate_mbar_l_s"],
+            "properties": {
+              "location": {"type": "string"},
+              "leak_rate_mbar_l_s": {"type": "number"},
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "visible_defects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deformation_observed": {"type": "boolean"},
+        "pressure_maintained": {"type": "boolean"}
+      }
+    },
+    "disposition": {
+      "type": "string",
+      "enum": ["Accepted", "Rejected", "Rework Required", "Engineering Review Required"],
+      "description": "Final disposition of the test"
+    },
+    "corrective_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string"},
+          "completed_date": {"type": "string", "format": "date"},
+          "verified_by": {"type": "string"}
+        }
+      }
+    },
+    "retest": {
+      "type": "object",
+      "properties": {
+        "required": {"type": "boolean"},
+        "retest_id": {"type": "string"},
+        "reason": {"type": "string"}
+      }
+    },
+    "personnel": {
+      "type": "object",
+      "required": ["technician", "inspector"],
+      "properties": {
+        "technician": {
+          "type": "object",
+          "required": ["name", "certification"],
+          "properties": {
+            "name": {"type": "string"},
+            "certification": {"type": "string"},
+            "signature_hash": {"type": "string"}
+          }
+        },
+        "inspector": {
+          "type": "object",
+          "required": ["name", "certification"],
+          "properties": {
+            "name": {"type": "string"},
+            "certification": {"type": "string"},
+            "signature_hash": {"type": "string"}
+          }
+        },
+        "quality_rep": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "signature_hash": {"type": "string"}
+          }
+        }
+      }
+    },
+    "equipment_used": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["equipment_type", "serial_number"],
+        "properties": {
+          "equipment_type": {"type": "string"},
+          "manufacturer": {"type": "string"},
+          "model": {"type": "string"},
+          "serial_number": {"type": "string"},
+          "calibration_date": {"type": "string", "format": "date"},
+          "calibration_due": {"type": "string", "format": "date"}
+        }
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "properties": {
+        "test_procedure_id": {"type": "string"},
+        "work_order": {"type": "string"},
+        "photos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filename": {"type": "string"},
+              "file_hash": {"type": "string"},
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "data_logger_file": {"type": "string"},
+        "report_file_hash": {"type": "string"}
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {"type": "string"},
+          "name": {"type": "string"},
+          "status": {"type": "string", "enum": ["Approved", "Rejected", "Conditional"]},
+          "date": {"type": "string", "format": "date"},
+          "signature_hash": {"type": "string"},
+          "comments": {"type": "string"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+Parameter,Value,Units,Tolerance,Notes
+Service_Pressure,8,bar,±0.5,Normal operating pressure
+Design_Pressure,12,bar,N/A,1.5× service pressure minimum
+Proof_Test_Pressure,15,bar,±0.5,Hydrostatic test pressure
+Relief_Valve_Set_Pressure,10,bar,±3%,Primary overpressure protection
+Burst_Disc_Rating,15,bar,±5%,Secondary overpressure protection
+Operating_Temperature,20,K,-253°C,Liquid hydrogen boiling point
+Design_Life,20,years,N/A,Or 60000 flight hours
+Thermal_Cycles,10000,cycles,N/A,Fill/empty cycles
+Daily_Boiloff_Rate_Max,0.3,%,N/A,Percent of capacity per day
+Heat_Leak_Max,15,W,N/A,Steady-state heat input
+Vacuum_Level_Max,1.0E-04,mbar,N/A,Insulation space vacuum
+Vacuum_Hold_Time_Min,5,years,N/A,Without repumping
+Ullage_Volume,2-5,% capacity,N/A,Gas space for thermal expansion
+Charpy_V_Notch_Min,100,J,N/A,At -196°C for 316L
+Weld_Joint_Efficiency,1.0,dimensionless,N/A,100% RT or UT inspection
+Safety_Factor_Yield,1.5,dimensionless,N/A,Applied to yield strength
+Safety_Factor_Ultimate,2.0,dimensionless,N/A,Applied to ultimate strength
+Helium_Leak_Rate_Max,1.0E-06,mbar·L/s,N/A,All joints and welds
+Cool_Down_Time_Max,24,hours,N/A,From ambient to -253°C
+Inertial_Load_Ultimate,9,g,N/A,Limit load × 1.5

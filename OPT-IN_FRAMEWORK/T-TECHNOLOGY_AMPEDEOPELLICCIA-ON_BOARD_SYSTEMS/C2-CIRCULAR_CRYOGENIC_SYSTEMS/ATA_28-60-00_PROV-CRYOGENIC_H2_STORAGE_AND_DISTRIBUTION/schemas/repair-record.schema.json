@@ -1,0 +1,244 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Cryogenic System Repair Record",
+  "description": "Record for repairs and modifications to cryogenic hydrogen systems",
+  "type": "object",
+  "required": [
+    "repair_id",
+    "msn",
+    "component_id",
+    "date",
+    "damage_description",
+    "disposition",
+    "approvals"
+  ],
+  "properties": {
+    "repair_id": {
+      "type": "string",
+      "description": "Unique repair record identifier"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Aircraft manufacturer serial number"
+    },
+    "component_id": {
+      "type": "string",
+      "description": "Component or assembly identifier"
+    },
+    "component_type": {
+      "type": "string",
+      "enum": ["Tank", "Valve", "Line", "Sensor", "Relief System", "Insulation", "Support Structure", "Other"]
+    },
+    "location_station": {
+      "type": "string",
+      "description": "Aircraft station or location code"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date repair initiated"
+    },
+    "completion_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "damage_description": {
+      "type": "string",
+      "description": "Detailed description of damage or defect"
+    },
+    "damage_classification": {
+      "type": "string",
+      "enum": ["Negligible", "Minor", "Major", "Critical"]
+    },
+    "root_cause": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": ["Design", "Manufacturing", "Material", "Installation", "Maintenance", "Operation", "Environmental", "Unknown"]
+        },
+        "description": {"type": "string"},
+        "corrective_action": {"type": "string"}
+      }
+    },
+    "repair_method": {
+      "type": "object",
+      "required": ["method_type"],
+      "properties": {
+        "method_type": {
+          "type": "string",
+          "enum": ["Weld Repair", "Seal Replacement", "Component Replacement", "Leak Seal", "Insulation Repair", "Structural Repair", "Other"]
+        },
+        "procedure_reference": {"type": "string"},
+        "engineering_authorization": {"type": "string"}
+      }
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["part_number", "quantity"],
+        "properties": {
+          "part_number": {"type": "string"},
+          "description": {"type": "string"},
+          "quantity": {"type": "number"},
+          "lot_number": {"type": "string"},
+          "serial_number": {"type": "string"},
+          "heat_number": {"type": "string"},
+          "certificate_of_conformance": {"type": "string"},
+          "expiry_date": {"type": "string", "format": "date"}
+        }
+      }
+    },
+    "welding": {
+      "type": "object",
+      "properties": {
+        "welder_id": {"type": "string"},
+        "welder_certification": {"type": "string"},
+        "welding_process": {
+          "type": "string",
+          "enum": ["TIG", "MIG", "Plasma", "Laser", "Electron Beam"]
+        },
+        "filler_material": {
+          "type": "object",
+          "properties": {
+            "specification": {"type": "string"},
+            "lot_number": {"type": "string"},
+            "diameter_mm": {"type": "number"}
+          }
+        },
+        "shielding_gas": {
+          "type": "object",
+          "properties": {
+            "type": {"type": "string"},
+            "purity_percent": {"type": "number"},
+            "lot_number": {"type": "string"}
+          }
+        },
+        "weld_procedure_spec": {"type": "string"},
+        "preheat_temperature_c": {"type": "number"},
+        "interpass_temperature_c": {"type": "number"},
+        "post_weld_heat_treatment": {"type": "boolean"}
+      }
+    },
+    "ndt_reports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["method", "date", "result"],
+        "properties": {
+          "method": {
+            "type": "string",
+            "enum": ["Visual", "PT", "MT", "UT", "RT", "Helium Leak"]
+          },
+          "date": {"type": "string", "format": "date"},
+          "result": {"type": "string", "enum": ["Pass", "Fail"]},
+          "report_id": {"type": "string"},
+          "file_hash": {"type": "string"},
+          "inspector": {"type": "string"},
+          "inspector_certification": {"type": "string"}
+        }
+      }
+    },
+    "pressure_test": {
+      "type": "object",
+      "properties": {
+        "test_date": {"type": "string", "format": "date"},
+        "test_pressure_bar": {"type": "number"},
+        "hold_time_minutes": {"type": "number"},
+        "leak_rate_mbar_l_s": {"type": "number"},
+        "result": {"type": "string", "enum": ["Pass", "Fail"]},
+        "test_report_id": {"type": "string"}
+      }
+    },
+    "functional_test": {
+      "type": "object",
+      "properties": {
+        "test_date": {"type": "string", "format": "date"},
+        "tests_performed": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "result": {"type": "string", "enum": ["Pass", "Fail"]},
+        "test_report_id": {"type": "string"}
+      }
+    },
+    "disposition": {
+      "type": "string",
+      "enum": ["Negligible", "Repaired", "Replaced", "Engineering Disposition", "Scrapped"],
+      "description": "Final disposition of the repair"
+    },
+    "return_to_service": {
+      "type": "object",
+      "properties": {
+        "authorized": {"type": "boolean"},
+        "date": {"type": "string", "format": "date"},
+        "limitations": {"type": "string"},
+        "next_inspection_fh": {"type": "number"},
+        "next_inspection_months": {"type": "number"}
+      }
+    },
+    "personnel": {
+      "type": "object",
+      "properties": {
+        "technician": {"type": "string"},
+        "technician_certification": {"type": "string"},
+        "inspector": {"type": "string"},
+        "inspector_certification": {"type": "string"},
+        "engineer": {"type": "string"}
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {"type": "string"},
+          "name": {"type": "string"},
+          "role": {"type": "string"},
+          "status": {"type": "string", "enum": ["Approved", "Rejected", "Conditional"]},
+          "date": {"type": "string", "format": "date"},
+          "signature_hash": {"type": "string"},
+          "comments": {"type": "string"}
+        }
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "properties": {
+        "work_order": {"type": "string"},
+        "ncr_reference": {"type": "string"},
+        "photos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filename": {"type": "string"},
+              "file_hash": {"type": "string"},
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "drawings": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "procedures": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "labor_hours": {"type": "number"},
+        "material_cost": {"type": "number"},
+        "total_cost": {"type": "number"},
+        "currency": {"type": "string", "default": "USD"}
+      }
+    }
+  }
+}

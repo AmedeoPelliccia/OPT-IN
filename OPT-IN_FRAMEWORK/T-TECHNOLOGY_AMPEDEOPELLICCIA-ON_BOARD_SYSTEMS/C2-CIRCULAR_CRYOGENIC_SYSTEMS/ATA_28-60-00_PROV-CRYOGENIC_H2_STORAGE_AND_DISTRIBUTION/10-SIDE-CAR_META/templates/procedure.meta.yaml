@@ -1,0 +1,62 @@
+schema_version: "1.1"
+id: "procedure_sidecar_template"
+
+procedure:
+  id: "PROC_28-60-XX"
+  title: "Procedure Title"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+  type: "MAINTENANCE"  # or INSPECTION, TEST, REPAIR, INSTALLATION
+
+effectivity:
+  msn: "ALL"
+  cfg: "LH2"
+
+safety:
+  hazards:
+    - "Cryogenic temperature (-253°C): severe frostbite"
+    - "Hydrogen flammability: 4-75% in air"
+    - "Pressure hazard"
+  criticality: "FLIGHT_CRITICAL"
+  ppe_required:
+    - "Cryogenic gloves"
+    - "Face shield"
+    - "Safety glasses"
+    - "Steel-toed boots"
+  training_required:
+    - "CRYO-201: LH₂ Handling and Servicing"
+    - "H2-SAFE-101: Hydrogen Safety Awareness"
+
+prerequisites:
+  tools: []
+  materials: []
+  equipment: []
+  calibration_required: true
+  work_location: "Approved cryogenic facility"
+
+personnel_qualifications:
+  technician: "CRYO-301 certified"
+  inspector: "AS9100 qualified"
+  engineer: "Approval authority"
+
+inspection_intervals:
+  flight_hours: 0
+  months: 12
+  cycles: 0
+
+acceptance_criteria:
+  - "No leaks detected"
+  - "Pressure within tolerance"
+  - "Vacuum level maintained"
+
+approvals:
+  - authority: "Cryogenic Systems Engineering"
+    name: ""
+    status: "RELEASED"
+    date: "2025-10-30"
+    signature_hash: ""
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: ""
