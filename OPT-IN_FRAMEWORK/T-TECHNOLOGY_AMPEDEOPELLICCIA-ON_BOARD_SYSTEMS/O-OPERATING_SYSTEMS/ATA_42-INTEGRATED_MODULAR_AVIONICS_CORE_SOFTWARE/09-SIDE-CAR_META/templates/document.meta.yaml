@@ -1,0 +1,82 @@
+# Document Metadata Sidecar Template
+# Use this template for all document sidecars in ATA 42 Core OS
+
+document:
+  title: "Document Title Here"
+  id: "DOC-ID-PATTERN"  # e.g., DESC-ATA42-XX-YY, PROC-ATA42-XX-YY, DATA-ATA42-XX-YY
+  type: "DESC | PROC | DATA | CALC | DIAGRAM"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"  # Must be <= today
+  status: "Draft | Review | Released | Obsolete"
+  url: "./relative/path/to/document.ext"  # Relative to ATA_42 root
+
+owner:
+  role: "Document Owner Role"
+  name: "Owner Name or Team"
+  contact: "owner@example.com"
+
+effectivity:
+  msn: "ALL | Specific MSN range"
+  configuration: "All AMPEL360 IMA configurations"
+  scope: "Applicability scope"
+
+safety:
+  criticality: "DAL A | DAL B | DAL C | DAL D | DAL E | Non-safety"
+  hazards:
+    - "Relevant hazard 1"
+    - "Relevant hazard 2"
+  safety_functions:
+    - "Safety function addressed"
+
+traceability:
+  requirements:
+    - req_id: "REQ-XXX-YYY"
+      url: "./path/to/requirement.csv#line"
+      title: "Requirement title"
+  source_documents:
+    - doc_id: "SOURCE-DOC-ID"
+      url: "./path/to/source.md"
+      title: "Source document title"
+  related_procedures:
+    - proc_id: "PROC-XXX-YY"
+      url: "./path/to/procedure.md"
+      title: "Related procedure"
+  test_cases:
+    - test_id: "TEST-XXX-YYY"
+      url: "./path/to/testcase.csv#line"
+      title: "Test case"
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: ""  # Run: sha256sum document.ext
+  last_verified: "2025-10-30"
+  verified_by: "Verifier Name"
+
+approvals:
+  - role: "Author"
+    name: "Author Name"
+    date: "2025-10-30"
+    status: "Completed"
+  - role: "Technical Reviewer"
+    name: "Reviewer Name"
+    date: "YYYY-MM-DD"
+    status: "Pending | Approved | Rejected"
+  - role: "Safety Reviewer"
+    name: "Safety Engineer"
+    date: "YYYY-MM-DD"
+    status: "Pending | Approved | Rejected"
+  - role: "Airworthiness Authority"
+    name: "Authority Name"
+    date: "YYYY-MM-DD"
+    status: "Pending | Approved | Rejected"
+
+notes:
+  - "Additional notes or change history"
+  - "Deviation references if applicable"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2025-10-30"
+    author: "Author Name"
+    changes: "Initial release"

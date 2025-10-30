@@ -1,5 +1,24 @@
 # ATA 42 - INTEGRATED MODULAR AVIONICS (CORE SOFTWARE)
 
+← [O-OPERATING_SYSTEMS](../README.md) | [🏠 Repository Root](../../../../README.md) | [📋 Navigation Guide](./NAVIGATION.md)
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Description](#description)
+- [Applicable Standards & Regulations](#applicable-standards--regulations)
+- [Quick Navigation](#quick-navigation)
+- [Structure](#structure)
+- [Certification Status](#certification-status)
+- [Key Procedures](#key-procedures)
+- [Validation](#validation)
+- [Related ATA Chapters](#related-ata-chapters)
+- [Governance](#governance)
+
+---
+
 ## Overview
 
 The ATA 42 Core Software provides the foundational operating system for Integrated Modular Avionics (IMA), implementing ARINC 653 partitioning, scheduling, resource management, and health monitoring services. This is a **DAL A** (Design Assurance Level A) software system critical for flight safety.
@@ -26,6 +45,44 @@ IMA Core OS delivers:
 - **EUROCAE ED-202A** - MILS (Multiple Independent Levels of Security)
 - **EUROCAE ED-203** - Airborne Security Methods
 - **DO-160G** - Environmental Conditions and Test Procedures
+
+## Quick Navigation
+
+### 🚀 Getting Started
+- 📋 [Complete Navigation Guide](./NAVIGATION.md) - Hierarchical TOC with all documents
+- 📄 [INDEX.meta.yaml](./INDEX.meta.yaml) - Governance and traceability matrix
+- 🔧 [CI Validation Scripts](./ci/) - Structure validation and compliance checking
+
+### 📚 Core Documentation Sections
+1. [**01-GENERAL**](./01-GENERAL/) - Scope, governance, regulatory compliance
+2. [**02-ARCHITECTURE_AND_SERVICES**](./02-ARCHITECTURE_AND_SERVICES/) - Core OS architecture, partitioning, scheduling
+3. [**03-VERIFICATION_AND_SOFTWARE_ASSURANCE**](./03-VERIFICATION_AND_SOFTWARE_ASSURANCE/) - DO-178C compliance, testing
+4. [**04-SECURITY_AND_UPDATE_MECHANISMS**](./04-SECURITY_AND_UPDATE_MECHANISMS/) - Secure boot, cryptography, updates
+5. [**05-INTEGRATION_AND_HIL**](./05-INTEGRATION_AND_HIL/) - Hardware-in-loop testing
+6. [**06-METRICS_DIAGNOSTICS_AND_HEALTH**](./06-METRICS_DIAGNOSTICS_AND_HEALTH/) - Health monitoring, diagnostics
+7. [**07-MATERIALS_M_AND_P_AND_TOOLCHAIN**](./07-MATERIALS_M_AND_P_AND_TOOLCHAIN/) - Toolchain qualification
+8. [**08-NONCONFORMANCE_AND_DEVIATION**](./08-NONCONFORMANCE_AND_DEVIATION/) - NCR management
+9. [**09-SIDE-CAR_META**](./09-SIDE-CAR_META/) - Metadata templates and validators
+10. [**10-EXAMPLES_AND_RECORDS**](./10-EXAMPLES_AND_RECORDS/) - Example configurations and records
+11. [**BASELINES**](./BASELINES/) - Configuration baselines and releases
+
+### 🔑 Key Procedures
+- [PROC_42-02-02: Partition Management](./02-ARCHITECTURE_AND_SERVICES/ENGINEERING/PROC_42-02-02_Partition-Management-And-Scheduling.md)
+- [PROC_42-03-01: SW Verification](./03-VERIFICATION_AND_SOFTWARE_ASSURANCE/DESIGN/PROC_42-03-01_SW-Verification-And-Trace.md)
+- [PROC_42-04-02: Signed Image Validation](./04-SECURITY_AND_UPDATE_MECHANISMS/ENGINEERING/PROC_42-04-02_Signed-Image-Validation.md)
+- [PROC_42-05-01: HIL Test Plan](./05-INTEGRATION_AND_HIL/ENGINEERING/PROC_42-05-01_HIL-Test-Plan-Core-OS.md)
+- [PROC_42-06-01: Health Monitoring](./06-METRICS_DIAGNOSTICS_AND_HEALTH/ENGINEERING/PROC_42-06-01_Health-Monitoring-And-Fault-Reporting.md)
+
+### 📊 Key Data Files
+- [DATA_42-02-03: Partition Configurations](./02-ARCHITECTURE_AND_SERVICES/ENGINEERING/DATA_42-02-03_RTI_And_Resource-Limits.csv)
+- [DATA_42-03-03: DO-178C Mapping](./03-VERIFICATION_AND_SOFTWARE_ASSURANCE/CERTIFICATION/DATA_42-03-03_DO178C_MAPPING.csv)
+- [DATA_42-05-02: HIL Test Matrix](./05-INTEGRATION_AND_HIL/ENGINEERING/DATA_42-05-02_HIL-Test-Matrix.csv)
+- [DATA_42-06-02: Health Metrics](./06-METRICS_DIAGNOSTICS_AND_HEALTH/ENGINEERING/DATA_42-06-02_Health-Metric-Definitions.csv)
+- [DATA_42-07-01: Approved Toolchain](./07-MATERIALS_M_AND_P_AND_TOOLCHAIN/ENGINEERING/DATA_42-07-01_Approved-Compilers-Toolchain.csv)
+
+### 🔧 Schemas & Validation
+- [Schemas Directory](./schemas/) - 7 JSON schemas for configuration and validation
+- [CI Scripts](./ci/) - Automated validation and compliance checking
 
 ## Structure
 
@@ -157,8 +214,26 @@ Run structure and compliance validation:
 
 ---
 
+## Document Navigation
+
+### Within this Chapter
+- [📋 Complete Navigation Guide](./NAVIGATION.md)
+- [📄 INDEX.meta.yaml](./INDEX.meta.yaml) - Governance and traceability
+- [🔝 Back to Top](#ata-42---integrated-modular-avionics-core-software)
+
+### Section Navigation
+- **Next**: [01-GENERAL - Scope and Governance](./01-GENERAL/README.md) →
+- **Parent**: [← O-OPERATING_SYSTEMS](../README.md)
+- **Root**: [🏠 Repository Root](../../../../README.md)
+
+### Related Documents
+- [ATA 42-60-00 (Prov) - Quantum-Inspired Scheduler](../ATA_42-60-00_PROV-QUANTUM-INSPIRED_SCHEDULER_AND_RESOURCE_ORCHESTRATION/README.md)
+- [📚 Framework Documentation](../../README.md)
+
+---
+
 *Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*
 
 **Audit-ready structure compliant with DO-178C, ARINC 653, DO-330, ED-202A, and ED-203**
 
-[📚 Framework Documentation](../../README.md) | [🏠 Repository Root](../../../README.md)
+*Last Updated: 2025-10-30*
