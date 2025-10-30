@@ -117,7 +117,7 @@ echo "Checking document naming conventions..."
 find "$ATA35_ROOT" -type f \( -name "*.md" -o -name "*.csv" \) ! -name "00_README.md" ! -name "README.md" | while read -r file; do
     filename=$(basename "$file")
     # Expected pattern: (DESC|PROC|DATA|TESTPLAN|DIAG|EXAMPLE)_35-XX-XX_*
-    if [[ ! "$filename" =~ ^(DESC|PROC|DATA|TESTPLAN|DIAG|EXAMPLE)_35-[0-9]{2}-[0-9]{2}_.* ]]; then
+    if [[ ! "$filename" =~ ^(DESC|PROC|DATA|TESTPLAN|DIAG|EXAMPLE)_35-[0-9]{2}-[0-9]{2}_.+\..+$ ]]; then
         warning "File does not follow naming convention: $filename"
     fi
 done
