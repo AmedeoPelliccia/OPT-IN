@@ -5,6 +5,8 @@
 **Effective Date:** 2025-10-30  
 **Chapter:** ATA 31 - Indicating & Recording Systems (Recording Function)
 
+**Related Documents:** [DESC_31-03-01](DESC_31-03-01_CVR-System-Description.md) • [PROC_31-02-01](../02-FDR_FUNCTION/PROC_31-02-01_FDR-Download-And-Preservation-Procedure.md) • [PROC_31-04-01](../04-DATA_MANAGEMENT_AND_DPP/PROC_31-04-01_DPP-Entry-And-Archival.md) • [EXAMPLE_31-08-02](../08-EXAMPLES_AND_RECORDS/EXAMPLE_31-08-02_CVR-Download-Record.json)
+
 ## 1.0 Purpose
 
 This procedure establishes the process for downloading and preserving Cockpit Voice Recorder (CVR) audio recordings with strict chain-of-custody controls to protect sensitive pilot communications while ensuring evidence integrity for accident investigation.
@@ -14,9 +16,9 @@ This procedure establishes the process for downloading and preserving Cockpit Vo
 ### 2.1 Access Restrictions
 
 CVR audio contains sensitive pilot communications protected by:
-- **FAA 14 CFR 135.609:** CVR recordings protection
-- **ICAO Annex 13:** Protection of accident investigation information
-- **EU Regulation 996/2010:** CVR confidentiality requirements
+- **[FAA 14 CFR §135.609](https://www.ecfr.gov/current/title-14/section-135.609):** CVR recordings protection
+- **[ICAO Annex 13](https://www.icao.int/safety/airnavigation/NationalityMarks/annexes_booklet_en.pdf):** Protection of accident investigation information
+- **[EU Regulation 996/2010](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R0996):** CVR confidentiality requirements
 
 **WARNING:** Unauthorized disclosure of CVR audio may violate criminal statutes.
 
@@ -24,7 +26,7 @@ CVR audio contains sensitive pilot communications protected by:
 
 CVR downloads may only be performed by:
 - Certified CVR download technicians
-- Authorized investigation personnel (NTSB, FAA, EASA, BEA, etc.)
+- Authorized investigation personnel ([NTSB](https://www.ntsb.gov/), [FAA](https://www.faa.gov/), [EASA](https://www.easa.europa.eu/), [BEA](https://www.bea.aero/), etc.)
 - With written authorization from Chief Pilot or Safety Director
 
 ### 2.3 Use Limitations

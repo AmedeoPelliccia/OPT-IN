@@ -77,24 +77,32 @@ All changes to recording system specifications, procedures, or data formats requ
 
 ### 3.1 Applicable Regulations
 
-- **ICAO Annex 6:** Operation of Aircraft - FDR/CVR carriage requirements
-- **FAA 14 CFR Part 91/121/125:** Operating rules and FDR/CVR requirements
-- **TSO-C124a:** Flight Data Recorder Systems
-- **TSO-C123a:** Cockpit Voice Recorder Systems
-- **EASA CS-25:** Large Aeroplanes certification specifications
+- **[ICAO Annex 6](https://www.icao.int/safety/airnavigation/NationalityMarks/annexes_booklet_en.pdf):** Operation of Aircraft - FDR/CVR carriage requirements
+- **[FAA 14 CFR Part 91](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91):** General Operating and Flight Rules
+- **[FAA 14 CFR Part 121](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121):** Operating Requirements: Domestic, Flag, and Supplemental Operations
+  - [§121.343](https://www.ecfr.gov/current/title-14/section-121.343) - Flight Data Recorders
+  - [§121.344](https://www.ecfr.gov/current/title-14/section-121.344) - Digital Flight Data Recorders  
+  - [§121.359](https://www.ecfr.gov/current/title-14/section-121.359) - Cockpit Voice Recorders
+- **[FAA 14 CFR Part 125](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-125):** Certification and Operations
+- **[FAA 14 CFR §135.609](https://www.ecfr.gov/current/title-14/section-135.609):** CVR Recording Protection
+- **[TSO-C124a](https://www.faa.gov/aircraft/air_cert/design_approvals/tso/aircraft/):** Flight Data Recorder Systems
+- **[TSO-C123a](https://www.faa.gov/aircraft/air_cert/design_approvals/tso/aircraft/):** Cockpit Voice Recorder Systems
+- **[EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-large-aeroplanes):** Large Aeroplanes certification specifications
+  - CS 25.1457 - Cockpit Voice Recorders
+  - CS 25.1459 - Flight Data Recorders
 
 ### 3.2 Applicable Standards
 
-- **EUROCAE ED-112:** Minimum Operational Performance Standards for CVR
-- **ARINC 717:** Flight Data Recorder Systems
-- **ARINC 573:** Crash-Protected Airborne Recorder Systems (legacy)
-- **RTCA DO-160:** Environmental Conditions and Test Procedures
-- **RTCA DO-178C:** Software Considerations in Airborne Systems
-- **RTCA DO-254:** Design Assurance Guidance for Airborne Electronic Hardware
+- **[EUROCAE ED-112](https://www.eurocae.net/):** Minimum Operational Performance Standards for CVR
+- **[ARINC 717](https://www.aviation-ia.com/arinc-standards):** Flight Data Recorder Systems
+- **[ARINC 573](https://www.aviation-ia.com/arinc-standards):** Crash-Protected Airborne Recorder Systems (legacy)
+- **[RTCA DO-160](https://www.rtca.org/):** Environmental Conditions and Test Procedures
+- **[RTCA DO-178C](https://www.rtca.org/):** Software Considerations in Airborne Systems
+- **[RTCA DO-254](https://www.rtca.org/):** Design Assurance Guidance for Airborne Electronic Hardware
 
 ### 3.3 Compliance Matrix
 
-Refer to `DATA_31-01-02_Regulatory-Compliance-Matrix.csv` for detailed mapping of requirements to design elements and verification methods.
+Refer to **[DATA_31-01-02_Regulatory-Compliance-Matrix.csv](DATA_31-01-02_Regulatory-Compliance-Matrix.csv)** for detailed mapping of requirements to design elements and verification methods.
 
 ## 4.0 Effectivity
 
@@ -145,20 +153,20 @@ Identified hazards include:
 7. Tool malfunction during download
 8. Chain-of-custody breach
 
-Mitigation strategies are documented in `DESC_31-02-01_FDR-System-Description.md` and `DESC_31-03-01_CVR-System-Description.md`.
+Mitigation strategies are documented in **[DESC_31-02-01_FDR-System-Description.md](../02-FDR_FUNCTION/DESC_31-02-01_FDR-System-Description.md#90-safety-considerations)** and **[DESC_31-03-01_CVR-System-Description.md](../03-CVR_FUNCTION/DESC_31-03-01_CVR-System-Description.md)**.
 
 ## 6.0 Integration with ATA Chapters
 
 ### 6.1 Cross-References
 
-- **ATA 05:** Time Limits & Maintenance Checks (inspection intervals)
-- **ATA 20:** Standard Practices - Airframe (installation standards)
-- **ATA 22:** Auto Flight (autopilot status recording)
-- **ATA 24:** Electrical Power (power supply requirements)
-- **ATA 42:** Integrated Modular Avionics (data bus integration)
-- **ATA 45:** Onboard Maintenance Systems (fault recording)
-- **ATA 46:** Information Systems (cockpit displays)
-- **ATA 95:** Digital Product Passport (traceability and archival)
+- **[ATA 05](../../../P-PROGRAM/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/):** Time Limits & Maintenance Checks (inspection intervals)
+- **[ATA 20](../../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/):** Standard Practices - Airframe (installation standards)
+- **[ATA 22](../../../A3-AVIONICS/ATA_22-AUTO_FLIGHT/):** Auto Flight (autopilot status recording)
+- **[ATA 24](../../../E-ELECTRICAL/ATA_24-ELECTRICAL_POWER/):** Electrical Power (power supply requirements)
+- **[ATA 42](../../../A3-AVIONICS/ATA_42-INTEGRATED_MODULAR_AVIONICS/):** Integrated Modular Avionics (data bus integration)
+- **[ATA 45](../../../A3-AVIONICS/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/):** Onboard Maintenance Systems (fault recording)
+- **[ATA 46](../../../A3-AVIONICS/ATA_46-INFORMATION_SYSTEMS/):** Information Systems (cockpit displays)
+- **[ATA 95](../../../P-PROGRAM/ATA_95-WIRING_DIGITAL_PRODUCT_PASSPORT/):** Digital Product Passport (traceability and archival)
 
 ### 6.2 Source Documents
 
@@ -176,32 +184,32 @@ Mitigation strategies are documented in `DESC_31-02-01_FDR-System-Description.md
 
 This chapter is organized into the following subdirectories:
 
-1. **01-GENERAL:** Scope, governance, regulatory compliance
-2. **02-FDR_FUNCTION:** FDR system description and procedures
-3. **03-CVR_FUNCTION:** CVR system description and procedures
-4. **04-DATA_MANAGEMENT_AND_DPP:** Data management and DPP integration
-5. **05-QUALIFICATION_AND_TEST:** Qualification plans and test matrices
-6. **06-NONCONFORMANCE_AND_DEVIATION:** NCR handling procedures
-7. **07-SIDE-CAR_META:** Metadata sidecar templates
-8. **08-EXAMPLES_AND_RECORDS:** Example records and manifests
+1. **[01-GENERAL](../01-GENERAL/):** Scope, governance, regulatory compliance ([DESC_31-01-01](DESC_31-01-01_Scope-Governance-And-Effectivity.md), [DATA_31-01-02](DATA_31-01-02_Regulatory-Compliance-Matrix.csv))
+2. **[02-FDR_FUNCTION](../02-FDR_FUNCTION/):** FDR system description and procedures ([DESC_31-02-01](../02-FDR_FUNCTION/DESC_31-02-01_FDR-System-Description.md), [PROC_31-02-01](../02-FDR_FUNCTION/PROC_31-02-01_FDR-Download-And-Preservation-Procedure.md), [DATA_31-02-02](../02-FDR_FUNCTION/DATA_31-02-02_Mandatory-FDR-Parameters.csv))
+3. **[03-CVR_FUNCTION](../03-CVR_FUNCTION/):** CVR system description and procedures ([DESC_31-03-01](../03-CVR_FUNCTION/DESC_31-03-01_CVR-System-Description.md), [PROC_31-03-01](../03-CVR_FUNCTION/PROC_31-03-01_CVR-Download-And-Chain-Of-Custody.md), [DATA_31-03-02](../03-CVR_FUNCTION/DATA_31-03-02_CVR-Acoustic-Test-And-Retention.csv))
+4. **[04-DATA_MANAGEMENT_AND_DPP](../04-DATA_MANAGEMENT_AND_DPP/):** Data management and DPP integration ([PROC_31-04-01](../04-DATA_MANAGEMENT_AND_DPP/PROC_31-04-01_DPP-Entry-And-Archival.md), [DATA_31-04-02](../04-DATA_MANAGEMENT_AND_DPP/DATA_31-04-02_Data-Retention-And-Access.csv))
+5. **[05-QUALIFICATION_AND_TEST](../05-QUALIFICATION_AND_TEST/):** Qualification plans and test matrices ([TESTPLAN_31-05-01](../05-QUALIFICATION_AND_TEST/TESTPLAN_31-05-01_FDR-CVR-Qualification-Plan.md), [DATA_31-05-02](../05-QUALIFICATION_AND_TEST/DATA_31-05-02_Test-Matrix-And-Failure-Criteria.csv))
+6. **[06-NONCONFORMANCE_AND_DEVIATION](../06-NONCONFORMANCE_AND_DEVIATION/):** NCR handling procedures ([PROC_31-06-01](../06-NONCONFORMANCE_AND_DEVIATION/PROC_31-06-01_Nonconformance-Handling-And-NCR-Template.md))
+7. **[07-SIDE-CAR_META](../07-SIDE-CAR_META/templates/):** Metadata sidecar templates ([document.meta.yaml](../07-SIDE-CAR_META/templates/document.meta.yaml))
+8. **[08-EXAMPLES_AND_RECORDS](../08-EXAMPLES_AND_RECORDS/):** Example records and manifests ([EXAMPLE_31-08-01](../08-EXAMPLES_AND_RECORDS/EXAMPLE_31-08-01_FDR-Download-Record.json), [EXAMPLE_31-08-02](../08-EXAMPLES_AND_RECORDS/EXAMPLE_31-08-02_CVR-Download-Record.json))
 
 ## 8.0 Quality Assurance
 
 ### 8.1 Document Control
 
 All documents in this chapter:
-- Must have a `.meta.yaml` sidecar with metadata
+- Must have a [`.meta.yaml` sidecar](../07-SIDE-CAR_META/templates/document.meta.yaml) with metadata
 - Must include SHA-256 checksum for integrity verification
 - Must follow naming convention: `[TYPE]_31-[XX]-[XX]_[Description]_rev[X.Y.Z]_[YYYYMMDD].[ext]`
 - Must be approved by Review Board before release
 
 ### 8.2 Validation
 
-Automated validation is performed by `ci/validate_ata31.sh` to ensure:
+Automated validation is performed by **[ci/validate_ata31.sh](../ci/validate_ata31.sh)** to ensure:
 - File structure compliance
 - Naming convention adherence
 - Sidecar presence and completeness
-- Schema validity (JSON schemas)
+- Schema validity (JSON schemas in [../schemas/](../schemas/))
 - Regulatory reference presence
 - Chain-of-custody procedure documentation
 

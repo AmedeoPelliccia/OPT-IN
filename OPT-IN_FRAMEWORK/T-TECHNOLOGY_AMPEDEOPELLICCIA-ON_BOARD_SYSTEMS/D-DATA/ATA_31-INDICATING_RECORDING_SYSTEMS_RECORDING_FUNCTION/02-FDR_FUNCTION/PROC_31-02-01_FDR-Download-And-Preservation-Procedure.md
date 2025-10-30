@@ -5,6 +5,8 @@
 **Effective Date:** 2025-10-30  
 **Chapter:** ATA 31 - Indicating & Recording Systems (Recording Function)
 
+**Related Documents:** [DESC_31-02-01](DESC_31-02-01_FDR-System-Description.md) • [DATA_31-02-02](DATA_31-02-02_Mandatory-FDR-Parameters.csv) • [PROC_31-04-01](../04-DATA_MANAGEMENT_AND_DPP/PROC_31-04-01_DPP-Entry-And-Archival.md) • [EXAMPLE_31-08-01](../08-EXAMPLES_AND_RECORDS/EXAMPLE_31-08-01_FDR-Download-Record.json)
+
 ## 1.0 Purpose
 
 This procedure establishes the safe, auditable process for downloading and preserving Flight Data Recorder (FDR) data following operational events, incidents, accidents, or routine maintenance activities. It ensures data integrity, chain-of-custody documentation, and compliance with regulatory requirements for accident investigation evidence.
@@ -19,7 +21,7 @@ This procedure establishes the safe, auditable process for downloading and prese
 
 ### 2.2 Safety Precautions
 
-1. **Electrical Safety:** Apply Lock-Out/Tag-Out (LOTO) procedures if aircraft power must be removed
+1. **Electrical Safety:** Apply Lock-Out/Tag-Out (LOTO) procedures if aircraft power must be removed (see [ATA 20](../../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/))
 2. **Evidence Preservation:** Do not alter, modify, or delete any recorded data
 3. **ESD Protection:** Use proper ESD grounding when handling FDR unit or memory modules
 4. **Physical Security:** Maintain visual custody of FDR unit and extracted data at all times
@@ -27,7 +29,7 @@ This procedure establishes the safe, auditable process for downloading and prese
 ### 2.3 Regulatory Compliance
 
 For accident/incident scenarios:
-- Contact appropriate authority (NTSB, FAA, EASA, etc.) immediately
+- Contact appropriate authority ([NTSB](https://www.ntsb.gov/), [FAA](https://www.faa.gov/), [EASA](https://www.easa.europa.eu/), etc.) immediately
 - Follow investigator instructions precisely
 - Do not download without investigator approval
 - Preserve original data in aircraft until released by investigator

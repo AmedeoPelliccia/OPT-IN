@@ -5,6 +5,8 @@
 **Effective Date:** 2025-10-30  
 **Chapter:** ATA 31 - Indicating & Recording Systems (Recording Function)
 
+**Related Documents:** [PROC_31-03-01](PROC_31-03-01_CVR-Download-And-Chain-Of-Custody.md) • [DATA_31-03-02](DATA_31-03-02_CVR-Acoustic-Test-And-Retention.csv) • [TESTPLAN_31-05-01](../05-QUALIFICATION_AND_TEST/TESTPLAN_31-05-01_FDR-CVR-Qualification-Plan.md)
+
 ## 1.0 Purpose
 
 This document provides a comprehensive technical description of the Cockpit Voice Recorder (CVR) system for AMPEL360 aircraft, including system architecture, audio channel specifications, acoustic performance, and crash survivability features.
@@ -15,12 +17,12 @@ This document provides a comprehensive technical description of the Cockpit Voic
 
 - **Manufacturer:** [TBD - specify manufacturer]
 - **Part Number:** CVR-PN-200
-- **TSO Compliance:** TSO-C123a
+- **TSO Compliance:** [TSO-C123a](https://www.faa.gov/aircraft/air_cert/design_approvals/tso/aircraft/)
 - **Software Baseline:** Version 1.2.3 (SHA-256: [TBD])
-- **Recording Capacity:** 2 hours minimum (4 hours actual)
+- **Recording Capacity:** 2 hours minimum (4 hours actual) per [ICAO Annex 6](https://www.icao.int/safety/airnavigation/NationalityMarks/annexes_booklet_en.pdf)
 - **Audio Format:** 16-bit PCM, 16 kHz sampling
 - **Channels:** 4 independent audio channels
-- **Crash Survivability:** Per TSO-C123a and ED-112
+- **Crash Survivability:** Per TSO-C123a and [ED-112](https://www.eurocae.net/)
 
 ### 2.2 Functional Description
 

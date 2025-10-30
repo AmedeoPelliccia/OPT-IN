@@ -5,6 +5,8 @@
 **Effective Date:** 2025-10-30  
 **Chapter:** ATA 31 - Indicating & Recording Systems (Recording Function)
 
+**Related Documents:** [PROC_31-02-01](PROC_31-02-01_FDR-Download-And-Preservation-Procedure.md) • [DATA_31-02-02](DATA_31-02-02_Mandatory-FDR-Parameters.csv) • [TESTPLAN_31-05-01](../05-QUALIFICATION_AND_TEST/TESTPLAN_31-05-01_FDR-CVR-Qualification-Plan.md)
+
 ## 1.0 Purpose
 
 This document provides a comprehensive technical description of the Flight Data Recorder (FDR) system for AMPEL360 aircraft, including system architecture, hardware/software specifications, data acquisition, parameter mapping, and crash survivability features.
@@ -15,10 +17,10 @@ This document provides a comprehensive technical description of the Flight Data 
 
 - **Manufacturer:** [TBD - specify manufacturer]
 - **Part Number:** FDR-PN-100
-- **TSO Compliance:** TSO-C124a
+- **TSO Compliance:** [TSO-C124a](https://www.faa.gov/aircraft/air_cert/design_approvals/tso/aircraft/)
 - **Software Baseline:** Version 1.2.3 (SHA-256: [TBD])
 - **Recording Capacity:** 25 hours minimum
-- **Data Format:** ARINC 717
+- **Data Format:** [ARINC 717](https://www.aviation-ia.com/arinc-standards)
 - **Crash Survivability:** Per TSO-C124a requirements
 
 ### 2.2 Functional Description
@@ -57,13 +59,13 @@ The FDR system continuously records flight parameters from aircraft systems via 
 - **Built-In Test (BIT):** Continuous self-monitoring
 - **Download Interface:** USB/Ethernet extraction interface
 
-**Software Assurance:** DAL-B per DO-178C (see REC-SAS-31-001)
+**Software Assurance:** DAL-B per [DO-178C](https://www.rtca.org/) (see REC-SAS-31-001)
 
 ## 4.0 Parameter Recording
 
 ### 4.1 Mandatory Parameters
 
-The FDR records all mandatory parameters per ICAO Annex 6 and FAA requirements. See `DATA_31-02-02_Mandatory-FDR-Parameters.csv` for complete list including:
+The FDR records all mandatory parameters per [ICAO Annex 6](https://www.icao.int/safety/airnavigation/NationalityMarks/annexes_booklet_en.pdf) and [FAA 14 CFR §121.344](https://www.ecfr.gov/current/title-14/section-121.344) requirements. See **[DATA_31-02-02_Mandatory-FDR-Parameters.csv](DATA_31-02-02_Mandatory-FDR-Parameters.csv)** for complete list including:
 
 - Flight control positions (pitch, roll, yaw)
 - Engine parameters (N1, N2, EPR, EGT, fuel flow)
@@ -82,7 +84,7 @@ Total: 88+ parameters
 
 ### 4.3 Data Format
 
-**ARINC 717 Frame Structure:**
+**[ARINC 717](https://www.aviation-ia.com/arinc-standards) Frame Structure:**
 - Frame rate: 1 frame/second (adjustable)
 - Subframe rate: 4 subframes/second
 - Word size: 12 bits
