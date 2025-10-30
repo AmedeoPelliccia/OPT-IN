@@ -29,58 +29,58 @@ The following framework ensures the critical interfaces between systems are form
 
 ---
 
-## Nota Científica: Infraestructura Documental para el Desarrollo de Aeronaves Conceptuales Open Source
+## Scientific Note: Documentation Infrastructure for Open Source Conceptual Aircraft Development
 
-### Resumen
+### Abstract
 
-El **Framework Optin** es una arquitectura documental modular que permite construir la documentación técnica completa de una aeronave conceptual, incluso antes del prototipo físico. Esta aproximación busca establecer un **estándar verificable, público y replicable** para el desarrollo y evaluación de proyectos aeronáuticos avanzados, facilitando la trazabilidad y la certificación conforme a normativas internacionales (EASA/FAA).[¹](https://arxiv.org/html/2407.06320v2)
+The **Optin Framework** is a modular documentation architecture that enables building the complete technical documentation of a conceptual aircraft, even before the physical prototype. This approach seeks to establish a **verifiable, public, and replicable standard** for the development and evaluation of advanced aeronautical projects, facilitating traceability and certification compliance with international regulations (EASA/FAA).[¹](https://arxiv.org/html/2407.06320v2)
 
-### Propósito y Motivación
+### Purpose and Motivation
 
-La iniciativa surge de la necesidad de acelerar la maduración técnica de conceptos aeronáuticos y abrir el acceso al diseño avanzado tanto a instituciones como potenciales financiadores. El sistema Optin transforma la **evidencia documental—requerimientos, análisis y entregables—en el primer producto verificable** de todo programa de avión, incluso sin prototipo físico ni inversión inicial.
+This initiative arises from the need to accelerate the technical maturation of aeronautical concepts and open access to advanced design for both institutions and potential investors. The Optin system transforms **documentary evidence—requirements, analysis, and deliverables—into the first verifiable product** of any aircraft program, even without a physical prototype or initial investment.
 
-### Estructura Modular
+### Modular Structure
 
-El Framework organiza la documentación en secciones normalizadas, orientadas a un programa de diseño conceptual (CDR):
+The Framework organizes documentation into standardized sections, oriented toward a conceptual design program (CDR):
 
-- **Requerimientos e Integración de Sistemas:** Identificadores trazables para cada requerimiento (REQ-001…REQ-00x), especificaciones funcionales, protocolos de verificación y rutas de certificación.
-- **Aerodinámica y Propulsión:** Plantillas para análisis CFD, estudios de configuración, perfiles de consumo y esquemas de motor, incluyendo variantes híbridas, eléctricas, y de hidrógeno.
-- **Estructuras y Gestión Térmica:** Modelos CAD normalizados, simulaciones de carga y fatiga, diagramas de almacenamiento energético (baterías, tanques H₂).
-- **Plan de Gestión y Configuración:** Procedimientos de control de cambios, revisión de entregables y flujo de gestión PLM/CAx abierto.
+- **Requirements and Systems Integration:** Traceable identifiers for each requirement (REQ-001…REQ-00x), functional specifications, verification protocols, and certification pathways.
+- **Aerodynamics and Propulsion:** Templates for CFD analysis, configuration studies, consumption profiles, and engine schematics, including hybrid, electric, and hydrogen variants.
+- **Structures and Thermal Management:** Standardized CAD models, load and fatigue simulations, energy storage diagrams (batteries, H₂ tanks).
+- **Management and Configuration Plan:** Change control procedures, deliverable review, and open PLM/CAx management workflow.
 
-Cada bloque se implementa mediante **esquemas interoperables** —diagramas, listas de chequeo, guías de buenas prácticas— que permiten reconstruir y auditar todo el ciclo de ingeniería y certificación como si el avión estuviera físicamente fabricado.[²](https://www.docs.rcaide.leadsresearchgroup.com/)
+Each block is implemented through **interoperable schemas**—diagrams, checklists, best practice guides—that allow reconstruction and audit of the entire engineering and certification cycle as if the aircraft were physically manufactured.[²](https://www.docs.rcaide.leadsresearchgroup.com/)
 
-### Enfoque Open Source
+### Open Source Approach
 
-Todo el sistema está gobernado por **licencias abiertas**, replicando la lógica de los sistemas PLM y CAx colaborativos pero en un entorno público y federado. Los entregables son auditables por terceros, con trazabilidad y control de versiones completos, permitiendo que cualquier entidad pueda replicar, revisar, o financiar el diseño basado en evidencia documental completa.[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
+The entire system is governed by **open licenses**, replicating the logic of collaborative PLM and CAx systems but in a public and federated environment. Deliverables are auditable by third parties, with complete traceability and version control, allowing any entity to replicate, review, or finance the design based on complete documentary evidence.[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
 
-### Aplicación Práctica (Caso BWB-H2-Hy-E)
+### Practical Application (BWB-H2-Hy-E Case)
 
-Como ejemplo, el Framework Optin se emplea en el desarrollo documental del **BWB-H2-Hy-E**:  
-- Avión conceptual de fuselaje integrado, propulsión híbrido-eléctrica e hidrógeno.
-- Permite demostrar madurez técnica mediante documentación certificable y conformidad normativa.
-- Los entregables incluyen análisis de viabilidad, simulaciones aerodinámicas, esquematización de sistemas de gestión de hidrógeno, y rutas de certificación digitalizadas.
+As an example, the Optin Framework is employed in the documentary development of the **BWB-H2-Hy-E**:  
+- Conceptual aircraft with blended wing body, hybrid-electric and hydrogen propulsion.
+- Enables demonstration of technical maturity through certifiable documentation and regulatory compliance.
+- Deliverables include feasibility analysis, aerodynamic simulations, hydrogen management system schematization, and digitized certification pathways.
 
-### Conclusión
+### Conclusion
 
-El Framework Optin representa la transición de la **documentación técnica integral a producto verificable**, constituyendo el equivalente técnico a un "prototipo documental" abierto. Esta infraestructura facilita la **evaluación, replicación y financiamiento de proyectos aeronáuticos avanzados** desde la evidencia documental y establece un estándar replicable para toda la industria de diseño aeronáutico abierto y colaborativo.[¹](https://arxiv.org/html/2407.06320v2)[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
+The Optin Framework represents the transition from **comprehensive technical documentation to verifiable product**, constituting the technical equivalent of an open "documentary prototype." This infrastructure facilitates the **evaluation, replication, and financing of advanced aeronautical projects** from documentary evidence and establishes a replicable standard for the entire open and collaborative aeronautical design industry.[¹](https://arxiv.org/html/2407.06320v2)[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
 
-**Palabras Clave:** Open source, aeronaves, documentación técnica, PLM, CAx, certificación, conceptual design, hydrogen aircraft, BWB.
+**Keywords:** Open source, aircraft, technical documentation, PLM, CAx, certification, conceptual design, hydrogen aircraft, BWB.
 
-### Referencias Complementarias
+### Additional References
 
 - [⁴](https://europass.europa.eu/es/common-european-framework-reference-language-skills) European Framework for Language Skills
-- [⁵](https://www.antifraucv.es/wp-content/uploads/2025/04/2025_Tratado_sobre_el_Reglamento_de_IA_con_capitulo_Boix_y_Barrachina.pdf) Tratado sobre el Reglamento de IA
-- [⁶](https://e-revistas.uc3m.es/index.php/CDT/article/download/9887/7434/) Cuadernos de Derecho Transnacional
-- [⁷](https://oa.upm.es/64414/1/TFM_JORGE_FORCADA_SANZ.pdf) TFM Jorge Forcada Sanz
-- [⁸](https://www.aepd.es/documento/premio-emilio-aced-2023-yod-samuel-martin.pdf) Premio Emilio Aced 2023
+- [⁵](https://www.antifraucv.es/wp-content/uploads/2025/04/2025_Tratado_sobre_el_Reglamento_de_IA_con_capitulo_Boix_y_Barrachina.pdf) Treaty on AI Regulation
+- [⁶](https://e-revistas.uc3m.es/index.php/CDT/article/download/9887/7434/) Transnational Law Journals
+- [⁷](https://oa.upm.es/64414/1/TFM_JORGE_FORCADA_SANZ.pdf) Master's Thesis Jorge Forcada Sanz
+- [⁸](https://www.aepd.es/documento/premio-emilio-aced-2023-yod-samuel-martin.pdf) Emilio Aced Award 2023
 - [⁹](https://ardupilot.org/plane/) ArduPilot Open Source Autopilot
 - [¹⁰](https://ntrs.nasa.gov/api/citations/20040033924/downloads/20040033924.pdf) NASA Technical Reports Server
 - [¹¹](https://en.wikipedia.org/wiki/European_Interoperability_Framework) European Interoperability Framework
 - [¹²](https://www.frontiersin.org/journals/energy-research/articles/10.3389/fenrg.2022.993376/full) Frontiers in Energy Research
-- [¹³](https://www.crue.org/wp-content/uploads/2020/02/Formaci%C3%B3n-curricular-en-dise%C3%B1o-para-todas-las-personas-accesible-Enfermer%C3%ADa.pdf) Formación curricular en diseño para todas las personas
+- [¹³](https://www.crue.org/wp-content/uploads/2020/02/Formaci%C3%B3n-curricular-en-dise%C3%B1o-para-todas-las-personas-accesible-Enfermer%C3%ADa.pdf) Curricular Training in Universal Design
 - [¹⁴](https://riunet.upv.es/server/api/core/bitstreams/2cc750b4-8413-40f5-ba25-7891ab63bbc9/content) RiuNet UPV - Digital Repository
-- [¹⁵](https://riunet.upv.es/bitstream/handle/10251/198544/Gabaldon%20-%20Analisis%20de%20frameworks%20y%20soluciones%20para%20la%20IoT.pdf?sequence=1) Análisis de frameworks y soluciones para la IoT
+- [¹⁵](https://riunet.upv.es/bitstream/handle/10251/198544/Gabaldon%20-%20Analisis%20de%20frameworks%20y%20soluciones%20para%20la%20IoT.pdf?sequence=1) Analysis of IoT Frameworks and Solutions
 - [¹⁶](https://github.com/paparazzi/paparazzi) Paparazzi UAV Open Source Project
 - [¹⁷](https://www.sciencedirect.com/science/article/pii/S0376042121000191) ScienceDirect Article
 - [¹⁸](https://www.idealista.com/data/) Idealista Data Portal
