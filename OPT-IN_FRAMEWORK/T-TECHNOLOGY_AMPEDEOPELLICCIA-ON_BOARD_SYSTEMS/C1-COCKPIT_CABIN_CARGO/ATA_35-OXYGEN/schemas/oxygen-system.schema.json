@@ -15,7 +15,7 @@
       "type": "array",
       "items": {
         "type":"object",
-        "required":["serial","service_pressure_bar","last_hydro_test_date","next_hydro_test_due"],
+        "required":["serial","service_pressure_bar","last_hydro_test_date"],
         "properties":{
           "serial":{"type":"string"},
           "manufacturer":{"type":"string"},
