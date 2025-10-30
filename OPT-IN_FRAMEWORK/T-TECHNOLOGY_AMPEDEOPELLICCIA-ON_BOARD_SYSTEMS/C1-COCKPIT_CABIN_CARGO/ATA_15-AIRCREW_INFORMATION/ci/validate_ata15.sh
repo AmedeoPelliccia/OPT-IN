@@ -17,11 +17,20 @@ if [ "$missing" -gt 0 ]; then
   exit 2
 fi
 
-# Validate JSON schema syntax if python is available
-if command -v python >/dev/null 2>&1; then
+# Validate JSON schema syntax if python3 or python is available
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON_BIN=python3
+elif command -v python >/dev/null 2>&1; then
+  PYTHON_BIN=python
+else
+  echo "Neither python3 nor python found; skipping JSON schema validation."
+  PYTHON_BIN=""
+fi
+
+if [ -n "${PYTHON_BIN}" ]; then
   echo "Validating JSON syntax for schema files..."
   for s in "$ROOT_DIR"/schemas/*.json; do
-    python -m json.tool "$s" > /dev/null || {
+    "$PYTHON_BIN" -m json.tool "$s" > /dev/null || {
       echo "Invalid JSON: $s"
       exit 3
     }

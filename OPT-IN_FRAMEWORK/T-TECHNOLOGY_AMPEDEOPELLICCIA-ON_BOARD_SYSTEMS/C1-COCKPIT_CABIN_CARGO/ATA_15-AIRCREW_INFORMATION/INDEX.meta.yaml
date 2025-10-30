@@ -1,13 +1,130 @@
 schema_version: "1.1"
-id: "ATA_15_INDEX"
+id: "ATA_15_INDEX_rev1.0.0_20251030"
 chapter: "ATA 15 - AIRCREW INFORMATION"
 governance:
   owner_role: "Flight Deck Systems"
-  review_board: ["Airworthiness","Human Factors","Flight Operations","Materials & Process"]
-effectivity: { msn: "ALL", cfg: "ALL", lopa: "TBD" }
+  review_board: ["Airworthiness Engineering", "Human Factors Engineering", "Flight Operations", "Materials & Process", "Systems Integration"]
+  regulatory_basis:
+    - "FAA 14 CFR Part 25.1301"  # Function and installation (instruments and equipment)
+    - "FAA 14 CFR Part 25.1302"  # Installed systems and equipment for use by the flightcrew
+    - "FAA 14 CFR Part 25.1321"  # Arrangement and visibility (flight, navigation, and powerplant instruments)
+    - "FAA 14 CFR Part 25.1322"  # Flightcrew alerting
+    - "FAA 14 CFR Part 25.1523"  # Minimum flight crew
+    - "FAA 14 CFR Part 25.1541"  # General (markings and placards)
+    - "FAA 14 CFR Part 25.1543"  # Instrument markings: general
+    - "FAA 14 CFR Part 25.1581"  # General (operating limitations and information)
+    - "EASA CS-25"              # European equivalent regulations
+    - "DO-178C"                 # Software Considerations in Airborne Systems (avionics display software)
+    - "DO-254"                  # Design Assurance for Airborne Electronic Hardware (display hardware)
+    - "DO-326A / ED-202A"       # Airworthiness Security Process Specification (cybersecurity for flight deck systems)
+    - "ARP4754A"                # Guidelines for Development of Civil Aircraft and Systems
+    - "ARP4761"                 # Safety Assessment Process
+    - "ARINC 661"               # Cockpit Display System Interfaces to User Systems
+    - "ARINC 429"               # Digital Information Transfer System
+    - "SAE ARP5365"             # Design and Installation of Cockpit Controls and Displays
+    - "SAE ARP5580"             # Recommended Practice for Aircraft Cockpit Design
 traceability:
+  crossrefs:
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals for displays)
+    - "ATA 11"  # Placards and Markings (flight deck placards, crew interface labels)
+    - "ATA 21"  # ECS / Environmental Control Interfaces (crew environmental alerts)
+    - "ATA 25"  # Equipment / Furnishings (crew seats, workstation integration)
+    - "ATA 31"  # Instruments (integration with flight instruments)
+    - "ATA 33"  # Lights (annunciator illumination, display backlighting)
+    - "ATA 34"  # Navigation (navigation display integration)
+    - "ATA 44"  # Cabin Systems (crew-to-cabin communication, PA system)
+    - "ATA 46"  # Information Systems (data integration, display data sources)
+    - "ATA 51"  # Standard Practices and Structures (display mounting, installation)
+    - "ATA 95"  # Digital Product Passport (traceability)
   ata_refs:
+    - { id: "ATA_05", title: "ATA 05 - Time Limits & Maintenance Checks", url: "../../P-PROGRAM/00_README.md" }
     - { id: "ATA_11", title: "ATA 11 - Placards and Markings", url: "../ATA_11-PLACARDS_AND_MARKINGS/00_README.md" }
-    - { id: "ATA_21", title: "ATA 21 - ECS / Environmental Control Interfaces", url: "../ATA_21-ECS_INTERFACES/00_README.md" }
+    - { id: "ATA_21", title: "ATA 21 - ECS / Environmental Control Interfaces", url: "../../E1-ENVIRONMENT/00_README.md" }
     - { id: "ATA_25", title: "ATA 25 - Equipment / Furnishings", url: "../ATA_25-EQUIPMENT_FURNISHINGS/00_README.md" }
-integrity: { checksum_algorithm: "sha256" }
+    - { id: "ATA_33", title: "ATA 33 - Lights", url: "../ATA_33-LIGHTS/00_README.md" }
+    - { id: "ATA_35", title: "ATA 35 - Oxygen", url: "../ATA_35-OXYGEN/00_README.md" }
+    - { id: "ATA_44", title: "ATA 44 - Cabin Systems (incl. IFE/IFX)", url: "../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/00_README.md" }
+    - { id: "ATA_51", title: "ATA 51 - Structures / Standard Practices", url: "../../A-AIRFRAME/00_README.md" }
+  source_documents:
+    - "DISPLAY-SPEC-15-001: Flight Deck Display System Specification"
+    - "ANNUNCIATOR-SPEC-15-001: Annunciator Logic and Alert System Requirements"
+    - "AUDIO-SPEC-15-001: Audio Alert Design and Test Specification"
+    - "HFE-PLAN-15-001: Human Factors Engineering Process and Validation Plan"
+    - "CREW-PROC-15-001: Flight Crew Operating Procedures and SOP Manual"
+    - "AVIONICS-SPEC-15-001: Avionics Software Requirements and Verification Plan"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Misleading or incorrect flight-critical display information"
+    - "Annunciator failure or false alert causing crew distraction"
+    - "Audio alert failure or confusion during critical flight phases"
+    - "Display luminance or contrast inadequate for visibility"
+    - "Display latency exceeding acceptable response time"
+    - "HFE deficiencies causing crew error or increased workload"
+    - "Inconsistent or ambiguous crew procedures"
+    - "Display hardware failure affecting situational awareness"
+    - "Software defects in display or annunciator logic"
+    - "Inadequate crew training materials or documentation"
+  airworthiness_limitation_items:
+    - "Display luminance and contrast verification (inspection interval per certification plan)"
+    - "Annunciator functional test and alert priority verification"
+    - "Audio alert SPL and intelligibility verification"
+    - "Display latency and refresh rate verification"
+    - "HFE validation and crew feedback integration"
+    - "Software baseline integrity verification for avionics displays"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata15.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  config: "ALL"
+  notes: "Specific display and alert effectivity by MSN, production block, flight deck configuration, or modification must be recorded in individual document sidecars"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, taxonomy, regulatory compliance matrix"
+    - name: "02-DISPLAYS_AND_ANNUNCIATORS"
+      description: "Display standards, luminance limits, contrast ratios, annunciator logic, alert priorities"
+    - name: "03-AUDIO_ALERTS"
+      description: "Audio alert design, SPL limits, intelligibility requirements, test procedures"
+    - name: "04-HUMAN_FACTORS"
+      description: "HFE process, usability tests, time-to-action studies, cognitive load assessments"
+    - name: "05-PROCEDURES"
+      description: "SOPs, checklists, briefings, abnormal/emergency flows, LOPA updates"
+    - name: "06-SOFTWARE_AND_AVIONICS"
+      description: "Software verification, DO-178C traceability, requirements management, test logs"
+    - name: "07-RECORDS_AND_SIDECARS"
+      description: "Sidecar metadata templates for document traceability and approval tracking"
+    - name: "08-EXAMPLES_AND_RECORDS"
+      description: "Example HFE reports, test logs, sample display specifications, inspection records"
+  schemas:
+    - name: "display-spec.schema.json"
+      description: "Display specification schema with effectivity, luminance, contrast ratio, latency fields"
+    - name: "annunciator.schema.json"
+      description: "Annunciator configuration schema with logic, priority, debounce parameters"
+    - name: "audio-alert.schema.json"
+      description: "Audio alert definition schema with SPL, duration, intelligibility requirements"
+    - name: "hfe-report.schema.json"
+      description: "Human Factors Evidence report schema with test type, summary, raw data links"
+    - name: "procedure.schema.json"
+      description: "Procedure/SOP schema with steps, affected systems, crew actions"
+approvals:
+  - authority: "Flight Deck Systems"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Human Factors Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Flight Operations"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Systems Integration"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"
