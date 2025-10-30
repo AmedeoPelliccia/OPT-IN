@@ -55,17 +55,22 @@ This procedure applies to:
 ## 3. References and Related Documents
 
 ### 3.1 Procedures
-- PROC_11-04-01: GVI for Placards and Markings
-- PROC_11-05-01: Surface Preparation for Adhesive Bonding (ATA 20 reference)
+- [PROC_11-04-01: GVI for Placards and Markings](../04-GVI_DVI_INSPECTION/PROC_11-04-01_GVI-For-Placards-And-Markings_rev1.0.0_20251030.md)
+- [PROC_11-06-01: Temporary Placard Management](../06-TEMPORARY_PLACARDS/PROC_11-06-01_Temporary-Placard-Management_rev1.0.0_20251030.md)
+- Surface Preparation for Adhesive Bonding (see [ATA 20](../../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES_AIRFRAME/00_README.md))
 
 ### 3.2 Data Files
-- DATA_11-03-03: Placard Location Table
-- DATA_11-05-02: Approved Adhesives and Application Data
-- DATA_11-02-02: Font Sizes and Contrast Limits
+- [DATA_11-03-03: Placard Location Table](./DATA_11-03-03_Placard-Location-Table_rev1.0.0_20251030.csv)
+- [DATA_11-05-02: Approved Adhesives and Application Data](../05-MATERIALS_AND_PROCESSES/DATA_11-05-02_Approved-Adhesives-And-Application-Data_rev1.0.0_20251030.csv)
+- [DATA_11-02-02: Font Sizes and Contrast Limits](../02-PLACARD_DESIGN_AND_LEGIBILITY/DATA_11-02-02_Font-Sizes-And-Contrast-Limits_rev1.0.0_20251030.csv)
 
 ### 3.3 Schemas
-- placard.schema.json: Placard specification
-- repair-record.schema.json: Installation record
+- [placard.schema.json](../schemas/placard.schema.json): Placard specification
+- [repair-record.schema.json](../schemas/repair-record.schema.json): Installation record
+
+### 3.4 Standards
+- [SAE AS5942](https://www.sae.org/standards/content/as5942/) - Aeronautical Labeling Requirements
+- [RTCA DO-160](https://www.rtca.org/content/standards-guidance-materials) - Environmental testing requirements
 
 ## 4. Tools and Materials
 

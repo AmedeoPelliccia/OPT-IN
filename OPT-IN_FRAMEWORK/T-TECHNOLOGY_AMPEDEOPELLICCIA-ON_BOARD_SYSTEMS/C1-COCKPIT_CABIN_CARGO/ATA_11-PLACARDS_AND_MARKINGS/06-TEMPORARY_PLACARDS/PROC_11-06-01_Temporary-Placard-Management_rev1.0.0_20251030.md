@@ -27,7 +27,7 @@ This procedure establishes the requirements for installation, tracking, and remo
 - **Material**: High-visibility adhesive vinyl (yellow or orange background) or magnetic substrate for ferrous surfaces
 - **Marking**: "TEMPORARY" must appear prominently in black text
 - **Content**: Installation date, removal date or flight hour limit, responsible authority, reason for temporary placard
-- **Legibility**: Minimum font size 4mm at 500mm viewing distance, contrast ratio ≥ 4.5:1
+- **Legibility**: Minimum font size 4mm at 500mm viewing distance, contrast ratio ≥ 4.5:1 (see [Font Sizes and Contrast Limits](../02-PLACARD_DESIGN_AND_LEGIBILITY/DATA_11-02-02_Font-Sizes-And-Contrast-Limits_rev1.0.0_20251030.csv))
 
 ### 2.2 Maximum Service Time Limits
 | Location | Environment | Maximum Service Time |
@@ -40,11 +40,14 @@ This procedure establishes the requirements for installation, tracking, and remo
 | Exterior (exposed) | Weather exposure | 14 days |
 | Ferry flight placards | Flight deck visible | Duration of ferry flight + 7 days |
 
+For permanent placard installation, refer to [PROC_11-03-01](../03-PLACARD_INSTALLATION_AND_REPLACEMENT/PROC_11-03-01_Placard-Removal-And-Installation_rev1.0.0_20251030.md).
+
 ### 2.3 Tracking and Documentation
 - Log entry in aircraft logbook required for all temporary placards
 - Include: placard ID, installation date, maximum removal date, reason, installer name
 - Weekly tracking review by maintenance control
 - Automatic alert at 75% of service time limit
+- See [ATA 05](../../../A-AIRFRAME/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/00_README.md) for maintenance tracking requirements
 
 ## 3. Installation Procedure
 

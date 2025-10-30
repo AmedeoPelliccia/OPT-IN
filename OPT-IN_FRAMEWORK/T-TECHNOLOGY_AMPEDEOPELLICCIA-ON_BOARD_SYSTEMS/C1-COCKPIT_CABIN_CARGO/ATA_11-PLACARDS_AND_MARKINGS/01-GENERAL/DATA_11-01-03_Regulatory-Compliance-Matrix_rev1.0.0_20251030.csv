@@ -1,3 +1,13 @@
+# Regulatory Compliance Matrix - ATA 11 Placards and Markings
+# This file maps regulatory requirements to placard specifications and verification methods
+# Regulatory Reference Links:
+# - FAA 14 CFR Part 25: https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/
+# - EASA CS-25: https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes
+# - SAE Standards: https://www.sae.org/standards/
+# - ISO Standards: https://www.iso.org/
+# - RTCA DO-160: https://www.rtca.org/content/standards-guidance-materials
+# - ICAO Annex 8: https://www.icao.int/safety/airnavigation/NationalityMarks/annexes_booklet_en.pdf
+#
 Regulation_Reference,Regulation_Title,Requirement_Summary,Compliance_Method,Related_Placard_IDs,Verification_Method,Status,Notes
 FAA 14 CFR 25.1541,General,Aircraft must display required markings and placards,Design specifications and installation procedures,PLACARD_11-01-001 through PLACARD_11-09-999,Design review and inspection,Compliant,Comprehensive placard program established
 FAA 14 CFR 25.1543,Instrument markings general,Flight instruments must be marked with limitations and operating ranges,Color-coded markings and placard callouts,PLACARD_11-01-010 to PLACARD_11-01-020,Functional test and visual inspection,Compliant,Coordinated with ATA 31 and ATA 34

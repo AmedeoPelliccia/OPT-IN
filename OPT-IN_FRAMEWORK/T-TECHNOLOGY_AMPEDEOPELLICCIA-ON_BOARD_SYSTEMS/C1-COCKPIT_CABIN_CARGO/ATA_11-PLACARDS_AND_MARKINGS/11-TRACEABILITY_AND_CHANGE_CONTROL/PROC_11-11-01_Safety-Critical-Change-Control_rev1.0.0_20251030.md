@@ -71,13 +71,17 @@ All changes initiated through formal ECR including:
 - **Estimated cost**: Material, labor, downtime
 - **Requesting authority**: Name, department, date
 
+See [DESC_11-01-01: Scope and Governance](../01-GENERAL/DESC_11-01-01_Scope-Governance-And-Effectivity_rev1.0.0_20251030.md) for safety classification definitions.
+
 ### 3.2 Supporting Documentation
 Attach to ECR:
-- Current placard specification (placard.schema.json)
+- Current placard specification ([placard.schema.json](../schemas/placard.schema.json))
 - Proposed new specification
-- Current artwork file (with SHA-256)
+- Current artwork file (with SHA-256, per [Artwork File Format Requirements](../09-ARTWORK_AND_GRAPHICS/DATA_11-09-01_Artwork-File-Format-Requirements_rev1.0.0_20251030.csv))
 - Proposed new artwork file (with SHA-256)
 - Photographs or renderings
+- Regulatory compliance assessment (reference [Regulatory Compliance Matrix](../01-GENERAL/DATA_11-01-03_Regulatory-Compliance-Matrix_rev1.0.0_20251030.csv))
+- Human factors assessment (if text or legibility changed, see [Font Sizes and Contrast Limits](../02-PLACARD_DESIGN_AND_LEGIBILITY/DATA_11-02-02_Font-Sizes-And-Contrast-Limits_rev1.0.0_20251030.csv))
 - Regulatory reference (if change driven by regulation)
 - Safety assessment (if Level 1 or Level 2)
 

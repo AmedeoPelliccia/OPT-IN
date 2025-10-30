@@ -29,10 +29,18 @@ This procedure applies to all placards and markings on AMPEL360 aircraft includi
 - Temporary placards (if present)
 
 ## 2. References
-- DATA_11-02-02: Font Sizes and Contrast Limits
-- DATA_11-03-03: Placard Location Table
-- PROC_11-04-02: Detailed Visual Inspection (DVI) for Placards (for follow-up inspections)
-- PROC_11-03-01: Placard Removal and Installation (for remediation)
+
+### 2.1 Related Procedures
+- [PROC_11-03-01: Placard Removal and Installation](../03-PLACARD_INSTALLATION_AND_REPLACEMENT/PROC_11-03-01_Placard-Removal-And-Installation_rev1.0.0_20251030.md) (for remediation)
+- [PROC_11-06-01: Temporary Placard Management](../06-TEMPORARY_PLACARDS/PROC_11-06-01_Temporary-Placard-Management_rev1.0.0_20251030.md)
+
+### 2.2 Data Files
+- [DATA_11-02-02: Font Sizes and Contrast Limits](../02-PLACARD_DESIGN_AND_LEGIBILITY/DATA_11-02-02_Font-Sizes-And-Contrast-Limits_rev1.0.0_20251030.csv)
+- [DATA_11-03-03: Placard Location Table](../03-PLACARD_INSTALLATION_AND_REPLACEMENT/DATA_11-03-03_Placard-Location-Table_rev1.0.0_20251030.csv)
+
+### 2.3 Standards
+- [SAE AS5942](https://www.sae.org/standards/content/as5942/) - Aeronautical Labeling Requirements (Section 5: Inspection)
+- [ISO 3864](https://www.iso.org/standard/72196.html) - Safety sign legibility requirements
 
 ## 3. Tools and Equipment
 - Flashlight: High-intensity LED (minimum 200 lumens)

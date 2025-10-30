@@ -126,19 +126,21 @@ Retrofits and modifications affecting placards must:
 ## 4. Regulatory Basis
 
 ### 4.1 Primary Regulations
-- **FAA 14 CFR Part 25.1541-1581** - Aircraft markings, placards, and operating limitations
-- **EASA CS-25** - European equivalent regulations
-- **ICAO Annex 8** - Airworthiness of Aircraft (international standards)
+- **[FAA 14 CFR Part 25.1541-1581](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-G/subject-group-ECFR3dd9c1826fd5be1)** - Aircraft markings, placards, and operating limitations
+- **[EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)** - European equivalent regulations
+- **[ICAO Annex 8](https://www.icao.int/safety/airnavigation/NationalityMarks/annexes_booklet_en.pdf)** - Airworthiness of Aircraft (international standards)
+
+For detailed regulation-to-document mapping, see [Regulatory Compliance Matrix](./DATA_11-01-03_Regulatory-Compliance-Matrix_rev1.0.0_20251030.csv).
 
 ### 4.2 Industry Standards
-- **SAE AS5942** - Aeronautical Labeling Requirements
-- **SAE ARP6143** - Human Factors Guidelines for Cockpit and Cabin Labeling
-- **ISO 3864** - Graphical symbols - Safety colours and safety signs
-- **RTCA DO-160** - Environmental Conditions and Test Procedures (durability)
+- **[SAE AS5942](https://www.sae.org/standards/content/as5942/)** - Aeronautical Labeling Requirements
+- **[SAE ARP6143](https://www.sae.org/standards/content/arp6143/)** - Human Factors Guidelines for Cockpit and Cabin Labeling
+- **[ISO 3864](https://www.iso.org/standard/72196.html)** - Graphical symbols - Safety colours and safety signs
+- **[RTCA DO-160](https://www.rtca.org/content/standards-guidance-materials)** - Environmental Conditions and Test Procedures (durability)
 
 ### 4.3 Quality Management
-- **ISO 9001** - Quality management systems (traceability requirements)
-- **AS9100** - Aerospace Quality Management Systems
+- **[ISO 9001](https://www.iso.org/standard/62085.html)** - Quality management systems (traceability requirements)
+- **[AS9100](https://www.sae.org/standards/content/as9100d/)** - Aerospace Quality Management Systems
 
 ## 5. Document Structure and Conventions
 
