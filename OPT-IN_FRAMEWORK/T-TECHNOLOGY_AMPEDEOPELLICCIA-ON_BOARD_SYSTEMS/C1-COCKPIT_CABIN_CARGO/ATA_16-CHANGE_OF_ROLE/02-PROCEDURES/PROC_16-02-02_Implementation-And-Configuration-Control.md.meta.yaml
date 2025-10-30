@@ -1,0 +1,28 @@
+schema_version: "1.1"
+id: "PROC_16-02-02_rev1.0.0"
+document:
+  type: "PROC"
+  title: "Implementation and Configuration Control"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+artifact_path: "OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_16-CHANGE_OF_ROLE/02-PROCEDURES/PROC_16-02-02_Implementation-And-Configuration-Control.md"
+artifact_sha256: "45c8bc854539a32da6c3192b42412b87382e7f59c0282e3e878865b95bf5e445"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  config: "ALL"
+approvals:
+  - role: "Configuration_Control"
+    reviewer_id: "CC-12345"
+    reviewer_name: "Alice Johnson"
+    timestamp: "2025-10-30T12:00:00Z"
+    status: "Released"
+audit_log:
+  - event: "Created"
+    actor: "Configuration Control"
+    timestamp: "2025-10-30T10:00:00Z"
+    detail: "Created procedure"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "45c8bc854539a32da6c3192b42412b87382e7f59c0282e3e878865b95bf5e445"

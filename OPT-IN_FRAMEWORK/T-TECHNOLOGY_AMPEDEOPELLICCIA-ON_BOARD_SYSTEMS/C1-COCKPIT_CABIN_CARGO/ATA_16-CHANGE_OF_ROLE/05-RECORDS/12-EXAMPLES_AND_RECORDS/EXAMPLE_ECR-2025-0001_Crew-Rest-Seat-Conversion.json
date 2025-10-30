@@ -1,0 +1,226 @@
+{
+  "change_request_id": "ECR-2025-0001",
+  "change_type": "Equipment_Role_Change",
+  "title": "Convert Row 15 Seats from Passenger to Crew Rest Configuration",
+  "description": "Convert six passenger seats in row 15 (seats 15A through 15F) to crew rest seats to accommodate additional relief crew for ultra-long-haul operations. This change supports extended range operations and crew fatigue management requirements.",
+  "safety_critical": true,
+  "effectivity": {
+    "msn": "025-050",
+    "config": "LONG_HAUL",
+    "lopa": "LOPA-v2.1",
+    "effective_date": "2025-01-15",
+    "production_block": "Block-5"
+  },
+  "safety_assessment_ref": {
+    "assessment_id": "SA-2025-0001",
+    "assessment_type": "FMEA",
+    "assessment_date": "2025-09-15",
+    "hazard_classification": "Minor",
+    "mitigation_plan": "Install crew restraint systems per CS-25.785, update emergency procedures, train cabin crew on new configuration",
+    "residual_risk": "Acceptable"
+  },
+  "regulatory_refs": [
+    {
+      "regulation": "CS-25",
+      "clause": "25.785",
+      "compliance_method": "Test",
+      "impact": "Major_Impact"
+    },
+    {
+      "regulation": "CS-25",
+      "clause": "25.807",
+      "compliance_method": "Analysis",
+      "impact": "Minor_Impact"
+    },
+    {
+      "regulation": "CS-25",
+      "clause": "25.813",
+      "compliance_method": "Analysis",
+      "impact": "Minor_Impact"
+    }
+  ],
+  "test_evidence_refs": [
+    {
+      "test_id": "FT-2025-101",
+      "test_type": "Functional_Test",
+      "test_date": "2025-10-05",
+      "result": "Pass",
+      "test_report_ref": "TR-2025-0012",
+      "raw_data_checksum": {
+        "algorithm": "sha256",
+        "value": "a3d5e8f9b2c1d4e7f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3"
+      }
+    },
+    {
+      "test_id": "IT-2025-055",
+      "test_type": "Integration_Test",
+      "test_date": "2025-10-08",
+      "result": "Pass",
+      "test_report_ref": "TR-2025-0013",
+      "raw_data_checksum": {
+        "algorithm": "sha256",
+        "value": "b4e6f0a2c3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7"
+      }
+    }
+  ],
+  "numeric_evidence": [
+    {
+      "parameter": "Seat Restraint Load",
+      "threshold": {
+        "min": 15000,
+        "max": 20000
+      },
+      "measured_value": 17500,
+      "tolerance": 500,
+      "unit": "N",
+      "pass_fail": "Pass",
+      "data_source_ref": "DATA_16-03-02_Test-Results.csv"
+    },
+    {
+      "parameter": "Seat Pitch",
+      "threshold": {
+        "min": 1800,
+        "max": 2000
+      },
+      "measured_value": 1905,
+      "tolerance": 10,
+      "unit": "mm",
+      "pass_fail": "Pass",
+      "data_source_ref": "LOPA-v2.1-Drawing"
+    }
+  ],
+  "impacted_systems": [
+    {
+      "ata_chapter": "ATA_25",
+      "system_name": "Cabin Seating",
+      "impact_description": "Six passenger seats replaced with crew rest seats",
+      "old_role": "Passenger seating",
+      "new_role": "Crew rest seating"
+    },
+    {
+      "ata_chapter": "ATA_44",
+      "system_name": "Cabin Management System",
+      "impact_description": "Seat occupancy sensors and call buttons reconfigured",
+      "old_role": "Passenger service controls",
+      "new_role": "Crew rest controls"
+    }
+  ],
+  "approvals": [
+    {
+      "role": "Configuration_Control",
+      "reviewer_id": "CC-12345",
+      "reviewer_name": "Alice Johnson",
+      "timestamp": "2025-09-20T14:30:00Z",
+      "status": "Approved",
+      "comment": "Change request complete and properly documented. Effectivity verified.",
+      "signature": "AJ-20250920-1430"
+    },
+    {
+      "role": "Airworthiness",
+      "reviewer_id": "AW-67890",
+      "reviewer_name": "Robert Chen",
+      "timestamp": "2025-09-22T10:15:00Z",
+      "status": "Approved",
+      "comment": "Regulatory compliance plan acceptable. CS-25.785 dynamic test required.",
+      "signature": "RC-20250922-1015"
+    },
+    {
+      "role": "Safety_Engineering",
+      "reviewer_id": "SE-11223",
+      "reviewer_name": "Maria Garcia",
+      "timestamp": "2025-09-21T16:45:00Z",
+      "status": "Approved",
+      "comment": "Safety assessment complete. Residual risk acceptable with defined mitigations.",
+      "signature": "MG-20250921-1645"
+    },
+    {
+      "role": "Human_Factors",
+      "reviewer_id": "HF-44556",
+      "reviewer_name": "David Kim",
+      "timestamp": "2025-09-23T09:00:00Z",
+      "status": "Approved",
+      "comment": "Crew procedures updated. Training plan adequate.",
+      "signature": "DK-20250923-0900"
+    }
+  ],
+  "traceability": {
+    "related_documents": [
+      {
+        "doc_id": "SA-2025-0001",
+        "doc_type": "Safety_Assessment",
+        "relationship": "References",
+        "checksum": {
+          "algorithm": "sha256",
+          "value": "c5e7f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9"
+        }
+      },
+      {
+        "doc_id": "LOPA-v2.1",
+        "doc_type": "LOPA_Document",
+        "relationship": "References",
+        "checksum": {
+          "algorithm": "sha256",
+          "value": "d6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8"
+        }
+      },
+      {
+        "doc_id": "TR-2025-0012",
+        "doc_type": "Test_Report",
+        "relationship": "References",
+        "checksum": {
+          "algorithm": "sha256",
+          "value": "e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9"
+        }
+      }
+    ],
+    "parent_change_request": null,
+    "child_change_requests": []
+  },
+  "audit_log": [
+    {
+      "event": "Created",
+      "actor": "John Smith (Design Engineering)",
+      "timestamp": "2025-09-10T08:00:00Z",
+      "detail": "Initial change request created to support ultra-long-haul operations"
+    },
+    {
+      "event": "Submitted",
+      "actor": "John Smith",
+      "timestamp": "2025-09-12T14:00:00Z",
+      "detail": "Change request submitted to Configuration Control for review"
+    },
+    {
+      "event": "Routed for Assessment",
+      "actor": "Configuration Control (Alice Johnson)",
+      "timestamp": "2025-09-13T09:00:00Z",
+      "detail": "Change request routed to Safety Engineering, Airworthiness, and Human Factors"
+    },
+    {
+      "event": "Safety Assessment Complete",
+      "actor": "Maria Garcia (Safety Engineering)",
+      "timestamp": "2025-09-21T16:45:00Z",
+      "detail": "Safety assessment SA-2025-0001 completed and linked"
+    },
+    {
+      "event": "Approved",
+      "actor": "Configuration Control Board",
+      "timestamp": "2025-09-25T11:00:00Z",
+      "detail": "All assessments complete and favorable. Change approved for implementation."
+    }
+  ],
+  "implementation_plan": {
+    "scheduled_implementation_date": "2025-11-01",
+    "implementation_location": "Final Assembly Line, Station 60",
+    "downtime_hours": 0,
+    "required_resources": [
+      "Crew rest seat assemblies (6 units, PN: CRS-25-001)",
+      "Seat track fittings (12 units, PN: STF-25-055)",
+      "Restraint systems (6 units, PN: RS-25-102)",
+      "Torque wrench (calibrated, 0-50 Nm)",
+      "Installation jigs (2 units)",
+      "Trained installation technicians (2)",
+      "QA inspector (1)"
+    ]
+  },
+  "notes": "This change is part of the AMPEL360 long-range capability enhancement program. Coordination required with Flight Operations for crew rostering and training. LOPA version 2.1 supersedes LOPA version 2.0 for affected MSNs."
+}

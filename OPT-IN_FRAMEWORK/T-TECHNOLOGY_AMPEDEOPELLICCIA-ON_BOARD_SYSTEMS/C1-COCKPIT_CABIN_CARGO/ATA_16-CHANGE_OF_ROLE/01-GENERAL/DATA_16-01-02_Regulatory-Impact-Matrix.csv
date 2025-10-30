@@ -1,0 +1,27 @@
+Regulation,Clause,Description,Applicability_to_Role_Changes,Compliance_Method,Impact_Level,Notes
+CS-25 / 14 CFR Part 25.783,25.783,Door design and operation,Applicable when role changes affect cabin doors or emergency exits,Analysis + Test,Major,Any change affecting door function or crew procedures requires re-evaluation
+CS-25 / 14 CFR Part 25.807,25.807,Emergency exit requirements,Applicable when seat layout or cabin configuration changes,Analysis + Inspection,Major,LOPA changes must maintain required emergency exit access and capacity
+CS-25 / 14 CFR Part 25.809,25.809,Emergency exit arrangement,Applicable when cabin zones or seating arrangements change,Analysis + Demonstration,Major,Exit arrangement must comply with evacuation requirements
+CS-25 / 14 CFR Part 25.853,25.853,Compartment interiors (fire protection),Applicable when equipment or furnishings role changes,Test + Certification,Critical,Material flammability and smoke/toxicity requirements must be maintained
+CS-25 / 14 CFR Part 25.1301,25.1301,Function and installation (equipment),Applicable to all system and equipment role changes,Analysis + Test,Major,Changed function must not adversely affect aircraft or occupant safety
+CS-25 / 14 CFR Part 25.1309,25.1309,Equipment systems and installations,Applicable when system function or safety criticality changes,Safety Assessment,Critical,New FHA/FMEA required if failure condition classification changes
+CS-25 / 14 CFR Part 25.1523,25.1523,Minimum flight crew,Applicable when crew role assignments change,Analysis + Flight Test,Critical,Any change affecting minimum crew requirements requires authority approval
+CS-25 / 14 CFR Part 25.1541,25.1541,General markings and placards,Applicable when equipment roles require new placards,Inspection,Minor,New or modified placards must meet legibility requirements
+CS-25 / 14 CFR Part 25.1581,25.1581,Operating limitations and information,Applicable when operational capabilities change,Documentation Review,Major,Flight manual amendments required for capability changes
+EASA Part-21 Subpart D,21A.90,Changes to type design,Applicable to all role changes affecting type design,Classification + Approval,Varies,Minor vs. major classification determines approval path
+EASA Part-21 Subpart E,21A.431,Classification of changes,Mandatory classification for all changes,Analysis,Varies,Configuration Control must classify change before implementation
+FAA Order 8110.4C,Chapter 3,Design changes and alterations,Applicable to changes requiring FAA coordination,Authority Coordination,Varies,Major changes require certification basis review
+FAA AC 25.783-1,N/A,Door design and test criteria,Advisory for door-related role changes,Reference,Major,Guidance for demonstrating compliance with 25.783
+SAE ARP4754A,Section 2,Development process,Applicable when change affects system development lifecycle,Process Compliance,Major,Change development must follow ARP4754A if original system did
+SAE ARP4761,Section 2,Safety assessment process,Mandatory for all safety-critical role changes,Safety Assessment,Critical,FHA/PSSA/SSA required per hazard classification
+SAE ARP4761,Appendix A,Severity classification,Defines hazard classifications,Reference,Critical,Catastrophic/Hazardous/Major/Minor/No Safety Effect
+DO-178C,N/A,Software considerations,Applicable if role change involves software modification,Software Analysis,Critical,Software DAL must be appropriate for new function
+DO-254,N/A,Hardware considerations,Applicable if role change involves hardware modification,Hardware Analysis,Critical,Hardware DAL must be appropriate for new function
+EASA AMC 20-115,N/A,Airborne software development,Applicable to software-related role changes,Process Compliance,Major,Software lifecycle documentation required
+ISO 9001,Section 8.5,Production and service provision,Applicable to production implementation of changes,Process Compliance,Minor,Quality system must control change implementation
+RTCA DO-160,N/A,Environmental conditions and test procedures,Applicable when equipment environmental qualification changes,Test,Major,New environmental testing may be required if operating conditions change
+SAE AS5942,N/A,Aeronautical labeling requirements,Applicable when equipment labeling changes,Inspection,Minor,Labels must meet AS5942 requirements
+SAE ARP6143,N/A,Human factors for labeling,Applicable when crew/passenger interface changes,Human Factors Review,Minor,Human factors assessment required for interface changes
+CS-25 / 14 CFR Part 25.785,25.785,Seats belts harnesses and restraint systems,Applicable when seat roles or locations change,Test + Analysis,Major,Restraint systems must meet dynamic test requirements for new configuration
+CS-25 / 14 CFR Part 25.562,25.562,Emergency landing dynamic conditions,Applicable when seat configuration changes,Dynamic Test,Critical,Full dynamic test required if seat type or pitch changes significantly
+CS-25 / 14 CFR Part 25.561,25.561,General (emergency landing conditions),Applicable when structural load paths change,Analysis + Test,Critical,Structural substantiation required for new load conditions

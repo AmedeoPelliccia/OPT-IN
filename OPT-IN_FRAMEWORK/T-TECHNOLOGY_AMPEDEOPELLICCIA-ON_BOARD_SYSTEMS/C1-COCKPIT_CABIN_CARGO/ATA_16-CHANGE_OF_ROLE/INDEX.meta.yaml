@@ -1,0 +1,87 @@
+schema_version: "1.1"
+id: "ATA_16_INDEX_rev1.0.0_20251030"
+chapter: "ATA 16 - CHANGE OF ROLE"
+governance:
+  owner_role: "Configuration & Change Control"
+  alternate_owner: "Cabin Interiors Engineering"
+  review_board: ["Airworthiness", "Human Factors", "Materials & Process", "Structures", "Configuration Control Board"]
+  regulatory_basis:
+    - "CS/14 CFR Part 25"           # Airworthiness Standards affected by role changes
+    - "EASA Part-21"                # Certification procedures for changes and modifications
+    - "FAA Order 8110.4C"           # Type Certification
+    - "EASA AMC 20-115"             # Airborne Software Development Assurance
+    - "SAE ARP4754A"                # Guidelines for Development of Civil Aircraft and Systems
+    - "SAE ARP4761"                 # Guidelines and Methods for Safety Assessment Process
+traceability:
+  crossrefs:
+    - "ATA 05"  # Time Limits & Maintenance Checks
+    - "ATA 21"  # ECS / Environmental Control Interfaces
+    - "ATA 25"  # Equipment/Furnishings (cabins & stowage)
+    - "ATA 33"  # Lights
+    - "ATA 51"  # Structures / Standard Practices
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "CHANGE-PROC-16-001: Change of Role Management and Control Procedure"
+    - "SAFETY-ASSESS-16-001: Safety Assessment Requirements for Role Changes"
+    - "TEST-PLAN-16-001: Role Change Validation and Regression Test Plan"
+    - "CONFIG-CTRL-16-001: Configuration Control and LOPA Management"
+    - "APPROVAL-PROC-16-001: Approval Workflow for Role Changes"
+    - "TRACE-STD-16-001: Traceability and Sidecar Standards"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Unauthorized or undocumented role changes affecting airworthiness"
+    - "Incomplete safety assessment for equipment role changes"
+    - "Missing or inadequate test evidence for functional role changes"
+    - "Configuration mismatch between LOPA and actual cabin layout"
+    - "System ownership ambiguity leading to maintenance gaps"
+    - "Crew/observer role changes without proper training and certification"
+    - "Inadequate approval chain for safety-critical role changes"
+    - "Missing numeric evidence or thresholds for acceptance criteria"
+    - "Loss of traceability between change requests and implementation"
+    - "Effectivity errors leading to wrong configuration on specific MSN"
+  airworthiness_limitation_items:
+    - "Safety assessment required for all role changes affecting certification"
+    - "Airworthiness approval mandatory for safety-critical role changes"
+    - "Test evidence with SHA-256 checksums required before implementation"
+    - "Effectivity (MSN, config, LOPA) must be verified before change closure"
+    - "Numeric verification against DATA_*.csv limits required for all tests"
+    - "Audit trail with timestamps and reviewer IDs for all approvals"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata16.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  config: "ALL"
+  lopa: "ALL"
+  notes: "Specific role change effectivity by MSN, production block, cabin configuration, LOPA version, or modification must be recorded in individual document sidecars and change request metadata"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, taxonomy, regulatory impact matrix"
+    - name: "02-PROCEDURES"
+      description: "Change request and assessment procedures, implementation and configuration control, operational changes and LOPA updates"
+    - name: "03-TESTS_AND_EVIDENCE"
+      description: "Functional regression test plans, test results, numeric verification data"
+    - name: "04-APPROVALS_AND_SIDECARS"
+      description: "Sidecar templates (11-SIDE-CAR_META), approval workflow documentation"
+    - name: "05-RECORDS"
+      description: "Example records (12-EXAMPLES_AND_RECORDS): ECRs, Safety Assessments, Test Reports, LOPA updates"
+  schemas:
+    - name: "change-request.schema.json"
+      description: "Engineering Change Request (ECR) and Non-Conformance Report (NCR) schema with effectivity, safety refs, approvals"
+    - name: "safety-assessment.schema.json"
+      description: "Safety assessment schema with hazard analysis, mitigation plan, regulatory compliance"
+    - name: "test-report.schema.json"
+      description: "Test report schema with test plan reference, numeric results, pass/fail criteria, evidence checksums"
+approvals:
+  - authority: "Configuration & Change Control"
+    status: "Released"
+    date: "2025-10-30"
+    comment: "Initial ATA 16 chapter structure release"
+audit_log:
+  - event: "Chapter creation"
+    actor: "Configuration Control Board"
+    timestamp: "2025-10-30T19:31:00Z"
+    detail: "Created ATA 16 - Change of Role chapter structure per AMPEL360 OPT-IN framework requirements"

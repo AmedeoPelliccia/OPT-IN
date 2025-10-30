@@ -1,0 +1,83 @@
+schema_version: "1.1"
+id: "EXAMPLE_ECR-2025-0001"
+document:
+  type: "EXAMPLE"
+  title: "Example Engineering Change Request - Crew Rest Seat Conversion"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+artifact_path: "OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_16-CHANGE_OF_ROLE/05-RECORDS/12-EXAMPLES_AND_RECORDS/EXAMPLE_ECR-2025-0001_Crew-Rest-Seat-Conversion.json"
+artifact_sha256: "d978172b4c9b3afd2d59018a324a88b4c9664b6a870d53949bd3542807cad8e0"
+schema_id: "change-request.schema.json"
+schema_version: "1.0"
+effectivity:
+  scope: "Example change request demonstrating ATA 16 ECR format and requirements"
+  msn: "025-050"
+  config: "LONG_HAUL"
+  lopa: "LOPA-v2.1"
+  notes: "This is an example record for reference purposes. Demonstrates proper ECR structure, effectivity, approvals, and traceability."
+change_request_id: "ECR-2025-0001"
+regulatory_refs:
+  - regulation: "CS-25"
+    clause: "25.785"
+    impact: "Major_Impact"
+  - regulation: "CS-25"
+    clause: "25.807"
+    impact: "Minor_Impact"
+safety_assessment_ref: "SA-2025-0001"
+numeric_checks:
+  - parameter: "Seat Restraint Load"
+    threshold_min: 15000
+    threshold_max: 20000
+    unit: "N"
+    tolerance: 500
+    data_source: "DATA_16-03-02_Test-Results.csv"
+  - parameter: "Seat Pitch"
+    threshold_min: 1800
+    threshold_max: 2000
+    unit: "mm"
+    tolerance: 10
+    data_source: "LOPA-v2.1-Drawing"
+approvals:
+  - role: "Configuration_Control"
+    reviewer_id: "CC-12345"
+    reviewer_name: "Alice Johnson"
+    timestamp: "2025-09-20T14:30:00Z"
+    status: "Approved"
+    comment: "Example ECR demonstrates proper documentation and approval workflow"
+    signature: "AJ-20250920-1430"
+  - role: "Airworthiness"
+    reviewer_id: "AW-67890"
+    reviewer_name: "Robert Chen"
+    timestamp: "2025-09-22T10:15:00Z"
+    status: "Approved"
+    comment: "Example shows correct regulatory compliance approach"
+    signature: "RC-20250922-1015"
+audit_log:
+  - event: "Created"
+    actor: "Configuration Control"
+    timestamp: "2025-10-30T10:00:00Z"
+    detail: "Created example ECR to demonstrate ATA 16 change request format"
+  - event: "Released"
+    actor: "Configuration Control"
+    timestamp: "2025-10-30T12:00:00Z"
+    detail: "Released as example record for ATA 16 guidance"
+traceability:
+  related_documents:
+    - doc_id: "SA-2025-0001"
+      doc_type: "Safety_Assessment"
+      relationship: "References"
+      checksum:
+        algorithm: "sha256"
+        value: "c5e7f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9"
+    - doc_id: "change-request.schema.json"
+      doc_type: "Schema"
+      relationship: "Conforms_To"
+  parent_change_request: null
+  child_change_requests: []
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "d978172b4c9b3afd2d59018a324a88b4c9664b6a870d53949bd3542807cad8e0"
+  validation_method: "JSON schema validation and sha256sum"
+  validation_date: "2025-10-30"
+notes: "This example ECR demonstrates: (1) Proper use of change-request.schema.json, (2) Complete effectivity specification, (3) Regulatory compliance documentation, (4) Safety assessment linkage, (5) Test evidence with checksums, (6) Numeric criteria with units, (7) Approval workflow with timestamps, (8) Audit trail, (9) Traceability to related documents. Use this as a template for creating actual change requests."
