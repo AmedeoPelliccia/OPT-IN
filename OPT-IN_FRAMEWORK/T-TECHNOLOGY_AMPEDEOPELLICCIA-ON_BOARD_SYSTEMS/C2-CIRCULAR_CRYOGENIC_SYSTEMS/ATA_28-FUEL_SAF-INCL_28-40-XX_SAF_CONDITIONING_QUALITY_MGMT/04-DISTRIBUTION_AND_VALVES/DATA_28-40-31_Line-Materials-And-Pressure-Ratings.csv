@@ -1,0 +1,6 @@
+Line_ID,Part_Number,Nominal_Size_DN,Material,Pressure_Rating_bar,Operating_Temp_Min_C,Operating_Temp_Max_C,Wall_Thickness_mm,Insulation_Type,Service,Remarks
+LINE-001,LN-PN-050,50,316L_SS,10,-253,50,2.0,Vacuum_Jacket,LH2_Transfer,"Primary fill line"
+LINE-002,LN-PN-025,25,316L_SS,10,-253,50,1.5,Foam,LH2_Vent,"Emergency vent"
+LINE-003,LN-PN-040,40,316L_SS,15,-253,50,2.5,Vacuum_Jacket,LH2_Distribution,"Wing distribution"
+LINE-004,LN-PN-032,32,304L_SS,20,-50,100,2.0,None,GH2_Warm_Gas,"Pressure control"
+LINE-005,LN-PN-020,20,Aluminum_6061,8,-50,80,1.5,None,SAF_Supply,"SAF conditioning"

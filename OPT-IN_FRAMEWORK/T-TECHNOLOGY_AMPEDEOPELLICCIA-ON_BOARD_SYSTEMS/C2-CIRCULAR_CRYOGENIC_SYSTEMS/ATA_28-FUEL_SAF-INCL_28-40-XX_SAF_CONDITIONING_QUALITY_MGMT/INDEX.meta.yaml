@@ -1,0 +1,17 @@
+schema_version: "1.1"
+id: "ATA_28-40-XX_INDEX"
+chapter: "ATA 28-FUEL_SAF-INCL_28-40-XX_SAF_CONDITIONING_QUALITY_MGMT"
+governance:
+  owner_role: "Cryogenic Systems Engineering"
+  review_board: ["Airworthiness","Thermal Engineering","Energy Systems","Safety"]
+effectivity:
+  msn: "ALL"
+  cfg: "LH2|SAF"
+traceability:
+  crossrefs:
+    - "ATA 21"
+    - "ATA 47"
+    - "ATA 51"
+    - "SAE AIR6464"
+integrity:
+  checksum_algorithm: "sha256"

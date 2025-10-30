@@ -1,0 +1,17 @@
+schema_version: "1.1"
+id: "document_sidecar_template"
+document:
+  type: "PROC"
+  title: "TBD"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+effectivity: { msn: "ALL" }
+safety:
+  hazards: ["Cryogenic temperatures","Hydrogen flammability","Pressure hazards"]
+  criticality: "Flight-Critical"
+training_required: ["CRYO-SYS-L2"]
+approvals: []
+integrity:
+  checksum: { algorithm: "sha256", value: "" }
+traceability:
+  crossrefs: []

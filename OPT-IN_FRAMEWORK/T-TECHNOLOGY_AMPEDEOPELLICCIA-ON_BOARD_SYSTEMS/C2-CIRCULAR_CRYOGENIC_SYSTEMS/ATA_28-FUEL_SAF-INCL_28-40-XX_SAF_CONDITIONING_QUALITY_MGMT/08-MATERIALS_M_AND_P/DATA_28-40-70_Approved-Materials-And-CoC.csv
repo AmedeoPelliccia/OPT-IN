@@ -1,0 +1,11 @@
+Material_Name,Specification,Grade,Service_Temp_Min_C,Service_Temp_Max_C,Application,CoC_Required,Shelf_Life_years,Remarks
+316L_Stainless_Steel,ASTM_A240,316L,-253,300,Tank_Primary_Vessel,Yes,Unlimited,"Austenitic, excellent cryogenic properties"
+304L_Stainless_Steel,ASTM_A240,304L,-253,300,Vacuum_Jacket,Yes,Unlimited,"Austenitic, non-magnetic"
+Aluminum_5083,ASTM_B209,5083-H116,-253,150,Tank_Shell,Yes,Unlimited,"Good cryogenic toughness"
+Aluminum_6061,ASTM_B210,6061-T6,-200,150,Lines_and_Fittings,Yes,Unlimited,"Good machinability"
+Inconel_625,AMS_5599,625,-253,650,High_Stress_Components,Yes,Unlimited,"Excellent strength and corrosion resistance"
+CFRP_Epoxy,AMS_3711,N/A,-200,120,Overwrap_Composite,Yes,10,"Shelf life for uncured prepreg"
+PTFE,ASTM_D4894,Virgin_PTFE,-253,260,Seals_and_Gaskets,Yes,Unlimited,"Excellent chemical resistance"
+Viton_FKM,ASTM_D2000,N/A,-40,200,Seals_Warm_Service_Only,Yes,15,"NOT for cryogenic use"
+Indium_Wire,ASTM_B265,99.99%_In,-253,150,Metal_Seals,Yes,Unlimited,"Ultra-high vacuum seals"
+MLI_Aluminized_Mylar,N/A,N/A,-253,150,Thermal_Insulation,No,20,"Multi-layer insulation"

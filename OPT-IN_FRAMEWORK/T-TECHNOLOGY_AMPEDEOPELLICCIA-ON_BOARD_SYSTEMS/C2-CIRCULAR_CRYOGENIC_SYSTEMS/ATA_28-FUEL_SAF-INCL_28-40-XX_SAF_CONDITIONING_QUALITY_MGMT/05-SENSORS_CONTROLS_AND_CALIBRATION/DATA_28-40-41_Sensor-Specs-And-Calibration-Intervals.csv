@@ -1,0 +1,7 @@
+Sensor_ID,Part_Number,Type,Measurement_Range,Accuracy,Operating_Temp_Range_C,Calibration_Interval_months,Output_Signal,Remarks
+TEMP-001,RTD-PT100,RTD_Platinum,-253_to_50,±0.5°C,"-253,50",12,4-20mA,"LH2 tank temperature"
+TEMP-002,TC-K-TYPE,Thermocouple_K,-200_to_400,±2°C,"-200,400",12,mV,"Vent gas temperature"
+PRESS-001,PT-CRYO-10,Pressure_Transducer,0_to_10_bar,±0.5%_FS,"-253,80",12,4-20mA,"Tank pressure"
+PRESS-002,PG-MAN-16,Pressure_Gauge,0_to_16_bar,±1%_FS,"-50,100",24,Visual,"Manual gauge backup"
+LEVEL-001,LC-CAP-100,Capacitance,0_to_100%,±2%_FS,"-253,50",24,4-20mA,"LH2 level sensor"
+FLOW-001,FM-MASS-50,Mass_Flow,0_to_500_kg/h,±2%_reading,"-253,50",12,Pulse+Analog,"LH2 mass flow"

@@ -1,0 +1,13 @@
+Parameter,Test_Method,Min_Limit,Max_Limit,Units,Acceptance_Criteria,Remarks
+Density_at_15C,ASTM D4052,0.775,0.840,kg/L,Within_limits,"Typical SAF range"
+Viscosity_at_minus20C,ASTM D445,N/A,8.0,mm²/s,Within_limits,"Cold flow property"
+Flash_Point,ASTM D93,38,N/A,°C,Within_limits,"Fire safety minimum"
+Freeze_Point,ASTM D5972,N/A,-47,°C,Within_limits,"Cold weather operability"
+Water_Content,ASTM E1064,N/A,30,ppm,Within_limits,"Corrosion and microbial prevention"
+Particulate_Contamination,ASTM D5452,N/A,1.0,mg/L,Within_limits,"Filter and injector protection"
+Sulfur_Content,ASTM D4294,N/A,15,ppm,Within_limits,"Emissions and corrosion"
+Net_Heat_of_Combustion,ASTM D4809,42.8,N/A,MJ/kg,Within_limits,"Energy content minimum"
+Aromatics_Content,ASTM D1319,N/A,25,% vol,Within_limits,"Seal swelling and emissions"
+FSII_Additive,Supplier_Method,0.10,0.15,% vol,Within_limits_if_used,"Fuel System Icing Inhibitor"
+Total_Acid_Number,ASTM D3242,N/A,0.015,mg_KOH/g,Within_limits,"Corrosion indicator"
+Copper_Strip_Corrosion,ASTM D130,N/A,1,rating,Class_1_max,"Material compatibility"

@@ -1,0 +1,19 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "schema_version":"1.0",
+  "title":"Line Pressure Test Record",
+  "type":"object",
+  "required":["id","line_id","test_date","test_pressure_bar","hold_duration_min","result"],
+  "properties":{
+    "id":{"type":"string"},
+    "line_id":{"type":"string"},
+    "test_date":{"type":"string","format":"date"},
+    "test_pressure_bar":{"type":"number"},
+    "hold_duration_min":{"type":"number"},
+    "result":{"type":"string","enum":["pass","fail"]},
+    "leak_rate_mbar_l_s":{"type":"number"},
+    "inspector":{"type":"string"},
+    "test_medium":{"type":"string"},
+    "remarks":{"type":"string"}
+  }
+}
