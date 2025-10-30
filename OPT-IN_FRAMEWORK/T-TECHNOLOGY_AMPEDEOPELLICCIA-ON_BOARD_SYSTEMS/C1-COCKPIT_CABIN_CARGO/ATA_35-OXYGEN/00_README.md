@@ -18,20 +18,21 @@ This chapter covers the complete oxygen system for crew and passengers, includin
 
 - **Limits:** All cylinder service pressures, test pressures, regulator setpoints, leak rates, oxygen purity thresholds, flow rates, deployment times, corrosion limits, and inspection intervals are mandatory limits and cannot be exceeded without engineering disposition and airworthiness approval.
 - **Cross-Chapter Dependencies:**
-  - **[ATA-04](../../A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/):** Airworthiness Limitations (oxygen system inspection intervals and life limits).
-  - **[ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/):** Standard Practices (torque values, sealants, fasteners for oxygen fittings).
-  - **[ATA-21](../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING/):** Air Conditioning & Pressurization (cabin altitude monitoring, automatic deployment triggers).
-  - **[ATA-24](../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/):** Electrical Power (oxygen sensor power, deployment solenoid power).
+  - **[ATA-04](/A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/):** Airworthiness Limitations (oxygen system inspection intervals and life limits).
+  - **[ATA-20](/A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/):** Standard Practices (torque values, sealants, fasteners for oxygen fittings).
+  - **[ATA-21](/E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING/):** Air Conditioning & Pressurization (cabin altitude monitoring, automatic deployment triggers).
+  - **[ATA-24](/E2-ENERGY/ATA_24-ELECTRICAL_POWER/):** Electrical Power (oxygen sensor power, deployment solenoid power).
   - **[ATA-25](./ATA_25-EQUIPMENT_FURNISHINGS/):** Equipment/Furnishings (mask stowage, PSU integration).
-  - **[ATA-26](../../E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/):** Fire Protection (oxygen storage area fire detection and suppression).
-  - **[ATA-31](../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/):** Indicating/Recording Systems (oxygen pressure indication, mask deployment annunciation).
+  - **[ATA-26](/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/):** Fire Protection (oxygen storage area fire detection and suppression).
+  - **[ATA-31](/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/):** Indicating/Recording Systems (oxygen pressure indication, mask deployment annunciation).
   - **[ATA-44](./ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/):** Cabin Systems (passenger service unit integration, crew oxygen controls).
-  - **[ATA-95](../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/):** Digital Product Passport (cylinder serial traceability, CoC, refill records).
+  - **[ATA-95](/O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/):** Digital Product Passport (cylinder serial traceability, CoC, refill records).
 - **Traceability:** All repairs, modifications, cylinder refills, pressure tests, and inspections must be recorded with full traceability to Materials & Processes (M&P) certifications, NDT reports, cylinder Certificates of Conformance (CoC), hydrostatic test certificates, oxygen purity analysis, and Digital Product Passport (DPP) entries per ATA-95.
 - **Data Integrity:** All changes are validated by the CI script `ci/validate_ata35.sh`, which enforces schemas, naming conventions, and metadata sidecar requirements.
 
 ## Directory Structure
 
+> **Note:** All absolute paths in this document are relative to the repository root (i.e., `/` refers to the root of the repository).
 ```
 /ATA_35-OXYGEN
 ├── 00_README.md                    ← This file
