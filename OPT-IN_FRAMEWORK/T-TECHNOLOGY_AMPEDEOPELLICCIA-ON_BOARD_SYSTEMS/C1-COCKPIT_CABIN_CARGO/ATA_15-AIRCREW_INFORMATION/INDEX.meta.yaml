@@ -1,0 +1,13 @@
+schema_version: "1.1"
+id: "ATA_15_INDEX"
+chapter: "ATA 15 - AIRCREW INFORMATION"
+governance:
+  owner_role: "Flight Deck Systems"
+  review_board: ["Airworthiness","Human Factors","Flight Operations","Materials & Process"]
+effectivity: { msn: "ALL", cfg: "ALL", lopa: "TBD" }
+traceability:
+  ata_refs:
+    - { id: "ATA_11", title: "ATA 11 - Placards and Markings", url: "../ATA_11-PLACARDS_AND_MARKINGS/00_README.md" }
+    - { id: "ATA_21", title: "ATA 21 - ECS / Environmental Control Interfaces", url: "../ATA_21-ECS_INTERFACES/00_README.md" }
+    - { id: "ATA_25", title: "ATA 25 - Equipment / Furnishings", url: "../ATA_25-EQUIPMENT_FURNISHINGS/00_README.md" }
+integrity: { checksum_algorithm: "sha256" }

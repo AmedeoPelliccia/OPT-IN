@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Display Specification",
+  "type": "object",
+  "properties": {
+    "id": {"type":"string"},
+    "title": {"type":"string"},
+    "effectivity": {
+      "type":"object",
+      "properties": {
+        "msn": {"type":"string"},
+        "cfg": {"type":"string"},
+        "lopa": {"type":"string"}
+      },
+      "required": ["msn","cfg"]
+    },
+    "luminance_cd_m2": {"type":"number"},
+    "contrast_ratio": {"type":"number"},
+    "latency_ms": {"type":"number"}
+  },
+  "required": ["id","title","effectivity"]
+}

@@ -1,0 +1,3 @@
+id: "proc.sidecar.template"
+schema_version: "1.0"
+purpose: "Procedure sidecar for SOPs and checklists"

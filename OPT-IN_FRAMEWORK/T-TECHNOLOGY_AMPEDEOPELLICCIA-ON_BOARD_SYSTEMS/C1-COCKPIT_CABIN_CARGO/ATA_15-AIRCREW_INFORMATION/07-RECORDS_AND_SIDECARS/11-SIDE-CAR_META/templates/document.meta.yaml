@@ -1,0 +1,13 @@
+id: "sidecar.template"
+schema_version: "1.0"
+fields:
+  - id
+  - artifact_path
+  - artifact_sha256
+  - schema_id
+  - schema_version
+  - effectivity
+  - regulatory_refs
+  - numeric_checks
+  - approvals
+  - audit_log
