@@ -1,0 +1,34 @@
+schema_version: "1.1"
+id: "<DATA_ID>"  # e.g., "DATA_11-02-02_Font-Sizes-And-Contrast-Limits_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "<DATA_TITLE>"  # e.g., "11-02-02: Font Sizes and Contrast Limits"
+  revision: "<X.Y.Z>"
+  effective_date: "<YYYY-MM-DD>"
+data:
+  format: "<FORMAT>"  # e.g., "CSV", "JSON", "XML"
+  units_included: <BOOLEAN>  # true if CSV includes units in headers
+  validation_rules: []  # List of validation rules for data
+effectivity:
+  msn: "<MSN_RANGE>"  # e.g., "ALL"
+  config: "<CONFIG_ID>"  # Optional
+safety:
+  hazards: []  # List of hazards if data is safety-related
+  criticality: "<CRITICALITY>"  # One of: Critical, Major, Minor, Not_Safety_Related
+approvals:
+  - authority: "<APPROVING_AUTHORITY>"
+    status: "<STATUS>"  # One of: Draft, Released, Approved, Superseded
+    date: "<YYYY-MM-DD>"
+traceability:
+  source_documents: []  # Source documents
+  crossrefs: []  # Cross-references
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<SHA256_HASH>"
+revision_history:
+  - revision: "<X.Y.Z>"
+    date: "<YYYY-MM-DD>"
+    author: "<AUTHOR_NAME>"
+    description: "<CHANGE_DESCRIPTION>"
+notes: "<ADDITIONAL_NOTES>"

@@ -1,0 +1,30 @@
+schema_version: "1.1"
+id: "EXAMPLE_11-12-01_Placard-Installation-Record_rev1.0.0_20251030"
+document:
+  type: "EXAMPLE"
+  title: "11-12-01: Placard Installation Record Example"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  hazards: []
+  criticality: "Not_Safety_Related"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-30"
+traceability:
+  source_documents: ["schemas/repair-record.schema.json"]
+  crossrefs: ["PROC_11-03-01", "DATA_11-03-03"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "479bb2f7e70085b2a4c9db61e99b8c36b4c42c3d44c86909d72555cba87fcb2f"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release - example installation record with full traceability"
+notes: "Example of complete placard installation record per repair-record.schema.json. Includes personnel, materials, quality checks, artwork SHA-256, approvals. Use as template for actual installations."

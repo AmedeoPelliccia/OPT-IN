@@ -1,0 +1,27 @@
+schema_version: "1.1"
+id: "DATA_11-07-01_Language-Requirements-By-Region_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "11-07-01: Language Requirements By Region"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+data:
+  format: "CSV"
+  units_included: false
+effectivity:
+  msn: "ALL"
+safety:
+  criticality: "Critical"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "dafb996b7ca9ccf22cb1c07779de85d7ac76268da10bc47c0bdf71318068c91d"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release"

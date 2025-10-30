@@ -1,0 +1,33 @@
+schema_version: "1.1"
+id: "DESC_11-01-01_Scope-Governance-And-Effectivity_rev1.0.0_20251030"
+document:
+  type: "DESC"
+  title: "11-01-01: Scope, Governance, and Effectivity"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  hazards: []
+  criticality: "Not_Safety_Related"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+traceability:
+  source_documents: ["INDEX.meta.yaml"]
+  crossrefs: ["00_README.md", "ATA 05", "ATA 20", "ATA 51", "ATA 95"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "90df05311eec14c58b218ecaa0d446b10b217b36845867a7e1bdf6d7b7b592d3"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release - comprehensive governance structure for ATA 11"
+notes: "Foundational governance document establishing scope, approval authorities, effectivity rules, safety classification, and document conventions for all ATA 11 placards and markings."

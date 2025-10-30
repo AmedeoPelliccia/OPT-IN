@@ -1,0 +1,138 @@
+{
+  "record_id": "RECORD_11-02-000123",
+  "record_type": "Installation",
+  "aircraft_msn": "AMPEL360-001",
+  "aircraft_registration": "N360AX",
+  "placard_or_marking_id": "PLACARD_11-02-001",
+  "action_performed": {
+    "description": "Replaced damaged emergency exit operation instructions placard on forward entry door L1 with new placard per approved artwork revision 2.1",
+    "reason": "Scheduled maintenance - placard fading and edge lifting detected during GVI inspection",
+    "work_order": "WO-2025-1145",
+    "modification_reference": null
+  },
+  "action_date": "2025-10-30T14:35:00Z",
+  "location": {
+    "description": "Cabin forward entry door L1, interior panel, adjacent to door handle",
+    "coordinates": {
+      "fuselage_station_mm": 3500,
+      "buttock_line_mm": -1800,
+      "water_line_mm": 1600
+    },
+    "zone": "300",
+    "as_installed_drawing": "DWG-11-CAB-010 Rev C"
+  },
+  "personnel": {
+    "installer": {
+      "name": "John Smith",
+      "certification": "A&P 1234567",
+      "signature_ref": "Digital Signature: JS20251030-143500"
+    },
+    "inspector": {
+      "name": "Maria Garcia",
+      "certification": "QA Inspector 9876",
+      "signature_ref": "QA Stamp: RII-9876-20251030"
+    },
+    "rii_inspector": {
+      "name": "Maria Garcia",
+      "certification": "RII Stamp 9876",
+      "signature_ref": "QA Stamp: RII-9876-20251030"
+    }
+  },
+  "materials": {
+    "substrate": {
+      "part_number": "PLACARD-11-02-001-REV2.1",
+      "serial_number": "LOT-2025-0415-043",
+      "supplier": "AeroLabel Systems Inc",
+      "coc_reference": "COC-ALS-2025-0415"
+    },
+    "adhesive": {
+      "part_number": "EA9396-1LB-KIT",
+      "lot_number": "LOT-H9396-2024-1205",
+      "expiry_date": "2025-12-05",
+      "mix_ratio": "10:1 by weight",
+      "application_temperature_C": 22,
+      "cure_time_hours": 24,
+      "cure_temperature_C": 23
+    }
+  },
+  "procedure_followed": {
+    "procedure_id": "PROC_11-03-01",
+    "revision": "1.0.0",
+    "deviations": []
+  },
+  "quality_checks": {
+    "dimensional_check": true,
+    "legibility_check": true,
+    "contrast_ratio_measured": 7.3,
+    "adhesion_test": {
+      "performed": true,
+      "method": "Tape test per ASTM D3359",
+      "result": "Pass - no lifting or separation observed"
+    },
+    "environmental_exposure": {
+      "temperature_cycled": false,
+      "humidity_tested": false,
+      "results": "Not applicable for field installation"
+    }
+  },
+  "integrity": {
+    "artwork_file": "artwork/ATA11/PLACARD_11-02-001_EmergencyExitInstructions_rev2.1.svg",
+    "artwork_hash": {
+      "algorithm": "sha256",
+      "value": "3a5f8c9e2d1b4a6f7e3c8d5b2a1f9e4d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f"
+    },
+    "artwork_version": "2.1",
+    "production_batch": "BATCH-2025-0415"
+  },
+  "test_results": {
+    "functional_test": false,
+    "photometric_measurements": {
+      "luminance_cd_m2": 32.5,
+      "uniformity_ratio": 0.85
+    },
+    "colorimetry": {
+      "color_difference_delta_E": 2.1,
+      "within_tolerance": true
+    }
+  },
+  "approvals": [
+    {
+      "authority": "Quality Assurance",
+      "status": "Approved",
+      "date": "2025-10-30T15:45:00Z",
+      "signature_ref": "QA-RII-9876-20251030",
+      "comments": "Class 1 Critical placard - RII inspection performed. Installation acceptable. Legibility verified. Artwork SHA-256 verified."
+    }
+  ],
+  "nonconformances": [],
+  "attachments": [
+    {
+      "filename": "PLACARD_11-02-001_before_removal.jpg",
+      "type": "photo",
+      "hash": {
+        "algorithm": "sha256",
+        "value": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b"
+      },
+      "description": "Photo of damaged placard before removal showing fading and edge lifting"
+    },
+    {
+      "filename": "PLACARD_11-02-001_after_installation.jpg",
+      "type": "photo",
+      "hash": {
+        "algorithm": "sha256",
+        "value": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c"
+      },
+      "description": "Photo of new placard after installation showing proper alignment and legibility"
+    },
+    {
+      "filename": "COC-ALS-2025-0415.pdf",
+      "type": "Certificate of Conformance",
+      "hash": {
+        "algorithm": "sha256",
+        "value": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"
+      },
+      "description": "Certificate of Conformance for placard substrate and printing"
+    }
+  ],
+  "notes": "Emergency exit placard replacement completed successfully. Old placard showed UV degradation and adhesive failure at corners after 18 months service. New placard uses improved UV-resistant ink and stronger epoxy adhesive (EA9396). Photoluminescent material tested and verified 32.5 cd/m² luminance after 10 minutes dark adaptation, exceeds minimum 28 cd/m² requirement. Next GVI inspection due at 300 FH from installation date."
+}

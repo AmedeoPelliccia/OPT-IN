@@ -1,0 +1,525 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata11/placard.schema.json",
+  "title": "Placard Specification Schema",
+  "description": "Schema for aircraft placard specifications including design, legibility, materials, placement, and effectivity",
+  "type": "object",
+  "required": [
+    "placard_id",
+    "placard_type",
+    "title",
+    "design",
+    "legibility",
+    "materials",
+    "placement",
+    "effectivity",
+    "approvals",
+    "integrity"
+  ],
+  "properties": {
+    "placard_id": {
+      "type": "string",
+      "pattern": "^PLACARD_[0-9]{2}-[0-9]{2}-[0-9]{3}$",
+      "description": "Unique placard identifier (e.g., PLACARD_11-01-001)"
+    },
+    "placard_type": {
+      "type": "string",
+      "enum": [
+        "Safety",
+        "Emergency",
+        "Operational",
+        "Informational",
+        "Warning",
+        "Caution",
+        "Notice",
+        "Regulatory",
+        "Temporary"
+      ],
+      "description": "Classification of placard by purpose"
+    },
+    "title": {
+      "type": "string",
+      "description": "Descriptive title of the placard"
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Indicates if placard contains safety-critical information requiring airworthiness approval for changes"
+    },
+    "design": {
+      "type": "object",
+      "required": ["dimensions", "text", "colors", "symbols"],
+      "properties": {
+        "dimensions": {
+          "type": "object",
+          "required": ["width_mm", "height_mm"],
+          "properties": {
+            "width_mm": {
+              "type": "number",
+              "minimum": 10,
+              "description": "Placard width in millimeters"
+            },
+            "height_mm": {
+              "type": "number",
+              "minimum": 10,
+              "description": "Placard height in millimeters"
+            },
+            "thickness_mm": {
+              "type": "number",
+              "minimum": 0.1,
+              "description": "Placard substrate thickness in millimeters"
+            }
+          }
+        },
+        "text": {
+          "type": "object",
+          "required": ["content", "languages"],
+          "properties": {
+            "content": {
+              "type": "string",
+              "description": "Primary text content (English)"
+            },
+            "languages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["language_code", "translated_content", "approved_by", "approval_date"],
+                "properties": {
+                  "language_code": {
+                    "type": "string",
+                    "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+                    "description": "ISO 639-1 language code (e.g., en, fr, es-MX)"
+                  },
+                  "translated_content": {
+                    "type": "string",
+                    "description": "Translated text content"
+                  },
+                  "approved_by": {
+                    "type": "string",
+                    "description": "Translation approval authority"
+                  },
+                  "approval_date": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Translation approval date (ISO 8601)"
+                  }
+                }
+              }
+            },
+            "font_family": {
+              "type": "string",
+              "description": "Approved font family (e.g., Arial, Helvetica, DIN)"
+            },
+            "font_weight": {
+              "type": "string",
+              "enum": ["regular", "medium", "bold", "black"],
+              "description": "Font weight"
+            }
+          }
+        },
+        "colors": {
+          "type": "object",
+          "required": ["background", "text"],
+          "properties": {
+            "background": {
+              "type": "object",
+              "required": ["specification"],
+              "properties": {
+                "specification": {
+                  "type": "string",
+                  "description": "Color specification (Pantone, RAL, or CIE)"
+                },
+                "hex": {
+                  "type": "string",
+                  "pattern": "^#[0-9A-Fa-f]{6}$",
+                  "description": "Hex color code for reference"
+                }
+              }
+            },
+            "text": {
+              "type": "object",
+              "required": ["specification"],
+              "properties": {
+                "specification": {
+                  "type": "string",
+                  "description": "Color specification (Pantone, RAL, or CIE)"
+                },
+                "hex": {
+                  "type": "string",
+                  "pattern": "^#[0-9A-Fa-f]{6}$",
+                  "description": "Hex color code for reference"
+                }
+              }
+            },
+            "border": {
+              "type": "object",
+              "properties": {
+                "specification": {
+                  "type": "string",
+                  "description": "Color specification"
+                },
+                "hex": {
+                  "type": "string",
+                  "pattern": "^#[0-9A-Fa-f]{6}$"
+                },
+                "width_mm": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        },
+        "symbols": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["symbol_type", "standard"],
+            "properties": {
+              "symbol_type": {
+                "type": "string",
+                "description": "Type of symbol (e.g., fire extinguisher, exit, oxygen)"
+              },
+              "standard": {
+                "type": "string",
+                "description": "Standard governing symbol design (ISO 3864, ICAO, SAE)"
+              },
+              "position": {
+                "type": "string",
+                "description": "Position relative to text (left, right, above, below)"
+              }
+            }
+          }
+        }
+      }
+    },
+    "legibility": {
+      "type": "object",
+      "required": [
+        "min_font_size_mm",
+        "min_contrast_ratio",
+        "viewing_distance_m"
+      ],
+      "properties": {
+        "min_font_size_mm": {
+          "type": "number",
+          "minimum": 1.0,
+          "description": "Minimum character height in millimeters"
+        },
+        "min_contrast_ratio": {
+          "type": "number",
+          "minimum": 3.0,
+          "description": "Minimum contrast ratio (WCAG 2.1 compliant, typically 4.5:1 or 7:1 for safety-critical)"
+        },
+        "stroke_width_mm": {
+          "type": "number",
+          "minimum": 0.1,
+          "description": "Minimum stroke width for engraved or etched text in millimeters"
+        },
+        "viewing_distance_m": {
+          "type": "number",
+          "minimum": 0.1,
+          "description": "Nominal viewing distance in meters"
+        },
+        "viewing_angle_deg": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180,
+          "description": "Maximum viewing angle from perpendicular in degrees"
+        },
+        "lighting_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["daylight", "night", "emergency", "UV"]
+          },
+          "description": "Lighting conditions under which legibility is maintained"
+        },
+        "reflectance_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Reflectance percentage for retroreflective placards"
+        },
+        "luminance_cd_m2": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Luminance in candelas per square meter for photoluminescent placards"
+        }
+      }
+    },
+    "materials": {
+      "type": "object",
+      "required": ["substrate", "printing_method"],
+      "properties": {
+        "substrate": {
+          "type": "object",
+          "required": ["material_spec", "supplier"],
+          "properties": {
+            "material_spec": {
+              "type": "string",
+              "description": "Material specification (AMS, BMS, ASTM)"
+            },
+            "material_description": {
+              "type": "string",
+              "description": "Material description (e.g., aluminum alloy, acrylic, polycarbonate)"
+            },
+            "supplier": {
+              "type": "string",
+              "description": "Approved supplier name"
+            },
+            "supplier_pn": {
+              "type": "string",
+              "description": "Supplier part number"
+            },
+            "coc_required": {
+              "type": "boolean",
+              "default": true,
+              "description": "Certificate of Conformance required"
+            }
+          }
+        },
+        "ink_adhesive": {
+          "type": "object",
+          "properties": {
+            "ink_type": {
+              "type": "string",
+              "description": "Ink type (UV-resistant, solvent-based, water-based)"
+            },
+            "ink_spec": {
+              "type": "string",
+              "description": "Ink specification or supplier part number"
+            },
+            "adhesive_type": {
+              "type": "string",
+              "description": "Adhesive type (acrylic PSA, epoxy, silicone)"
+            },
+            "adhesive_spec": {
+              "type": "string",
+              "description": "Adhesive specification (AMS, MIL-STD)"
+            },
+            "peel_strength_N_cm": {
+              "type": "number",
+              "description": "Minimum peel strength in Newtons per centimeter"
+            },
+            "shear_strength_MPa": {
+              "type": "number",
+              "description": "Minimum shear strength in Megapascals"
+            }
+          }
+        },
+        "printing_method": {
+          "type": "string",
+          "enum": [
+            "screen_printing",
+            "digital_printing",
+            "engraving",
+            "etching",
+            "laser_marking",
+            "thermal_transfer"
+          ],
+          "description": "Method used to produce the placard"
+        },
+        "surface_treatment": {
+          "type": "string",
+          "description": "Surface treatment applied (anodizing, coating, lamination)"
+        },
+        "environmental_qualification": {
+          "type": "object",
+          "properties": {
+            "temperature_range_C": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"}
+              }
+            },
+            "humidity_pct": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "salt_spray_hours": {
+              "type": "number",
+              "description": "Salt spray exposure test duration in hours (ASTM B117)"
+            },
+            "uv_exposure_hours": {
+              "type": "number",
+              "description": "UV exposure test duration in hours (ASTM G154)"
+            },
+            "fluid_resistance": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of fluids placard is resistant to (fuel, hydraulic fluid, cleaning solvents)"
+            }
+          }
+        }
+      }
+    },
+    "placement": {
+      "type": "object",
+      "required": ["location_description", "mounting_method"],
+      "properties": {
+        "location_description": {
+          "type": "string",
+          "description": "Textual description of placard location"
+        },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "fuselage_station_mm": {
+              "type": "number",
+              "description": "Fuselage Station (FS) in millimeters from datum"
+            },
+            "buttock_line_mm": {
+              "type": "number",
+              "description": "Buttock Line (BL) in millimeters from centerline"
+            },
+            "water_line_mm": {
+              "type": "number",
+              "description": "Water Line (WL) in millimeters from datum"
+            }
+          }
+        },
+        "zone": {
+          "type": "string",
+          "description": "ATA zone designation (e.g., 200, 300, 400)"
+        },
+        "mounting_method": {
+          "type": "string",
+          "enum": [
+            "adhesive",
+            "rivets",
+            "screws",
+            "magnetic",
+            "clips",
+            "embedded"
+          ],
+          "description": "Method of mounting placard to surface"
+        },
+        "mounting_torque_Nm": {
+          "type": "number",
+          "description": "Mounting torque for mechanical fasteners in Newton-meters"
+        },
+        "tolerance_mm": {
+          "type": "number",
+          "description": "Position tolerance in millimeters"
+        },
+        "reference_drawing": {
+          "type": "string",
+          "description": "Reference to installation drawing"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn", "config"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number range (e.g., ALL, 001-050)"
+        },
+        "config": {
+          "type": "string",
+          "description": "Configuration identifier (e.g., ALL, BUSINESS, ECONOMY)"
+        },
+        "mod_reference": {
+          "type": "string",
+          "description": "Modification reference if placard is added or changed by modification"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date placard becomes effective (ISO 8601)"
+        },
+        "supersedes": {
+          "type": "string",
+          "description": "Previous placard_id that this placard supersedes"
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {
+            "type": "string",
+            "description": "Approving authority (e.g., Cabin Systems Engineering, Airworthiness)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Draft", "Released", "Approved", "Superseded"],
+            "description": "Approval status"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Approval date (ISO 8601)"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Digital signature or approval reference"
+          }
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["artwork_file", "checksum"],
+      "properties": {
+        "artwork_file": {
+          "type": "string",
+          "description": "Path to artwork file (SVG, PDF, PNG)"
+        },
+        "checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256"],
+              "description": "Hash algorithm"
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$",
+              "description": "SHA-256 hash value"
+            }
+          }
+        },
+        "version": {
+          "type": "string",
+          "description": "Artwork version"
+        }
+      }
+    },
+    "inspection": {
+      "type": "object",
+      "properties": {
+        "gvi_interval_hours": {
+          "type": "number",
+          "description": "General Visual Inspection interval in flight hours"
+        },
+        "dvi_interval_hours": {
+          "type": "number",
+          "description": "Detailed Visual Inspection interval in flight hours"
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of acceptance criteria for inspection"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or special instructions"
+    }
+  }
+}

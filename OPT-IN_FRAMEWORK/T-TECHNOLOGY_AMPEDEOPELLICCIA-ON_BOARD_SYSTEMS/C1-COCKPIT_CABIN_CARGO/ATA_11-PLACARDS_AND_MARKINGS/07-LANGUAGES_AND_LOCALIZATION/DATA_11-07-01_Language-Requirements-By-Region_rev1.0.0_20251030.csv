@@ -1,0 +1,13 @@
+Region,Primary_Language,Secondary_Languages,Tertiary_Languages,Symbol_Requirements,Translation_Authority,Regulatory_Basis,Notes
+North America (USA),English,Spanish,French,ICAO symbols ISO 3864,FAA-approved translator + Engineering review,FAA 14 CFR 25.1541,English required Spanish for areas with significant Hispanic population
+North America (Canada),English and French,Spanish,,ICAO symbols ISO 3864 Bilingual symbols,Transport Canada approved translator,TC regulations,Both English and French required by law bilingual placards mandatory
+Latin America,Spanish,English,Portuguese (Brazil),ICAO symbols ISO 3864,ANAC-approved translator (Brazil) or local CAA,ANAC regulations local CAA,Spanish primary in most countries Portuguese for Brazil
+Europe (EU),English,Local language,German French Italian,ICAO symbols ISO 3864 EU safety symbols,EASA-approved translator + local authority,EASA CS-25,English + local language for passenger safety placards
+Europe (UK),English,,,ICAO symbols ISO 3864,CAA-approved translator,UK CAA regulations,English only post-Brexit
+Middle East,Arabic and English,,,ICAO symbols ISO 3864 Right-to-left text support,Local CAA-approved translator,Local CAA regulations,Arabic and English required Right-to-left layout considerations for Arabic
+Asia-Pacific (China),Chinese (Simplified) and English,,,ICAO symbols ISO 3864 GB standards,CAAC-approved translator,CAAC regulations,Simplified Chinese required English for international operations
+Asia-Pacific (Japan),Japanese and English,,,ICAO symbols ISO 3864 JIS standards,JCAB-approved translator,JCAB regulations,Japanese required English for international routes
+Asia-Pacific (India),English,Hindi,Regional languages,ICAO symbols ISO 3864,DGCA-approved translator,DGCA regulations,English primary Hindi for domestic operations
+Australia / New Zealand,English,,,ICAO symbols ISO 3864,CASA-approved translator (AUS) CAA (NZ),CASA regulations (AUS) CAA (NZ),English only Australian and NZ English variants acceptable
+Africa,English,French,Arabic Swahili Portuguese,ICAO symbols ISO 3864,Local CAA-approved translator,Local CAA regulations,Varies by country former colonial languages often used
+International Operations (All),English,Regional languages per route,,ICAO symbols ISO 3864,ICAO standards + local CAA,ICAO Annex 8,English minimum for international operations Additional languages for specific routes

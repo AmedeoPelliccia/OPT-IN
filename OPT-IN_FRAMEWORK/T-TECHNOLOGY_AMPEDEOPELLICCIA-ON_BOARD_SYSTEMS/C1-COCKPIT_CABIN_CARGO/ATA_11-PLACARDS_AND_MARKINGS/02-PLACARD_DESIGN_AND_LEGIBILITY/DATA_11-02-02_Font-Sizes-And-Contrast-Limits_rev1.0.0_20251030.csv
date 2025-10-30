@@ -1,0 +1,32 @@
+Placard_Application,Safety_Class,Viewing_Distance_m,Min_Font_Size_mm,Min_Character_Height_px_at_300dpi,Min_Contrast_Ratio_unitless,Min_Stroke_Width_mm,Lighting_Condition,Viewing_Angle_Max_deg,Font_Weight,Background_Reflectance_pct,Notes
+Flight Deck Primary Instruments,Class 1 Critical,0.6,4.0,47,7.0,0.5,Day/Night/Emergency,30,Bold,15-25,High contrast for all lighting conditions
+Flight Deck Control Labeling,Class 1 Critical,0.6,3.5,41,7.0,0.45,Day/Night/Emergency,45,Bold,15-25,White on black or yellow on black for warnings
+Emergency Exit Identification,Class 1 Critical,3.0,25.0,295,7.0,3.0,Day/Night/Emergency,60,Bold,70-90,Must be legible in smoke and low light with emergency lighting
+Emergency Exit Operating Instructions,Class 1 Critical,1.0,8.0,94,7.0,1.0,Day/Night/Emergency,45,Bold,70-90,Step-by-step with pictograms
+Oxygen Equipment Location and Instructions,Class 1 Critical,1.5,10.0,118,7.0,1.2,Day/Night/Emergency,45,Bold,80-95,Yellow background for high visibility
+Fire Extinguisher Location and Type,Class 1 Critical,2.0,12.0,142,7.0,1.5,Day/Night/Emergency,60,Bold,75-90,Red background white text per ISO 3864
+Evacuation Route Markers,Class 1 Critical,5.0,30.0,354,7.0,3.5,Emergency,90,Bold,70-90,Photoluminescent material minimum 28 mcd/m² after 10 min
+Passenger Safety Briefing Card Text,Class 2 Major,0.4,3.0,35,4.5,0.4,Day/Night,30,Medium,80-95,Multiple languages pictogram-based
+Seat Belt and Life Vest Instructions,Class 2 Major,0.5,3.5,41,4.5,0.45,Day/Night/Emergency,45,Medium,80-95,Tactile elements for visually impaired
+Lavatory Operational Instructions,Class 2 Major,0.5,3.0,35,4.5,0.4,Day/Night,30,Medium,70-90,High contrast with symbols
+Galley Equipment Operation,Class 2 Major,0.4,2.5,29,4.5,0.35,Day,30,Medium,60-80,Food service area lighting assumed
+Emergency Equipment Stowage Labels,Class 2 Major,0.8,5.0,59,4.5,0.6,Day/Night/Emergency,45,Bold,70-90,Includes flashlight first aid kit PBE location
+Cargo Loading Limits and Warnings,Class 2 Major,1.0,6.0,71,4.5,0.7,Day,45,Bold,60-80,Weight and balance critical information
+No Smoking and Fasten Seat Belt Signs,Class 2 Major,3.0,15.0,177,4.5,1.8,Day/Night,60,Bold,N/A,Illuminated signs photometric requirements separate
+Cabin Crew Station Instructions,Class 2 Major,0.5,3.5,41,4.5,0.45,Day/Night,30,Medium,70-90,Jump seat and interphone operation
+Equipment Identification Labels (General),Class 3 Minor,0.4,2.0,24,3.0,0.3,Day,30,Regular,50-70,Circuit breaker panel labels system ID
+Maintenance Access Instructions,Class 3 Minor,0.5,2.5,29,3.0,0.35,Day,45,Regular,60-80,Torque values fastener types
+Cable and Harness Identification,Class 3 Minor,0.3,1.5,18,3.0,0.25,Day,30,Regular,50-70,Wire bundle labels routing information
+Fluid System Identification (Non-Critical),Class 3 Minor,0.5,2.5,29,3.0,0.35,Day,30,Regular,60-80,Hydraulic pneumatic non-hazardous fluids
+Zone and Station Markings,Class 3 Minor,1.0,4.0,47,3.0,0.5,Day,45,Regular,50-70,Maintenance reference markings
+Equipment Serial Number and Part Number,Class 3 Minor,0.3,1.5,18,3.0,0.25,Day,15,Regular,60-80,Laser engraved or dot peen
+General Information Labels,Class 4 Non-Safety,0.4,2.0,24,3.0,0.3,Day,30,Regular,50-70,Non-operational informational content
+Decorative Cabin Branding,Class 4 Non-Safety,2.0,10.0,118,3.0,1.2,Day,60,Regular,Variable,Aesthetic elements not safety-related
+Wi-Fi and Connectivity Instructions,Class 4 Non-Safety,0.5,2.5,29,3.0,0.35,Day,30,Regular,70-90,Passenger convenience information
+Galley Catering Labels,Class 4 Non-Safety,0.3,1.5,18,3.0,0.25,Day,30,Regular,60-80,Food service equipment non-critical
+Temporary Maintenance Placards,Temporary,0.5,4.0,47,4.5,0.5,Day/Night,30,Bold,90-100,High visibility yellow or orange background maximum 90 days service
+Ferry Permit Placards,Temporary,0.6,5.0,59,7.0,0.6,Day/Night,30,Bold,90-100,Critical limitations for ferry flight must be cockpit-visible
+Exterior Registration Markings,Regulatory,50.0,300.0,3543,7.0,35.0,Day,90,Bold,Variable,Nationality and registration per ICAO Annex 8 high contrast
+Exterior Emergency Exit Markings,Class 1 Critical,10.0,150.0,1772,7.0,18.0,Day/Night,90,Bold,70-90,Retroreflective material for night visibility
+Fuel and Refueling Placards (Exterior),Class 2 Major,2.0,15.0,177,4.5,1.8,Day,60,Bold,80-95,Fuel type capacity and pressure limits
+Ground Service Panel Labels (Exterior),Class 2 Major,1.0,8.0,94,4.5,1.0,Day,45,Bold,70-90,Electrical power water waste connections

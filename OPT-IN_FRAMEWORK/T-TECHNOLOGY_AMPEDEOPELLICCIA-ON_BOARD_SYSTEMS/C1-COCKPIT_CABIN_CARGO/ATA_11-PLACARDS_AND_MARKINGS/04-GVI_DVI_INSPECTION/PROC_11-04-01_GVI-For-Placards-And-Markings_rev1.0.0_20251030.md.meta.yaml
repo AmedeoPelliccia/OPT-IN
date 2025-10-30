@@ -1,0 +1,50 @@
+schema_version: "1.1"
+id: "PROC_11-04-01_GVI-For-Placards-And-Markings_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "11-04-01: General Visual Inspection (GVI) for Placards and Markings"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+procedure:
+  category: "Inspection"
+  skill_level: "Basic"
+  estimated_duration: "2-4 hours"
+  personnel_required: 1
+  special_tools: ["Flashlight 200 lumens", "Magnifying glass 2x-5x", "Colorimeter (optional)", "Inspection mirror"]
+  consumables: ["Cleaning cloth", "Camera for documentation"]
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+  applicable_components: ["All aircraft placards and markings"]
+safety:
+  hazards: ["Fall from height when inspecting overhead placards", "Eye strain from prolonged inspection"]
+  criticality: "Major"
+  ppe_required: ["Safety shoes", "Fall protection (if required)"]
+  lockout_tagout: false
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "2025-10-30"
+quality:
+  inspection_required: false
+  rii_required: false
+  test_required: false
+  test_procedure_ref: null
+traceability:
+  source_documents: ["ATA 05 Maintenance Program", "FAA 14 CFR 25.1557"]
+  crossrefs: ["DATA_11-02-02", "DATA_11-03-03", "PROC_11-04-02", "PROC_11-03-01"]
+  supersedes: null
+  superseded_by: null
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "31baaf109531fed80de883717aea22103b62ad0c91ae6051628e239ffb770fd8"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release - comprehensive GVI procedure with acceptance criteria and discrepancy classification"
+notes: "Routine inspection procedure for all placards. Class 1 Critical every 300 FH, others every 500 FH. Includes acceptance criteria for legibility, adhesion, condition, alignment. Priority classification for discrepancies."

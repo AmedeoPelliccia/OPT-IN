@@ -1,0 +1,31 @@
+schema_version: "1.1"
+id: "PROC_11-06-01_Temporary-Placard-Management_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "11-06-01: Temporary Placard Management and Service Time Limits"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+procedure:
+  category: "Service"
+  skill_level: "Basic"
+  estimated_duration: "30 minutes"
+  personnel_required: 1
+effectivity:
+  msn: "ALL"
+safety:
+  criticality: "Major"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+traceability:
+  crossrefs: ["PROC_11-03-01"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "1a7041c5dd80be2b72fb7ab1587534cc9d9aaa4c40a7e070a764fb5710955d9c"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release"

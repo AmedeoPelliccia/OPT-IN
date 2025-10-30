@@ -1,0 +1,30 @@
+schema_version: "1.1"
+id: "EXAMPLE_11-12-02_Inspection-Log_rev1.0.0_20251030"
+document:
+  type: "EXAMPLE"
+  title: "11-12-02: Inspection Log Example"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  hazards: []
+  criticality: "Not_Safety_Related"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-30"
+traceability:
+  source_documents: ["PROC_11-04-01"]
+  crossrefs: ["DATA_11-03-03", "DATA_11-02-02"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "269b086d741f6e778da9368906d83c16127d138d8539b3f407598b6ce1abe188"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release - example inspection log with findings and corrective actions"
+notes: "Example of GVI inspection log per PROC_11-04-01. Shows inspection results, discrepancy classification, priority assignment, and corrective actions. Use as template for routine inspections."

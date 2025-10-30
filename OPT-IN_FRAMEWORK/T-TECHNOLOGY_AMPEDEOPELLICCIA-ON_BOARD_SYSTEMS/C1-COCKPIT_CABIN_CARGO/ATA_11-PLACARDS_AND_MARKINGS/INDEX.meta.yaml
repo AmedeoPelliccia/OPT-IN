@@ -1,0 +1,123 @@
+schema_version: "1.1"
+id: "ATA_11_INDEX_rev1.0.0_20251030"
+chapter: "ATA 11 - PLACARDS AND MARKINGS"
+governance:
+  owner_role: "Cabin Systems Engineering"
+  review_board: ["Cabin Systems", "Airworthiness", "Human Factors", "Materials & Process", "Safety Engineering"]
+  regulatory_basis:
+    - "FAA 14 CFR Part 25.1541"  # General (markings and placards)
+    - "FAA 14 CFR Part 25.1543"  # Instrument markings: general
+    - "FAA 14 CFR Part 25.1545"  # Airspeed limitation information
+    - "FAA 14 CFR Part 25.1547"  # Magnetic direction indicator
+    - "FAA 14 CFR Part 25.1549"  # Powerplant and APU instruments
+    - "FAA 14 CFR Part 25.1551"  # Oil quantity indication
+    - "FAA 14 CFR Part 25.1553"  # Fuel quantity indicator
+    - "FAA 14 CFR Part 25.1555"  # Control markings
+    - "FAA 14 CFR Part 25.1557"  # Miscellaneous markings and placards
+    - "FAA 14 CFR Part 25.1581"  # General (operating limitations and information)
+    - "EASA CS-25"               # European equivalent regulations
+    - "SAE AS5942"               # Aeronautical Labeling Requirements
+    - "SAE ARP6143"              # Human Factors Guidelines for Cockpit and Cabin Labeling
+    - "ISO 3864"                 # Graphical symbols - Safety colours and safety signs
+    - "ISO 9001"                 # Quality management systems (traceability)
+    - "RTCA DO-160"              # Environmental testing for placard durability
+traceability:
+  crossrefs:
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals)
+    - "ATA 15"  # Aircrew Information (flight deck placards)
+    - "ATA 20"  # Standard Practices - Airframe (torque, adhesives, bonding)
+    - "ATA 25"  # Equipment/Furnishings (cabin placards)
+    - "ATA 33"  # Lights (emergency lighting placard illumination)
+    - "ATA 51"  # Standard Practices and Structures (composite repair, LSP)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "PLACARD-SPEC-11-001: Aircraft Placards and Markings Design Specification"
+    - "LEGIBILITY-STD-11-001: Placard Legibility Standards and Human Factors Requirements"
+    - "MAINT-PLAN-11-001: Placards and Markings Maintenance and Inspection Program"
+    - "MAT-SPEC-11-001: Placard Materials, Inks, and Adhesives Specification"
+    - "INSTALL-PLAN-11-001: Placard Installation and Removal Procedures"
+    - "ARTWORK-MGMT-11-001: Placard Artwork Management and Version Control Plan"
+    - "LANG-SPEC-11-001: Language and Localization Requirements for Aircraft Placards"
+    - "CHANGE-PROC-11-001: Change Control Procedure for Safety-Critical Placards"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Missing or illegible safety-critical placards (emergency exits, oxygen, fire suppression)"
+    - "Incorrect placard information leading to crew error or passenger confusion"
+    - "Faded or degraded placards due to UV exposure or environmental conditions"
+    - "Incorrect language or translation on safety placards"
+    - "Placard detachment due to adhesive failure or improper installation"
+    - "Unsafe temporary placard usage beyond service time limits"
+    - "Unauthorized changes to safety-critical placard wording or symbols"
+    - "Incompatible materials causing chemical degradation or fire risk"
+    - "Inadequate contrast ratio causing reduced visibility in emergency lighting"
+    - "Incorrect placard placement interfering with equipment operation or egress"
+  airworthiness_limitation_items:
+    - "Emergency exit placard inspection and legibility verification (GVI every 500 FH)"
+    - "Safety instruction placard contrast ratio verification (DVI every 1000 FH)"
+    - "Temporary placard removal or replacement within maximum service time"
+    - "Fire extinguisher and oxygen placard readability under emergency lighting"
+    - "Safety-critical placard adhesion test after environmental exposure"
+    - "Translation and localization review for regulatory compliance"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata11.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  config: "ALL"
+  notes: "Specific placard effectivity by MSN, production block, cabin configuration, or modification must be recorded in individual document sidecars and artwork metadata"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, taxonomy, regulatory compliance matrix"
+    - name: "02-PLACARD_DESIGN_AND_LEGIBILITY"
+      description: "Design requirements, font sizes, contrast ratios, viewing distances, legibility tests, human factors"
+    - name: "03-PLACARD_INSTALLATION_AND_REPLACEMENT"
+      description: "Installation procedures, removal, surface prep, adhesive application, location tables, mounting"
+    - name: "04-GVI_DVI_INSPECTION"
+      description: "General Visual Inspection, Detailed Visual Inspection, acceptance criteria, intervals, remediation"
+    - name: "05-MATERIALS_AND_PROCESSES"
+      description: "Substrate specs, inks, adhesives, surface preparation, cure, environmental qualification, suppliers"
+    - name: "06-TEMPORARY_PLACARDS"
+      description: "Temporary placard specs, tagging, durability, maximum service time, removal procedures"
+    - name: "07-LANGUAGES_AND_LOCALIZATION"
+      description: "Language requirements, translation approval, symbol usage, right-to-left considerations"
+    - name: "08-HUMAN_FACTORS"
+      description: "Readability tests, cognitive load, reaction time, viewing angle, lighting conditions"
+    - name: "09-ARTWORK_AND_GRAPHICS"
+      description: "File formats, color space, SHA-256 verification, effectivity tracking, version control"
+    - name: "10-NDT_AND_TESTING"
+      description: "Adhesion tests, UV exposure, salt spray, temperature cycling, fluid resistance"
+    - name: "11-TRACEABILITY_AND_CHANGE_CONTROL"
+      description: "Change control, safety-critical approval workflow, traceability, audit trail"
+    - name: "12-EXAMPLES_AND_RECORDS"
+      description: "Example installation records (JSON), inspection logs (CSV), change control records"
+    - name: "15-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars (PROC, DATA, DESC, EXAMPLE)"
+  schemas:
+    - name: "placard.schema.json"
+      description: "Placard specification schema with design, legibility, materials, placement, and effectivity fields"
+    - name: "marking.schema.json"
+      description: "Marking specification schema for painted or engraved markings with durability requirements"
+    - name: "repair-record.schema.json"
+      description: "Placard installation and replacement record schema with traceability and approval fields"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Human Factors Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Materials & Processes"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"

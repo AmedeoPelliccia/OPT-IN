@@ -1,0 +1,49 @@
+schema_version: "1.1"
+id: "<PROCEDURE_ID>"  # e.g., "PROC_11-03-01_Placard-Removal-And-Installation_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "<PROCEDURE_TITLE>"  # e.g., "11-03-01: Placard Removal and Installation"
+  revision: "<X.Y.Z>"
+  effective_date: "<YYYY-MM-DD>"
+procedure:
+  category: "<CATEGORY>"  # e.g., "Installation", "Removal_Installation", "Inspection", "Service"
+  skill_level: "<SKILL_LEVEL>"  # One of: Basic, Intermediate, Advanced, Specialist
+  estimated_duration: "<DURATION>"  # e.g., "1-2 hours"
+  personnel_required: <NUMBER>  # Number of personnel required
+  special_tools: []  # List of special tools required
+  consumables: []  # List of consumables required
+effectivity:
+  msn: "<MSN_RANGE>"  # e.g., "ALL", "001-050"
+  config: "<CONFIG_ID>"  # Optional: specific configuration
+  applicable_components: []  # List of applicable placard IDs or types
+safety:
+  hazards:
+    - "<HAZARD_1>"  # e.g., "Chemical exposure to solvents", "Sharp edges on metal placards"
+    - "<HAZARD_2>"
+  criticality: "<CRITICALITY>"  # One of: Critical, Major, Minor, Not_Safety_Related
+  ppe_required: []  # Personal Protective Equipment required
+  lockout_tagout: <BOOLEAN>  # true if lockout/tagout is required
+approvals:
+  - authority: "<APPROVING_AUTHORITY>"  # e.g., "Cabin Systems Engineering", "Airworthiness Engineering"
+    status: "<STATUS>"  # One of: Draft, Released, Approved, Superseded
+    date: "<YYYY-MM-DD>"
+quality:
+  inspection_required: <BOOLEAN>  # true if inspection hold point is required
+  rii_required: <BOOLEAN>  # true if Required Inspection Item (RII) applies
+  test_required: <BOOLEAN>  # true if functional test is required after procedure
+  test_procedure_ref: "<TEST_PROC_REF>"  # Reference to test procedure if applicable
+traceability:
+  source_documents: []  # Source documents
+  crossrefs: []  # Cross-references to other ATAs or procedures
+  supersedes: "<SUPERSEDED_DOC_ID>"  # Optional: document this supersedes
+  superseded_by: "<SUPERSEDING_DOC_ID>"  # Optional: document that supersedes this one
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<SHA256_HASH>"
+revision_history:
+  - revision: "<X.Y.Z>"
+    date: "<YYYY-MM-DD>"
+    author: "<AUTHOR_NAME>"
+    description: "<CHANGE_DESCRIPTION>"
+notes: "<ADDITIONAL_NOTES>"

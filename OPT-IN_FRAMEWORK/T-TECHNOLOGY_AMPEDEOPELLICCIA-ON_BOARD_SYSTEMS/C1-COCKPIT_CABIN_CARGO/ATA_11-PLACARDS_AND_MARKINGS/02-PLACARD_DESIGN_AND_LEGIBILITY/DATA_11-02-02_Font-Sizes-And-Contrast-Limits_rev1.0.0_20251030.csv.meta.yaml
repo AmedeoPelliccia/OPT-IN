@@ -1,0 +1,40 @@
+schema_version: "1.1"
+id: "DATA_11-02-02_Font-Sizes-And-Contrast-Limits_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "11-02-02: Font Sizes and Contrast Limits"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+data:
+  format: "CSV"
+  units_included: true
+  validation_rules: ["All numeric values must have units", "Contrast ratio minimum 3.0", "Font size minimum 1.5mm"]
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  hazards: ["Inadequate legibility leading to crew error", "Insufficient contrast in emergency conditions"]
+  criticality: "Critical"
+approvals:
+  - authority: "Human Factors Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Cabin Systems Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+traceability:
+  source_documents: ["SAE ARP6143", "WCAG 2.1", "ISO 3864", "FAA 14 CFR 25.1541"]
+  crossrefs: ["DESC_11-01-01", "PROC_11-03-01", "PROC_11-04-01"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "199169b68e30f90b578a61b7b971538beb74fc1750679ba606b3b48eedf32b0a"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Human Factors Engineering"
+    description: "Initial release - comprehensive legibility numeric criteria for all placard types"
+notes: "CRITICAL SAFETY DOCUMENT. Contains mandatory legibility criteria: minimum font sizes, contrast ratios, viewing distances, stroke widths. Used by designers and inspectors. All values validated through human factors testing."
