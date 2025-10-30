@@ -1,0 +1,210 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata27/flight-control.schema.json",
+  "title": "Flight Control Component Specification",
+  "description": "Schema for flight control system component specifications",
+  "type": "object",
+  "properties": {
+    "componentId": {
+      "type": "string",
+      "description": "Unique component identifier",
+      "pattern": "^FCC-27-[A-Z0-9]{6,12}$"
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Component part number"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Component serial number"
+    },
+    "componentType": {
+      "type": "string",
+      "enum": [
+        "Control_Surface",
+        "Actuator",
+        "Flight_Control_Computer",
+        "Sensor",
+        "Cable_Assembly",
+        "Linkage",
+        "Pulley",
+        "Hinge",
+        "Bearing",
+        "Power_Supply_Unit"
+      ],
+      "description": "Type of component"
+    },
+    "specifications": {
+      "type": "object",
+      "properties": {
+        "operatingTemperature_min_C": {
+          "type": "number",
+          "description": "Minimum operating temperature in °C"
+        },
+        "operatingTemperature_max_C": {
+          "type": "number",
+          "description": "Maximum operating temperature in °C"
+        },
+        "mass_kg": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Component mass in kg"
+        },
+        "lifeCycles": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Design life in cycles"
+        },
+        "lifeHours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Design life in hours"
+        }
+      }
+    },
+    "controlSurfaceSpecs": {
+      "type": "object",
+      "description": "Control surface specific specifications",
+      "properties": {
+        "deflectionLimit_up_deg": {
+          "type": "number",
+          "description": "Maximum upward deflection in degrees"
+        },
+        "deflectionLimit_down_deg": {
+          "type": "number",
+          "description": "Maximum downward deflection in degrees"
+        },
+        "freeplayLimit_deg": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum allowable freeplay in degrees"
+        },
+        "massBalance_kg_mm": {
+          "type": "number",
+          "description": "Mass balance moment in kg·mm"
+        },
+        "inertiaBalance_kg_mm2": {
+          "type": "number",
+          "description": "Inertia balance in kg·mm²"
+        }
+      }
+    },
+    "actuatorSpecs": {
+      "type": "object",
+      "description": "Actuator specific specifications",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["EHA", "EMA", "Hydraulic"],
+          "description": "Actuator type"
+        },
+        "maxStallLoad_Nm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum stall load in N·m"
+        },
+        "maxRate_deg_per_sec": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum rate in deg/sec"
+        },
+        "backlashLimit_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum backlash in mm"
+        },
+        "stepResponseTime_ms": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum step response time in ms"
+        },
+        "hysteresisLimit_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Maximum hysteresis as % of full stroke"
+        }
+      }
+    },
+    "sensorSpecs": {
+      "type": "object",
+      "description": "Sensor specific specifications",
+      "properties": {
+        "sensorType": {
+          "type": "string",
+          "enum": ["AoA", "Position_LVDT", "Position_RVDT", "Rate_Gyro", "Accelerometer", "Pressure"],
+          "description": "Sensor type"
+        },
+        "range_min": {
+          "type": "number",
+          "description": "Minimum measurement range"
+        },
+        "range_max": {
+          "type": "number",
+          "description": "Maximum measurement range"
+        },
+        "accuracy_percent_FS": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Accuracy as % of full scale"
+        },
+        "calibrationInterval_months": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Calibration interval in months"
+        }
+      }
+    },
+    "materialSpecification": {
+      "type": "string",
+      "description": "Material specification (e.g., AMS, BMS)"
+    },
+    "qualificationEvidence": {
+      "type": "object",
+      "properties": {
+        "do178c_Level": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D", "N/A"],
+          "description": "DO-178C Design Assurance Level"
+        },
+        "do254_Level": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D", "N/A"],
+          "description": "DO-254 Design Assurance Level"
+        },
+        "do160_Category": {
+          "type": "string",
+          "description": "DO-160 environmental qualification category"
+        },
+        "testReportReference": {
+          "type": "string",
+          "description": "Reference to qualification test report"
+        }
+      }
+    },
+    "maintenanceRequirements": {
+      "type": "object",
+      "properties": {
+        "inspectionInterval_FH": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Inspection interval in flight hours"
+        },
+        "replacementInterval_FH": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Replacement interval in flight hours"
+        },
+        "specialTools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special tools required for maintenance"
+        }
+      }
+    }
+  },
+  "required": ["componentId", "partNumber", "componentType", "specifications"],
+  "additionalProperties": true
+}

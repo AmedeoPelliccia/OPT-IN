@@ -1,0 +1,153 @@
+{
+  "repairRecordId": "RR-27-2025-000123",
+  "msn": "AMPEL360-BWB-001",
+  "configurationId": "CONFIG-A-2025",
+  "repairDate": "2025-10-15",
+  "component": "Control_Surface_Elevator_Left",
+  "controlSurfaceId": {
+    "partNumber": "27-4210-001",
+    "serialNumber": "ELEV-L-001-SN-45678",
+    "position": "Left_Stabilizer",
+    "description": "Left Horizontal Stabilizer Elevator"
+  },
+  "actuatorId": {
+    "partNumber": "27-3110-EHA-02",
+    "serialNumber": "ACT-EHA-12345",
+    "type": "Electro-Hydraulic (EHA)",
+    "installationDate": "2024-01-10",
+    "operatingHours": 3250,
+    "operatingCycles": 1845
+  },
+  "softwareBaseline": {
+    "fccSoftwareVersion": "FCC-SW-27-v3.2.1",
+    "checksum": "a3f5b8c9d1e2f4a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0",
+    "do178cEvidence": "SAS-FCC-27-001-Rev-B",
+    "loadDate": "2024-12-05"
+  },
+  "hardwareConfiguration": {
+    "fccPartNumber": "27-5100-FCC-PRIMARY-01",
+    "fccSerialNumber": "FCC-PRI-00245",
+    "do254Evidence": "HAS-FCC-27-001-Rev-A",
+    "configurationBaseline": "HWCI-FCC-27-2024-Q4"
+  },
+  "riggingData": {
+    "preRepair": {
+      "neutralPosition_deg": 0.2,
+      "upDeflection_deg": 19.8,
+      "downDeflection_deg": -14.9,
+      "freeplay_deg": 0.35,
+      "massBalance_kg_mm": 27850
+    },
+    "postRepair": {
+      "neutralPosition_deg": 0.0,
+      "upDeflection_deg": 20.0,
+      "downDeflection_deg": -15.0,
+      "freeplay_deg": 0.30,
+      "massBalance_kg_mm": 28000
+    }
+  },
+  "hingeIds": [
+    {
+      "hingePosition": "Inboard",
+      "partNumber": "27-4220-HINGE-01",
+      "serialNumber": "HNG-IB-EL-00123",
+      "installationDate": "2024-01-10",
+      "operatingHours": 3250,
+      "wearMeasurement_mm": 0.08
+    },
+    {
+      "hingePosition": "Midspan",
+      "partNumber": "27-4220-HINGE-01",
+      "serialNumber": "HNG-MS-EL-00124",
+      "installationDate": "2024-01-10",
+      "operatingHours": 3250,
+      "wearMeasurement_mm": 0.12
+    },
+    {
+      "hingePosition": "Outboard",
+      "partNumber": "27-4220-HINGE-01",
+      "serialNumber": "HNG-OB-EL-00125",
+      "installationDate": "2024-01-10",
+      "operatingHours": 3250,
+      "wearMeasurement_mm": 0.10
+    }
+  ],
+  "sensorCalibration": [
+    {
+      "sensorType": "Position_LVDT",
+      "partNumber": "27-7110-LVDT-01",
+      "serialNumber": "LVDT-EL-00567",
+      "calibrationDate": "2025-10-14",
+      "accuracyVerification": {
+        "testValue": 50.0,
+        "measuredValue": 50.05,
+        "error_percent": 0.1,
+        "withinSpec": true
+      }
+    }
+  ],
+  "ndtFileHashes": [
+    {
+      "ndtMethod": "Ultrasonic",
+      "reportFilename": "NDT-UT-ELEV-L-2025-10-15.pdf",
+      "sha256": "b4e6f8a1c3d5e7f9a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8"
+    },
+    {
+      "ndtMethod": "Eddy_Current",
+      "reportFilename": "NDT-EC-ELEV-L-2025-10-15.pdf",
+      "sha256": "c5f7a9b2d4e6f8a0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8"
+    }
+  ],
+  "functionalTestResults": {
+    "stepResponse_ms": 85,
+    "actuatorRate_deg_per_sec": 12.5,
+    "hysteresis_percent": 1.2,
+    "stallLoad_Nm": 3200,
+    "leakageRate_mL_per_hr": 0.5,
+    "controlLoopStability": {
+      "gainMargin_dB": 12.5,
+      "phaseMargin_deg": 48.0
+    }
+  },
+  "damageClassification": "Repairable",
+  "repairMethod": "Composite scarf repair per ATA-51 standard practices. Scarf ratio 50:1. Prepreg layup with autoclave cure. Post-repair NDT (UT C-scan) performed. Actuator bench test and calibration completed. Control law validation performed in HIL environment.",
+  "materialsUsed": [
+    {
+      "materialSpec": "BMS 8-256 Type III",
+      "lotNumber": "LOT-BMS8256-2025-Q3-012",
+      "cofcReference": "CoC-BMS-2025-10-001"
+    },
+    {
+      "materialSpec": "AMS 3819 Film Adhesive",
+      "lotNumber": "LOT-AMS3819-2025-Q2-045",
+      "cofcReference": "CoC-AMS-2025-09-022"
+    }
+  ],
+  "fea_Required": true,
+  "fea_Reference": "FEA-ELEV-L-REPAIR-2025-10-14",
+  "aeroelasticAnalysis_Required": true,
+  "aeroelasticAnalysis_Reference": "AERO-ELEV-L-2025-10-14",
+  "controlLawValidation_Required": true,
+  "controlLawValidation_Reference": "CL-VAL-ELEV-L-2025-10-15",
+  "approvals": [
+    {
+      "authority": "Flight_Controls_Engineering",
+      "name": "Dr. Sarah Mitchell",
+      "date": "2025-10-15",
+      "signature": "DSig-FCE-2025-10-15-SM"
+    },
+    {
+      "authority": "Structures_Engineering",
+      "name": "John Davis",
+      "date": "2025-10-15",
+      "signature": "DSig-SE-2025-10-15-JD"
+    },
+    {
+      "authority": "Airworthiness",
+      "name": "Maria Gonzalez",
+      "date": "2025-10-16",
+      "signature": "DSig-AW-2025-10-16-MG"
+    }
+  ],
+  "remarks": "Repair necessitated by lightning strike damage to composite skin (50 mm x 30 mm area, 2 mm depth). FEA confirmed structural integrity post-repair. Aeroelastic analysis confirmed no flutter concerns. Control law validation in HIL environment showed no degradation in stability margins. Aircraft returned to service after functional test flight."
+}

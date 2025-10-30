@@ -1,0 +1,11 @@
+# Actuator Specifications and Life Limits
+# Units: N·m (torque), N (force), deg/sec (rate), ms (time), mm (backlash), FH (flight hours), cycles
+# Last Updated: 2025-10-30
+
+Actuator_Type,Part_Number,Application,Max_Stall_Load_Nm,Max_Force_N,Max_Rate_deg_per_sec,Step_Response_ms,Backlash_Limit_mm,Backlash_Limit_deg,Hysteresis_Limit_percent,Qualification_Cycles,Design_Life_Cycles,Maintenance_Interval_FH,Replacement_Interval_FH
+EHA,27-3110-EHA-01,Aileron_Inboard,2800,N/A,15,90,N/A,0.15,1.5,150000,300000,12000,60000
+EHA,27-3110-EHA-02,Elevator,3500,N/A,12,95,N/A,0.10,1.2,150000,300000,12000,60000
+EHA,27-3110-EHA-03,Rudder,4200,N/A,10,100,N/A,0.12,1.3,150000,300000,12000,60000
+EMA,27-3210-EMA-01,Spoiler,500,8000,18,120,0.5,0.08,2.0,100000,200000,12000,50000
+EMA,27-3210-EMA-02,Trim_Tab,250,4000,8,150,0.3,0.05,1.5,100000,200000,12000,50000
+Hydraulic,27-3310-HYD-01,Stabilizer_Trim,N/A,50000,0.5,500,1.0,N/A,2.5,50000,100000,6000,30000

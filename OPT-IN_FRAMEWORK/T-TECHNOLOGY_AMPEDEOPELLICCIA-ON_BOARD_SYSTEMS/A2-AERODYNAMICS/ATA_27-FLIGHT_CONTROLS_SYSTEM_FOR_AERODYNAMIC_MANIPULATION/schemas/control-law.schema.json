@@ -1,0 +1,353 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata27/control-law.schema.json",
+  "title": "Control Law Specification and Validation Record",
+  "description": "Schema for control law specifications and validation test records",
+  "type": "object",
+  "properties": {
+    "controlLawId": {
+      "type": "string",
+      "description": "Unique control law identifier",
+      "pattern": "^CL-27-[A-Z0-9]{6,12}$"
+    },
+    "controlLawName": {
+      "type": "string",
+      "description": "Control law name"
+    },
+    "version": {
+      "type": "string",
+      "description": "Control law version",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "softwareBaseline": {
+      "type": "string",
+      "description": "FCC software baseline identifier"
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 checksum of control law implementation"
+    },
+    "controlMode": {
+      "type": "string",
+      "enum": [
+        "Normal_Law",
+        "Alternate_Law_1",
+        "Alternate_Law_2",
+        "Direct_Law",
+        "Mechanical_Backup",
+        "Autopilot_Pitch",
+        "Autopilot_Roll",
+        "Autopilot_Yaw",
+        "Autothrottle",
+        "Envelope_Protection",
+        "Load_Alleviation",
+        "Gust_Load_Alleviation",
+        "Maneuver_Load_Control"
+      ],
+      "description": "Control mode or law type"
+    },
+    "flightPhase": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Ground", "Takeoff", "Climb", "Cruise", "Descent", "Approach", "Landing", "Go-Around"]
+      },
+      "description": "Flight phases where control law is active"
+    },
+    "controlParameters": {
+      "type": "object",
+      "properties": {
+        "gainSchedule": {
+          "type": "object",
+          "properties": {
+            "airspeed_dependency": {
+              "type": "boolean",
+              "description": "Whether gains are scheduled with airspeed"
+            },
+            "altitude_dependency": {
+              "type": "boolean",
+              "description": "Whether gains are scheduled with altitude"
+            },
+            "dynamicPressure_dependency": {
+              "type": "boolean",
+              "description": "Whether gains are scheduled with dynamic pressure"
+            }
+          }
+        },
+        "feedbackGains": {
+          "type": "object",
+          "description": "Control feedback gains"
+        },
+        "feedforwardGains": {
+          "type": "object",
+          "description": "Control feedforward gains"
+        },
+        "rateLimits": {
+          "type": "object",
+          "properties": {
+            "pitch_deg_per_sec": {
+              "type": "number",
+              "description": "Pitch rate limit in deg/sec"
+            },
+            "roll_deg_per_sec": {
+              "type": "number",
+              "description": "Roll rate limit in deg/sec"
+            },
+            "yaw_deg_per_sec": {
+              "type": "number",
+              "description": "Yaw rate limit in deg/sec"
+            }
+          }
+        },
+        "positionLimits": {
+          "type": "object",
+          "properties": {
+            "elevator_up_deg": {
+              "type": "number",
+              "description": "Elevator up limit in degrees"
+            },
+            "elevator_down_deg": {
+              "type": "number",
+              "description": "Elevator down limit in degrees"
+            },
+            "aileron_deg": {
+              "type": "number",
+              "description": "Aileron deflection limit in degrees"
+            },
+            "rudder_deg": {
+              "type": "number",
+              "description": "Rudder deflection limit in degrees"
+            }
+          }
+        }
+      }
+    },
+    "stabilityMargins": {
+      "type": "object",
+      "properties": {
+        "gainMargin_dB": {
+          "type": "number",
+          "description": "Minimum gain margin in dB"
+        },
+        "phaseMargin_deg": {
+          "type": "number",
+          "description": "Minimum phase margin in degrees"
+        },
+        "gainMargin_Required_dB": {
+          "type": "number",
+          "description": "Required gain margin in dB"
+        },
+        "phaseMargin_Required_deg": {
+          "type": "number",
+          "description": "Required phase margin in degrees"
+        }
+      }
+    },
+    "handlingQualities": {
+      "type": "object",
+      "properties": {
+        "milStd1797_Level": {
+          "type": "number",
+          "enum": [1, 2, 3],
+          "description": "MIL-STD-1797 handling qualities level"
+        },
+        "shortPeriod_frequency_rad_per_sec": {
+          "type": "number",
+          "description": "Short period natural frequency in rad/sec"
+        },
+        "shortPeriod_damping": {
+          "type": "number",
+          "description": "Short period damping ratio"
+        },
+        "phugoid_frequency_rad_per_sec": {
+          "type": "number",
+          "description": "Phugoid natural frequency in rad/sec"
+        },
+        "phugoid_damping": {
+          "type": "number",
+          "description": "Phugoid damping ratio"
+        },
+        "dutchRoll_frequency_rad_per_sec": {
+          "type": "number",
+          "description": "Dutch roll natural frequency in rad/sec"
+        },
+        "dutchRoll_damping": {
+          "type": "number",
+          "description": "Dutch roll damping ratio"
+        }
+      }
+    },
+    "validationTests": {
+      "type": "object",
+      "properties": {
+        "silTest": {
+          "type": "object",
+          "description": "Software-in-the-Loop test results",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "testCasesCovered": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Number of test cases covered"
+            },
+            "testCasesPassed": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Number of test cases passed"
+            },
+            "codeCoverage_percent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Code coverage percentage"
+            },
+            "passed": {
+              "type": "boolean",
+              "description": "Whether SIL test passed"
+            }
+          }
+        },
+        "hilTest": {
+          "type": "object",
+          "description": "Hardware-in-the-Loop test results",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "testCasesCovered": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Number of test cases covered"
+            },
+            "testCasesPassed": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Number of test cases passed"
+            },
+            "passed": {
+              "type": "boolean",
+              "description": "Whether HIL test passed"
+            }
+          }
+        },
+        "flightTest": {
+          "type": "object",
+          "description": "Flight test results",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "testAircraft_MSN": {
+              "type": "string",
+              "description": "Test aircraft MSN"
+            },
+            "testPilotAssessment": {
+              "type": "string",
+              "description": "Test pilot assessment"
+            },
+            "handlingQualities_Rating": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10,
+              "description": "Cooper-Harper handling qualities rating"
+            },
+            "passed": {
+              "type": "boolean",
+              "description": "Whether flight test passed"
+            }
+          }
+        }
+      }
+    },
+    "failureModes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "failureDescription": {
+            "type": "string",
+            "description": "Description of failure mode"
+          },
+          "fmeaReference": {
+            "type": "string",
+            "description": "Reference to FMEA analysis"
+          },
+          "mitigationStrategy": {
+            "type": "string",
+            "description": "Mitigation or reversion strategy"
+          },
+          "safetyImpact": {
+            "type": "string",
+            "enum": ["No_Safety_Effect", "Minor", "Major", "Hazardous", "Catastrophic"],
+            "description": "Safety impact per ARP4761"
+          }
+        },
+        "required": ["failureDescription", "mitigationStrategy", "safetyImpact"]
+      }
+    },
+    "do178cCompliance": {
+      "type": "object",
+      "properties": {
+        "dal": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D"],
+          "description": "DO-178C Design Assurance Level"
+        },
+        "sasReference": {
+          "type": "string",
+          "description": "Software Accomplishment Summary reference"
+        },
+        "requirementsTraceability": {
+          "type": "boolean",
+          "description": "Whether requirements traceability is complete"
+        },
+        "structuralCoverage_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Structural code coverage percentage"
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "authority": {
+            "type": "string",
+            "enum": ["Flight_Controls_Engineering", "Software_QA", "Flight_Test", "Airworthiness", "Safety"],
+            "description": "Approving authority"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of approver"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Approval date (ISO 8601)"
+          }
+        },
+        "required": ["authority", "name", "date"]
+      },
+      "minItems": 1
+    },
+    "validationStatus": {
+      "type": "string",
+      "enum": ["In_Progress", "Validated", "Failed", "Conditional"],
+      "description": "Overall validation status"
+    }
+  },
+  "required": ["controlLawId", "controlLawName", "version", "softwareBaseline", "checksum", "controlMode", "approvals"],
+  "additionalProperties": true
+}

@@ -1,0 +1,14 @@
+# Actuator Materials and Certificate of Conformance
+# Last Updated: 2025-10-30
+
+Component,Material_Specification,Material_Description,CofC_Required,Storage_Conditions,Shelf_Life_Months
+Actuator_Housing,AMS 4027,Aluminum Alloy 6061-T6,Yes,Dry indoor,Unlimited
+Actuator_Piston,AMS 6382,Stainless Steel 17-4PH,Yes,Dry indoor,Unlimited
+Actuator_Seal,AMS 7276,Fluorocarbon Rubber (Viton),Yes,Cool dry dark,60
+Hydraulic_Fluid,MIL-PRF-83282,Fire-Resistant Hydraulic Fluid,Yes,Cool dry,36
+Bearing,AMS 6260,Steel with PTFE liner,Yes,Dry indoor,Unlimited
+Rod_End,AMS 4928,Aluminum Bronze,Yes,Dry indoor,Unlimited
+Fasteners,MS20004,Steel Bolt AN3 through AN20,Yes,Dry indoor,Unlimited
+Safety_Wire,MS20995C,Stainless Steel Wire,Yes,Dry indoor,Unlimited
+Sealant,PR-1422,Fuel Tank Sealant,Yes,Cool dry,18
+Primer,MIL-DTL-5541,Alodine 1200S,Yes,Cool dry,24

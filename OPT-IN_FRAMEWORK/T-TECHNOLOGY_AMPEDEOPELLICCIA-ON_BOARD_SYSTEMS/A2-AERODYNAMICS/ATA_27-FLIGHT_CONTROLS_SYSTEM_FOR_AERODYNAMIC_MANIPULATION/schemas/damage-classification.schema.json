@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata27/damage-classification.schema.json",
+  "title": "Flight Control System Damage Classification",
+  "description": "Schema for classifying damage to flight control system components",
+  "type": "object",
+  "properties": {
+    "inspectionId": {
+      "type": "string",
+      "description": "Unique inspection identifier",
+      "pattern": "^INS-27-[0-9]{4}-[0-9]{6}$"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number"
+    },
+    "inspectionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of inspection (ISO 8601)"
+    },
+    "component": {
+      "type": "string",
+      "description": "Component with damage"
+    },
+    "damageLocation": {
+      "type": "object",
+      "properties": {
+        "station": {
+          "type": "number",
+          "description": "Fuselage or wing station"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed location description"
+        }
+      },
+      "required": ["description"]
+    },
+    "damageType": {
+      "type": "string",
+      "enum": [
+        "Delamination",
+        "Crack",
+        "Corrosion",
+        "Dent",
+        "Scratch",
+        "Impact_Damage",
+        "Lightning_Strike",
+        "Wear",
+        "Contamination",
+        "Software_Anomaly",
+        "Electronic_Failure",
+        "Mechanical_Failure",
+        "Hydraulic_Leak",
+        "Electrical_Short",
+        "Sensor_Drift",
+        "Actuator_Jam",
+        "Hinge_Wear",
+        "Bearing_Wear",
+        "Cable_Fray",
+        "Fastener_Loosening"
+      ],
+      "description": "Type of damage observed"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Minor", "Moderate", "Severe", "Critical"],
+      "description": "Damage severity classification"
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "length_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Length of damage in mm"
+        },
+        "width_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Width of damage in mm"
+        },
+        "depth_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Depth of damage in mm"
+        },
+        "area_mm2": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Area of damage in mm²"
+        }
+      }
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["Allowable", "Repairable", "Requires_FEA", "Requires_Test", "Requires_Control_Law_Validation", "Requires_Aeroelastic_Analysis", "Scrap"],
+      "description": "Damage classification determining action required"
+    },
+    "allowableLimits": {
+      "type": "object",
+      "properties": {
+        "referenceDocument": {
+          "type": "string",
+          "description": "Reference to allowable damage limits document"
+        },
+        "withinAllowable": {
+          "type": "boolean",
+          "description": "Whether damage is within allowable limits"
+        }
+      }
+    },
+    "ndtResults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "enum": ["Ultrasonic", "Eddy_Current", "Dye_Penetrant", "Magnetic_Particle", "X-Ray", "Visual", "Thermography"],
+            "description": "NDT method used"
+          },
+          "findings": {
+            "type": "string",
+            "description": "NDT findings"
+          },
+          "reportReference": {
+            "type": "string",
+            "description": "Reference to detailed NDT report"
+          }
+        },
+        "required": ["method", "findings"]
+      }
+    },
+    "dispositionRequired": {
+      "type": "boolean",
+      "description": "Whether engineering disposition is required"
+    },
+    "flightSafetyImpact": {
+      "type": "string",
+      "enum": ["None", "Minor", "Major", "Hazardous", "Catastrophic"],
+      "description": "Flight safety impact per ARP4761"
+    },
+    "inspector": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Inspector name"
+        },
+        "certification": {
+          "type": "string",
+          "description": "Inspector certification/qualification"
+        }
+      },
+      "required": ["name", "certification"]
+    }
+  },
+  "required": ["inspectionId", "msn", "inspectionDate", "component", "damageType", "severity", "classification", "inspector"],
+  "additionalProperties": true
+}
