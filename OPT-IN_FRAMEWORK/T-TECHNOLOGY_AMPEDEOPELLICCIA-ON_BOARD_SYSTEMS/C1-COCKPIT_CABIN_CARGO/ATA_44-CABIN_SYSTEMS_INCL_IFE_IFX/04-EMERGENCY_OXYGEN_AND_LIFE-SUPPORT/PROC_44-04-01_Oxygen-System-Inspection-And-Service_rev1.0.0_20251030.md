@@ -143,8 +143,9 @@
 ## References
 - Aircraft Maintenance Manual (AMM) 35-11-00
 - Illustrated Parts Catalog (IPC) 35-11-00
-- DATA_44-04-03: Oxygen Module Specs and Life Limits
-- PROC_44-04-03: Oxygen Module Replacement
+- [DATA_44-04-03: Oxygen Module Specs and Life Limits](./DATA_44-04-03_Oxygen-Module-Specs-And-LifeLimits.csv) (to be created)
+- PROC_44-04-03: Oxygen Module Replacement (to be created)
+- [ATA-35 Oxygen Systems](../../ATA_35-OXYGEN/)
 
 ## Next Inspection Due
 - **Interval:** 1200 flight hours OR 12 calendar months, whichever occurs first

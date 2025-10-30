@@ -7,6 +7,33 @@
 - **Revision:** 1.0.0
 - **Effective Date:** 2025-10-30
 
+## Table of Contents
+
+1. [Scope](#1-scope)
+   - [Chapter Coverage](#11-chapter-coverage)
+   - [Exclusions](#12-exclusions)
+   - [BWB-Specific Considerations](#13-bwb-specific-considerations)
+2. [Governance Structure](#2-governance-structure)
+   - [Organizational Responsibilities](#21-organizational-responsibilities)
+   - [Review Board](#22-review-board)
+   - [Change Control Process](#23-change-control-process)
+3. [Regulatory Basis](#3-regulatory-basis)
+   - [Primary Regulations](#31-primary-regulations)
+   - [Industry Standards](#32-industry-standards)
+   - [Material Standards](#33-material-standards)
+   - [NDT Standards](#34-ndt-standards)
+4. [Effectivity](#4-effectivity)
+5. [Interface with Other ATA Chapters](#5-interface-with-other-ata-chapters)
+6. [Document Hierarchy and Organization](#6-document-hierarchy-and-organization)
+7. [Maintenance and Updates](#7-maintenance-and-updates)
+
+## Quick Links
+- [Main README](../00_README.md)
+- [Regulatory Compliance Matrix](./DATA_44-01-03_Regulatory-Compliance-Matrix_rev1.0.0_20251030.csv)
+- [Definitions & Taxonomy](./DESC_44-01-02_Definitions-And-Taxonomy_rev1.0.0_20251030.md)
+
+---
+
 ## 1. Scope
 
 This document defines the scope, governance structure, and effectivity of ATA Chapter 44 - Cabin Systems documentation for the AMPEL360 BWB aircraft. It establishes the boundaries of this chapter and defines the organizational responsibilities for cabin system design, certification, maintenance, and modification.
@@ -33,11 +60,11 @@ ATA Chapter 44 covers all cabin management systems, passenger service systems, a
 ### 1.2 Exclusions
 
 The following items are covered in other ATA chapters:
-- **ATA 21:** Air conditioning (primary environmental control systems)
-- **ATA 25:** Equipment/furnishings (cargo and non-cabin areas)
-- **ATA 33:** Cabin lighting systems (covered separately)
-- **ATA 35:** Crew oxygen systems (flight deck)
-- **ATA 46:** Information systems (flight deck and aircraft systems integration)
+- **[ATA 21](../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/):** Air conditioning (primary environmental control systems)
+- **[ATA 25](../ATA_25-EQUIPMENT_FURNISHINGS/):** Equipment/furnishings (cargo and non-cabin areas)
+- **[ATA 33](../ATA_33-LIGHTS/):** Cabin lighting systems (covered separately)
+- **[ATA 35](../ATA_35-OXYGEN/):** Crew oxygen systems (flight deck)
+- **[ATA 46](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_46-40-xx-DATA_LOADING_AND_CONFIGURATION/):** Information systems (flight deck and aircraft systems integration)
 
 ### 1.3 BWB-Specific Considerations
 
@@ -118,40 +145,40 @@ All major changes to cabin systems require review and approval from the Cabin Sy
 
 ### 3.1 Primary Regulations
 
-#### FAA 14 CFR Part 25
-- **25.853:** Compartment interiors (flammability requirements)
-- **25.855:** Cargo and baggage compartments
-- **25.856:** Thermal/acoustic insulation materials
-- **25.857:** Cargo compartment classification
-- **25.1439:** Protective breathing equipment
-- **25.1447:** Equipment standards for oxygen dispensing units
-- **25.1450:** Chemical oxygen generators
+#### [FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)
+- **[25.853](https://www.ecfr.gov/current/title-14/section-25.853):** Compartment interiors (flammability requirements)
+- **[25.855](https://www.ecfr.gov/current/title-14/section-25.855):** Cargo and baggage compartments
+- **[25.856](https://www.ecfr.gov/current/title-14/section-25.856):** Thermal/acoustic insulation materials
+- **[25.857](https://www.ecfr.gov/current/title-14/section-25.857):** Cargo compartment classification
+- **[25.1439](https://www.ecfr.gov/current/title-14/section-25.1439):** Protective breathing equipment
+- **[25.1447](https://www.ecfr.gov/current/title-14/section-25.1447):** Equipment standards for oxygen dispensing units
+- **[25.1450](https://www.ecfr.gov/current/title-14/section-25.1450):** Chemical oxygen generators
 
-#### EASA CS-25
+#### [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)
 - European equivalents to FAA Part 25 requirements
 - CS-25.853 through CS-25.1450
 
 ### 3.2 Industry Standards
 
-- **DO-160:** Environmental Conditions and Test Procedures for Airborne Equipment
-- **DO-178C:** Software Considerations in Airborne Systems and Equipment Certification
-- **DO-254:** Design Assurance Guidance for Airborne Electronic Hardware
-- **DO-326A / ED-202A:** Airworthiness Security Process Specification
-- **ARP4754A:** Guidelines for Development of Civil Aircraft and Systems
-- **ARP4761:** Guidelines and Methods for Conducting the Safety Assessment Process
-- **ARINC 628:** Aviation data communication standards for IFE/IFX
+- **[DO-160](https://www.rtca.org/content/standards-guidance-materials):** Environmental Conditions and Test Procedures for Airborne Equipment
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials):** Software Considerations in Airborne Systems and Equipment Certification
+- **[DO-254](https://www.rtca.org/content/standards-guidance-materials):** Design Assurance Guidance for Airborne Electronic Hardware
+- **[DO-326A / ED-202A](https://www.rtca.org/content/standards-guidance-materials):** Airworthiness Security Process Specification
+- **[ARP4754A](https://www.sae.org/standards/content/arp4754a/):** Guidelines for Development of Civil Aircraft and Systems
+- **[ARP4761](https://www.sae.org/standards/content/arp4761/):** Guidelines and Methods for Conducting the Safety Assessment Process
+- **[ARINC 628](https://www.aviation-ia.com/standards/):** Aviation data communication standards for IFE/IFX
 
 ### 3.3 Material Standards
 
-- **MMPDS:** Metallic Materials Properties Development and Standardization
+- **[MMPDS](https://www.mmpds.org/):** Metallic Materials Properties Development and Standardization
 - **AMS:** Aerospace Material Specifications
 - **BMS:** Boeing Material Specifications
-- **FAR 25 Appendix F:** Flammability test procedures
+- **[FAR 25 Appendix F](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/appendix-Appendix%20F%20to%20Part%2025):** Flammability test procedures
 
 ### 3.4 NDT Standards
 
-- **ASTM E1444:** Standard Practice for Ultrasonic Testing
-- **ASTM E1417:** Standard Practice for Liquid Penetrant Testing
+- **[ASTM E1444](https://www.astm.org/e1444-16.html):** Standard Practice for Ultrasonic Testing
+- **[ASTM E1417](https://www.astm.org/e1417-21.html):** Standard Practice for Liquid Penetrant Testing
 - **AMS 2644:** Magnetic Particle Inspection
 
 ## 4. Effectivity
@@ -193,14 +220,14 @@ Retrofit kits and modifications are effectivity-controlled by:
 
 ### 5.1 Direct Interfaces
 
-- **ATA 20:** Standard practices (torque, fasteners, sealing, bonding)
-- **ATA 21:** Air conditioning (cabin air supply interface)
-- **ATA 25:** Equipment/furnishings (cargo area interfaces)
-- **ATA 33:** Cabin lighting systems
-- **ATA 35:** Oxygen systems (crew oxygen interface)
-- **ATA 46:** Information systems (IFE/IFX data integration)
-- **ATA 51:** Standard practices for structures (composite repairs)
-- **ATA 53:** Fuselage (attachment points and load transfer)
+- **[ATA 20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES-AIRFRAME_INCL_WIRING_DIAGRAM_STANDARDS/):** Standard practices (torque, fasteners, sealing, bonding)
+- **[ATA 21](../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/):** Air conditioning (cabin air supply interface)
+- **[ATA 25](../ATA_25-EQUIPMENT_FURNISHINGS/):** Equipment/furnishings (cargo area interfaces)
+- **[ATA 33](../ATA_33-LIGHTS/):** Cabin lighting systems
+- **[ATA 35](../ATA_35-OXYGEN/):** Oxygen systems (crew oxygen interface)
+- **[ATA 46](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_46-40-xx-DATA_LOADING_AND_CONFIGURATION/):** Information systems (IFE/IFX data integration)
+- **[ATA 51](../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES-GENERAL/):** Standard practices for structures (composite repairs)
+- **[ATA 53](../../A-AIRFRAME/ATA_53-FUSELAGE/):** Fuselage (attachment points and load transfer)
 
 ### 5.2 Indirect Interfaces
 

@@ -225,15 +225,17 @@ For flight-critical IFE systems (e.g., cabin pressure indication via IFE), perfo
 
 ## References
 - Aircraft Maintenance Manual (AMM) 46-10-00 (IFE Systems)
-- DATA_44-07-04: IFE HW/SW Baseline and Cyber Notes
-- PROC_44-07-03: IFE HIL Functional Test
-- DO-178C Software certification evidence
-- DO-326A Cyber security assessment
+- [DATA_44-07-04: IFE HW/SW Baseline and Cyber Notes](./DATA_44-07-04_IFE-HW-SW-Baseline-And-Cyber-Notes_rev1.0.0_20251030.csv)
+- [PROC_44-07-03: IFE HIL Functional Test](./PROC_44-07-03_IFE_HIL_Functional_Test.md) (to be created)
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials) Software certification evidence
+- [DO-326A](https://www.rtca.org/content/standards-guidance-materials) Cyber security assessment
+- [ATA-46 Information Systems](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_46-40-xx-DATA_LOADING_AND_CONFIGURATION/)
+- [DESC_44-07-01: IFE/IFX System Overview](./DESC_44-07-01_IFE_IFX_System-Overview_rev1.0.0_20251030.md)
 
 ## Software Baseline Cross-Reference
-Refer to DATA_44-07-04 for:
+Refer to [DATA_44-07-04](./DATA_44-07-04_IFE-HW-SW-Baseline-And-Cyber-Notes_rev1.0.0_20251030.csv) for:
 - Approved software versions by aircraft MSN
-- DO-178C Design Assurance Level (DAL) information
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials) Design Assurance Level (DAL) information
 - Software release notes and known issues
 - Cyber security isolation verification evidence
 
