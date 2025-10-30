@@ -1,0 +1,33 @@
+# ATA 36 - PNEUMATIC
+
+## Description
+
+Pneumatic system generation and distribution.
+
+## Applicable Standards & Regulations
+
+- SAE AIR1168
+- ISO 2533
+
+## Related ATA Chapters
+
+- ATA 21: AIR CONDITIONING & PRESSURIZATION
+- ATA 30: ICE AND RAIN PROTECTION
+
+## Navigation
+
+[↑ M-MECHANICS](../README.md)
+
+### Related Sections
+
+- [ATA 21 - AIR CONDITIONING & PRESSURIZATION](../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/README.md)
+- [ATA 27 - FLIGHT CONTROLS (ACTUATION SYSTEMS)](../ATA_27-FLIGHT_CONTROLS_ACTUATION_SYSTEMS/README.md)
+- [ATA 29 - HYDRAULIC POWER](../ATA_29-HYDRAULIC_POWER/README.md)
+- [ATA 30 - ICE AND RAIN PROTECTION](../../E1-ENVIRONMENT/ATA_30-ICE_AND_RAIN_PROTECTION/README.md)
+- [ATA 32 - LANDING GEAR](../ATA_32-LANDING_GEAR/README.md)
+
+---
+
+*Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*
+
+[📚 Framework Documentation](../../README.md) | [🏠 Repository Root](../../../README.md)
