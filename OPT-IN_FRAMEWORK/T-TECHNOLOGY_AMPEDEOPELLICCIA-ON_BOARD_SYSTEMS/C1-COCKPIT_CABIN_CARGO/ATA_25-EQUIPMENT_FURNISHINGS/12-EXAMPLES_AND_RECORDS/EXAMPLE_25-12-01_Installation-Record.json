@@ -1,0 +1,135 @@
+{
+  "recordId": "IR-25-2025-000001",
+  "equipmentId": "SEAT-25A-001",
+  "equipmentType": "Passenger_Seat",
+  "partNumber": "PST-001-ECO-2024",
+  "serialNumber": "SN-2024-000123",
+  "installationDate": "2025-10-30",
+  "msn": "MSN-001",
+  "configuration": "CFG-A350-STD",
+  "lopa": "LOPA-A350-2.1",
+  "cabinZone": "Economy Zone A",
+  "seatRow": "25",
+  "seatPosition": "A",
+  "installedBy": {
+    "name": "John Smith",
+    "certificationNumber": "AMT-123456",
+    "organization": "Cabin Interiors Maintenance"
+  },
+  "inspectedBy": {
+    "name": "Jane Doe",
+    "certificationNumber": "QA-789012",
+    "organization": "Quality Assurance"
+  },
+  "fasteners": [
+    {
+      "location": "Front Left Rail",
+      "fastenerType": "Hi-Lok HL70-6",
+      "fastenerSize": "3/16 inch",
+      "material": "Titanium",
+      "torque_Nm": 7.6,
+      "torqueSpec_Nm": 7.5,
+      "tolerance_percent": 10,
+      "torqueVerified": true
+    },
+    {
+      "location": "Front Right Rail",
+      "fastenerType": "Hi-Lok HL70-6",
+      "fastenerSize": "3/16 inch",
+      "material": "Titanium",
+      "torque_Nm": 7.4,
+      "torqueSpec_Nm": 7.5,
+      "tolerance_percent": 10,
+      "torqueVerified": true
+    },
+    {
+      "location": "Rear Left Rail",
+      "fastenerType": "Hi-Lok HL70-6",
+      "fastenerSize": "3/16 inch",
+      "material": "Titanium",
+      "torque_Nm": 7.7,
+      "torqueSpec_Nm": 7.5,
+      "tolerance_percent": 10,
+      "torqueVerified": true
+    },
+    {
+      "location": "Rear Right Rail",
+      "fastenerType": "Hi-Lok HL70-6",
+      "fastenerSize": "3/16 inch",
+      "material": "Titanium",
+      "torque_Nm": 7.5,
+      "torqueSpec_Nm": 7.5,
+      "tolerance_percent": 10,
+      "torqueVerified": true
+    }
+  ],
+  "bondingResistance": {
+    "measured_mOhm": 1.8,
+    "limit_mOhm": 2.5,
+    "testEquipment": "Bonding Tester Model BT-100",
+    "testDate": "2025-10-30",
+    "passed": true
+  },
+  "functionalTests": [
+    {
+      "testName": "Recline Mechanism",
+      "procedure": "PROC_25-02-02 Step 7.2",
+      "result": "Pass",
+      "notes": "Smooth operation, locks in all positions"
+    },
+    {
+      "testName": "Tray Table",
+      "procedure": "PROC_25-02-02 Step 7.3",
+      "result": "Pass",
+      "notes": "Deploys and stows correctly, locks engaged"
+    },
+    {
+      "testName": "Restraint Belt",
+      "procedure": "PROC_25-02-02 Step 7.4",
+      "result": "Pass",
+      "notes": "Buckle operates smoothly, no twists in belt"
+    },
+    {
+      "testName": "IFE Connection",
+      "procedure": "PROC_25-02-02 Step 7.5",
+      "result": "Pass",
+      "notes": "Screen powers on, touch response verified"
+    },
+    {
+      "testName": "Power Outlets",
+      "procedure": "PROC_25-02-02 Step 7.6",
+      "result": "Pass",
+      "notes": "110V AC and USB tested and operational"
+    }
+  ],
+  "seatSpecificData": {
+    "seatRailPosition_mm": 812,
+    "reclineTest": true,
+    "trayTableTest": true,
+    "restraintTest": true,
+    "ifeConnection": true,
+    "powerConnection": true,
+    "psuConnection": true
+  },
+  "discrepancies": [],
+  "approvals": [
+    {
+      "authority": "Cabin Interiors Engineering",
+      "name": "Jane Doe",
+      "certificationNumber": "QA-789012",
+      "date": "2025-10-30",
+      "signature": "JDoe_20251030"
+    }
+  ],
+  "traceability": {
+    "workOrder": "WO-25-2025-001",
+    "engineeringOrder": "EO-25-2025-001",
+    "drawingReference": "DWG-PST-001-ECO-2024-REV-B",
+    "procedureReference": "PROC_25-02-02_Seat-Removal-Installation-And-Torque.md",
+    "materialCertificates": [
+      "COC-HL70-6-LOT-2024-A",
+      "COC-PST-001-2024-123"
+    ]
+  },
+  "checksum": "a1b2c3d4e5f67890abcdef1234567890abcdef1234567890abcdef1234567890"
+}

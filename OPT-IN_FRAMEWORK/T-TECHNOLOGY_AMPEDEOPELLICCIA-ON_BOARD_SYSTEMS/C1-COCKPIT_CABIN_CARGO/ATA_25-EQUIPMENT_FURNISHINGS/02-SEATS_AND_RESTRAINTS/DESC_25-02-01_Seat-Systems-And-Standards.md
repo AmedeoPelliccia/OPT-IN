@@ -1,0 +1,196 @@
+# DESC 25-02-01 — Seat Systems and Standards
+
+## Purpose
+Define seat system types, design requirements, and applicable standards for passenger and crew seating in accordance with 14 CFR 25.562, 25.785, and SAE AS8049.
+
+## Seat System Types
+
+### Passenger Seats
+
+#### Economy Class Seats
+- **Typical Pitch**: 28-32 inches (711-813 mm)
+- **Width**: 17-18 inches (432-457 mm)
+- **Recline**: Limited recline (typically 3-5 degrees)
+- **Restraint**: Three-point belt (lap + shoulder)
+- **Features**: Tray table, literature pocket, possible IFE screen
+
+#### Premium Economy Seats
+- **Typical Pitch**: 34-38 inches (864-965 mm)
+- **Width**: 18-19 inches (457-483 mm)
+- **Recline**: Enhanced recline (typically 5-8 degrees)
+- **Restraint**: Three-point belt
+- **Features**: Extended leg rest, larger tray table, power outlet
+
+#### Business Class Seats
+- **Typical Pitch**: 40-80 inches (1016-2032 mm)
+- **Width**: 20-22 inches (508-559 mm)
+- **Recline**: Full recline to flat bed
+- **Restraint**: Three-point or four-point belt
+- **Features**: Power recline, IFE screen, power outlets, storage
+
+#### First Class Seats
+- **Typical Pitch**: 60-90+ inches (1524-2286+ mm)
+- **Width**: 22-26 inches (559-660 mm)
+- **Recline**: Full recline to flat bed with privacy
+- **Restraint**: Three-point or four-point belt
+- **Features**: Enclosed suite, power controls, extensive IFE, multiple power outlets
+
+### Crew Seats
+
+#### Pilot/Co-pilot Seats
+- **Type**: Adjustable multi-axis seats with five-point harness
+- **Features**: Height, fore/aft, lumbar adjustment; inertia reel shoulder harness
+- **Restraint**: Five-point harness (lap, two shoulders, crotch strap)
+- **Standards**: Must meet 14 CFR 25.785 and 25.562 rearward-facing loads
+
+#### Flight Attendant Seats
+- **Type**: Forward or aft-facing jump seats
+- **Location**: Near cabin doors and service areas
+- **Restraint**: Four-point or five-point harness
+- **Features**: Fold-down or stowable design
+
+#### Observer Seats
+- **Type**: Side-facing or forward-facing jump seat
+- **Location**: Flight deck or cabin
+- **Restraint**: Four-point harness
+- **Usage**: FAA inspectors, check pilots, maintenance personnel
+
+## Design Requirements
+
+### Structural Requirements (14 CFR 25.561)
+- Seats must withstand static load factors without structural failure:
+  - **Upward**: 3.0g (4.0g for inverted seats)
+  - **Forward**: 9.0g
+  - **Sideward**: 3.0g (4.0g for side-facing)
+  - **Downward**: 6.0g (9.0g for inverted)
+  - **Rearward**: 1.5g
+
+### Dynamic Requirements (14 CFR 25.562)
+- Passenger seats must pass dynamic tests:
+  - **Forward-facing**: 16g forward, change in velocity 44 ft/s (13.4 m/s)
+  - **Aft-facing**: 14g rearward
+  - **Combined loading**: Forward with yaw component
+- **HIC Limits**: HIC₁₅ ≤ 1000, HIC₃₆ ≤ 1000
+- **Chest acceleration**: ≤ 60g
+- **Femur load**: ≤ 10,000 N per leg
+- **Lumbar load**: ≤ 6,672 N
+- **Shoulder belt load**: ≤ 16,000 N (on a shoulder)
+
+### Restraint Requirements (14 CFR 25.785)
+- Lap belts must be provided for each passenger and crew seat
+- Shoulder harnesses required for:
+  - All crew seats
+  - Passenger seats in aircraft with more than 44 seats (unless certain exceptions apply)
+- Belt design:
+  - Minimum lap belt width: 2 inches (50.8 mm)
+  - Minimum shoulder belt width: 2 inches (50.8 mm)
+  - Quick-release buckle with single action
+  - Color-coded or clearly marked for proper use
+
+### Seat Rail Interface
+- Seat rails must comply with industry standards (typically SAE AS8049)
+- Seat track pitch: Typically 1 inch (25.4 mm)
+- Attachment fittings must provide positive locking
+- Torque specifications per manufacturer and M&P standards
+
+## Flammability Requirements (14 CFR 25.853)
+
+### Seat Cushions
+- Must pass oil burner test (Appendix F, Part III)
+- Must pass radiant panel test (Appendix F, Part IV)
+
+### Seat Covers and Textiles
+- Must pass vertical burn test (25.853(a))
+- Burn length ≤ 8 inches in 60 seconds
+- No flaming drips
+
+### Seat Structure Materials
+- Composite structures must meet flammability requirements
+- Metal structures generally exempt but protective coatings must comply
+
+## Applicable Standards
+
+### Primary Standards
+- **14 CFR Part 25.561**: Emergency landing conditions (static)
+- **14 CFR Part 25.562**: Emergency landing dynamic conditions
+- **14 CFR Part 25.785**: Seats, berths, safety belts, and harnesses
+- **14 CFR Part 25.853**: Compartment interiors (flammability)
+- **CS-25**: EASA equivalent standards
+
+### Industry Standards
+- **SAE AS8049 Rev C**: Performance Standard for Seats in Civil Rotorcraft, Transport Aircraft, and General Aviation Aircraft
+- **SAE ARP5526**: Flammability Test Procedures for Aircraft Seat Cushions
+- **ISO 6487**: Road vehicles — Measurement techniques in impact tests — Instrumentation
+
+### Test Standards
+- **ASTM E162**: Surface Flammability of Materials Using a Radiant Heat Energy Source
+- **ASTM E662**: Specific Optical Density of Smoke Generated by Solid Materials
+- **FAA AC 25.853-1**: Flammability Requirements for Aircraft Seat Cushions
+
+## Qualification and Testing
+
+### Type Qualification
+Every seat model must complete:
+1. Static strength tests (per 14 CFR 25.561)
+2. Dynamic impact tests (per 14 CFR 25.562)
+3. Flammability tests (per 14 CFR 25.853)
+4. Functional endurance tests (wear, recline, tray table)
+
+### Production Acceptance
+Each production seat requires:
+- Dimensional inspection
+- Functional test (recline, tray table, restraint)
+- Visual inspection (finish, upholstery)
+- Torque verification at installation
+
+## Installation Requirements
+
+### Seat Track Attachment
+- Seats attach to floor-mounted seat tracks
+- Seat fittings must engage a minimum number of track clips (typically 4 per leg)
+- Torque values specified in `DATA_25-02-04_Seat-Rail-Torque-And-Limits.csv`
+
+### Bonding and Grounding
+- Electrical bonding between seat and structure
+- Bonding resistance ≤ 2.5 mΩ
+- Test with 100A DC bonding tester
+
+### Interfaces
+- **Electrical**: Power outlets (110V AC, USB, 12V DC)
+- **IFE**: Video and data connections
+- **Pneumatic**: Air supply for lumbar support (if applicable)
+
+## Maintenance and Inspection
+
+### Scheduled Inspections
+- **GVI (General Visual Inspection)**: Every A-check (typically 500-750 FH)
+- **DVI (Detailed Visual Inspection)**: Every C-check (typically 3000-4500 FH)
+- **Functional Test**: Recline, tray table, restraint operation
+
+### Common Discrepancies
+- Seat rail attachment loose or corroded
+- Restraint belt frayed or damaged
+- Tray table hinge worn or binding
+- Cushion sagging or torn
+- IFE screen inoperative
+- Recline mechanism binding
+
+## Cross-References
+- **ATA 11**: Seat placards ("Life Vest Under Seat", "Fasten Seat Belt")
+- **ATA 33**: Seat reading lights, PSU lighting
+- **ATA 35**: Oxygen mask stowage in PSU
+- **ATA 44**: IFE integration, seat power
+- **ATA 51**: Seat rail installation and structural interfaces
+
+## Revision History
+
+| Revision | Date       | Author                     | Description                    |
+|----------|------------|----------------------------|--------------------------------|
+| 1.0.0    | 2025-10-30 | Cabin Interiors Engineering | Initial release                |
+
+---
+
+**Document Control:**
+- **Owner:** Cabin Interiors Engineering
+- **Review Board:** Airworthiness, Human Factors, Materials & Process
+- **Next Review:** 2026-10-30

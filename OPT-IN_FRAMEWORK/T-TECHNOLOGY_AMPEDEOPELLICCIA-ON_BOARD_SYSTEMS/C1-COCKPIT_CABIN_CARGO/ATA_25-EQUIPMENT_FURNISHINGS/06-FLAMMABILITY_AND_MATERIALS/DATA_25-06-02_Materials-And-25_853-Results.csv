@@ -1,0 +1,9 @@
+Material_Name,Part_Number,Application,Test_Type,Test_Standard,Result,Burn_Length_mm,Heat_Release_kW_m2,Smoke_Density_Ds,CoC_Reference,Notes
+Seat_Cushion_Foam,FOAM-PU-2024-A,Seat_Cushion,Oil_Burner,Appendix_F_Part_III,Pass,N/A,N/A,N/A,COC-FOAM-2024-001,"Pass oil burner and radiant panel"
+Seat_Cushion_Foam,FOAM-PU-2024-A,Seat_Cushion,Radiant_Panel,Appendix_F_Part_IV,Pass,N/A,N/A,N/A,COC-FOAM-2024-001,"Pass radiant panel test"
+Seat_Cover_Fabric,FAB-FR-2024-B,Seat_Cover,Vertical_Burn,25.853(a),Pass,180,N/A,N/A,COC-FAB-2024-002,"Burn length < 8 inches"
+Sidewall_Panel,PANEL-COMP-2024-C,Sidewall,Heat_Release,25.853(b),Pass,N/A,58,N/A,COC-PANEL-2024-003,"Peak HRR < 65 kW/m²"
+Sidewall_Panel,PANEL-COMP-2024-C,Sidewall,Smoke_Density,25.853(c),Pass,N/A,N/A,145,COC-PANEL-2024-003,"Ds < 200"
+Carpet,CARPET-NYLON-2024-D,Floor_Covering,Vertical_Burn,25.853(a),Pass,190,N/A,N/A,COC-CARPET-2024-004,"Burn length < 8 inches"
+Decorative_Laminate,LAM-HPL-2024-E,Galley_Surface,Vertical_Burn,25.853(a),Pass,175,N/A,N/A,COC-LAM-2024-005,"Burn length < 8 inches"
+Insulation_Blanket,INS-FIBERGLASS-2024-F,Thermal_Insulation,Flame_Propagation,Appendix_F_Part_VI,Pass,N/A,N/A,N/A,COC-INS-2024-006,"Pass flame propagation test"

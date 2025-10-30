@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata25/inspection.schema.json",
+  "title": "Inspection Record",
+  "description": "Inspection record schema for cabin equipment and furnishings",
+  "type": "object",
+  "required": ["inspectionId", "inspectionType", "equipmentId", "inspectionDate", "inspectedBy", "result"],
+  "properties": {
+    "inspectionId": {
+      "type": "string",
+      "description": "Unique inspection record identifier",
+      "pattern": "^INS-25-[0-9]{4}-[0-9]{6}$"
+    },
+    "inspectionType": {
+      "type": "string",
+      "enum": ["GVI", "DVI", "Detailed", "Special", "Pre-Flight", "Post-Flight", "Scheduled", "Unscheduled"],
+      "description": "Type of inspection"
+    },
+    "equipmentId": {
+      "type": "string",
+      "description": "Equipment identifier being inspected"
+    },
+    "equipmentType": {
+      "type": "string",
+      "enum": [
+        "Passenger_Seat",
+        "Crew_Seat",
+        "Galley",
+        "Lavatory",
+        "Overhead_Bin",
+        "Sidewall_Panel",
+        "Monument",
+        "Restraint_System",
+        "Safety_Equipment_Stowage"
+      ]
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Part number of inspected equipment"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Serial number (if serialized)"
+    },
+    "inspectionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of inspection (ISO 8601)"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number (aircraft effectivity)"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location of equipment (zone, row, position)"
+    },
+    "inspectedBy": {
+      "type": "object",
+      "required": ["name", "certificationNumber"],
+      "properties": {
+        "name": { "type": "string" },
+        "certificationNumber": { "type": "string" },
+        "organization": { "type": "string" }
+      }
+    },
+    "inspectionCriteria": {
+      "type": "array",
+      "description": "Inspection criteria and results",
+      "items": {
+        "type": "object",
+        "required": ["criterion", "result"],
+        "properties": {
+          "criterion": { "type": "string" },
+          "acceptanceCriteria": { "type": "string" },
+          "result": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+          "measurement": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "seatInspectionDetails": {
+      "type": "object",
+      "description": "Seat-specific inspection items",
+      "properties": {
+        "seatRailAttachment": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "restraintCondition": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "reclineMechanism": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "trayTableCondition": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "armrestCondition": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "cushionCondition": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "frameIntegrity": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "freeplay_mm": { "type": "number" },
+        "freeplayLimit_mm": { "type": "number" }
+      }
+    },
+    "galleyLavInspectionDetails": {
+      "type": "object",
+      "description": "Galley/lavatory-specific inspection items",
+      "properties": {
+        "structuralAttachment": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "waterSystemLeaks": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "wasteSystemLeaks": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "doorOperation": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "lockOperation": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "surfaceCondition": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "lightingOperation": { "type": "string", "enum": ["Pass", "Fail", "N/A"] }
+      }
+    },
+    "binInspectionDetails": {
+      "type": "object",
+      "description": "Overhead bin-specific inspection items",
+      "properties": {
+        "structuralAttachment": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "latchOperation": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "dampenerCondition": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+        "binDeflection_mm": { "type": "number" },
+        "deflectionLimit_mm": { "type": "number" },
+        "surfaceDamage": { "type": "string", "enum": ["Pass", "Fail", "N/A"] }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "description": "Inspection findings",
+      "items": {
+        "type": "object",
+        "properties": {
+          "findingType": { 
+            "type": "string",
+            "enum": ["Wear", "Damage", "Corrosion", "Deformation", "Loose_Fastener", "Missing_Part", "Contamination", "Other"]
+          },
+          "description": { "type": "string" },
+          "severity": { 
+            "type": "string",
+            "enum": ["Critical", "Major", "Minor", "Informational"]
+          },
+          "location": { "type": "string" },
+          "photo_references": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "correctiveActions": {
+      "type": "array",
+      "description": "Corrective actions required or completed",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string" },
+          "status": { 
+            "type": "string",
+            "enum": ["Required", "Completed", "Deferred", "N/A"]
+          },
+          "deferralReference": { "type": "string" },
+          "completedBy": { "type": "string" },
+          "completionDate": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "result": {
+      "type": "string",
+      "enum": ["Serviceable", "Unserviceable", "Conditional", "Deferred"],
+      "description": "Overall inspection result"
+    },
+    "nextInspectionDue": {
+      "type": "object",
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "flightHours": { "type": "number" },
+        "flightCycles": { "type": "number" }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "date"],
+        "properties": {
+          "authority": { "type": "string" },
+          "name": { "type": "string" },
+          "certificationNumber": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "signature": { "type": "string" }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "workOrder": { "type": "string" },
+        "procedureReference": { "type": "string" },
+        "previousInspectionRef": { "type": "string" }
+      }
+    },
+    "checksum": {
+      "type": "string",
+      "description": "SHA-256 checksum of inspection record",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  }
+}

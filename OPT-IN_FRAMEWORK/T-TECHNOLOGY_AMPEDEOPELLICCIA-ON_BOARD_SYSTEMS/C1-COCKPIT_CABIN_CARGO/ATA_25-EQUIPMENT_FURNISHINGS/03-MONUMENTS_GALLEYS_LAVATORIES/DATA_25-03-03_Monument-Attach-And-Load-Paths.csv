@@ -1,0 +1,11 @@
+Attach_Point,Monument_Type,Fastener_Type,Fastener_Size,Material,Torque_Nm,Tolerance_%,Load_Rating_N,Notes
+Floor_Front_Left,Galley,Hi-Lok_HL70-10,5/16",Ti,18.0,10,15000,"Primary load path"
+Floor_Front_Right,Galley,Hi-Lok_HL70-10,5/16",Ti,18.0,10,15000,"Primary load path"
+Floor_Rear_Left,Galley,Hi-Lok_HL70-10,5/16",Ti,18.0,10,15000,"Primary load path"
+Floor_Rear_Right,Galley,Hi-Lok_HL70-10,5/16",Ti,18.0,10,15000,"Primary load path"
+Ceiling_Front,Galley,AN6_Bolt,3/8",Steel,22.0,10,12000,"Stabilization only; not primary load"
+Ceiling_Rear,Galley,AN6_Bolt,3/8",Steel,22.0,10,12000,"Stabilization only; not primary load"
+Floor_Front,Lavatory,Hi-Lok_HL70-10,5/16",Ti,18.0,10,15000,"Primary load path"
+Floor_Rear,Lavatory,Hi-Lok_HL70-10,5/16",Ti,18.0,10,15000,"Primary load path"
+Ceiling_Front,Overhead_Bin,M8_Bolt,8mm,Steel,18.0,10,8000,"Ceiling attach; verify no crushing"
+Ceiling_Rear,Overhead_Bin,M8_Bolt,8mm,Steel,18.0,10,8000,"Ceiling attach; verify no crushing"

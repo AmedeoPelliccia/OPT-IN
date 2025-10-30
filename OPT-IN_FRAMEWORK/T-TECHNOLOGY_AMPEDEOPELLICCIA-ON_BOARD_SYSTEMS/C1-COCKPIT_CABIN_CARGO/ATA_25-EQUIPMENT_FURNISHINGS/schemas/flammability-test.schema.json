@@ -1,0 +1,253 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata25/flammability-test.schema.json",
+  "title": "Flammability Test Record",
+  "description": "Flammability test record schema per 14 CFR 25.853",
+  "type": "object",
+  "required": ["testId", "testDate", "material", "testType", "result", "testLaboratory"],
+  "properties": {
+    "testId": {
+      "type": "string",
+      "description": "Unique test record identifier",
+      "pattern": "^FLAM-25-[0-9]{4}-[0-9]{6}$"
+    },
+    "testDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of test (ISO 8601)"
+    },
+    "material": {
+      "type": "object",
+      "required": ["materialName", "manufacturer", "partNumber"],
+      "properties": {
+        "materialName": { "type": "string" },
+        "materialDescription": { "type": "string" },
+        "manufacturer": { "type": "string" },
+        "partNumber": { "type": "string" },
+        "lotNumber": { "type": "string" },
+        "materialSpec": { "type": "string" },
+        "color": { "type": "string" },
+        "thickness_mm": { "type": "number" },
+        "density_kg_m3": { "type": "number" }
+      }
+    },
+    "application": {
+      "type": "string",
+      "enum": [
+        "Seat_Cushion",
+        "Seat_Cover",
+        "Seat_Structure",
+        "Carpet",
+        "Sidewall_Panel",
+        "Ceiling_Panel",
+        "Partition",
+        "Curtain",
+        "Insulation_Blanket",
+        "Ducting",
+        "Wire_Insulation",
+        "Monument_Surface",
+        "Decorative_Laminate",
+        "Other"
+      ],
+      "description": "Application of material in cabin"
+    },
+    "testType": {
+      "type": "string",
+      "enum": [
+        "25.853(a)_Vertical_Burn",
+        "25.853(a-1)_60_Second_Vertical_Burn",
+        "25.853(b)_Heat_Release",
+        "25.853(c)_Smoke_Density",
+        "Appendix_F_Part_I_Heat_Release",
+        "Appendix_F_Part_II_Smoke_Optical_Density",
+        "Appendix_F_Part_III_Seat_Cushion_Oil_Burner",
+        "Appendix_F_Part_IV_Seat_Cushion_Radiant_Panel",
+        "Appendix_F_Part_V_Cargo_Liner_Flame_Penetration",
+        "Appendix_F_Part_VI_Thermal_Acoustic_Insulation_Flame_Propagation"
+      ],
+      "description": "Test type per 14 CFR 25.853"
+    },
+    "testStandard": {
+      "type": "string",
+      "description": "Test standard reference (e.g., FAR 25.853, Appendix F)"
+    },
+    "testMethod": {
+      "type": "string",
+      "description": "Test method reference (e.g., ASTM E162, ASTM D2863)"
+    },
+    "sampleDetails": {
+      "type": "object",
+      "properties": {
+        "sampleCount": { "type": "integer" },
+        "sampleDimensions": { "type": "string" },
+        "samplePreparation": { "type": "string" },
+        "sampleConditioningTime_hrs": { "type": "number" },
+        "sampleConditioningTemp_C": { "type": "number" },
+        "sampleConditioningHumidity_percent": { "type": "number" }
+      }
+    },
+    "testConditions": {
+      "type": "object",
+      "properties": {
+        "ambientTemperature_C": { "type": "number" },
+        "ambientHumidity_percent": { "type": "number" },
+        "ambientPressure_kPa": { "type": "number" },
+        "flameHeight_mm": { "type": "number" },
+        "flameApplication_seconds": { "type": "number" }
+      }
+    },
+    "testResults": {
+      "type": "object",
+      "required": ["result"],
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": ["Pass", "Fail", "Conditional"],
+          "description": "Overall test result"
+        },
+        "burnLength_mm": { 
+          "type": "number",
+          "description": "Burn length for vertical burn tests"
+        },
+        "burnLength_limit_mm": { "type": "number" },
+        "burnTime_seconds": { 
+          "type": "number",
+          "description": "Burn time for vertical burn tests"
+        },
+        "burnTime_limit_seconds": { "type": "number" },
+        "afterFlameTime_seconds": { 
+          "type": "number",
+          "description": "After-flame time"
+        },
+        "afterFlameTime_limit_seconds": { "type": "number" },
+        "drippage": { 
+          "type": "boolean",
+          "description": "Whether material exhibited flaming drips"
+        },
+        "heatReleaseRate_kW_m2": { 
+          "type": "number",
+          "description": "Peak heat release rate for heat release tests"
+        },
+        "heatReleaseRate_limit_kW_m2": { "type": "number" },
+        "totalHeatRelease_kW_min_m2": { 
+          "type": "number",
+          "description": "Total heat release for 2 minutes"
+        },
+        "totalHeatRelease_limit_kW_min_m2": { "type": "number" },
+        "specificOpticalDensity_Ds": { 
+          "type": "number",
+          "description": "Specific optical smoke density"
+        },
+        "specificOpticalDensity_limit_Ds": { "type": "number" },
+        "flameSpread_index": {
+          "type": "number",
+          "description": "Flame spread index (FSI)"
+        },
+        "flameSpread_limit": { "type": "number" }
+      }
+    },
+    "individualSampleResults": {
+      "type": "array",
+      "description": "Individual sample test results",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sampleNumber": { "type": "integer" },
+          "burnLength_mm": { "type": "number" },
+          "burnTime_seconds": { "type": "number" },
+          "afterFlameTime_seconds": { "type": "number" },
+          "result": { "type": "string", "enum": ["Pass", "Fail"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "testLaboratory": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "accreditation": { "type": "string" },
+        "address": { "type": "string" },
+        "contactPerson": { "type": "string" },
+        "phone": { "type": "string" }
+      }
+    },
+    "testEngineer": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "certificationNumber": { "type": "string" }
+      }
+    },
+    "witnessedBy": {
+      "type": "array",
+      "description": "Witnesses to the test",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "organization": { "type": "string" },
+          "role": { "type": "string" }
+        }
+      }
+    },
+    "certificateOfConformity": {
+      "type": "object",
+      "properties": {
+        "cocNumber": { "type": "string" },
+        "issueDate": { "type": "string", "format": "date" },
+        "expiryDate": { "type": "string", "format": "date" },
+        "supplier": { "type": "string" }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "description": "Test report attachments",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": { "type": "string" },
+          "description": { "type": "string" },
+          "checksum": { 
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          }
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "date"],
+        "properties": {
+          "authority": { "type": "string" },
+          "name": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "signature": { "type": "string" }
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "properties": {
+        "msn": { "type": "string" },
+        "configuration": { "type": "string" },
+        "lopa": { "type": "string" }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "testPlan": { "type": "string" },
+        "purchaseOrder": { "type": "string" },
+        "engineeringOrder": { "type": "string" }
+      }
+    },
+    "checksum": {
+      "type": "string",
+      "description": "SHA-256 checksum of test record",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  }
+}

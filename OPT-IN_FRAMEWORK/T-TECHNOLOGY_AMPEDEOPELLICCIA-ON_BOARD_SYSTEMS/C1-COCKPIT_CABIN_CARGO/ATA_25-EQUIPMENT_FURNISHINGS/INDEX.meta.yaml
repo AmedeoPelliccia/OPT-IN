@@ -1,0 +1,102 @@
+schema_version: "1.1"
+id: "ATA_25_INDEX"
+chapter: "ATA 25 - EQUIPMENT / FURNISHINGS"
+governance:
+  owner_role: "Cabin Interiors Engineering"
+  review_board: ["Airworthiness", "Human Factors", "Materials & Process", "Structures"]
+  regulatory_basis: ["14 CFR Part 25.561", "14 CFR Part 25.562", "14 CFR Part 25.601", "14 CFR Part 25.603", "14 CFR Part 25.853", "14 CFR Part 25.785", "CS-25", "SAE AS8049"]
+effectivity:
+  msn: "ALL"
+  cfg: "ALL"
+  lopa: "TBD"
+  scope: "All AMPEL360 cabin configurations"
+traceability:
+  ata_refs:
+    - { id: "ATA_11", title: "ATA 11 - Placards and Markings", url: "../ATA_11-PLACARDS_AND_MARKINGS/00_README.md" }
+    - { id: "ATA_33", title: "ATA 33 - Lights", url: "../ATA_33-LIGHTS/00_README.md" }
+    - { id: "ATA_35", title: "ATA 35 - Oxygen", url: "../ATA_35-OXYGEN/00_README.md" }
+    - { id: "ATA_44", title: "ATA 44 - Cabin Systems (incl. IFE/IFX)", url: "../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/00_README.md" }
+    - { id: "ATA_51", title: "ATA 51 - Structures / Standard Practices", url: "../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES-GENERAL/00_README.md" }
+  source_documents:
+    - "EQ-SPEC-25-001: Equipment and Furnishings Design Specification"
+    - "LOPA-25-001: Layout of Passenger Accommodations"
+    - "SEAT-QUAL-25-001: Dynamic Seat Test Report (14 CFR 25.562)"
+    - "FLAM-TEST-25-001: Flammability Test Report (14 CFR 25.853)"
+    - "GALLEY-SPEC-25-001: Galley Systems Specification"
+    - "LAV-SPEC-25-001: Lavatory Systems Specification"
+    - "BIN-LOAD-25-001: Overhead Bin Load Analysis"
+    - "RESTRAINT-SPEC-25-001: Passenger Restraint Systems Specification"
+    - "MAINT-PLAN-25-001: Equipment and Furnishings Maintenance Program"
+safety:
+  criticality: "High - Passenger Safety Item"
+  hazards:
+    - "Seat failure during dynamic loading (emergency landing, turbulence)"
+    - "Restraint system failure leading to passenger injury"
+    - "Fire propagation from non-compliant materials"
+    - "Overhead bin detachment causing passenger injury"
+    - "Galley or lavatory detachment during flight"
+    - "Sharp edges or pinch points causing passenger injury"
+    - "Toxic fume emission from interior materials"
+    - "Blocked emergency egress due to equipment placement"
+  airworthiness_limitation_items:
+    - "Seat attach fittings to seat rails"
+    - "Overhead bin attach fittings to ceiling structure"
+    - "Galley and lavatory attach points to floor and ceiling"
+    - "Passenger restraint belt anchorages"
+    - "Emergency equipment stowage locations and placarding"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata25.sh"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, taxonomy, regulatory compliance matrix"
+    - name: "02-SEATS_AND_RESTRAINTS"
+      description: "Seat systems and standards, seat removal/installation procedures, belt/harness inspection, seat rail torque and limits"
+    - name: "03-MONUMENTS_GALLEYS_LAVATORIES"
+      description: "Galley installation, bonding and services, lavatory module installation and leak checks, monument attach and load paths"
+    - name: "04-STOWAGE_BINS_AND_PANELS"
+      description: "Overhead bin installation and checks, sidewall panel removal/installation, fastener substitutions and torque"
+    - name: "05-SAFETY_EQUIPMENT_STOWAGE"
+      description: "Safety equipment location verification, equipment maps and inspection intervals"
+    - name: "06-FLAMMABILITY_AND_MATERIALS"
+      description: "Flammability evidence packaging, materials and 14 CFR 25.853 test results"
+    - name: "07-DYNAMIC_AND_HIC_TESTS"
+      description: "Dynamic seat test plans per 14 CFR 25.562, anthropomorphic dummy and HIC limits"
+    - name: "08-INSPECTION_AND_MAINTENANCE"
+      description: "General Visual Inspection (GVI) and Detailed Visual Inspection (DVI) for furnishings, inspection intervals and acceptance criteria"
+    - name: "09-NONCONFORMANCE_AND-DEVIATION"
+      description: "Non-conformance reporting (NCR) and engineering disposition, NCR templates"
+    - name: "10-DIAGRAMS_AND_REFERENCE_DATA"
+      description: "Cabin layout and zone diagrams, reference tables"
+    - name: "11-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars"
+    - name: "12-EXAMPLES_AND_RECORDS"
+      description: "Example installation records, inspection logs, flammability dossiers"
+  schemas:
+    - name: "equipment-spec.schema.json"
+      description: "Equipment specification schema for cabin furnishings"
+    - name: "installation-record.schema.json"
+      description: "Installation record schema for seats, monuments, bins, and panels"
+    - name: "inspection.schema.json"
+      description: "Inspection record schema for GVI/DVI procedures"
+    - name: "flammability-test.schema.json"
+      description: "Flammability test record schema per 14 CFR 25.853"
+    - name: "dynamic-seat-test.schema.json"
+      description: "Dynamic seat test record schema per 14 CFR 25.562"
+approvals:
+  - authority: "Cabin Interiors Engineering"
+    status: "Released"
+    date: "2025-10-30"
+  - authority: "Materials & Process"
+    status: "Released"
+    date: "2025-10-30"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Human Factors"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"
