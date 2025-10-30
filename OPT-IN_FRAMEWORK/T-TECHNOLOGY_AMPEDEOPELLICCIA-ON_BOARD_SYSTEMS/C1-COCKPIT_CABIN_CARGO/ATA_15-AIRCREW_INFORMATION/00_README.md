@@ -3,23 +3,65 @@
 Scope: flight-deck and crew information hardware and software.  
 Includes flightcrew displays, indicators, placards, annunciators, audio alerts, SOP/briefing material, crew interface design, and human-factors evidence that affect airworthiness or crew procedures.
 
+## Quick Navigation
+
+### 📋 Core Documents
+- [Scope, Governance & Effectivity](./01-GENERAL/DESC_15-01-01_Scope-Governance-And-Effectivity.md)
+- [Regulatory Compliance Matrix](./01-GENERAL/DATA_15-01-02_Regulatory-Compliance-Matrix.csv)
+- [Chapter Index Metadata](./INDEX.meta.yaml)
+- [CI Validation Script](./ci/validate_ata15.sh)
+
+### 📂 Content Sections
+- [01-GENERAL](./01-GENERAL/) — Scope, governance, effectivity, regulatory compliance
+- [02-DISPLAYS_AND_ANNUNCIATORS](./02-DISPLAYS_AND_ANNUNCIATORS/) — Display standards, luminance limits
+- [03-AUDIO_ALERTS](./03-AUDIO_ALERTS/) — Audio alert design, level limits
+- [04-HUMAN_FACTORS](./04-HUMAN_FACTORS/) — HFE process, test protocols
+- [05-PROCEDURES](./05-PROCEDURES/) — SOPs, checklists, LOPA updates
+- [06-SOFTWARE_AND_AVIONICS](./06-SOFTWARE_AND_AVIONICS/) — Software verification, traceability
+- [07-RECORDS_AND_SIDECARS](./07-RECORDS_AND_SIDECARS/) — Sidecar templates
+- [08-EXAMPLES_AND_RECORDS](./08-EXAMPLES_AND_RECORDS/) — Example HFE reports, test logs
+
+### 📚 Related ATA Chapters
+- [ATA 11 — Placards and Markings](../ATA_11-PLACARDS_AND_MARKINGS/)
+- [ATA 25 — Equipment / Furnishings](../ATA_25-EQUIPMENT_FURNISHINGS/)
+- [ATA 33 — Lights](../ATA_33-LIGHTS/)
+- [ATA 35 — Oxygen](../ATA_35-OXYGEN/)
+- [ATA 44 — Cabin Systems (incl. IFE/IFX)](../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/)
+
+### 🌐 External Standards & Regulations
+- [FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) — Airworthiness Standards: Transport Category Airplanes
+- [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) — Certification Specifications for Large Aeroplanes
+- [DO-178C](https://www.rtca.org/) — Software Considerations in Airborne Systems and Equipment Certification
+- [DO-254](https://www.rtca.org/) — Design Assurance Guidance for Airborne Electronic Hardware
+- [ARINC Standards](https://www.sae.org/works/committeeHome.do?comtID=TEAAI) — Aeronautical Radio, Inc. specifications
+- [SAE ARP4754A](https://www.sae.org/standards/content/arp4754a/) — Guidelines for Development of Civil Aircraft and Systems
+- [SAE ARP4761](https://www.sae.org/standards/content/arp4761/) — Guidelines and Methods for Conducting the Safety Assessment Process
+
+---
+
 ## Purpose
 Provide governance, evidence and traceability for all artifacts that convey information to flightcrew or cabin-crew. Ensure that displays, alerts and procedures meet safety, usability and certification requirements and that changes are auditable.
 
 ## Cross-references
-- <a>ATA 05 — Time Limits & Maintenance Checks</a>  
-- <a>ATA 11 — Placards and Markings</a>  
-- <a>ATA 21 — ECS / Environmental Control Interfaces</a>  
-- <a>ATA 25 — Equipment / Furnishings</a>  
-- <a>ATA 33 — Lights</a>  
-- <a>ATA 44 — Cabin Systems (incl. IFE/IFX)</a>  
-- <a>ATA 51 — Structures / Standard Practices</a>
+
+**Cross-Chapter Dependencies:**
+- **[ATA 05](../../P-PROGRAM/)** — Time Limits & Maintenance Checks (inspection intervals for displays)
+- **[ATA 11](../ATA_11-PLACARDS_AND_MARKINGS/)** — Placards and Markings (flight deck placards, crew interface labels)
+- **[ATA 21](../../E1-ENVIRONMENT/)** — ECS / Environmental Control Interfaces (crew environmental alerts)
+- **[ATA 25](../ATA_25-EQUIPMENT_FURNISHINGS/)** — Equipment / Furnishings (crew seats, workstation integration)
+- **[ATA 33](../ATA_33-LIGHTS/)** — Lights (annunciator illumination, display backlighting)
+- **[ATA 44](../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/)** — Cabin Systems (crew-to-cabin communication, PA system)
+- **[ATA 51](../../A-AIRFRAME/)** — Structures / Standard Practices (display mounting, installation)
 
 ## Regulatory & Certification
 Capture applicable regulatory material and means of compliance. Typical refs and evidence:
-- CS / 14 CFR Part 25 requirements that touch flight-deck displays, crew interfaces, alerts and operational procedures.  
-- Human factors guidance and means of compliance used for certification.  
-- Software and avionics standards where applicable (DO-178, DO-254, ARINC, EUROCAE guidance).
+- **[14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)** requirements that touch flight-deck displays, crew interfaces, alerts and operational procedures
+- **[EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)** — European certification requirements
+- Human factors guidance and means of compliance used for certification
+- **[DO-178C](https://www.rtca.org/)** — Software considerations for avionics and display systems
+- **[DO-254](https://www.rtca.org/)** — Hardware design assurance for electronic displays
+- **ARINC** specifications for avionics interfaces and data buses
+- **EUROCAE** guidance for aircraft systems certification
 
 ## Mandatory evidence
 - **Design artifacts**: display specifications, annunciator logic, audio cue definitions, wiring/connector refs.  
@@ -121,7 +163,7 @@ Required approvals: at least one Airworthiness and one Human Factors approval fo
 
 ## Notes
 - Keep numeric thresholds in `DATA_*.csv`. Do not hardcode limits in CI tools.  
-- When display or alert changes affect cabin crew or passengers (e.g., cabin call, safety brief), cross-reference ATA 44 and ATA 25 artifacts and include cabin impact analysis.
+- When display or alert changes affect cabin crew or passengers (e.g., cabin call, safety brief), cross-reference [ATA 44](../ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/) and [ATA 25](../ATA_25-EQUIPMENT_FURNISHINGS/) artifacts and include cabin impact analysis.
 
 ## Contact
 Owner: `Flight Deck Systems` / `Crew Interface Engineering`. For certification-impact questions escalate to `Airworthiness` and `Human Factors`.
