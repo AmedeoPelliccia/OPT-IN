@@ -208,7 +208,7 @@ fi
 echo ""
 echo "Check 11: Checking effectivity fields..."
 MISSING_EFFECTIVITY=0
-for file in $(find "$ATA16_DIR" -type f -name "*ECR*.json" -o -name "*NCR*.json"); do
+for file in $(find "$ATA16_DIR" -type f \( -name "*ECR*.json" -o -name "*NCR*.json" \)); do
     if [ -f "$file" ]; then
         if ! grep -q "effectivity" "$file"; then
             warning "Effectivity field may be missing in: $(basename $file)"
