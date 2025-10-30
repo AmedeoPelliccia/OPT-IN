@@ -91,7 +91,7 @@ This document defines the design requirements and specifications for liquid hydr
 **Requirements**:
 - Resin system qualified for cryogenic service
 - Full traceability: fiber lot, resin lot, cure cycle
-- Typ winding pattern: Helical + hoop layers
+- Typical winding pattern: Helical + hoop layers
 - NDT: 100% ultrasonic inspection after cure
 
 ---
