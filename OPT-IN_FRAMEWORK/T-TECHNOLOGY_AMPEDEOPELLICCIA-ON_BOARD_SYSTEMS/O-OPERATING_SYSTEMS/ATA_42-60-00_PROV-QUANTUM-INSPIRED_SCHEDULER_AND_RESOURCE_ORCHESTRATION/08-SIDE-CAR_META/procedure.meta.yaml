@@ -1,0 +1,20 @@
+# Procedure Metadata Sidecar Template
+# ATA 42-60-00 Quantum-Inspired Scheduler
+
+schema_version: "1.0"
+document_type: "procedure"
+status: "template"
+classification: "internal"
+revision: "0.1.0"
+procedure_id: "TBD"
+owner: "TBD"
+approval_authority: "TBD"
+training_required: false
+safety_critical: false
+traceability:
+  requirements: []
+  standards: []
+  validation: []
+checksum:
+  algorithm: "sha256"
+  value: "TBD"
