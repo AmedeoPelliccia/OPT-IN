@@ -1,0 +1,10 @@
+System_ID,Component,Setpoint_C,Tolerance_C,Response_Time_s,Power_W,Voltage_V,Inspection_Interval_FH,Notes
+WINDSHIELD-HEAT-L,Left windshield,85,2,180,800,28,1000,Left pilot windshield heating
+WINDSHIELD-HEAT-R,Right windshield,85,2,180,800,28,1000,Right pilot windshield heating
+PITOT-HEAT-1,Pitot probe 1,50,3,60,50,28,1000,Primary pitot heating
+PITOT-HEAT-2,Pitot probe 2,50,3,60,50,28,1000,Standby pitot heating
+AOA-HEAT-1,AoA sensor 1,45,3,60,30,28,1000,Primary AoA sensor heating
+AOA-HEAT-2,AoA sensor 2,45,3,60,30,28,1000,Standby AoA sensor heating
+STATIC-HEAT-1,Static port 1,40,3,60,25,28,1000,Primary static port heating
+STATIC-HEAT-2,Static port 2,40,3,60,25,28,1000,Alternate static port heating
+TAT-HEAT-1,TAT probe,55,3,60,40,28,1000,Total air temperature probe

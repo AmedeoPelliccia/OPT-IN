@@ -1,0 +1,12 @@
+System_ID,Zone,Setpoint_C,Max_Tolerance_C,Uniformity_percent,Max_Element_Temp_C,Control_Latency_s,Ramp_Rate_C_per_min,Power_Rating_W,Voltage_V,Notes
+LE-THERM-01,ZoneA,120,3,10,200,2,8,5000,115,Leading edge thermal system zone A
+LE-THERM-01,ZoneB,115,3,10,200,2,8,4500,115,Leading edge thermal system zone B
+LE-THERM-01,ZoneC,110,3,10,200,2,7,4000,115,Leading edge thermal system zone C (outboard)
+LE-THERM-02,ZoneA,125,3,10,200,2,9,5500,115,Secondary leading edge zone A
+LE-THERM-02,ZoneB,120,3,10,200,2,9,5000,115,Secondary leading edge zone B
+WINDSHIELD-01,Left,85,2,5,150,3,5,800,28,Left windshield heater
+WINDSHIELD-01,Right,85,2,5,150,3,5,800,28,Right windshield heater
+SENSOR-PITOT-01,Probe1,50,3,NA,100,5,10,50,28,Pitot probe heating element
+SENSOR-PITOT-02,Probe2,50,3,NA,100,5,10,50,28,Standby pitot probe heating
+SENSOR-AOA-01,Probe1,45,3,NA,90,5,8,30,28,Angle of attack sensor heating
+SENSOR-STATIC-01,Port1,40,3,NA,85,5,8,25,28,Static port heating element

@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Ice Protection System",
+  "type": "object",
+  "required": ["id", "system_type", "manufacturer", "part_number", "serial", "installation_date"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique system identifier"
+    },
+    "system_type": {
+      "type": "string",
+      "enum": ["DeiceBoot", "ElectrothermalLeadingEdge", "WindshieldHeat", "WeepSystem", "RainRemoval"],
+      "description": "Type of ice protection system"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Manufacturer name"
+    },
+    "part_number": {
+      "type": "string",
+      "description": "Manufacturer part number"
+    },
+    "serial": {
+      "type": "string",
+      "description": "Serial number"
+    },
+    "installation_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Installation date in ISO 8601 format"
+    },
+    "service_pressure_kpa": {
+      "type": "number",
+      "description": "Maximum service pressure in kPa (for pneumatic systems)"
+    },
+    "max_element_temperature_C": {
+      "type": "number",
+      "description": "Maximum element temperature in Celsius (for thermal systems)"
+    },
+    "control_logic": {
+      "type": "string",
+      "description": "Control logic description or version"
+    },
+    "lsp_zone": {
+      "type": "boolean",
+      "description": "Whether system is in Lightning Strike Protection zone"
+    },
+    "location": {
+      "type": "string",
+      "description": "Installation location (e.g., wing station, fuselage station)"
+    },
+    "power_rating_w": {
+      "type": "number",
+      "description": "Power rating in Watts (for electrical systems)"
+    },
+    "operating_voltage_v": {
+      "type": "number",
+      "description": "Operating voltage in Volts"
+    },
+    "effectivity": {
+      "type": "object",
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number or range"
+        },
+        "configuration": {
+          "type": "string",
+          "description": "Configuration applicability"
+        }
+      }
+    }
+  }
+}

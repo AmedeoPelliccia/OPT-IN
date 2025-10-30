@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Deice Boot Specification",
+  "type": "object",
+  "required": ["id", "part_number", "material", "max_inflation_pressure_kpa", "expected_cycles"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique boot identifier"
+    },
+    "part_number": {
+      "type": "string",
+      "description": "Manufacturer part number"
+    },
+    "serial": {
+      "type": "string",
+      "description": "Serial number"
+    },
+    "material": {
+      "type": "string",
+      "description": "Boot material specification (e.g., neoprene, EPDM)"
+    },
+    "max_inflation_pressure_kpa": {
+      "type": "number",
+      "description": "Maximum inflation pressure in kPa"
+    },
+    "expected_cycles": {
+      "type": "number",
+      "description": "Expected operational cycles before replacement"
+    },
+    "bond_method": {
+      "type": "string",
+      "description": "Bonding method and adhesive specification"
+    },
+    "replacement_criteria": {
+      "type": "string",
+      "description": "Criteria for boot replacement (e.g., damage type, size limits)"
+    },
+    "installation_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Installation date in ISO 8601 format"
+    },
+    "current_cycles": {
+      "type": "number",
+      "description": "Current operational cycles"
+    },
+    "location": {
+      "type": "string",
+      "description": "Installation location (e.g., left wing, right wing, empennage)"
+    },
+    "station": {
+      "type": "string",
+      "description": "Wing or fuselage station"
+    },
+    "surface_area_m2": {
+      "type": "number",
+      "description": "Boot surface area in square meters"
+    },
+    "thickness_mm": {
+      "type": "number",
+      "description": "Boot thickness in millimeters"
+    },
+    "adhesive": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Adhesive type specification"
+        },
+        "lot_number": {
+          "type": "string",
+          "description": "Adhesive lot number"
+        },
+        "coc_reference": {
+          "type": "string",
+          "description": "Certificate of Conformance reference"
+        }
+      }
+    },
+    "inspection_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "method": {
+            "type": "string",
+            "description": "Inspection method (e.g., visual, ultrasonic)"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "Conditional"]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

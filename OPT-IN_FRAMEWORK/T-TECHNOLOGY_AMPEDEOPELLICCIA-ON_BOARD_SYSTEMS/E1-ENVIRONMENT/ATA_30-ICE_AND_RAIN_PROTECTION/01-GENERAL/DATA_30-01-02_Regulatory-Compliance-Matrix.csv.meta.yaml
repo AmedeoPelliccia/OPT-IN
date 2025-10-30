@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "DATA_30-01-02_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "Regulatory Compliance Matrix"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+  chapter: "ATA 30"
+  section: "01-GENERAL"
+effectivity:
+  msn: "ALL"
+  configuration: "ALL"
+  scope: "All AMPEL360 BWB configurations"
+safety:
+  criticality: "High"
+  hazards:
+    - "Non-compliance with regulatory requirements"
+  training_required: false
+approvals:
+  - authority: "Ice & Rain Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Regulatory Compliance"
+    status: "Approved"
+    date: "2025-10-29"
+traceability:
+  source_documents:
+    - "FAA Part 25.1419"
+    - "FAA Part 25.1093"
+    - "SAE ARP5905"
+    - "DO-160"
+  crossrefs:
+    - "ATA-04"
+    - "ATA-05"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: ""

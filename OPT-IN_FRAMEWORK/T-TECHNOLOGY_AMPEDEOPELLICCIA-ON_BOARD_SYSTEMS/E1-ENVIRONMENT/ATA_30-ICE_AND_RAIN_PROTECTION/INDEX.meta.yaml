@@ -1,0 +1,100 @@
+schema_version: "1.1"
+id: "ATA_30_INDEX_rev1.0.0_20251030"
+chapter: "ATA 30 - ICE AND RAIN PROTECTION"
+governance:
+  owner_role: "Ice & Rain Engineering / Environmental Systems"
+  review_board: ["Airworthiness Engineering", "Materials & Process Engineering", "NDT Engineering", "Aerodynamics Engineering"]
+  regulatory_basis: ["FAA Part 25.1419", "FAA Part 25.1093", "EASA CS-25", "SAE ARP5905", "DO-160", "ARP4754A", "ARP4761"]
+traceability:
+  crossrefs:
+    - "ATA 20"  # Standard Practices - Airframe (bonding, sealing, surface preparation)
+    - "ATA 21"  # Air Conditioning and Pressurization (bleed air supply)
+    - "ATA 24"  # Electrical Power (power supply for electrothermal systems)
+    - "ATA 27"  # Flight Controls (control surface integration, ice effects)
+    - "ATA 31"  # Indicating/Recording Systems (ice detection, crew alerting)
+    - "ATA 34"  # Navigation (air data sensor heating)
+    - "ATA 36"  # Pneumatic (bleed air distribution)
+    - "ATA 51"  # Standard Practices and Structures - General (composite repair, LSP restoration)
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "ICE-SPEC-30-001: Ice and Rain Protection System Design Specification"
+    - "ICE-QUAL-30-001: De-ice Boot Qualification Test Report"
+    - "ICE-THERM-30-001: Electrothermal System Design and Test Report"
+    - "ICE-SAFETY-30-001: Ice Protection System Safety Assessment (ARP4761)"
+    - "ICE-ENV-30-001: Environmental Qualification per DO-160"
+    - "MAINT-PLAN-30-001: Ice & Rain Protection Maintenance Program"
+    - "MAT-SPEC-30-001: Approved Materials and Adhesives Specification"
+safety:
+  criticality: "Critical - Flight Safety Item"
+  hazards:
+    - "Ice accretion on leading edges causing loss of lift"
+    - "De-ice boot delamination or failure to inflate"
+    - "Thermal element short circuit or overtemperature"
+    - "Sensor heating failure causing erroneous flight data"
+    - "Windshield heating failure causing vision loss"
+    - "Rain removal system failure in critical flight phases"
+    - "Contamination of bond surfaces leading to adhesive failure"
+    - "LSP continuity loss during thermal system repair"
+    - "Bleed air system failure affecting pneumatic ice protection"
+  airworthiness_limitation_items:
+    - "De-ice boot bond integrity and cycle life limits"
+    - "Thermal element attachment to primary structure"
+    - "Windshield heater element integrity"
+    - "Air data sensor heating elements"
+    - "Ice detection sensor functionality"
+    - "Bleed air distribution valve operation (if applicable)"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata30.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, regulatory compliance matrix"
+    - name: "02-DE-ICE_AND_DEFOG_SYSTEMS"
+      description: "De-ice boot inspection and repair, installation/removal procedures, boot limits"
+    - name: "03-THERMAL_AND_WEPT/HEATERS"
+      description: "Leading edge thermal system tests, panel heater calibration, thermal system limits"
+    - name: "04-WINDOW_AND_SENSOR_HEAT"
+      description: "Windshield heat test and calibration, sensor heat setpoints"
+    - name: "05-RUNWAY_RAIN_AND_WATER_MANAGEMENT"
+      description: "Rain removal philosophy, qualification test matrix"
+    - name: "06-MATERIALS_M_AND_P"
+      description: "Approved seals, lubricants, fabrics, M&P traceability and storage"
+    - name: "07-INSPECTION_NDT_AND_QUAL"
+      description: "NDT for leading edge and bonded repairs, inspection intervals and acceptance"
+    - name: "08-NONCONFORMANCE_AND-DEVIATION"
+      description: "Nonconformance handling and engineering disposition, NCR template"
+    - name: "09-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars"
+    - name: "10-EXAMPLES_AND_RECORDS"
+      description: "Example repair records, thermal cycle test reports"
+  schemas:
+    - name: "ice-system.schema.json"
+      description: "Ice protection system specification schema (system type, manufacturer, part number, serial, installation date, pressure/temperature limits, control logic, LSP zone)"
+    - name: "deice-boot.schema.json"
+      description: "De-ice boot specification schema (part number, material, max inflation pressure, expected cycles, bond method, replacement criteria)"
+    - name: "repair-record.schema.json"
+      description: "Repair record schema with ice & rain-specific fields (component ID, location, damage description, materials with lot numbers, NDT reports with hashes, functional test results, disposition, approvals)"
+approvals:
+  - authority: "Ice & Rain Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Environmental Systems Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Materials & Process Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"

@@ -1,0 +1,204 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Repair Record - Ice & Rain",
+  "type": "object",
+  "required": ["id", "msn", "component_id", "date", "disposition", "approvals"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique repair record identifier"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number"
+    },
+    "component_id": {
+      "type": "string",
+      "description": "Component identifier (boot ID, heater ID, etc.)"
+    },
+    "system_type": {
+      "type": "string",
+      "enum": ["DeiceBoot", "ElectrothermalLeadingEdge", "WindshieldHeat", "WeepSystem", "RainRemoval", "SensorHeat"],
+      "description": "System type being repaired"
+    },
+    "location_station": {
+      "type": "string",
+      "description": "Location station (e.g., wing station, fuselage station)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Repair date in ISO 8601 format"
+    },
+    "damage_description": {
+      "type": "string",
+      "description": "Description of damage found"
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "part_number": {
+            "type": "string",
+            "description": "Material part number"
+          },
+          "lot": {
+            "type": "string",
+            "description": "Material lot or batch number"
+          },
+          "coc_reference": {
+            "type": "string",
+            "description": "Certificate of Conformance reference"
+          },
+          "quantity": {
+            "type": "string",
+            "description": "Quantity used"
+          }
+        }
+      },
+      "description": "Materials used in repair"
+    },
+    "ndt_reports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "enum": ["Ultrasonic", "Thermography", "Visual", "EddyCurrent", "XRay"],
+            "description": "NDT method used"
+          },
+          "file_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hash of NDT report file"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "Conditional"],
+            "description": "NDT result"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "inspector": {
+            "type": "string",
+            "description": "Inspector name or ID"
+          }
+        },
+        "required": ["method", "file_hash"]
+      },
+      "description": "NDT inspection reports"
+    },
+    "functional_test": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": ["Pass", "Fail"],
+          "description": "Functional test result"
+        },
+        "logs_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 hash of test logs"
+        },
+        "test_type": {
+          "type": "string",
+          "description": "Type of functional test (e.g., pressure hold, thermal profile)"
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Test parameters and results"
+        }
+      },
+      "description": "Functional test results"
+    },
+    "lsp_verification": {
+      "type": "object",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "description": "Whether LSP verification was required"
+        },
+        "resistance_mohm": {
+          "type": "number",
+          "description": "4-wire resistance measurement in milliohms"
+        },
+        "pass": {
+          "type": "boolean",
+          "description": "Whether LSP verification passed"
+        }
+      },
+      "description": "Lightning Strike Protection verification (if applicable)"
+    },
+    "disposition": {
+      "type": "string",
+      "enum": ["Negligible", "Repairable", "Replace", "Engineering Disposition"],
+      "description": "Repair disposition"
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {
+            "type": "string",
+            "description": "Approving authority (e.g., Ice & Rain Engineering, Airworthiness)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Approver name"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Approved", "Rejected", "Conditional"],
+            "description": "Approval status"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Approval date"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Digital signature or reference"
+          }
+        }
+      },
+      "description": "Approval records"
+    },
+    "effectivity": {
+      "type": "object",
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Applicable MSN"
+        },
+        "configuration": {
+          "type": "string",
+          "description": "Configuration applicability"
+        }
+      }
+    },
+    "dpp_entry": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "type": "string",
+          "description": "Digital Product Passport entry reference"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "DPP entry timestamp"
+        }
+      },
+      "description": "Digital Product Passport integration"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Boot_ID,Part_Number,Max_Inflation_KPa,Pressure_Hold_Time_s,Max_Allowed_Decay_kPa_per_min,Expected_Cycles,Replacement_Trigger,Location,Notes
+BOOT-100,DB-PN-100,50,600,0.5,20000,"Tear >10mm; bond lift >5mm","Left wing leading edge, inboard","Primary leading edge boot"
+BOOT-200,DB-PN-200,45,600,0.6,15000,"Tear >10mm; bond lift >5mm; aged>life_limit","Left wing leading edge, outboard","Outboard section, lower cycles"
+BOOT-300,DB-PN-100,50,600,0.5,20000,"Tear >10mm; bond lift >5mm","Right wing leading edge, inboard","Primary leading edge boot"
+BOOT-400,DB-PN-200,45,600,0.6,15000,"Tear >10mm; bond lift >5mm; aged>life_limit","Right wing leading edge, outboard","Outboard section, lower cycles"
+BOOT-500,DB-PN-300,40,600,0.7,18000,"Tear >8mm; bond lift >5mm","Vertical stabilizer leading edge","Empennage application"
+BOOT-600,DB-PN-400,35,600,0.8,15000,"Tear >8mm; bond lift >4mm","Horizontal stabilizer leading edge","Aft surfaces, lower pressure"

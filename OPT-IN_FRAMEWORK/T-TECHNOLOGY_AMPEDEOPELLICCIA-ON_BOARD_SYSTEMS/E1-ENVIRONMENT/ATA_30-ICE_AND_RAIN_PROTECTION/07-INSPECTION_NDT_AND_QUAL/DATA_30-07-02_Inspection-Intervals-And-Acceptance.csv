@@ -1,0 +1,13 @@
+Component,Inspection_Type,Interval_FH,Interval_Calendar_Months,Method,Acceptance_Criteria,Reference_Procedure,Notes
+De-ice boots,General Visual Inspection (GVI),500,6,Visual,No tears >5mm; no delamination visible,PROC_30-02-01,A-check interval
+De-ice boots,Detailed Inspection (DET),3000,18,Visual + Ultrasonic,No voids >25mm; total void <5% area,PROC_30-07-01,C-check interval
+De-ice boots,Functional Test,2000,12,Pressure hold test,Decay ≤5% over 10 min,PROC_30-02-01,Functional verification
+Thermal systems,Visual Inspection,1000,6,Visual,No discoloration; no damage,PROC_30-03-01,Pre-flight check capability
+Thermal systems,Functional Test,3000,12,Temperature profile,Uniformity ±10%; setpoint ±3°C,PROC_30-03-01,Periodic calibration
+Thermal systems,Thermography,6000,24,IR imaging,No cold/hot spots per spec,PROC_30-07-01,Deep inspection
+Windshield heat,Visual Inspection,1000,6,Visual,No cracks; no scratches >10mm,PROC_30-04-01,Routine inspection
+Windshield heat,Functional Test,1000,6,Temperature measurement,Setpoint ±2°C; uniformity ±5%,PROC_30-04-01,Operational verification
+Sensor heaters,Functional Test,1000,6,Temperature measurement,Setpoint ±3°C; response ≤60s,PROC_30-04-01,Critical for flight data
+Rain removal,Visual Inspection,500,3,Visual,Wiper blades no damage; coating intact,DESC_30-05-01,Frequent check
+Rain removal,Functional Test,1000,6,Operational test,All modes functional; coverage >80%,DESC_30-05-01,Wiper motor and control
+Ice detection sensors,Functional Test,1000,6,Operational test,Sensor response verified,ATA-31,Sensor calibration check
