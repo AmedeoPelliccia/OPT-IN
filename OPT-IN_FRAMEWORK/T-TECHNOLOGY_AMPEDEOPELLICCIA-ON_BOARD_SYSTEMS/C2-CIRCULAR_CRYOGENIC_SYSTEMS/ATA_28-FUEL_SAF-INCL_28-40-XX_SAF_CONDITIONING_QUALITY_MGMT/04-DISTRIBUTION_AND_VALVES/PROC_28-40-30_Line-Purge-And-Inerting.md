@@ -168,5 +168,3 @@ Record for each purge operation:
 *This procedure is mandatory for all line purging and inerting operations.*
 
 ---
-
-*This procedure is mandatory for all line purging and inerting operations.*
