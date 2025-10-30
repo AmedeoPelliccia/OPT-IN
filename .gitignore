@@ -24,6 +24,5 @@ Thumbs.db
 # Backup files
 *.bak
 
-# ATA 42-60-00 runtime artifacts and logs
-**/10-ARTIFACTS_AND_LOGS/artifacts/
-**/10-ARTIFACTS_AND_LOGS/logs/
+# ATA 42-60-00 runtime artifacts and logs (keep directory structure)
+# Specific ignores handled in local .gitignore files
