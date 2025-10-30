@@ -1,0 +1,332 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata26/test-record.schema.json",
+  "title": "Fire System Test Record",
+  "description": "Schema for fire protection system test records",
+  "type": "object",
+  "required": [
+    "test_id",
+    "test_type",
+    "system_id",
+    "test_date",
+    "result"
+  ],
+  "properties": {
+    "test_id": {
+      "type": "string",
+      "description": "Unique test record identifier",
+      "pattern": "^TEST-26-[A-Z0-9]{8,16}$"
+    },
+    "test_type": {
+      "type": "string",
+      "enum": [
+        "functional_test",
+        "discharge_test",
+        "detection_response_test",
+        "leak_test",
+        "concentration_test",
+        "continuity_test",
+        "pressure_test",
+        "acceptance_test",
+        "periodic_inspection"
+      ]
+    },
+    "system_id": {
+      "type": "string",
+      "description": "Fire protection system or component ID being tested"
+    },
+    "aircraft_msn": {
+      "type": "string"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "test_time": {
+      "type": "string",
+      "format": "time"
+    },
+    "test_location": {
+      "type": "string",
+      "enum": ["aircraft", "test_bench", "laboratory", "factory"]
+    },
+    "test_procedure": {
+      "type": "object",
+      "required": ["reference"],
+      "properties": {
+        "reference": {
+          "type": "string",
+          "description": "Test procedure reference (e.g., PROC_26-02-01)"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "steps_performed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "test_equipment": {
+      "type": "array",
+      "description": "Test equipment used",
+      "items": {
+        "type": "object",
+        "required": ["equipment_name"],
+        "properties": {
+          "equipment_name": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "serial_number": {
+            "type": "string"
+          },
+          "calibration_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "calibration_due_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "calibration_cert_number": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "environmental_conditions": {
+      "type": "object",
+      "properties": {
+        "temperature_degF": {
+          "type": "number"
+        },
+        "humidity_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "pressure_inHg": {
+          "type": "number"
+        }
+      }
+    },
+    "test_parameters": {
+      "type": "object",
+      "description": "Test-specific parameters and measurements",
+      "properties": {
+        "detection_response_time_sec": {
+          "type": "number"
+        },
+        "agent_concentration_pct": {
+          "type": "number"
+        },
+        "discharge_time_sec": {
+          "type": "number"
+        },
+        "bottle_pressure_psi": {
+          "type": "number"
+        },
+        "loop_resistance_ohms": {
+          "type": "number"
+        },
+        "voltage_measured": {
+          "type": "number"
+        },
+        "current_measured_amps": {
+          "type": "number"
+        },
+        "leak_rate": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "acceptance_criteria": {
+      "type": "object",
+      "description": "Test acceptance criteria and limits",
+      "properties": {
+        "min_concentration_pct": {
+          "type": "number"
+        },
+        "max_discharge_time_sec": {
+          "type": "number"
+        },
+        "min_bottle_pressure_psi": {
+          "type": "number"
+        },
+        "max_response_time_sec": {
+          "type": "number"
+        },
+        "max_leak_rate": {
+          "type": "string"
+        }
+      }
+    },
+    "result": {
+      "type": "string",
+      "enum": ["pass", "fail", "conditional_pass", "incomplete"],
+      "description": "Overall test result"
+    },
+    "deviations": {
+      "type": "array",
+      "description": "Deviations from expected results or procedure",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "actual": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["minor", "major", "critical"]
+          },
+          "disposition": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "observations": {
+      "type": "string",
+      "description": "Test observations and notes"
+    },
+    "performed_by": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "signature_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "witnessed_by": {
+      "type": "array",
+      "description": "Witnesses (e.g., authority representatives, QA)",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "organization": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["FAA_inspector", "EASA_inspector", "QA_inspector", "engineer", "other"]
+          },
+          "signature_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "approved_by": {
+      "type": "object",
+      "description": "Engineering approval (if required)",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "signature_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "corrective_actions": {
+      "type": "array",
+      "description": "Corrective actions required (if test failed)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_description": {
+            "type": "string"
+          },
+          "responsible_party": {
+            "type": "string"
+          },
+          "due_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["open", "in_progress", "completed"]
+          }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "test_report_number": {
+          "type": "string"
+        },
+        "work_order": {
+          "type": "string"
+        },
+        "dpp_id": {
+          "type": "string"
+        },
+        "related_records": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filename": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["photo", "data_log", "chart", "certificate", "video", "other"]
+              },
+              "checksum": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

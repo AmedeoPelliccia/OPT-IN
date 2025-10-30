@@ -1,0 +1,362 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata26/ncr.schema.json",
+  "title": "Non-Conformance Report (NCR)",
+  "description": "Schema for ATA-26 fire protection system non-conformance reports",
+  "type": "object",
+  "required": [
+    "ncr_number",
+    "status",
+    "date_opened",
+    "system_affected",
+    "description",
+    "severity"
+  ],
+  "properties": {
+    "ncr_number": {
+      "type": "string",
+      "description": "Unique NCR identifier",
+      "pattern": "^NCR-26-[0-9]{4,8}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "under_investigation", "disposition_pending", "corrective_action_in_progress", "closed", "cancelled"],
+      "description": "Current status of the NCR"
+    },
+    "date_opened": {
+      "type": "string",
+      "format": "date",
+      "description": "Date NCR was opened"
+    },
+    "date_closed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date NCR was closed"
+    },
+    "aircraft_msn": {
+      "type": "string",
+      "description": "Aircraft MSN (if applicable)"
+    },
+    "system_affected": {
+      "type": "object",
+      "required": ["ata_chapter"],
+      "properties": {
+        "ata_chapter": {
+          "type": "string",
+          "pattern": "^26(-\\d{2}(-\\d{2})?)?$"
+        },
+        "system_id": {
+          "type": "string"
+        },
+        "component_pn": {
+          "type": "string"
+        },
+        "component_sn": {
+          "type": "string"
+        },
+        "nomenclature": {
+          "type": "string"
+        }
+      }
+    },
+    "description": {
+      "type": "object",
+      "required": ["summary"],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "Brief summary of the non-conformance"
+        },
+        "detailed_description": {
+          "type": "string",
+          "description": "Detailed description of the issue"
+        },
+        "conditions": {
+          "type": "string",
+          "description": "Conditions under which non-conformance was discovered"
+        },
+        "extent": {
+          "type": "string",
+          "description": "Extent of the non-conformance (single unit, batch, fleet-wide)"
+        }
+      }
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["minor", "major", "critical", "safety_of_flight"],
+      "description": "Severity classification"
+    },
+    "safety_impact": {
+      "type": "object",
+      "properties": {
+        "immediate_safety_concern": {
+          "type": "boolean"
+        },
+        "flight_safety_impact": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        },
+        "airworthiness_impact": {
+          "type": "boolean"
+        },
+        "regulatory_reportable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "discovered_by": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "contact": {
+          "type": "string"
+        }
+      }
+    },
+    "discovered_during": {
+      "type": "string",
+      "enum": ["manufacturing", "receiving_inspection", "installation", "functional_test", "flight_test", "service", "maintenance", "audit", "other"],
+      "description": "Phase when non-conformance was discovered"
+    },
+    "root_cause_analysis": {
+      "type": "object",
+      "properties": {
+        "analysis_performed": {
+          "type": "boolean"
+        },
+        "analysis_method": {
+          "type": "string",
+          "enum": ["5_whys", "fishbone", "fault_tree", "FMEA", "other"]
+        },
+        "root_cause": {
+          "type": "string"
+        },
+        "contributing_factors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "disposition": {
+      "type": "object",
+      "properties": {
+        "disposition_type": {
+          "type": "string",
+          "enum": ["use_as_is", "rework", "repair", "scrap", "return_to_supplier", "deviation", "engineering_evaluation_required"],
+          "description": "Disposition decision"
+        },
+        "disposition_rationale": {
+          "type": "string"
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approval_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "conditions": {
+          "type": "string",
+          "description": "Conditions or limitations on disposition"
+        }
+      }
+    },
+    "corrective_actions": {
+      "type": "array",
+      "description": "Corrective actions to address non-conformance",
+      "items": {
+        "type": "object",
+        "required": ["action_description", "responsible_party"],
+        "properties": {
+          "action_id": {
+            "type": "string"
+          },
+          "action_description": {
+            "type": "string"
+          },
+          "action_type": {
+            "type": "string",
+            "enum": ["immediate", "short_term", "long_term"]
+          },
+          "responsible_party": {
+            "type": "string"
+          },
+          "due_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "completion_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["planned", "in_progress", "completed", "verified"]
+          },
+          "verification_method": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "preventive_actions": {
+      "type": "array",
+      "description": "Preventive actions to prevent recurrence",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_description": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string",
+            "description": "Scope of preventive action (single unit, fleet, process change)"
+          },
+          "responsible_party": {
+            "type": "string"
+          },
+          "target_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["planned", "in_progress", "implemented"]
+          }
+        }
+      }
+    },
+    "regulatory_reporting": {
+      "type": "object",
+      "properties": {
+        "reportable": {
+          "type": "boolean"
+        },
+        "authority": {
+          "type": "string",
+          "enum": ["FAA", "EASA", "TCCA", "other", "none"]
+        },
+        "report_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "report_reference": {
+          "type": "string"
+        }
+      }
+    },
+    "related_documents": {
+      "type": "object",
+      "properties": {
+        "work_orders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "repair_records": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "test_reports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "engineering_orders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "related_ncrs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cost_impact": {
+      "type": "object",
+      "properties": {
+        "estimated_cost": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "cost_breakdown": {
+          "type": "object",
+          "properties": {
+            "material": {
+              "type": "number"
+            },
+            "labor": {
+              "type": "number"
+            },
+            "testing": {
+              "type": "number"
+            },
+            "delay": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "closure": {
+      "type": "object",
+      "properties": {
+        "closure_verified_by": {
+          "type": "string"
+        },
+        "verification_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "effectiveness_verified": {
+          "type": "boolean"
+        },
+        "lessons_learned": {
+          "type": "string"
+        },
+        "closure_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["photo", "drawing", "test_report", "analysis", "correspondence", "other"]
+          },
+          "checksum": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

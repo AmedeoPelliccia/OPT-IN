@@ -1,0 +1,341 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata26/suppression-system.schema.json",
+  "title": "Fire Suppression System",
+  "description": "Schema for fire suppression system specification",
+  "type": "object",
+  "required": [
+    "suppression_system_id",
+    "fire_zone_id",
+    "agent_type",
+    "containers",
+    "distribution_network"
+  ],
+  "properties": {
+    "suppression_system_id": {
+      "type": "string",
+      "description": "Unique identifier for suppression system",
+      "pattern": "^FSS-[A-Z0-9]{4,12}$"
+    },
+    "fire_zone_id": {
+      "type": "string",
+      "description": "Fire zone identifier being protected"
+    },
+    "agent_type": {
+      "type": "string",
+      "enum": ["Halon 1301", "HFC-125", "FK-5-1-12", "Water", "CO2"],
+      "description": "Fire extinguishing agent used"
+    },
+    "containers": {
+      "type": "array",
+      "description": "Fire agent storage containers/bottles",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["container_id", "capacity", "pressure"],
+        "properties": {
+          "container_id": {
+            "type": "string"
+          },
+          "part_number": {
+            "type": "string"
+          },
+          "serial_number": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "object",
+            "required": ["value", "unit"],
+            "properties": {
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "type": "string",
+                "enum": ["lbs", "kg"]
+              }
+            }
+          },
+          "pressure": {
+            "type": "object",
+            "required": ["nominal", "unit"],
+            "properties": {
+              "nominal": {
+                "type": "number",
+                "minimum": 0
+              },
+              "min_acceptable": {
+                "type": "number",
+                "minimum": 0
+              },
+              "max_acceptable": {
+                "type": "number",
+                "minimum": 0
+              },
+              "current": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "type": "string",
+                "enum": ["psi", "bar"]
+              }
+            }
+          },
+          "location": {
+            "type": "string"
+          },
+          "installation_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "last_hydrostatic_test": {
+            "type": "string",
+            "format": "date"
+          },
+          "next_hydrostatic_test": {
+            "type": "string",
+            "format": "date"
+          },
+          "charge_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "agent_batch_number": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "discharge_valves": {
+      "type": "array",
+      "description": "Discharge valves and actuators",
+      "items": {
+        "type": "object",
+        "required": ["valve_id", "type"],
+        "properties": {
+          "valve_id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["squib", "explosive_cartridge", "solenoid", "pyrotechnic"]
+          },
+          "part_number": {
+            "type": "string"
+          },
+          "serial_number": {
+            "type": "string"
+          },
+          "actuation_voltage": {
+            "type": "number"
+          },
+          "actuation_current_amps": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "distribution_network": {
+      "type": "object",
+      "description": "Agent distribution tubing and nozzles",
+      "required": ["tubing", "nozzles"],
+      "properties": {
+        "tubing": {
+          "type": "object",
+          "properties": {
+            "material": {
+              "type": "string",
+              "enum": ["stainless_steel", "titanium", "aluminum"]
+            },
+            "size_inches": {
+              "type": "number",
+              "minimum": 0
+            },
+            "total_length_ft": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "nozzles": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["nozzle_id", "location"],
+            "properties": {
+              "nozzle_id": {
+                "type": "string"
+              },
+              "part_number": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "flow_rate_lbs_per_sec": {
+                "type": "number",
+                "minimum": 0
+              },
+              "spray_pattern": {
+                "type": "string",
+                "enum": ["cone", "fan", "jet", "multi-orifice"]
+              },
+              "coverage_area_sq_ft": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "performance_requirements": {
+      "type": "object",
+      "description": "Suppression system performance specifications",
+      "properties": {
+        "min_agent_concentration_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "max_discharge_time_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Time to reach minimum concentration"
+        },
+        "hold_time_minutes": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Time to maintain minimum concentration"
+        },
+        "coverage_volume_cubic_ft": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "control_system": {
+      "type": "object",
+      "properties": {
+        "manual_control": {
+          "type": "boolean",
+          "description": "Manual discharge available"
+        },
+        "automatic_discharge": {
+          "type": "boolean",
+          "description": "Automatic discharge enabled"
+        },
+        "control_panel_location": {
+          "type": "string"
+        },
+        "discharge_button_part_number": {
+          "type": "string"
+        },
+        "guard_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pressure_switches": {
+      "type": "array",
+      "description": "Pressure switches for bottle pressure monitoring",
+      "items": {
+        "type": "object",
+        "properties": {
+          "switch_id": {
+            "type": "string"
+          },
+          "part_number": {
+            "type": "string"
+          },
+          "function": {
+            "type": "string",
+            "enum": ["low_pressure_warning", "discharge_indication"]
+          },
+          "setpoint_psi": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "testing": {
+      "type": "object",
+      "properties": {
+        "last_discharge_test_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "next_discharge_test_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "discharge_test_interval_months": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "last_leak_test_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "concentration_test_results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "test_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "measured_concentration_pct": {
+                "type": "number"
+              },
+              "pass_fail": {
+                "type": "string",
+                "enum": ["pass", "fail"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "regulatory_basis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "certification_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "full_scale_fire_test_report": {
+          "type": "string"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "dpp_id": {
+          "type": "string"
+        },
+        "installation_record": {
+          "type": "string"
+        },
+        "checksum": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata26/fire-system.schema.json",
+  "title": "Fire Protection System",
+  "description": "Schema for fire protection system specification and configuration",
+  "type": "object",
+  "required": [
+    "system_id",
+    "system_name",
+    "fire_zones",
+    "detection_system",
+    "suppression_system",
+    "effective_date"
+  ],
+  "properties": {
+    "system_id": {
+      "type": "string",
+      "description": "Unique identifier for the fire protection system",
+      "pattern": "^FPS-[A-Z0-9]{4,12}$"
+    },
+    "system_name": {
+      "type": "string",
+      "description": "Descriptive name of the fire protection system"
+    },
+    "aircraft_msn": {
+      "type": "string",
+      "description": "Manufacturing Serial Number of the aircraft"
+    },
+    "fire_zones": {
+      "type": "array",
+      "description": "List of designated fire zones covered by this system",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["zone_id", "zone_name", "classification"],
+        "properties": {
+          "zone_id": {
+            "type": "string",
+            "description": "Fire zone identifier (e.g., FZ-ENG1, FZ-APU)"
+          },
+          "zone_name": {
+            "type": "string",
+            "description": "Descriptive name of the fire zone"
+          },
+          "classification": {
+            "type": "string",
+            "enum": ["Class A", "Class B", "Class C", "Class D", "Class E"],
+            "description": "Fire zone classification per FAR 25.857"
+          },
+          "volume_cubic_ft": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Volume of the fire zone in cubic feet"
+          }
+        }
+      }
+    },
+    "detection_system": {
+      "type": "object",
+      "required": ["detector_types", "control_unit"],
+      "properties": {
+        "detector_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["smoke", "heat", "flame", "continuous_loop", "spot"]
+          }
+        },
+        "control_unit": {
+          "type": "object",
+          "required": ["part_number", "manufacturer"],
+          "properties": {
+            "part_number": {
+              "type": "string"
+            },
+            "serial_number": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            }
+          }
+        },
+        "response_time_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Maximum time from fire detection to crew warning"
+        }
+      }
+    },
+    "suppression_system": {
+      "type": "object",
+      "required": ["agent_type", "containers"],
+      "properties": {
+        "agent_type": {
+          "type": "string",
+          "enum": ["Halon 1301", "HFC-125", "FK-5-1-12", "Water", "CO2"],
+          "description": "Fire extinguishing agent"
+        },
+        "containers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["container_id", "capacity_lbs", "pressure_psi"],
+            "properties": {
+              "container_id": {
+                "type": "string"
+              },
+              "capacity_lbs": {
+                "type": "number",
+                "minimum": 0
+              },
+              "pressure_psi": {
+                "type": "number",
+                "minimum": 0
+              },
+              "serial_number": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "discharge_time_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2,
+          "description": "Time to achieve minimum agent concentration"
+        },
+        "min_concentration_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Minimum agent concentration by volume"
+        }
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "last_inspection_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "next_inspection_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "inspection_interval_fh": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Inspection interval in flight hours"
+        }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "regulatory_basis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "certification_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "authority": {
+          "type": "string",
+          "enum": ["FAA", "EASA", "TCCA", "Other"]
+        }
+      }
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when this configuration becomes effective"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Document revision (semantic versioning)"
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "dpp_id": {
+          "type": "string",
+          "description": "Digital Product Passport ID"
+        },
+        "checksum": {
+          "type": "string",
+          "description": "SHA-256 checksum for integrity verification"
+        }
+      }
+    }
+  }
+}
