@@ -1,0 +1,114 @@
+schema_version: "1.1"
+id: "ATA_35_INDEX"
+chapter: "ATA 35 - OXYGEN"
+governance:
+  owner_role: "Cabin Systems / Oxygen"
+  review_board: ["Cabin Systems","Airworthiness","Materials & Process","NDT","Safety Engineering"]
+  regulatory_basis:
+    faa_regulations:
+      - "FAA Part 25.1441"
+      - "FAA Part 25.1443"
+      - "FAA Part 25.1445"
+      - "FAA Part 25.1447"
+      - "FAA Part 25.1449"
+      - "FAA Part 25.1450"
+      - "FAA Part 25.1453"
+    easa_standards:
+      - "EASA CS-25"
+    industry_standards:
+      - "DO-160"
+      - "MIL-PRF-27210"
+traceability:
+  crossrefs:
+    - "ATA 04"  # Airworthiness Limitations
+    - "ATA 20"  # Standard Practices - Airframe
+    - "ATA 21"  # Air Conditioning & Pressurization
+    - "ATA 24"  # Electrical Power
+    - "ATA 25"  # Equipment/Furnishings
+    - "ATA 26"  # Fire Protection
+    - "ATA 31"  # Indicating/Recording Systems
+    - "ATA 44"  # Cabin Systems
+    - "ATA 95"  # Digital Product Passport
+  source_documents:
+    - "OXY-SPEC-35-001: Oxygen System Design Specification"
+    - "OXY-SAFETY-35-001: Oxygen System Safety Assessment"
+    - "OXY-QUAL-35-001: Cylinder Qualification Test Report"
+    - "OXY-MAINT-35-001: Oxygen System Maintenance Program"
+    - "OXY-CERT-35-001: Oxygen System Certification Test Plan"
+safety:
+  criticality: "Critical - Flight Safety and Crew/Passenger Survival Item"
+  hazards:
+    - "Oxygen cylinder rupture or catastrophic failure"
+    - "Fire risk from oxygen enrichment in confined spaces"
+    - "Regulator failure causing loss of oxygen supply"
+    - "Contamination of oxygen supply (oil, grease, hydrocarbons)"
+    - "Mask deployment failure during emergency decompression"
+    - "Chemical oxygen generator thermal runaway or toxic fume release"
+    - "Oxygen leak causing fire or explosion hazard"
+    - "Improper handling causing cylinder damage or valve failure"
+    - "Human factor error in refill or maintenance procedures"
+  airworthiness_limitation_items:
+    - "Oxygen cylinder hydrostatic test intervals"
+    - "Cylinder neck and valve NDT inspections"
+    - "Regulator functional test intervals"
+    - "Mask deployment system functional tests"
+    - "Oxygen purity verification at refill"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata35.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations with crew and passenger oxygen systems"
+  msn: "ALL"
+  cfg: "ALL"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, oxygen system taxonomy, regulatory compliance matrix"
+    - name: "02-OXYGEN_SYSTEM_DESIGN"
+      description: "System types and architectures, pressure vessel requirements, system limits and parameters"
+    - name: "03-CYLINDERS_AND_STORAGE"
+      description: "Cylinder handling, storage and traceability, cylinder refill and exchange, cylinder serials and CoC"
+    - name: "04-SERVICE_AND_INSPECTION"
+      description: "Oxygen system inspection and service, PAX oxygen deployment test, pressure test and leak verification, inspection intervals and acceptance"
+    - name: "05-REGULATORY_AND_SAFETY"
+      description: "Regulatory references and compliance, fire safety and oxygen handling, oxygen hazard classification"
+    - name: "06-MATERIALS_M_AND_P"
+      description: "Approved materials and compatibility, M&P traceability and cylinder CoC"
+    - name: "07-ELECTRO-MECH_INTERFACES_AND_VALVING"
+      description: "Regulator and valve removal/installation, sensor calibration and verification, regulator setpoints and tolerances"
+    - name: "08-NDT_AND_INSPECTION_RECORDS"
+      description: "NDT for pressure vessels and fittings, NDT intervals and acceptance"
+    - name: "09-REPAIR_GUIDELINES"
+      description: "Metallic repair and welding limits, composite or non-metallic repair notes"
+    - name: "10-QUALIFICATION_AND_TEST_PLANS"
+      description: "Cylinder qualification and test plan, test matrix and failure criteria"
+    - name: "11-NONCONFORMANCE_AND_DEVIATION"
+      description: "Nonconformance handling and engineering disposition, NCR template"
+    - name: "12-DIAGRAMS_AND_REFERENCE_DATA"
+      description: "Oxygen system block diagram, cylinder mounting and fittings, reference tables"
+    - name: "13-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars"
+    - name: "14-EXAMPLES_AND_RECORDS"
+      description: "Example repair records, pressure test logs, PAX oxygen deployment reports"
+  schemas:
+    - name: "oxygen-system.schema.json"
+      description: "Oxygen system specification schema (system type, cylinders, regulators, deployment)"
+    - name: "repair-record.schema.json"
+      description: "Repair record schema with oxygen-specific fields (component ID, cylinder data, CoC, materials, NDT hashes, pressure test results, functional test results, effectivity)"
+    - name: "damage-classification.schema.json"
+      description: "Damage classification schema for oxygen system damage assessment"
+    - name: "inspection.schema.json"
+      description: "Inspection interval and acceptance criteria schema"
+approvals:
+  - authority: "Cabin Systems / Oxygen"
+    status: "Released"
+    date: "2025-10-30"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"

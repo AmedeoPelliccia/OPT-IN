@@ -1,0 +1,19 @@
+Material,Oxygen_Compatibility,Application,Notes,Standard_Reference
+Stainless Steel 316,Approved,Cylinders, lines, fittings, valves,Excellent oxygen compatibility, CGA G-4.4
+Stainless Steel 304,Approved,Lines, fittings, brackets,Good oxygen compatibility, CGA G-4.4
+Aluminum 6061-T6,Approved with restrictions,Low-pressure lines and brackets,Not recommended for >200 bar,CGA G-4.4
+Titanium 6Al-4V,Approved,Lightweight cylinder applications,Requires oxygen cleaning,AMS 4928
+Inconel 625,Approved,High-temperature valve components,Excellent corrosion resistance,AMS 5666
+Monel 400,Approved,Regulator components, fittings,Good oxygen compatibility,AMS 4574
+PTFE (Teflon),Approved,Gaskets, seals, low-pressure applications,Must be oxygen-clean grade,CGA G-4.4
+Viton (FKM),Approved,O-rings, seals (low pressure),Maximum 50 bar service,CGA G-4.4
+Kel-F (PCTFE),Approved,Seals, low-pressure valve seats,Excellent oxygen compatibility,CGA G-4.4
+Brass (unleaded),Conditional,Low-pressure fittings only,Not for service above 50 bar,CGA G-4.4
+Copper,Not Approved,Not recommended for oxygen service,Risk of combustion,CGA G-4.4
+Aluminum Bronze,Conditional,Low-pressure applications with analysis,Engineering review required,CGA G-4.4
+Carbon Steel,Not Approved,Not for oxygen service,High flammability risk,CGA G-4.4
+Rubber (natural),Not Approved,Prohibited in oxygen systems,Highly flammable,CGA G-4.4
+Silicone,Not Approved,Prohibited in oxygen systems,Combustible in high O2,CGA G-4.4
+Petroleum-based lubricants,Not Approved,Prohibited - oxygen fire hazard,Use oxygen-compatible only,CGA G-4.1
+Krytox GPL,Approved,Oxygen-safe lubricant,PFPE-based, non-flammable,CGA G-4.1
+Braycote 601EF,Approved,Oxygen-safe grease,PFPE-based, -40°C to +200°C,CGA G-4.1

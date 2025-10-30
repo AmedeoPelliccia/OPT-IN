@@ -1,0 +1,24 @@
+Parameter,Value,Units,Remarks
+Cylinder_Service_Pressure,200,bar,Manufacturer nominal (example - verify with CoC)
+Hydrostatic_Test_Pressure,300,bar,1.5x service pressure or per manufacturer specification
+Regulator_Output_Pressure_Crew,200-400,kPa,Tolerance ±10 kPa
+Regulator_Output_Pressure_Tolerance,10,kPa,Acceptable deviation from nominal
+Pax_Demand_Flow,2-4,L/min,Continuous or diluter-demand mode typical range
+Mask_Deployment_Time,5,s,Maximum time from trigger to first mask available
+Oxygen_Purity_Min,99.5,%,Measured at refill per MIL-PRF-27210
+Leak_Rate_Max_High_Pressure,0.05,mbar·L/s,Isolated assembly at 200 bar
+Leak_Rate_Max_Low_Pressure,0.05,mbar·L/s,Regulated distribution at 200 kPa
+Cylinder_Corrosion_Max_Depth,0.5,mm,Local pit depth limit for continued service
+Cylinder_Dent_Max_Depth,5,mm,Maximum dent depth for continued service
+Cylinder_Dent_Max_Diameter,25,mm,Maximum dent diameter for continued service
+Cylinder_Inspection_Interval_GVI,12,months,General Visual Inspection frequency
+Cylinder_Inspection_Interval_DVI,36,months,Detailed Inspection frequency
+Cylinder_Hydrostatic_Test_Interval,60,months,Hydrostatic test interval (verify with manufacturer)
+Regulator_Functional_Test_Interval,12,months,Functional test frequency
+Mask_Deployment_Test_Interval,24,months,Deployment test frequency
+Relief_Valve_Setpoint,225,bar,Typical setpoint (verify with valve specification)
+Storage_Temperature_Min,-20,°C,Minimum storage temperature
+Storage_Temperature_Max,50,°C,Maximum storage temperature
+Storage_Humidity_Max,60,%,Maximum relative humidity for storage
+Pressure_Drop_Test_Duration,30,minutes,Duration for isolated assembly pressure drop test
+Pressure_Drop_Max_Allowable,5,%,Maximum pressure drop over test duration
