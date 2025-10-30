@@ -16,7 +16,7 @@ Describes actuator types, architectures, redundancy schemes, and fail-safe desig
 
 **Architecture:**
 - Self-contained hydraulic power unit
-- Electricelectric motor driving hydraulic pump
+- Electric motor driving hydraulic pump
 - Integrated servo valve and position feedback
 - No central hydraulic system required
 
