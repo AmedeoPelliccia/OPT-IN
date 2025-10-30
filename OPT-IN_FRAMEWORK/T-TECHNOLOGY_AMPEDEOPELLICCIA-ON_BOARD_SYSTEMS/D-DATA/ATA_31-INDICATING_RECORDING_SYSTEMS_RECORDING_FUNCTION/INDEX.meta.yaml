@@ -1,0 +1,104 @@
+schema_version: "1.1"
+id: "ATA_31_INDEX"
+chapter: "ATA 31 - INDICATING RECORDING SYSTEMS (RECORDING FUNCTION)"
+governance:
+  owner_role: "Data Systems / Flight Data Engineering"
+  review_board: ["Airworthiness", "Operations", "Safety", "Data Governance"]
+  regulatory_basis: 
+    - "ICAO Annex 6"
+    - "FAA 14 CFR Part 91/121/125"
+    - "TSO-C124a (FDR)"
+    - "TSO-C123a (CVR)"
+    - "EUROCAE ED-112"
+    - "ARINC 717"
+    - "ARINC 573"
+    - "RTCA DO-160"
+    - "RTCA DO-178C"
+    - "RTCA DO-254"
+effectivity:
+  msn: "ALL"
+  scope: "All AMPEL360 configurations with FDR/CVR recording systems"
+traceability:
+  crossrefs:
+    - "ATA 05"  # Time Limits & Maintenance Checks
+    - "ATA 20"  # Standard Practices - Airframe
+    - "ATA 22"  # Auto Flight
+    - "ATA 24"  # Electrical Power
+    - "ATA 42"  # Integrated Modular Avionics
+    - "ATA 45"  # Onboard Maintenance Systems
+    - "ATA 46"  # Information Systems
+    - "ATA 95"  # Digital Product Passport
+  source_documents:
+    - "FDR-SPEC-31-001: Flight Data Recorder System Specification"
+    - "CVR-SPEC-31-001: Cockpit Voice Recorder System Specification"
+    - "REC-ARCH-31-001: Recording System Architecture Document"
+    - "REC-SAS-31-001: Recording System Software Accomplishment Summary (DO-178C)"
+    - "REC-SAFETY-31-001: Recording System Safety Assessment"
+    - "REC-QUAL-31-001: FDR/CVR Qualification Test Report"
+    - "REC-ENV-31-001: Environmental Qualification Evidence (DO-160)"
+    - "MAINT-PLAN-31-001: Recording System Maintenance Program"
+    - "DATA-MGMT-31-001: Data Management and Retention Policy"
+safety:
+  criticality: "Critical - Flight Safety Item / Accident Investigation Evidence"
+  hazards:
+    - "Loss of flight data recording capability affecting accident investigation"
+    - "Loss of CVR audio recording affecting incident analysis"
+    - "Corruption of recorded data compromising evidence integrity"
+    - "Unauthorized access to sensitive flight data or CVR recordings"
+    - "Failure to meet mandatory parameter recording requirements"
+    - "Data loss due to power interruption or crash impact"
+    - "Tool malfunction during download causing data corruption"
+  airworthiness_limitation_items:
+    - "FDR/CVR unit crash survivability certification"
+    - "FDR mandatory parameter list compliance"
+    - "CVR minimum recording duration (2 hours minimum)"
+    - "Data retention and overwrite protection"
+    - "Power supply redundancy and backup"
+    - "Crash-protected memory module integrity"
+    - "Time synchronization accuracy (UTC)"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata31.sh"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, regulatory compliance matrix"
+    - name: "02-FDR_FUNCTION"
+      description: "FDR system description, download procedures, mandatory parameter mapping"
+    - name: "03-CVR_FUNCTION"
+      description: "CVR system description, chain-of-custody procedures, acoustic tests"
+    - name: "04-DATA_MANAGEMENT_AND_DPP"
+      description: "DPP entry procedures, data retention policies, access controls"
+    - name: "05-QUALIFICATION_AND_TEST"
+      description: "FDR/CVR qualification plans, test matrices, failure criteria"
+    - name: "06-NONCONFORMANCE_AND_DEVIATION"
+      description: "Nonconformance handling procedures, NCR templates"
+    - name: "07-SIDE-CAR_META"
+      description: "Metadata sidecar templates for document management"
+    - name: "08-EXAMPLES_AND_RECORDS"
+      description: "Example download records, manifest templates, DPP entries"
+  schemas:
+    - name: "recording-function.schema.json"
+      description: "Recording function metadata schema (FDR/CVR/Combined unit specifications)"
+    - name: "fdr-schema.json"
+      description: "FDR parameter mapping schema with ARINC/ICAO references"
+    - name: "cvr-schema.json"
+      description: "CVR channel and acoustic specification schema"
+    - name: "recording-record.schema.json"
+      description: "Download record schema with SHA-256 hashes and chain-of-custody"
+approvals:
+  - authority: "Data Systems Engineering"
+    status: "Released"
+    date: "2025-10-30"
+  - authority: "Flight Operations"
+    status: "Released"
+    date: "2025-10-30"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"

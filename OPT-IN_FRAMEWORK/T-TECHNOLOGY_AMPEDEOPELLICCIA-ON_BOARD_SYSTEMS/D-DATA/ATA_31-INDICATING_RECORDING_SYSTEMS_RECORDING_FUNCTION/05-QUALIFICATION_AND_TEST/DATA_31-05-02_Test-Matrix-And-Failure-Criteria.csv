@@ -1,0 +1,39 @@
+Test_ID,Test_Category,Test_Description,Requirement_Reference,Test_Method,Acceptance_Criteria,Failure_Impact,Test_Status,Test_Date,Test_Report_Ref,Remarks
+TEST-31-001,Environmental,Low Temperature Operation (-55°C),DO-160 Sec 4.5,Lab test,Unit operates at -55°C for 3 hours,Critical - Certification blocker,Pass,2025-09-10,ENV-TEST-001,Category A2 test
+TEST-31-002,Environmental,High Temperature Operation (+70°C),DO-160 Sec 5.5,Lab test,Unit operates at +70°C for 3 hours,Critical - Certification blocker,Pass,2025-09-10,ENV-TEST-001,Category A2 test
+TEST-31-003,Environmental,Temperature Shock,DO-160 Sec 4.6,Lab test,Unit survives -55°C to +70°C transition,Major,Pass,2025-09-10,ENV-TEST-001,5 cycles tested
+TEST-31-004,Environmental,Altitude Operation (55000 ft),DO-160 Sec 4.6.1,Lab test,Unit operates at 55000 ft equivalent,Critical - Certification blocker,Pass,2025-09-11,ENV-TEST-002,Category A test
+TEST-31-005,Environmental,Vibration (Category U),DO-160 Sec 8,Lab test,Unit functions during/after 3h per axis,Critical - Certification blocker,Pass,2025-09-12,ENV-TEST-003,Random vibration per U profile
+TEST-31-006,Crash Survivability,Impact Shock (3400g),DO-160 Sec 7.3,Lab test,Memory survives 3400g 6.5ms shock,Critical - Certification blocker,Pass,2025-09-15,CRASH-TEST-001,Data recoverable after impact
+TEST-31-007,Crash Survivability,Penetration Resistance,TSO-C124a/C123a,Lab test,Memory survives 500lb pin impact,Critical - Certification blocker,Pass,2025-09-15,CRASH-TEST-001,No penetration of memory module
+TEST-31-008,Crash Survivability,Static Crush (5000 lb),TSO-C124a/C123a,Lab test,Memory survives 5000lb for 5 minutes,Critical - Certification blocker,Pass,2025-09-15,CRASH-TEST-001,No permanent deformation
+TEST-31-009,Crash Survivability,Fire Resistance (1100°C 1h),TSO-C124a/C123a,Lab test,Memory survives 1100°C for 1 hour,Critical - Certification blocker,Pass,2025-09-16,FIRE-TEST-001,Data recoverable after fire exposure
+TEST-31-010,Crash Survivability,Post-Fire Immersion,TSO-C124a/C123a,Lab test,Memory survives water immersion after fire,Critical - Certification blocker,Pass,2025-09-16,FIRE-TEST-001,2.5 hour immersion post-fire
+TEST-31-011,Crash Survivability,Deep Sea Immersion (20000 ft),TSO-C124a/C123a,Lab test,Memory survives 20000ft for 30 days,Critical - Certification blocker,Pass,2025-09-20,IMMERSION-TEST-001,2°C water temperature
+TEST-31-012,Crash Survivability,ULB Function,TSO-C124a/C123a,Lab test,ULB operates 30+ days underwater,Critical - Certification blocker,Pass,2025-09-20,IMMERSION-TEST-001,37.5 kHz beacon verified
+TEST-31-013,EMI/EMC,Conducted Emissions,DO-160 Sec 21,Lab test,Emissions below Category B limits,Major,Pass,2025-09-22,EMC-TEST-001,All frequencies tested
+TEST-31-014,EMI/EMC,Radiated Emissions,DO-160 Sec 21,Lab test,Emissions below Category B limits,Major,Pass,2025-09-22,EMC-TEST-001,14 kHz to 18 GHz
+TEST-31-015,EMI/EMC,Conducted Susceptibility,DO-160 Sec 16-20,Lab test,No malfunction up to Category B levels,Major,Pass,2025-09-23,EMC-TEST-002,Injected interference test
+TEST-31-016,EMI/EMC,Radiated Susceptibility,DO-160 Sec 20,Lab test,No malfunction up to Category B levels,Major,Pass,2025-09-23,EMC-TEST-002,200 V/m field exposure
+TEST-31-017,FDR Functional,Parameter Recording Accuracy,ICAO Annex 6,Integration test,All 88 parameters recorded <1% error,Critical - Certification blocker,Pass,2025-09-25,FDR-FUNC-001,30-minute test recording
+TEST-31-018,FDR Functional,Sampling Rate Verification,ARINC 717,Integration test,All parameters sampled at spec rates ±5%,Critical - Certification blocker,Pass,2025-09-25,FDR-FUNC-001,Time-varying signal injection
+TEST-31-019,FDR Functional,ARINC 717 Format Compliance,ARINC 717,Analysis,100% frame structure compliance,Critical - Certification blocker,Pass,2025-09-25,FDR-FUNC-001,Frame/subframe validation
+TEST-31-020,FDR Functional,Time Synchronization Accuracy,Internal Spec,Integration test,UTC time ±10ms accuracy,Major,Pass,2025-09-26,FDR-FUNC-002,GPS reference comparison
+TEST-31-021,FDR Functional,Backup Power Duration,Internal Spec,Integration test,Recording continues 10+ min on backup,Critical - Certification blocker,Pass,2025-09-26,FDR-FUNC-002,Power interruption test (15 min)
+TEST-31-022,FDR Functional,Data Integrity (CRC),ARINC 717,Integration test,100% CRC validation on all frames,Critical - Certification blocker,Pass,2025-09-26,FDR-FUNC-002,8-hour continuous recording
+TEST-31-023,CVR Functional,Audio SNR (Boom Mics),ED-112,Lab test,SNR >40 dB for boom microphones,Critical - Certification blocker,Pass,2025-09-28,CVR-ACOU-001,CH1: 47dB CH2: 46dB
+TEST-31-024,CVR Functional,Audio SNR (Area Mics),ED-112,Lab test,SNR >35 dB for area microphones,Critical - Certification blocker,Pass,2025-09-28,CVR-ACOU-001,CH3: 43dB CH4: 45dB
+TEST-31-025,CVR Functional,Frequency Response,ED-112,Lab test,300Hz-8kHz ±3dB response,Critical - Certification blocker,Pass,2025-09-28,CVR-ACOU-001,All channels compliant
+TEST-31-026,CVR Functional,Total Harmonic Distortion,ED-112,Lab test,THD <1% for all channels,Major,Pass,2025-09-28,CVR-ACOU-001,Max THD: 0.8% (CH3)
+TEST-31-027,CVR Functional,Speech Intelligibility,ED-112,Listening test,Intelligibility ≥80% all channels,Critical - Certification blocker,Pass,2025-09-29,CVR-INTELL-001,"CH1:92%, CH2:90%, CH3:87%, CH4:89%"
+TEST-31-028,CVR Functional,Erase Inhibit Function,TSO-C123a,Integration test,Erase inhibit engages <100ms after trigger,Critical - Certification blocker,Pass,2025-09-29,CVR-FUNC-001,Crash sensor simulation
+TEST-31-029,CVR Functional,Recording Duration,ICAO Annex 6,Integration test,Minimum 2-hour capacity verified,Critical - Certification blocker,Pass,2025-09-29,CVR-FUNC-001,Actual: 4 hours capacity
+TEST-31-030,Software,DO-178C Requirements Coverage,DO-178C DAL-B,Analysis,100% requirements coverage,Critical - Certification blocker,Pass,2025-10-01,SW-VER-001,All requirements traced to tests
+TEST-31-031,Software,MC/DC Structural Coverage,DO-178C DAL-B,Analysis,100% MC/DC coverage,Critical - Certification blocker,Pass,2025-10-01,SW-VER-001,DAL-B coverage achieved
+TEST-31-032,Software,Robustness Testing,DO-178C DAL-B,Integration test,No unhandled exceptions or crashes,Critical - Certification blocker,Pass,2025-10-02,SW-VER-002,Fault injection testing
+TEST-31-033,Tool Qualification,Download Tool Verification,DO-178C TQL-5,Integration test,Checksums match on repeat downloads,Critical - Tool qualification,Pass,2025-10-03,TOOL-QUAL-001,10 repeat downloads tested
+TEST-31-034,Tool Qualification,Tool Operational Requirements,DO-178C TQL-5,Review,All requirements documented,Critical - Tool qualification,Pass,2025-10-03,TOOL-QUAL-001,TOR document approved
+TEST-31-035,System,End-to-End Recording,Integration,Iron bird test,Complete flight profile recorded,Critical - System validation,Pass,2025-10-05,SYSTEM-TEST-001,2-hour simulated flight
+TEST-31-036,System,Download and Archive,Integration,Procedure test,Complete custody chain documented,Major,Pass,2025-10-05,SYSTEM-TEST-001,Chain-of-custody validated
+TEST-31-037,System,DPP Integration,Integration,System test,DPP entry created with all hashes,Major,Pass,2025-10-05,SYSTEM-TEST-001,DPP linkage verified
+TEST-31-038,Regression,Post-Modification Verification,All,Subset test,No regression after SW update,Critical - Modification approval,Pending,TBD,N/A,To be performed after next SW update

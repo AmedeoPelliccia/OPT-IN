@@ -1,0 +1,31 @@
+Requirement_ID,Regulation_Standard,Description,Design_Element,Verification_Method,Status,Evidence_Reference,Remarks
+REQ-31-001,ICAO Annex 6,FDR mandatory parameter recording,FDR parameter mapping per ARINC 717,Test + Analysis,Compliant,DATA_31-02-02,88 mandatory parameters implemented
+REQ-31-002,ICAO Annex 6,CVR minimum 2-hour recording duration,CVR memory capacity 2+ hours,Test,Compliant,REC-QUAL-31-001,"Qualified for 2h continuous, actual capacity 4h"
+REQ-31-003,FAA 14 CFR 121.343,FDR crash survivability,Crash-protected memory module,Test per DO-160,Compliant,REC-ENV-31-001,DO-160 Section 7 shock test passed
+REQ-31-004,FAA 14 CFR 121.359,CVR crash survivability,Crash-protected memory module,Test per DO-160,Compliant,REC-ENV-31-001,DO-160 Section 7 shock test passed
+REQ-31-005,TSO-C124a,FDR environmental qualification,FDR unit DO-160 compliance,Test,Compliant,REC-ENV-31-001,All DO-160 categories tested
+REQ-31-006,TSO-C123a,CVR environmental qualification,CVR unit DO-160 compliance,Test,Compliant,REC-ENV-31-001,All DO-160 categories tested
+REQ-31-007,EASA CS 25.1459,FDR installation requirements,FDR installation per AMM Chapter 31,Inspection,Compliant,MAINT-PLAN-31-001,Installation procedure verified
+REQ-31-008,EASA CS 25.1457,CVR installation requirements,CVR installation per AMM Chapter 31,Inspection,Compliant,MAINT-PLAN-31-001,Installation procedure verified
+REQ-31-009,ARINC 717,FDR data format compliance,ARINC 717 frame structure,Analysis + Test,Compliant,FDR-SPEC-31-001,12-bit word format validated
+REQ-31-010,ARINC 717,FDR parameter encoding,ARINC 717 parameter encoding rules,Analysis + Test,Compliant,FDR-SPEC-31-001,All parameters encoded per spec
+REQ-31-011,ED-112,CVR audio quality minimum SNR,CVR microphone SNR ≥ 40 dB,Test,Compliant,DATA_31-03-02,Measured SNR: 45-48 dB across channels
+REQ-31-012,ED-112,CVR speech intelligibility,CVR intelligibility score ≥ 80%,Test,Compliant,DATA_31-03-02,Intelligibility score: 85-92% in acoustic tests
+REQ-31-013,DO-160,Temperature operating range,FDR/CVR operate -55°C to +70°C,Test,Compliant,REC-ENV-31-001,DO-160 Section 4 & 5 passed
+REQ-31-014,DO-160,Altitude operating range,FDR/CVR operate up to 55000 ft,Test,Compliant,REC-ENV-31-001,DO-160 Section 4.6 passed
+REQ-31-015,DO-160,Vibration resistance,FDR/CVR vibration per DO-160 Cat U,Test,Compliant,REC-ENV-31-001,DO-160 Section 8 passed
+REQ-31-016,DO-160,EMI/EMC compliance,FDR/CVR EMI/EMC per DO-160 Cat B,Test,Compliant,REC-ENV-31-001,DO-160 Sections 15-25 passed
+REQ-31-017,DO-178C,FDR software assurance,FDR software DAL-B per DO-178C,Analysis + Review,Compliant,REC-SAS-31-001,Software baseline 1.2.3 certified
+REQ-31-018,DO-178C,CVR software assurance,CVR software DAL-B per DO-178C,Analysis + Review,Compliant,REC-SAS-31-001,Software baseline 1.2.3 certified
+REQ-31-019,DO-254,FDR hardware assurance,FDR FPGA design DAL-B per DO-254,Analysis + Review,Compliant,REC-HAS-31-001,FPGA design verified
+REQ-31-020,Internal Policy,Data extraction tool qualification,Tool qualified per DO-178C TQL-5,Analysis + Test,Compliant,TOOL-QUAL-31-001,FDR-Extract v2.0.1 qualified
+REQ-31-021,Internal Policy,SHA-256 hash for all downloads,Manifest includes SHA-256 for all files,Inspection,Compliant,PROC_31-02-01,Enforced in download procedure
+REQ-31-022,Internal Policy,Chain-of-custody documentation,Download records include custody log,Inspection,Compliant,PROC_31-02-01,Template includes custody section
+REQ-31-023,Internal Policy,DPP integration,All downloads linked to DPP entries,Inspection,Compliant,PROC_31-04-01,DPP linkage mandatory
+REQ-31-024,Internal Policy,UTC time synchronization,FDR/CVR time sync to GPS/GNSS,Test,Compliant,FDR-SPEC-31-001,Time accuracy ±10ms
+REQ-31-025,FAA 14 CFR 121.344,FDR parameter accuracy,Parameter accuracy per Table 1,Analysis + Calibration,Compliant,DATA_31-02-02,Accuracy verified for all parameters
+REQ-31-026,ICAO Annex 6,CVR cockpit area microphone,CAM records cockpit ambient audio,Test,Compliant,DESC_31-03-01,4 channels: CAP/FO boom + 2 area mics
+REQ-31-027,Internal Policy,Data retention minimum 5 years,Archived data retained ≥ 5 years,Inspection,Compliant,DATA_31-04-02,Archival system configured for 7-year retention
+REQ-31-028,Internal Policy,Access control for CVR data,CVR access restricted per policy,Inspection,Compliant,DATA_31-04-02,Role-based access control implemented
+REQ-31-029,EASA AMC 25.1457,CVR erase inhibit,CVR auto-erase disabled post-incident,Analysis + Test,Compliant,CVR-SPEC-31-001,Erase inhibit via crash sensor input
+REQ-31-030,Internal Policy,Backup power for recording,FDR/CVR backup power ≥ 10 min,Test,Compliant,REC-QUAL-31-001,Backup duration tested: 15 minutes

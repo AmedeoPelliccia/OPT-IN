@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "CVR Channel and Acoustic Specification Schema",
+  "description": "Schema for cockpit voice recorder channel specifications and acoustic testing",
+  "type": "object",
+  "required": [
+    "channel_id",
+    "channel_type",
+    "audio_format"
+  ],
+  "properties": {
+    "channel_id": {
+      "type": "string",
+      "description": "Unique channel identifier (e.g., CAP, FO, OBS, AREA)"
+    },
+    "channel_type": {
+      "type": "string",
+      "enum": ["cockpit_area_microphone", "boom_microphone", "radio_transmission", "aux_audio"],
+      "description": "Type of audio channel"
+    },
+    "audio_format": {
+      "type": "object",
+      "required": ["encoding", "sample_rate_khz", "bit_depth"],
+      "properties": {
+        "encoding": {
+          "type": "string",
+          "enum": ["PCM", "ADPCM", "μ-law", "A-law"],
+          "description": "Audio encoding format"
+        },
+        "sample_rate_khz": {
+          "type": "number",
+          "description": "Sampling rate in kHz"
+        },
+        "bit_depth": {
+          "type": "integer",
+          "description": "Bit depth (8, 16, 24, etc.)"
+        }
+      }
+    },
+    "microphone_spec": {
+      "type": "object",
+      "properties": {
+        "part_number": {
+          "type": "string",
+          "description": "Microphone part number"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "Microphone serial number"
+        },
+        "calibration_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Last calibration date"
+        },
+        "sensitivity_db": {
+          "type": "number",
+          "description": "Microphone sensitivity in dB"
+        },
+        "frequency_response": {
+          "type": "object",
+          "properties": {
+            "min_hz": {"type": "number"},
+            "max_hz": {"type": "number"}
+          }
+        }
+      }
+    },
+    "acoustic_tests": {
+      "type": "object",
+      "properties": {
+        "snr_db": {
+          "type": "number",
+          "description": "Signal-to-noise ratio in dB"
+        },
+        "thd_percent": {
+          "type": "number",
+          "description": "Total harmonic distortion percentage"
+        },
+        "intelligibility_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Speech intelligibility score (0-100)"
+        },
+        "test_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "test_certificate": {
+          "type": "string",
+          "description": "Test certificate reference"
+        }
+      }
+    },
+    "recording_duration_hours": {
+      "type": "number",
+      "minimum": 2,
+      "description": "Minimum recording duration in hours (minimum 2 per regulations)"
+    },
+    "ed112_compliance": {
+      "type": "boolean",
+      "description": "Compliance with EUROCAE ED-112 standard"
+    },
+    "cockpit_position": {
+      "type": "string",
+      "description": "Physical location in cockpit (e.g., 'overhead panel', 'captain headset')"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional notes"
+    }
+  }
+}

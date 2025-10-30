@@ -1,0 +1,69 @@
+schema_version: "1.1"
+id: "[UNIQUE_DOC_ID]"
+document:
+  type: "[DESC|PROC|DATA|TESTPLAN|EXAMPLE]"
+  title: "[Document Title]"
+  revision: "[X.Y.Z]"
+  effective_date: "[YYYY-MM-DD]"
+  chapter: "ATA 31"
+  section: "[Section Name]"
+effectivity:
+  msn: "[MSN range or ALL]"
+  configuration: "[Configuration ID or ALL]"
+  scope: "[Brief effectivity description]"
+  mod_status: "[List of applicable modifications]"
+safety:
+  criticality: "[Critical|High|Medium|Low|Informational]"
+  hazards:
+    - "[Hazard description 1]"
+    - "[Hazard description 2]"
+  safety_impact: "[Catastrophic|Hazardous|Major|Minor|No_Safety_Effect]"
+  training_required: [true|false]
+  qualification_required: "[Personnel qualification requirements]"
+approvals:
+  - authority: "[Approving Authority]"
+    name: "[Approver Name]"
+    status: "[Released|Approved|Under Review]"
+    date: "[YYYY-MM-DD]"
+    signature: "[Digital signature or reference]"
+traceability:
+  source_documents:
+    - "[Source document reference 1]"
+    - "[Source document reference 2]"
+  crossrefs:
+    - "[ATA-XX reference 1]"
+    - "[ATA-XX reference 2]"
+  requirements:
+    - "[Requirement ID 1]"
+    - "[Requirement ID 2]"
+  regulatory_basis:
+    - "[ICAO Annex 6]"
+    - "[FAA 14 CFR Part XX]"
+    - "[TSO-CXXX]"
+    - "[DO-XXX]"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum_value: "[64-character SHA-256 hash or PLACEHOLDER for initial draft]"
+  last_validated: "[YYYY-MM-DD]"
+chain_of_custody:
+  applicable: [true|false]
+  custody_log:
+    - timestamp: "[ISO 8601 timestamp]"
+      actor: "[Person name]"
+      action: "[extracted|transferred|sealed|archived|accessed]"
+      location: "[Location]"
+      seal_number: "[Seal ID if applicable]"
+privacy:
+  contains_sensitive_data: [true|false]
+  access_level: "[public|restricted|confidential|investigator_only]"
+  cvr_audio: [true|false]
+  retention_period: "[5_years|10_years|permanent]"
+dpp_integration:
+  dpp_entry_id: "[DPP-XXX-YYYYMMDD-XXX or N/A]"
+  dpp_url: "[https://dpp.ampel360.com/entry/[id] or N/A]"
+  artifacts_linked: [true|false]
+revision_history:
+  - revision: "[X.Y.Z]"
+    date: "[YYYY-MM-DD]"
+    author: "[Author name]"
+    changes: "[Description of changes]"

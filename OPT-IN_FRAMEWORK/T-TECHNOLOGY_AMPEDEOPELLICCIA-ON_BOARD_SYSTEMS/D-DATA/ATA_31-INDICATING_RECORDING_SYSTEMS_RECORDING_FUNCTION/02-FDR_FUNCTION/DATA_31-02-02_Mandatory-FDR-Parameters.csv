@@ -1,0 +1,86 @@
+Parameter_ID,ARINC_Ref,Description,Units,Sampling_Rate_Hz,Recording_Resolution,Data_Source,Parameter_Type,ICAO_Requirement,Remarks
+ALT_PRESS,ARINC-706,Pressure Altitude,ft,1,5 ft,Air Data Computer,mandatory,ICAO Annex 6 Table A1-1,Barometric altitude reference
+IAS,ARINC-706,Indicated Airspeed,kn,1,1 kt,Air Data Computer,mandatory,ICAO Annex 6 Table A1-1,Calibrated airspeed
+PITCH_ANGLE,ARINC-429,Aircraft Pitch Angle,deg,8,0.1 deg,AHRS / IRS,mandatory,ICAO Annex 6 Table A1-1,Attitude reference
+ROLL_ANGLE,ARINC-429,Aircraft Roll Angle,deg,8,0.1 deg,AHRS / IRS,mandatory,ICAO Annex 6 Table A1-1,Attitude reference
+MAG_HEADING,ARINC-429,Magnetic Heading,deg,1,0.5 deg,AHRS / IRS,mandatory,ICAO Annex 6 Table A1-1,Magnetic north reference
+VERT_ACCEL,ARINC-429,Normal Acceleration,g,8,0.01 g,AHRS / IRS,mandatory,ICAO Annex 6 Table A1-1,Vertical axis body acceleration
+LAT_ACCEL,ARINC-429,Lateral Acceleration,g,8,0.01 g,AHRS / IRS,mandatory,ICAO Annex 6 Table A1-1,Lateral axis body acceleration
+LONG_ACCEL,ARINC-429,Longitudinal Acceleration,g,8,0.01 g,AHRS / IRS,mandatory,ICAO Annex 6 Table A1-1,Longitudinal axis body acceleration
+PITCH_TRIM,ARINC-429,Pitch Trim Position,deg,1,0.1 deg,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Stabilizer trim
+AILERON_LEFT,ARINC-429,Left Aileron Position,deg,8,0.5 deg,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Left aileron surface angle
+AILERON_RIGHT,ARINC-429,Right Aileron Position,deg,8,0.5 deg,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Right aileron surface angle
+ELEVATOR_LEFT,ARINC-429,Left Elevator Position,deg,8,0.5 deg,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Left elevator surface angle
+ELEVATOR_RIGHT,ARINC-429,Right Elevator Position,deg,8,0.5 deg,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Right elevator surface angle
+RUDDER_POS,ARINC-429,Rudder Position,deg,8,0.5 deg,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Rudder surface angle
+SPOILER_LEFT,ARINC-429,Left Spoiler Position,%,4,1 %,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Speedbrake/spoiler left
+SPOILER_RIGHT,ARINC-429,Right Spoiler Position,%,4,1 %,Flight Control Computer,mandatory,ICAO Annex 6 Table A1-1,Speedbrake/spoiler right
+FLAP_POS,ARINC-429,Flap Position,deg,1,0.5 deg,Flap Control Unit,mandatory,ICAO Annex 6 Table A1-1,Leading/trailing edge flaps
+SLAT_POS,ARINC-429,Slat Position,deg,1,0.5 deg,Slat Control Unit,mandatory,ICAO Annex 6 Table A1-1,Leading edge slats
+ENG_N1_1,ARINC-429,Engine 1 N1,%,1,0.1 %,Engine 1 FADEC,mandatory,ICAO Annex 6 Table A1-1,Low pressure spool speed
+ENG_N1_2,ARINC-429,Engine 2 N1,%,1,0.1 %,Engine 2 FADEC,mandatory,ICAO Annex 6 Table A1-1,Low pressure spool speed
+ENG_N2_1,ARINC-429,Engine 1 N2,%,1,0.1 %,Engine 1 FADEC,mandatory,ICAO Annex 6 Table A1-1,High pressure spool speed
+ENG_N2_2,ARINC-429,Engine 2 N2,%,1,0.1 %,Engine 2 FADEC,mandatory,ICAO Annex 6 Table A1-1,High pressure spool speed
+ENG_EPR_1,ARINC-429,Engine 1 EPR,ratio,1,0.01,Engine 1 FADEC,mandatory,ICAO Annex 6 Table A1-1,Engine pressure ratio
+ENG_EPR_2,ARINC-429,Engine 2 EPR,ratio,1,0.01,Engine 2 FADEC,mandatory,ICAO Annex 6 Table A1-1,Engine pressure ratio
+ENG_EGT_1,ARINC-429,Engine 1 EGT,°C,1,1 °C,Engine 1 FADEC,mandatory,ICAO Annex 6 Table A1-1,Exhaust gas temperature
+ENG_EGT_2,ARINC-429,Engine 2 EGT,°C,1,1 °C,Engine 2 FADEC,mandatory,ICAO Annex 6 Table A1-1,Exhaust gas temperature
+FUEL_FLOW_1,ARINC-429,Engine 1 Fuel Flow,kg/h,1,10 kg/h,Engine 1 FADEC,mandatory,ICAO Annex 6 Table A1-1,Fuel consumption rate
+FUEL_FLOW_2,ARINC-429,Engine 2 Fuel Flow,kg/h,1,10 kg/h,Engine 2 FADEC,mandatory,ICAO Annex 6 Table A1-1,Fuel consumption rate
+THRUST_REV_1,Discrete,Engine 1 Thrust Reverser,state,1,On/Off,Engine 1 System,mandatory,ICAO Annex 6 Table A1-1,Reverser deployed state
+THRUST_REV_2,Discrete,Engine 2 Thrust Reverser,state,1,On/Off,Engine 2 System,mandatory,ICAO Annex 6 Table A1-1,Reverser deployed state
+GPS_LAT,ARINC-429,GPS Latitude,deg,1,0.0001 deg,GPS/GNSS Receiver,mandatory,ICAO Annex 6 Table A1-1,WGS-84 latitude
+GPS_LON,ARINC-429,GPS Longitude,deg,1,0.0001 deg,GPS/GNSS Receiver,mandatory,ICAO Annex 6 Table A1-1,WGS-84 longitude
+GPS_ALT,ARINC-429,GPS Altitude,ft,1,5 ft,GPS/GNSS Receiver,mandatory,ICAO Annex 6 Table A1-1,GPS altitude (HAE)
+GROUNDSPEED,ARINC-429,Groundspeed,kn,1,1 kt,GPS/GNSS Receiver,mandatory,ICAO Annex 6 Table A1-1,Ground speed over earth
+TRACK_ANGLE,ARINC-429,Track Angle,deg,1,0.5 deg,GPS/GNSS Receiver,mandatory,ICAO Annex 6 Table A1-1,True ground track
+VERT_SPEED,ARINC-706,Vertical Speed,ft/min,1,50 ft/min,Air Data Computer,mandatory,ICAO Annex 6 Table A1-1,Rate of climb/descent
+AOA,ARINC-429,Angle of Attack,deg,4,0.1 deg,AOA Sensor,mandatory,ICAO Annex 6 Table A1-1,Angle of attack (main probe)
+MACH_NUMBER,ARINC-706,Mach Number,Mach,1,0.01,Air Data Computer,mandatory,ICAO Annex 6 Table A1-1,True Mach number
+TAT,ARINC-706,Total Air Temperature,°C,1,1 °C,Air Data Computer,mandatory,ICAO Annex 6 Table A1-1,Total air temperature
+RADIO_ALT,ARINC-429,Radio Altitude,ft,4,1 ft,Radio Altimeter,mandatory,ICAO Annex 6 Table A1-1,Height above ground
+STICK_CAPT_PITCH,ARINC-429,Captain Pitch Input,deg,8,0.1 deg,Sidestick Sensor,mandatory,ICAO Annex 6 Table A1-1,Captain sidestick pitch
+STICK_CAPT_ROLL,ARINC-429,Captain Roll Input,deg,8,0.1 deg,Sidestick Sensor,mandatory,ICAO Annex 6 Table A1-1,Captain sidestick roll
+STICK_FO_PITCH,ARINC-429,First Officer Pitch Input,deg,8,0.1 deg,Sidestick Sensor,mandatory,ICAO Annex 6 Table A1-1,FO sidestick pitch
+STICK_FO_ROLL,ARINC-429,First Officer Roll Input,deg,8,0.1 deg,Sidestick Sensor,mandatory,ICAO Annex 6 Table A1-1,FO sidestick roll
+RUDDER_PEDAL_CAPT,ARINC-429,Captain Rudder Pedal,%,4,1 %,Rudder Pedal Sensor,mandatory,ICAO Annex 6 Table A1-1,Captain rudder pedal position
+RUDDER_PEDAL_FO,ARINC-429,First Officer Rudder Pedal,%,4,1 %,Rudder Pedal Sensor,mandatory,ICAO Annex 6 Table A1-1,FO rudder pedal position
+AP_ENGAGED,Discrete,Autopilot Engaged,state,1,On/Off,Autopilot Computer,mandatory,ICAO Annex 6 Table A1-1,Autopilot engagement status
+AP_MODE,ARINC-429,Autopilot Mode,enum,1,Mode ID,Autopilot Computer,mandatory,ICAO Annex 6 Table A1-1,Selected autopilot mode
+AT_ENGAGED,Discrete,Autothrottle Engaged,state,1,On/Off,Autothrottle Computer,mandatory,ICAO Annex 6 Table A1-1,Autothrottle engagement
+VNAV_MODE,Discrete,VNAV Mode,state,1,On/Off,FMS,optional,N/A,Vertical navigation mode
+LNAV_MODE,Discrete,LNAV Mode,state,1,On/Off,FMS,optional,N/A,Lateral navigation mode
+GEAR_DOWN,Discrete,Landing Gear Down,state,1,Up/Down,Landing Gear System,mandatory,ICAO Annex 6 Table A1-1,Gear down and locked
+GEAR_WOW,Discrete,Weight on Wheels,state,4,On/Off,Landing Gear System,mandatory,ICAO Annex 6 Table A1-1,Weight on wheels switch
+BRAKE_PRESS_L,ARINC-429,Left Brake Pressure,psi,4,10 psi,Brake System,mandatory,ICAO Annex 6 Table A1-1,Left main gear brake pressure
+BRAKE_PRESS_R,ARINC-429,Right Brake Pressure,psi,4,10 psi,Brake System,mandatory,ICAO Annex 6 Table A1-1,Right main gear brake pressure
+MASTER_WARNING,Discrete,Master Warning,state,1,On/Off,Crew Alerting System,mandatory,ICAO Annex 6 Table A1-1,Master warning light
+MASTER_CAUTION,Discrete,Master Caution,state,1,On/Off,Crew Alerting System,mandatory,ICAO Annex 6 Table A1-1,Master caution light
+STALL_WARNING,Discrete,Stall Warning,state,4,On/Off,Stall Warning System,mandatory,ICAO Annex 6 Table A1-1,Stickshaker or stall warning
+OVERSPEED_WARNING,Discrete,Overspeed Warning,state,4,On/Off,Air Data Computer,mandatory,ICAO Annex 6 Table A1-1,Overspeed warning
+GPWS_WARNING,Discrete,GPWS Warning,state,4,On/Off,GPWS,mandatory,ICAO Annex 6 Table A1-1,Ground proximity warning
+TCAS_RA,Discrete,TCAS Resolution Advisory,state,4,On/Off,TCAS,mandatory,ICAO Annex 6 Table A1-1,TCAS RA active
+WINDSHEAR_WARNING,Discrete,Windshear Warning,state,4,On/Off,Windshear System,mandatory,ICAO Annex 6 Table A1-1,Windshear alert
+FIRE_ENG_1,Discrete,Engine 1 Fire Warning,state,1,On/Off,Fire Detection System,mandatory,ICAO Annex 6 Table A1-1,Engine fire warning
+FIRE_ENG_2,Discrete,Engine 2 Fire Warning,state,1,On/Off,Fire Detection System,mandatory,ICAO Annex 6 Table A1-1,Engine fire warning
+HYDRAULIC_PRESS_1,ARINC-429,Hydraulic System 1 Pressure,psi,1,50 psi,Hydraulic System,optional,N/A,Primary hydraulic system
+HYDRAULIC_PRESS_2,ARINC-429,Hydraulic System 2 Pressure,psi,1,50 psi,Hydraulic System,optional,N/A,Backup hydraulic system
+FUEL_QTY_TOTAL,ARINC-429,Total Fuel Quantity,kg,1,10 kg,Fuel Management System,mandatory,ICAO Annex 6 Table A1-1,Total usable fuel
+CABIN_ALT,ARINC-429,Cabin Altitude,ft,1,50 ft,Cabin Pressure Controller,optional,N/A,Cabin pressure altitude
+CABIN_PRESS_DIFF,ARINC-429,Cabin Differential Pressure,psi,1,0.1 psi,Cabin Pressure Controller,optional,N/A,Cabin differential pressure
+ICE_DETECTION,Discrete,Ice Detection,state,1,On/Off,Ice Detection System,optional,N/A,Icing condition detected
+ANTI_ICE_ENG_1,Discrete,Engine 1 Anti-Ice,state,1,On/Off,Anti-Ice System,optional,N/A,Engine anti-ice on
+ANTI_ICE_ENG_2,Discrete,Engine 2 Anti-Ice,state,1,On/Off,Anti-Ice System,optional,N/A,Engine anti-ice on
+ANTI_ICE_WING,Discrete,Wing Anti-Ice,state,1,On/Off,Anti-Ice System,optional,N/A,Wing anti-ice on
+NAV_FREQ_1,ARINC-429,NAV 1 Frequency,MHz,0.25,0.01 MHz,NAV Radio,optional,N/A,NAV radio 1 tuned frequency
+NAV_FREQ_2,ARINC-429,NAV 2 Frequency,MHz,0.25,0.01 MHz,NAV Radio,optional,N/A,NAV radio 2 tuned frequency
+COM_FREQ_1,ARINC-429,COM 1 Frequency,MHz,0.25,0.01 MHz,COM Radio,optional,N/A,COM radio 1 tuned frequency
+COM_FREQ_2,ARINC-429,COM 2 Frequency,MHz,0.25,0.01 MHz,COM Radio,optional,N/A,COM radio 2 tuned frequency
+FMS_SELECTED_ALT,ARINC-429,Selected Altitude,ft,1,100 ft,FMS,optional,N/A,Altitude selector setting
+FMS_SELECTED_SPD,ARINC-429,Selected Speed,kn,1,1 kt,FMS,optional,N/A,Speed selector setting
+FMS_SELECTED_HDG,ARINC-429,Selected Heading,deg,1,1 deg,FMS,optional,N/A,Heading selector setting
+FMS_SELECTED_VS,ARINC-429,Selected Vertical Speed,ft/min,1,100 ft/min,FMS,optional,N/A,Vertical speed selector
+APU_STATUS,Discrete,APU Running,state,1,On/Off,APU System,optional,N/A,APU operating status
+BATTERY_VOLTAGE,ARINC-429,Main Battery Voltage,V,0.25,0.1 V,Electrical System,optional,N/A,Battery bus voltage
+GEN_1_ONLINE,Discrete,Generator 1 Online,state,1,On/Off,Electrical System,optional,N/A,Generator 1 on bus
+GEN_2_ONLINE,Discrete,Generator 2 Online,state,1,On/Off,Electrical System,optional,N/A,Generator 2 on bus
