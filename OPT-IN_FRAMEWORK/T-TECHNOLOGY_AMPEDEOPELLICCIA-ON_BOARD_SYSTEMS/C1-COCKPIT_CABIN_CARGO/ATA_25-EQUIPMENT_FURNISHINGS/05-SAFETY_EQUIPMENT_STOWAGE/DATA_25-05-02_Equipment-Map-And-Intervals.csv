@@ -1,0 +1,11 @@
+Location,Equipment_Type,Part_Number,Quantity,Inspection_Interval_FH,Notes
+Under_Seat_Row_1-10,Life_Vest,LV-001-ADULT,10,500,"Check for damage and inflation valve"
+Under_Seat_Row_11-30,Life_Vest,LV-001-ADULT,20,500,"Economy class seats"
+Attendant_Station_FWD,Flashlight,FL-002,2,250,"Check battery and operation"
+Attendant_Station_AFT,Flashlight,FL-002,2,250,"Check battery and operation"
+Galley_FWD,Fire_Extinguisher,FE-HALON-1211,1,1000,"Pressure check and weight"
+Lavatory_FWD,Fire_Extinguisher,FE-HALON-1211,1,1000,"Pressure check and weight"
+Attendant_Station_FWD,First_Aid_Kit,FAK-001,1,500,"Check contents and expiry dates"
+Attendant_Station_AFT,Megaphone,MG-001,1,500,"Battery check and function test"
+PSU_All_Rows,Oxygen_Mask,OXY-CHEM-GEN,1_per_seat,Visual_Each_Flight,"See ATA 35 for detailed inspection"
+Overhead_Bins,Safety_Card,SC-AMPEL360,1_per_seat,Visual_Each_Flight,"Check for damage and correct revision"

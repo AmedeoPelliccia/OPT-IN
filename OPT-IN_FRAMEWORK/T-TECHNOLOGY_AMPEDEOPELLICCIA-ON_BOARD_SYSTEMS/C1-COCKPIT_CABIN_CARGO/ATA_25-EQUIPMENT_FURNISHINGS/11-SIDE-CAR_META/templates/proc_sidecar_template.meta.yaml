@@ -1,0 +1,76 @@
+schema_version: "1.1"
+id: "[PROC_ID]"
+document:
+  type: "PROC"
+  title: "[Procedure Title]"
+  revision: "[X.Y.Z]"
+  effective_date: "[YYYY-MM-DD]"
+  chapter: "ATA 25"
+  section: "[Section Name]"
+  procedure_type: "[Installation|Removal|Inspection|Test|Repair|Maintenance]"
+effectivity:
+  msn: "[MSN range or ALL]"
+  configuration: "[Configuration ID or ALL]"
+  lopa: "[LOPA version or TBD]"
+  equipment_pn: "[Part number or ALL]"
+safety:
+  criticality: "[Critical|High|Medium|Low]"
+  hazards:
+    - hazard: "[Hazard description]"
+      mitigation: "[Mitigation measure]"
+  safety_equipment_required:
+    - "[Safety glasses]"
+    - "[Gloves]"
+    - "[Other PPE]"
+  training_required: true
+  qualification_required: "[Certification or training requirement]"
+procedure:
+  prerequisites:
+    - "[Prerequisite 1]"
+    - "[Prerequisite 2]"
+  tools_required:
+    - tool: "[Tool name]"
+      calibration_required: [true|false]
+      calibration_interval: "[Interval if applicable]"
+  consumables:
+    - "[Consumable 1]"
+    - "[Consumable 2]"
+  estimated_time_hours: [X.X]
+  personnel_required: [X]
+acceptance_criteria:
+  - criterion: "[Acceptance criterion 1]"
+    measurement: "[Measurement method]"
+    limit: "[Limit value with unit]"
+  - criterion: "[Acceptance criterion 2]"
+    measurement: "[Measurement method]"
+    limit: "[Limit value with unit]"
+approvals:
+  - authority: "[Engineering Authority]"
+    name: "[Approver Name]"
+    status: "Released"
+    date: "[YYYY-MM-DD]"
+  - authority: "[Quality Assurance]"
+    name: "[Approver Name]"
+    status: "Approved"
+    date: "[YYYY-MM-DD]"
+traceability:
+  source_documents:
+    - "[Manufacturer's manual reference]"
+    - "[Engineering order reference]"
+  crossrefs:
+    - "[Related PROC reference]"
+    - "[Related DATA reference]"
+  regulatory_basis:
+    - "[14 CFR 25.XXX]"
+  data_dependencies:
+    - file: "[DATA file name]"
+      description: "[Description of data dependency]"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "[64-character SHA-256 hash of procedure document]"
+  last_validated: "[YYYY-MM-DD]"
+revision_history:
+  - revision: "[X.Y.Z]"
+    date: "[YYYY-MM-DD]"
+    author: "[Author name]"
+    changes: "[Description of changes]"

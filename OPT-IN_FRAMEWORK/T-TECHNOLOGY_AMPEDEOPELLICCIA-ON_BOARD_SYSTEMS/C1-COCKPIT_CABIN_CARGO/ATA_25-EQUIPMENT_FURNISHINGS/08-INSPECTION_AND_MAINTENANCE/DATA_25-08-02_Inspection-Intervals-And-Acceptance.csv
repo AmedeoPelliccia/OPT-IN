@@ -1,0 +1,11 @@
+Equipment_Type,Inspection_Type,Interval_FH,Interval_Months,Acceptance_Criteria,Reference_Procedure,Notes
+Passenger_Seat,GVI,500,12,"No structural damage; cushions serviceable; restraints serviceable",PROC_25-08-01,"Visual inspection"
+Passenger_Seat,DVI,3000,36,"Torque within spec; bonding ≤ 2.5 mΩ; no corrosion",PROC_25-08-01,"Remove cushions; torque check"
+Crew_Seat,GVI,250,6,"Restraint serviceable; structure intact; recline functional",PROC_25-08-01,"More frequent due to critical safety"
+Galley_Monument,GVI,500,12,"No water/waste leaks; doors functional; electrical operational",PROC_25-08-01,"Visual and functional check"
+Galley_Monument,DVI,3000,36,"Attach points secure; bonding ≤ 2.5 mΩ; leak test passed",PROC_25-08-01,"Detailed inspection of structure"
+Lavatory_Monument,GVI,500,12,"No leaks; door and lock functional; lighting operational",PROC_25-08-01,"Visual and functional check"
+Overhead_Bin,GVI,1000,12,"Latch functional; no damage; damper operational",PROC_25-08-01,"Visual inspection"
+Overhead_Bin,DVI,6000,36,"Deflection within limits; attach points secure; no cracks",PROC_25-08-01,"Load test and detailed inspection"
+Restraint_Belt,GVI,500,12,"No cuts, fraying, or damage; buckle functional",PROC_25-02-03,"Belt inspection procedure"
+Restraint_Belt,DVI,3000,36,"Anchor torque within spec; webbing width ≥ 2 inches",PROC_25-02-03,"Detailed restraint inspection"

@@ -1,0 +1,8 @@
+Inspection_ID,Date,Equipment_Type,Location,Inspector,Result,Findings
+INS-25-2025-001,2025-01-10,Passenger_Seat,Row_25_Seat_A,John_Smith_AMT-123456,Serviceable,"All criteria pass"
+INS-25-2025-002,2025-01-10,Passenger_Seat,Row_25_Seat_B,John_Smith_AMT-123456,Serviceable,"Minor cushion wear; acceptable"
+INS-25-2025-003,2025-01-12,Galley_Monument,FWD_Galley,Jane_Doe_AMT-789012,Serviceable,"No leaks; electrical functional"
+INS-25-2025-004,2025-01-15,Overhead_Bin,Row_12_OH_Bin,John_Smith_AMT-123456,Serviceable,"Latch functional; damper operational"
+INS-25-2025-005,2025-02-20,Passenger_Seat,Row_18_Seat_C,Jane_Doe_AMT-789012,Conditional,"Seat belt webbing shows minor fading; monitor at next inspection"
+INS-25-2025-006,2025-03-05,Lavatory_Monument,AFT_Lavatory,John_Smith_AMT-123456,Unserviceable,"Water leak at drain; NCR-25-2025-002 initiated"
+INS-25-2025-007,2025-03-10,Overhead_Bin,Row_8_OH_Bin,Jane_Doe_AMT-789012,Unserviceable,"Deflection exceeds limit; NCR-25-2025-003 initiated"

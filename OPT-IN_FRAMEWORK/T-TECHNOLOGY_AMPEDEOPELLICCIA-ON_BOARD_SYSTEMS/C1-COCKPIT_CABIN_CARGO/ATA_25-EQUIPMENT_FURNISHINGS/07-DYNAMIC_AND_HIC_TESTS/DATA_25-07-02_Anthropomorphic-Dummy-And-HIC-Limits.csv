@@ -1,0 +1,7 @@
+Test_Type,ATD_Type,Position,HIC15_Value,HIC15_Limit,HIC36_Value,HIC36_Limit,Chest_g,Chest_Limit_g,Femur_N,Femur_Limit_N,Lumbar_N,Lumbar_Limit_N,Result
+Forward_16g,Hybrid_III_50th_Male,Aisle,785,1000,890,1000,48,60,8500,10000,5200,6672,Pass
+Forward_16g,Hybrid_III_50th_Male,Center,820,1000,925,1000,52,60,8800,10000,5500,6672,Pass
+Forward_16g,Hybrid_III_50th_Male,Window,795,1000,895,1000,49,60,8600,10000,5300,6672,Pass
+Rearward_14g,Hybrid_III_50th_Male,Aisle,650,1000,720,1000,42,60,7200,10000,4500,6672,Pass
+Rearward_14g,Hybrid_III_50th_Male,Center,680,1000,750,1000,45,60,7500,10000,4700,6672,Pass
+Rearward_14g,Hybrid_III_50th_Male,Window,665,1000,735,1000,43,60,7300,10000,4600,6672,Pass

@@ -1,0 +1,6 @@
+Fastener_Application,Original_Fastener,Substitute_Fastener,Material,Size,Torque_Nm,Tolerance_%,Approval_Required,Notes
+Sidewall_Panel,AN3_Screw,M5_Screw,Steel,5mm,3.5,10,Engineering,"Metric substitute for inch fastener"
+Overhead_Bin,M8_Bolt,AN5_Bolt,Steel,5/16",15.0,10,Engineering,"Inch substitute for metric"
+Ceiling_Panel,AN4_Screw,M6_Screw,Stainless,6mm,5.0,10,Maintenance,"Standard substitution"
+Floor_Panel,M6_Bolt,AN4_Bolt,Steel,1/4",9.0,10,Maintenance,"Standard substitution"
+PSU_Cover,M4_Screw,#10_Screw,Aluminum,4mm,2.5,10,Maintenance,"Standard substitution for covers"

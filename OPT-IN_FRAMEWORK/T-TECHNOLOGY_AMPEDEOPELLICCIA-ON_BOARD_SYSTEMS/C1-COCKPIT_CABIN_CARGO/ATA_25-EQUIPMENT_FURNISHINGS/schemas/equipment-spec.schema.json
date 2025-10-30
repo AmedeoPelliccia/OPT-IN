@@ -1,0 +1,192 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata25/equipment-spec.schema.json",
+  "title": "Equipment Specification",
+  "description": "Specification schema for cabin equipment and furnishings",
+  "type": "object",
+  "required": ["equipmentId", "equipmentType", "partNumber", "manufacturer", "effectivity"],
+  "properties": {
+    "equipmentId": {
+      "type": "string",
+      "description": "Unique equipment identifier",
+      "pattern": "^EQ-25-[0-9]{4}-[0-9]{6}$"
+    },
+    "equipmentType": {
+      "type": "string",
+      "enum": [
+        "Passenger_Seat",
+        "Crew_Seat",
+        "Galley_Full_Height",
+        "Galley_Half_Height",
+        "Lavatory_Standard",
+        "Lavatory_Accessible",
+        "Overhead_Bin",
+        "Sidewall_Panel",
+        "Floor_Panel",
+        "Ceiling_Panel",
+        "Monument_Closet",
+        "Monument_Stowage",
+        "Restraint_Belt_3_Point",
+        "Restraint_Belt_4_Point",
+        "Restraint_Harness_5_Point",
+        "Safety_Equipment_Stowage",
+        "PSU_Passenger_Service_Unit",
+        "Armrest",
+        "Tray_Table",
+        "Literature_Pocket"
+      ]
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Equipment part number"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Equipment manufacturer"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Serial number (for serialized items)"
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number or ALL"
+        },
+        "configuration": {
+          "type": "string",
+          "description": "Aircraft configuration identifier"
+        },
+        "lopa": {
+          "type": "string",
+          "description": "Layout of Passenger Accommodations version"
+        },
+        "zone": {
+          "type": "string",
+          "description": "Cabin zone designation"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "length_mm": { "type": "number" },
+        "width_mm": { "type": "number" },
+        "height_mm": { "type": "number" },
+        "weight_kg": { "type": "number" }
+      }
+    },
+    "materials": {
+      "type": "array",
+      "description": "List of materials used in equipment",
+      "items": {
+        "type": "object",
+        "required": ["material", "flammabilityRating"],
+        "properties": {
+          "material": {
+            "type": "string",
+            "description": "Material description"
+          },
+          "materialSpec": {
+            "type": "string",
+            "description": "Material specification (AMS, BMS, etc.)"
+          },
+          "flammabilityRating": {
+            "type": "string",
+            "enum": ["25.853(a)", "25.853(a-1)", "25.853(b)", "25.853(c)", "Pass", "Fail"],
+            "description": "Flammability test rating per 14 CFR 25.853"
+          },
+          "testReportRef": {
+            "type": "string",
+            "description": "Reference to flammability test report"
+          },
+          "certificateOfConformity": {
+            "type": "string",
+            "description": "Material Certificate of Conformity reference"
+          }
+        }
+      }
+    },
+    "regulatoryCompliance": {
+      "type": "object",
+      "properties": {
+        "cfr25_561": {
+          "type": "boolean",
+          "description": "Compliance with 14 CFR 25.561 (Emergency landing conditions)"
+        },
+        "cfr25_562": {
+          "type": "boolean",
+          "description": "Compliance with 14 CFR 25.562 (Dynamic seat tests)"
+        },
+        "cfr25_785": {
+          "type": "boolean",
+          "description": "Compliance with 14 CFR 25.785 (Seats, berths, safety belts)"
+        },
+        "cfr25_853": {
+          "type": "boolean",
+          "description": "Compliance with 14 CFR 25.853 (Flammability)"
+        },
+        "testReports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "References to test reports"
+        }
+      }
+    },
+    "attachmentPoints": {
+      "type": "array",
+      "description": "Structural attachment points",
+      "items": {
+        "type": "object",
+        "properties": {
+          "location": { "type": "string" },
+          "fastenerType": { "type": "string" },
+          "fastenerSize": { "type": "string" },
+          "torque_Nm": { "type": "number" },
+          "torqueTolerance_percent": { "type": "number" },
+          "loadRating_N": { "type": "number" }
+        }
+      }
+    },
+    "maintenanceRequirements": {
+      "type": "object",
+      "properties": {
+        "gviInterval_FH": {
+          "type": "number",
+          "description": "General Visual Inspection interval in Flight Hours"
+        },
+        "dviInterval_FH": {
+          "type": "number",
+          "description": "Detailed Visual Inspection interval in Flight Hours"
+        },
+        "replacementInterval_FH": {
+          "type": "number",
+          "description": "Replacement interval in Flight Hours (if life-limited)"
+        },
+        "specialInstructions": {
+          "type": "string"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "drawingNumber": { "type": "string" },
+        "drawingRevision": { "type": "string" },
+        "installationDrawing": { "type": "string" },
+        "wiring_diagram": { "type": "string" },
+        "approvalBasis": { "type": "string" }
+      }
+    },
+    "checksum": {
+      "type": "string",
+      "description": "SHA-256 checksum of specification document",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  }
+}

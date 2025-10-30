@@ -1,0 +1,20 @@
+Regulation,Section,Title,Applicability,Compliance_Method,Evidence_Required,Status,Notes
+14 CFR 25.561,25.561,Emergency landing conditions,All seats and monuments,Analysis + Test,Structural analysis and load test reports,Mandatory,Static strength requirements
+14 CFR 25.562,25.562,Emergency landing dynamic conditions,All passenger and crew seats,Dynamic Test,Dynamic sled test report with HIC data,Mandatory,16g forward / 14g aft tests required
+14 CFR 25.601,25.601,General structural requirements,All furnishings and attach points,Analysis + Test,FEA and static load test data,Mandatory,Ensures structural integrity
+14 CFR 25.603,25.603,Materials,All cabin materials,Test + Certification,Material test reports and CoC,Mandatory,Material properties and environmental qualification
+14 CFR 25.785,25.785,"Seats, berths, safety belts, and harnesses",All seats and restraints,Design + Test,Design drawings and test reports,Mandatory,Restraint system requirements
+14 CFR 25.853(a),25.853(a),Flammability - Vertical burn test,Sidewall and ceiling panels,Flammability Test,Vertical burn test report per Appendix F,Mandatory,Burn length ≤ 8 inches in 60 seconds
+14 CFR 25.853(a-1),25.853(a-1),Flammability - 60-second vertical burn,Interior ceiling and sidewall panels,Flammability Test,Extended vertical burn test report,Mandatory,For large area panels
+14 CFR 25.853(b),25.853(b),Flammability - Heat release,Certain interior panels,Heat Release Test,OSU heat release test report,Mandatory,Peak heat release ≤ 65 kW/m²; Total ≤ 65 kW·min/m²
+14 CFR 25.853(c),25.853(c),Flammability - Smoke density,Interior materials,Smoke Density Test,Specific optical density test report,Mandatory,Ds ≤ 200
+14 CFR 25.853 Appendix F Part I,Appendix F Part I,Heat release rate test,Selected materials,Heat Release Test,OSU apparatus test data,Mandatory,For materials requiring heat release testing
+14 CFR 25.853 Appendix F Part II,Appendix F Part II,Smoke optical density test,Selected materials,Smoke Test,NBS smoke chamber test data,Mandatory,For materials requiring smoke testing
+14 CFR 25.853 Appendix F Part III,Appendix F Part III,Oil burner test (seat cushions),Seat cushions,Oil Burner Test,Oil burner test report,Mandatory,For seat cushions
+14 CFR 25.853 Appendix F Part IV,Appendix F Part IV,Radiant panel test (seat cushions),Seat cushions,Radiant Panel Test,Radiant panel test report,Mandatory,For seat cushions
+14 CFR 25.855,25.855,Cargo and baggage compartments,Overhead bins and stowage,Design + Test,Design validation and load test,Mandatory,Bin deflection and load limits
+CS-25,CS-25,Certification Specifications,All furnishings,Equivalent to 14 CFR 25,European compliance documentation,Mandatory for EASA,EASA equivalent standards
+SAE AS8049 Rev C,AS8049,Performance Standard for Seats,All passenger and crew seats,Design + Test,Seat qualification test report,Recommended,Industry standard for seat design and testing
+ASTM E162,E162,Surface Flammability Test,Selected materials,Flammability Test,Flame spread index (FSI) data,Optional,Radiant panel method
+ASTM E662,E662,Specific Optical Density of Smoke,Selected materials,Smoke Test,Smoke density (Ds) test data,Optional,Smoke chamber method
+FAA AC 25.853-1,AC 25.853-1,Flammability Requirements Guidance,Seat cushions,Guidance Document,Reference to AC in test plan,Advisory,Provides interpretation and guidance

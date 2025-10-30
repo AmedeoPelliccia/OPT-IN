@@ -1,0 +1,6 @@
+NCR_Number,Date_Initiated,Equipment_Type,Part_Number,Serial_Number,Description,Disposition,Disposition_Authority,Closure_Date,Notes
+NCR-25-2025-001,2025-01-15,Passenger_Seat,PST-001-ECO,SN-2024-000123,Seat rail attach bolt under-torqued,Rework,Engineering,2025-01-16,"Re-torque to spec; verify bonding"
+NCR-25-2025-002,2025-02-20,Galley_Monument,GAL-FWD-001,SN-2024-000456,Water leak at supply line,Repair,Engineering,2025-02-22,"Replace supply line fitting"
+NCR-25-2025-003,2025-03-10,Overhead_Bin,BIN-OH-001,N/A,Bin deflection exceeds limit,Use_As_Is,Engineering,2025-03-12,"Deflection within analysis tolerance; acceptable for MSN 001-010"
+NCR-25-2025-004,2025-04-05,Seat_Cover,FAB-FR-2024-B,LOT-2024-A,Material failed flammability test,Scrap,M&P,2025-04-06,"Remove all affected material; replace with approved alternate"
+NCR-25-2025-005,2025-05-18,Restraint_Belt,BELT-3PT-001,N/A,Webbing fraying at attachment point,Rework,Engineering,2025-05-20,"Replace belt assembly"

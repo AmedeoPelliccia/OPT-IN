@@ -1,0 +1,209 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata25/installation-record.schema.json",
+  "title": "Installation Record",
+  "description": "Installation record schema for cabin equipment and furnishings",
+  "type": "object",
+  "required": ["recordId", "equipmentId", "equipmentType", "installationDate", "msn", "installedBy"],
+  "properties": {
+    "recordId": {
+      "type": "string",
+      "description": "Unique installation record identifier",
+      "pattern": "^IR-25-[0-9]{4}-[0-9]{6}$"
+    },
+    "equipmentId": {
+      "type": "string",
+      "description": "Equipment identifier being installed"
+    },
+    "equipmentType": {
+      "type": "string",
+      "enum": [
+        "Passenger_Seat",
+        "Crew_Seat",
+        "Galley",
+        "Lavatory",
+        "Overhead_Bin",
+        "Sidewall_Panel",
+        "Monument",
+        "Restraint_System",
+        "Safety_Equipment_Stowage"
+      ]
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Part number of installed equipment"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Serial number (if serialized)"
+    },
+    "installationDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of installation (ISO 8601)"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number (aircraft effectivity)"
+    },
+    "configuration": {
+      "type": "string",
+      "description": "Aircraft configuration identifier"
+    },
+    "lopa": {
+      "type": "string",
+      "description": "Layout of Passenger Accommodations version"
+    },
+    "cabinZone": {
+      "type": "string",
+      "description": "Cabin zone (e.g., First Class, Business, Economy, Zone A, B, C)"
+    },
+    "seatRow": {
+      "type": "string",
+      "description": "Seat row designation (if applicable)"
+    },
+    "seatPosition": {
+      "type": "string",
+      "description": "Seat position (A, B, C, D, etc.) if applicable"
+    },
+    "installedBy": {
+      "type": "object",
+      "required": ["name", "certificationNumber"],
+      "properties": {
+        "name": { "type": "string" },
+        "certificationNumber": { "type": "string" },
+        "organization": { "type": "string" }
+      }
+    },
+    "inspectedBy": {
+      "type": "object",
+      "required": ["name", "certificationNumber"],
+      "properties": {
+        "name": { "type": "string" },
+        "certificationNumber": { "type": "string" },
+        "organization": { "type": "string" }
+      }
+    },
+    "fasteners": {
+      "type": "array",
+      "description": "Fastener installation details",
+      "items": {
+        "type": "object",
+        "required": ["location", "fastenerType", "torque_Nm"],
+        "properties": {
+          "location": { "type": "string" },
+          "fastenerType": { "type": "string" },
+          "fastenerSize": { "type": "string" },
+          "material": { "type": "string" },
+          "torque_Nm": { "type": "number" },
+          "torqueSpec_Nm": { "type": "number" },
+          "tolerance_percent": { "type": "number" },
+          "torqueVerified": { "type": "boolean" }
+        }
+      }
+    },
+    "bondingResistance": {
+      "type": "object",
+      "description": "Bonding/grounding resistance measurements",
+      "properties": {
+        "measured_mOhm": { "type": "number" },
+        "limit_mOhm": { "type": "number" },
+        "testEquipment": { "type": "string" },
+        "testDate": { "type": "string", "format": "date" },
+        "passed": { "type": "boolean" }
+      }
+    },
+    "functionalTests": {
+      "type": "array",
+      "description": "Post-installation functional tests",
+      "items": {
+        "type": "object",
+        "required": ["testName", "result"],
+        "properties": {
+          "testName": { "type": "string" },
+          "procedure": { "type": "string" },
+          "result": { "type": "string", "enum": ["Pass", "Fail", "N/A"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "seatSpecificData": {
+      "type": "object",
+      "description": "Additional data for seat installations",
+      "properties": {
+        "seatRailPosition_mm": { "type": "number" },
+        "reclineTest": { "type": "boolean" },
+        "trayTableTest": { "type": "boolean" },
+        "restraintTest": { "type": "boolean" },
+        "ifeConnection": { "type": "boolean" },
+        "powerConnection": { "type": "boolean" },
+        "psuConnection": { "type": "boolean" }
+      }
+    },
+    "galleyLavSpecificData": {
+      "type": "object",
+      "description": "Additional data for galley/lavatory installations",
+      "properties": {
+        "waterLeakTest": { "type": "boolean" },
+        "wasteLeakTest": { "type": "boolean" },
+        "electricalTest": { "type": "boolean" },
+        "doorOperation": { "type": "boolean" },
+        "lockTest": { "type": "boolean" }
+      }
+    },
+    "binSpecificData": {
+      "type": "object",
+      "description": "Additional data for overhead bin installations",
+      "properties": {
+        "deflectionTest_mm": { "type": "number" },
+        "deflectionLimit_mm": { "type": "number" },
+        "latchTest": { "type": "boolean" },
+        "dampenerTest": { "type": "boolean" }
+      }
+    },
+    "discrepancies": {
+      "type": "array",
+      "description": "Any discrepancies noted during installation",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": { "type": "string" },
+          "resolution": { "type": "string" },
+          "ncrReference": { "type": "string" }
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "required": ["authority", "date"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "authority": { "type": "string" },
+          "name": { "type": "string" },
+          "certificationNumber": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "signature": { "type": "string" }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "workOrder": { "type": "string" },
+        "engineeringOrder": { "type": "string" },
+        "drawingReference": { "type": "string" },
+        "procedureReference": { "type": "string" },
+        "materialCertificates": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "checksum": {
+      "type": "string",
+      "description": "SHA-256 checksum of installation record",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  }
+}

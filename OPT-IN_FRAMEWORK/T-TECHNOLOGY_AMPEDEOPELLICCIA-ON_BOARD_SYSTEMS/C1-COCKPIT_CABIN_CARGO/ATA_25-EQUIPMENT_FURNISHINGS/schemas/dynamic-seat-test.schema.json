@@ -1,0 +1,324 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata25/dynamic-seat-test.schema.json",
+  "title": "Dynamic Seat Test Record",
+  "description": "Dynamic seat test record schema per 14 CFR 25.562",
+  "type": "object",
+  "required": ["testId", "testDate", "seatModel", "testType", "result", "testLaboratory"],
+  "properties": {
+    "testId": {
+      "type": "string",
+      "description": "Unique test record identifier",
+      "pattern": "^DYN-25-[0-9]{4}-[0-9]{6}$"
+    },
+    "testDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of test (ISO 8601)"
+    },
+    "seatModel": {
+      "type": "object",
+      "required": ["manufacturer", "model", "partNumber"],
+      "properties": {
+        "manufacturer": { "type": "string" },
+        "model": { "type": "string" },
+        "partNumber": { "type": "string" },
+        "serialNumber": { "type": "string" },
+        "seatType": {
+          "type": "string",
+          "enum": ["Passenger_Economy", "Passenger_Business", "Passenger_First", "Crew_Pilot", "Crew_Flight_Attendant", "Observer"]
+        },
+        "seatPitch_mm": { "type": "number" },
+        "seatWidth_mm": { "type": "number" },
+        "weight_kg": { "type": "number" }
+      }
+    },
+    "testType": {
+      "type": "string",
+      "enum": [
+        "25.562(b)(1)_Forward_16g",
+        "25.562(b)(2)_Rearward_14g",
+        "25.562(b)(3)_Forward_16g_with_Yaw",
+        "Static_9g_Forward",
+        "Static_9g_Lateral",
+        "Full_Dynamic_Sled_Test"
+      ],
+      "description": "Test type per 14 CFR 25.562"
+    },
+    "testStandard": {
+      "type": "string",
+      "description": "Test standard reference (14 CFR 25.562)"
+    },
+    "testMethod": {
+      "type": "string",
+      "description": "Test method reference (SAE AS8049, etc.)"
+    },
+    "testConfiguration": {
+      "type": "object",
+      "properties": {
+        "sledConfiguration": { "type": "string" },
+        "seatOrientation": { 
+          "type": "string",
+          "enum": ["Forward_Facing", "Rearward_Facing", "Side_Facing"]
+        },
+        "seatRow": { 
+          "type": "string",
+          "enum": ["Single_Row", "Double_Row", "Triple_Row"]
+        },
+        "floorAngle_degrees": { "type": "number" },
+        "yawAngle_degrees": { "type": "number" }
+      }
+    },
+    "anthropomorphicDummies": {
+      "type": "array",
+      "description": "ATD (Anthropomorphic Test Device) details",
+      "items": {
+        "type": "object",
+        "required": ["position", "dummyType", "weight_kg"],
+        "properties": {
+          "position": { 
+            "type": "string",
+            "description": "Seat position (e.g., Aisle, Center, Window)"
+          },
+          "dummyType": { 
+            "type": "string",
+            "enum": ["Hybrid_III_50th_Male", "Hybrid_III_95th_Male", "Hybrid_III_5th_Female", "FAA_Hybrid_III"]
+          },
+          "weight_kg": { "type": "number" },
+          "height_mm": { "type": "number" },
+          "instrumentation": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "pulseParameters": {
+      "type": "object",
+      "required": ["peakAcceleration_g", "pulseDuration_ms"],
+      "properties": {
+        "peakAcceleration_g": { 
+          "type": "number",
+          "description": "Peak acceleration in g"
+        },
+        "pulseDuration_ms": { 
+          "type": "number",
+          "description": "Pulse duration in milliseconds"
+        },
+        "velocityChange_m_s": { 
+          "type": "number",
+          "description": "Velocity change in m/s"
+        },
+        "pulseShape": { 
+          "type": "string",
+          "enum": ["Trapezoidal", "Triangular", "Haversine", "Custom"]
+        },
+        "longitudinalComponent_g": { "type": "number" },
+        "lateralComponent_g": { "type": "number" },
+        "verticalComponent_g": { "type": "number" }
+      }
+    },
+    "testResults": {
+      "type": "object",
+      "required": ["result"],
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": ["Pass", "Fail", "Conditional"],
+          "description": "Overall test result"
+        },
+        "structuralFailure": { 
+          "type": "boolean",
+          "description": "Whether seat structure failed"
+        },
+        "failureDescription": { "type": "string" },
+        "restraintSystemIntegrity": { 
+          "type": "boolean",
+          "description": "Whether restraint system remained intact"
+        },
+        "headInjuryCriterion_HIC": {
+          "type": "array",
+          "description": "HIC values for each occupant",
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": { "type": "string" },
+              "hic15_value": { "type": "number" },
+              "hic15_limit": { "type": "number", "default": 1000 },
+              "hic36_value": { "type": "number" },
+              "hic36_limit": { "type": "number", "default": 1000 },
+              "result": { "type": "string", "enum": ["Pass", "Fail"] }
+            }
+          }
+        },
+        "chestAcceleration_g": {
+          "type": "array",
+          "description": "Chest acceleration for each occupant",
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": { "type": "string" },
+              "peakAcceleration_g": { "type": "number" },
+              "limit_g": { "type": "number", "default": 60 },
+              "result": { "type": "string", "enum": ["Pass", "Fail"] }
+            }
+          }
+        },
+        "femurLoad_N": {
+          "type": "array",
+          "description": "Femur compression load for each occupant",
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": { "type": "string" },
+              "peakLoad_N": { "type": "number" },
+              "limit_N": { "type": "number", "default": 10000 },
+              "result": { "type": "string", "enum": ["Pass", "Fail"] }
+            }
+          }
+        },
+        "lumbarLoad_N": {
+          "type": "array",
+          "description": "Lumbar compression load for each occupant",
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": { "type": "string" },
+              "peakLoad_N": { "type": "number" },
+              "limit_N": { "type": "number", "default": 6672 },
+              "result": { "type": "string", "enum": ["Pass", "Fail"] }
+            }
+          }
+        },
+        "shoulderLoad_N": {
+          "type": "array",
+          "description": "Shoulder belt load for each occupant",
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": { "type": "string" },
+              "peakLoad_N": { "type": "number" },
+              "limit_N": { "type": "number", "default": 16000 },
+              "result": { "type": "string", "enum": ["Pass", "Fail"] }
+            }
+          }
+        },
+        "headExcursion_mm": {
+          "type": "array",
+          "description": "Head excursion measurements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": { "type": "string" },
+              "forwardExcursion_mm": { "type": "number" },
+              "upwardExcursion_mm": { "type": "number" },
+              "lateralExcursion_mm": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "videoPhotographic": {
+      "type": "array",
+      "description": "Video and photographic records",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["Video", "Photo"] },
+          "cameraAngle": { "type": "string" },
+          "frameRate_fps": { "type": "number" },
+          "filename": { "type": "string" },
+          "checksum": { 
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          }
+        }
+      }
+    },
+    "dataAcquisition": {
+      "type": "object",
+      "properties": {
+        "samplingRate_Hz": { "type": "number" },
+        "filterFrequency_Hz": { "type": "number" },
+        "dataChannelCount": { "type": "integer" },
+        "dataFiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filename": { "type": "string" },
+              "checksum": { 
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "testLaboratory": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "accreditation": { "type": "string" },
+        "address": { "type": "string" },
+        "contactPerson": { "type": "string" },
+        "phone": { "type": "string" }
+      }
+    },
+    "testEngineer": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "certificationNumber": { "type": "string" }
+      }
+    },
+    "witnessedBy": {
+      "type": "array",
+      "description": "Witnesses to the test",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "organization": { "type": "string" },
+          "role": { "type": "string" }
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "date"],
+        "properties": {
+          "authority": { "type": "string" },
+          "name": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "signature": { "type": "string" }
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "properties": {
+        "msn": { "type": "string" },
+        "configuration": { "type": "string" },
+        "lopa": { "type": "string" }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "testPlan": { "type": "string" },
+        "seatDrawingNumber": { "type": "string" },
+        "engineeringOrder": { "type": "string" }
+      }
+    },
+    "checksum": {
+      "type": "string",
+      "description": "SHA-256 checksum of test record",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  }
+}

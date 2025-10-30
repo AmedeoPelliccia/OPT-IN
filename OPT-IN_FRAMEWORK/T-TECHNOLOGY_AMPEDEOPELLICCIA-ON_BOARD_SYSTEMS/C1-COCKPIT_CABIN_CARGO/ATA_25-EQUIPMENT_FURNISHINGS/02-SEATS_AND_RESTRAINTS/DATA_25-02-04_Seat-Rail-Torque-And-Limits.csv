@@ -1,0 +1,13 @@
+Interface,Fastener,Size,Material,Torque_Nm,Tolerance_±%,Notes
+Seat_Rail_Attach,Hi-Lok_HL70-6,3/16",Ti,7.5,10,"If rail repair doubler present, see SRM"
+Seat_Rail_Attach,Hi-Lok_HL70-8,1/4",Ti,12.5,10,"Do not exceed 14 Nm; verify flush"
+Seat_Rail_Attach,Hi-Lok_HL10-6,3/16",Steel,8.0,10,"Standard steel fitting"
+Seat_Rail_Attach,AN4_Bolt,1/4",Steel,9.0,10,"With lock washer and nut"
+Restraint_Bolt,AN4,1/4",Steel,9.0,10,"Lubrication per M&P"
+Restraint_Anchor,AN5,5/16",Steel,15.0,10,"Do not exceed 16.5 Nm"
+Tray_Table_Hinge,M5,5mm,Steel,3.5,10,"Apply threadlocker per M&P"
+Armrest_Pivot,M6,6mm,Stainless,5.0,10,"Do not over-torque; check smooth operation"
+Recline_Mechanism,M8,8mm,Steel,18.0,10,"Torque in relaxed (upright) position"
+Seat_Back_Attach,AN6,3/8",Steel,22.0,10,"Verify alignment before torquing"
+IFE_Screen_Mount,M4,4mm,Steel,2.5,10,"Use anti-vibration compound"
+PSU_Attach,M5,5mm,Aluminum,4.0,10,"Ceiling attach; verify no crushing"
