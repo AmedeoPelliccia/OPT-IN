@@ -192,11 +192,13 @@ Routine inspection and functional service of cabin oxygen systems including PSU 
 ---
 
 ## 10.0 References
-- AMM 35-11-00 (Oxygen Systems)  
-- IPC 35-11-00  
-- `DATA_44-04-03_Oxygen-Module-Specs-And-LifeLimits.csv`  
-- `PROC_44-04-03 — Oxygen Module Replacement`  
-- ATA-35 — Oxygen Systems
+
+- [AMM 35-11-00 — Oxygen Systems (Aircraft Maintenance Manual)](https://github.com/AmedeoPelliccia/OPT-IN/blob/main/AMM/35-11-00.md) *(replace with your AMM repository link if different)*
+- [IPC 35-11-00 — Illustrated Parts Catalog](https://github.com/AmedeoPelliccia/OPT-IN/blob/main/IPC/35-11-00.md) *(replace with your IPC link)*
+- [DATA_44-04-03_Oxygen-Module-Specs-And-LifeLimits.csv](https://github.com/AmedeoPelliccia/OPT-IN/blob/main/OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/04-EMERGENCY_OXYGEN_AND_LIFE-SUPPORT/DATA_44-04-03_Oxygen-Module-Specs-And-LifeLimits.csv)
+- [PROC_44-04-03 — Oxygen Module Replacement (rev 1.0.0)](https://github.com/AmedeoPelliccia/OPT-IN/blob/main/OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_44-CABIN_SYSTEMS_INCL_IFE_IFX/04-EMERGENCY_OXYGEN_AND_LIFE-SUPPORT/PROC_44-04-03_Oxygen-Module-Replacement_rev1.0.0_20251030.md)
+- [ATA-35 — Oxygen Systems (chapter README)](https://github.com/AmedeoPelliccia/OPT-IN/blob/main/OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_35-OXYGEN/00_README.md)
+
 
 ---
 
