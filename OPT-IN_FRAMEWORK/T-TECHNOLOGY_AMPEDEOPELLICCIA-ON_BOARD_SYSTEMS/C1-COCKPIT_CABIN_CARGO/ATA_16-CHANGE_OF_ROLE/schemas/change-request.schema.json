@@ -1,0 +1,439 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata16/change-request.schema.json",
+  "title": "Change Request Schema",
+  "description": "Schema for Engineering Change Requests (ECR) and Non-Conformance Reports (NCR) for role changes affecting aircraft systems, equipment, or operational capability",
+  "type": "object",
+  "required": [
+    "change_request_id",
+    "change_type",
+    "title",
+    "description",
+    "effectivity",
+    "safety_assessment_ref",
+    "regulatory_refs",
+    "test_evidence_refs",
+    "approvals",
+    "traceability"
+  ],
+  "properties": {
+    "change_request_id": {
+      "type": "string",
+      "pattern": "^(ECR|NCR)-[0-9]{4}-[0-9]{4}$",
+      "description": "Unique change request identifier (e.g., ECR-2025-0001, NCR-2025-0042)"
+    },
+    "change_type": {
+      "type": "string",
+      "enum": [
+        "Equipment_Role_Change",
+        "System_Function_Change",
+        "Crew_Role_Assignment",
+        "Observer_Role_Assignment",
+        "LOPA_Configuration_Change",
+        "System_Ownership_Change",
+        "Operational_Capability_Change",
+        "Certification_Impact_Change"
+      ],
+      "description": "Type of role change"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 200,
+      "description": "Descriptive title of the change request"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 50,
+      "description": "Detailed description of the role change, including rationale and expected outcomes"
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Indicates if change affects safety-critical systems or functions"
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn", "config", "lopa"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number range (e.g., ALL, 001-050, 025)"
+        },
+        "config": {
+          "type": "string",
+          "description": "Configuration identifier (e.g., ALL, BUSINESS, ECONOMY, CARGO)"
+        },
+        "lopa": {
+          "type": "string",
+          "description": "Layout of Passenger Accommodations version (e.g., ALL, LOPA-v1.2, LOPA-2025-Q1)"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date change becomes effective (ISO 8601: YYYY-MM-DD)"
+        },
+        "production_block": {
+          "type": "string",
+          "description": "Production block or delivery range"
+        }
+      }
+    },
+    "safety_assessment_ref": {
+      "type": "object",
+      "required": ["assessment_id", "assessment_type"],
+      "properties": {
+        "assessment_id": {
+          "type": "string",
+          "description": "Unique identifier for safety assessment document"
+        },
+        "assessment_type": {
+          "type": "string",
+          "enum": ["FHA", "FTA", "FMEA", "PSSA", "SSA", "CCA"],
+          "description": "Type of safety assessment (FHA: Functional Hazard Assessment, FTA: Fault Tree Analysis, FMEA: Failure Modes and Effects Analysis, PSSA: Preliminary System Safety Assessment, SSA: System Safety Assessment, CCA: Common Cause Analysis)"
+        },
+        "assessment_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of safety assessment"
+        },
+        "hazard_classification": {
+          "type": "string",
+          "enum": ["Catastrophic", "Hazardous", "Major", "Minor", "No_Safety_Effect"],
+          "description": "Hazard classification per ARP4761"
+        },
+        "mitigation_plan": {
+          "type": "string",
+          "description": "Summary of hazard mitigation plan"
+        },
+        "residual_risk": {
+          "type": "string",
+          "enum": ["Acceptable", "Acceptable_with_Conditions", "Unacceptable"],
+          "description": "Residual risk after mitigation"
+        }
+      }
+    },
+    "regulatory_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["regulation", "clause"],
+        "properties": {
+          "regulation": {
+            "type": "string",
+            "description": "Regulation identifier (e.g., CS-25, 14 CFR Part 25, EASA Part-21)"
+          },
+          "clause": {
+            "type": "string",
+            "description": "Specific clause or section affected (e.g., 25.783, 25.807)"
+          },
+          "compliance_method": {
+            "type": "string",
+            "description": "Method of compliance (e.g., analysis, test, inspection)"
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["No_Impact", "Minor_Impact", "Major_Impact", "Requires_Recertification"],
+            "description": "Impact on regulatory compliance"
+          }
+        }
+      }
+    },
+    "test_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["test_id", "test_type", "test_date", "result"],
+        "properties": {
+          "test_id": {
+            "type": "string",
+            "description": "Unique test identifier"
+          },
+          "test_type": {
+            "type": "string",
+            "enum": [
+              "Functional_Test",
+              "Integration_Test",
+              "Regression_Test",
+              "Qualification_Test",
+              "Acceptance_Test",
+              "Ground_Test",
+              "Flight_Test"
+            ],
+            "description": "Type of test performed"
+          },
+          "test_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date test was performed"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Pass", "Pass_with_Deviation", "Fail", "Incomplete"],
+            "description": "Test result"
+          },
+          "test_report_ref": {
+            "type": "string",
+            "description": "Reference to detailed test report"
+          },
+          "raw_data_checksum": {
+            "type": "object",
+            "required": ["algorithm", "value"],
+            "properties": {
+              "algorithm": {
+                "type": "string",
+                "enum": ["sha256"],
+                "description": "Hash algorithm"
+              },
+              "value": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{64}$",
+                "description": "SHA-256 hash of raw test data"
+              }
+            }
+          }
+        }
+      }
+    },
+    "numeric_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["parameter", "threshold", "measured_value", "unit", "pass_fail"],
+        "properties": {
+          "parameter": {
+            "type": "string",
+            "description": "Parameter being measured (e.g., Torque, Deflection, Pressure, Load)"
+          },
+          "threshold": {
+            "type": "object",
+            "required": ["min", "max"],
+            "properties": {
+              "min": {
+                "type": "number",
+                "description": "Minimum acceptable value"
+              },
+              "max": {
+                "type": "number",
+                "description": "Maximum acceptable value"
+              }
+            }
+          },
+          "measured_value": {
+            "type": "number",
+            "description": "Actual measured value"
+          },
+          "tolerance": {
+            "type": "number",
+            "description": "Measurement tolerance"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement (e.g., Nm, mm, Pa, kg)"
+          },
+          "pass_fail": {
+            "type": "string",
+            "enum": ["Pass", "Fail"],
+            "description": "Pass/Fail status against threshold"
+          },
+          "data_source_ref": {
+            "type": "string",
+            "description": "Reference to DATA_*.csv file containing detailed numeric data"
+          }
+        }
+      }
+    },
+    "impacted_systems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ata_chapter", "system_name"],
+        "properties": {
+          "ata_chapter": {
+            "type": "string",
+            "pattern": "^ATA[_-]?[0-9]{2}$",
+            "description": "ATA chapter number (e.g., ATA_21, ATA-25)"
+          },
+          "system_name": {
+            "type": "string",
+            "description": "Name of impacted system"
+          },
+          "impact_description": {
+            "type": "string",
+            "description": "Description of how system is impacted"
+          },
+          "old_role": {
+            "type": "string",
+            "description": "Previous role or function"
+          },
+          "new_role": {
+            "type": "string",
+            "description": "New role or function"
+          }
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "reviewer_id", "timestamp", "status"],
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "Configuration_Control",
+              "Airworthiness",
+              "Human_Factors",
+              "Materials_Process",
+              "Structures",
+              "Safety_Engineering",
+              "Cabin_Interiors",
+              "Flight_Operations"
+            ],
+            "description": "Role of approver"
+          },
+          "reviewer_id": {
+            "type": "string",
+            "description": "Unique identifier of reviewer"
+          },
+          "reviewer_name": {
+            "type": "string",
+            "description": "Name of reviewer"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Approval timestamp (ISO 8601 with timezone)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Approved", "Rejected", "Conditionally_Approved", "Pending"],
+            "description": "Approval status"
+          },
+          "comment": {
+            "type": "string",
+            "description": "Reviewer comment"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Digital signature or approval reference"
+          }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "required": ["related_documents"],
+      "properties": {
+        "related_documents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["doc_id", "doc_type"],
+            "properties": {
+              "doc_id": {
+                "type": "string",
+                "description": "Document identifier"
+              },
+              "doc_type": {
+                "type": "string",
+                "enum": [
+                  "Engineering_Drawing",
+                  "Test_Report",
+                  "Safety_Assessment",
+                  "LOPA_Document",
+                  "Maintenance_Manual",
+                  "STC_Application",
+                  "TCDS_Amendment",
+                  "ECO",
+                  "NCR"
+                ],
+                "description": "Type of related document"
+              },
+              "relationship": {
+                "type": "string",
+                "enum": ["References", "Supersedes", "Superseded_By", "Related_To"],
+                "description": "Relationship to this change request"
+              },
+              "checksum": {
+                "type": "object",
+                "properties": {
+                  "algorithm": {"type": "string", "enum": ["sha256"]},
+                  "value": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}
+                }
+              }
+            }
+          }
+        },
+        "parent_change_request": {
+          "type": "string",
+          "description": "Parent change request ID if this is a child or related change"
+        },
+        "child_change_requests": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Child change request IDs"
+        }
+      }
+    },
+    "audit_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["event", "actor", "timestamp"],
+        "properties": {
+          "event": {
+            "type": "string",
+            "description": "Event description (e.g., Created, Submitted, Approved, Rejected, Closed)"
+          },
+          "actor": {
+            "type": "string",
+            "description": "Person or system performing the action"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Event timestamp (ISO 8601 with timezone)"
+          },
+          "detail": {
+            "type": "string",
+            "description": "Additional details about the event"
+          }
+        }
+      }
+    },
+    "implementation_plan": {
+      "type": "object",
+      "properties": {
+        "scheduled_implementation_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Planned implementation date"
+        },
+        "implementation_location": {
+          "type": "string",
+          "description": "Location where change will be implemented (e.g., production line, MRO facility)"
+        },
+        "downtime_hours": {
+          "type": "number",
+          "description": "Estimated aircraft downtime for implementation"
+        },
+        "required_resources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Required tools, personnel, or materials"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or special instructions"
+    }
+  }
+}

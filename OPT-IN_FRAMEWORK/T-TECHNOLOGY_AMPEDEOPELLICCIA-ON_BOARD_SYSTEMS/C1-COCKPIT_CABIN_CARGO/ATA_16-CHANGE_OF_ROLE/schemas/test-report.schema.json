@@ -1,0 +1,449 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata16/test-report.schema.json",
+  "title": "Test Report Schema",
+  "description": "Schema for test reports documenting functional, integration, and regression tests for role changes",
+  "type": "object",
+  "required": [
+    "test_report_id",
+    "test_type",
+    "change_request_ref",
+    "test_date",
+    "test_objectives",
+    "test_results",
+    "overall_result",
+    "approvals"
+  ],
+  "properties": {
+    "test_report_id": {
+      "type": "string",
+      "pattern": "^TR-[0-9]{4}-[0-9]{4}$",
+      "description": "Unique test report identifier (e.g., TR-2025-0001)"
+    },
+    "test_type": {
+      "type": "string",
+      "enum": [
+        "Functional_Test",
+        "Integration_Test",
+        "Regression_Test",
+        "Qualification_Test",
+        "Acceptance_Test",
+        "Ground_Test",
+        "Flight_Test",
+        "System_Test",
+        "Component_Test"
+      ],
+      "description": "Type of test performed"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the test report"
+    },
+    "change_request_ref": {
+      "type": "string",
+      "pattern": "^(ECR|NCR)-[0-9]{4}-[0-9]{4}$",
+      "description": "Reference to associated change request"
+    },
+    "test_plan_ref": {
+      "type": "string",
+      "description": "Reference to test plan document"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the test was performed (ISO 8601: YYYY-MM-DD)"
+    },
+    "test_location": {
+      "type": "string",
+      "description": "Location where test was performed"
+    },
+    "test_article": {
+      "type": "object",
+      "properties": {
+        "aircraft_msn": {
+          "type": "string",
+          "description": "Aircraft Manufacturer Serial Number"
+        },
+        "component_pn": {
+          "type": "string",
+          "description": "Component part number"
+        },
+        "component_sn": {
+          "type": "string",
+          "description": "Component serial number"
+        },
+        "configuration": {
+          "type": "string",
+          "description": "Test article configuration"
+        }
+      }
+    },
+    "test_objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["objective_id", "objective_description"],
+        "properties": {
+          "objective_id": {
+            "type": "string",
+            "description": "Unique test objective identifier (e.g., OBJ-001)"
+          },
+          "objective_description": {
+            "type": "string",
+            "description": "Description of what the test aims to verify"
+          },
+          "success_criteria": {
+            "type": "string",
+            "description": "Criteria for objective success"
+          }
+        }
+      }
+    },
+    "test_setup": {
+      "type": "object",
+      "properties": {
+        "equipment_used": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "equipment_id": {"type": "string"},
+              "equipment_name": {"type": "string"},
+              "calibration_due": {
+                "type": "string",
+                "format": "date",
+                "description": "Calibration expiry date"
+              }
+            }
+          }
+        },
+        "test_conditions": {
+          "type": "object",
+          "properties": {
+            "temperature_C": {
+              "type": "number",
+              "description": "Ambient temperature in Celsius"
+            },
+            "humidity_pct": {
+              "type": "number",
+              "description": "Relative humidity percentage"
+            },
+            "pressure_Pa": {
+              "type": "number",
+              "description": "Atmospheric pressure in Pascals"
+            }
+          }
+        },
+        "personnel": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "role": {"type": "string"},
+              "qualification": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "test_procedures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step_number", "step_description"],
+        "properties": {
+          "step_number": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Test step number"
+          },
+          "step_description": {
+            "type": "string",
+            "description": "Description of test step"
+          },
+          "expected_result": {
+            "type": "string",
+            "description": "Expected result of this step"
+          },
+          "actual_result": {
+            "type": "string",
+            "description": "Actual observed result"
+          },
+          "pass_fail": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "N/A"],
+            "description": "Pass/Fail status of step"
+          }
+        }
+      }
+    },
+    "test_results": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["result_id", "parameter", "pass_fail"],
+        "properties": {
+          "result_id": {
+            "type": "string",
+            "description": "Unique result identifier"
+          },
+          "objective_ref": {
+            "type": "string",
+            "description": "Reference to test objective being verified"
+          },
+          "parameter": {
+            "type": "string",
+            "description": "Parameter measured or verified"
+          },
+          "threshold": {
+            "type": "object",
+            "properties": {
+              "min": {
+                "type": "number",
+                "description": "Minimum acceptable value"
+              },
+              "max": {
+                "type": "number",
+                "description": "Maximum acceptable value"
+              },
+              "nominal": {
+                "type": "number",
+                "description": "Nominal expected value"
+              }
+            }
+          },
+          "measured_value": {
+            "type": "number",
+            "description": "Actual measured value"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement (e.g., Nm, mm, Pa, kg, V, A)"
+          },
+          "tolerance": {
+            "type": "number",
+            "description": "Measurement tolerance or uncertainty"
+          },
+          "pass_fail": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "Conditional_Pass"],
+            "description": "Pass/Fail status"
+          },
+          "deviation_justification": {
+            "type": "string",
+            "description": "Justification if result is out of specification but conditionally passed"
+          }
+        }
+      }
+    },
+    "numeric_data": {
+      "type": "object",
+      "properties": {
+        "data_file_ref": {
+          "type": "string",
+          "description": "Reference to DATA_*.csv file containing detailed numeric results"
+        },
+        "raw_data_location": {
+          "type": "string",
+          "description": "Location of raw test data files"
+        },
+        "raw_data_checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256"],
+              "description": "Hash algorithm"
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$",
+              "description": "SHA-256 hash of raw data archive"
+            }
+          }
+        }
+      }
+    },
+    "overall_result": {
+      "type": "string",
+      "enum": [
+        "Pass",
+        "Pass_with_Deviations",
+        "Fail",
+        "Incomplete",
+        "Test_Suspended"
+      ],
+      "description": "Overall test result"
+    },
+    "deviations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["deviation_id", "deviation_description", "impact"],
+        "properties": {
+          "deviation_id": {
+            "type": "string",
+            "description": "Unique deviation identifier"
+          },
+          "deviation_description": {
+            "type": "string",
+            "description": "Description of deviation from test plan or acceptance criteria"
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["Critical", "Major", "Minor", "No_Impact"],
+            "description": "Impact of deviation on test validity"
+          },
+          "disposition": {
+            "type": "string",
+            "enum": ["Accepted", "Retest_Required", "Under_Review"],
+            "description": "Disposition of deviation"
+          },
+          "justification": {
+            "type": "string",
+            "description": "Justification for accepting deviation (if accepted)"
+          }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "General observations during testing"
+    },
+    "anomalies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["anomaly_id", "anomaly_description", "severity"],
+        "properties": {
+          "anomaly_id": {
+            "type": "string",
+            "description": "Unique anomaly identifier"
+          },
+          "anomaly_description": {
+            "type": "string",
+            "description": "Description of anomaly observed"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["Critical", "High", "Medium", "Low"],
+            "description": "Severity of anomaly"
+          },
+          "resolution": {
+            "type": "string",
+            "description": "Resolution or corrective action taken"
+          },
+          "ncr_ref": {
+            "type": "string",
+            "description": "Reference to NCR if raised"
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Recommendations based on test results"
+    },
+    "approvals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "reviewer_id", "timestamp", "status"],
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "Test_Engineer",
+              "Test_Manager",
+              "Quality_Assurance",
+              "Airworthiness",
+              "Configuration_Control"
+            ],
+            "description": "Role of approver"
+          },
+          "reviewer_id": {
+            "type": "string",
+            "description": "Unique identifier of reviewer"
+          },
+          "reviewer_name": {
+            "type": "string",
+            "description": "Name of reviewer"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Approval timestamp (ISO 8601 with timezone)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Approved", "Rejected", "Conditionally_Approved"],
+            "description": "Approval status"
+          },
+          "comment": {
+            "type": "string",
+            "description": "Reviewer comment"
+          }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "safety_assessment_ref": {
+          "type": "string",
+          "description": "Reference to safety assessment this test supports"
+        },
+        "requirements_verified": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of requirement IDs verified by this test"
+        },
+        "related_tests": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "References to related test reports"
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "attachment_id": {"type": "string"},
+          "attachment_type": {
+            "type": "string",
+            "enum": ["Photo", "Video", "Data_File", "Oscilloscope_Capture", "Log_File", "Other"]
+          },
+          "filename": {"type": "string"},
+          "checksum": {
+            "type": "object",
+            "properties": {
+              "algorithm": {"type": "string", "enum": ["sha256"]},
+              "value": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}
+            }
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments"
+    }
+  }
+}
