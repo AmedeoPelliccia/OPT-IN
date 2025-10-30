@@ -1,0 +1,11 @@
+Activity,IMA_Core_Engineering,Software_Safety,Certification,Airworthiness,System_Integration,Quality_Assurance
+Requirements Development,R,A,C,C,C,I
+Architecture Design,R,C,I,C,C,I
+Code Development,R,I,I,I,I,I
+Verification Testing,R,C,I,I,A,C
+DO-178C Compliance,A,R,R,C,I,C
+Tool Qualification,R,I,A,I,I,C
+Security Analysis,C,R,C,A,I,C
+HIL Integration,C,I,I,I,R,C
+Certification Package,C,C,R,A,I,C
+Configuration Management,R,I,I,I,I,A

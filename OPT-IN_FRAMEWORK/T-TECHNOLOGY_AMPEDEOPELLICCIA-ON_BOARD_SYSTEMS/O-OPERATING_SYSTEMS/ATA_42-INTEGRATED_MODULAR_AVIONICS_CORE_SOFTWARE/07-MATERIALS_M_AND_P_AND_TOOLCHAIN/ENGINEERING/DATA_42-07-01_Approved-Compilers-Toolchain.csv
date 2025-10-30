@@ -1,0 +1,6 @@
+Tool_Name,Version,Vendor,Qualification_Level,Qualification_ID,Expiry_Date,Status
+GCC,10.3.0,FSF,TQL-5,TOOL-QUAL-GCC-001,2026-12-31,Qualified
+GNU Binutils,2.36,FSF,TQL-5,TOOL-QUAL-BINUTILS-001,2026-12-31,Qualified
+Coverity,2021.12,Synopsys,TQL-1,TOOL-QUAL-COV-001,2026-06-30,Qualified
+gcov,10.3.0,FSF,TQL-1,TOOL-QUAL-GCOV-001,2026-12-31,Qualified
+Git,2.35.1,Community,N/A,N/A,N/A,Approved

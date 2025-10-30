@@ -1,0 +1,155 @@
+schema_version: "1.1"
+id: "ATA_42_CORE_SW_INDEX"
+chapter: "ATA 42 - INTEGRATED MODULAR AVIONICS (CORE SOFTWARE)"
+governance:
+  owner_role: "IMA Software Engineering / Core OS Development"
+  review_board: ["Airworthiness", "Software Safety", "Certification", "Systems Engineering"]
+  regulatory_basis:
+    - "ARINC 653 Part 1 (Required Services)"
+    - "ARINC 653 Part 2 (Extended Services)"
+    - "RTCA DO-178C (Software Considerations in Airborne Systems)"
+    - "RTCA DO-254 (Hardware Considerations)"
+    - "RTCA DO-330 (Tool Qualification)"
+    - "EUROCAE ED-12C"
+    - "EUROCAE ED-202A (MILS)"
+    - "EUROCAE ED-203 (Airborne Security)"
+    - "RTCA DO-297 (IMA Development Guidance)"
+    - "RTCA DO-160G (Environmental Conditions)"
+effectivity:
+  msn: "ALL"
+  scope: "All AMPEL360 configurations with IMA Core OS / ARINC 653 partitioning"
+traceability:
+  crossrefs:
+    - "ATA 05"   # Time Limits & Maintenance Checks
+    - "ATA 22"   # Auto Flight
+    - "ATA 24"   # Electrical Power
+    - "ATA 27"   # Flight Controls
+    - "ATA 31"   # Indicating / Recording Systems
+    - "ATA 34"   # Navigation
+    - "ATA 45"   # Onboard Maintenance Systems
+    - "ATA 46"   # Information Systems
+    - "ATA 95"   # Digital Product Passport
+  source_documents:
+    - "CORE-OS-SPEC-42-001: Core OS System Specification"
+    - "CORE-OS-ARCH-42-001: IMA Core OS Architecture Document"
+    - "CORE-OS-SAS-42-001: Core OS Software Accomplishment Summary (DO-178C)"
+    - "CORE-OS-SAFETY-42-001: Core OS Software Safety Assessment (DO-178C)"
+    - "CORE-OS-PART-42-001: Partition Management Design Document"
+    - "CORE-OS-SCHED-42-001: Scheduler Design and WCET Analysis"
+    - "CORE-OS-IPC-42-001: Inter-Partition Communication Specification"
+    - "CORE-OS-SEC-42-001: Secure Boot and Update Mechanism Design"
+    - "CORE-OS-QUAL-42-001: Core OS Qualification Test Report"
+    - "CORE-OS-HIL-42-001: Hardware-in-Loop Integration Test Report"
+    - "CORE-OS-HEALTH-42-001: Health Monitoring and Diagnostics Design"
+    - "CORE-OS-TOOL-42-001: Toolchain Qualification Plan (DO-330)"
+    - "CORE-OS-VERIFY-42-001: Verification and Validation Plan"
+    - "CORE-OS-CERT-42-001: Certification Evidence Package"
+safety:
+  criticality: "Critical - DAL A Software (Failure Catastrophic)"
+  dal_level: "DAL A"
+  hazards:
+    - "Partition isolation breach compromising safety-critical functions"
+    - "Scheduler timing violation causing missed deadlines in flight-critical tasks"
+    - "Memory corruption affecting multiple partitions"
+    - "IPC failure leading to loss of critical inter-system communication"
+    - "Security vulnerability enabling unauthorized code execution"
+    - "Health monitor failure preventing fault detection"
+    - "Secure boot bypass allowing unsigned code execution"
+    - "Resource exhaustion causing system-wide failure"
+    - "Time synchronization error affecting time-critical operations"
+  airworthiness_limitation_items:
+    - "ARINC 653 spatial isolation enforcement (memory protection)"
+    - "ARINC 653 temporal isolation enforcement (partition scheduling)"
+    - "DO-178C Level A software lifecycle compliance"
+    - "Partition configuration integrity verification"
+    - "Secure boot chain-of-trust validation"
+    - "Software update signature verification"
+    - "Health monitoring coverage requirements"
+    - "WCET analysis for all partition schedules"
+    - "Tool qualification per DO-330"
+    - "Structural coverage objectives (MC/DC for DAL A)"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata42-core.sh"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, regulatory compliance, ATA-42 overview"
+    - name: "02-ARCHITECTURE_AND_SERVICES"
+      description: "Core OS architecture, partition management, scheduling, IPC, resource management"
+      subsections:
+        - "OVERVIEW: Architecture philosophy, technology stack"
+        - "SAFETY: Safety architecture, hazard analysis, fault containment"
+        - "REQUIREMENTS: ALR, SR, SSR, requirements traceability matrix"
+        - "DESIGN: Core OS design, partition memory layout, scheduling state machine"
+        - "INTERFACES: ARINC 653 API, HAL, IPC mechanisms"
+        - "ENGINEERING: Partition management procedures, RTI limits, WCET analysis"
+        - "V_AND_V: Verification plan, test cases, coverage analysis"
+        - "CERTIFICATION: Certification basis, DO-178C objectives matrix"
+        - "SUBSYSTEMS_AND_COMPONENTS: Kernel, Partition, Time, Communication, Health services"
+    - name: "03-VERIFICATION_AND_SOFTWARE_ASSURANCE"
+      description: "SW verification, DO-178C compliance, test strategy, tool qualification"
+      subsections:
+        - "DESIGN: SW verification procedures, test architecture, coverage design"
+        - "ENGINEERING: Static analysis, dynamic testing processes"
+        - "CERTIFICATION: Tool qualification, DO-178C mapping, verification objectives"
+        - "SUBSYSTEMS: Unit, integration, system, requirements-based, structural coverage testing"
+    - name: "04-SECURITY_AND_UPDATE_MECHANISMS"
+      description: "Secure boot, cryptographic services, key management, software update"
+      subsections:
+        - "OVERVIEW: Security architecture, threat model"
+        - "DESIGN: Secure boot flow, cryptographic design, key management"
+        - "ENGINEERING: Signed image validation procedures, security analysis"
+        - "CERTIFICATION: ED-202A/ED-203 compliance, Common Criteria mapping"
+        - "SUBSYSTEMS: Secure boot, crypto services, key mgmt, SW update, access control"
+    - name: "05-INTEGRATION_AND_HIL"
+      description: "Hardware-in-Loop testing, integration approach, test automation"
+      subsections:
+        - "ENGINEERING: HIL test plan, test matrix, test automation"
+        - "V_AND_V: HIL test execution, results, issue logs"
+        - "SUBSYSTEMS: Test environment, simulation models, automation, data acquisition"
+    - name: "06-METRICS_DIAGNOSTICS_AND_HEALTH"
+      description: "Health monitoring, fault reporting, diagnostics, BIT"
+      subsections:
+        - "ENGINEERING: Health monitoring procedures, metric definitions, fault isolation"
+        - "V_AND_V: Health monitor test plan, fault injection tests"
+        - "SUBSYSTEMS: Built-in test, fault detection, performance metrics, prognostics"
+    - name: "07-MATERIALS_M_AND_P_AND_TOOLCHAIN"
+      description: "Approved compilers, toolchain qualification, M&P traceability"
+      subsections:
+        - "ENGINEERING: Approved compilers list, M&P traceability, compiler options"
+        - "CERTIFICATION: Tool qualification plan, DO-330 compliance"
+        - "SUBSYSTEMS: Compilers, linkers, analyzers, debuggers, version control, CI/CD"
+    - name: "08-NONCONFORMANCE_AND_DEVIATION"
+      description: "NCR handling, deviation management, problem reporting"
+  schemas:
+    - name: "core-os.schema.json"
+      description: "Core OS configuration and architecture metadata schema"
+    - name: "partition.schema.json"
+      description: "Partition configuration schema (ARINC 653 partition attributes)"
+    - name: "sw-component.schema.json"
+      description: "Software component metadata schema with DO-178C attributes"
+    - name: "repair-record.schema.json"
+      description: "Software defect and repair record schema"
+    - name: "health-metric.schema.json"
+      description: "Health monitoring metric definition schema"
+    - name: "ncr.schema.json"
+      description: "Non-conformance report schema for software issues"
+    - name: "test-case.schema.json"
+      description: "Test case specification schema with traceability"
+approvals:
+  - authority: "IMA Core OS Engineering"
+    status: "Released"
+    date: "2025-10-30"
+  - authority: "Software Safety Engineering"
+    status: "Released"
+    date: "2025-10-30"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Certification Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"

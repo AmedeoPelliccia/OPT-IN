@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42/test-case.schema.json",
+  "title": "Test Case Specification Schema",
+  "description": "Schema for Core OS test case specifications with traceability",
+  "type": "object",
+  "required": ["test_id", "test_name", "test_type", "requirements", "dal_level"],
+  "properties": {
+    "test_id": {
+      "type": "string",
+      "pattern": "^TEST-ATA42-[0-9]{4}$"
+    },
+    "test_name": {
+      "type": "string"
+    },
+    "test_type": {
+      "type": "string",
+      "enum": ["UNIT", "INTEGRATION", "SYSTEM", "REQUIREMENTS_BASED", "STRUCTURAL_COVERAGE", "ROBUSTNESS"]
+    },
+    "dal_level": {
+      "type": "string",
+      "enum": ["DAL A", "DAL B", "DAL C", "DAL D", "DAL E"]
+    },
+    "requirements": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "preconditions": {
+      "type": "string"
+    },
+    "test_procedure": {
+      "type": "string"
+    },
+    "expected_results": {
+      "type": "string"
+    },
+    "actual_results": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["NotRun", "Passed", "Failed", "Blocked", "Skipped"]
+    },
+    "execution_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "executed_by": {
+      "type": "string"
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "statement": {"type": "array", "items": {"type": "string"}},
+        "branch": {"type": "array", "items": {"type": "string"}},
+        "mcdc": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

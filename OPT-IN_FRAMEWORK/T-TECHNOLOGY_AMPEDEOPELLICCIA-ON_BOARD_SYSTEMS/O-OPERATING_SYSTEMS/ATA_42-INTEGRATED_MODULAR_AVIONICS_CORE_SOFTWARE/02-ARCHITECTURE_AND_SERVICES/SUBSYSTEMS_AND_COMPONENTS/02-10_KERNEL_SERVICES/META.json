@@ -1,0 +1,6 @@
+{
+  "subsystem": "02-10_KERNEL_SERVICES",
+  "dal_level": "DAL A",
+  "status": "InDevelopment",
+  "owner": "Core OS Engineering"
+}

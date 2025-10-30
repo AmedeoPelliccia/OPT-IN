@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.1",
+  "ata_chapter": "42",
+  "title": "INTEGRATED MODULAR AVIONICS - CORE SOFTWARE",
+  "description": "IMA Core Operating System implementing ARINC 653 partitioning, scheduling, resource management, and health monitoring services",
+  "dal_level": "DAL A",
+  "criticality": "Critical - Flight Safety",
+  "regulatory_basis": [
+    "ARINC 653",
+    "DO-178C",
+    "DO-330",
+    "ED-202A",
+    "ED-203"
+  ],
+  "owner": "IMA Core OS Engineering",
+  "created": "2025-10-30",
+  "last_updated": "2025-10-30",
+  "version": "1.0.0",
+  "status": "Released",
+  "tags": [
+    "IMA",
+    "ARINC653",
+    "CoreOS",
+    "Partitioning",
+    "DAL-A",
+    "DO-178C",
+    "Security",
+    "RealTime",
+    "SafetyCritical"
+  ]
+}

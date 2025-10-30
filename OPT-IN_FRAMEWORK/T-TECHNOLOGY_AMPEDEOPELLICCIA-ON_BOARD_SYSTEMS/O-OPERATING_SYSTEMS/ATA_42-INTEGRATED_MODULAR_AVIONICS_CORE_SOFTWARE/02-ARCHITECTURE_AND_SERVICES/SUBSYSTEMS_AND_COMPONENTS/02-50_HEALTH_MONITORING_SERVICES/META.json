@@ -1,0 +1,6 @@
+{
+  "subsystem": "02-50_HEALTH_MONITORING_SERVICES",
+  "dal_level": "DAL A",
+  "status": "InDevelopment",
+  "owner": "Core OS Engineering"
+}
