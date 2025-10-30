@@ -1,0 +1,6 @@
+agent_name,chemical_formula,specification,min_concentration_pct,max_concentration_pct,storage_pressure_psi,storage_temp_degF,toxicity_level,ozone_depletion_potential,global_warming_potential,approved_uses,supplier,coc_required
+Halon 1301,CF3Br,ISO 7201,5.0,10.0,600,70,Low,10.0,7140,"Engine, APU, Cargo","Amerex Corporation, Kidde",Yes
+HFC-125,CHF2CF3,ISO 7201,8.0,12.0,600,70,Low,0.0,3500,"Cargo, APU","Honeywell, 3M",Yes
+FK-5-1-12,CF3CF2C(O)CF(CF3)2,ISO 14520,4.5,6.5,600,70,Very Low,0.0,1,All compartments,"3M, Chemours",Yes
+Stainless Steel 321,Fe/Cr/Ni,AMS 5570,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Tubing and fittings,"Various",Yes
+Titanium Grade 9,Ti-3Al-2.5V,AMS 4943,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Lightweight tubing,"TIMET, Allegheny Technologies",Yes

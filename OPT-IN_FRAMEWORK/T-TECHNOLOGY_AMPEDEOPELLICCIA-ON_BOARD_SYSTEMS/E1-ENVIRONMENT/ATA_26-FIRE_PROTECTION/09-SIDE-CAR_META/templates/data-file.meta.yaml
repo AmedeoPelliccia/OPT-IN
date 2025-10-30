@@ -1,0 +1,64 @@
+schema_version: "1.1"
+document_id: "[DATA_ID]"  # e.g., DATA_26-02-02_rev1.0.0_20251030
+title: "[Data File Title]"
+ata_chapter: "26-XX-XX"
+document_type: "DATA"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+status: "Draft"
+
+data_details:
+  format: "csv"  # csv, json, xlsx
+  encoding: "UTF-8"
+  delimiter: ","  # for CSV files
+  has_header: true
+  row_count: null  # number of data rows (excluding header)
+  column_count: null
+
+author:
+  name: "[Author Name]"
+  organization: "[Department]"
+
+owner_role: "[Responsible Discipline]"
+
+review_board:
+  - "[Reviewer Role]"
+
+approvals:
+  - authority: "[Approval Authority]"
+    status: "Pending"
+    date: null
+
+data_source:
+  type: "test"  # test, calculation, analysis, specification, vendor
+  description: "[Source description]"
+  date_collected: "2025-10-30"
+
+validation:
+  validated: false
+  validation_method: "[Method description]"
+  validator: "[Validator name]"
+  validation_date: null
+
+units:
+  pressure: "psi"
+  temperature: "degF"
+  concentration: "percent"
+  time: "seconds"
+  # Add other units as applicable
+
+regulatory_basis:
+  - "[Applicable regulation]"
+
+traceability:
+  test_report: "[Test report reference]"
+  requirements:
+    - "[Requirement ID]"
+
+integrity:
+  checksum: "[SHA-256]"
+  algorithm: "sha256"
+  last_modified: "2025-10-30T00:00:00Z"
+
+notes: |
+  [Description of data content and any special considerations]
