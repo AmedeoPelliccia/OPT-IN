@@ -67,7 +67,7 @@
         "properties": {
           "method": {
             "type": "string",
-            "enum": ["Ultrasonic", "Thermography", "Visual", "EdgeyCurrent", "XRay"],
+            "enum": ["Ultrasonic", "Thermography", "Visual", "EddyCurrent", "XRay"],
             "description": "NDT method used"
           },
           "file_hash": {
