@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Cryogenic Valve and Actuator Specification",
+  "description": "Specification for cryogenic valves and actuators in LH₂ systems",
+  "type": "object",
+  "required": [
+    "valve_id",
+    "valve_type",
+    "manufacturer",
+    "materials",
+    "performance",
+    "actuator"
+  ],
+  "properties": {
+    "valve_id": {
+      "type": "string",
+      "description": "Unique valve identifier"
+    },
+    "valve_type": {
+      "type": "string",
+      "enum": ["Ball", "Gate", "Globe", "Check", "Relief", "Butterfly"],
+      "description": "Type of valve"
+    },
+    "manufacturer": {
+      "type": "object",
+      "required": ["name", "part_number", "serial_number"],
+      "properties": {
+        "name": {"type": "string"},
+        "part_number": {"type": "string"},
+        "serial_number": {"type": "string"},
+        "manufacture_date": {"type": "string", "format": "date"}
+      }
+    },
+    "materials": {
+      "type": "object",
+      "required": ["body_material", "seat_material", "seal_material"],
+      "properties": {
+        "body_material": {
+          "type": "string",
+          "enum": ["316L Stainless Steel", "Inconel 718", "Hastelloy C-276"]
+        },
+        "seat_material": {
+          "type": "string",
+          "enum": ["Vespel SP-3", "PTFE", "Metal-to-Metal", "Inconel"]
+        },
+        "seal_material": {
+          "type": "string",
+          "enum": ["PTFE", "Vespel", "Grafoil", "Inconel X-750"]
+        },
+        "stem_material": {"type": "string"},
+        "spring_material": {"type": "string"}
+      }
+    },
+    "performance": {
+      "type": "object",
+      "required": ["rated_pressure_bar", "operating_temperature_range_k"],
+      "properties": {
+        "rated_pressure_bar": {"type": "number"},
+        "operating_temperature_range_k": {
+          "type": "object",
+          "required": ["min", "max"],
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"}
+          }
+        },
+        "flow_coefficient_cv": {"type": "number"},
+        "leak_rate_class": {
+          "type": "string",
+          "enum": ["Class I", "Class II", "Class III", "Class IV", "Class V", "Class VI"]
+        },
+        "cycle_life": {"type": "integer"},
+        "actuation_time_seconds": {"type": "number"}
+      }
+    },
+    "actuator": {
+      "type": "object",
+      "required": ["type", "power_source"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["Manual", "Electric", "Pneumatic", "Hydraulic", "Solenoid"]
+        },
+        "power_source": {"type": "string"},
+        "voltage_vdc": {"type": "number"},
+        "current_amps": {"type": "number"},
+        "pneumatic_pressure_bar": {"type": "number"},
+        "fail_position": {
+          "type": "string",
+          "enum": ["Open", "Closed", "As-Is"]
+        },
+        "position_indication": {
+          "type": "string",
+          "enum": ["None", "Visual", "Electrical", "Pneumatic"]
+        }
+      }
+    },
+    "testing": {
+      "type": "object",
+      "properties": {
+        "leak_test_date": {"type": "string", "format": "date"},
+        "leak_rate_mbar_l_s": {"type": "number"},
+        "functional_test_date": {"type": "string", "format": "date"},
+        "functional_test_result": {
+          "type": "string",
+          "enum": ["Pass", "Fail"]
+        },
+        "cryo_cycle_test": {
+          "type": "object",
+          "properties": {
+            "test_date": {"type": "string", "format": "date"},
+            "cycles_completed": {"type": "integer"},
+            "result": {"type": "string", "enum": ["Pass", "Fail"]}
+          }
+        },
+        "relief_valve_set_pressure": {
+          "type": "object",
+          "properties": {
+            "set_pressure_bar": {"type": "number"},
+            "tolerance_percent": {"type": "number"},
+            "calibration_date": {"type": "string", "format": "date"},
+            "next_calibration_due": {"type": "string", "format": "date"}
+          }
+        }
+      }
+    },
+    "installation": {
+      "type": "object",
+      "properties": {
+        "system_location": {"type": "string"},
+        "line_size_inches": {"type": "number"},
+        "installation_date": {"type": "string", "format": "date"},
+        "flow_direction": {"type": "string"}
+      }
+    },
+    "maintenance_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "event_type"],
+        "properties": {
+          "date": {"type": "string", "format": "date"},
+          "event_type": {
+            "type": "string",
+            "enum": ["Inspection", "Repair", "Replacement", "Calibration", "Leak Test"]
+          },
+          "description": {"type": "string"},
+          "technician": {"type": "string"},
+          "work_order": {"type": "string"},
+          "parts_replaced": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "certificate_number": {"type": "string"},
+        "certifying_authority": {"type": "string"},
+        "issue_date": {"type": "string", "format": "date"},
+        "expiry_date": {"type": "string", "format": "date"}
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+Material,Specification,Min_Temp_K,Thermal_Conductivity_W_mK,Coefficient_Thermal_Expansion_1E-6_K,Yield_Strength_MPa,Tensile_Strength_MPa,Elongation_Percent,Charpy_V_Notch_J,Density_kg_m3,Notes
+316L Stainless Steel,ASTM A240,20,16.3,16.0,170,485,40,100,7980,Austenitic - excellent cryogenic properties
+Inconel 718,AMS 5663,20,11.2,13.0,1035,1275,12,80,8190,Age-hardened nickel alloy for high stress applications
+Aluminum 5083-H116,ASTM B928,20,117,23.8,228,317,10,N/A,2660,Good cryogenic toughness - no brittle transition
+Aluminum 6061-T6,ASTM B209,77,167,23.6,276,310,12,N/A,2700,Commonly used for non-pressure components
+Copper C10100,ASTM B152,20,401,16.8,69,220,45,N/A,8940,Oxygen-free copper for thermal conduction
+CFRP Composite,Manufacturer Spec,20,Variable,Variable,Variable,Variable,Variable,N/A,1600,Resin system must be cryogenic qualified
+PTFE Virgin,ASTM D4894,20,0.25,120,20,30,300,N/A,2200,Seals and gaskets - virgin only
+Vespel SP-3,DuPont Spec,20,0.35,50,90,170,10,N/A,1430,Valve seats and bearing surfaces
+Grafoil,Manufacturer Spec,20,140,1.0,20,35,5,N/A,1100,Flexible graphite for seals
+Inconel X-750,AMS 5667,20,11.7,12.6,1000,1380,15,70,8280,Springs and high-temperature seals
+Titanium Ti-6Al-4V,AMS 4911,20,6.7,8.6,830,900,10,20,4430,Limited use - hydrogen embrittlement concern
+304 Stainless Steel,ASTM A240,20,15.1,17.3,205,515,40,120,8000,Alternative to 316L - slightly lower corrosion resistance
+Hastelloy C-276,ASTM B575,20,10.0,11.2,365,785,40,100,8890,Excellent corrosion resistance
+G-10 Epoxy-Glass,NEMA G-10,77,0.29,20,310,480,N/A,N/A,1800,Electrical insulation and structural supports
+Mylar (MLI),Manufacturer Spec,20,0.15,60,N/A,N/A,N/A,N/A,1390,Multi-layer insulation reflective layers
+Kapton (MLI),DuPont Spec,20,0.12,20,N/A,N/A,N/A,N/A,1420,MLI spacer material - radiation stable
+Teflon FEP,ASTM D3368,20,0.20,140,15,25,300,N/A,2150,Wire insulation and low-friction surfaces
