@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "DATA_57-04-03_Slat-Track-And-Wear-Limits_rev1.0.0_20251027"
+document: { type: "DATA", title: "57-04-03: Slat Track And Wear Limits", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Advanced", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "67f7684ff034d078bc49bf81b9fcea4e94bd6d4bc1142029d9eba3e87133f330" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

@@ -1,0 +1,12 @@
+schema_version: "1.1"
+id: "PROC_57-02-02_Spar-And-Rib-Inspection_rev1.0.0_20251027"
+document: { type: "PROC", title: "57-02-02: Spar and Rib Inspection", revision: "1.0.0", effective_date: "2025-10-27" }
+procedure: { category: "Inspection", skill_level: "Advanced", estimated_duration: "8 hours", personnel_required: 2 }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: ["Confined space", "Fuel vapor", "Work at height"], criticality: "Critical" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }, { authority: "NDT Engineering", status: "Approved", date: "2025-10-25" }]
+quality: { inspection_required: true, rii_required: true }
+traceability: { source_documents: ["MAINT-PLAN-57-001"], crossrefs: ["ATA 28", "PROC_57-11-01", "DATA_57-02-04"] }
+training_required: { level: "Advanced", certifications: ["NDT Level II", "Confined Space"] }
+integrity: { checksum: { algorithm: "sha256", value: "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering Team", description: "Initial release" }]

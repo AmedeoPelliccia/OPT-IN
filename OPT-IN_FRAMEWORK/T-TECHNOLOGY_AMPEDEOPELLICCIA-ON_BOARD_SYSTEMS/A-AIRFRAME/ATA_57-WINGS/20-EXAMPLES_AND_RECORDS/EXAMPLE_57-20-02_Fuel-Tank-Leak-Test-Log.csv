@@ -1,0 +1,5 @@
+Test_ID,MSN,Date,Tank_ID,Test_Pressure_psi,Test_Duration_min,Initial_Level_gal,Final_Level_gal,Leak_Rate_oz_per_hr,Result,Inspector,Notes
+LEAK-001,AMP360-001,2029-12-10,LH_MAIN_TANK,5.0,60,1000.0,999.95,0.08,PASS,J_Smith,Post-sealant repair WS 25.5
+LEAK-002,AMP360-001,2029-12-11,RH_MAIN_TANK,5.0,60,1000.0,999.92,0.096,PASS,J_Smith,Routine inspection
+LEAK-003,AMP360-002,2030-01-15,LH_MAIN_TANK,5.0,60,1000.0,999.85,0.15,CONDITIONAL,A_Johnson,Marginal leak rate - monitor
+LEAK-004,AMP360-002,2030-01-16,LH_MAIN_TANK,5.0,60,1000.0,998.5,2.4,FAIL,A_Johnson,Failed - sealant repair required

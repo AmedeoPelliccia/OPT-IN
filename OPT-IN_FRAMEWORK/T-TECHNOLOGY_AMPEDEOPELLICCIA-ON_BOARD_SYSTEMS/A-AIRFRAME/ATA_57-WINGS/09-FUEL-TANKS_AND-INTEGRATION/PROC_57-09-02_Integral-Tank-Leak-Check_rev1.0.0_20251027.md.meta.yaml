@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "PROC_57-09-02_Integral-Tank-Leak-Check_rev1.0.0_20251027"
+document: { type: "PROC", title: "57-09-02: Integral Tank Leak Check", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Advanced", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "98923e4115fc085eba15299ca7cf1a8c6b5d97116b9ac2994f334da059f12b94" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

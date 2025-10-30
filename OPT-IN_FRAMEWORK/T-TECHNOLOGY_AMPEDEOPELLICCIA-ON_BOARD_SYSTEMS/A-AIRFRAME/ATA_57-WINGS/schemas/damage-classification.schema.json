@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata57/damage-classification.schema.json",
+  "title": "Wing Damage Classification Schema",
+  "description": "Classification schema for wing structural damage assessment",
+  "type": "object",
+  "properties": {
+    "damage_id": {
+      "type": "string",
+      "description": "Unique damage identification number"
+    },
+    "discovery_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date damage was discovered"
+    },
+    "damage_type": {
+      "type": "string",
+      "enum": [
+        "Impact",
+        "Corrosion",
+        "Fatigue_Crack",
+        "Delamination",
+        "Lightning_Strike",
+        "Foreign_Object",
+        "Manufacturing_Defect",
+        "Overstress",
+        "Environmental",
+        "Other"
+      ],
+      "description": "Type of damage found"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Minor", "Moderate", "Major", "Critical"],
+      "description": "Severity classification per damage tolerance assessment"
+    },
+    "affected_component": {
+      "type": "string",
+      "enum": [
+        "Wing_Box",
+        "Front_Spar",
+        "Rear_Spar",
+        "Rib",
+        "Upper_Skin",
+        "Lower_Skin",
+        "Leading_Edge",
+        "Trailing_Edge",
+        "Flap",
+        "Slat",
+        "Elevon",
+        "Flaperon",
+        "Spoiler",
+        "Fastener",
+        "Fuel_Tank_Sealant",
+        "Other"
+      ],
+      "description": "Component affected by damage"
+    },
+    "location": {
+      "type": "object",
+      "description": "Location of damage",
+      "properties": {
+        "wing_station": {
+          "type": "number",
+          "description": "Wing station coordinate"
+        },
+        "butt_line": {
+          "type": "number",
+          "description": "Butt line coordinate"
+        },
+        "water_line": {
+          "type": "number",
+          "description": "Water line coordinate"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Damage dimensions",
+      "properties": {
+        "length": {
+          "type": "number",
+          "description": "Length of damage (inches or mm)"
+        },
+        "width": {
+          "type": "number",
+          "description": "Width of damage (inches or mm)"
+        },
+        "depth": {
+          "type": "number",
+          "description": "Depth of damage (inches or mm)"
+        },
+        "area": {
+          "type": "number",
+          "description": "Total affected area (square inches or cm²)"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["inch", "mm", "in2", "cm2"],
+          "description": "Unit of measurement"
+        }
+      }
+    },
+    "primary_structure_affected": {
+      "type": "boolean",
+      "description": "Whether primary load path is affected"
+    },
+    "fuel_tank_compromised": {
+      "type": "boolean",
+      "description": "Whether fuel tank integrity is compromised"
+    },
+    "immediate_action_required": {
+      "type": "boolean",
+      "description": "Whether immediate repair action is required"
+    },
+    "allowable_flight_cycles": {
+      "type": ["number", "null"],
+      "description": "Number of flight cycles allowed before mandatory repair (null if immediate repair required)"
+    },
+    "engineering_disposition_required": {
+      "type": "boolean",
+      "description": "Whether engineering disposition is required"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "hash": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          }
+        }
+      },
+      "description": "Photos of damage with SHA-256 hashes"
+    }
+  },
+  "required": [
+    "damage_id",
+    "discovery_date",
+    "damage_type",
+    "severity",
+    "affected_component",
+    "primary_structure_affected"
+  ]
+}

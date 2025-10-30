@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Wing Repair Record Schema",
+  "type": "object",
+  "required": ["record_id", "timestamp_utc", "msn", "location", "repair_procedure_ref", "inspections"],
+  "properties": {
+    "record_id": { 
+      "type": "string",
+      "description": "Unique repair record identifier"
+    },
+    "timestamp_utc": { 
+      "type": "string", 
+      "format": "date-time",
+      "description": "Timestamp of repair completion in UTC (ISO 8601)"
+    },
+    "msn": { 
+      "type": "string",
+      "description": "Manufacturer Serial Number"
+    },
+    "location": {
+      "type": "object",
+      "description": "Wing location details",
+      "properties": {
+        "wing_station": { 
+          "type": "string",
+          "description": "Wing station coordinate (e.g., WS 25.5)"
+        },
+        "spar_id": { 
+          "type": "string",
+          "description": "Spar identification (e.g., FRONT_SPAR, REAR_SPAR)"
+        },
+        "rib_id": { 
+          "type": "string",
+          "description": "Rib identification (e.g., RIB_32)"
+        },
+        "surface": { 
+          "enum": ["UPPER", "LOWER", "LEADING_EDGE", "TRAILING_EDGE"],
+          "description": "Wing surface location"
+        }
+      },
+      "required": ["wing_station", "surface"]
+    },
+    "control_surface_id": { 
+      "type": ["string", "null"],
+      "description": "Control surface part number and serial if applicable"
+    },
+    "post_repair_leak_check_result": { 
+      "type": "string", 
+      "enum": ["PASS", "FAIL", "N/A"],
+      "description": "Fuel tank leak check result post-repair"
+    },
+    "repair_procedure_ref": { 
+      "type": "string",
+      "description": "Reference to repair procedure (e.g., SRM 57-30-01, Repair 4)"
+    },
+    "inspections": { 
+      "type": "array", 
+      "items": { 
+        "type": "object", 
+        "properties": { 
+          "type": { 
+            "enum": ["NDT", "Visual", "Functional"],
+            "description": "Inspection type"
+          }, 
+          "report_hash": { 
+            "type": "string",
+            "description": "SHA-256 hash of inspection report file"
+          },
+          "inspector": {
+            "type": "string",
+            "description": "Inspector name and certification level"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Inspection date (ISO 8601)"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "Conditional"],
+            "description": "Inspection result"
+          }
+        },
+        "required": ["type", "report_hash", "result"]
+      },
+      "description": "Array of inspection records"
+    },
+    "damage_classification": {
+      "type": "object",
+      "description": "Damage classification details",
+      "properties": {
+        "damage_type": {
+          "type": "string",
+          "enum": ["Impact", "Corrosion", "Fatigue_Crack", "Delamination", "Lightning_Strike", "Foreign_Object", "Manufacturing_Defect", "Other"],
+          "description": "Type of damage"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["Minor", "Moderate", "Major", "Critical"],
+          "description": "Severity classification"
+        }
+      }
+    },
+    "materials_used": {
+      "type": "array",
+      "description": "Materials used in repair",
+      "items": {
+        "type": "object",
+        "properties": {
+          "material_spec": {
+            "type": "string",
+            "description": "Material specification (e.g., AMS, BMS, MMPDS)"
+          },
+          "lot_number": {
+            "type": "string",
+            "description": "Material lot or batch number"
+          },
+          "certificate_of_conformance": {
+            "type": "string",
+            "description": "Certificate of Conformance number"
+          }
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Traceability information",
+      "properties": {
+        "work_order_number": {
+          "type": "string",
+          "description": "Maintenance work order number"
+        },
+        "performed_by": {
+          "type": "string",
+          "description": "Technician who performed repair"
+        },
+        "inspected_by": {
+          "type": "string",
+          "description": "Inspector who verified repair"
+        },
+        "approved_by": {
+          "type": "string",
+          "description": "Engineering authority who approved repair"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "Repair effectivity",
+      "properties": {
+        "config": {
+          "type": "string",
+          "description": "Aircraft configuration (e.g., Block A)"
+        },
+        "msn_range": {
+          "type": "string",
+          "description": "Applicable MSN range"
+        }
+      }
+    }
+  }
+}

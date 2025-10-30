@@ -1,0 +1,11 @@
+schema_version: "1.1"
+id: "DATA_57-02-04_Spar-Cap-And-Rib-Strength-Limits_rev1.0.0_20251027"
+document: { type: "DATA", title: "57-02-04: Spar Cap and Rib Strength Limits", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: ["Exceeding limits may cause structural failure"], criticality: "Critical" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }, { authority: "Airworthiness Engineering", status: "Approved", date: "2025-10-26" }]
+traceability: { source_documents: ["STRUCT-SPEC-57-001"], crossrefs: ["PROC_57-02-02"], parent_document: "INDEX.meta.yaml" }
+training_required: { level: "Advanced", certifications: ["Structural Analysis"] }
+integrity: { checksum: { algorithm: "sha256", value: "c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial limits table" }]
+notes: "All dimensions in inches ksi unless specified. Inspection methods defined in PROC_57-02-02 and PROC_57-11-01."

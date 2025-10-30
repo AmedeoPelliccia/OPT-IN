@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "TESTPLAN_57-14-01_Wing-Qualification-And-Certification-Plan_rev1.0.0_20251027"
+document: { type: "TESTPLAN", title: "57-14-01: Wing Qualification And Certification Plan", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Advanced", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "32c294c975b5bddfce58fecc15540687aaec943fc54449b71aa631393b1da86d" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

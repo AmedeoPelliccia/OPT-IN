@@ -1,0 +1,118 @@
+schema_version: "1.1"
+id: "ATA_57_INDEX_rev1.0.0_20251027"
+chapter: "ATA 57 - WINGS"
+governance:
+  owner_role: "Wing Structures Engineering"
+  review_board: ["Airworthiness Engineering", "Aerodynamics", "Flight Controls", "Fuel Systems", "Materials & Processes"]
+  regulatory_basis: ["FAA Part 25.571", "FAA Part 25.613", "FAA Part 25.619", "EASA CS-25"]
+traceability:
+  crossrefs:
+    - "ATA 20"  # Standard Practices - Airframe (torque, fasteners, bonding, sealing)
+    - "ATA 27"  # Flight Controls (rigging, control law interaction, actuators)
+    - "ATA 28"  # Fuel system components within wing tanks
+    - "ATA 30"  # Ice & Rain protection systems on leading edge
+    - "ATA 51"  # Standard Practices and Structures - General (composite repair methods, FEA)
+    - "ATA 53"  # Fuselage (wing-body integration, pressure vessel interface)
+    - "ATA 55"  # Stabilizers (vertical stabilizers/winglets attachment)
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "STRUCT-SPEC-57-001: Wing Structural Design Specification"
+    - "MAINT-PLAN-57-001: Wing Maintenance Program"
+    - "CERT-PLAN-57-001: Wing Certification Test Plan"
+    - "AERO-SPEC-57-001: Wing Aeroelastic Requirements"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Structural failure of primary load path (spars, wing box)"
+    - "Fuel tank leak leading to fire or loss of fuel"
+    - "Control surface detachment or jamming"
+    - "Delamination or void growth in composite structure"
+    - "Lightning strike damage to primary structure"
+    - "Actuator failure leading to loss of control authority"
+    - "Fastener failure in critical joints"
+    - "Pressure vessel breach at wing-fuselage integration"
+  airworthiness_limitation_items:
+    - "Front spar and rear spar caps"
+    - "Wing-to-fuselage attachment fittings"
+    - "Fuel tank integral structure"
+    - "Elevon/flaperon hinge fittings"
+    - "Slat and flap track assemblies"
+    - "Control surface actuator mounts"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata57.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn_range: ["AMP360-001", "AMP360-050"]
+  config: "Block A"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, damage tolerance philosophy, damage limits"
+    - name: "02-WING-BOX_AND-PRIMARY_STRUCTURE"
+      description: "Wing box architecture, load path, spar/rib inspections, strength limits"
+    - name: "03-SKIN-PANELS_AND-SPLICES"
+      description: "Metallic and composite skin repair procedures, splice details, laminate schedules"
+    - name: "04-LEADING_EDGE_AND-ICE_PROTECTION"
+      description: "Leading edge structure, slat tracks, ice protection systems (ref ATA-30)"
+    - name: "05-TRAILING_EDGE"
+      description: "Trailing edge structure and fairings"
+    - name: "06-FLAPS-SLATS_AND-ACTUATION"
+      description: "Flap/slat rigging procedures, track and carriage inspection, tolerances"
+    - name: "07-CONTROL_SURFACES_AILERONS_AND-TRIM"
+      description: "Elevon/flaperon description, control surface balancing procedures"
+    - name: "08-SPOILERS_SPEEDBRAKES_AND-LOAD_INTERACTIONS"
+      description: "Spoiler panel inspection and operational checks"
+    - name: "09-FUEL-TANKS_AND-INTEGRATION"
+      description: "Fuel tank entry, sealant repair, integral tank leak checks"
+    - name: "10-FASTENERS_FITS_AND-JOINTS"
+      description: "Wing skin fastener replacement procedures"
+    - name: "11-NDT_AND-INSPECTION"
+      description: "Ultrasonic inspection for wing box spars and composite structures"
+    - name: "12-LIGHTNING-STRIKE-PROTECTION_AND-BONDING"
+      description: "LSP restoration and continuity testing for wings"
+    - name: "13-REPAIR-GUIDELINES_AND-REPAIRABILITY"
+      description: "Composite skin bonded repair procedures for upper wing surface"
+    - name: "14-QUALIFICATION_AND-TEST_PLANS"
+      description: "Wing qualification and certification plan, test matrix, failure criteria"
+    - name: "15-MATERIALS_M_AND_P_TRACEABILITY"
+      description: "Material specifications, Certificate of Conformance requirements"
+    - name: "16-NONCONFORMANCE_AND-DEVIATION"
+      description: "Nonconformance handling and engineering disposition procedures"
+    - name: "17-ENVIRONMENTAL_AND-OPERATING_LIMITS"
+      description: "Temperature and moisture limits for composite materials"
+    - name: "18-DIAGRAMS_AND-REFERENCE_DATA"
+      description: "Wing master layout, station diagrams, reference drawings"
+    - name: "19-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars"
+    - name: "20-EXAMPLES_AND_RECORDS"
+      description: "Example repair records, fuel tank leak test logs, NDT report samples"
+  schemas:
+    - name: "repair-record.schema.json"
+      description: "Repair record schema with wing-specific fields (wing station, spar/rib IDs, surface, control surface ID, post-repair leak check, NDT hashes, effectivity)"
+    - name: "damage-classification.schema.json"
+      description: "Damage classification schema for wing structural damage assessment"
+    - name: "wing-spec.schema.json"
+      description: "Wing component specification schema"
+    - name: "inspection.schema.json"
+      description: "Inspection record schema with acceptance criteria"
+approvals:
+  - authority: "Wing Structures Engineering"
+    status: "Released"
+    date: "2025-10-23"
+  - authority: "Flight Controls Engineering"
+    status: "Released"
+    date: "2025-10-23"
+  - authority: "Fuel Systems Engineering"
+    status: "Released"
+    date: "2025-10-24"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-26"
+  - authority: "Materials & Processes"
+    status: "Approved"
+    date: "2025-10-26"
+revision: "1.0.0"
+effective_date: "2025-10-27"
+next_review: "2026-10-27"

@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "PROC_57-11-01_Ultrasonic-Inspection-For-Wing-Box-Spars_rev1.0.0_20251027"
+document: { type: "PROC", title: "57-11-01: Ultrasonic Inspection For Wing Box Spars", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Specialized", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "269bf3fe2c0e34a8a49b4c4cd640abc86b8d2d99a17232e810e5f60a7cddb9b6" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

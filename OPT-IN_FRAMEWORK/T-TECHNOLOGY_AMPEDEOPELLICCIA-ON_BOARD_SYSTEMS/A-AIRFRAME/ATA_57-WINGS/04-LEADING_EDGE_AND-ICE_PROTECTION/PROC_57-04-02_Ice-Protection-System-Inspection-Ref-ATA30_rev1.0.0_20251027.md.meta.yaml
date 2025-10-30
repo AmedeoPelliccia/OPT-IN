@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "PROC_57-04-02_Ice-Protection-System-Inspection-Ref-ATA30_rev1.0.0_20251027"
+document: { type: "PROC", title: "57-04-02: Ice Protection System Inspection Ref ATA30", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Advanced", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "e7f3ff4a98327b9830b9ad8ca25a3fbdfb43f70c2cf48dcf6d0d3268de3b6d67" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

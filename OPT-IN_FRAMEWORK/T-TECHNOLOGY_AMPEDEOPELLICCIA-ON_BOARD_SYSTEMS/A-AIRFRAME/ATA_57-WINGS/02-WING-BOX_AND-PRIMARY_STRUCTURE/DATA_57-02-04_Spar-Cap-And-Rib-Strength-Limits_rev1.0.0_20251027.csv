@@ -1,0 +1,13 @@
+Component,Location,Min_Residual_Thickness_inch,Min_Ultimate_Strength_ksi,Max_Delamination_Area_in2,Max_Void_Content_percent,Inspection_Method
+Front_Spar_Cap,Wing_Root,0.450,180,0.0,2.0,UT_C-Scan
+Front_Spar_Cap,Mid_Span,0.400,180,0.25,2.0,UT_C-Scan
+Front_Spar_Cap,Wing_Tip,0.350,180,0.50,2.5,UT_C-Scan
+Rear_Spar_Cap,Wing_Root,0.400,180,0.0,2.0,UT_C-Scan
+Rear_Spar_Cap,Mid_Span,0.350,180,0.25,2.0,UT_C-Scan
+Front_Spar_Web,All,0.125,65,1.0,3.0,UT_Pulse-Echo
+Rear_Spar_Web,All,0.125,65,1.0,3.0,UT_Pulse-Echo
+Primary_Rib_Flange,All,0.100,55,0.50,3.0,Visual_DVI
+Primary_Rib_Web,All,0.080,50,2.0,3.5,Visual_Tap-Test
+Upper_Skin,High_Stress_Zone,0.200,70,0.50,2.5,UT_C-Scan
+Lower_Skin,High_Stress_Zone,0.225,75,0.25,2.0,UT_C-Scan
+Stringer,All,0.060,60,1.0,3.0,Eddy_Current

@@ -1,0 +1,7 @@
+Skin_Panel_ID,Location,Material,Scarf_Ratio,Laminate_Schedule,Adhesive_Spec,Cure_Cycle_degF,Cure_Time_min,Post_Repair_NDT
+SP-UPPER-001,Upper_Surface_Inboard,CFRP_Uni-Tape,1:50,[0/45/-45/90]4s,BMS_5-101,350,120,C-Scan_UT
+SP-UPPER-002,Upper_Surface_Mid-Span,CFRP_Uni-Tape,1:50,[0/45/-45/90]3s,BMS_5-101,350,120,C-Scan_UT
+SP-LOWER-001,Lower_Surface_Inboard,CFRP_Uni-Tape,1:40,[0/90/45/-45]5s,BMS_5-101,350,120,C-Scan_UT
+SP-LOWER-002,Lower_Surface_Mid-Span,CFRP_Uni-Tape,1:40,[0/90/45/-45]4s,BMS_5-101,350,120,C-Scan_UT
+SP-LE-001,Leading_Edge,CFRP_Fabric,1:50,[0/45]3s,BMS_5-101,350,120,Pulse-Echo_UT
+SP-TE-001,Trailing_Edge,CFRP_Fabric,1:50,[0/45]2s,BMS_5-101,350,120,Visual_Tap-Test
