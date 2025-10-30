@@ -1,0 +1,28 @@
+# Control Surface Limits and Specifications
+# Units: degrees (deg), kg·mm (mass balance), N·m (torque)
+# Last Updated: 2025-10-30
+
+Surface_Type,Surface_ID,Deflection_Limit_Up_deg,Deflection_Limit_Down_deg,Freeplay_Limit_deg,Mass_Balance_kg_mm,Mass_Balance_Tolerance_kg_mm,Hinge_Torque_Nm,Installation_Torque_Actuator_Nm
+Aileron_Left_Inboard,CS-27-AIL-LI,25,-25,0.5,15000,500,150,150
+Aileron_Left_Outboard,CS-27-AIL-LO,25,-25,0.5,15000,500,150,150
+Aileron_Right_Inboard,CS-27-AIL-RI,25,-25,0.5,15000,500,150,150
+Aileron_Right_Outboard,CS-27-AIL-RO,25,-25,0.5,15000,500,150,150
+Elevator_Left,CS-27-ELEV-L,20,-15,0.5,28000,800,220,220
+Elevator_Right,CS-27-ELEV-R,20,-15,0.5,28000,800,220,220
+Rudder_Upper,CS-27-RUD-U,30,-30,0.5,42000,1200,320,320
+Rudder_Lower,CS-27-RUD-L,30,-30,0.5,42000,1200,320,320
+Trim_Tab_Elevator_Left,CS-27-TT-EL,10,-10,0.8,800,50,25,25
+Trim_Tab_Elevator_Right,CS-27-TT-ER,10,-10,0.8,800,50,25,25
+Trim_Tab_Rudder,CS-27-TT-RUD,10,-10,0.8,650,50,20,20
+Spoiler_L1,CS-27-SPL-L1,60,0,1.0,2500,200,50,50
+Spoiler_L2,CS-27-SPL-L2,60,0,1.0,2500,200,50,50
+Spoiler_L3,CS-27-SPL-L3,60,0,1.0,2500,200,50,50
+Spoiler_L4,CS-27-SPL-L4,60,0,1.0,2500,200,50,50
+Spoiler_L5,CS-27-SPL-L5,60,0,1.0,2500,200,50,50
+Spoiler_L6,CS-27-SPL-L6,60,0,1.0,2500,200,50,50
+Spoiler_R1,CS-27-SPL-R1,60,0,1.0,2500,200,50,50
+Spoiler_R2,CS-27-SPL-R2,60,0,1.0,2500,200,50,50
+Spoiler_R3,CS-27-SPL-R3,60,0,1.0,2500,200,50,50
+Spoiler_R4,CS-27-SPL-R4,60,0,1.0,2500,200,50,50
+Spoiler_R5,CS-27-SPL-R5,60,0,1.0,2500,200,50,50
+Spoiler_R6,CS-27-SPL-R6,60,0,1.0,2500,200,50,50

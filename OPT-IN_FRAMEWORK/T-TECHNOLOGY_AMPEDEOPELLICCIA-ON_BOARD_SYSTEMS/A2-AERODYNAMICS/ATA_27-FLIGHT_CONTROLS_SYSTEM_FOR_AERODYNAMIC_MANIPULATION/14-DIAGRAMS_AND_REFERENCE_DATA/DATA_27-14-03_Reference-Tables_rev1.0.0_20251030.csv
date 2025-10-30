@@ -1,0 +1,37 @@
+# Reference Tables for ATA 27 Flight Control System
+# Last Updated: 2025-10-30
+
+# CONTROL SURFACE DEFLECTION LIMITS (degrees)
+Surface,Up_Limit_deg,Down_Limit_deg,Left_Limit_deg,Right_Limit_deg
+Aileron,25,-25,N/A,N/A
+Elevator,20,-15,N/A,N/A
+Rudder,N/A,N/A,30,-30
+Spoiler,60,0,N/A,N/A
+
+# ACTUATOR RATE LIMITS (deg/sec)
+Actuator_Type,Max_Rate_No_Load_deg_per_sec,Max_Rate_Full_Load_deg_per_sec
+EHA_Aileron,15,12
+EHA_Elevator,12,10
+EHA_Rudder,10,8
+EMA_Spoiler,20,18
+
+# TORQUE VALUES (N·m)
+Fastener_Type,Application,Torque_Nm,Tolerance_Nm
+AN4_Bolt,Hinge_Pin_Retention,25,2
+AN6_Bolt,Actuator_Attachment,150,10
+AN8_Bolt,Control_Surface_Attachment,220,15
+MS21042_Locknut,General,Per_Bolt_Size,N/A
+
+# CABLE TENSION (Newtons)
+Cable_Assembly,Application,Nominal_Tension_N,Tolerance_Percent
+CS-CABLE-01,Aileron_Control,800,5
+CS-CABLE-02,Elevator_Control,1200,5
+CS-CABLE-03,Rudder_Control,1000,5
+
+# SENSOR ACCURACY REQUIREMENTS
+Sensor_Type,Range,Accuracy_Required,Calibration_Interval_Months
+AoA,±20_deg,±0.5_deg,12
+Position_LVDT,0-100_mm,±0.5_percent_FS,24
+Position_RVDT,±180_deg,±0.5_deg,24
+Rate_Gyro,±300_deg_per_sec,±1_deg_per_sec,12
+Accelerometer,±10_g,±0.1_g,12

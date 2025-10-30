@@ -1,0 +1,325 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata27/actuator.schema.json",
+  "title": "Flight Control Actuator Specification and Test Record",
+  "description": "Schema for actuator specifications and qualification test records",
+  "type": "object",
+  "properties": {
+    "actuatorId": {
+      "type": "string",
+      "description": "Unique actuator identifier",
+      "pattern": "^ACT-27-[A-Z0-9]{6,12}$"
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Actuator part number"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Actuator serial number"
+    },
+    "actuatorType": {
+      "type": "string",
+      "enum": ["Electro-Hydraulic (EHA)", "Electro-Mechanical (EMA)", "Hydraulic", "Piezoelectric", "Shape_Memory_Alloy"],
+      "description": "Type of actuator"
+    },
+    "application": {
+      "type": "string",
+      "enum": ["Primary_Flight_Control", "Secondary_Flight_Control", "Trim", "High_Lift"],
+      "description": "Actuator application"
+    },
+    "specifications": {
+      "type": "object",
+      "properties": {
+        "maxForce_N": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum force in Newtons"
+        },
+        "maxTorque_Nm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum torque in N·m"
+        },
+        "maxRate_deg_per_sec": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum rate in deg/sec"
+        },
+        "stroke_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total stroke in mm"
+        },
+        "backlashLimit_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum allowable backlash in mm"
+        },
+        "backlashLimit_deg": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum allowable backlash in degrees (for rotary)"
+        },
+        "positionAccuracy_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Position accuracy as % of full stroke"
+        },
+        "hysteresisLimit_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Maximum hysteresis as % of full stroke"
+        },
+        "operatingVoltage_V": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Operating voltage in V"
+        },
+        "operatingPressure_MPa": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Operating hydraulic pressure in MPa"
+        },
+        "maxLeakage_mL_per_hr": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum allowable leakage in mL/hr"
+        },
+        "mass_kg": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Actuator mass in kg"
+        }
+      },
+      "required": ["maxForce_N", "maxRate_deg_per_sec"]
+    },
+    "lifeRequirements": {
+      "type": "object",
+      "properties": {
+        "qualificationCycles": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Qualification test cycles required"
+        },
+        "designLifeCycles": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Design life in cycles"
+        },
+        "designLifeHours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Design life in hours"
+        },
+        "maintenanceInterval_FH": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maintenance interval in flight hours"
+        }
+      }
+    },
+    "failSafeFeatures": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Load_Limiting",
+          "Jam_Detection",
+          "Redundant_Motors",
+          "Redundant_Power_Supply",
+          "Mechanical_Bypass",
+          "Hydraulic_Fuse",
+          "Electronic_Fuse",
+          "Position_Monitoring",
+          "Force_Monitoring"
+        ]
+      },
+      "description": "Fail-safe and fault tolerance features"
+    },
+    "qualificationTests": {
+      "type": "object",
+      "properties": {
+        "stepResponseTest": {
+          "type": "object",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "commandedStep_percent": {
+              "type": "number",
+              "description": "Commanded step as % of full stroke"
+            },
+            "responseTime_ms": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Measured response time in ms"
+            },
+            "overshoot_percent": {
+              "type": "number",
+              "description": "Overshoot as % of commanded step"
+            },
+            "withinSpec": {
+              "type": "boolean",
+              "description": "Whether result is within specification"
+            }
+          }
+        },
+        "frequencyResponseTest": {
+          "type": "object",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "bandwidth_Hz": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Measured bandwidth in Hz"
+            },
+            "phaseMargin_deg": {
+              "type": "number",
+              "description": "Phase margin in degrees"
+            },
+            "gainMargin_dB": {
+              "type": "number",
+              "description": "Gain margin in dB"
+            },
+            "withinSpec": {
+              "type": "boolean",
+              "description": "Whether result is within specification"
+            }
+          }
+        },
+        "stallLoadTest": {
+          "type": "object",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "stallLoad_Nm": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Measured stall load in N·m"
+            },
+            "withinSpec": {
+              "type": "boolean",
+              "description": "Whether result is within specification"
+            }
+          }
+        },
+        "enduranceTest": {
+          "type": "object",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "cyclesCompleted": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Number of cycles completed"
+            },
+            "degradationObserved": {
+              "type": "boolean",
+              "description": "Whether degradation was observed"
+            },
+            "withinSpec": {
+              "type": "boolean",
+              "description": "Whether result is within specification"
+            }
+          }
+        },
+        "thermalTest": {
+          "type": "object",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "minTemp_C": {
+              "type": "number",
+              "description": "Minimum test temperature in °C"
+            },
+            "maxTemp_C": {
+              "type": "number",
+              "description": "Maximum test temperature in °C"
+            },
+            "withinSpec": {
+              "type": "boolean",
+              "description": "Whether result is within specification"
+            }
+          }
+        },
+        "jamTest": {
+          "type": "object",
+          "properties": {
+            "testDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Test date (ISO 8601)"
+            },
+            "jamDetected": {
+              "type": "boolean",
+              "description": "Whether jam was successfully detected"
+            },
+            "responseTime_ms": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Jam detection response time in ms"
+            },
+            "withinSpec": {
+              "type": "boolean",
+              "description": "Whether result is within specification"
+            }
+          }
+        }
+      }
+    },
+    "materialCertification": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "componentName": {
+            "type": "string",
+            "description": "Component name (e.g., housing, piston, seal)"
+          },
+          "materialSpec": {
+            "type": "string",
+            "description": "Material specification (e.g., AMS, BMS)"
+          },
+          "lotNumber": {
+            "type": "string",
+            "description": "Material lot number"
+          },
+          "cofcReference": {
+            "type": "string",
+            "description": "Certificate of Conformance reference"
+          }
+        },
+        "required": ["componentName", "materialSpec", "cofcReference"]
+      }
+    },
+    "qualificationStatus": {
+      "type": "string",
+      "enum": ["In_Progress", "Qualified", "Failed", "Conditional"],
+      "description": "Overall qualification status"
+    },
+    "qualificationReportReference": {
+      "type": "string",
+      "description": "Reference to detailed qualification test report"
+    }
+  },
+  "required": ["actuatorId", "partNumber", "serialNumber", "actuatorType", "application", "specifications"],
+  "additionalProperties": true
+}

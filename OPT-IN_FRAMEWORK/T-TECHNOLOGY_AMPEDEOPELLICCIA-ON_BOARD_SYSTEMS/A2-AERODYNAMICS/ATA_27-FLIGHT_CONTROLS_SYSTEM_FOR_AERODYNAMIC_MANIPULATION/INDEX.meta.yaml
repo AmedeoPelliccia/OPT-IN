@@ -1,0 +1,129 @@
+schema_version: "1.1"
+id: "ATA_27_INDEX_rev1.0.0_20251030"
+chapter: "ATA 27 - FLIGHT CONTROLS SYSTEM FOR AERODYNAMIC MANIPULATION"
+governance:
+  owner_role: "Flight Controls Engineering / Avionics Engineering"
+  review_board: ["Airworthiness Engineering", "Safety Engineering", "Systems Integration", "Software Quality Assurance", "Materials & Processes"]
+  regulatory_basis: ["FAA Part 25.671", "FAA Part 25.672", "FAA Part 25.675", "FAA Part 25.677", "FAA Part 25.679", "FAA Part 25.683", "FAA Part 25.685", "FAA Part 25.697", "FAA Part 25.703", "FAA Part 25.1309", "FAA Part 25.1351", "EASA CS-25", "DO-178C DAL-A", "DO-254 DAL-A", "DO-160", "ARP4754A", "ARP4761"]
+traceability:
+  crossrefs:
+    - "ATA 20"  # Standard Practices - Airframe (torque, fasteners, bonding, sealing)
+    - "ATA 22"  # Auto Flight (autopilot integration, mode control, flight envelope protection)
+    - "ATA 24"  # Electrical Power (power supply requirements, redundancy, load analysis)
+    - "ATA 29"  # Hydraulic Power (hydraulic supply, pressure requirements, contamination control)
+    - "ATA 31"  # Indicating/Recording Systems (cockpit displays, control position indication, fault annunciation)
+    - "ATA 42"  # Integrated Modular Avionics (computing platform, software integration, partitioning)
+    - "ATA 51"  # Standard Practices and Structures - General (composite repair methods for control surfaces)
+    - "ATA 55"  # Stabilizers (control surface interface, rigging coordination)
+    - "ATA 57"  # Wings (control surface interface, actuator mounting)
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "FCS-SPEC-27-001: Flight Control System Design Specification"
+    - "FCS-ARCH-27-001: Flight Control System Architecture Document"
+    - "FCS-SAS-27-001: Software Accomplishment Summary (DO-178C)"
+    - "FCS-HAS-27-001: Hardware Accomplishment Summary (DO-254)"
+    - "FCS-SAFETY-27-001: Flight Control System Safety Assessment (ARP4761)"
+    - "FCS-QUAL-27-001: Actuator Qualification Test Report"
+    - "FCS-CTRL-27-001: Control Law Specification and Validation Report"
+    - "MAINT-PLAN-27-001: Flight Control System Maintenance Program"
+    - "CERT-PLAN-27-001: Flight Control System Certification Test Plan"
+safety:
+  criticality: "Critical - Flight Safety Item"
+  hazards:
+    - "Flight control software error leading to loss of control"
+    - "Actuator jam or runaway causing uncommanded control surface deflection"
+    - "Control surface detachment or structural failure"
+    - "Sensor failure causing erroneous control commands"
+    - "FCC hardware failure leading to loss of redundancy"
+    - "Control cable break or pulley seizure"
+    - "Hydraulic or electrical power loss to actuators"
+    - "Lightning strike damage to control electronics or sensors"
+    - "Aeroelastic flutter induced by control surface malfunction"
+    - "Human factor error in rigging or maintenance"
+  airworthiness_limitation_items:
+    - "Flight Control Computer (FCC) software baseline"
+    - "Actuator attachment fittings to primary structure"
+    - "Control surface hinge fittings and bearings"
+    - "Primary flight control sensors (AoA, rate gyros, accelerometers)"
+    - "Control cable attach points and turnbuckles"
+    - "Redundant power supply circuits to FCCs"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata27.sh"
+web_documentation:
+  url: "https://opt-in-framework-doc--amedeopelliccia.github.app/"
+  description: "Interactive web-based documentation management system for ATA 27 Flight Controls"
+  features:
+    - "Hierarchical navigation tree for all chapters and documents"
+    - "Schema viewer and validator for all 5 JSON schemas"
+    - "Compliance matrix dashboard with regulatory mapping"
+    - "Full-text search and filtering across all documents"
+    - "Inspection interval tracker with calendar view"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, definitions, taxonomy, regulatory compliance matrix"
+    - name: "02-CONTROL_SURFACES"
+      description: "Control surface types and interfaces, removal/installation, balance and freeplay checks, surface limits"
+    - name: "03-ACTUATORS_AND_SERVO_SYSTEMS"
+      description: "Actuator types and fail-safe philosophy, electro-hydro actuator removal/checkout, bench test and calibration, specs and life limits"
+    - name: "04-CABLES_LINKS_AND_MECHANICAL_INTERFACES"
+      description: "Control cable inspection and tensioning, pulley and bearing checks, rod end and cable tolerances"
+    - name: "05-ELECTRICAL_CONTROLS_AND_FCC"
+      description: "Flight Control Computer architecture, FCC firmware load and verification, FCC redundancy matrix"
+    - name: "06-FLIGHT_CONTROL_LAWS_AND_AUTOPILOT"
+      description: "Control laws and mode descriptions, control law validation and SIL testing, control law test matrix"
+    - name: "07-SENSORS_AND_TRANSDUCERS"
+      description: "Angle of attack sensor calibration, position sensor checks, sensor specs and calibration intervals"
+    - name: "08-FLIGHT-SAFETY_AND_FAILURE_MODES"
+      description: "Failure modes, effects and MFD strategy, redundancy and degradation matrix, graceful degradation test procedures"
+    - name: "09-NDT_AND-INSPECTION"
+      description: "General Visual Inspection (GVI), NDT for actuators and linkages, inspection intervals and acceptance criteria"
+    - name: "10-QUALIFICATION_AND_TEST_PLANS"
+      description: "Actuator qualification plan, control law verification plan, test matrix and failure criteria"
+    - name: "11-LIGHTNING-STRIKE_PROTECTION_AND_BONDING"
+      description: "LSP restoration for actuators and cables, LSP materials and resistance limits"
+    - name: "12-MATERIALS_M_AND_P_TRACEABILITY"
+      description: "Actuator materials and CofC, M&P traceability and storage procedures"
+    - name: "13-NONCONFORMANCE_AND-DEVIATION"
+      description: "Nonconformance handling and engineering disposition, NCR template"
+    - name: "14-DIAGRAMS_AND_REFERENCE_DATA"
+      description: "Control system block diagram, actuator drawings, reference tables"
+    - name: "15-SIDE-CAR_META"
+      description: "Metadata templates for document sidecars"
+    - name: "16-EXAMPLES_AND_RECORDS"
+      description: "Example repair records, functional test logs, NDT report samples"
+  schemas:
+    - name: "repair-record.schema.json"
+      description: "Repair record schema with flight control-specific fields (control surface ID, actuator ID, software baseline, hardware configuration, rigging data, hinge/bearing IDs, sensor calibration, NDT hashes, functional test results, effectivity)"
+    - name: "damage-classification.schema.json"
+      description: "Damage classification schema for flight control system damage assessment"
+    - name: "flight-control.schema.json"
+      description: "Flight control system component specification schema"
+    - name: "actuator.schema.json"
+      description: "Actuator specification and test record schema"
+    - name: "control-law.schema.json"
+      description: "Control law specification and validation record schema"
+approvals:
+  - authority: "Flight Controls Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Avionics Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Software Quality Assurance"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"

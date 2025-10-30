@@ -1,0 +1,474 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata27/repair-record.schema.json",
+  "title": "Flight Control System Repair Record",
+  "description": "Comprehensive repair record schema for ATA 27 flight control system repairs with full traceability",
+  "type": "object",
+  "properties": {
+    "repairRecordId": {
+      "type": "string",
+      "description": "Unique repair record identifier",
+      "pattern": "^RR-27-[0-9]{4}-[0-9]{6}$"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number (aircraft effectivity)"
+    },
+    "configurationId": {
+      "type": "string",
+      "description": "Aircraft configuration identifier"
+    },
+    "repairDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date repair was completed (ISO 8601)"
+    },
+    "component": {
+      "type": "string",
+      "enum": [
+        "Control_Surface_Aileron_Left_Inboard",
+        "Control_Surface_Aileron_Left_Outboard",
+        "Control_Surface_Aileron_Right_Inboard",
+        "Control_Surface_Aileron_Right_Outboard",
+        "Control_Surface_Elevator_Left",
+        "Control_Surface_Elevator_Right",
+        "Control_Surface_Rudder_Upper",
+        "Control_Surface_Rudder_Lower",
+        "Control_Surface_Spoiler",
+        "Control_Surface_Flap",
+        "Actuator_EHA",
+        "Actuator_EMA",
+        "Actuator_Hydraulic",
+        "FCC_Primary",
+        "FCC_Standby",
+        "Sensor_AoA",
+        "Sensor_Position",
+        "Sensor_Rate_Gyro",
+        "Sensor_Accelerometer",
+        "Cable_Assembly",
+        "Linkage_Rod_End",
+        "Hinge_Bearing",
+        "Pulley_Assembly"
+      ],
+      "description": "Flight control component being repaired"
+    },
+    "controlSurfaceId": {
+      "type": "object",
+      "description": "Control surface identification",
+      "properties": {
+        "partNumber": {
+          "type": "string",
+          "description": "Control surface part number"
+        },
+        "serialNumber": {
+          "type": "string",
+          "description": "Control surface serial number"
+        },
+        "position": {
+          "type": "string",
+          "enum": ["Left_Wing_Inboard", "Left_Wing_Outboard", "Right_Wing_Inboard", "Right_Wing_Outboard", "Left_Stabilizer", "Right_Stabilizer", "Upper_Fin", "Lower_Fin"],
+          "description": "Control surface position"
+        },
+        "description": {
+          "type": "string",
+          "description": "Control surface description"
+        }
+      },
+      "required": ["partNumber", "serialNumber", "position"]
+    },
+    "actuatorId": {
+      "type": "object",
+      "description": "Actuator identification and operating history",
+      "properties": {
+        "partNumber": {
+          "type": "string",
+          "description": "Actuator part number"
+        },
+        "serialNumber": {
+          "type": "string",
+          "description": "Actuator serial number"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["Electro-Hydraulic (EHA)", "Electro-Mechanical (EMA)", "Hydraulic"],
+          "description": "Actuator type"
+        },
+        "installationDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date actuator was installed (ISO 8601)"
+        },
+        "operatingHours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total operating hours on actuator"
+        },
+        "operatingCycles": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total operating cycles on actuator"
+        }
+      },
+      "required": ["partNumber", "serialNumber", "type", "installationDate"]
+    },
+    "softwareBaseline": {
+      "type": "object",
+      "description": "Flight Control Computer software baseline",
+      "properties": {
+        "fccSoftwareVersion": {
+          "type": "string",
+          "description": "FCC software version identifier"
+        },
+        "checksum": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 checksum of software load"
+        },
+        "do178cEvidence": {
+          "type": "string",
+          "description": "Reference to DO-178C Level A certification evidence"
+        },
+        "loadDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date software was loaded (ISO 8601)"
+        }
+      },
+      "required": ["fccSoftwareVersion", "checksum", "do178cEvidence"]
+    },
+    "hardwareConfiguration": {
+      "type": "object",
+      "description": "Flight Control Computer hardware configuration",
+      "properties": {
+        "fccPartNumber": {
+          "type": "string",
+          "description": "FCC hardware part number"
+        },
+        "fccSerialNumber": {
+          "type": "string",
+          "description": "FCC hardware serial number"
+        },
+        "do254Evidence": {
+          "type": "string",
+          "description": "Reference to DO-254 Level A certification evidence"
+        },
+        "configurationBaseline": {
+          "type": "string",
+          "description": "Hardware Configuration Item (HWCI) baseline identifier"
+        }
+      },
+      "required": ["fccPartNumber", "fccSerialNumber", "do254Evidence"]
+    },
+    "riggingData": {
+      "type": "object",
+      "description": "Control surface rigging measurements pre and post repair",
+      "properties": {
+        "preRepair": {
+          "type": "object",
+          "properties": {
+            "neutralPosition_deg": {
+              "type": "number",
+              "description": "Neutral position in degrees"
+            },
+            "upDeflection_deg": {
+              "type": "number",
+              "description": "Up deflection in degrees"
+            },
+            "downDeflection_deg": {
+              "type": "number",
+              "description": "Down deflection in degrees"
+            },
+            "freeplay_deg": {
+              "type": "number",
+              "description": "Freeplay in degrees"
+            },
+            "massBalance_kg_mm": {
+              "type": "number",
+              "description": "Mass balance moment in kg·mm"
+            }
+          }
+        },
+        "postRepair": {
+          "type": "object",
+          "properties": {
+            "neutralPosition_deg": {
+              "type": "number",
+              "description": "Neutral position in degrees"
+            },
+            "upDeflection_deg": {
+              "type": "number",
+              "description": "Up deflection in degrees"
+            },
+            "downDeflection_deg": {
+              "type": "number",
+              "description": "Down deflection in degrees"
+            },
+            "freeplay_deg": {
+              "type": "number",
+              "description": "Freeplay in degrees"
+            },
+            "massBalance_kg_mm": {
+              "type": "number",
+              "description": "Mass balance moment in kg·mm"
+            }
+          }
+        }
+      },
+      "required": ["preRepair", "postRepair"]
+    },
+    "hingeIds": {
+      "type": "array",
+      "description": "Hinge and bearing identifications",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hingePosition": {
+            "type": "string",
+            "description": "Hinge position (e.g., 'Inboard', 'Midspan', 'Outboard')"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Hinge/bearing part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Hinge/bearing serial number"
+          },
+          "installationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date installed (ISO 8601)"
+          },
+          "operatingHours": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Operating hours on hinge/bearing"
+          },
+          "wearMeasurement_mm": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Measured wear depth in mm"
+          }
+        },
+        "required": ["hingePosition", "partNumber", "serialNumber"]
+      }
+    },
+    "sensorCalibration": {
+      "type": "array",
+      "description": "Sensor calibration data",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sensorType": {
+            "type": "string",
+            "enum": ["AoA", "Position_LVDT", "Position_RVDT", "Rate_Gyro", "Accelerometer", "Pressure"],
+            "description": "Type of sensor"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Sensor part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Sensor serial number"
+          },
+          "calibrationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of calibration (ISO 8601)"
+          },
+          "accuracyVerification": {
+            "type": "object",
+            "properties": {
+              "testValue": {
+                "type": "number",
+                "description": "Test input value"
+              },
+              "measuredValue": {
+                "type": "number",
+                "description": "Measured output value"
+              },
+              "error_percent": {
+                "type": "number",
+                "description": "Error as percentage of full scale"
+              },
+              "withinSpec": {
+                "type": "boolean",
+                "description": "Whether measurement is within specification"
+              }
+            },
+            "required": ["testValue", "measuredValue", "error_percent", "withinSpec"]
+          }
+        },
+        "required": ["sensorType", "partNumber", "serialNumber", "calibrationDate"]
+      }
+    },
+    "ndtFileHashes": {
+      "type": "array",
+      "description": "SHA-256 hashes of NDT reports",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ndtMethod": {
+            "type": "string",
+            "enum": ["Ultrasonic", "Eddy_Current", "Dye_Penetrant", "Magnetic_Particle", "X-Ray", "Visual"],
+            "description": "NDT method used"
+          },
+          "reportFilename": {
+            "type": "string",
+            "description": "NDT report filename"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hash of NDT report file"
+          }
+        },
+        "required": ["ndtMethod", "reportFilename", "sha256"]
+      }
+    },
+    "functionalTestResults": {
+      "type": "object",
+      "description": "Actuator and control system functional test results",
+      "properties": {
+        "stepResponse_ms": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Step response time in milliseconds"
+        },
+        "actuatorRate_deg_per_sec": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Actuator rate in degrees per second"
+        },
+        "hysteresis_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Position hysteresis as percentage of full stroke"
+        },
+        "stallLoad_Nm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Stall load in N·m"
+        },
+        "leakageRate_mL_per_hr": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Hydraulic leakage rate in mL/hr (if applicable)"
+        },
+        "controlLoopStability": {
+          "type": "object",
+          "properties": {
+            "gainMargin_dB": {
+              "type": "number",
+              "description": "Gain margin in dB"
+            },
+            "phaseMargin_deg": {
+              "type": "number",
+              "description": "Phase margin in degrees"
+            }
+          }
+        }
+      }
+    },
+    "damageClassification": {
+      "type": "string",
+      "enum": ["Allowable", "Repairable", "Requires_FEA", "Requires_Test", "Scrap"],
+      "description": "Damage classification per ATA-27 criteria"
+    },
+    "repairMethod": {
+      "type": "string",
+      "description": "Repair method description"
+    },
+    "materialsUsed": {
+      "type": "array",
+      "description": "Materials used in repair",
+      "items": {
+        "type": "object",
+        "properties": {
+          "materialSpec": {
+            "type": "string",
+            "description": "Material specification (e.g., AMS, BMS)"
+          },
+          "lotNumber": {
+            "type": "string",
+            "description": "Material lot or batch number"
+          },
+          "cofcReference": {
+            "type": "string",
+            "description": "Certificate of Conformance reference"
+          }
+        },
+        "required": ["materialSpec", "lotNumber", "cofcReference"]
+      }
+    },
+    "fea_Required": {
+      "type": "boolean",
+      "description": "Whether FEA validation is required"
+    },
+    "fea_Reference": {
+      "type": "string",
+      "description": "Reference to FEA report if required"
+    },
+    "aeroelasticAnalysis_Required": {
+      "type": "boolean",
+      "description": "Whether aeroelastic analysis is required"
+    },
+    "aeroelasticAnalysis_Reference": {
+      "type": "string",
+      "description": "Reference to aeroelastic analysis report if required"
+    },
+    "controlLawValidation_Required": {
+      "type": "boolean",
+      "description": "Whether control law validation is required post-repair"
+    },
+    "controlLawValidation_Reference": {
+      "type": "string",
+      "description": "Reference to control law validation test report if required"
+    },
+    "approvals": {
+      "type": "array",
+      "description": "Engineering approvals for repair",
+      "items": {
+        "type": "object",
+        "properties": {
+          "authority": {
+            "type": "string",
+            "enum": ["Flight_Controls_Engineering", "Structures_Engineering", "Systems_Engineering", "Software_QA", "Airworthiness", "Safety"],
+            "description": "Approving authority"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of approver"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Approval date (ISO 8601)"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Digital signature or approval reference"
+          }
+        },
+        "required": ["authority", "name", "date"]
+      },
+      "minItems": 1
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional remarks or notes"
+    }
+  },
+  "required": [
+    "repairRecordId",
+    "msn",
+    "repairDate",
+    "component",
+    "damageClassification",
+    "repairMethod",
+    "approvals"
+  ],
+  "additionalProperties": true
+}

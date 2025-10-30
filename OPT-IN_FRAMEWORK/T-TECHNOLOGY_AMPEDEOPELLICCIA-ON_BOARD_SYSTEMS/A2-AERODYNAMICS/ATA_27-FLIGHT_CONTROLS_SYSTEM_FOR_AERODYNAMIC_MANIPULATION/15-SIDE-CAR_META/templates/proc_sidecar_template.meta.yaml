@@ -1,0 +1,77 @@
+schema_version: "1.1"
+id: "[PROC_27-XX-XX_rev_X.Y.Z_YYYYMMDD]"
+document:
+  type: "PROC"
+  title: "[Procedure Title]"
+  revision: "[X.Y.Z]"
+  effective_date: "[YYYY-MM-DD]"
+  chapter: "ATA 27"
+  section: "[Section Number and Name]"
+  task_duration_hours: [Estimated hours]
+  personnel_required: [Number of technicians]
+  skill_level_required: "[Level 1|Level 2|Level 3]"
+effectivity:
+  msn: "[MSN range or ALL]"
+  configuration: "[Configuration ID or ALL]"
+  scope: "[Brief effectivity description]"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "[Specific hazard for this procedure]"
+    - "[Another hazard]"
+  safety_impact: "[Catastrophic|Hazardous|Major|Minor|No_Safety_Effect]"
+  training_required: true
+  qualification_required: "[Specific qualification needed, e.g., DO-178C trained, Composite certified]"
+  ppe_required:
+    - "[Safety glasses]"
+    - "[Gloves]"
+    - "[Other PPE]"
+tools_required:
+  - tool_name: "[Tool description]"
+    part_number: "[Tool P/N if applicable]"
+    calibration_required: [true|false]
+  - tool_name: "[Another tool]"
+    part_number: "[Tool P/N]"
+    calibration_required: [true|false]
+consumables:
+  - item: "[Consumable item]"
+    specification: "[AMS, BMS, or other spec]"
+    quantity: "[Quantity needed]"
+approvals:
+  - authority: "Flight Controls Engineering"
+    name: "[Engineer Name]"
+    status: "Released"
+    date: "[YYYY-MM-DD]"
+  - authority: "Quality Assurance"
+    name: "[QA Inspector Name]"
+    status: "Approved"
+    date: "[YYYY-MM-DD]"
+  - authority: "Airworthiness"
+    name: "[Airworthiness Authority]"
+    status: "Approved"
+    date: "[YYYY-MM-DD]"
+traceability:
+  source_documents:
+    - "[Source SRM, CMM, or engineering document]"
+  crossrefs:
+    - "ATA-20"  # Standard Practices
+    - "[Other relevant ATA chapters]"
+  requirements:
+    - "[Requirement traceability ID]"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "[64-character SHA-256 hash - compute after procedure finalized]"
+  last_validated: "[YYYY-MM-DD]"
+compliance:
+  regulatory_basis:
+    - "[FAA regulation reference]"
+    - "[EASA regulation reference]"
+  do178c_impact: [true|false]
+  do254_impact: [true|false]
+  faa_approval_required: [true|false]
+  easa_approval_required: [true|false]
+revision_history:
+  - revision: "1.0.0"
+    date: "[YYYY-MM-DD]"
+    author: "[Author name]"
+    changes: "Initial release"

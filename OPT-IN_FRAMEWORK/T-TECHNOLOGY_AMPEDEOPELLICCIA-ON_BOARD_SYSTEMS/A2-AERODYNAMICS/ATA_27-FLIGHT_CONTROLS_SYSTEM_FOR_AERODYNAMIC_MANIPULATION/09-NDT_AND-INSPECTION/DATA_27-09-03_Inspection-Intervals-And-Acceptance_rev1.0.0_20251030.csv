@@ -1,0 +1,20 @@
+# Inspection Intervals and Acceptance Criteria
+# Units: FH (flight hours), deg (degrees), mm (millimeters), N (Newtons), percent (%)
+# Last Updated: 2025-10-30
+
+Component,Inspection_Type,Interval_FH,Interval_Months,Method,Acceptance_Criteria,Rejection_Criteria
+Control_Surface_Hinge,Visual,500,12,GVI,No visible cracks or corrosion,Cracks > 1mm or active corrosion
+Control_Surface_Hinge,Detailed,3000,36,DET + Eddy Current,Freeplay < 0.5 deg,Freeplay > 0.5 deg
+Actuator_Attachment_Fitting,Visual,500,12,GVI,No visible cracks,Any visible crack
+Actuator_Attachment_Fitting,NDT,6000,36,Dye Penetrant or Eddy Current,No indications,Any crack indication
+Actuator_EHA,Functional Test,3000,12,Bench Test,Step response < 100 ms; Leakage < 5 mL/hr,Step response > 150 ms or leakage > 10 mL/hr
+Actuator_EMA,Functional Test,3000,12,Bench Test,Backlash < 0.1 deg,Backlash > 0.2 deg
+Control_Cable,Visual,500,12,GVI,< 6 broken wires per strand,> 6 broken wires per strand or corrosion
+Control_Cable,Tension Check,6000,24,Cable Tensiometer,Tension within ±5% nominal,Tension outside ±10% nominal
+Rod_End_Bearing,Visual,1000,12,GVI,No visible wear or fretting,Wear > 0.25 mm or fretting present
+Rod_End_Bearing,Detailed,12000,36,DET,Radial clearance increase < 0.25 mm,Radial clearance increase > 0.25 mm
+Pulley_Assembly,Visual,1000,12,GVI,Rotates freely; no scoring,Binding or scoring > 0.5 mm deep
+AoA_Sensor,Calibration,N/A,12,Precision Fixture,Error < ±0.5 deg,Error > ±0.5 deg
+Position_Sensor_LVDT,Calibration,6000,24,Bench Test,Error < ±0.5% FS,Error > ±1.0% FS
+FCC,Software Verification,Per SW change,N/A,Checksum Verification,Checksum matches baseline,Checksum mismatch
+Lightning_Strike_Protection,Resistance Check,3000,36,4-Wire Resistance,Resistance < 2.5 mOhm per bond,Resistance > 5 mOhm

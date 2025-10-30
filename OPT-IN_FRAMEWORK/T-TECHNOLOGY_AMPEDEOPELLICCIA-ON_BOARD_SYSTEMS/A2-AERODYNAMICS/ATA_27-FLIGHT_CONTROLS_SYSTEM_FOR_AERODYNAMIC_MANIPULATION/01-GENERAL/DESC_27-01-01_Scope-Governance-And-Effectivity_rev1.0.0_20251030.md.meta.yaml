@@ -1,0 +1,42 @@
+schema_version: "1.1"
+id: "DESC_27-01-01_rev1.0.0_20251030"
+document:
+  type: "DESC"
+  title: "Scope, Governance, and Effectivity"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+  chapter: "ATA 27"
+  section: "01-GENERAL"
+effectivity:
+  msn: "ALL"
+  configuration: "ALL"
+  scope: "All AMPEL360 BWB configurations"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Non-compliance with regulatory requirements"
+    - "Unclear effectivity leading to wrong procedure application"
+  training_required: false
+approvals:
+  - authority: "Flight Controls Engineering"
+    name: "Engineering Lead"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Airworthiness Engineering"
+    name: "Airworthiness Authority"
+    status: "Approved"
+    date: "2025-10-29"
+traceability:
+  source_documents:
+    - "FCS-SPEC-27-001: Flight Control System Design Specification"
+    - "14 CFR Part 25 Subpart C"
+    - "EASA CS-25"
+  crossrefs:
+    - "ATA-20"
+    - "ATA-22"
+    - "ATA-24"
+    - "ATA-29"
+    - "ATA-51"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"

@@ -1,0 +1,32 @@
+# Regulatory Compliance Matrix for ATA 27
+# Units: N/A (regulatory references)
+# Last Updated: 2025-10-30
+# Owner: Flight Controls Engineering / Airworthiness Engineering
+
+Regulation_Reference,Title,Applicability,Compliance_Method,Verification_Document,Status
+FAA 14 CFR 25.671,Control Systems - General,All flight control components,Design review and analysis,FCS-CERT-27-001,Compliant
+FAA 14 CFR 25.672,Stability Augmentation and Automatic Systems,FCC and control laws,DO-178C Level A certification,FCS-SAS-27-001,Compliant
+FAA 14 CFR 25.675,Stops,Control surface mechanical stops,Physical inspection and test,FCS-TEST-27-002,Compliant
+FAA 14 CFR 25.677,Trim Systems,Elevator and rudder trim,Functional test and analysis,FCS-TEST-27-003,Compliant
+FAA 14 CFR 25.679,Control System Gust Locks,Gust lock system (if applicable),Design review and test,FCS-TEST-27-004,Compliant
+FAA 14 CFR 25.683,Operation Tests,All control system functions,Ground and flight test,FCS-FLIGHT-TEST-27-001,Compliant
+FAA 14 CFR 25.685,Control System Details,Cables and linkages,Inspection and analysis,FCS-INSPECT-27-001,Compliant
+FAA 14 CFR 25.697,Lift and Drag Device Indicators,High-lift position indication,Functional test,FCS-TEST-27-005,Compliant
+FAA 14 CFR 25.703,Takeoff Warning System,Control surface position warnings,Functional test,FCS-TEST-27-006,Compliant
+FAA 14 CFR 25.1309,Equipment Systems and Installations,All flight control equipment,ARP4761 safety assessment,FCS-SAFETY-27-001,Compliant
+FAA 14 CFR 25.1351,General (Electrical),Electrical power to FCCs,Redundancy analysis,FCS-ELEC-27-001,Compliant
+EASA CS-25.671,Control Systems - General,All flight control components,Design review and analysis,FCS-CERT-27-001,Compliant
+EASA CS-25.672,Stability Augmentation and Automatic Systems,FCC and control laws,DO-178C Level A certification,FCS-SAS-27-001,Compliant
+EASA CS-25.1309,Equipment Systems and Installations,All flight control equipment,ARP4761 safety assessment,FCS-SAFETY-27-001,Compliant
+DO-178C,Software Considerations in Airborne Systems,FCC software (DAL-A),Full DO-178C compliance,FCS-SAS-27-001,Compliant
+DO-254,Design Assurance for Airborne Electronic Hardware,FCC hardware (DAL-A),Full DO-254 compliance,FCS-HAS-27-001,Compliant
+DO-160G,Environmental Conditions and Test Procedures,All electronic equipment,Environmental qualification tests,FCS-ENVIRON-27-001,Compliant
+ARP4754A,Development of Civil Aircraft and Systems,Flight control system development,Process compliance,FCS-PROCESS-27-001,Compliant
+ARP4761,Safety Assessment Process,Flight control system safety,FMEA and FTA,FCS-SAFETY-27-001,Compliant
+MIL-STD-1797A,Flying Qualities of Piloted Aircraft,Handling qualities,Flight test and pilot assessment,FCS-FLIGHT-TEST-27-002,Compliant
+SAE AS94900,Quality Management Systems,All processes,ISO 9001 / AS9100 certification,QMS-CERT-001,Compliant
+ASTM E1444,Standard Practice for Ultrasonic Testing,NDT for actuators,Procedure compliance,NDT-PROC-27-001,Compliant
+ASTM E1417,Standard Practice for Liquid Penetrant Testing,NDT for linkages,Procedure compliance,NDT-PROC-27-002,Compliant
+AMS 2644,Inspection Magnetic Particle,NDT for ferrous components,Procedure compliance,NDT-PROC-27-003,Compliant
+ISO 9001:2015,Quality Management Systems,All quality processes,Certification,QMS-CERT-001,Compliant
+AS9100D,Quality Management Systems - Aerospace,All aerospace processes,Certification,QMS-CERT-001,Compliant
