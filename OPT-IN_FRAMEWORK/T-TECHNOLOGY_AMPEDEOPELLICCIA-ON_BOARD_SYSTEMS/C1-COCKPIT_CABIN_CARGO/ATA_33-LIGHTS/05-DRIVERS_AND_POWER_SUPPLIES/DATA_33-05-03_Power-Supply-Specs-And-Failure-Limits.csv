@@ -1,0 +1,8 @@
+Driver_Type,Output_Current_mA,Input_Voltage_Range_VDC,Output_Ripple_Max_percent,Efficiency_Min_percent,Inrush_Max_A,L70_Hours_Min,Thermal_Derating_percent_per_C,MTBF_Hours_Min,DO160_Compliant
+LED_Driver_350mA,350,22-32,5,85,10,50000,2.5,50000,Yes
+LED_Driver_700mA,700,22-32,5,85,10,50000,2.5,50000,Yes
+LED_Driver_1000mA,1000,22-32,5,85,10,50000,2.5,50000,Yes
+Dimmable_Driver_350mA,350,22-32,5,85,10,50000,2.5,50000,Yes
+Dimmable_Driver_700mA,700,22-32,5,85,10,50000,2.5,50000,Yes
+Emergency_Battery_Driver,350,Battery_Voltage,10,75,5,50000,N/A,30000,Yes
+Multi_Channel_Driver_4x350mA,4x350,22-32,5,85,15,50000,2.5,50000,Yes

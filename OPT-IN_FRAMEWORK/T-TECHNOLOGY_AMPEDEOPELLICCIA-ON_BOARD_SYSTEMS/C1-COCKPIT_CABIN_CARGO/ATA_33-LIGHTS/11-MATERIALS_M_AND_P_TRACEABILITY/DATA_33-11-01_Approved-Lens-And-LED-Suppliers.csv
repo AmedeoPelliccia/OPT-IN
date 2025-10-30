@@ -1,0 +1,13 @@
+Supplier_Name,Material_Component,Part_Number_Example,Specification,CoC_Required,Qualification,Notes
+OSRAM,LED_Module_White,LCW-CRDP,L70_50000hrs_DO160,Yes,DO160G_qualified,High_CRI_option_available
+Lumileds,LED_Module_White,LUXEON_3535L,L70_50000hrs_DO160,Yes,DO160G_qualified,Multiple_CCT_bins
+Cree,LED_Module_White,XLamp_XP-G3,L70_50000hrs_DO160,Yes,DO160G_qualified,High_efficiency
+GE_Lighting,Polycarbonate_Lens,Lexan_9034,Flame_retardant_UV_stable,No,UL94_V0,Optical_grade
+Makrolon,Polycarbonate_Lens,Makrolon_2558,Flame_retardant,No,UL94_V0,Optical_grade
+Plexiglas,Acrylic_Lens,Plexiglas_G,Optical_grade,No,Optical_transmission_92percent,Non_flame_retardant
+3M,Sealant_Silicone,EC-1944,Aerospace_grade,Yes,MIL_A_46146,RTV_silicone
+PPG_Aerospace,Sealant_Polysulfide,PR-1776,Fuel_resistant,Yes,MIL_PRF_81733,Class_B
+Mean_Well,LED_Driver_350mA,LDD-350H,DO160G,Yes,DO160G_Section_16_22,Constant_current
+TDK_Lambda,LED_Driver_700mA,CCG3-24-07D,DO160G,Yes,DO160G_Section_16_22,Dimmable
+Alpha_Wire,Bonding_Jumper,5854_12AWG,Tinned_copper_braid,No,MIL_W_5088,LSP_bonding
+Panduit,Ring_Terminal,PV14-10R,Crimp_terminal,No,MIL_T_7928,Bonding_termination

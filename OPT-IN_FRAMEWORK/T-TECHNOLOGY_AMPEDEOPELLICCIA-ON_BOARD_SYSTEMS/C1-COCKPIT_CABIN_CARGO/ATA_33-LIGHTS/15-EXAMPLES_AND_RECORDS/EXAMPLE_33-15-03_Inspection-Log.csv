@@ -1,0 +1,6 @@
+Inspection_ID,Date,Aircraft_MSN,Light_Location,Light_PN,Inspection_Type,Lens_Condition,Housing_Condition,Seal_Condition,Wiring_Condition,Bonding_Condition,Result,Inspector,Notes
+INSP_33-000045,2025-10-25,MSN-1234,Row_10_Reading_Light_Left,LT-12345-001,GVI_GENERAL_VISUAL,GOOD,GOOD,GOOD,GOOD,GOOD,SERVICEABLE,Inspector_Smith,Annual_inspection
+INSP_33-000046,2025-10-26,MSN-1234,Position_Light_Left_Wing,POS-LT-567,DVI_DETAILED_VISUAL,SCRATCHED,GOOD,DEGRADED,GOOD,GOOD,REQUIRES_REPAIR,Inspector_Lee,Seal_needs_replacement
+INSP_33-000047,2025-10-27,MSN-1235,Landing_Light_Nose,LAND-LT-890,DVI_DETAILED_VISUAL,GOOD,CORRODED,GOOD,GOOD,CORRODED,REQUIRES_REPAIR,Inspector_Kim,Corrosion_on_housing_and_bonding
+INSP_33-000048,2025-10-28,MSN-1236,Emergency_Floor_Path_Aisle,EMER-FP-123,FUNCTIONAL_TEST,N/A,N/A,N/A,N/A,N/A,SERVICEABLE,Inspector_Chen,Illuminance_0.08_lux_duration_12min
+INSP_33-000049,2025-10-29,MSN-1237,Exit_Sign_Door_1L,EXIT-SIGN-456,PHOTOMETRIC_CHECK,GOOD,GOOD,GOOD,GOOD,N/A,SERVICEABLE,Inspector_Park,Legible_from_15m_battery_test_pass

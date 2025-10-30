@@ -1,0 +1,72 @@
+{
+  "record_id": "REPAIR_33-000123",
+  "date": "2025-10-30T10:15:00Z",
+  "aircraft": {
+    "registration": "N12345",
+    "msn": "MSN-5678",
+    "model": "A320-200"
+  },
+  "light_assembly": {
+    "location": "Cabin Row 12, Left Reading Light",
+    "ata_code": "33-02-01",
+    "part_number": "LT-12345-001",
+    "serial_number": "SN-88888",
+    "description": "Passenger Reading Light LED"
+  },
+  "repair_type": "LED_MODULE_REPLACEMENT",
+  "defect": {
+    "description": "Reading light not illuminating",
+    "discovered_by": "Crew report",
+    "severity": "MINOR"
+  },
+  "corrective_action": {
+    "description": "Replaced LED module per PROC_33-09-02",
+    "procedure_reference": "PROC_33-09-02",
+    "work_hours": 0.5
+  },
+  "parts_used": [
+    {
+      "part_number": "LED-MOD-350-3000K",
+      "description": "LED Module 350mA 3000K",
+      "quantity": 1,
+      "batch_lot": "LOT-2025-Q3-1234",
+      "supplier": "OSRAM",
+      "coc_number": "COC-2025-5678"
+    }
+  ],
+  "testing_performed": [
+    {
+      "test_type": "FUNCTIONAL_TEST",
+      "result": "PASS",
+      "notes": "Light illuminates normally, no flicker"
+    },
+    {
+      "test_type": "PHOTOMETRIC_TEST",
+      "result": "PASS",
+      "notes": "Illuminance 82 lux at 400mm, within spec 50-150 lux"
+    }
+  ],
+  "safety_critical": false,
+  "technician": {
+    "name": "Mike Johnson",
+    "license": "A&P-123456",
+    "stamp": "MJ-789"
+  },
+  "status": "COMPLETED",
+  "completion_date": "2025-10-30T11:30:00Z",
+  "attachments": [
+    {
+      "filename": "before_photo.jpg",
+      "description": "Photo before repair",
+      "type": "PHOTO_BEFORE",
+      "sha256": "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"
+    },
+    {
+      "filename": "after_photo.jpg",
+      "description": "Photo after repair",
+      "type": "PHOTO_AFTER",
+      "sha256": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+    }
+  ],
+  "notes": "Repair completed successfully, aircraft returned to service"
+}

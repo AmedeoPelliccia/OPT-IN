@@ -1,0 +1,30 @@
+Regulation_Standard,Section,Title,Applicability,Compliance_Method,Verification_Document
+FAA 14 CFR Part 25.1381,,Interior lighting,All interior lights,Design compliance + test,Type Certificate Data Sheet
+FAA 14 CFR Part 25.1383,,Landing lights,Landing lights,Performance test + flight test,Flight test report
+FAA 14 CFR Part 25.1385,,Position light system installation,Position lights,Installation compliance,Installation drawings
+FAA 14 CFR Part 25.1389,,Position light distribution and intensities,Position lights,Photometric test,Photometric test report
+FAA 14 CFR Part 25.1391,,Minimum intensities in the horizontal plane,Position lights,Photometric test,Photometric test report
+FAA 14 CFR Part 25.1393,,Minimum intensities in any vertical plane,Position lights,Photometric test,Photometric test report
+FAA 14 CFR Part 25.1395,,Maximum intensities in overlapping beams,Position lights,Photometric test,Photometric test report
+FAA 14 CFR Part 25.1397,,Color specifications,Position lights,Spectral test,Color test report
+FAA 14 CFR Part 25.1399,,Riding light,Water operations,Installation compliance,N/A (land aircraft)
+FAA 14 CFR Part 25.1401,,Anticollision light system,Anti-collision lights,Flash rate + intensity test,Test report
+EASA CS-25.1381,,Interior lighting,All interior lights,Design compliance + test,EASA certification basis
+EASA CS-25.1383,,Landing lights,Landing lights,Performance test + flight test,Flight test report
+EASA CS-25.1385,,Position light system installation,Position lights,Installation compliance,Installation drawings
+EASA CS-25.1389,,Position light distribution and intensities,Position lights,Photometric test,Photometric test report
+EASA CS-25.1401,,Anticollision light system,Anti-collision lights,Flash rate + intensity test,Test report
+RTCA DO-160G Section 4,,Temperature and Altitude,All lighting,Environmental test,DO-160 test report
+RTCA DO-160G Section 5,,Temperature Variation,All lighting,Temperature cycling test,DO-160 test report
+RTCA DO-160G Section 16,,Power Input,All lighting,Power quality test,DO-160 test report
+RTCA DO-160G Section 22,,Lightning Induced Transient Susceptibility,All lighting,Lightning test,DO-160 test report + SHA-256
+SAE AS8037,,Minimum Performance Standards Aircraft Exterior Lighting,Exterior lights,Performance compliance,Supplier certification
+SAE AS8038,,Aircraft Interior Lighting,Interior lights,Performance compliance,Supplier certification
+ICAO Annex 6 Part I 6.15,,Lights,Operational requirements,Operational compliance,Flight manual
+ICAO Annex 6 Part I 6.16,,Emergency lighting,Emergency systems,10-minute duration test,Emergency battery test
+FAA AC 25.1309-1A,,System Design and Analysis,All lighting systems,Safety assessment,System safety report
+MIL-STD-810H Method 501.7,,High Temperature,Qualification only,High temp exposure,Qualification test report
+MIL-STD-810H Method 502.7,,Low Temperature,Qualification only,Low temp exposure,Qualification test report
+IEC 60529,,Ingress Protection (IP Rating),Sealed assemblies,Seal integrity test,IP test report
+IPC-A-610,,Acceptability of Electronic Assemblies,LED drivers/electronics,Visual inspection,QA inspection
+ATA Spec 100,,Simplified Technical English,All documentation,Documentation review,Editorial review

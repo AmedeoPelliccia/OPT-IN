@@ -1,0 +1,9 @@
+System_Type,Location,Min_Illuminance_lux,Duration_min,Uniformity_Ratio,Test_Interval_hours,Battery_Type,Notes
+Emergency_Floor_Path,Aisle_Centerline,0.05,10,0.4,1000,NiCd_or_Lithium,Floor level measurement
+Emergency_Floor_Path,Exit_Door_Threshold,0.05,10,0.4,1000,NiCd_or_Lithium,Critical escape path
+Exit_Sign_Illuminated,Exit_Door_Above,Visible_from_15m,10,N/A,1000,NiCd_or_Lithium,Legibility required
+Exit_Sign_Photoluminescent,Exit_Door_Frame,Visible_from_15m,10,N/A,N/A,N/A,Charge test required annually
+Lavatory_Emergency,Lavatory_Interior,0.05,10,N/A,1000,Integrated,Smoke detector activated
+Galley_Emergency,Galley_Work_Area,0.05,10,N/A,1000,Integrated,Loss of normal power
+Emergency_Escape_Slide_Loc,Slide_Location_Markers,Visible_from_3m,10,N/A,1000,Photoluminescent,Low-level lighting
+Overhead_Bin_Emergency,Overhead_Stowage,0.02,10,N/A,2000,Photoluminescent,Supplemental marking

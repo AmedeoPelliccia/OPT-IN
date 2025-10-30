@@ -1,0 +1,9 @@
+Inspection_Type,Light_Type,Interval_Hours,Interval_Calendar,Acceptance_Criteria,NDT_Required
+GVI,Reading_Light,4000,Annual,No cracks or severe corrosion,No
+GVI,Position_Light,2000,6_months,No cracks visible light output OK,No
+DVI,Landing_Light,1000,6_months,No cracks impact damage check,As_needed
+GVI,Emergency_Light,1000,Annual,Functional test pass illuminance OK,No
+Functional_Test,All_Emergency,1000,Annual,Duration 10min illuminance 0.05lux,No
+LSP_Bonding_Test,Exterior_Lights,4000,2_years,Resistance <=2.5mOhm,No
+Photometric_Check,Position_Nav,8000,As_needed,Intensity per FAA limits,No
+NDT_Dye_Penetrant,Landing_Light_Housing,As_needed,As_needed,No indications,Yes

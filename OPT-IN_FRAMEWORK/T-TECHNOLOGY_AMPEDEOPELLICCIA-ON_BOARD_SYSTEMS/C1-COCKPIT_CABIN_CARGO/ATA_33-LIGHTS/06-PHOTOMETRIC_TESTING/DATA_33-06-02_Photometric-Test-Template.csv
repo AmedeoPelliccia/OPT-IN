@@ -1,0 +1,13 @@
+Point_ID,X_Position_mm,Y_Position_mm,Distance_mm,Illuminance_lux,CCT_K,CRI_Ra,Notes
+P1,0,0,400,85.2,2850,82,Center point
+P2,100,0,400,78.5,2860,82,Right offset
+P3,-100,0,400,79.1,2855,81,Left offset
+P4,0,100,400,76.3,2865,81,Forward offset
+P5,0,-100,400,77.8,2850,82,Aft offset
+Average,N/A,N/A,400,79.4,2856,82,Calculated average
+Min,N/A,N/A,400,76.3,2850,81,Minimum value
+Max,N/A,N/A,400,85.2,2865,82,Maximum value
+Uniformity_Ratio,N/A,N/A,N/A,0.90,N/A,N/A,Min/Max ratio
+Specification_Min,N/A,N/A,400,50,2700,80,Lower limit
+Specification_Max,N/A,N/A,400,150,3000,N/A,Upper limit
+Result,N/A,N/A,N/A,PASS,PASS,PASS,Overall assessment

@@ -1,0 +1,69 @@
+# Procedure-Specific Metadata Template
+
+document:
+  id: "PROC_33-XX-XX"
+  title: "Procedure Title"
+  type: "PROC"
+  revision: "A"
+  effective_date: "2025-10-30"
+  owner: "Lighting Systems Engineering"
+  classification: "TECHNICAL"
+
+procedure:
+  category: "MAINTENANCE"  # MAINTENANCE, INSPECTION, TEST, REPAIR
+  skill_level: "TECHNICIAN"  # TECHNICIAN, SPECIALIST, ENGINEER
+  estimated_time_hours: 1.0
+  personnel_required: 1
+  special_tools_required: false
+  special_training_required: false
+
+effectivity:
+  aircraft_type: "ALL"
+  msn_range: "ALL"
+  config: "ALL"
+
+safety:
+  safety_critical: false
+  hazards:
+    - type: "ELECTRICAL"
+      mitigation: "Power OFF, circuit breaker OPEN"
+    - type: "ESD"
+      mitigation: "Use ESD wrist strap"
+
+tools_equipment:
+  - name: "Multimeter"
+    specification: "Digital, auto-ranging"
+    calibration_required: false
+  - name: "Torque Wrench"
+    specification: "5-50 in-lbs range"
+    calibration_required: true
+
+materials:
+  - part_number: ""
+    description: ""
+    quantity: ""
+    coc_required: false
+
+approvals:
+  - role: "Author"
+    name: ""
+    date: ""
+  - role: "Technical Review"
+    name: ""
+    date: ""
+
+cross_references:
+  - type: "AMM"
+    reference: "AMM 33-XX-XX"
+  - type: "IPC"
+    reference: "IPC 33-XX-XX"
+
+integrity:
+  sha256: ""
+  tool: "sha256sum"
+
+change_log:
+  - date: "2025-10-30"
+    revision: "A"
+    author: "ATA-33 Agent"
+    description: "Initial release"

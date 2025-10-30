@@ -1,0 +1,10 @@
+Light_Type,Location,Color,Min_Intensity_cd,Max_Intensity_cd,Horizontal_Coverage_deg,Vertical_Coverage_deg,Flash_Rate_fpm,Standard_Reference
+Position_Left,Left_Wing_Tip,Red,5.0,300,0_to_110_left,+90_to_-90,N/A,FAA_25.1391
+Position_Right,Right_Wing_Tip,Green,5.0,300,0_to_110_right,+90_to_-90,N/A,FAA_25.1391
+Position_Tail,Vertical_Stabilizer,White,20.0,300,70_left_to_70_right,+90_to_-20,N/A,FAA_25.1391
+Anti_Collision_Beacon,Fuselage_Top_Bottom,Red,100,400,360,360,40-100,FAA_25.1401
+Strobe_Anti_Collision,Wing_Tip,White,1000,3000,360,360,40-100,FAA_25.1401
+Landing_Light,Wing_Root_Nose,White,100000,500000,+10_to_-10_horizontal,+5_to_-15_vertical,N/A,FAA_25.1383
+Taxi_Light,Nose_Gear,White,30000,100000,+40_to_-40_horizontal,+10_to_-20_vertical,N/A,SAE_AS8037
+Logo_Light,Fuselage,White,1000,10000,Focused_on_tail,Focused_on_tail,N/A,N/A
+Wing_Inspection_Light,Fuselage_Wing_Root,White,5000,30000,Focused_on_wing_LE,Focused_on_wing_LE,N/A,N/A

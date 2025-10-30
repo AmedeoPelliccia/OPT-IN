@@ -1,0 +1,243 @@
+# ATA 33 — LIGHTS: Chapter Index & Governance
+# Aircraft Lighting Systems: Audit-Ready Documentation Index
+
+---
+chapter:
+  ata_code: "33"
+  title: "LIGHTS"
+  description: "Interior, Exterior, Emergency Lighting Systems and Photometric Compliance"
+  effective_date: "2025-10-30"
+  revision: "A"
+  status: "ACTIVE"
+
+governance:
+  owner: "Lighting Systems Engineering"
+  review_board:
+    - "Airworthiness Authority"
+    - "Certification Authority"
+    - "Human Factors Engineering"
+    - "Photometric Test Lab"
+    - "EMC & LSP Team"
+  classification: "CONTROLLED_TECHNICAL_DATA"
+  release_authority: "Chief Engineer - Systems"
+
+effectivity:
+  aircraft_type: "ALL"
+  msn_range: "ALL"
+  config: "ALL"
+  notes: "Specific effectivity for procedures/parts documented in individual sidecars"
+
+regulatory_compliance:
+  - standard: "FAA 14 CFR Part 25.1381"
+    title: "Interior lighting"
+    applicability: "ALL_INTERIOR"
+  - standard: "FAA 14 CFR Part 25.1383"
+    title: "Landing lights"
+    applicability: "EXTERIOR_LANDING"
+  - standard: "FAA 14 CFR Part 25.1385"
+    title: "Position light system"
+    applicability: "EXTERIOR_POSITION"
+  - standard: "FAA 14 CFR Part 25.1389"
+    title: "Position light distribution and intensities"
+    applicability: "EXTERIOR_POSITION"
+  - standard: "FAA 14 CFR Part 25.1401"
+    title: "Anti-collision light system"
+    applicability: "EXTERIOR_ANTICOLLISION"
+  - standard: "EASA CS-25.1381"
+    title: "Interior lighting (EASA)"
+    applicability: "ALL_INTERIOR"
+  - standard: "EASA CS-25.1383-1401"
+    title: "Exterior lighting (EASA)"
+    applicability: "ALL_EXTERIOR"
+  - standard: "RTCA DO-160G"
+    title: "Environmental Conditions and Test Procedures for Airborne Equipment"
+    sections:
+      - "Section 22: Lightning Induced Transient Susceptibility"
+      - "Section 4: Temperature and Altitude"
+      - "Section 5: Temperature Variation"
+      - "Section 16: Power Input"
+    applicability: "ALL_LIGHTING"
+  - standard: "SAE AS8037"
+    title: "Minimum Performance Standards Aircraft Exterior Lighting"
+    applicability: "EXTERIOR"
+  - standard: "SAE AS8038"
+    title: "Aircraft Interior Lighting"
+    applicability: "INTERIOR"
+  - standard: "ICAO Annex 6"
+    title: "Operation of Aircraft"
+    applicability: "OPERATIONAL_REQUIREMENTS"
+  - standard: "FAA AC 25.1309-1A"
+    title: "System Design and Analysis"
+    applicability: "SAFETY_ASSESSMENT"
+  - standard: "MIL-STD-810H"
+    title: "Environmental Engineering Considerations and Laboratory Tests"
+    applicability: "QUALIFICATION_TESTING"
+
+cross_references:
+  internal:
+    - ata_chapter: "11"
+      title: "PLACARDS AND MARKINGS"
+      interface: "Emergency exit signs, photoluminescent markings"
+    - ata_chapter: "20"
+      title: "STANDARD PRACTICES - AIRFRAME"
+      interface: "Workmanship, torque specifications, potting, sealing"
+    - ata_chapter: "24"
+      title: "ELECTRICAL POWER"
+      interface: "28VDC supply, circuit protection, load analysis"
+    - ata_chapter: "44"
+      title: "CABIN SYSTEMS"
+      interface: "IFE integration, cabin lighting control, dimming"
+    - ata_chapter: "51"
+      title: "STANDARD PRACTICES - STRUCTURES"
+      interface: "Composite repairs near lighting assemblies"
+    - ata_chapter: "53"
+      title: "FUSELAGE"
+      interface: "LSP bonding, mounting provisions, structural interface"
+    - ata_chapter: "57"
+      title: "WINGS"
+      interface: "Position light mounting, wing-tip lights, inspection access"
+
+  external:
+    - reference: "DO-160G Section 22"
+      description: "Lightning Strike Protection requirements"
+    - reference: "NIST Calibration Standards"
+      description: "Photometric instrument traceability"
+    - reference: "IEC 60529"
+      description: "IP rating for environmental sealing"
+    - reference: "IPC-A-610"
+      description: "Acceptability of Electronic Assemblies"
+
+directory_structure:
+  sections:
+    - id: "01-GENERAL"
+      title: "General: Scope, Governance, Terminology"
+      files:
+        - "DESC_33-01-01_Scope-Governance-And-Effectivity.md"
+        - "DESC_33-01-02_Terms-And-Taxonomy.md"
+        - "DATA_33-01-03_Regulatory-Compliance-Matrix.csv"
+
+    - id: "02-INTERIOR_LIGHTING"
+      title: "Interior Lighting: Cabin, Cockpit, Aisle"
+      files:
+        - "DESC_33-02-01_Cabin-Interior-Lighting-Types.md"
+        - "PROC_33-02-02_Reading-And-Aisle-Light-Removal-Installation.md"
+        - "DATA_33-02-03_Interior-Illuminance-And-Color-Limits.csv"
+
+    - id: "03-EXTERIOR_LIGHTING"
+      title: "Exterior Lighting: Position, Navigation, Landing, Logo"
+      files:
+        - "DESC_33-03-01_Exterior-Lights-And-Interfaces.md"
+        - "PROC_33-03-02_Position-Nav-Light-Removal-Installation.md"
+        - "DATA_33-03-03_Exterior-Photometric-Limits.csv"
+
+    - id: "04-EMERGENCY_AND_EXIT_LIGHTING"
+      title: "Emergency & Exit Lighting: Escape Path, Battery Systems"
+      files:
+        - "PROC_33-04-01_Emergency-Light-Test-And-Service.md"
+        - "PROC_33-04-02_Exit-Sign-Verification-And-Battery-Test.md"
+        - "DATA_33-04-03_Emergency-Illuminance-And-Duration.csv"
+
+    - id: "05-DRIVERS_AND_POWER_SUPPLIES"
+      title: "LED Drivers & Power Supplies: CCR, Thermal Management"
+      files:
+        - "DESC_33-05-01_LED-Drivers-And-CCR-Philosophy.md"
+        - "PROC_33-05-02_Driver-Removal-Installation-And-Test.md"
+        - "DATA_33-05-03_Power-Supply-Specs-And-Failure-Limits.csv"
+
+    - id: "06-PHOTOMETRIC_TESTING"
+      title: "Photometric Testing: Calibrated Measurement & Reporting"
+      files:
+        - "PROC_33-06-01_Photometric-Test-Setup-And-Report.md"
+        - "DATA_33-06-02_Photometric-Test-Template.csv"
+
+    - id: "07-EMC_LSP_AND_BONDING"
+      title: "EMC, LSP & Bonding: DO-160 Compliance"
+      files:
+        - "PROC_33-07-01_EMC-Check-And-LSP-Restoration.md"
+        - "DATA_33-07-02_LSP-Bonding-And-Resistance-Limits.csv"
+
+    - id: "08-INSPECTION_AND_NDT"
+      title: "Inspection & NDT: GVI, Acceptance Criteria"
+      files:
+        - "PROC_33-08-01_GVI-For-Lighting-Assemblies.md"
+        - "PROC_33-08-02_NDT-For-Optic-And-Housing-Integrity.md"
+        - "DATA_33-08-03_Inspection-Intervals-And-Acceptance.csv"
+
+    - id: "09-REPAIR_GUIDELINES"
+      title: "Repair Guidelines: Optic Repair, LED Module Changeout"
+      files:
+        - "PROC_33-09-01_Optic-Repair-And-Seal-Restoration.md"
+        - "PROC_33-09-02_LED-Module-Changeout-And-Qualification.md"
+
+    - id: "10-QUALIFICATION_AND_TEST_PLANS"
+      title: "Qualification & Test Plans: Environmental, Life Testing"
+      files:
+        - "TESTPLAN_33-10-01_Lighting-Qualification-And-Environmental-Plan.md"
+        - "DATA_33-10-02_Test-Matrix-And-Failure-Criteria.csv"
+
+    - id: "11-MATERIALS_M_AND_P_TRACEABILITY"
+      title: "Materials & M&P Traceability: Suppliers, CoC"
+      files:
+        - "DATA_33-11-01_Approved-Lens-And-LED-Suppliers.csv"
+        - "PROC_33-11-02_M&P-Traceability-And-CoC.md"
+
+    - id: "12-NONCONFORMANCE_AND-DEVIATION"
+      title: "Nonconformance & Deviation: NCR, Engineering Disposition"
+      files:
+        - "PROC_33-12-01_Nonconformance-Handling-And-Engineering-Disposition.md"
+        - "DATA_33-12-02_NCR-Template.csv"
+
+    - id: "13-DIAGRAMS_AND_REFERENCE_DATA"
+      title: "Diagrams & Reference Data: Exploded Views, Tables"
+      files:
+        - "DIAG_33-13-01_Lighting-Exploded-Views.pdf"
+        - "DATA_33-13-02_Reference-Tables.csv"
+
+    - id: "14-SIDE-CAR_META"
+      title: "Sidecar Metadata Templates"
+      files:
+        - "templates/document.meta.yaml"
+        - "templates/proc_sidecar_template.meta.yaml"
+
+    - id: "15-EXAMPLES_AND_RECORDS"
+      title: "Examples & Records: Sample Test Reports, Logs"
+      files:
+        - "EXAMPLE_33-15-01_Photometric-Test-Report.csv"
+        - "EXAMPLE_33-15-02_Repair-Record-Example.json"
+        - "EXAMPLE_33-15-03_Inspection-Log.csv"
+
+validation:
+  ci_script: "ci/validate_ata33.sh"
+  requirements:
+    - "All sidecars must have effective_date <= today"
+    - "CSV files must include header row with units"
+    - "Photometric test records must include instrument calibration ID"
+    - "Emergency lighting table must include Min_Illuminance_lux, Duration_s, Uniformity"
+    - "LED/driver specs must include L70/Lx_hours, thermal_derating, ripple_mV, inrush_A"
+    - "EMC entries must reference DO-160 sections and attach test evidence with sha256"
+    - "LSP continuity tests must include 4-wire reading and acceptance threshold"
+    - "Safety-critical changes require engineering disposition and airworthiness approval"
+
+integrity:
+  schema_version: "1.0.0"
+  last_validated: "2025-10-30"
+  validator: "ci/validate_ata33.sh"
+
+contact:
+  chapter_owner:
+    name: "Lighting Systems Engineering"
+    email: "lighting-systems@ampel360.com"
+  airworthiness:
+    name: "Airworthiness Authority"
+    email: "airworthiness@ampel360.com"
+  support:
+    email: "ata-support@ampel360.com"
+
+change_log:
+  - date: "2025-10-30"
+    revision: "A"
+    author: "ATA-33 Agent"
+    description: "Initial release: comprehensive ATA 33 structure with audit-ready documentation"
+
+---
+# END OF INDEX
