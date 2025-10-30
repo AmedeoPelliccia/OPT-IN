@@ -1,0 +1,40 @@
+schema_version: "1.1"
+id: "DATA_11-05-02_Approved-Adhesives-And-Application-Data_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "11-05-02: Approved Adhesives and Application Data"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+data:
+  format: "CSV"
+  units_included: true
+  validation_rules: ["All adhesives must have CofC requirement", "Service temperature range must be specified", "Shelf life must be specified"]
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  hazards: ["Adhesive failure leading to placard detachment", "Chemical exposure to adhesive components", "Fire risk from incompatible materials"]
+  criticality: "Critical"
+approvals:
+  - authority: "Materials & Processes"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Cabin Systems Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+traceability:
+  source_documents: ["Adhesive manufacturer data sheets", "ASTM D3359", "ATA 20 Standard Practices"]
+  crossrefs: ["PROC_11-03-01", "DESC_11-01-01"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "3b8d334ed27c7b6197b82bb26b4ab642d924951ae375860528bd3350adefe8a5"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Materials & Processes"
+    description: "Initial release - approved adhesives with application data, strength values, and environmental qualifications"
+notes: "Master list of approved adhesives for placard installation. Includes mix ratios, pot life, cure times, peel/shear strength, service temperature ranges, and CofC requirements. Use with PROC_11-03-01."

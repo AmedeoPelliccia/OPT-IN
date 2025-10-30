@@ -1,0 +1,397 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata11/repair-record.schema.json",
+  "title": "Placard Installation and Replacement Record Schema",
+  "description": "Schema for documenting placard or marking installation, replacement, or repair with full traceability",
+  "type": "object",
+  "required": [
+    "record_id",
+    "record_type",
+    "aircraft_msn",
+    "placard_or_marking_id",
+    "action_performed",
+    "action_date",
+    "location",
+    "personnel",
+    "materials",
+    "integrity",
+    "approvals"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^RECORD_[0-9]{2}-[0-9]{2}-[0-9]{6}$",
+      "description": "Unique record identifier (e.g., RECORD_11-01-000001)"
+    },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "Installation",
+        "Replacement",
+        "Removal",
+        "Inspection",
+        "Repair"
+      ],
+      "description": "Type of action performed"
+    },
+    "aircraft_msn": {
+      "type": "string",
+      "description": "Aircraft Manufacturer Serial Number"
+    },
+    "aircraft_registration": {
+      "type": "string",
+      "description": "Aircraft registration number"
+    },
+    "placard_or_marking_id": {
+      "type": "string",
+      "description": "Reference to placard_id or marking_id"
+    },
+    "action_performed": {
+      "type": "object",
+      "required": ["description", "reason"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Detailed description of action performed"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Reason for action (scheduled maintenance, damage, modification, regulatory change)"
+        },
+        "work_order": {
+          "type": "string",
+          "description": "Work order or task card reference"
+        },
+        "modification_reference": {
+          "type": "string",
+          "description": "Modification or Service Bulletin reference if applicable"
+        }
+      }
+    },
+    "action_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time action was performed (ISO 8601)"
+    },
+    "location": {
+      "type": "object",
+      "required": ["description"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Textual description of location"
+        },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "fuselage_station_mm": {"type": "number"},
+            "buttock_line_mm": {"type": "number"},
+            "water_line_mm": {"type": "number"}
+          }
+        },
+        "zone": {
+          "type": "string",
+          "description": "ATA zone"
+        },
+        "as_installed_drawing": {
+          "type": "string",
+          "description": "As-installed drawing reference"
+        }
+      }
+    },
+    "personnel": {
+      "type": "object",
+      "required": ["installer", "inspector"],
+      "properties": {
+        "installer": {
+          "type": "object",
+          "required": ["name", "certification", "signature_ref"],
+          "properties": {
+            "name": {"type": "string"},
+            "certification": {
+              "type": "string",
+              "description": "Certification or license number"
+            },
+            "signature_ref": {
+              "type": "string",
+              "description": "Digital signature reference or stamp number"
+            }
+          }
+        },
+        "inspector": {
+          "type": "object",
+          "required": ["name", "certification", "signature_ref"],
+          "properties": {
+            "name": {"type": "string"},
+            "certification": {"type": "string"},
+            "signature_ref": {"type": "string"}
+          }
+        },
+        "rii_inspector": {
+          "type": "object",
+          "description": "Required Inspection Item inspector (if applicable)",
+          "properties": {
+            "name": {"type": "string"},
+            "certification": {"type": "string"},
+            "signature_ref": {"type": "string"}
+          }
+        }
+      }
+    },
+    "materials": {
+      "type": "object",
+      "required": ["substrate"],
+      "properties": {
+        "substrate": {
+          "type": "object",
+          "required": ["part_number", "serial_number", "coc_reference"],
+          "properties": {
+            "part_number": {
+              "type": "string",
+              "description": "Substrate material part number"
+            },
+            "serial_number": {
+              "type": "string",
+              "description": "Serial number or lot number"
+            },
+            "supplier": {
+              "type": "string",
+              "description": "Supplier name"
+            },
+            "coc_reference": {
+              "type": "string",
+              "description": "Certificate of Conformance reference number"
+            }
+          }
+        },
+        "adhesive": {
+          "type": "object",
+          "properties": {
+            "part_number": {"type": "string"},
+            "lot_number": {"type": "string"},
+            "expiry_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "mix_ratio": {
+              "type": "string",
+              "description": "Mix ratio for two-part adhesives"
+            },
+            "application_temperature_C": {"type": "number"},
+            "cure_time_hours": {"type": "number"},
+            "cure_temperature_C": {"type": "number"}
+          }
+        },
+        "ink_or_paint": {
+          "type": "object",
+          "properties": {
+            "part_number": {"type": "string"},
+            "lot_number": {"type": "string"},
+            "color_specification": {"type": "string"}
+          }
+        }
+      }
+    },
+    "procedure_followed": {
+      "type": "object",
+      "properties": {
+        "procedure_id": {
+          "type": "string",
+          "description": "Procedure document ID followed"
+        },
+        "revision": {
+          "type": "string",
+          "description": "Procedure revision"
+        },
+        "deviations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {"type": "string"},
+              "authorization": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "quality_checks": {
+      "type": "object",
+      "properties": {
+        "dimensional_check": {
+          "type": "boolean",
+          "description": "Dimensional check performed and passed"
+        },
+        "legibility_check": {
+          "type": "boolean",
+          "description": "Legibility check performed and passed"
+        },
+        "contrast_ratio_measured": {
+          "type": "number",
+          "description": "Measured contrast ratio"
+        },
+        "adhesion_test": {
+          "type": "object",
+          "properties": {
+            "performed": {"type": "boolean"},
+            "method": {
+              "type": "string",
+              "description": "Test method (tape test, pull test)"
+            },
+            "result": {"type": "string"}
+          }
+        },
+        "environmental_exposure": {
+          "type": "object",
+          "properties": {
+            "temperature_cycled": {"type": "boolean"},
+            "humidity_tested": {"type": "boolean"},
+            "results": {"type": "string"}
+          }
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["artwork_hash"],
+      "properties": {
+        "artwork_file": {
+          "type": "string",
+          "description": "Artwork file used for production"
+        },
+        "artwork_hash": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256"]
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$"
+            }
+          }
+        },
+        "artwork_version": {
+          "type": "string",
+          "description": "Artwork version used"
+        },
+        "production_batch": {
+          "type": "string",
+          "description": "Production batch number for pre-manufactured placards"
+        }
+      }
+    },
+    "test_results": {
+      "type": "object",
+      "properties": {
+        "functional_test": {
+          "type": "boolean",
+          "description": "Functional test performed (for active placards with lighting)"
+        },
+        "photometric_measurements": {
+          "type": "object",
+          "properties": {
+            "luminance_cd_m2": {"type": "number"},
+            "uniformity_ratio": {"type": "number"}
+          }
+        },
+        "colorimetry": {
+          "type": "object",
+          "properties": {
+            "color_difference_delta_E": {
+              "type": "number",
+              "description": "Color difference from specification (ΔE)"
+            },
+            "within_tolerance": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date", "signature_ref"],
+        "properties": {
+          "authority": {
+            "type": "string",
+            "description": "Approval authority (Quality Assurance, Airworthiness)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Approved", "Rejected", "Conditional"],
+            "description": "Approval status"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Approval date and time"
+          },
+          "signature_ref": {
+            "type": "string",
+            "description": "Digital signature reference"
+          },
+          "comments": {
+            "type": "string",
+            "description": "Approval comments or conditions"
+          }
+        }
+      }
+    },
+    "nonconformances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ncr_number", "description", "disposition"],
+        "properties": {
+          "ncr_number": {
+            "type": "string",
+            "description": "Non-Conformance Report number"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of nonconformance"
+          },
+          "disposition": {
+            "type": "string",
+            "enum": ["Use As Is", "Rework", "Repair", "Reject"],
+            "description": "Disposition"
+          },
+          "authorization": {
+            "type": "string",
+            "description": "Authorization for disposition"
+          }
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["filename", "type", "hash"],
+        "properties": {
+          "filename": {"type": "string"},
+          "type": {
+            "type": "string",
+            "description": "File type (photo, drawing, report)"
+          },
+          "hash": {
+            "type": "object",
+            "properties": {
+              "algorithm": {"type": "string"},
+              "value": {"type": "string"}
+            }
+          },
+          "description": {"type": "string"}
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or observations"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+schema_version: "1.1"
+id: "PROC_11-03-01_Placard-Removal-And-Installation_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "11-03-01: Placard Removal and Installation"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+procedure:
+  category: "Removal_Installation"
+  skill_level: "Intermediate"
+  estimated_duration: "1-2 hours"
+  personnel_required: 2
+  special_tools: ["Torque wrench 0-50 in-lbf", "Heat gun 200-300°F", "Digital calipers", "Colorimeter"]
+  consumables: ["IPA 99%", "Adhesive (per DATA_11-05-02)", "Lint-free wipes"]
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+  applicable_components: ["All adhesive-bonded and mechanically-fastened placards"]
+safety:
+  hazards: ["Chemical exposure to solvents", "Sharp edges on metal placards", "Eye injury from debris", "Inhalation of adhesive fumes"]
+  criticality: "Major"
+  ppe_required: ["Safety glasses", "Chemical-resistant gloves", "Respirator (confined spaces)"]
+  lockout_tagout: false
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Quality Assurance"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+quality:
+  inspection_required: true
+  rii_required: true
+  test_required: true
+  test_procedure_ref: "Legibility and adhesion tests per Section 8"
+traceability:
+  source_documents: ["ATA 20 Standard Practices", "Adhesive manufacturer data sheets"]
+  crossrefs: ["DATA_11-03-03", "DATA_11-05-02", "DATA_11-02-02", "PROC_11-04-01"]
+  supersedes: null
+  superseded_by: null
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "62a1568e5eb75159d57d7230dee6fde51fb961eddc2b53f973ba8993ef4490f7"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release - comprehensive procedure for placard removal, surface prep, installation, and QC"
+notes: "Flight-critical procedure for Class 1 and Class 2 placards. RII inspection required. Includes surface preparation, adhesive selection, quality checks, and troubleshooting."

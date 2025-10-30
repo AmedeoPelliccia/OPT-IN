@@ -1,0 +1,12 @@
+File_Type,Format,Resolution_DPI,Color_Space,Max_File_Size_MB,Use_Case,Software_Compatibility,Version_Control_Required,SHA256_Required,Notes
+Vector Graphics,SVG,N/A,sRGB or CMYK,10,Primary artwork for scalable placards,Adobe Illustrator Inkscape,Yes,Yes,Preferred format for production scalability lossless scaling
+Vector Graphics,AI,N/A,CMYK,20,Adobe Illustrator native format,Adobe Illustrator,Yes,Yes,Proprietary format use for design source files
+Vector Graphics,PDF,N/A,CMYK,15,Print-ready artwork with embedded fonts,Adobe Acrobat Illustrator,Yes,Yes,PDF/X-1a standard for print production
+Raster Graphics,PNG,300,sRGB,25,Digital displays and screen printing,Universal,Yes,Yes,Lossless compression transparent background support
+Raster Graphics,TIFF,300,CMYK,50,High-quality print production,Adobe Photoshop,Yes,Yes,Uncompressed or LZW compression for archival quality
+Raster Graphics,JPEG,300,sRGB,10,Proofs and documentation only,Universal,No,No,Lossy compression not for production artwork
+3D Graphics,STL,N/A,N/A,100,3D-printed placards or raised text,CAD software 3D printing slicers,Yes,Yes,For embossed or raised placard designs
+Font Files,TTF,N/A,N/A,1,TrueType fonts for text rendering,Universal,Yes,Yes,Embed fonts in PDF or include with artwork package
+Font Files,OTF,N/A,N/A,1,OpenType fonts with advanced features,Universal,Yes,Yes,Preferred for professional typography
+Color Profile,ICC,N/A,N/A,0.5,Color profile for accurate color reproduction,Color-managed software,Yes,No,Include ICC profile with artwork for print
+Proof File,PDF,150,sRGB,5,Soft proof for approval,Adobe Acrobat universal viewers,No,No,Low-resolution proof for review not for production

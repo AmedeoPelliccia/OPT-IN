@@ -1,0 +1,40 @@
+schema_version: "1.1"
+id: "DATA_11-01-03_Regulatory-Compliance-Matrix_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "11-01-03: Regulatory Compliance Matrix"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+data:
+  format: "CSV"
+  units_included: false
+  validation_rules: ["All regulations must have compliance method and verification method"]
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  hazards: []
+  criticality: "Major"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Regulatory Affairs"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+traceability:
+  source_documents: ["FAA 14 CFR Part 25", "EASA CS-25", "SAE AS5942", "SAE ARP6143", "ISO 3864", "RTCA DO-160"]
+  crossrefs: ["INDEX.meta.yaml", "DESC_11-01-01"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "012852cf9ce5c6a54ca2fe8e57b4559de9510adac948435d053d4256bcb40a2c"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Regulatory Affairs"
+    description: "Initial release - comprehensive mapping of all regulatory requirements to placard compliance methods"
+notes: "Critical document for audit and certification. Maps all FAA, EASA, SAE, ISO, and RTCA requirements to specific placards and verification methods."

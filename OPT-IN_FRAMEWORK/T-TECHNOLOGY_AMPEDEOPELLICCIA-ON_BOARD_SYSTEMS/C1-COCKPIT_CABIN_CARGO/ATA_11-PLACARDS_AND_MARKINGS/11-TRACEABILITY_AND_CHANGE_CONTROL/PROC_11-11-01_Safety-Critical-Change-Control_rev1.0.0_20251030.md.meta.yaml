@@ -1,0 +1,31 @@
+schema_version: "1.1"
+id: "PROC_11-11-01_Safety-Critical-Change-Control_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "11-11-01: Safety-Critical Placard Change Control"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+procedure:
+  category: "Change_Control"
+  skill_level: "Specialist"
+  estimated_duration: "2-4 weeks"
+  personnel_required: 5
+effectivity:
+  msn: "ALL"
+safety:
+  criticality: "Critical"
+approvals:
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+traceability:
+  crossrefs: ["DESC_11-01-01", "PROC_11-03-01"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "c1e66b06d33a19924b85d65b519f98263beebc229ee213db38a3c09da5de8676"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Airworthiness Engineering"
+    description: "Initial release"

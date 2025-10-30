@@ -1,0 +1,244 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata11/marking.schema.json",
+  "title": "Marking Specification Schema",
+  "description": "Schema for aircraft marking specifications including painted, engraved, or etched markings",
+  "type": "object",
+  "required": [
+    "marking_id",
+    "marking_type",
+    "title",
+    "design",
+    "application_method",
+    "durability",
+    "placement",
+    "effectivity"
+  ],
+  "properties": {
+    "marking_id": {
+      "type": "string",
+      "pattern": "^MARKING_[0-9]{2}-[0-9]{2}-[0-9]{3}$",
+      "description": "Unique marking identifier (e.g., MARKING_11-01-001)"
+    },
+    "marking_type": {
+      "type": "string",
+      "enum": [
+        "Painted",
+        "Engraved",
+        "Etched",
+        "Laser_Marked",
+        "Stamped",
+        "Molded"
+      ],
+      "description": "Method of creating the marking"
+    },
+    "title": {
+      "type": "string",
+      "description": "Descriptive title of the marking"
+    },
+    "permanent": {
+      "type": "boolean",
+      "default": true,
+      "description": "Indicates if marking is permanent or temporary"
+    },
+    "design": {
+      "type": "object",
+      "required": ["text_or_symbol", "dimensions"],
+      "properties": {
+        "text_or_symbol": {
+          "type": "string",
+          "description": "Text content or symbol description"
+        },
+        "dimensions": {
+          "type": "object",
+          "required": ["character_height_mm"],
+          "properties": {
+            "character_height_mm": {
+              "type": "number",
+              "minimum": 1.0,
+              "description": "Character height in millimeters"
+            },
+            "stroke_width_mm": {
+              "type": "number",
+              "minimum": 0.1,
+              "description": "Stroke width in millimeters"
+            },
+            "depth_mm": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Depth for engraved or etched markings in millimeters"
+            }
+          }
+        },
+        "font_family": {
+          "type": "string",
+          "description": "Font family for text markings"
+        },
+        "color": {
+          "type": "object",
+          "properties": {
+            "specification": {
+              "type": "string",
+              "description": "Color specification (Pantone, RAL, Federal Standard 595)"
+            },
+            "hex": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            }
+          }
+        }
+      }
+    },
+    "application_method": {
+      "type": "object",
+      "required": ["method"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "spray_paint",
+            "stencil",
+            "mechanical_engraving",
+            "chemical_etching",
+            "laser_engraving",
+            "dot_peen",
+            "hot_stamp"
+          ]
+        },
+        "material_spec": {
+          "type": "string",
+          "description": "Paint, ink, or marking material specification"
+        },
+        "surface_preparation": {
+          "type": "string",
+          "description": "Surface preparation requirements (cleaning, degreasing, abrasion)"
+        },
+        "application_temperature_C": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"}
+          }
+        },
+        "cure_time_hours": {
+          "type": "number",
+          "description": "Cure or drying time in hours"
+        },
+        "protective_coating": {
+          "type": "string",
+          "description": "Protective coating applied over marking (clear coat, anodizing)"
+        }
+      }
+    },
+    "durability": {
+      "type": "object",
+      "required": ["expected_life_years"],
+      "properties": {
+        "expected_life_years": {
+          "type": "number",
+          "minimum": 1,
+          "description": "Expected service life in years"
+        },
+        "resistance": {
+          "type": "object",
+          "properties": {
+            "abrasion": {
+              "type": "boolean",
+              "description": "Resistant to abrasion"
+            },
+            "uv": {
+              "type": "boolean",
+              "description": "Resistant to UV exposure"
+            },
+            "chemicals": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Chemicals marking is resistant to"
+            },
+            "temperature_range_C": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number"},
+                "max": {"type": "number"}
+              }
+            }
+          }
+        },
+        "inspection_interval_hours": {
+          "type": "number",
+          "description": "Inspection interval in flight hours"
+        },
+        "replacement_criteria": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Criteria for marking replacement"
+        }
+      }
+    },
+    "placement": {
+      "type": "object",
+      "required": ["location_description"],
+      "properties": {
+        "location_description": {
+          "type": "string",
+          "description": "Description of marking location"
+        },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "fuselage_station_mm": {"type": "number"},
+            "buttock_line_mm": {"type": "number"},
+            "water_line_mm": {"type": "number"}
+          }
+        },
+        "zone": {
+          "type": "string",
+          "description": "ATA zone designation"
+        },
+        "reference_drawing": {
+          "type": "string",
+          "description": "Reference to location drawing"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "required": ["msn"],
+      "properties": {
+        "msn": {
+          "type": "string",
+          "description": "Manufacturer Serial Number range"
+        },
+        "config": {
+          "type": "string",
+          "description": "Configuration identifier"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["authority", "status", "date"],
+        "properties": {
+          "authority": {"type": "string"},
+          "status": {
+            "type": "string",
+            "enum": ["Draft", "Released", "Approved", "Superseded"]
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

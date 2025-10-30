@@ -1,0 +1,37 @@
+schema_version: "1.1"
+id: "DATA_11-03-03_Placard-Location-Table_rev1.0.0_20251030"
+document:
+  type: "DATA"
+  title: "11-03-03: Placard Location Table"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+data:
+  format: "CSV"
+  units_included: true
+  validation_rules: ["All coordinates must be in mm", "Zone must be valid ATA zone", "Tolerance must be specified"]
+effectivity:
+  msn: "ALL"
+  config: "ALL"
+safety:
+  hazards: ["Incorrect placard placement leading to crew error", "Missing safety-critical placard"]
+  criticality: "Critical"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+traceability:
+  source_documents: ["Aircraft installation drawings", "FAA 14 CFR 25.1557"]
+  crossrefs: ["PROC_11-03-01", "PROC_11-04-01", "DESC_11-01-01"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "e4c7e761f5751abb99effbf133dbca9abb1637d7b2a10eb5b80fd850699b69dd"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release - comprehensive location table with coordinates for all placards"
+notes: "Master location table for all aircraft placards. Used by installers and inspectors. Coordinates referenced to aircraft datum (FS, BL, WL). Update for each configuration variant or modification."
