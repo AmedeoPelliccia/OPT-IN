@@ -4,7 +4,20 @@ chapter: "ATA 35 - OXYGEN"
 governance:
   owner_role: "Cabin Systems / Oxygen"
   review_board: ["Cabin Systems","Airworthiness","Materials & Process","NDT","Safety Engineering"]
-  regulatory_basis: ["FAA Part 25.1441", "FAA Part 25.1443", "FAA Part 25.1445", "FAA Part 25.1447", "FAA Part 25.1449", "FAA Part 25.1450", "FAA Part 25.1453", "EASA CS-25", "DO-160", "MIL-PRF-27210"]
+  regulatory_basis:
+    faa_regulations:
+      - "FAA Part 25.1441"
+      - "FAA Part 25.1443"
+      - "FAA Part 25.1445"
+      - "FAA Part 25.1447"
+      - "FAA Part 25.1449"
+      - "FAA Part 25.1450"
+      - "FAA Part 25.1453"
+    easa_standards:
+      - "EASA CS-25"
+    industry_standards:
+      - "DO-160"
+      - "MIL-PRF-27210"
 traceability:
   crossrefs:
     - "ATA 04"  # Airworthiness Limitations
