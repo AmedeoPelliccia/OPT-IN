@@ -89,7 +89,7 @@ echo "Check 4: Checking change request ID patterns..."
 CHANGE_REQUEST_DIR="$ATA16_DIR/05-RECORDS/12-EXAMPLES_AND_RECORDS"
 if [ -d "$CHANGE_REQUEST_DIR" ]; then
     INVALID_IDS=0
-    for file in $(find "$CHANGE_REQUEST_DIR" -type f -name "*ECR*.json" -o -name "*NCR*.json"); do
+    for file in $(find "$CHANGE_REQUEST_DIR" -type f \( -name "*ECR*.json" -o -name "*NCR*.json" \)); do
         if [ -f "$file" ]; then
             # Check if file contains valid ECR or NCR ID pattern
             if ! grep -qE "(ECR|NCR)-[0-9]{4}-[0-9]{4}" "$file"; then
