@@ -8,7 +8,7 @@ Monel 400,Approved,Regulator components, fittings,Good oxygen compatibility,AMS 
 PTFE (Teflon),Approved,Gaskets, seals, low-pressure applications,Must be oxygen-clean grade,CGA G-4.4
 Viton (FKM),Approved,O-rings, seals (low pressure),Maximum 50 bar service,CGA G-4.4
 Kel-F (PCTFE),Approved,Seals, low-pressure valve seats,Excellent oxygen compatibility,CGA G-4.4
-Brass (unleaded),Conditional,Low-pressure fittings only,Not for high-pressure oxygen,CGA G-4.4
+Brass (unleaded),Conditional,Low-pressure fittings only,Not for service above 50 bar,CGA G-4.4
 Copper,Not Approved,Not recommended for oxygen service,Risk of combustion,CGA G-4.4
 Aluminum Bronze,Conditional,Low-pressure applications with analysis,Engineering review required,CGA G-4.4
 Carbon Steel,Not Approved,Not for oxygen service,High flammability risk,CGA G-4.4
