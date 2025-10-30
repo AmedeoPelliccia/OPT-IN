@@ -33,13 +33,13 @@ All procedures, limits, and material specifications within this chapter are mand
 ## Regulatory Basis
 
 This chapter complies with the following regulations and standards:
-- FAA Part 25.1419 (Ice Protection)
-- FAA Part 25.1093 (Induction System Icing Protection)
-- EASA CS-25 equivalent regulations
-- SAE ARP5905 (Ice Protection System Design)
-- DO-160 (Environmental Conditions and Test Procedures)
-- ARP4754A (Development of Civil Aircraft Systems)
-- ARP4761 (Safety Assessment Process)
+- [FAA Part 25.1419](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR3def72f6c55f917/section-25.1419) (Ice Protection)
+- [FAA Part 25.1093](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-E/subject-group-ECFR8320e56efa3048f/section-25.1093) (Induction System Icing Protection)
+- [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) equivalent regulations
+- [SAE ARP5905](https://www.sae.org/standards/content/arp5905/) (Ice Protection System Design)
+- [DO-160](https://www.rtca.org/content/standards-guidance-materials) (Environmental Conditions and Test Procedures)
+- [ARP4754A](https://www.sae.org/standards/content/arp4754a/) (Development of Civil Aircraft Systems)
+- [ARP4761](https://www.sae.org/standards/content/arp4761/) (Safety Assessment Process)
 
 ## Document Structure
 
@@ -54,14 +54,14 @@ Each document must have a corresponding `.meta.yaml` sidecar file containing met
 
 ## Cross-References
 
-- ATA 20: Standard Practices - Airframe
-- ATA 21: Air Conditioning and Pressurization
-- ATA 24: Electrical Power
-- ATA 27: Flight Controls
-- ATA 31: Indicating/Recording Systems
-- ATA 34: Navigation
-- ATA 36: Pneumatic
-- ATA 51: Standard Practices and Structures - General
+- [ATA 20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES/): Standard Practices - Airframe
+- [ATA 21](../ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/): Air Conditioning and Pressurization
+- [ATA 24](../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/): Electrical Power
+- [ATA 27](../../A2-AERODYNAMICS/ATA_27-FLIGHT_CONTROLS_SYSTEM_FOR_AERODYNAMIC_MANIPULATION/): Flight Controls
+- [ATA 31](../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/): Indicating/Recording Systems
+- [ATA 34](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_34-NAVIGATION/): Navigation
+- [ATA 36](../ATA_36-PNEUMATIC/): Pneumatic
+- [ATA 51](../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES/): Standard Practices and Structures - General
 
 ## Revision History
 

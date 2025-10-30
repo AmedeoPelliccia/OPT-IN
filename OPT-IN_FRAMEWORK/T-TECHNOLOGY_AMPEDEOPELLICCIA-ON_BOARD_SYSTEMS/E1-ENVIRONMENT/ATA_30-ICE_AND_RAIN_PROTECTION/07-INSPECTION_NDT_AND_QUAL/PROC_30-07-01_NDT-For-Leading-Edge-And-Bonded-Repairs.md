@@ -90,9 +90,9 @@ Define Non-Destructive Testing (NDT) methods, acceptance criteria, and documenta
 
 ## References
 
-- DATA_30-07-02: Inspection Intervals and Acceptance
-- ASTM E1444: Standard Practice for Ultrasonic Testing
-- ASTM E1933: Standard Practice for Thermography
+- [DATA_30-07-02: Inspection Intervals and Acceptance](DATA_30-07-02_Inspection-Intervals-And-Acceptance.csv)
+- [ASTM E1444](https://www.astm.org/e1444-16.html): Standard Practice for Ultrasonic Testing
+- [ASTM E1933](https://www.astm.org/e1933-14r21.html): Standard Practice for Thermography
 
 ## Revision History
 

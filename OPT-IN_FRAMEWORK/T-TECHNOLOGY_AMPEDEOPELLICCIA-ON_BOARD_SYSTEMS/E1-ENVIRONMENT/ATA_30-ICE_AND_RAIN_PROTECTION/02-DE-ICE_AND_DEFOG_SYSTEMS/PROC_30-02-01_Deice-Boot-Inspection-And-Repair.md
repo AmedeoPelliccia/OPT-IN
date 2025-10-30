@@ -80,7 +80,7 @@ All pneumatic de-ice boots installed on AMPEL360 BWB leading edges, wing surface
      - Allow cure per adhesive specification (temperature, time)
      - Re-inspect per steps 2-4 after cure
 5.2. For major damage or delamination > 10 mm:
-     - Remove and replace boot per PROC_30-02-02
+     - Remove and replace boot per [PROC_30-02-02](PROC_30-02-02_Deice-Boot-Installation-Removal.md)
      - Perform root cause analysis for premature failure
 
 ### 6. Post-Repair Cycle Test
@@ -94,9 +94,9 @@ All pneumatic de-ice boots installed on AMPEL360 BWB leading edges, wing surface
 7.1. Record all inspection findings, measurements, and NDT results
 7.2. Photograph all repairs and document material lot numbers
 7.3. Compute SHA-256 hash of all NDT raw files and photos
-7.4. Update boot record in Digital Product Passport (ATA-95)
+7.4. Update boot record in [Digital Product Passport (ATA-95)](../../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/)
 7.5. Update aircraft maintenance logbook
-7.6. Complete repair record per `schemas/repair-record.schema.json`
+7.6. Complete repair record per [`schemas/repair-record.schema.json`](../schemas/repair-record.schema.json)
 
 ## Training Required
 
@@ -106,10 +106,10 @@ All pneumatic de-ice boots installed on AMPEL360 BWB leading edges, wing surface
 
 ## References
 
-- DATA_30-02-03: De-ice Boot Limits
-- DATA_30-06-01: Approved Seals, Lubricants, and Fabrics
-- PROC_30-02-02: De-ice Boot Installation and Removal
-- ATA-20: Standard Practices - Airframe
+- [DATA_30-02-03: De-ice Boot Limits](DATA_30-02-03_Deice-Boot-Limits.csv)
+- [DATA_30-06-01: Approved Seals, Lubricants, and Fabrics](../06-MATERIALS_M_AND_P/DATA_30-06-01_Approved-Seals-Lubricants-And-Fabrics.csv)
+- [PROC_30-02-02: De-ice Boot Installation and Removal](PROC_30-02-02_Deice-Boot-Installation-Removal.md)
+- [ATA-20: Standard Practices - Airframe](../../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES/)
 
 ## Revision History
 

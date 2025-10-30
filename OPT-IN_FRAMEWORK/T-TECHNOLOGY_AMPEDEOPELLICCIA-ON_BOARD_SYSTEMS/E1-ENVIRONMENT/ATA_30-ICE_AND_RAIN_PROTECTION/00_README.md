@@ -19,16 +19,16 @@ This chapter covers the complete ice and rain protection systems, including pneu
 
 - **Limits:** All de-ice boot inflation pressures, thermal element temperatures, heater power limits, leak rates, cycle life limits, sensor heat setpoints, and material specifications are mandatory limits and cannot be exceeded without engineering disposition and airworthiness approval.
 - **Cross-Chapter Dependencies:**
-  - **ATA-20:** Standard practices for bonding, sealing, and surface preparation.
-  - **ATA-21:** Air Conditioning and Pressurization (bleed air supply for pneumatic ice protection).
-  - **ATA-24:** Electrical Power (power supply for electrothermal systems, heater control units).
-  - **ATA-27:** Flight Controls (control surface integration, ice shedding effects on aeroelasticity).
-  - **ATA-31:** Indicating/Recording Systems (ice detection sensors, crew alerting).
-  - **ATA-34:** Navigation (air data sensor heating, pitot-static systems).
-  - **ATA-36:** Pneumatic (bleed air distribution, pressure regulation).
-  - **ATA-51:** Standard Practices and Structures - General (composite repair, LSP restoration).
-- **Traceability:** All repairs, material applications, thermal system tests, and de-ice boot replacements must be recorded with full traceability to Materials & Processes (M&P) certifications, NDT reports, calibration certificates, raw test data files, and Digital Product Passport (DPP) entries per ATA-95.
-- **Data Integrity:** All changes are validated by the CI script `ci/validate_ata30.sh`, which enforces schemas, naming conventions, and metadata sidecar requirements.
+  - **[ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES/):** Standard practices for bonding, sealing, and surface preparation.
+  - **[ATA-21](../ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/):** Air Conditioning and Pressurization (bleed air supply for pneumatic ice protection).
+  - **[ATA-24](../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/):** Electrical Power (power supply for electrothermal systems, heater control units).
+  - **[ATA-27](../../A2-AERODYNAMICS/ATA_27-FLIGHT_CONTROLS_SYSTEM_FOR_AERODYNAMIC_MANIPULATION/):** Flight Controls (control surface integration, ice shedding effects on aeroelasticity).
+  - **[ATA-31](../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/):** Indicating/Recording Systems (ice detection sensors, crew alerting).
+  - **[ATA-34](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_34-NAVIGATION/):** Navigation (air data sensor heating, pitot-static systems).
+  - **[ATA-36](../ATA_36-PNEUMATIC/):** Pneumatic (bleed air distribution, pressure regulation).
+  - **[ATA-51](../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES/):** Standard Practices and Structures - General (composite repair, LSP restoration).
+- **Traceability:** All repairs, material applications, thermal system tests, and de-ice boot replacements must be recorded with full traceability to Materials & Processes (M&P) certifications, NDT reports, calibration certificates, raw test data files, and Digital Product Passport (DPP) entries per [ATA-95](../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/).
+- **Data Integrity:** All changes are validated by the CI script [`ci/validate_ata30.sh`](ci/validate_ata30.sh), which enforces schemas, naming conventions, and metadata sidecar requirements.
 
 ## Directory Structure
 
@@ -56,17 +56,30 @@ This chapter covers the complete ice and rain protection systems, including pneu
 └── 10-EXAMPLES_AND_RECORDS/        ← Example repair records, test reports
 ```
 
+### Quick Navigation
+
+- **[General Information](01-GENERAL/)** - Scope, governance, regulatory compliance
+- **[De-ice & Defog Systems](02-DE-ICE_AND_DEFOG_SYSTEMS/)** - Boot inspection, installation, limits
+- **[Thermal Systems](03-THERMAL_AND_WEPT/HEATERS/)** - Leading edge thermal tests, calibration
+- **[Window & Sensor Heat](04-WINDOW_AND_SENSOR_HEAT/)** - Windshield and sensor heating
+- **[Rain Management](05-RUNWAY_RAIN_AND_WATER_MANAGEMENT/)** - Rain removal philosophy, qualification
+- **[Materials & M&P](06-MATERIALS_M_AND_P/)** - Approved materials, traceability
+- **[Inspection & NDT](07-INSPECTION_NDT_AND_QUAL/)** - NDT procedures, intervals
+- **[Nonconformance](08-NONCONFORMANCE_AND-DEVIATION/)** - NCR handling, disposition
+- **[Metadata Templates](09-SIDE-CAR_META/templates/)** - Sidecar templates
+- **[Examples & Records](10-EXAMPLES_AND_RECORDS/)** - Example repair records, test reports
+
 ## Key Requirements
 
-### Repair Records (Schema: `repair-record.schema.json`)
+### Repair Records (Schema: [`repair-record.schema.json`](schemas/repair-record.schema.json))
 
 All ice and rain protection system repairs must include the following specific fields:
 - **Component ID:** De-ice boot part number, serial, installation date, cycles
 - **System Type:** DeiceBoot, ElectrothermalLeadingEdge, WindshieldHeat, WeepSystem, RainRemoval
 - **Location:** Wing station, fuselage station, or component location
 - **Thermal System ID:** Heater element part number, serial, power rating, control logic
-- **Materials Used:** Adhesive lot numbers, boot material batch, seal compounds with CofC
-- **NDT Reports:** Ultrasonic bond inspection, thermography results with SHA-256 hashes
+- **Materials Used:** Adhesive lot numbers, boot material batch, seal compounds with CofC (see [Approved Materials](06-MATERIALS_M_AND_P/DATA_30-06-01_Approved-Seals-Lubricants-And-Fabrics.csv))
+- **NDT Reports:** Ultrasonic bond inspection, thermography results with SHA-256 hashes (see [NDT Procedures](07-INSPECTION_NDT_AND_QUAL/PROC_30-07-01_NDT-For-Leading-Edge-And-Bonded-Repairs.md))
 - **Functional Test Results:** Inflation pressure hold test, thermal profile, leak rate
 - **LSP Verification:** Continuity measurement if conductive mesh affected
 - **Effectivity:** Manufacturer Serial Number (MSN) and configuration applicability
@@ -89,19 +102,19 @@ The following numeric limits are defined in the DATA files and must be strictly 
 ### De-ice Boot Qualification Requirements
 
 All de-ice boots must:
-1. Complete qualification test plan per `07-INSPECTION_NDT_AND_QUAL/`
+1. Complete qualification test plan per [`07-INSPECTION_NDT_AND_QUAL/`](07-INSPECTION_NDT_AND_QUAL/)
 2. Demonstrate endurance life (minimum 20,000 cycles typical) without delamination
 3. Pass inflation/deflation cycle testing at temperature extremes
-4. Validate bond strength per ASTM standards
-5. Document Material & Processes (M&P) certification for rubber compounds and adhesives
+4. Validate bond strength per [ASTM standards](https://www.astm.org/)
+5. Document Material & Processes (M&P) certification for rubber compounds and adhesives (see [M&P Traceability](06-MATERIALS_M_AND_P/PROC_30-06-02_M&P-Traceability-And-Storage.md))
 6. Perform post-installation ultrasonic bond inspection with archived results
 
 ### Thermal System Validation Requirements
 
 All electrothermal systems must:
-1. Complete thermal qualification per `03-THERMAL_AND_WEPT/HEATERS/`
-2. Demonstrate temperature control accuracy and uniformity
-3. Pass thermal cycling and environmental qualification per DO-160
+1. Complete thermal qualification per [`03-THERMAL_AND_WEPT/HEATERS/`](03-THERMAL_AND_WEPT/HEATERS/)
+2. Demonstrate temperature control accuracy and uniformity (see [Thermal System Limits](03-THERMAL_AND_WEPT/HEATERS/DATA_30-03-03_Thermal-System-Limits.csv))
+3. Pass thermal cycling and environmental qualification per [DO-160](https://www.rtca.org/content/standards-guidance-materials)
 4. Validate control logic, overtemp protection, and fault detection
 5. Verify LSP continuity if conductive heating elements used
 6. Document calibration certificates for temperature sensors and control units
@@ -109,20 +122,20 @@ All electrothermal systems must:
 ### Materials and M&P Requirements
 
 All materials must:
-1. Be approved per `06-MATERIALS_M_AND_P/DATA_30-06-01`
+1. Be approved per [`06-MATERIALS_M_AND_P/DATA_30-06-01`](06-MATERIALS_M_AND_P/DATA_30-06-01_Approved-Seals-Lubricants-And-Fabrics.csv)
 2. Include Certificate of Conformance (CofC) with batch/lot traceability
 3. Be stored per environmental requirements (temperature, humidity, shelf life)
 4. Include safety data sheets (SDS) for hazardous materials
-5. Reference applicable material standards (AMS, BMS, MIL-SPEC)
+5. Reference applicable material standards ([AMS](https://www.sae.org/standards/), BMS, MIL-SPEC)
 
 ### NDT and Inspection Requirements
 
 All inspections must:
-1. Follow procedures in `07-INSPECTION_NDT_AND_QUAL/`
+1. Follow procedures in [`07-INSPECTION_NDT_AND_QUAL/`](07-INSPECTION_NDT_AND_QUAL/)
 2. Include visual inspection (GVI/DVI) for cracks, delamination, discoloration
 3. Perform ultrasonic inspection for bond line integrity
 4. Use thermography for thermal system functional checks
-5. Document inspection intervals and acceptance criteria
+5. Document inspection intervals and acceptance criteria (see [Inspection Intervals](07-INSPECTION_NDT_AND_QUAL/DATA_30-07-02_Inspection-Intervals-And-Acceptance.csv))
 6. Archive NDT raw files with SHA-256 checksums
 
 ## Metadata Sidecar Requirements
@@ -138,24 +151,24 @@ Every PROC (procedure), DATA (data file), and DESC (description) file must have 
 - `integrity`: SHA-256 checksum (placeholder or actual value)
 - `training_required`: Personnel qualification requirements for safety-critical tasks
 
-Templates are provided in `09-SIDE-CAR_META/templates/`.
+Templates are provided in [`09-SIDE-CAR_META/templates/`](09-SIDE-CAR_META/templates/).
 
 ## Cross-References
 
-- **ATA-20:** Standard Practices - Airframe (bonding, sealing, surface preparation)
-- **ATA-21:** Air Conditioning and Pressurization (bleed air supply)
-- **ATA-24:** Electrical Power (power supply for electrothermal systems)
-- **ATA-27:** Flight Controls (control surface integration, ice effects)
-- **ATA-31:** Indicating/Recording Systems (ice detection, crew alerting)
-- **ATA-34:** Navigation (air data sensor heating)
-- **ATA-36:** Pneumatic (bleed air distribution)
-- **ATA-51:** Standard Practices and Structures - General (composite repair, LSP restoration)
-- **ATA-05:** Time Limits & Maintenance Checks (scheduled inspection intervals)
-- **ATA-95:** Digital Product Passport (traceability and data archival)
+- **[ATA-20](../../A-AIRFRAME/ATA_20-STANDARD_PRACTICES/):** Standard Practices - Airframe (bonding, sealing, surface preparation)
+- **[ATA-21](../ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/):** Air Conditioning and Pressurization (bleed air supply)
+- **[ATA-24](../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/):** Electrical Power (power supply for electrothermal systems)
+- **[ATA-27](../../A2-AERODYNAMICS/ATA_27-FLIGHT_CONTROLS_SYSTEM_FOR_AERODYNAMIC_MANIPULATION/):** Flight Controls (control surface integration, ice effects)
+- **[ATA-31](../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/):** Indicating/Recording Systems (ice detection, crew alerting)
+- **[ATA-34](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_34-NAVIGATION/):** Navigation (air data sensor heating)
+- **[ATA-36](../ATA_36-PNEUMATIC/):** Pneumatic (bleed air distribution)
+- **[ATA-51](../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES/):** Standard Practices and Structures - General (composite repair, LSP restoration)
+- **[ATA-05](../../A-AIRFRAME/ATA_05-TIME_LIMITS/):** Time Limits & Maintenance Checks (scheduled inspection intervals)
+- **[ATA-95](../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/):** Digital Product Passport (traceability and data archival)
 
 ## Inspection Intervals
 
-Refer to `07-INSPECTION_NDT_AND_QUAL/DATA_30-07-02_Inspection-Intervals-And-Acceptance.csv` for the complete inspection schedule. Key intervals include:
+Refer to [`07-INSPECTION_NDT_AND_QUAL/DATA_30-07-02_Inspection-Intervals-And-Acceptance.csv`](07-INSPECTION_NDT_AND_QUAL/DATA_30-07-02_Inspection-Intervals-And-Acceptance.csv) for the complete inspection schedule. Key intervals include:
 - **General Visual Inspection (GVI):** Per A-check (typically 500-750 FH)
 - **Detailed Inspection (DET):** Per C-check (typically 3000-4500 FH)
 - **De-ice Boot Functional Test:** Every 2,000 FH or 12 months, whichever is sooner
@@ -166,16 +179,16 @@ Refer to `07-INSPECTION_NDT_AND_QUAL/DATA_30-07-02_Inspection-Intervals-And-Acce
 
 ## Safety and Compliance
 
-- **Regulatory Basis:** Complies with FAA Part 25.1419 (Ice Protection), FAA Part 25.1093 (Induction System Icing Protection), EASA CS-25 equivalents, SAE ARP5905 (Ice Protection System Design), and related regulations.
-- **Environmental Qualification:** DO-160 (environmental conditions and test procedures).
-- **System Safety:** ARP4754A (development process), ARP4761 (safety assessment).
-- **Material Standards:** SAE AMS specifications for adhesives and sealants, ASTM standards for rubber compounds.
-- **NDT Standards:** ASTM E1444 (ultrasonic), ASTM E1933 (thermography), ASTM E2533 (bond testing).
-- **Airworthiness Limitations:** All items in this chapter that are classified as Airworthiness Limitation Items (ALIs) are cross-referenced in ATA-04 and are non-deferrable.
+- **Regulatory Basis:** Complies with [FAA Part 25.1419](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR3def72f6c55f917/section-25.1419) (Ice Protection), [FAA Part 25.1093](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-E/subject-group-ECFR8320e56efa3048f/section-25.1093) (Induction System Icing Protection), [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) equivalents, [SAE ARP5905](https://www.sae.org/standards/content/arp5905/) (Ice Protection System Design), and related regulations.
+- **Environmental Qualification:** [DO-160](https://www.rtca.org/content/standards-guidance-materials) (environmental conditions and test procedures).
+- **System Safety:** [ARP4754A](https://www.sae.org/standards/content/arp4754a/) (development process), [ARP4761](https://www.sae.org/standards/content/arp4761/) (safety assessment).
+- **Material Standards:** [SAE AMS](https://www.sae.org/standards/) specifications for adhesives and sealants, [ASTM standards](https://www.astm.org/) for rubber compounds.
+- **NDT Standards:** [ASTM E1444](https://www.astm.org/e1444-16.html) (ultrasonic), [ASTM E1933](https://www.astm.org/e1933-14r21.html) (thermography), [ASTM E2533](https://www.astm.org/e2533-09r20.html) (bond testing).
+- **Airworthiness Limitations:** All items in this chapter that are classified as Airworthiness Limitation Items (ALIs) are cross-referenced in [ATA-04](../../A-AIRFRAME/ATA_04-AIRWORTHINESS_LIMITATIONS/) and are non-deferrable.
 
 ## Digital Product Passport Integration
 
-All maintenance actions on ice and rain protection system components must be logged to the Digital Product Passport (ATA-95) including:
+All maintenance actions on ice and rain protection system components must be logged to the [Digital Product Passport (ATA-95)](../../O-OPERATING_SYSTEMS/ATA_95-DIGITAL_PRODUCT_PASSPORT/) including:
 - Component serial numbers and part numbers (de-ice boots, heaters, controllers)
 - Installation/removal dates and flight hours/cycles
 - Inspection results and NDT report references with SHA-256 hashes

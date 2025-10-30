@@ -119,11 +119,11 @@ All electrothermal leading edge heating systems on AMPEL360 BWB aircraft.
 
 ## References
 
-- DATA_30-03-03: Thermal System Limits
-- DATA_30-06-01: Approved Materials
-- PROC_30-03-02: Panel Heater Calibration
-- ATA-24: Electrical Power
-- ATA-51: LSP Restoration
+- [DATA_30-03-03: Thermal System Limits](DATA_30-03-03_Thermal-System-Limits.csv)
+- [DATA_30-06-01: Approved Materials](../../06-MATERIALS_M_AND_P/DATA_30-06-01_Approved-Seals-Lubricants-And-Fabrics.csv)
+- [PROC_30-03-02: Panel Heater Calibration](PROC_30-03-02_Panel-Heater-Calibration.md)
+- [ATA-24: Electrical Power](../../../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/)
+- [ATA-51: LSP Restoration](../../../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES/)
 
 ## Revision History
 
