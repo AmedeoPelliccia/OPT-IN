@@ -1,3 +1,15 @@
-Parameter,Min,Max,Units,Notes
-Luminance,50,1000,cd/m2,Day/night modes
-ContrastRatio,100,2000,,Measured at nominal ambient
+Display_Type,Mode,Min_Luminance_cd_per_m2,Max_Luminance_cd_per_m2,Typical_Luminance_cd_per_m2,Contrast_Ratio_min,Viewing_Angle_H_deg,Viewing_Angle_V_deg,Notes
+PFD,Day,300,1000,500,8:1,60,40,"Sunlight-readable; HDR/anti-reflection required"
+PFD,Night,0.5,10,4,8:1,60,40,"Night mode; avoid bloom; manual override"
+HUD,Day,1000,3000,1500,6:1,20,10,"Collimated HUD symbology; sunlight readable"
+HUD,Night,1,50,10,6:1,20,10,"Night HUD brightness constraint; preserve contrast"
+MFD,Day,200,800,400,8:1,60,40,"Multifunction display: maps, synoptics"
+MFD,Night,0.5,10,5,8:1,60,40,"Dimmable; preserve legibility at low luminance"
+Standby_Display,Day,150,500,250,6:1,60,40,"Crash-tolerant standby instrument"
+Standby_Display,Night,0.5,10,6,6:1,60,40,"Low-luminance night mode"
+Annunciator_Panel,Normal,50,300,120,4:1,45,30,"Discrete LEDs/lamps; color-coded per standard"
+Annunciator_Panel,Night,1,30,10,4:1,45,30,"Reduced night luminance; maintain discrimination"
+Cabin_Crew_Display,Day,200,600,300,6:1,60,40,"Crew/cabin status and maintenance displays"
+Cabin_Crew_Display,Night,1,50,10,6:1,60,40,"Dimmable for cabin operations"
+Touch_Display,Day,200,600,350,6:1,50,30,"Touch targets sized for gloved use; anti-glare"
+Touch_Display,Night,1,50,12,6:1,50,30,"Debounce and glare control for night ops"
