@@ -1,0 +1,21 @@
+Standard,Clause,Requirement_Title,Compliance_Method,Verification_Document,Status,Notes
+FAA Part 25.1419,25.1419(a),Ice protection provisions,Design + Analysis,ICE-SPEC-30-001,Compliant,All critical surfaces protected
+FAA Part 25.1419,25.1419(b),Ice detector provision,Hardware + Test,ICE-SENSOR-30-001,Compliant,Ice detection sensors installed
+FAA Part 25.1419,25.1419(c),Operating limitations,Analysis + Flight Test,AFM Section 2,Compliant,Icing envelope defined in AFM
+FAA Part 25.1093,25.1093(a),Induction system ice protection,Design + Test,ICE-ENGINE-30-001,Compliant,Engine inlet anti-ice system
+FAA Part 25.1093,25.1093(b),Induction system ice detector,Hardware + Test,ICE-ENGINE-30-002,Compliant,Engine ice detection system
+EASA CS-25,CS 25.1419,Ice protection,Design + Compliance,EASA-CERT-30-001,Compliant,Harmonized with FAA
+SAE ARP5905,Section 4,Design philosophy,Design Review,ICE-DESIGN-30-001,Compliant,Design follows ARP5905
+SAE ARP5905,Section 5,Ice accretion analysis,Analysis,ICE-ACCRETION-30-001,Compliant,CFD and wind tunnel validation
+SAE ARP5905,Section 6,Ice protection methods,Design + Test,ICE-METHODS-30-001,Compliant,Multiple methods validated
+DO-160,Section 4,Temperature,Environmental Test,ICE-ENV-30-001,Compliant,Operating temp range verified
+DO-160,Section 5,Altitude,Environmental Test,ICE-ENV-30-002,Compliant,Altitude testing complete
+DO-160,Section 6,Vibration,Environmental Test,ICE-ENV-30-003,Compliant,Vibration qualification passed
+DO-160,Section 8,Humidity,Environmental Test,ICE-ENV-30-004,Compliant,Humidity testing complete
+DO-160,Section 25,Electrostatic discharge,EMC Test,ICE-EMC-30-001,Compliant,ESD testing passed
+ARP4754A,Section 3,Development assurance,Process,ICE-DEV-30-001,Compliant,Development process followed
+ARP4754A,Section 4,Requirements capture,Requirements,ICE-REQ-30-001,Compliant,All requirements traced
+ARP4754A,Section 5,Validation and verification,V&V,ICE-VV-30-001,Compliant,V&V complete
+ARP4761,Section 2.2,FHA - Functional Hazard Assessment,Safety Analysis,ICE-FHA-30-001,Compliant,FHA conducted
+ARP4761,Section 2.3,PSSA - Preliminary System Safety Assessment,Safety Analysis,ICE-PSSA-30-001,Compliant,PSSA complete
+ARP4761,Section 2.4,SSA - System Safety Assessment,Safety Analysis,ICE-SSA-30-001,Compliant,SSA approved

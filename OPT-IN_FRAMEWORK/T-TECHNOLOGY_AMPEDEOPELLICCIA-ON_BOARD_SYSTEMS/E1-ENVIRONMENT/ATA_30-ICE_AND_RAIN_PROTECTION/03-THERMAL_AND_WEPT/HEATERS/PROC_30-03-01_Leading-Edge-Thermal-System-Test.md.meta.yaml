@@ -1,0 +1,35 @@
+schema_version: "1.1"
+id: "PROC_30-03-01_Leading-Edge-Thermal-System-Test_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "Leading Edge Thermal System Test"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+  chapter: "ATA 30"
+  section: "03-THERMAL_AND_WEPT/HEATERS"
+effectivity:
+  msn: "ALL"
+  configuration: "ALL"
+  scope: "All AMPEL360 BWB configurations"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Ice accretion hazard"
+    - "Thermal system malfunction"
+  training_required: true
+approvals:
+  - authority: "Ice & Rain Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+traceability:
+  source_documents:
+    - "ICE-SPEC-30-001"
+  crossrefs:
+    - "ATA-20"
+    - "ATA-51"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: ""

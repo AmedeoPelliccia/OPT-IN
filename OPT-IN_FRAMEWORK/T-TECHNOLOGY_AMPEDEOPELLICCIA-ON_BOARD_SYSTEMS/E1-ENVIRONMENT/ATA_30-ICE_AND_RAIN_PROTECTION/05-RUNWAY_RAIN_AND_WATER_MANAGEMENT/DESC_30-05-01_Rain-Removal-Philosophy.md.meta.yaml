@@ -1,0 +1,35 @@
+schema_version: "1.1"
+id: "DESC_30-05-01_Rain-Removal-Philosophy_rev1.0.0_20251030"
+document:
+  type: "DESC"
+  title: "Rain Removal Philosophy"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+  chapter: "ATA 30"
+  section: "05-RUNWAY_RAIN_AND_WATER_MANAGEMENT"
+effectivity:
+  msn: "ALL"
+  configuration: "ALL"
+  scope: "All AMPEL360 BWB configurations"
+safety:
+  criticality: "High"
+  hazards:
+    - "Ice accretion hazard"
+    - "Thermal system malfunction"
+  training_required: true
+approvals:
+  - authority: "Ice & Rain Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+traceability:
+  source_documents:
+    - "ICE-SPEC-30-001"
+  crossrefs:
+    - "ATA-20"
+    - "ATA-51"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: ""

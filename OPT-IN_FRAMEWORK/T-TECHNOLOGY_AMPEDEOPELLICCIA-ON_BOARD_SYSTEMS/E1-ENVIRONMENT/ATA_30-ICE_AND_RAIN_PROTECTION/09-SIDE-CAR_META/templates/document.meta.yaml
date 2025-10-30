@@ -1,0 +1,47 @@
+schema_version: "1.1"
+id: "[UNIQUE_DOC_ID]"
+document:
+  type: "[DESC|PROC|DATA|TESTPLAN|DIAG|EXAMPLE]"
+  title: "[Document Title]"
+  revision: "[X.Y.Z]"
+  effective_date: "[YYYY-MM-DD]"
+  chapter: "ATA 30"
+  section: "[Section Name]"
+effectivity:
+  msn: "[MSN range or ALL]"
+  configuration: "[Configuration ID or ALL]"
+  scope: "[Brief effectivity description]"
+  mod_status: "[List of applicable modifications]"
+safety:
+  criticality: "[Critical|High|Medium|Low|Informational]"
+  hazards:
+    - "[Hazard description 1]"
+    - "[Hazard description 2]"
+  safety_impact: "[Catastrophic|Hazardous|Major|Minor|No_Safety_Effect]"
+  training_required: [true|false]
+  qualification_required: "[Personnel qualification requirements]"
+approvals:
+  - authority: "[Approving Authority]"
+    name: "[Approver Name]"
+    status: "[Released|Approved|Under Review]"
+    date: "[YYYY-MM-DD]"
+    signature: "[Digital signature or reference]"
+traceability:
+  source_documents:
+    - "[Source document reference 1]"
+    - "[Source document reference 2]"
+  crossrefs:
+    - "[ATA-XX reference 1]"
+    - "[ATA-XX reference 2]"
+  requirements:
+    - "[Requirement ID 1]"
+    - "[Requirement ID 2]"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "[64-character SHA-256 hash or empty string for placeholder]"
+  last_validated: "[YYYY-MM-DD]"
+revision_history:
+  - revision: "[X.Y.Z]"
+    date: "[YYYY-MM-DD]"
+    author: "[Author name]"
+    changes: "[Description of changes]"

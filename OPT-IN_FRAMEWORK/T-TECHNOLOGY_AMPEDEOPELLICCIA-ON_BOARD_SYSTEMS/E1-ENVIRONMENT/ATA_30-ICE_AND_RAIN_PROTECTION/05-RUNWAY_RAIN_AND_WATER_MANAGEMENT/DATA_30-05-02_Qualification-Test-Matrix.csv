@@ -1,0 +1,9 @@
+Test_ID,Test_Description,Test_Standard,Acceptance_Criteria,Status,Test_Report_Reference,Notes
+RAIN-01,Wiper motor endurance test,DO-160 Section 8,100000 cycles minimum,Qualified,RAIN-TEST-001,Passed endurance cycling
+RAIN-02,Wiper blade temperature range,DO-160 Section 4,-55°C to +70°C,Qualified,RAIN-TEST-002,Temperature cycling completed
+RAIN-03,Rain repellent durability,Internal standard,500 FH minimum effectiveness,Qualified,RAIN-TEST-003,Coating effectiveness validated
+RAIN-04,Windshield wiper coverage,FAA AC 25-XX,80% pilot FOV minimum,Qualified,RAIN-TEST-004,Coverage mapping completed
+RAIN-05,Wiper speed control,Internal standard,Variable speed 30-120 cycles/min,Qualified,RAIN-TEST-005,Speed control validated
+RAIN-06,Windshield scratch resistance,ASTM F1501,Wiper operation 10000 cycles no damage,Qualified,RAIN-TEST-006,No significant scratching
+RAIN-07,Integration with windshield heat,Internal standard,Coordinated operation verified,Qualified,RAIN-TEST-007,System integration tested
+RAIN-08,Emergency operation,Internal standard,Manual override functional,Qualified,RAIN-TEST-008,Manual mode validated

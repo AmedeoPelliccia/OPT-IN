@@ -1,0 +1,19 @@
+Test_ID,Cycle_Number,Time_s,ZoneA_Temp_C,ZoneB_Temp_C,ZoneC_Temp_C,Ambient_Temp_C,Power_W,Notes
+THERMAL-CYCLE-001,1,0,25.2,25.1,25.3,24.8,0,Initial ambient conditions
+THERMAL-CYCLE-001,1,60,45.3,44.8,45.1,24.9,4800,Ramp up phase
+THERMAL-CYCLE-001,1,120,78.6,77.9,78.2,25.0,4950,Continuing ramp
+THERMAL-CYCLE-001,1,180,105.2,104.5,105.0,25.1,5100,Approaching setpoint
+THERMAL-CYCLE-001,1,240,118.7,118.2,118.5,25.1,5050,At setpoint - steady state
+THERMAL-CYCLE-001,1,300,120.1,119.5,119.9,25.2,5000,Holding steady state
+THERMAL-CYCLE-001,1,600,120.3,119.8,120.1,25.3,5000,End of cycle 1 hold
+THERMAL-CYCLE-001,2,660,95.4,94.8,95.1,25.2,0,Cool down - power off
+THERMAL-CYCLE-001,2,720,68.7,68.2,68.5,25.1,0,Continuing cool down
+THERMAL-CYCLE-001,2,780,48.3,47.9,48.1,25.0,0,Approaching ambient
+THERMAL-CYCLE-001,2,840,32.1,31.8,32.0,24.9,0,Near ambient
+THERMAL-CYCLE-001,2,900,26.5,26.2,26.4,24.8,0,Ambient reached
+THERMAL-CYCLE-001,2,960,45.7,45.1,45.4,24.9,4800,Cycle 2 ramp up
+THERMAL-CYCLE-001,2,1020,79.2,78.5,78.9,25.0,4950,Cycle 2 continuing ramp
+THERMAL-CYCLE-001,2,1080,106.1,105.3,105.8,25.1,5100,Cycle 2 approaching setpoint
+THERMAL-CYCLE-001,2,1140,119.2,118.6,119.0,25.1,5050,Cycle 2 at setpoint
+THERMAL-CYCLE-001,2,1200,120.4,119.7,120.2,25.2,5000,Cycle 2 steady state
+THERMAL-CYCLE-001,2,1500,120.2,119.9,120.0,25.3,5000,End of cycle 2 hold

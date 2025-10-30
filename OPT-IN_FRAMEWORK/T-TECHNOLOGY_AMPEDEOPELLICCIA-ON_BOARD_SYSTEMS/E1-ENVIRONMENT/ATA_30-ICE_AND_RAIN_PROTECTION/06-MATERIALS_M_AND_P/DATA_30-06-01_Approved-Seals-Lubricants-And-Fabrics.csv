@@ -1,0 +1,11 @@
+Material_Type,Part_Number,Description,Manufacturer,Specification,Shelf_Life_Months,Storage_Temp_C,Storage_Humidity_percent,Approval_Status,Notes
+Adhesive,ADH-ICE-001,Two-part epoxy adhesive for de-ice boots,ABC Adhesives,MIL-A-46146,24,-5 to 25,30-70,Approved,For pneumatic boot bonding
+Adhesive,ADH-ICE-002,Single-part urethane adhesive,XYZ Coatings,AMS 3265,18,5 to 25,30-60,Approved,Alternative boot adhesive
+Sealant,SEAL-ICE-001,Polysulfide sealant for edge sealing,DEF Sealants,MIL-S-8802,36,15 to 30,40-70,Approved,Leading edge sealing
+Primer,PRM-ICE-001,Epoxy primer for metal substrates,ABC Adhesives,MIL-P-23377,24,10 to 25,30-60,Approved,Surface preparation primer
+Boot_Material,BOOT-MAT-001,Neoprene rubber compound,GHI Materials,AMS 3220,NA,10 to 25,30-60,Approved,De-ice boot fabrication
+Boot_Material,BOOT-MAT-002,EPDM rubber compound,GHI Materials,AMS 3302,NA,10 to 25,30-60,Approved,Alternative boot material
+Fabric,FABRIC-ICE-001,Reinforcement fabric for boot repair,JKL Textiles,MIL-C-9084,NA,Ambient,30-70,Approved,Boot patch reinforcement
+Lubricant,LUB-ICE-001,Silicone-based lubricant for seals,MNO Lubricants,MIL-L-25681,60,0 to 40,NA,Approved,O-ring and seal lubrication
+Solvent,SOLV-ICE-001,Methyl ethyl ketone (MEK),Chemical Supply Co,ACS Grade,24,15 to 25,NA,Approved with restrictions,Surface cleaning - requires PPE
+Coating,COAT-RAIN-001,Hydrophobic rain repellent,PQR Coatings,Internal,12,10 to 30,30-60,Approved,Windshield rain repellent

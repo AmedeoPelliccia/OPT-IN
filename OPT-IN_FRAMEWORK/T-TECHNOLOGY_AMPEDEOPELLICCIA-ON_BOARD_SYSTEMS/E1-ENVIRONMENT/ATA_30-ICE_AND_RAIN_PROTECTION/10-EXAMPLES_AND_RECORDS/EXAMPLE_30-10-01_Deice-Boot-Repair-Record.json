@@ -1,0 +1,82 @@
+{
+  "id": "REPAIR-30-2025-001",
+  "msn": "MSN-001",
+  "component_id": "BOOT-100",
+  "system_type": "DeiceBoot",
+  "location_station": "Left wing leading edge, WS-150",
+  "date": "2025-10-15",
+  "damage_description": "Delamination 35 mm along trailing edge of de-ice boot. No tears or punctures observed. Cause: suspected adhesive contamination during original installation.",
+  "materials": [
+    {
+      "part_number": "ADH-ICE-001",
+      "lot": "LOT-2025-0815",
+      "coc_reference": "COC-ADH-ICE-001-2025-0815",
+      "quantity": "150 mL"
+    },
+    {
+      "part_number": "PRM-ICE-001",
+      "lot": "LOT-2025-0620",
+      "coc_reference": "COC-PRM-ICE-001-2025-0620",
+      "quantity": "50 mL"
+    }
+  ],
+  "ndt_reports": [
+    {
+      "method": "Ultrasonic",
+      "file_hash": "a3d5f8b2e4c1d6f9a7b8c3e5d2f4a6b9c8e1f3d5a7b2c4e6f8a9b1c3d5e7f9a2",
+      "result": "Pass",
+      "date": "2025-10-18",
+      "inspector": "NDT-Cert-456"
+    },
+    {
+      "method": "Visual",
+      "file_hash": "b4e6f9c2d5a7e8b1c3f6d9a2e5b7c1f4d8a3e6b9c2f5a8d1e4b7c9f2a5d8e1b4",
+      "result": "Pass",
+      "date": "2025-10-18",
+      "inspector": "Tech-123"
+    }
+  ],
+  "functional_test": {
+    "result": "Pass",
+    "logs_hash": "c5f7a9d2e4b6c8f1a3d5e7b9c2f4a6d8e1b3c5f7a9d2e4b6c8f1a3d5e7b9c2f4",
+    "test_type": "Pressure hold test",
+    "parameters": {
+      "max_pressure_kpa": 50,
+      "hold_time_s": 600,
+      "initial_pressure_kpa": 50.0,
+      "final_pressure_kpa": 49.5,
+      "decay_percent": 1.0,
+      "acceptance": "Pass (≤5% decay)"
+    }
+  },
+  "lsp_verification": {
+    "required": false,
+    "resistance_mohm": null,
+    "pass": null
+  },
+  "disposition": "Repairable",
+  "approvals": [
+    {
+      "authority": "Ice & Rain Engineering",
+      "name": "Engineering Manager",
+      "status": "Approved",
+      "date": "2025-10-17",
+      "signature": "Digital signature ref: ENG-SIG-2025-10-17-001"
+    },
+    {
+      "authority": "Quality Assurance",
+      "name": "QA Inspector",
+      "status": "Approved",
+      "date": "2025-10-18",
+      "signature": "Digital signature ref: QA-SIG-2025-10-18-002"
+    }
+  ],
+  "effectivity": {
+    "msn": "MSN-001",
+    "configuration": "Standard"
+  },
+  "dpp_entry": {
+    "reference": "DPP-ENTRY-2025-10-18-001",
+    "timestamp": "2025-10-18T14:30:00Z"
+  }
+}

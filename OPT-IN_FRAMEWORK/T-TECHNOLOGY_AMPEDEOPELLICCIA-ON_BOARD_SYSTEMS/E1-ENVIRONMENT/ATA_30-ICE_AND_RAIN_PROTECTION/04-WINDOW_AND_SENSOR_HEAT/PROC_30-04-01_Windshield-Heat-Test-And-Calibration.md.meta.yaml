@@ -1,0 +1,35 @@
+schema_version: "1.1"
+id: "PROC_30-04-01_Windshield-Heat-Test-And-Calibration_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "Windshield Heat Test and Calibration"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+  chapter: "ATA 30"
+  section: "04-WINDOW_AND_SENSOR_HEAT"
+effectivity:
+  msn: "ALL"
+  configuration: "ALL"
+  scope: "All AMPEL360 BWB configurations"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Ice accretion hazard"
+    - "Thermal system malfunction"
+  training_required: true
+approvals:
+  - authority: "Ice & Rain Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-29"
+traceability:
+  source_documents:
+    - "ICE-SPEC-30-001"
+  crossrefs:
+    - "ATA-20"
+    - "ATA-51"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: ""
