@@ -46,13 +46,13 @@ Any changes affecting flight-critical systems, primary containment, or structura
 **Configuration:** LH2 (Liquid Hydrogen) and SAF (Sustainable Aviation Fuel) configurations
 
 **Regulatory Compliance:**
-- FAA Part 25 (fuel system requirements)
-- EASA CS-25 (cryogenic and fuel system clauses)
-- SAE AIR6464 (cryogenic system design)
-- ISO 21010 (cryogenic vessels)
-- ISO 13985 (liquid hydrogen land vehicle fuel containers)
-- ASTM/ASME cryogenic standards
-- Pressure vessel regulations (local jurisdiction)
+- [FAA Part 25.951](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-E/section-25.951) (fuel system requirements)
+- [EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) (cryogenic and fuel system clauses)
+- [SAE AIR6464](https://www.sae.org/standards/content/air6464/) (cryogenic system design)
+- [ISO 21010](https://www.iso.org/standard/69653.html) (cryogenic vessels)
+- [ISO 13985](https://www.iso.org/standard/69997.html) (liquid hydrogen land vehicle fuel containers)
+- [ASTM/ASME cryogenic standards](https://www.astm.org/products-services/standards-and-publications/standards/cryogenics-standards.html)
+- Pressure vessel regulations (local jurisdiction - see [ASME BPVC](https://www.asme.org/codes-standards/find-codes-standards/bpvc-viii-1-bpvc-section-viii-rules-construction-pressure-vessels-division-1))
 
 ## Document Types
 
@@ -86,10 +86,20 @@ All documents must have:
 
 ## References
 
+**Related ATA Chapters:**
 - ATA 21 (Air Conditioning)
 - ATA 47 (Nitrogen Generation System)
 - ATA 51 (Standard Practices and Structures)
-- SAE AIR6464 (Cryogenic System Design Guide)
+
+**Standards & Regulations:**
+- [SAE AIR6464](https://www.sae.org/standards/content/air6464/) - Cryogenic System Design Guide
+- [ISO 21010](https://www.iso.org/standard/69653.html) - Cryogenic vessels
+- [FAA Part 25.951](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-E/section-25.951) - Fuel system design
+
+**Internal Documents:**
+- [DESC_28-40-02: Terms and Definitions](DESC_28-40-02_Terms-And-Definitions.md)
+- [DATA_28-40-03: Regulatory Compliance Matrix](DATA_28-40-03_Regulatory-Compliance-Matrix.csv)
+- [Sidecar Template](../11-SIDE-CAR_META/templates/document.meta.yaml)
 
 ---
 

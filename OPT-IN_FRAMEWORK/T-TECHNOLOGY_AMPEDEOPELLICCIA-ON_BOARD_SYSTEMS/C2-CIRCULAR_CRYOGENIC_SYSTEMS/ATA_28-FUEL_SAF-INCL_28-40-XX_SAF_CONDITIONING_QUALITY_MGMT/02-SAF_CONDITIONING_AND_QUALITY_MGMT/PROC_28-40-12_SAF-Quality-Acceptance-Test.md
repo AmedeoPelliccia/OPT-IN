@@ -14,15 +14,15 @@ All SAF batches must pass acceptance testing before aircraft fueling authorizati
 
 ## Test Parameters
 
-### Mandatory Tests (per ASTM D7566)
+### Mandatory Tests (per [ASTM D7566](https://www.astm.org/d7566-24.html))
 
-1. **Density @ 15°C** (ASTM D4052)
-2. **Viscosity @ -20°C** (ASTM D445)
-3. **Flash Point** (ASTM D93)
-4. **Freeze Point** (ASTM D5972)
-5. **Water Content** (ASTM E1064)
-6. **Particulate Contamination** (ASTM D5452)
-7. **Sulfur Content** (ASTM D4294)
+1. **Density @ 15°C** ([ASTM D4052](https://www.astm.org/d4052-22.html))
+2. **Viscosity @ -20°C** ([ASTM D445](https://www.astm.org/d0445-24.html))
+3. **Flash Point** ([ASTM D93](https://www.astm.org/d0093-24.html))
+4. **Freeze Point** ([ASTM D5972](https://www.astm.org/d5972-21.html))
+5. **Water Content** ([ASTM E1064](https://www.astm.org/e1064-16r20.html))
+6. **Particulate Contamination** ([ASTM D5452](https://www.astm.org/d5452-16r21.html))
+7. **Sulfur Content** ([ASTM D4294](https://www.astm.org/d4294-21.html))
 
 ### Optional Tests (as required)
 
@@ -32,20 +32,20 @@ All SAF batches must pass acceptance testing before aircraft fueling authorizati
 
 ## Test Procedures
 
-Refer to DATA_28-40-13 for detailed acceptance limits and test method references.
+Refer to [DATA_28-40-13](DATA_28-40-13_SAF-Quality-Limits.csv) for detailed acceptance limits and test method references.
 
 ## Documentation
 
 - Test report with all results
-- Laboratory accreditation certificate
+- Laboratory accreditation certificate ([ISO/IEC 17025](https://www.iso.org/standard/66912.html))
 - Operator certification
 - SHA-256 hash of test report
 - Link to DPP fuel batch entry
 
 ## References
 
-- ASTM D7566: SAF Specifications
-- DATA_28-40-13: SAF Quality Limits
+- [ASTM D7566](https://www.astm.org/d7566-24.html): SAF Specifications
+- [DATA_28-40-13: SAF Quality Limits](DATA_28-40-13_SAF-Quality-Limits.csv)
 
 ---
 

@@ -49,8 +49,8 @@ Procedure for testing and verifying pressure relief valve setpoints on cryogenic
 
 ## References
 
-- ASME BPVC Section VIII: Relief Device Requirements
-- DESC_28-40-61: Emergency Venting and SDS
+- [ASME BPVC Section VIII](https://www.asme.org/codes-standards/find-codes-standards/bpvc-viii-1-bpvc-section-viii-rules-construction-pressure-vessels-division-1): Relief Device Requirements
+- [DESC_28-40-61: Emergency Venting and SDS](DESC_28-40-61_Emergency-Venting-And-SDS.md)
 
 ---
 

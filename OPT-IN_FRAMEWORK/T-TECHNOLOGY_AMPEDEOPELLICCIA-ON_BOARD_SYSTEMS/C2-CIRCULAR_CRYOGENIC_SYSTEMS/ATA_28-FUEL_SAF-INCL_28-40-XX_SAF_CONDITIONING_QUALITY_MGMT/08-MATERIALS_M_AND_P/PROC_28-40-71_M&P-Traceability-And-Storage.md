@@ -80,9 +80,9 @@ Materials without proper CoC or outside storage specifications:
 
 ## References
 
-- DATA_28-40-70: Approved Materials and CoC
-- PROC_28-40-90: Nonconformance Handling
-- PROC_28-40-80: DPP Entry and Record
+- [DATA_28-40-70: Approved Materials and CoC](DATA_28-40-70_Approved-Materials-And-CoC.csv)
+- [PROC_28-40-90: Nonconformance Handling](../10-NONCONFORMANCE_AND_DEVIATION/PROC_28-40-90_Nonconformance-Handling-And-Engineering-Disposition.md)
+- [PROC_28-40-80: DPP Entry and Record](../09-TRACEABILITY_AND_DPP/PROC_28-40-80_DPP-Entry-And-Record.md)
 
 ---
 

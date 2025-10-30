@@ -105,9 +105,9 @@ For Category 1 and 2 NCRs:
 
 ## References
 
-- DATA_28-40-91: NCR Template
-- DESC_28-40-01: Scope and Governance
-- PROC_28-40-80: DPP Entry and Record
+- [DATA_28-40-91: NCR Template](DATA_28-40-91_NCR-Template.csv)
+- [DESC_28-40-01: Scope and Governance](../01-GENERAL/DESC_28-40-01_Scope-Governance-And-Effectivity.md)
+- [PROC_28-40-80: DPP Entry and Record](../09-TRACEABILITY_AND_DPP/PROC_28-40-80_DPP-Entry-And-Record.md)
 
 ---
 

@@ -103,14 +103,14 @@ Applies to all SAF deliveries and in-service conditioning activities for aircraf
     - Operator name and signature
     - Storage tank designation
 
-5.2. Update DPP entry with batch traceability
+5.2. Update [DPP entry](../09-TRACEABILITY_AND_DPP/PROC_28-40-80_DPP-Entry-And-Record.md) with batch traceability
 5.3. Calculate SHA-256 hash of conditioning record
 5.4. Store electronic and paper records per retention policy
 
 ## Acceptance Criteria
 
 - All field tests pass visual inspection
-- Laboratory test results meet DATA_28-40-13 limits
+- Laboratory test results meet [DATA_28-40-13](DATA_28-40-13_SAF-Quality-Limits.csv) limits
 - No water detected above 30 ppm
 - Particulate contamination <1 mg/L
 - Temperature within operating range: -40°C to +50°C
@@ -119,7 +119,7 @@ Applies to all SAF deliveries and in-service conditioning activities for aircraf
 
 If fuel fails acceptance criteria:
 1. Segregate fuel in separate storage
-2. Initiate NCR per PROC_28-40-90
+2. Initiate NCR per [PROC_28-40-90](../10-NONCONFORMANCE_AND_DEVIATION/PROC_28-40-90_Nonconformance-Handling-And-Engineering-Disposition.md)
 3. Contact supplier for resolution
 4. Do not use for aircraft fueling until disposition approved
 
@@ -133,11 +133,11 @@ If fuel fails acceptance criteria:
 
 ## References
 
-- ASTM D7566: SAF Specifications
-- ASTM D1655: Aviation Turbine Fuels
-- DESC_28-40-10: SAF Conditioning Philosophy
-- DATA_28-40-13: SAF Quality Limits
-- PROC_28-40-90: Nonconformance Handling
+- [ASTM D7566](https://www.astm.org/d7566-24.html): SAF Specifications
+- [ASTM D1655](https://www.astm.org/d1655-24.html): Aviation Turbine Fuels
+- [DESC_28-40-10: SAF Conditioning Philosophy](DESC_28-40-10_SAF-Conditioning-Philosophy.md)
+- [DATA_28-40-13: SAF Quality Limits](DATA_28-40-13_SAF-Quality-Limits.csv)
+- [PROC_28-40-90: Nonconformance Handling](../10-NONCONFORMANCE_AND_DEVIATION/PROC_28-40-90_Nonconformance-Handling-And-Engineering-Disposition.md)
 
 ---
 

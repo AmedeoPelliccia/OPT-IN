@@ -10,13 +10,13 @@ Establishes the philosophy and approach for Sustainable Aviation Fuel (SAF) cond
 
 ## SAF Background
 
-Sustainable Aviation Fuels (SAF) are drop-in replacement fuels meeting ASTM D7566 specifications, derived from sustainable feedstocks including:
+Sustainable Aviation Fuels (SAF) are drop-in replacement fuels meeting [ASTM D7566](https://www.astm.org/d7566-24.html) specifications, derived from sustainable feedstocks including:
 - Hydroprocessed Esters and Fatty Acids (HEFA)
 - Fischer-Tropsch (FT) synthesis
 - Alcohol-to-Jet (ATJ)
 - Power-to-Liquid (PtL)
 
-SAF can be blended with conventional Jet-A/Jet-A1 fuel or used in approved blend ratios per certification.
+SAF can be blended with conventional [Jet-A/Jet-A1 fuel (ASTM D1655)](https://www.astm.org/d1655-24.html) or used in approved blend ratios per certification.
 
 ## Conditioning Philosophy
 
@@ -24,10 +24,10 @@ SAF can be blended with conventional Jet-A/Jet-A1 fuel or used in approved blend
 SAF and conventional fuels must be maintained within specified temperature ranges to ensure proper viscosity, vapor pressure, and combustion characteristics. For hybrid systems supporting both SAF and LH2, separate conditioning systems prevent cross-contamination.
 
 **Quality Assurance:**
-- Pre-delivery testing to ASTM D7566 specifications
+- Pre-delivery testing to [ASTM D7566](https://www.astm.org/d7566-24.html) specifications
 - In-service monitoring for contamination, water content, and additive levels
-- Periodic sampling and laboratory analysis
-- Traceability to fuel batch and supplier
+- Periodic sampling and laboratory analysis (see [PROC_28-40-12](PROC_28-40-12_SAF-Quality-Acceptance-Test.md))
+- Traceability to fuel batch and supplier (see [PROC_28-40-80](../09-TRACEABILITY_AND_DPP/PROC_28-40-80_DPP-Entry-And-Record.md))
 
 **Contamination Prevention:**
 - Dedicated storage and transfer systems for SAF
@@ -107,19 +107,22 @@ Verify material compatibility with specific SAF blend:
 
 ## Regulatory Compliance
 
-- ASTM D7566: SAF specifications
-- ASTM D1655: Aviation turbine fuels
-- FAA AC 20-67A: Aircraft fuel system certification
-- EASA CS-25: Fuel system requirements
+## Regulatory Compliance
+
+- [ASTM D7566](https://www.astm.org/d7566-24.html): SAF specifications
+- [ASTM D1655](https://www.astm.org/d1655-24.html): Aviation turbine fuels
+- [FAA AC 20-67A](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/22647): Aircraft fuel system certification
+- [EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27): Fuel system requirements
 - Local environmental regulations
 
 ## References
 
-- DESC_28-40-01: Scope and Governance
-- DESC_28-40-02: Terms and Definitions
-- PROC_28-40-11: SAF Conditioning Procedure
-- PROC_28-40-12: SAF Quality Acceptance Test
-- DATA_28-40-13: SAF Quality Limits
+**Internal Documents:**
+- [DESC_28-40-01: Scope and Governance](../01-GENERAL/DESC_28-40-01_Scope-Governance-And-Effectivity.md)
+- [DESC_28-40-02: Terms and Definitions](../01-GENERAL/DESC_28-40-02_Terms-And-Definitions.md)
+- [PROC_28-40-11: SAF Conditioning Procedure](PROC_28-40-11_SAF-Conditioning-Procedure.md)
+- [PROC_28-40-12: SAF Quality Acceptance Test](PROC_28-40-12_SAF-Quality-Acceptance-Test.md)
+- [DATA_28-40-13: SAF Quality Limits](DATA_28-40-13_SAF-Quality-Limits.csv)
 
 ---
 

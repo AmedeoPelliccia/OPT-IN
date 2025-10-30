@@ -136,12 +136,17 @@ Test reports and FEA documentation must be included in DPP.
 
 ## References
 
-- DESC_28-40-01: Scope and Governance
-- PROC_28-40-21: Tank Pressure Test and Hydro
-- DATA_28-40-22: Tank Capacity and Limits
-- DATA_28-40-70: Approved Materials and CoC
-- SAE AIR6464: Cryogenic System Design
-- ISO 21010: Cryogenic Vessels
+## References
+
+**Internal Documents:**
+- [DESC_28-40-01: Scope and Governance](../01-GENERAL/DESC_28-40-01_Scope-Governance-And-Effectivity.md)
+- [PROC_28-40-21: Tank Pressure Test and Hydro](PROC_28-40-21_Tank-Pressure-Test-And-Hydro.md)
+- [DATA_28-40-22: Tank Capacity and Limits](DATA_28-40-22_Tank-Capacity-And-Limits.csv)
+- [DATA_28-40-70: Approved Materials and CoC](../08-MATERIALS_M_AND_P/DATA_28-40-70_Approved-Materials-And-CoC.csv)
+
+**Standards:**
+- [SAE AIR6464](https://www.sae.org/standards/content/air6464/): Cryogenic System Design
+- [ISO 21010](https://www.iso.org/standard/69653.html): Cryogenic Vessels
 
 ---
 

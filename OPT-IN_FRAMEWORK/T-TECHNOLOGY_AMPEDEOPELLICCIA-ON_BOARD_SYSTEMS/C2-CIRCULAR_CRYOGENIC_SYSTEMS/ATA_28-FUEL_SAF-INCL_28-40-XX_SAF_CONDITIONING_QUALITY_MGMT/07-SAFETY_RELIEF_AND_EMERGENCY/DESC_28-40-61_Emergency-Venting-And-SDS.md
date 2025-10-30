@@ -85,8 +85,8 @@ All personnel working with or near cryogenic systems must complete:
 
 - Safety Data Sheet: Liquid Hydrogen (supplier-specific)
 - Safety Data Sheet: SAF (per fuel type)
-- NFPA 55: Compressed Gases and Cryogenic Fluids
-- PROC_28-40-60: Relief Valve Testing
+- [NFPA 55](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=55): Compressed Gases and Cryogenic Fluids
+- [PROC_28-40-60: Relief Valve Testing](PROC_28-40-60_Relief-Valve-Setpoint-And-Test.md)
 
 ---
 

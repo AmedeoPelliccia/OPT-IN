@@ -79,8 +79,8 @@ DPP data must be retained for:
 
 ## References
 
-- DATA_28-40-81: DPP Record Template
-- DESC_28-40-01: Governance and Effectivity
+- [DATA_28-40-81: DPP Record Template](DATA_28-40-81_Record-Template.csv)
+- [DESC_28-40-01: Governance and Effectivity](../01-GENERAL/DESC_28-40-01_Scope-Governance-And-Effectivity.md)
 
 ---
 

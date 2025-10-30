@@ -57,8 +57,8 @@ Each calibration record must include:
 
 ## References
 
-- DATA_28-40-41: Sensor Specifications and Calibration Intervals
-- ISO/IEC 17025: Laboratory Accreditation Requirements
+- [DATA_28-40-41: Sensor Specifications and Calibration Intervals](DATA_28-40-41_Sensor-Specs-And-Calibration-Intervals.csv)
+- [ISO/IEC 17025](https://www.iso.org/standard/66912.html): Laboratory Accreditation Requirements
 
 ---
 

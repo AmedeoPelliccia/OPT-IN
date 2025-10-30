@@ -120,14 +120,14 @@ Each test must be documented with:
 2. Perform visual inspection of interior (if accessible)
 3. Re-install pressure relief devices
 4. Update tank data plate with test date
-5. Update DPP with test results and hash
+5. Update [DPP](../09-TRACEABILITY_AND_DPP/PROC_28-40-80_DPP-Entry-And-Record.md) with test results and hash
 
 ## Nonconformance
 
 If tank fails any test:
 1. Do not pressurize further
 2. Isolate tank and mark as nonconforming
-3. Initiate NCR per PROC_28-40-90
+3. Initiate NCR per [PROC_28-40-90](../10-NONCONFORMANCE_AND_DEVIATION/PROC_28-40-90_Nonconformance-Handling-And-Engineering-Disposition.md)
 4. Engineering disposition required before return to service
 
 ## Re-test Requirements
@@ -142,12 +142,12 @@ If tank fails any test:
 
 ## References
 
-- ASME BPVC Section VIII: Pressure Vessel Code
-- ISO 21010: Cryogenic Vessel Requirements
-- DESC_28-40-20: Storage Interface and CoC
-- DATA_28-40-22: Tank Capacity and Limits
-- PROC_28-40-50: Helium Leak Test
-- PROC_28-40-90: Nonconformance Handling
+- [ASME BPVC Section VIII](https://www.asme.org/codes-standards/find-codes-standards/bpvc-viii-1-bpvc-section-viii-rules-construction-pressure-vessels-division-1): Pressure Vessel Code
+- [ISO 21010](https://www.iso.org/standard/69653.html): Cryogenic Vessel Requirements
+- [DESC_28-40-20: Storage Interface and CoC](DESC_28-40-20_Storage-Interface-And-CofC.md)
+- [DATA_28-40-22: Tank Capacity and Limits](DATA_28-40-22_Tank-Capacity-And-Limits.csv)
+- [PROC_28-40-50: Helium Leak Test](../06-TESTING_NDT_AND_LEAK_DETECTION/PROC_28-40-50_Helium-Leak-Test-And-Report.md)
+- [PROC_28-40-90: Nonconformance Handling](../10-NONCONFORMANCE_AND_DEVIATION/PROC_28-40-90_Nonconformance-Handling-And-Engineering-Disposition.md)
 
 ---
 

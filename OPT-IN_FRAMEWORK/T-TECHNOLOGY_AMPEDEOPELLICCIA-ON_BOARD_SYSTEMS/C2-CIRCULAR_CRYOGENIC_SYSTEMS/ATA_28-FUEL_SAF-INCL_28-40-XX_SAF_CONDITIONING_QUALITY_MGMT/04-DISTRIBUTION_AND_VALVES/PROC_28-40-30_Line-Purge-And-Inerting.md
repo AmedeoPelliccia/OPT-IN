@@ -157,11 +157,15 @@ Record for each purge operation:
 
 ## References
 
-- CGA G-5.4: Standard for Hydrogen Service
-- DESC_28-40-02: Terms and Definitions
-- DATA_28-40-31: Line Materials and Pressure Ratings
-- PROC_28-40-90: Nonconformance Handling
-- 29 CFR 1910.146: Confined Space Entry
+- [CGA G-5.4](https://www.cganet.com/): Standard for Hydrogen Service
+- [DESC_28-40-02: Terms and Definitions](../01-GENERAL/DESC_28-40-02_Terms-And-Definitions.md)
+- [DATA_28-40-31: Line Materials and Pressure Ratings](DATA_28-40-31_Line-Materials-And-Pressure-Ratings.csv)
+- [PROC_28-40-90: Nonconformance Handling](../10-NONCONFORMANCE_AND_DEVIATION/PROC_28-40-90_Nonconformance-Handling-And-Engineering-Disposition.md)
+- [29 CFR 1910.146](https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.146): Confined Space Entry
+
+---
+
+*This procedure is mandatory for all line purging and inerting operations.*
 
 ---
 
