@@ -177,7 +177,7 @@
             }
           }
         },
-        "lumberLoad_N": {
+        "lumbarLoad_N": {
           "type": "array",
           "description": "Lumbar compression load for each occupant",
           "items": {
