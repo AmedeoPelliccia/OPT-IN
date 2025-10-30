@@ -1,0 +1,31 @@
+schema_version: "1.1"
+id: "<DOCUMENT_ID>"  # e.g., "DESC_44-01-01_Scope-Governance-And-Effectivity_rev1.0.0_20251030"
+document:
+  type: "<TYPE>"  # One of: DESC, PROC, DATA, DIAG, TESTPLAN, INSP
+  title: "<TITLE>"  # Human-readable title
+  revision: "<X.Y.Z>"  # Semantic version
+  effective_date: "<YYYY-MM-DD>"  # ISO 8601 date
+effectivity:
+  msn: "<MSN_RANGE>"  # e.g., "ALL", "001-050", or specific MSN
+  config: "<CONFIG_ID>"  # Optional: specific cabin configuration applicability
+safety:
+  hazards: []  # List of safety hazards if applicable (e.g., ["Oxygen system failure", "Fire detection failure"])
+  criticality: "<LEVEL>"  # One of: Critical, Major, Minor, Not_Safety_Related
+approvals:
+  - authority: "<APPROVING_AUTHORITY>"  # e.g., "Cabin Systems Engineering", "IFE/IFX Engineering", "Materials & Processes"
+    status: "<STATUS>"  # One of: Draft, Released, Approved, Superseded
+    date: "<YYYY-MM-DD>"
+traceability:
+  source_documents: []  # List of source document references
+  crossrefs: []  # Cross-references to other ATA chapters or documents (e.g., ["ATA 20", "ATA 35", "DO-178C"])
+  parent_document: "<PARENT_DOC_ID>"  # Optional: if this is derived from another doc
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "<SHA256_HASH>"  # SHA-256 hash of the document content
+revision_history:
+  - revision: "<X.Y.Z>"
+    date: "<YYYY-MM-DD>"
+    author: "<AUTHOR_NAME>"
+    description: "<CHANGE_DESCRIPTION>"
+notes: "<ADDITIONAL_NOTES>"  # Optional: any additional metadata or notes

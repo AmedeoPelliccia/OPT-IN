@@ -1,0 +1,13 @@
+Component,Inspection_Type,Interval_FH,Interval_Months,Inspection_Method,Acceptance_Criteria,Reference_Procedure,Notes
+Passenger seats,GVI,750,N/A,Visual inspection,No visible damage or wear exceeding limits,PROC_44-02-02,Part of A-check
+Seat track bolts,Torque check,3000,N/A,Torque wrench verification,30-40 in-lbf per DATA_44-02-04,PROC_44-02-02,Part of C-check
+Oxygen modules,Pressure check,1200,12,Pressure gauge measurement,1800-2000 psi at 70°F,PROC_44-04-01,Whichever occurs first
+Oxygen masks (sample 10%),Deployment test,1200,12,Manual deployment,Deploy within 2 sec and inflate within 3 sec,PROC_44-04-01,Sample testing
+Fire detectors,Sensitivity calibration,1000,12,Calibration fixture,Within manufacturer limits,PROC_44-05-01,Whichever occurs first
+Galley fire suppression,Agent pressure check,2000,24,Pressure gauge,Per agent type specification,PROC_44-05-02,Whichever occurs first
+IFE monitors,Functional test,N/A,6,Visual and touch test,Display brightness >200 cd/m2 and responsive touch,PROC_44-07-02,Calendar-based
+IFE software integrity,Checksum verification,6000,N/A,Software tool,Checksum matches approved baseline,PROC_44-07-02,Software integrity check
+Cabin wiring,Visual inspection,3000,N/A,Visual,No chafing wear or loose connections,PROC_44-09-01,Part of C-check
+HEPA filters,Pressure drop measurement,3000,N/A,Manometer,Pressure drop within limits per filter spec,PROC_44-03-02,Replace if exceeds limit
+Overhead bins,Latch function test,3000,N/A,Functional test,Latches engage and disengage smoothly,Part of C-check GVI,N/A
+Lavatory smoke detectors,Functional test,1000,12,Test aerosol,Detector alarms within 10 seconds,PROC_44-05-01,Whichever occurs first

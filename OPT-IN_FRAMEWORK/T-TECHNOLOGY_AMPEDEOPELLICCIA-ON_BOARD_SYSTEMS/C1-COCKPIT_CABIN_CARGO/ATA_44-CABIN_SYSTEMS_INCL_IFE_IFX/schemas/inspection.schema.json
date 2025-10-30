@@ -1,0 +1,402 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata44/inspection.schema.json",
+  "title": "Cabin System Inspection Record",
+  "description": "Comprehensive inspection record schema for cabin system inspections including acceptance criteria",
+  "type": "object",
+  "properties": {
+    "inspectionRecordId": {
+      "type": "string",
+      "description": "Unique inspection record identifier",
+      "pattern": "^INSP-44-[0-9]{4}-[0-9]{6}$"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number (aircraft)"
+    },
+    "inspectionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of inspection"
+    },
+    "inspectionType": {
+      "type": "string",
+      "enum": [
+        "General_Visual_Inspection",
+        "Detailed_Visual_Inspection",
+        "Special_Inspection",
+        "Ultrasonic",
+        "Eddy_Current",
+        "Thermography",
+        "Tap_Test",
+        "Functional_Test",
+        "Operational_Check",
+        "Fire_Detection_Test",
+        "Oxygen_Flow_Test",
+        "IFE_System_Test",
+        "Seat_Load_Test"
+      ],
+      "description": "Type of inspection performed"
+    },
+    "inspectionScope": {
+      "type": "string",
+      "enum": [
+        "A-Check",
+        "C-Check",
+        "Special_Inspection",
+        "Post_Repair",
+        "Pre_Flight",
+        "Post_Flight",
+        "AD_Compliance",
+        "SB_Compliance",
+        "IFE_Software_Integrity"
+      ],
+      "description": "Scope or reason for inspection"
+    },
+    "component": {
+      "type": "string",
+      "enum": [
+        "Passenger_Seat",
+        "Crew_Seat",
+        "Seat_Track",
+        "Galley_Unit",
+        "Lavatory_Unit",
+        "Monument",
+        "Overhead_Bin",
+        "Partition",
+        "Sidewall_Panel",
+        "Ceiling_Panel",
+        "Floor_Panel",
+        "IFE_System",
+        "IFE_Monitor",
+        "Oxygen_System",
+        "Oxygen_Module",
+        "Fire_Detector",
+        "Fire_Suppression",
+        "Wiring_Harness",
+        "Control_Panel",
+        "Emergency_Equipment"
+      ],
+      "description": "Component being inspected"
+    },
+    "cabinZone": {
+      "type": "string",
+      "enum": [
+        "Forward_Cabin",
+        "Mid_Cabin",
+        "Aft_Cabin",
+        "Galley_Forward",
+        "Galley_Aft",
+        "Lavatory_Forward",
+        "Lavatory_Mid",
+        "Lavatory_Aft",
+        "Entry_Door_Area",
+        "Emergency_Exit_Area",
+        "Overhead_Storage",
+        "Crew_Rest_Area"
+      ],
+      "description": "Cabin zone where inspection was performed"
+    },
+    "location": {
+      "type": "object",
+      "description": "Location of inspection area",
+      "properties": {
+        "fuselageStation": {
+          "type": "number",
+          "description": "Fuselage station (FS)"
+        },
+        "waterLine": {
+          "type": "number",
+          "description": "Water line (WL)"
+        },
+        "buttLine": {
+          "type": "number",
+          "description": "Butt line (BL)"
+        },
+        "seatRow": {
+          "type": "integer",
+          "description": "Seat row number (if applicable)"
+        },
+        "seatPosition": {
+          "type": "string",
+          "description": "Seat position (if applicable)"
+        },
+        "accessPanel": {
+          "type": "string",
+          "description": "Access panel used for inspection"
+        }
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "description": "Inspector information",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Inspector name"
+        },
+        "certificationNumber": {
+          "type": "string",
+          "description": "Inspector certification number"
+        },
+        "certificationLevel": {
+          "type": "string",
+          "enum": ["Level_I", "Level_II", "Level_III", "A&P", "Avionics_Technician"],
+          "description": "Inspector certification level"
+        }
+      },
+      "required": ["name", "certificationNumber"]
+    },
+    "inspectionProcedure": {
+      "type": "string",
+      "description": "Reference to inspection procedure document"
+    },
+    "findings": {
+      "type": "array",
+      "description": "Inspection findings",
+      "items": {
+        "type": "object",
+        "properties": {
+          "findingType": {
+            "type": "string",
+            "enum": ["No_Issues", "Minor_Defect", "Major_Defect", "Critical_Defect", "Serviceable_With_Limits", "Unserviceable"],
+            "description": "Type of finding"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of finding"
+          },
+          "damageRecordReference": {
+            "type": "string",
+            "description": "Reference to damage record if applicable"
+          },
+          "actionRequired": {
+            "type": "string",
+            "enum": ["None", "Monitor", "Repair_Next_Maintenance", "Repair_Immediately", "Replace_Component"],
+            "description": "Action required for finding"
+          }
+        },
+        "required": ["findingType", "description", "actionRequired"]
+      }
+    },
+    "acceptanceCriteria": {
+      "type": "object",
+      "description": "Numeric acceptance criteria and measured values",
+      "properties": {
+        "seatAttachmentTorque": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fastenerLocation": {
+                "type": "string",
+                "description": "Fastener location"
+              },
+              "measuredTorque": {
+                "type": "number",
+                "description": "Measured torque value (in-lbf or Nm)"
+              },
+              "minTorque": {
+                "type": "number",
+                "description": "Minimum allowable torque"
+              },
+              "maxTorque": {
+                "type": "number",
+                "description": "Maximum allowable torque"
+              },
+              "result": {
+                "type": "string",
+                "enum": ["Pass", "Fail"],
+                "description": "Torque check result"
+              }
+            },
+            "required": ["fastenerLocation", "measuredTorque", "result"]
+          }
+        },
+        "oxygenPressure": {
+          "type": "object",
+          "properties": {
+            "measuredPressure": {
+              "type": "number",
+              "description": "Measured oxygen pressure (psi)"
+            },
+            "minPressure": {
+              "type": "number",
+              "description": "Minimum allowable pressure"
+            },
+            "maxPressure": {
+              "type": "number",
+              "description": "Maximum allowable pressure"
+            },
+            "result": {
+              "type": "string",
+              "enum": ["Pass", "Fail"],
+              "description": "Pressure check result"
+            }
+          }
+        },
+        "fireDetectorSensitivity": {
+          "type": "object",
+          "properties": {
+            "detectorId": {
+              "type": "string",
+              "description": "Fire detector serial number"
+            },
+            "measuredSensitivity": {
+              "type": "number",
+              "description": "Measured sensitivity"
+            },
+            "minSensitivity": {
+              "type": "number",
+              "description": "Minimum required sensitivity"
+            },
+            "maxSensitivity": {
+              "type": "number",
+              "description": "Maximum allowable sensitivity"
+            },
+            "result": {
+              "type": "string",
+              "enum": ["Pass", "Fail"],
+              "description": "Sensitivity check result"
+            }
+          }
+        },
+        "ifeSystemCheck": {
+          "type": "object",
+          "properties": {
+            "softwareVersion": {
+              "type": "string",
+              "description": "IFE software version verified"
+            },
+            "functionalTestResult": {
+              "type": "string",
+              "enum": ["Pass", "Fail", "Pass_With_Defects"],
+              "description": "Functional test result"
+            },
+            "screenBrightness": {
+              "type": "number",
+              "description": "Measured screen brightness (cd/m2)"
+            },
+            "minBrightness": {
+              "type": "number",
+              "description": "Minimum required brightness"
+            }
+          }
+        },
+        "galleyElectricalCheck": {
+          "type": "object",
+          "properties": {
+            "voltageReading": {
+              "type": "number",
+              "description": "Measured voltage (V)"
+            },
+            "groundResistance": {
+              "type": "number",
+              "description": "Ground resistance (ohms)"
+            },
+            "maxGroundResistance": {
+              "type": "number",
+              "description": "Maximum allowable ground resistance"
+            },
+            "result": {
+              "type": "string",
+              "enum": ["Pass", "Fail"],
+              "description": "Electrical check result"
+            }
+          }
+        },
+        "hepaFilterCheck": {
+          "type": "object",
+          "properties": {
+            "filterPartNumber": {
+              "type": "string",
+              "description": "HEPA filter part number"
+            },
+            "installationDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Filter installation date"
+            },
+            "operatingHours": {
+              "type": "number",
+              "description": "Operating hours since installation"
+            },
+            "pressureDrop": {
+              "type": "number",
+              "description": "Measured pressure drop across filter"
+            },
+            "maxPressureDrop": {
+              "type": "number",
+              "description": "Maximum allowable pressure drop"
+            },
+            "result": {
+              "type": "string",
+              "enum": ["Pass", "Fail", "Replace_Due"],
+              "description": "Filter check result"
+            }
+          }
+        }
+      }
+    },
+    "overallResult": {
+      "type": "string",
+      "enum": ["Serviceable", "Serviceable_With_Limits", "Unserviceable", "Requires_Repair"],
+      "description": "Overall inspection result"
+    },
+    "nextInspectionDue": {
+      "type": "object",
+      "description": "Next inspection due",
+      "properties": {
+        "flightHours": {
+          "type": "number",
+          "description": "Flight hours when next inspection is due"
+        },
+        "flightCycles": {
+          "type": "number",
+          "description": "Flight cycles when next inspection is due"
+        },
+        "calendarDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Calendar date when next inspection is due"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Inspection traceability",
+      "properties": {
+        "workOrderNumber": {
+          "type": "string",
+          "description": "Maintenance work order number"
+        },
+        "dppEntryId": {
+          "type": "string",
+          "description": "Digital Product Passport entry identifier (ATA-95)"
+        },
+        "inspectionReportFile": {
+          "type": "string",
+          "description": "Inspection report file name"
+        },
+        "reportFileHash": {
+          "type": "string",
+          "description": "SHA-256 hash of inspection report",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        }
+      },
+      "required": ["workOrderNumber", "dppEntryId"]
+    }
+  },
+  "required": [
+    "inspectionRecordId",
+    "msn",
+    "inspectionDate",
+    "inspectionType",
+    "component",
+    "cabinZone",
+    "inspector",
+    "findings",
+    "overallResult",
+    "traceability"
+  ]
+}

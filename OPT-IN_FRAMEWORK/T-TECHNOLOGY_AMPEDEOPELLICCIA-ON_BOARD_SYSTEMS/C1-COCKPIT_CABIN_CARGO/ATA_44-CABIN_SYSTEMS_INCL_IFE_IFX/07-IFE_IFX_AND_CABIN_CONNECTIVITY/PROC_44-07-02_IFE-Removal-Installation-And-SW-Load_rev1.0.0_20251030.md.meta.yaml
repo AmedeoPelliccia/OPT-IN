@@ -1,0 +1,28 @@
+schema_version: "1.1"
+id: "PROC_44-07-02_IFE-Removal-Installation-And-SW-Load_rev1.0.0_20251030"
+document:
+  type: "PROC"
+  title: "44-07-02: IFE Removal Installation and SW Load"
+  revision: "1.0.0"
+  effective_date: "2025-10-30"
+effectivity:
+  msn: "ALL"
+safety:
+  hazards: []
+  criticality: "Major"
+approvals:
+  - authority: "Cabin Systems Engineering"
+    status: "Released"
+    date: "2025-10-29"
+traceability:
+  source_documents: []
+  crossrefs: ["INDEX.meta.yaml"]
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "placeholder_checksum_to_be_calculated"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    author: "Cabin Systems Engineering"
+    description: "Initial release"

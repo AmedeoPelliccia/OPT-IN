@@ -1,0 +1,5 @@
+Seat_Type,Seat_P_N,Attachment_Type,Design_Limit_Load_lbf,Ultimate_Load_lbf,Crash_Load_Requirement,Fastener_Spec,Fastener_Quantity,Torque_Min_in_lbf,Torque_Max_in_lbf,Dynamic_Test_Evidence,Notes
+Economy Triple,SEAT-ECO-3-001,Seat track bolt,9000,13500,16g forward 9g upward,NAS6604-12,4 per seat frame,30,40,DT-SEAT-ECO-001,Standard 3-seat economy unit
+Economy Single,SEAT-ECO-1-001,Seat track bolt,3000,4500,16g forward 9g upward,NAS6604-10,4 per seat,30,40,DT-SEAT-ECO-001,Aisle or window single seat
+Business Recliner,SEAT-BIZ-1-001,Seat track bolt with spreader plate,5000,7500,16g forward 9g upward 6g lateral,NAS6604-14,6 per seat,35,45,DT-SEAT-BIZ-001,Wide-body business class seat with electric recline
+Crew Jumpseat,SEAT-CREW-JS-001,Direct fuselage mount,2000,3000,16g forward 9g upward,NAS6304-8,4 per seat,25,35,DT-SEAT-CREW-001,Fold-down crew jumpseat for cabin crew

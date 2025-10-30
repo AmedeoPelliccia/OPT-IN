@@ -1,0 +1,279 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata44/cabin-system.schema.json",
+  "title": "Cabin System Component Specification",
+  "description": "Schema for cabin system components including seating, furnishings, environmental systems, and service equipment",
+  "type": "object",
+  "properties": {
+    "componentId": {
+      "type": "string",
+      "description": "Unique cabin system component identifier",
+      "pattern": "^CABIN-[A-Z0-9]{3,4}-[0-9]{4}$"
+    },
+    "componentType": {
+      "type": "string",
+      "enum": [
+        "Passenger_Seat",
+        "Crew_Seat",
+        "Galley",
+        "Lavatory",
+        "Monument",
+        "Overhead_Bin",
+        "Partition",
+        "Sidewall_Panel",
+        "Ceiling_Panel",
+        "Floor_Panel",
+        "Door_Trim",
+        "Emergency_Equipment_Stowage",
+        "Service_Cart",
+        "Environmental_Control_Unit",
+        "Air_Distribution_Duct",
+        "HEPA_Filter_Unit",
+        "Lighting_Assembly",
+        "Control_Panel",
+        "Signage_Placard"
+      ],
+      "description": "Type of cabin system component"
+    },
+    "partNumber": {
+      "type": "string",
+      "description": "Component part number"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Component serial number (if serialized)"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Component manufacturer"
+    },
+    "cabinZone": {
+      "type": "string",
+      "enum": ["Forward", "Mid", "Aft", "Galley_Forward", "Galley_Aft", "Lavatory_Forward", "Lavatory_Mid", "Lavatory_Aft", "Entry_Door", "Emergency_Exit"],
+      "description": "Cabin zone where component is installed"
+    },
+    "installationLocation": {
+      "type": "object",
+      "description": "Installation location details",
+      "properties": {
+        "fuselageStation": {
+          "type": "number",
+          "description": "Fuselage station (FS)"
+        },
+        "waterLine": {
+          "type": "number",
+          "description": "Water line (WL)"
+        },
+        "buttLine": {
+          "type": "number",
+          "description": "Butt line (BL)"
+        },
+        "seatRow": {
+          "type": "integer",
+          "description": "Seat row number (for seating components)"
+        },
+        "seatPosition": {
+          "type": "string",
+          "description": "Seat position (e.g., 'A', 'B', 'C', 'D', 'E', 'F')"
+        }
+      }
+    },
+    "materialSpecification": {
+      "type": "object",
+      "description": "Material specifications and certifications",
+      "properties": {
+        "primaryMaterial": {
+          "type": "string",
+          "description": "Primary material specification (AMS, BMS, MMPDS)"
+        },
+        "flammabilityClassification": {
+          "type": "string",
+          "enum": ["Class_A", "Class_B", "Class_C", "Class_D", "Class_E", "Class_F"],
+          "description": "Flammability classification per FAA 14 CFR Part 25.853"
+        },
+        "flammabilityTestReport": {
+          "type": "string",
+          "description": "Reference to flammability test report per FAR 25 Appendix F"
+        },
+        "smokeEmissionRating": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Smoke emission rating (Ds value)"
+        },
+        "toxicityRating": {
+          "type": "string",
+          "enum": ["Pass", "Fail", "Not_Tested"],
+          "description": "Toxicity rating per applicable standard"
+        }
+      },
+      "required": ["primaryMaterial", "flammabilityClassification"]
+    },
+    "structuralRequirements": {
+      "type": "object",
+      "description": "Structural requirements and load limits (for load-bearing components)",
+      "properties": {
+        "designLimitLoad": {
+          "type": "number",
+          "description": "Design limit load (lbf or N)"
+        },
+        "ultimateLoad": {
+          "type": "number",
+          "description": "Ultimate load (lbf or N)"
+        },
+        "crashLoadRequirement": {
+          "type": "string",
+          "description": "Crash load requirement (e.g., '16g forward', '9g upward')"
+        },
+        "dynamicTestEvidence": {
+          "type": "string",
+          "description": "Reference to dynamic test evidence (e.g., '16g sled test report')"
+        },
+        "attachmentMethod": {
+          "type": "string",
+          "enum": ["Bolted", "Bonded", "Riveted", "Welded", "Combined"],
+          "description": "Primary attachment method"
+        },
+        "fastenerSpecification": {
+          "type": "string",
+          "description": "Fastener specification and torque requirements"
+        }
+      }
+    },
+    "maintenanceRequirements": {
+      "type": "object",
+      "description": "Maintenance and inspection requirements",
+      "properties": {
+        "inspectionInterval": {
+          "type": "object",
+          "properties": {
+            "flightHours": {
+              "type": "number",
+              "description": "Inspection interval in flight hours"
+            },
+            "flightCycles": {
+              "type": "number",
+              "description": "Inspection interval in flight cycles"
+            },
+            "calendarMonths": {
+              "type": "number",
+              "description": "Inspection interval in calendar months"
+            }
+          }
+        },
+        "inspectionType": {
+          "type": "string",
+          "enum": ["GVI", "DET", "SPC", "NDT"],
+          "description": "Type of inspection required (GVI=General Visual, DET=Detailed, SPC=Special, NDT=Non-Destructive Test)"
+        },
+        "lifeLimitedPart": {
+          "type": "boolean",
+          "description": "Whether component is life-limited"
+        },
+        "lifeLimit": {
+          "type": "object",
+          "properties": {
+            "flightHours": {
+              "type": "number",
+              "description": "Life limit in flight hours"
+            },
+            "flightCycles": {
+              "type": "number",
+              "description": "Life limit in flight cycles"
+            },
+            "calendarYears": {
+              "type": "number",
+              "description": "Life limit in calendar years"
+            }
+          }
+        }
+      }
+    },
+    "environmentalRatings": {
+      "type": "object",
+      "description": "Environmental ratings per DO-160",
+      "properties": {
+        "temperatureRange": {
+          "type": "object",
+          "properties": {
+            "minOperatingTemp": {
+              "type": "number",
+              "description": "Minimum operating temperature (°C)"
+            },
+            "maxOperatingTemp": {
+              "type": "number",
+              "description": "Maximum operating temperature (°C)"
+            }
+          }
+        },
+        "humidityRating": {
+          "type": "string",
+          "description": "Humidity rating per DO-160"
+        },
+        "vibrationCategory": {
+          "type": "string",
+          "description": "Vibration category per DO-160"
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "Component effectivity and applicability",
+      "properties": {
+        "msnRange": {
+          "type": "string",
+          "description": "MSN range (e.g., '001-050', 'ALL')"
+        },
+        "cabinConfiguration": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Applicable cabin configurations"
+        },
+        "interchangeableWith": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of interchangeable part numbers"
+        }
+      },
+      "required": ["msnRange"]
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Component traceability",
+      "properties": {
+        "certificateOfConformance": {
+          "type": "string",
+          "description": "Certificate of Conformance (CofC) number"
+        },
+        "materialLotNumber": {
+          "type": "string",
+          "description": "Material lot or batch number"
+        },
+        "manufacturingDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Manufacturing date"
+        },
+        "approvalReferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Regulatory approval references (e.g., TSO, PMA, STC)"
+        }
+      }
+    }
+  },
+  "required": [
+    "componentId",
+    "componentType",
+    "partNumber",
+    "cabinZone",
+    "materialSpecification",
+    "effectivity",
+    "traceability"
+  ]
+}

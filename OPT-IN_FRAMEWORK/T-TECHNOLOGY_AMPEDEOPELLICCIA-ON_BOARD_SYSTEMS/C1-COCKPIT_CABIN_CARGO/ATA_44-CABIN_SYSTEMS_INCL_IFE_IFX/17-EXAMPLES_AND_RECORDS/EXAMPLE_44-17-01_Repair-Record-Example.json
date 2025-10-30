@@ -1,0 +1,104 @@
+{
+  "repairRecordId": "RR-44-2025-000123",
+  "msn": "MSN-001",
+  "configurationId": "BWB-DUAL-CLASS-V2",
+  "repairDate": "2025-10-15",
+  "cabinZone": "Mid_Cabin",
+  "seatRowPosition": {
+    "rowNumber": 18,
+    "seatPosition": "C",
+    "seatType": "Economy"
+  },
+  "damageClassification": {
+    "damageType": "Wear",
+    "severity": "Minor",
+    "affectedArea": 4.5,
+    "affectedAreaUnit": "in2"
+  },
+  "repairMethod": {
+    "repairType": "Seat_Cushion_Replacement",
+    "procedureReference": "PROC_44-02-02_Seat-Removal-And-Installation",
+    "specialToolsRequired": ["Torque wrench 10-50 in-lbf"]
+  },
+  "materialsUsed": [
+    {
+      "materialSpec": "BMS 8-60 Type II",
+      "materialDescription": "Polyurethane foam seat cushion",
+      "partNumber": "SEAT-CUSH-001",
+      "serialNumber": "SC-2025-00456",
+      "lotNumber": "LOT-2025-Q3-0123",
+      "certificateOfConformance": "COC-FOAM-2025-456",
+      "expiryDate": "2030-10-01"
+    },
+    {
+      "materialSpec": "BMS 8-297 Type I",
+      "materialDescription": "Fire blocking layer",
+      "partNumber": "FIRE-BLOCK-001",
+      "lotNumber": "LOT-2025-Q3-0124",
+      "certificateOfConformance": "COC-FIRE-2025-457"
+    }
+  ],
+  "materialFlammabilityCert": {
+    "materialSpec": "BMS 8-60 Type II with BMS 8-297 Type I fire blocker",
+    "flammabilityClass": "Class_A",
+    "testReportReference": "FR-44-003",
+    "testReportHash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+    "smokeEmission": 180,
+    "toxicityResult": "Pass"
+  },
+  "ndtResults": [
+    {
+      "ndtMethod": "Visual",
+      "inspectionDate": "2025-10-15",
+      "inspector": "John Smith, Level II",
+      "result": "Pass",
+      "reportFileName": "NDT-VIS-44-2025-0123.pdf",
+      "fileHash": "f1e2d3c4b5a6f7e8d9c0b1a2f3e4d5c6b7a8f9e0d1c2b3a4f5e6d7c8b9a0f1e2"
+    }
+  ],
+  "acceptanceCriteria": {
+    "seatAttachmentTorque": [
+      {
+        "fastenerLocation": "Forward left seat track bolt",
+        "appliedTorque": 35,
+        "minTorque": 30,
+        "maxTorque": 40
+      },
+      {
+        "fastenerLocation": "Forward right seat track bolt",
+        "appliedTorque": 36,
+        "minTorque": 30,
+        "maxTorque": 40
+      },
+      {
+        "fastenerLocation": "Aft left seat track bolt",
+        "appliedTorque": 34,
+        "minTorque": 30,
+        "maxTorque": 40
+      },
+      {
+        "fastenerLocation": "Aft right seat track bolt",
+        "appliedTorque": 35,
+        "minTorque": 30,
+        "maxTorque": 40
+      }
+    ]
+  },
+  "effectivity": {
+    "msnRange": "MSN-001",
+    "cabinConfigApplicability": ["BWB-DUAL-CLASS-V2"],
+    "expiryCondition": "Next major cabin refurbishment or 10 years, whichever first"
+  },
+  "traceability": {
+    "dppEntryId": "DPP-44-2025-000123",
+    "workOrderNumber": "WO-2025-1234",
+    "performedBy": "Technician Jane Doe (Cert# A&P-12345)",
+    "inspectedBy": "Inspector John Smith (Cert# Level-II-67890)",
+    "approvedBy": "Cabin Systems Engineering (not required for minor repair)"
+  },
+  "nextInspectionDue": {
+    "inspectionType": "GVI",
+    "dueAtHours": 5500,
+    "dueDate": "2026-04-15"
+  }
+}

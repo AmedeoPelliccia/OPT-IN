@@ -1,0 +1,531 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata44/repair-record.schema.json",
+  "title": "Cabin System Repair Record",
+  "description": "Comprehensive repair record schema for ATA 44 cabin system repairs with full traceability",
+  "type": "object",
+  "properties": {
+    "repairRecordId": {
+      "type": "string",
+      "description": "Unique repair record identifier",
+      "pattern": "^RR-44-[0-9]{4}-[0-9]{6}$"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number (aircraft effectivity)"
+    },
+    "configurationId": {
+      "type": "string",
+      "description": "Aircraft cabin configuration identifier"
+    },
+    "repairDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date repair was completed (ISO 8601)"
+    },
+    "cabinZone": {
+      "type": "string",
+      "enum": [
+        "Forward_Cabin",
+        "Mid_Cabin",
+        "Aft_Cabin",
+        "Galley_Forward",
+        "Galley_Aft",
+        "Lavatory_Forward",
+        "Lavatory_Mid",
+        "Lavatory_Aft",
+        "Entry_Door_Area",
+        "Emergency_Exit_Area",
+        "Overhead_Storage",
+        "Crew_Rest_Area"
+      ],
+      "description": "Cabin zone where repair was performed"
+    },
+    "seatRowPosition": {
+      "type": "object",
+      "description": "Seat row and position (for seating repairs)",
+      "properties": {
+        "rowNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Seat row number"
+        },
+        "seatPosition": {
+          "type": "string",
+          "pattern": "^[A-K]$",
+          "description": "Seat position (A-K)"
+        },
+        "seatType": {
+          "type": "string",
+          "enum": ["Economy", "Premium_Economy", "Business", "First_Class", "Crew"],
+          "description": "Seat type"
+        }
+      }
+    },
+    "ifeIfxComponentIds": {
+      "type": "array",
+      "description": "IFE/IFX component identifications (if repair involves IFE/IFX)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "componentType": {
+            "type": "string",
+            "enum": [
+              "Seat_Back_Monitor",
+              "Control_Unit",
+              "Media_Server",
+              "Connectivity_Router",
+              "Antenna",
+              "Wiring_Harness",
+              "Power_Supply_Unit"
+            ],
+            "description": "IFE/IFX component type"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Component part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Component serial number"
+          },
+          "softwareVersion": {
+            "type": "string",
+            "description": "Software version (if applicable)"
+          },
+          "hardwareVersion": {
+            "type": "string",
+            "description": "Hardware version"
+          }
+        },
+        "required": ["componentType", "partNumber"]
+      }
+    },
+    "oxygenModuleIds": {
+      "type": "array",
+      "description": "Oxygen module identifications (if repair involves oxygen system)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "moduleType": {
+            "type": "string",
+            "enum": ["PSU_Module", "Chemical_Generator", "Mask_Assembly", "Distribution_Valve", "Pressure_Sensor"],
+            "description": "Oxygen module type"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Module part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Module serial number"
+          },
+          "pressureReading": {
+            "type": "number",
+            "description": "Oxygen pressure reading (psi)"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Module expiry date (for chemical generators)"
+          },
+          "lastServiceDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Last service date"
+          }
+        },
+        "required": ["moduleType", "partNumber"]
+      }
+    },
+    "fireDetectionSuppressionZone": {
+      "type": "object",
+      "description": "Fire detection/suppression zone (if repair involves fire system)",
+      "properties": {
+        "zoneId": {
+          "type": "string",
+          "description": "Fire zone identifier"
+        },
+        "detectorIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Fire detector serial numbers in zone"
+        },
+        "suppressionAgentType": {
+          "type": "string",
+          "enum": ["Halon_1211", "Halon_1301", "FE-36", "HFC-125", "CO2", "Water_Mist"],
+          "description": "Suppression agent type (for galley suppression)"
+        },
+        "agentQuantity": {
+          "type": "number",
+          "description": "Suppression agent quantity (lbs or kg)"
+        },
+        "agentPressure": {
+          "type": "number",
+          "description": "Suppression agent pressure (psi)"
+        },
+        "lastSensitivityCalibration": {
+          "type": "string",
+          "format": "date",
+          "description": "Last detector sensitivity calibration date"
+        }
+      }
+    },
+    "materialFlammabilityCert": {
+      "type": "object",
+      "description": "Material flammability certification (for interior material repairs)",
+      "properties": {
+        "materialSpec": {
+          "type": "string",
+          "description": "Material specification"
+        },
+        "flammabilityClass": {
+          "type": "string",
+          "enum": ["Class_A", "Class_B", "Class_C", "Class_D", "Class_E", "Class_F"],
+          "description": "Flammability classification per 14 CFR Part 25.853"
+        },
+        "testReportReference": {
+          "type": "string",
+          "description": "Reference to flammability test report per FAR 25 Appendix F"
+        },
+        "testReportHash": {
+          "type": "string",
+          "description": "SHA-256 hash of test report",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "smokeEmission": {
+          "type": "number",
+          "description": "Smoke emission rating (Ds value)"
+        },
+        "toxicityResult": {
+          "type": "string",
+          "enum": ["Pass", "Fail"],
+          "description": "Toxicity test result"
+        }
+      },
+      "required": ["materialSpec", "flammabilityClass", "testReportReference"]
+    },
+    "damageClassification": {
+      "type": "object",
+      "description": "Classification of damage requiring repair",
+      "properties": {
+        "damageType": {
+          "type": "string",
+          "enum": [
+            "Impact",
+            "Wear",
+            "Corrosion",
+            "Delamination",
+            "Burn_Mark",
+            "Stain",
+            "Tear",
+            "Crack",
+            "Loose_Fastener",
+            "Foreign_Object_Damage",
+            "Manufacturing_Defect",
+            "Other"
+          ],
+          "description": "Type of damage"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["Minor", "Moderate", "Major", "Critical"],
+          "description": "Severity classification"
+        },
+        "affectedArea": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Affected area (square inches or square centimeters)"
+        },
+        "affectedAreaUnit": {
+          "type": "string",
+          "enum": ["in2", "cm2"],
+          "description": "Unit of affected area measurement"
+        }
+      },
+      "required": ["damageType", "severity"]
+    },
+    "repairMethod": {
+      "type": "object",
+      "description": "Repair method and procedure references",
+      "properties": {
+        "repairType": {
+          "type": "string",
+          "enum": [
+            "Seat_Replacement",
+            "Seat_Cushion_Replacement",
+            "Panel_Replacement",
+            "Bonded_Repair",
+            "Fastener_Replacement",
+            "IFE_Component_Replacement",
+            "Oxygen_Module_Replacement",
+            "Fire_Detector_Replacement",
+            "Wiring_Repair",
+            "Galley_Component_Replacement",
+            "Cleaning_Only",
+            "Adjustment_Only"
+          ],
+          "description": "Type of repair performed"
+        },
+        "procedureReference": {
+          "type": "string",
+          "description": "Reference to repair procedure (e.g., PROC_44-02-02)"
+        },
+        "specialToolsRequired": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special tools required for repair"
+        }
+      },
+      "required": ["repairType", "procedureReference"]
+    },
+    "materialsUsed": {
+      "type": "array",
+      "description": "Materials and components used in repair",
+      "items": {
+        "type": "object",
+        "properties": {
+          "materialSpec": {
+            "type": "string",
+            "description": "Material or component specification"
+          },
+          "materialDescription": {
+            "type": "string",
+            "description": "Description of material or component"
+          },
+          "partNumber": {
+            "type": "string",
+            "description": "Part number"
+          },
+          "serialNumber": {
+            "type": "string",
+            "description": "Serial number (if serialized)"
+          },
+          "lotNumber": {
+            "type": "string",
+            "description": "Material lot or batch number"
+          },
+          "certificateOfConformance": {
+            "type": "string",
+            "description": "Certificate of Conformance (CofC) number"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Material expiry date (for time-sensitive materials)"
+          }
+        },
+        "required": ["materialSpec", "materialDescription", "certificateOfConformance"]
+      }
+    },
+    "ndtResults": {
+      "type": "array",
+      "description": "Non-Destructive Testing results with file hashes",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ndtMethod": {
+            "type": "string",
+            "enum": ["Visual", "Ultrasonic", "Eddy_Current", "Thermography", "Tap_Test"],
+            "description": "NDT method used"
+          },
+          "inspectionDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of NDT inspection"
+          },
+          "inspector": {
+            "type": "string",
+            "description": "Inspector name and certification level"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "Conditional"],
+            "description": "NDT result"
+          },
+          "reportFileName": {
+            "type": "string",
+            "description": "NDT report file name"
+          },
+          "fileHash": {
+            "type": "string",
+            "description": "SHA-256 hash of NDT report file",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          }
+        },
+        "required": ["ndtMethod", "inspectionDate", "result", "fileHash"]
+      }
+    },
+    "acceptanceCriteria": {
+      "type": "object",
+      "description": "Numeric acceptance criteria verified post-repair",
+      "properties": {
+        "seatAttachmentTorque": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fastenerLocation": {
+                "type": "string",
+                "description": "Fastener location"
+              },
+              "appliedTorque": {
+                "type": "number",
+                "description": "Applied torque value (in-lbf or Nm)"
+              },
+              "minTorque": {
+                "type": "number",
+                "description": "Minimum allowable torque"
+              },
+              "maxTorque": {
+                "type": "number",
+                "description": "Maximum allowable torque"
+              }
+            },
+            "required": ["fastenerLocation", "appliedTorque", "minTorque", "maxTorque"]
+          }
+        },
+        "oxygenPressure": {
+          "type": "object",
+          "properties": {
+            "measuredPressure": {
+              "type": "number",
+              "description": "Measured oxygen pressure (psi)"
+            },
+            "minPressure": {
+              "type": "number",
+              "description": "Minimum allowable pressure"
+            },
+            "maxPressure": {
+              "type": "number",
+              "description": "Maximum allowable pressure"
+            }
+          }
+        },
+        "fireDetectorSensitivity": {
+          "type": "object",
+          "properties": {
+            "measuredSensitivity": {
+              "type": "number",
+              "description": "Measured detector sensitivity"
+            },
+            "minSensitivity": {
+              "type": "number",
+              "description": "Minimum required sensitivity"
+            },
+            "maxSensitivity": {
+              "type": "number",
+              "description": "Maximum allowable sensitivity"
+            }
+          }
+        },
+        "ifeScreenBrightness": {
+          "type": "object",
+          "properties": {
+            "measuredBrightness": {
+              "type": "number",
+              "description": "Measured screen brightness (cd/m2)"
+            },
+            "minBrightness": {
+              "type": "number",
+              "description": "Minimum required brightness"
+            }
+          }
+        }
+      }
+    },
+    "effectivity": {
+      "type": "object",
+      "description": "Effectivity and applicability of this repair",
+      "properties": {
+        "msnRange": {
+          "type": "string",
+          "description": "MSN range (e.g., '001-050', 'ALL')"
+        },
+        "cabinConfigApplicability": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Applicable cabin configurations"
+        },
+        "expiryCondition": {
+          "type": "string",
+          "description": "Condition under which repair must be re-evaluated (FH, FC, calendar)"
+        }
+      },
+      "required": ["msnRange"]
+    },
+    "traceability": {
+      "type": "object",
+      "description": "Traceability to DPP and other records",
+      "properties": {
+        "dppEntryId": {
+          "type": "string",
+          "description": "Digital Product Passport entry identifier (ATA-95)"
+        },
+        "workOrderNumber": {
+          "type": "string",
+          "description": "Maintenance work order number"
+        },
+        "engineeringOrderNumber": {
+          "type": "string",
+          "description": "Engineering order or disposition number (if applicable)"
+        },
+        "performedBy": {
+          "type": "string",
+          "description": "Technician who performed repair"
+        },
+        "inspectedBy": {
+          "type": "string",
+          "description": "Inspector who verified repair"
+        },
+        "approvedBy": {
+          "type": "string",
+          "description": "Engineering authority who approved repair (if required)"
+        }
+      },
+      "required": ["dppEntryId", "workOrderNumber", "performedBy", "inspectedBy"]
+    },
+    "nextInspectionDue": {
+      "type": "object",
+      "description": "Next inspection due for this repair",
+      "properties": {
+        "inspectionType": {
+          "type": "string",
+          "description": "Type of next inspection (e.g., GVI, DET)"
+        },
+        "dueAtHours": {
+          "type": "number",
+          "description": "Next inspection due at flight hours"
+        },
+        "dueAtCycles": {
+          "type": "number",
+          "description": "Next inspection due at flight cycles"
+        },
+        "dueDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Next inspection due by calendar date"
+        }
+      },
+      "required": ["inspectionType"]
+    }
+  },
+  "required": [
+    "repairRecordId",
+    "msn",
+    "repairDate",
+    "cabinZone",
+    "damageClassification",
+    "repairMethod",
+    "materialsUsed",
+    "ndtResults",
+    "effectivity",
+    "traceability"
+  ]
+}
