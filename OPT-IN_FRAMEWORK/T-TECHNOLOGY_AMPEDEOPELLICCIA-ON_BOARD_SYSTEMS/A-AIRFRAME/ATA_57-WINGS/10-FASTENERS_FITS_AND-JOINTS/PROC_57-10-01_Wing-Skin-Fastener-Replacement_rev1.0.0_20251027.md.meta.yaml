@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "PROC_57-10-01_Wing-Skin-Fastener-Replacement_rev1.0.0_20251027"
+document: { type: "PROC", title: "57-10-01: Wing Skin Fastener Replacement", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Advanced", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "1e266fe9a92423bcffafb1116c26d3bf123a5021d03bc6320467141dee169246" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

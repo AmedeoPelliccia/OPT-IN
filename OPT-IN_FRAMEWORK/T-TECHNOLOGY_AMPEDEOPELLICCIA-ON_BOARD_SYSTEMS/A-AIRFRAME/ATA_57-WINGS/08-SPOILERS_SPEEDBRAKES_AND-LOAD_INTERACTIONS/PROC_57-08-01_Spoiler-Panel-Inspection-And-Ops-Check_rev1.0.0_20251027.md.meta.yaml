@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "PROC_57-08-01_Spoiler-Panel-Inspection-And-Ops-Check_rev1.0.0_20251027"
+document: { type: "PROC", title: "57-08-01: Spoiler Panel Inspection And Ops Check", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Advanced", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "eb7b1842a3a67f9ca7770d2561566b55f6ff271295bd992fad9822a85726798d" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

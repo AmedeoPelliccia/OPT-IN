@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "DESC_57-17-01_Temperature-And-Moisture-Limits-For-Composites_rev1.0.0_20251027"
+document: { type: "DESC", title: "57-17-01: Temperature And Moisture Limits For Composites", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Basic", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "6ac7c4c92181a81121aed3a12b02495713be20f86819830bacabba9c696eda47" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

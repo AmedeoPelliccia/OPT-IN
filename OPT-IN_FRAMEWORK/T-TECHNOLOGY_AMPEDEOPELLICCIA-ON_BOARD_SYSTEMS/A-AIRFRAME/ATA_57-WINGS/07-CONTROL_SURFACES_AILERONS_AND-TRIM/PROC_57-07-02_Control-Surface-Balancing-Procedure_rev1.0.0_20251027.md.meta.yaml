@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "PROC_57-07-02_Control-Surface-Balancing-Procedure_rev1.0.0_20251027"
+document: { type: "PROC", title: "57-07-02: Control Surface Balancing Procedure", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Specialized", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "9bd906acad02d00494879ab325c3296f0bc527ae65cd34fb9b33bab1b61360ef" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

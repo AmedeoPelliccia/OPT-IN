@@ -1,0 +1,11 @@
+schema_version: "1.1"
+id: "DATA_57-03-03_Skin-Splice-Details-And-Laminate-Schedules_rev1.0.0_20251027"
+document: { type: "DATA", title: "57-03-03: Skin Splice Details and Laminate Schedules", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }, { authority: "Materials & Processes", status: "Approved", date: "2025-10-25" }]
+traceability: { crossrefs: ["ATA 51", "PROC_57-03-02"], parent_document: "INDEX.meta.yaml" }
+training_required: { level: "Specialized", certifications: ["Composite Repair"] }
+integrity: { checksum: { algorithm: "sha256", value: "f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Materials & Processes Team", description: "Initial laminate schedules" }]
+notes: "Cure temperatures in Fahrenheit. All NDT methods referenced in PROC_57-11-01."

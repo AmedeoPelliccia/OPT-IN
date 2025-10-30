@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata57/wing-spec.schema.json",
+  "title": "Wing Component Specification Schema",
+  "description": "Specification schema for wing components and assemblies",
+  "type": "object",
+  "properties": {
+    "component_id": {
+      "type": "string",
+      "description": "Unique component identifier"
+    },
+    "part_number": {
+      "type": "string",
+      "description": "Part number"
+    },
+    "serial_number": {
+      "type": "string",
+      "description": "Serial number"
+    },
+    "description": {
+      "type": "string",
+      "description": "Component description"
+    },
+    "component_type": {
+      "type": "string",
+      "enum": [
+        "Wing_Box_Assembly",
+        "Spar",
+        "Rib",
+        "Skin_Panel",
+        "Leading_Edge_Assembly",
+        "Trailing_Edge_Assembly",
+        "Flap",
+        "Slat",
+        "Elevon",
+        "Flaperon",
+        "Spoiler",
+        "Hinge",
+        "Actuator",
+        "Track_Assembly",
+        "Fastener",
+        "Fuel_Tank_Component"
+      ],
+      "description": "Type of wing component"
+    },
+    "material": {
+      "type": "object",
+      "description": "Material specification",
+      "properties": {
+        "primary_material": {
+          "type": "string",
+          "description": "Primary material (e.g., CFRP, Aluminum 2024-T3)"
+        },
+        "material_spec": {
+          "type": "string",
+          "description": "Material specification reference (e.g., AMS, BMS)"
+        },
+        "composite_layup": {
+          "type": "string",
+          "description": "Composite layup schedule if applicable"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Component dimensions",
+      "properties": {
+        "length": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        },
+        "thickness": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["inch", "mm"]
+        }
+      }
+    },
+    "weight": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["lb", "kg"]
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "description": "Installation location",
+      "properties": {
+        "wing_station": {
+          "type": "string"
+        },
+        "zone": {
+          "type": "string"
+        }
+      }
+    },
+    "life_limits": {
+      "type": "object",
+      "description": "Component life limits",
+      "properties": {
+        "flight_hours": {
+          "type": "number",
+          "description": "Life limit in flight hours"
+        },
+        "flight_cycles": {
+          "type": "number",
+          "description": "Life limit in flight cycles"
+        },
+        "calendar_months": {
+          "type": "number",
+          "description": "Life limit in calendar months"
+        }
+      }
+    },
+    "inspection_intervals": {
+      "type": "object",
+      "description": "Inspection intervals",
+      "properties": {
+        "detailed_visual": {
+          "type": "number",
+          "description": "Detailed visual inspection interval (flight hours)"
+        },
+        "ndt": {
+          "type": "number",
+          "description": "NDT inspection interval (flight hours)"
+        }
+      }
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Component manufacturer"
+    },
+    "manufacture_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of manufacture"
+    },
+    "certificate_of_conformance": {
+      "type": "string",
+      "description": "Certificate of Conformance number"
+    },
+    "effectivity": {
+      "type": "object",
+      "properties": {
+        "msn_applicability": {
+          "type": "string",
+          "description": "MSN applicability range"
+        },
+        "config_applicability": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Configuration applicability"
+        }
+      }
+    }
+  },
+  "required": [
+    "component_id",
+    "part_number",
+    "description",
+    "component_type"
+  ]
+}

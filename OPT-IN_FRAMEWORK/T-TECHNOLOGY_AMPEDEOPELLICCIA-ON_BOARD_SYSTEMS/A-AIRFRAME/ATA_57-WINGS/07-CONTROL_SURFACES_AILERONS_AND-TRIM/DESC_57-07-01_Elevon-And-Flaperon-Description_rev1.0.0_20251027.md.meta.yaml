@@ -1,0 +1,9 @@
+schema_version: "1.1"
+id: "DESC_57-07-01_Elevon-And-Flaperon-Description_rev1.0.0_20251027"
+document: { type: "DESC", title: "57-07-01: Elevon And Flaperon Description", revision: "1.0.0", effective_date: "2025-10-27" }
+effectivity: { msn: "ALL", config: "Block A" }
+safety: { hazards: [], criticality: "Major" }
+approvals: [{ authority: "Wing Structures Engineering", status: "Released", date: "2025-10-24" }]
+training_required: { level: "Basic", certifications: [] }
+integrity: { checksum: { algorithm: "sha256", value: "d14a969e7a10f5433911b3681094574c283e8854d245e1787feabb658b161daa" } }
+revision_history: [{ revision: "1.0.0", date: "2025-10-27", author: "Wing Structures Engineering", description: "Initial release" }]

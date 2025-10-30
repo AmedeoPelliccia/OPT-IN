@@ -1,0 +1,11 @@
+Test_ID,Description,Method,Acceptance_Criteria,Report_Reference
+QUAL-57-001,Static Ultimate Load Test,Full-Scale Test Article,No failure at 1.5x limit load (2.5g maneuver gust),STR-RPT-57-001
+QUAL-57-002,Fatigue Test (Flight Cycles),Full-Scale Test Article,2x Design Service Objective (DSO) without widespread fatigue damage,STR-RPT-57-002
+QUAL-57-003,Flutter & Aeroelastic Test,Wind Tunnel & GVT,Flutter free up to 1.2 Vd/Md demonstrate control surface reversal margin > 15%,AERO-RPT-57-003
+QUAL-57-004,Bird Strike on Leading Edge,Cannon Test,No catastrophic failure of primary spar damage contained per CS 25.571(e)(1),STR-RPT-57-004
+QUAL-57-005,Fuel Tank Leak Test,Pressure Test,Maximum leak rate < 0.1 oz/hr at operational pressure,FUEL-RPT-57-005
+QUAL-57-006,Lightning Strike Direct Effects,High Voltage Test,No structural damage LSP continuity maintained < 2.5 milliohms,LSP-RPT-57-006
+QUAL-57-007,Wing Box Compression Test,Full-Scale Test,Skin buckling above limit load no failure at ultimate load,STR-RPT-57-007
+QUAL-57-008,Control Surface Hinge Moment,Bench Test,Hinge moment within ±10% of predicted values across full deflection range,CTRL-RPT-57-008
+QUAL-57-009,Delamination Growth (Fatigue),Coupon Test,No delamination growth beyond 2x initial size after DSO cycles,MAT-RPT-57-009
+QUAL-57-010,Fastener Pull-Through Test,Coupon Test,Minimum pull-through strength 1.5x ultimate load per fastener,FAST-RPT-57-010

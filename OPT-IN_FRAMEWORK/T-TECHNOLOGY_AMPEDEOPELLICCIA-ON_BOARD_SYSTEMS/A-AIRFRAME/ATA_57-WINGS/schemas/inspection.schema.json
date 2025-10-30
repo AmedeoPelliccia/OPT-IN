@@ -1,0 +1,211 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata57/inspection.schema.json",
+  "title": "Wing Inspection Record Schema",
+  "description": "Inspection record schema for wing structural inspections with acceptance criteria",
+  "type": "object",
+  "properties": {
+    "inspection_id": {
+      "type": "string",
+      "description": "Unique inspection identifier"
+    },
+    "inspection_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of inspection (ISO 8601)"
+    },
+    "msn": {
+      "type": "string",
+      "description": "Manufacturer Serial Number"
+    },
+    "inspection_type": {
+      "type": "string",
+      "enum": [
+        "General_Visual_Inspection",
+        "Detailed_Visual_Inspection",
+        "Ultrasonic",
+        "Eddy_Current",
+        "Dye_Penetrant",
+        "Magnetic_Particle",
+        "Radiographic",
+        "C-Scan",
+        "Functional_Test"
+      ],
+      "description": "Type of inspection performed"
+    },
+    "inspection_scope": {
+      "type": "string",
+      "description": "Scope or purpose of inspection"
+    },
+    "component": {
+      "type": "string",
+      "description": "Component or area inspected"
+    },
+    "location": {
+      "type": "object",
+      "description": "Location details",
+      "properties": {
+        "wing_station": {
+          "type": "string"
+        },
+        "zone": {
+          "type": "string"
+        },
+        "specific_location": {
+          "type": "string"
+        }
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "description": "Inspector information",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "certification_level": {
+          "type": "string",
+          "description": "NDT certification level if applicable"
+        },
+        "license_number": {
+          "type": "string"
+        }
+      },
+      "required": ["name"]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "finding_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["Minor", "Moderate", "Major", "Critical"]
+          },
+          "location": {
+            "type": "string"
+          },
+          "dimensions": {
+            "type": "object",
+            "properties": {
+              "length": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "depth": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string",
+                "enum": ["inch", "mm"]
+              }
+            }
+          },
+          "action_required": {
+            "type": "string",
+            "enum": ["None", "Monitor", "Repair_Required", "Engineering_Evaluation"]
+          }
+        },
+        "required": ["finding_id", "description", "severity"]
+      },
+      "description": "Array of inspection findings"
+    },
+    "acceptance_criteria": {
+      "type": "object",
+      "description": "Numeric acceptance criteria for inspection",
+      "properties": {
+        "max_crack_length": {
+          "type": "number",
+          "description": "Maximum allowable crack length (inches or mm)"
+        },
+        "max_delamination_area": {
+          "type": "number",
+          "description": "Maximum allowable delamination area (in² or cm²)"
+        },
+        "max_void_content": {
+          "type": "number",
+          "description": "Maximum void content percentage"
+        },
+        "min_thickness": {
+          "type": "number",
+          "description": "Minimum allowable thickness (inches or mm)"
+        },
+        "max_corrosion_depth": {
+          "type": "number",
+          "description": "Maximum allowable corrosion depth (inches or mm)"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["inch", "mm", "in2", "cm2", "percent"]
+        }
+      }
+    },
+    "result": {
+      "type": "string",
+      "enum": ["Pass", "Fail", "Conditional"],
+      "description": "Overall inspection result"
+    },
+    "next_inspection_due": {
+      "type": "object",
+      "description": "Next inspection due",
+      "properties": {
+        "due_at_hours": {
+          "type": "number",
+          "description": "Flight hours"
+        },
+        "due_at_cycles": {
+          "type": "number",
+          "description": "Flight cycles"
+        },
+        "due_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Calendar date"
+        }
+      }
+    },
+    "report_file": {
+      "type": "object",
+      "description": "Inspection report file details",
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$",
+          "description": "SHA-256 hash of report file"
+        }
+      },
+      "required": ["filename", "hash"]
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "work_order": {
+          "type": "string"
+        },
+        "inspection_procedure_ref": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "inspection_id",
+    "inspection_date",
+    "msn",
+    "inspection_type",
+    "component",
+    "inspector",
+    "result"
+  ]
+}

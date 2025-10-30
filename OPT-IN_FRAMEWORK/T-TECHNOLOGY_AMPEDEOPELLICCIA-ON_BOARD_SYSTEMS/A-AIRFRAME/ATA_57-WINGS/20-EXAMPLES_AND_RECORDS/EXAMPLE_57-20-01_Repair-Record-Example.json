@@ -1,0 +1,44 @@
+{
+  "record_id": "RR-AMP360-001-57-0045",
+  "timestamp_utc": "2029-12-10T14:00:00Z",
+  "msn": "AMP360-001",
+  "location": {
+    "wing_station": "WS 25.5",
+    "spar_id": "FRONT_SPAR",
+    "rib_id": "RIB_32",
+    "surface": "UPPER"
+  },
+  "control_surface_id": null,
+  "post_repair_leak_check_result": "N/A",
+  "repair_procedure_ref": "SRM 57-30-01, Repair 4",
+  "inspections": [
+    {
+      "type": "NDT",
+      "report_hash": "sha256:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+      "inspector": "J. Smith, NDT Level II",
+      "date": "2029-12-10",
+      "result": "Pass"
+    }
+  ],
+  "damage_classification": {
+    "damage_type": "Impact",
+    "severity": "Moderate"
+  },
+  "materials_used": [
+    {
+      "material_spec": "BMS 5-101",
+      "lot_number": "LOT-2029-1234",
+      "certificate_of_conformance": "COC-2029-5678"
+    }
+  ],
+  "traceability": {
+    "work_order_number": "WO-57-2029-045",
+    "performed_by": "A. Johnson, AMT",
+    "inspected_by": "J. Smith, NDT Level II",
+    "approved_by": "R. Brown, PE"
+  },
+  "effectivity": {
+    "config": "Block A",
+    "msn_range": "AMP360-001 to AMP360-050"
+  }
+}
