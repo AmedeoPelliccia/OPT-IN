@@ -63,7 +63,7 @@ As an example, the Optin Framework is employed in the documentary development of
 
 ### Conclusion
 
-The Optin Framework represents the transition from **comprehensive technical documentation to verifiable product**, constituting the technical equivalent of an open "documentary prototype." This infrastructure facilitates the **evaluation, replication, and financing of advanced aeronautical projects** from documentary evidence and establishes a replicable standard for the entire open and collaborative aeronautical design industry.[¹](https://arxiv.org/html/2407.06320v2)[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
+The Optin Framework represents the transition from **comprehensive technical documentation to verifiable product**. It constitutes the technical equivalent of an open "documentary prototype." This infrastructure facilitates the **evaluation, replication, and financing of advanced aeronautical projects** from documentary evidence. It also establishes a replicable standard for the entire open and collaborative aeronautical design industry.[¹](https://arxiv.org/html/2407.06320v2)[²](https://www.docs.rcaide.leadsresearchgroup.com/)[³](https://github.com/lucianosrp/open-source-aviation)
 
 **Keywords:** Open source, aircraft, technical documentation, PLM, CAx, certification, conceptual design, hydrogen aircraft, BWB.
 
