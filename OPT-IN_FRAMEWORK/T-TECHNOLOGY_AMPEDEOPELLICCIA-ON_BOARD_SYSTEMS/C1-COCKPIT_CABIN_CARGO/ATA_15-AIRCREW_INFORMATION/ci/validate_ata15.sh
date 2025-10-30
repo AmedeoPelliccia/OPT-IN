@@ -21,7 +21,7 @@ fi
 if command -v python >/dev/null 2>&1; then
   echo "Validating JSON syntax for schema files..."
   for s in "$ROOT_DIR"/schemas/*.json; do
-    python -c "import json; json.load(open('$s'))" || {
+    python -m json.tool "$s" > /dev/null || {
       echo "Invalid JSON: $s"
       exit 3
     }
