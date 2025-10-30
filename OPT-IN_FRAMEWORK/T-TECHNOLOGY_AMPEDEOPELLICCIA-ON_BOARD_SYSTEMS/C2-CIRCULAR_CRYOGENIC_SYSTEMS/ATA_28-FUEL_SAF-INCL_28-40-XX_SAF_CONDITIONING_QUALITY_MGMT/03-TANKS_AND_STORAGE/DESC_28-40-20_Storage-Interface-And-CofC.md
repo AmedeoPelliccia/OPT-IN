@@ -136,7 +136,6 @@ Test reports and FEA documentation must be included in DPP.
 
 ## References
 
-## References
 
 **Internal Documents:**
 - [DESC_28-40-01: Scope and Governance](../01-GENERAL/DESC_28-40-01_Scope-Governance-And-Effectivity.md)
