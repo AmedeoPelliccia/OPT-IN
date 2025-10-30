@@ -192,7 +192,7 @@ done
 echo ""
 echo "Check 10: Checking safety assessment references..."
 MISSING_SAFETY_REF=0
-for file in $(find "$ATA16_DIR" -type f -name "*ECR*.json" -o -name "*NCR*.json"); do
+for file in $(find "$ATA16_DIR" -type f \( -name "*ECR*.json" -o -name "*NCR*.json" \)); do
     if [ -f "$file" ]; then
         if ! grep -q "safety_assessment" "$file"; then
             warning "Safety assessment reference may be missing in: $(basename $file)"
