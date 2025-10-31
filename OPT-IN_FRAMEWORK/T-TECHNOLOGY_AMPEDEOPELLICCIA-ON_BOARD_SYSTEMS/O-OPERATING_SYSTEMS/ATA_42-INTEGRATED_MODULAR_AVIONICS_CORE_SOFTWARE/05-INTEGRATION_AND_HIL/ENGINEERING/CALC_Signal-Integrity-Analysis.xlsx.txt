@@ -1,0 +1,46 @@
+# CALC_Signal-Integrity-Analysis.xlsx
+# This is a placeholder for the Excel calculation file
+
+# Signal Integrity Analysis for HIL Testing
+# -----------------------------------------
+# 
+# This spreadsheet should contain:
+# 
+# Sheet 1: Signal Measurements
+# - Test ID
+# - Signal Name
+# - Frequency (Hz)
+# - Amplitude (V)
+# - Rise Time (ns)
+# - Fall Time (ns)
+# - Overshoot (%)
+# - Undershoot (%)
+# - Jitter (ps)
+# 
+# Sheet 2: Pass/Fail Criteria
+# - Signal Type
+# - Min Amplitude
+# - Max Amplitude
+# - Max Rise Time
+# - Max Fall Time
+# - Max Jitter
+# 
+# Sheet 3: Analysis Results
+# - Test Run ID
+# - Timestamp
+# - Overall Status
+# - Failed Signals (if any)
+# - Notes
+# 
+# To create the actual Excel file, use Microsoft Excel, LibreOffice Calc,
+# or Python with openpyxl/xlsxwriter libraries.
+# 
+# Example Python code to generate:
+# ```python
+# import openpyxl
+# wb = openpyxl.Workbook()
+# ws = wb.active
+# ws.title = "Signal Measurements"
+# ws.append(["Test_ID", "Signal_Name", "Frequency_Hz", "Amplitude_V", "Jitter_ps"])
+# wb.save("CALC_Signal-Integrity-Analysis.xlsx")
+# ```

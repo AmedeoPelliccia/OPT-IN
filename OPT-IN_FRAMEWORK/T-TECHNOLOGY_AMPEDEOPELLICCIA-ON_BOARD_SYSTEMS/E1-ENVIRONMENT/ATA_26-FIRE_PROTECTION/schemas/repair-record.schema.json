@@ -1,0 +1,297 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata26/repair-record.schema.json",
+  "title": "Fire System Repair Record",
+  "description": "Schema for fire protection system repair and maintenance records",
+  "type": "object",
+  "required": [
+    "record_id",
+    "record_type",
+    "aircraft_msn",
+    "system_id",
+    "date",
+    "performed_by",
+    "status"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "description": "Unique repair record identifier",
+      "pattern": "^RR-26-[A-Z0-9]{8,16}$"
+    },
+    "record_type": {
+      "type": "string",
+      "enum": ["repair", "replacement", "modification", "inspection", "servicing"],
+      "description": "Type of maintenance action"
+    },
+    "aircraft_msn": {
+      "type": "string",
+      "description": "Manufacturing Serial Number"
+    },
+    "system_id": {
+      "type": "string",
+      "description": "Fire protection system or component ID"
+    },
+    "ata_chapter": {
+      "type": "string",
+      "pattern": "^26(-\\d{2}(-\\d{2})?)?$",
+      "description": "ATA chapter reference (e.g., 26-02-01)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of maintenance action"
+    },
+    "flight_hours": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Aircraft flight hours at time of action"
+    },
+    "flight_cycles": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Aircraft flight cycles at time of action"
+    },
+    "discrepancy": {
+      "type": "object",
+      "description": "Description of the discrepancy or issue",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "detected_by": {
+          "type": "string",
+          "enum": ["routine_inspection", "pilot_report", "ground_crew", "functional_test", "self_test"]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["minor", "major", "critical", "safety_of_flight"]
+        },
+        "symptoms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "action_taken": {
+      "type": "object",
+      "required": ["description"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Detailed description of corrective action"
+        },
+        "procedure_reference": {
+          "type": "string",
+          "description": "Reference to maintenance procedure (e.g., PROC_26-02-01)"
+        },
+        "parts_replaced": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["part_number"],
+            "properties": {
+              "part_number": {
+                "type": "string"
+              },
+              "serial_number": {
+                "type": "string"
+              },
+              "nomenclature": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "condition": {
+                "type": "string",
+                "enum": ["new", "overhauled", "serviceable", "modified"]
+              }
+            }
+          }
+        },
+        "materials_used": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "material_name": {
+                "type": "string"
+              },
+              "specification": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "string"
+              },
+              "batch_lot_number": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "tools_used": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "performed_by": {
+      "type": "object",
+      "required": ["name", "certificate_number"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "certificate_number": {
+          "type": "string",
+          "description": "Mechanic or technician certificate number"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "signature_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "inspected_by": {
+      "type": "object",
+      "description": "Inspector sign-off (if required)",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "certificate_number": {
+          "type": "string"
+        },
+        "stamp_number": {
+          "type": "string"
+        },
+        "signature_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "testing_and_verification": {
+      "type": "object",
+      "properties": {
+        "functional_test_performed": {
+          "type": "boolean"
+        },
+        "test_procedure": {
+          "type": "string"
+        },
+        "test_results": {
+          "type": "string"
+        },
+        "operational_check": {
+          "type": "boolean"
+        },
+        "leak_check": {
+          "type": "boolean"
+        },
+        "continuity_check": {
+          "type": "boolean"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "completed", "deferred", "cancelled"],
+      "description": "Current status of the maintenance action"
+    },
+    "defer_reason": {
+      "type": "string",
+      "description": "Reason for deferral (if status is 'deferred')"
+    },
+    "mel_cdl_reference": {
+      "type": "string",
+      "description": "MEL or CDL reference if deferred"
+    },
+    "approval": {
+      "type": "object",
+      "description": "Engineering or authority approval (if required)",
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approval_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "approval_reference": {
+          "type": "string"
+        }
+      }
+    },
+    "return_to_service": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "authorized_by": {
+          "type": "string"
+        },
+        "certificate_number": {
+          "type": "string"
+        },
+        "remarks": {
+          "type": "string"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "work_order": {
+          "type": "string"
+        },
+        "dpp_updated": {
+          "type": "boolean"
+        },
+        "dpp_id": {
+          "type": "string"
+        },
+        "related_ncr": {
+          "type": "string",
+          "description": "Related non-conformance report number"
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filename": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["photo", "diagram", "test_report", "certificate", "other"]
+              },
+              "checksum": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Additional remarks or notes"
+    }
+  }
+}

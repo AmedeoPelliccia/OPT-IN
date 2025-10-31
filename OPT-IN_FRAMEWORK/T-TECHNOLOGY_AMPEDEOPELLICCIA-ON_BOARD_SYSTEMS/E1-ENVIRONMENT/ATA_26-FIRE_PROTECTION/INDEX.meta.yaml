@@ -1,0 +1,159 @@
+schema_version: "1.1"
+id: "ATA_26_INDEX_rev1.0.0_20251030"
+chapter: "ATA 26 - FIRE PROTECTION"
+governance:
+  owner_role: "Fire Protection Systems Engineering"
+  review_board: ["Fire Protection Engineering", "Airworthiness", "Safety Engineering", "Materials & Process", "Propulsion Systems", "Cabin Systems"]
+  regulatory_basis:
+    - "FAA 14 CFR Part 25.851"   # Fire extinguishers
+    - "FAA 14 CFR Part 25.853"   # Compartment interiors
+    - "FAA 14 CFR Part 25.854"   # Lavatory fire protection
+    - "FAA 14 CFR Part 25.855"   # Cargo or baggage compartments
+    - "FAA 14 CFR Part 25.856"   # Thermal/Acoustic insulation materials
+    - "FAA 14 CFR Part 25.857"   # Cargo compartment classification
+    - "FAA 14 CFR Part 25.858"   # Cargo or baggage compartment smoke or fire detection systems
+    - "FAA 14 CFR Part 25.859"   # Combustion heater fire protection
+    - "FAA 14 CFR Part 25.863"   # Flammable fluid fire protection
+    - "FAA 14 CFR Part 25.865"   # Fire protection of flight controls, engine mounts, and other flight structure
+    - "FAA 14 CFR Part 25.867"   # Fire protection: other components
+    - "FAA 14 CFR Part 25.869"   # Fire protection: systems
+    - "FAA 14 CFR Part 25.1181"  # Designated fire zones: regions of fire origin
+    - "FAA 14 CFR Part 25.1182"  # Nacelle areas behind firewalls, and engine pod attaching structures
+    - "FAA 14 CFR Part 25.1183"  # Flammable fluid-carrying components
+    - "FAA 14 CFR Part 25.1185"  # Flammable fluids
+    - "FAA 14 CFR Part 25.1187"  # Drainage and ventilation of fire zones
+    - "FAA 14 CFR Part 25.1189"  # Shutoff means
+    - "FAA 14 CFR Part 25.1191"  # Firewalls
+    - "FAA 14 CFR Part 25.1192"  # Engine accessory section diaphragm
+    - "FAA 14 CFR Part 25.1193"  # Cowling and nacelle skin
+    - "FAA 14 CFR Part 25.1195"  # Fire extinguishing systems
+    - "FAA 14 CFR Part 25.1197"  # Fire extinguishing agents
+    - "FAA 14 CFR Part 25.1199"  # Extinguishing agent containers
+    - "FAA 14 CFR Part 25.1201"  # Fire extinguishing system materials
+    - "FAA 14 CFR Part 25.1203"  # Fire detector systems
+    - "FAA 14 CFR Part 25.1207"  # Compliance
+    - "EASA CS-25"                # European equivalent regulations
+    - "ISO 2685"                  # Aircraft - Environmental conditions and test procedures for airborne equipment
+    - "SAE AS8036"                # Minimum Performance Standard for Aircraft Smoke Detectors
+    - "SAE AS8030"                # Aircraft Hand Held Fire Extinguisher - Design, Installation and Maintenance
+    - "SAE AS6057"                # Aircraft Fire Extinguishing System Bottles
+    - "RTCA DO-160"               # Environmental Conditions and Test Procedures for Airborne Equipment
+traceability:
+  crossrefs:
+    - "ATA 05"  # Time Limits & Maintenance Checks (inspection intervals)
+    - "ATA 12"  # Servicing (fire extinguisher servicing)
+    - "ATA 20"  # Standard Practices - Airframe (repair procedures)
+    - "ATA 21"  # Air Conditioning (APU fire interface)
+    - "ATA 24"  # Electrical Power (fire system power supply)
+    - "ATA 25"  # Equipment/Furnishings (cargo and lavatory systems)
+    - "ATA 28"  # Fuel (fuel shutoff interface)
+    - "ATA 30"  # Ice and Rain Protection (engine nacelle)
+    - "ATA 31"  # Indicating/Recording (fire warning indications)
+    - "ATA 33"  # Lights (fire warning lights)
+    - "ATA 35"  # Oxygen (fire hazard mitigation)
+    - "ATA 49"  # Airborne Auxiliary Power (APU fire protection)
+    - "ATA 71"  # Power Plant (engine fire zones)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "FIRE-SPEC-26-001: Fire Protection System Design Specification"
+    - "DETECT-STD-26-001: Fire Detection System Standards and Requirements"
+    - "SUPPRESS-STD-26-001: Fire Suppression System Design and Testing Standards"
+    - "AGENT-SPEC-26-001: Fire Extinguishing Agent Specifications and Handling"
+    - "MAINT-PLAN-26-001: Fire Protection Systems Maintenance and Inspection Program"
+    - "TEST-PLAN-26-001: Fire Protection System Test and Qualification Plan"
+    - "INSTALL-PLAN-26-001: Fire Protection System Installation Procedures"
+    - "SAFETY-ANALYSIS-26-001: Fire Hazard Analysis and Safety Assessment"
+    - "CERT-PLAN-26-001: Fire Protection System Certification Plan"
+    - "MAT-SPEC-26-001: Fire-Resistant Materials and Components Specification"
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Undetected fire in engine, APU, or cargo compartments"
+    - "Inadequate fire suppression agent concentration or coverage"
+    - "Fire detection system false alarms or failure to detect"
+    - "Fire extinguishing agent toxicity to crew or passengers"
+    - "Inadequate fire zone sealing allowing fire spread"
+    - "Failure of automatic fire suppression systems"
+    - "Inadvertent discharge of fire suppression system"
+    - "Fire extinguisher agent leakage or loss of pressure"
+    - "Fire detection loop damage or deterioration"
+    - "Electrical fire in hidden areas"
+    - "Cargo fire exceeding suppression system capacity"
+    - "Fire in lavatory waste receptacle"
+    - "Delayed detection of smoldering fire"
+    - "Incompatible materials causing fire acceleration"
+  airworthiness_limitation_items:
+    - "Fire detection loop integrity check (every 500 FH)"
+    - "Fire bottle pressure verification (every 100 FH)"
+    - "Smoke detector functional test (every 200 FH)"
+    - "Fire suppression system discharge test (ground, annual)"
+    - "Fire extinguisher pressure and weight check (monthly)"
+    - "Fire zone seal inspection (every 1000 FH or 12 months)"
+    - "Agent concentration verification test (every 5 years)"
+    - "Fire detection system response time test (annual)"
+    - "Lavatory smoke detector operational test (every 100 FH)"
+    - "Cargo compartment smoke detector test (every 200 FH)"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata26.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+  config: "ALL"
+  notes: "Specific fire protection system effectivity by MSN, engine type, cargo configuration, or modification must be recorded in individual document sidecars and component metadata"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, system overview, requirements, design philosophy, interfaces, safety analysis, certification basis"
+    - name: "02-DETECTION_AND_SENSING"
+      description: "Fire and smoke detection systems, sensors, detectors, control units, indication and warning systems"
+    - name: "03-SUPPRESSION_AND_AGENT_SYSTEMS"
+      description: "Fire extinguishing agents, containers, discharge systems, distribution networks, control systems"
+    - name: "04-ENGINE_APU_FIRE_HANDLING"
+      description: "Engine fire protection, APU fire systems, detection loops, suppression bottles, nacelle overheat"
+    - name: "05-CARGO_AND_LAVATORY_FIRE_PROTECTION"
+      description: "Cargo compartment fire systems, lavatory fire extinguishers, smoke detection, suppression units"
+    - name: "06-MATERIALS_M_AND_P"
+      description: "Approved fire extinguishing agents, materials specifications, traceability, storage and handling"
+    - name: "07-NONCONFORMANCE_AND_DEVIATION"
+      description: "NCR handling, engineering disposition, root cause analysis, corrective actions"
+    - name: "08-DIAGRAMS_AND_REFERENCE_DATA"
+      description: "System diagrams, schematics, distribution networks, reference tables, technical data"
+    - name: "09-SIDE-CAR_META"
+      description: "Metadata templates, schemas, validators, traceability tools"
+    - name: "10-EXAMPLES_AND_RECORDS"
+      description: "Example test records, maintenance logs, inspection reports, discharge test data"
+  schemas:
+    - name: "fire-system.schema.json"
+      description: "Fire protection system specification schema with detection, suppression, and control elements"
+    - name: "extinguisher.schema.json"
+      description: "Fire extinguisher specification schema with agent type, capacity, pressure, and location"
+    - name: "detection-schema.json"
+      description: "Fire detection system schema with detector types, zones, response times, and thresholds"
+    - name: "suppression-system.schema.json"
+      description: "Fire suppression system schema with agent distribution, nozzles, and concentration requirements"
+    - name: "repair-record.schema.json"
+      description: "Fire system repair and maintenance record schema with traceability and approval fields"
+    - name: "test-record.schema.json"
+      description: "Fire system test record schema with test results, witness signatures, and acceptance criteria"
+    - name: "ncr.schema.json"
+      description: "Non-conformance report schema for fire protection systems with disposition and corrective actions"
+approvals:
+  - authority: "Fire Protection Systems Engineering"
+    status: "Released"
+    date: "2025-10-28"
+  - authority: "Safety Engineering"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Materials & Processes"
+    status: "Released"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Propulsion Systems"
+    status: "Approved"
+    date: "2025-10-30"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+next_review: "2026-10-30"

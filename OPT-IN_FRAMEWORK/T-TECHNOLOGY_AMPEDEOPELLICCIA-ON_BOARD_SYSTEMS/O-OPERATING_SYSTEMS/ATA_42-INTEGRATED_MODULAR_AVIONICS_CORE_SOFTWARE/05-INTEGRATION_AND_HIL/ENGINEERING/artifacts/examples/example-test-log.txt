@@ -1,0 +1,32 @@
+=== Boot Check Test ===
+Test ID: HIL-001
+Start Time: 2025-10-31T12:00:00.123456
+
+[12:00:00] Power-on self-test (POST)...
+  ✓ Complete (0.3s)
+[12:00:00] Secure boot verification...
+  ✓ Complete (0.4s)
+[12:00:00] Bootloader execution...
+  ✓ Complete (0.2s)
+[12:00:01] Kernel initialization...
+  ✓ Complete (0.5s)
+[12:00:01] Partition initialization...
+  ✓ Complete (0.4s)
+[12:00:02] System ready...
+  ✓ Complete (0.2s)
+
+=== Test Results ===
+Total Boot Time: 2.00s
+Boot Time Threshold: 5.0s
+Result: PASS
+Secure Boot: PASS (signature verified)
+POST: PASS (all checks passed)
+Partitions: PASS (all initialized)
+
+End Time: 2025-10-31T12:00:02.123456
+Overall Status: PASS
+
+Traceability:
+- Requirement: REQ-OS-001 (Core OS shall boot within 5 seconds)
+- Standard: DO-178C DAL-A
+- Test Matrix: DATA_42-05-02_HIL-Test-Matrix.csv, Entry HIL-001

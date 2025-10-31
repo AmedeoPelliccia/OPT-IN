@@ -1,0 +1,79 @@
+schema_version: "1.1"
+document_id: "[PROC_ID]"  # e.g., PROC_26-02-01_rev1.0.0_20251030
+title: "[Procedure Title]"
+ata_chapter: "26-XX-XX"
+document_type: "PROC"
+revision: "1.0.0"
+effective_date: "2025-10-30"
+status: "Draft"
+
+procedure_details:
+  category: "maintenance"  # maintenance, test, inspection, repair, installation
+  skill_level: "Technician"  # Technician, Inspector, Engineer
+  estimated_duration_hours: 2.0
+  personnel_required: 1
+  special_tools_required: false
+  test_equipment_required: false
+
+author:
+  name: "[Author Name]"
+  organization: "[Department]"
+  email: "[email@domain.com]"
+
+owner_role: "Fire Protection Systems Engineering"
+
+review_board:
+  - "Fire Protection Engineering"
+  - "Quality Assurance"
+  - "Airworthiness Engineering"
+
+approvals:
+  - authority: "Engineering Manager"
+    name: "[Name]"
+    status: "Pending"
+    date: null
+  - authority: "Quality Manager"
+    name: "[Name]"
+    status: "Pending"
+    date: null
+
+safety_critical: false  # true if procedure is safety-critical
+
+related_procedures:
+  - "[Related PROC ID]"
+
+required_references:
+  - "[AMM reference]"
+  - "[Component Manual reference]"
+
+special_tools:
+  - tool_id: "[Tool ID]"
+    description: "[Tool description]"
+
+test_equipment:
+  - equipment_id: "[Equipment ID]"
+    description: "[Equipment description]"
+    calibration_required: true
+
+consumables:
+  - item: "[Consumable item]"
+    part_number: "[P/N]"
+    quantity: "[Quantity]"
+
+regulatory_basis:
+  - "[FAR 25.xxxx]"
+
+traceability:
+  requirements:
+    - "[Requirement ID]"
+
+integrity:
+  checksum: "[SHA-256]"
+  algorithm: "sha256"
+  last_modified: "2025-10-30T00:00:00Z"
+
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-30"
+    description: "Initial release"
+    author: "[Author]"

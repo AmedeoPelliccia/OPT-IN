@@ -1,0 +1,56 @@
+schema_version: "1.1"
+document_id: "[DOCUMENT_ID]"  # e.g., DESC_26-01-01_rev1.0.0_20251030
+title: "[Document Title]"
+ata_chapter: "26"  # or 26-XX or 26-XX-XX
+document_type: "DESC"  # DESC, PROC, DATA, CALC, DIAG, TESTPLAN, EXAMPLE
+revision: "1.0.0"
+effective_date: "2025-10-30"
+status: "Draft"  # Draft, In Review, Released, Superseded
+
+author:
+  name: "[Author Name]"
+  organization: "[Organization/Department]"
+  email: "[email@domain.com]"
+
+owner_role: "[Responsible Engineering Discipline]"
+
+review_board:
+  - "[Reviewer 1 Role/Name]"
+  - "[Reviewer 2 Role/Name]"
+  - "[Reviewer 3 Role/Name]"
+
+approvals:
+  - authority: "[Approval Authority]"
+    name: "[Approver Name]"
+    status: "Pending"  # Pending, In Review, Approved, Rejected
+    date: null  # YYYY-MM-DD when approved
+
+supersedes:
+  document_id: null  # Previous version document ID
+  revision: null
+  effective_date: null
+
+related_documents:
+  - "[Related Document ID 1]"
+  - "[Related Document ID 2]"
+
+regulatory_basis:
+  - "[FAR 25.xxxx or other regulation]"
+
+traceability:
+  requirements:
+    - "[Requirement ID]"
+  source_documents:
+    - "[Source Document Reference]"
+
+integrity:
+  checksum: "[SHA-256 checksum of document]"
+  algorithm: "sha256"
+  last_modified: "2025-10-30T00:00:00Z"
+
+keywords:
+  - "[keyword1]"
+  - "[keyword2]"
+
+notes: |
+  [Any additional notes or comments]
