@@ -1,6 +1,9 @@
 # OPT-IN
 Amedeo Pelliccia's development and documentation methodology
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/d46a325d-c9a1-4e3b-9889-2ec8e977a00b" />
+
+
 **OPT-IN** is a structured framework for development and documentation used across aerospace systems projects, including AQUA OS and the AMPEL360 aircraft.
 
 ## Core Structure
