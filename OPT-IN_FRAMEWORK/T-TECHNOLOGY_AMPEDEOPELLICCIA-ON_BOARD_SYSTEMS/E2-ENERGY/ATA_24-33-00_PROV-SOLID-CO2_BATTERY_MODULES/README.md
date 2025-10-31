@@ -46,13 +46,29 @@ Revolutionary solid-state battery technology utilizing CO2 cathodes for high ene
 
 ## Applicable Standards & Regulations
 
-- **FAA Part 25.1351** - Electrical systems and equipment
-- **FAA Part 25.1353** - Electrical equipment and installations
-- **FAA Part 25.1355** - Distribution system
-- **RTCA DO-160** - Environmental Conditions and Test Procedures for Airborne Equipment
-- **SAE AS50881** - Wiring Aerospace Vehicle
-- **RTCA DO-178C** - Software Considerations in Airborne Systems (for BMS)
-- **RTCA DO-254** - Design Assurance Guidance for Airborne Electronic Hardware (for BMS)
+### FAA Regulations
+- **[FAA Part 25.1351](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR45c4e3454da3c93/section-25.1351)** - Electrical systems and equipment: General requirements for electrical system design, installation, and operation
+- **[FAA Part 25.1353](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR45c4e3454da3c93/section-25.1353)** - Electrical equipment and installations: Requirements for electrical equipment safety and reliability
+- **[FAA Part 25.1355](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFR45c4e3454da3c93/section-25.1355)** - Distribution system: Electrical load distribution and protection requirements
+- **[FAA Part 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe5d36da24bb192d/section-25.1309)** - Equipment, systems, and installations: Safety assessment requirements
+
+### EASA Regulations
+- **[CS-25 Book 1](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)** - Large Aeroplanes Certification Specifications
+
+### RTCA Standards
+- **[RTCA DO-160G](https://my.rtca.org/NC__Product?id=a1B36000001IcnHEAS)** - Environmental Conditions and Test Procedures for Airborne Equipment
+- **[RTCA DO-178C](https://my.rtca.org/NC__Product?id=a1B36000001IcnREAS)** - Software Considerations in Airborne Systems and Equipment Certification (for BMS software)
+- **[RTCA DO-254](https://my.rtca.org/NC__Product?id=a1B36000001IcnWEAS)** - Design Assurance Guidance for Airborne Electronic Hardware (for BMS hardware)
+
+### SAE Standards
+- **[SAE AS50881](https://www.sae.org/standards/content/as50881/)** - Wiring Aerospace Vehicle
+- **[SAE ARP4754A](https://www.sae.org/standards/content/arp4754a/)** - Guidelines for Development of Civil Aircraft and Systems
+- **[SAE ARP4761](https://www.sae.org/standards/content/arp4761/)** - Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne Systems and Equipment
+
+### Additional Standards
+- **[IEC 62619](https://webstore.iec.ch/publication/7229)** - Secondary cells and batteries containing alkaline or other non-acid electrolytes – Safety requirements for secondary lithium cells and batteries for use in industrial applications
+- **[UL 1642](https://ul.com/services/lithium-batteries-testing-and-certification)** - Standard for Lithium Batteries
+- **[UN 38.3](https://unece.org/transportdangerous-goods/un-manual-tests-and-criteria)** - Transportation Testing for Lithium Batteries
 
 ## Related ATA Chapters
 
