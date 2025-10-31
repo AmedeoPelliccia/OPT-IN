@@ -1,0 +1,98 @@
+---
+document_id: ATA-21-INDEX
+title: "ATA-21 Air Conditioning and Pressurization - Master Index"
+version: "1.0.0"
+date: "2025-10-31"
+status: ACTIVE
+
+metadata:
+  ata_chapter: "21"
+  system: "Air Conditioning and Pressurization"
+  baseline: "BL_001"
+  effectivity:
+    scope: PRODUCTION
+    aircraft_models:
+      - AMPEL360
+  
+  classification:
+    safety_criticality: DAL-C
+    certification_basis: FAR-25/CS-25
+    export_control: ITAR_FREE
+  
+  traceability:
+    parent_docs: []
+    related_ata:
+      - ATA-24
+      - ATA-27
+      - ATA-30
+      - ATA-36
+      - ATA-49
+    requirements_sources:
+      - FAR_25.831
+      - FAR_25.841
+      - SAE_ARP85
+      - RTCA_DO-160
+
+structure:
+  top_level_directories:
+    - OVERVIEW
+    - SAFETY
+    - REQUIREMENTS
+    - DESIGN
+    - INTERFACES
+    - ENGINEERING
+    - V_AND_V
+    - PROTOTYPING
+    - PRODUCTION_PLANNING
+    - CERTIFICATION
+    - OPERATIONS_AND_MAINTENANCE
+    - ASSETS_MANAGEMENT
+    - SUBSYSTEMS_AND_COMPONENTS
+  
+  subsystems:
+    - id: "21-10"
+      name: "Cabin Air Distribution"
+      status: ACTIVE
+    - id: "21-20"
+      name: "Compression"
+      status: ACTIVE
+    - id: "21-30"
+      name: "Pressurization"
+      status: ACTIVE
+    - id: "21-40"
+      name: "Heating"
+      status: ACTIVE
+    - id: "21-50"
+      name: "Cooling"
+      status: ACTIVE
+    - id: "21-60"
+      name: "Temperature Control"
+      status: ACTIVE
+    - id: "21-70"
+      name: "Humidity Control"
+      status: ACTIVE
+
+validation:
+  schema_version: "2.0"
+  last_validated: "2025-10-31"
+  validator: "ata21_validator"
+  checksums:
+    method: SHA-256
+    manifest_verified: true
+
+governance:
+  document_owner: "Environmental Systems Lead"
+  approver: "Chief Engineer - Systems"
+  review_cycle: "Annual"
+  change_control: "Configuration Management System"
+  
+digital_product_passport:
+  enabled: true
+  blockchain_anchor: false
+  dpp_id_prefix: "ATA21-DPP"
+  
+chain_of_custody:
+  tracking_enabled: true
+  audit_trail_required: true
+
+---
