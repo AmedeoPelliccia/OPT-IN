@@ -1,0 +1,77 @@
+{
+  "subsystem_id": "21-10",
+  "title": "Cabin Air Distribution",
+  "baseline": "BL_001",
+  "version": "1.0.0",
+  "date": "2025-10-31",
+  "status": "ACTIVE",
+  "description": "Cabin air distribution system including ducts, outlets, valves, and recirculation fans",
+  
+  "components": [
+    {
+      "id": "21-11",
+      "name": "Distribution Ducts",
+      "description": "Main and branch ducts for air distribution"
+    },
+    {
+      "id": "21-12",
+      "name": "Distribution Valves",
+      "description": "Control valves for zone airflow regulation"
+    },
+    {
+      "id": "21-13",
+      "name": "Cabin Outlets",
+      "description": "Overhead and gasper outlets for passenger comfort"
+    },
+    {
+      "id": "21-14",
+      "name": "Cabin Fans",
+      "description": "Recirculation fans with HEPA filtration"
+    }
+  ],
+  
+  "performance": {
+    "total_airflow_cfm": {
+      "min": 4000,
+      "max": 6000,
+      "unit": "CFM"
+    },
+    "fresh_air_per_passenger": {
+      "value": 20,
+      "unit": "CFM",
+      "regulation": "FAR 25.831"
+    },
+    "recirculation_ratio": 0.50,
+    "hepa_efficiency": 0.9997
+  },
+  
+  "interfaces": {
+    "internal": [
+      "21-20 Compression (air supply)",
+      "21-60 Temperature Control (valve commands)"
+    ],
+    "external": [
+      "ATA-24 Electrical (fan power)",
+      "Cabin Structure (mounting)",
+      "ATA-52 Doors (seals)"
+    ]
+  },
+  
+  "regulatory_compliance": [
+    "FAR 25.831 - Ventilation",
+    "FAR 25.853 - Cabin materials flammability",
+    "DO-160 - Environmental qualification"
+  ],
+  
+  "safety_classification": {
+    "dal": "C",
+    "failure_condition": "MAJOR"
+  },
+  
+  "maintainability": {
+    "filter_replacement": "Based on pressure drop monitoring",
+    "fan_inspection": "C-check interval",
+    "duct_inspection": "Visual during access",
+    "valve_check": "Annual"
+  }
+}

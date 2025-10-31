@@ -1,0 +1,44 @@
+{
+  "ata_chapter": "21",
+  "title": "Air Conditioning and Pressurization",
+  "description": "Complete environmental control systems including cabin pressurization, temperature control, air distribution, and humidity management",
+  "version": "1.0.0",
+  "baseline": "BL_001",
+  "effectivity": {
+    "aircraft_models": ["AMPEL360"],
+    "scope": "PRODUCTION",
+    "status": "ACTIVE"
+  },
+  "regulatory_basis": [
+    "FAR 25.831 - Ventilation",
+    "FAR 25.841 - Pressurization",
+    "CS-25",
+    "SAE ARP85",
+    "RTCA DO-160"
+  ],
+  "subsystems": [
+    "21-10 Cabin Air Distribution",
+    "21-20 Compression",
+    "21-30 Pressurization",
+    "21-40 Heating",
+    "21-50 Cooling",
+    "21-60 Temperature Control",
+    "21-70 Humidity Control"
+  ],
+  "interfaces": [
+    "ATA-24 Electrical Power",
+    "ATA-27 Flight Controls",
+    "ATA-30 Ice and Rain Protection",
+    "ATA-36 Pneumatic",
+    "ATA-49 APU"
+  ],
+  "safety_criticality": "DAL-C",
+  "maintainability_level": "Level 2",
+  "last_updated": "2025-10-31",
+  "governance": {
+    "validation_required": true,
+    "certification_basis": "FAR/CS-25",
+    "traceability_enforced": true,
+    "document_control": "Configuration Management System"
+  }
+}

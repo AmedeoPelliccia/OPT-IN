@@ -1,0 +1,237 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata21/meta-schema.json",
+  "title": "ATA-21 Metadata Schema",
+  "description": "JSON schema for ATA-21 Air Conditioning and Pressurization system metadata",
+  "type": "object",
+  "required": ["document_id", "title", "version", "date", "status"],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "pattern": "^(ATA-)?21-[0-9]{2}-[0-9]{2}(-[A-Z0-9]+)?$",
+      "description": "Unique document identifier following ATA-21 numbering convention"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Document title"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version (major.minor.patch)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Document date (ISO 8601 format YYYY-MM-DD)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["DRAFT", "REVIEW", "APPROVED", "ACTIVE", "SUPERSEDED", "ARCHIVED", "RESERVED", "PROVISIONAL"],
+      "description": "Document lifecycle status"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "ata_chapter": {
+          "type": "string",
+          "const": "21",
+          "description": "ATA chapter number"
+        },
+        "subsystem": {
+          "type": "string",
+          "pattern": "^21-[1-7]0$",
+          "description": "Subsystem identifier (21-10 through 21-70)"
+        },
+        "baseline": {
+          "type": "string",
+          "pattern": "^BL_[0-9]{3}$",
+          "description": "Baseline identifier"
+        },
+        "effectivity": {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": ["PRODUCTION", "DEVELOPMENT", "TEST", "PROV", "RESERVED"]
+            },
+            "aircraft_models": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "serial_numbers": {
+              "type": "object",
+              "properties": {
+                "from": {"type": "string"},
+                "to": {"type": "string"}
+              }
+            }
+          },
+          "required": ["scope"]
+        },
+        "classification": {
+          "type": "object",
+          "properties": {
+            "safety_criticality": {
+              "type": "string",
+              "enum": ["DAL-A", "DAL-B", "DAL-C", "DAL-D", "DAL-E", "NON-SAFETY"]
+            },
+            "certification_basis": {
+              "type": "string",
+              "enum": ["FAR-25", "CS-25", "FAR-25/CS-25", "COMPANY-STANDARD"]
+            },
+            "export_control": {
+              "type": "string",
+              "enum": ["ITAR", "EAR", "ITAR_FREE", "PUBLIC"]
+            },
+            "proprietary": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },
+        "traceability": {
+          "type": "object",
+          "properties": {
+            "parent_docs": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "child_docs": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "related_ata": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ATA-[0-9]{2}$"
+              }
+            },
+            "requirements_sources": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      },
+      "required": ["ata_chapter"]
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "description": "Schema version used for validation"
+        },
+        "last_validated": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of last validation"
+        },
+        "validator": {
+          "type": "string",
+          "description": "Tool or person who validated"
+        },
+        "checksums": {
+          "type": "object",
+          "properties": {
+            "method": {
+              "type": "string",
+              "enum": ["SHA-256", "SHA-512", "MD5"]
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$",
+              "description": "SHA-256 checksum (64 hex characters)"
+            },
+            "manifest_verified": {
+              "type": "boolean"
+            }
+          },
+          "required": ["method"]
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "properties": {
+        "document_owner": {
+          "type": "string",
+          "description": "Role or person responsible for document"
+        },
+        "approver": {
+          "type": "string",
+          "description": "Role or person who approves document"
+        },
+        "review_cycle": {
+          "type": "string",
+          "enum": ["ANNUAL", "BIANNUAL", "QUARTERLY", "AS_NEEDED", "CONTINUOUS"]
+        },
+        "change_control": {
+          "type": "string",
+          "description": "Change control process/system"
+        }
+      }
+    },
+    "digital_product_passport": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "dpp_id": {
+          "type": "string",
+          "description": "Digital Product Passport unique identifier"
+        },
+        "blockchain_anchor": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "chain_of_custody": {
+      "type": "object",
+      "properties": {
+        "tracking_enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "audit_trail_required": {
+          "type": "boolean",
+          "default": false
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "action": {
+                "type": "string",
+                "enum": ["CREATED", "MODIFIED", "REVIEWED", "APPROVED", "RELEASED", "ARCHIVED"]
+              },
+              "actor": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              }
+            },
+            "required": ["timestamp", "action", "actor"]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
