@@ -261,7 +261,17 @@ fi
 echo ""
 echo "Checking component code uniqueness..."
 if command -v python3 &> /dev/null && [ -f "$CSV_BOM" ]; then
-    DUPLICATE_COUNT=$(tail -n +2 "$CSV_BOM" | cut -d',' -f1 | sort | uniq -d | wc -l)
+    DUPLICATE_COUNT=$(python3 -c "
+import csv
+import sys
+from collections import Counter
+with open('$CSV_BOM', newline='') as f:
+    reader = csv.reader(f)
+    next(reader, None)  # skip header
+    codes = [row[0] for row in reader if row]
+    c = Counter(codes)
+    print(sum(1 for v in c.values() if v > 1))
+")
     if [ "$DUPLICATE_COUNT" -eq 0 ]; then
         success "All component codes are unique"
     else
