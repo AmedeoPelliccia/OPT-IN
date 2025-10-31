@@ -1,0 +1,62 @@
+{
+  "test_run_id": "test-run-20251031-120000",
+  "baseline": "abc123def456",
+  "timestamp": "2025-10-31T12:00:00.000000",
+  "total_tests": 3,
+  "passed": 3,
+  "failed": 0,
+  "results": [
+    {
+      "test_id": "HIL-001",
+      "test_name": "Basic Boot Test",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.15,
+      "log_file": "logs/HIL-001.log",
+      "timestamp": "2025-10-31T12:00:00.123456"
+    },
+    {
+      "test_id": "HIL-002",
+      "test_name": "Partition Scheduling",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.73,
+      "log_file": "logs/HIL-002.log",
+      "timestamp": "2025-10-31T12:00:02.234567"
+    },
+    {
+      "test_id": "HIL-003",
+      "test_name": "Sampling Port Communication",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.81,
+      "log_file": "logs/HIL-003.log",
+      "timestamp": "2025-10-31T12:00:05.345678"
+    }
+  ],
+  "artifacts_dir": "artifacts/test-run-20251031-120000",
+  "traceability": {
+    "test_matrix": "DATA_42-05-02_HIL-Test-Matrix.csv",
+    "requirements": [
+      "REQ-OS-001",
+      "REQ-OS-002",
+      "REQ-OS-003",
+      "REQ-OS-004"
+    ],
+    "standards": {
+      "DO-178C": "DAL-A",
+      "ARINC-653": "Part 1"
+    }
+  },
+  "environment": {
+    "platform": "HIL Test Rig",
+    "python_version": "3.8+",
+    "test_framework": "HIL Orchestrator v1.0.0"
+  },
+  "chain_of_custody": {
+    "executed_by": "CI/CD Pipeline",
+    "execution_timestamp": "2025-10-31T12:00:00Z",
+    "baseline_verified": true,
+    "checksums_computed": true
+  }
+}

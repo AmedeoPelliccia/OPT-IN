@@ -1,0 +1,10 @@
+Script_ID,Script_Name,Type,Language,Purpose,Location
+TS-001,run_fire_system_tests.sh,Wrapper,Bash,CI entry point and test launcher,./run_fire_system_tests.sh
+TS-002,run_hil_orchestrator.py,Orchestrator,Python,Main test orchestrator and result collector,./run_hil_orchestrator.py
+TS-003,run_partition_overload.py,Test,Python,Partition scheduling overload test,./scripts/run_partition_overload.py
+TS-004,run_boot_check.py,Test,Python,Boot sequence validation,./scripts/run_boot_check.py
+TS-005,run_ipc_stress.sh,Test,Bash,IPC stress testing,./scripts/run_ipc_stress.sh
+TS-006,compute_sha256.py,Utility,Python,SHA-256 checksum computation,./utils/compute_sha256.py
+TS-007,manifest_helpers.py,Utility,Python,Manifest file generation and validation,./utils/manifest_helpers.py
+TS-008,validate-meta-consistency.py,Validator,Python,Metadata consistency checker,./validators/validate-meta-consistency.py
+TS-009,validate-traceability.py,Validator,Python,Traceability verification,./validators/validate-traceability.py

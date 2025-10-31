@@ -1,0 +1,48 @@
+{
+  "ata_chapter": "42",
+  "sub_section": "05",
+  "title": "HIL Test Automation Engineering",
+  "description": "Hardware-in-Loop test automation system for Core OS integration testing",
+  "version": "1.0.0",
+  "date": "2025-10-30",
+  "status": "active",
+  "compliance": {
+    "DO-178C": "DAL-A",
+    "DO-254": "applicable",
+    "ARINC-653": "Part 1"
+  },
+  "dependencies": [
+    "PROC_42-05-01_HIL-Test-Plan-Core-OS.md",
+    "DATA_42-05-02_HIL-Test-Matrix.csv"
+  ],
+  "artifacts": {
+    "test_scripts": [
+      "run_fire_system_tests.sh",
+      "run_hil_orchestrator.py",
+      "scripts/run_partition_overload.py",
+      "scripts/run_boot_check.py",
+      "scripts/run_ipc_stress.sh"
+    ],
+    "utilities": [
+      "utils/compute_sha256.py",
+      "utils/manifest_helpers.py"
+    ],
+    "validators": [
+      "validators/validate-meta-consistency.py",
+      "validators/validate-traceability.py"
+    ]
+  },
+  "traceability": {
+    "requirements": [
+      "REQ-OS-001: Core OS shall boot within 5 seconds",
+      "REQ-OS-002: Partitions shall be temporally isolated",
+      "REQ-OS-003: Secure boot shall reject unsigned images",
+      "REQ-OS-004: IPC shall support both sampling and queuing ports"
+    ],
+    "test_coverage": "100%"
+  },
+  "contact": {
+    "responsible": "Core OS Integration Team",
+    "email": "integration@ampel360.example"
+  }
+}
