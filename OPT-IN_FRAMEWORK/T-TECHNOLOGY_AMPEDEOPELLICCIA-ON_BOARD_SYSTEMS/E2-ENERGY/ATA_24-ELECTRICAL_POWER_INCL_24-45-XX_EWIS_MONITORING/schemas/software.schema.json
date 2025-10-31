@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "schema_version": "1.0",
   "title": "Software Component Metadata",
-  "description": "Metadata schema for ATA-24 software components with DO-178C certification tracking",
+  "description": "Metadata schema for ATA-24 software components with DO-178C certification tracking. Note: Component names and purposes are in Spanish as per project requirements.",
   "type": "object",
   "required": [
     "component_code",
@@ -16,7 +16,7 @@
     "component_code": {
       "type": "string",
       "pattern": "^24[0-9]{4}$",
-      "description": "6-digit component code following pattern 24YYZZ (24=ATA, YY=subcapítulo, ZZ=índice)"
+      "description": "6-digit component code following pattern 24YYZZ (24=ATA chapter, YY=subchapter, ZZ=index)"
     },
     "name": {
       "type": "string",

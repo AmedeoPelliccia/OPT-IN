@@ -4,6 +4,8 @@
 
 Electrical generation, distribution, battery systems, and EWIS monitoring.
 
+**Note**: Component names and descriptions are maintained in Spanish as per project requirements, while technical documentation follows standard English conventions.
+
 ## Software Components
 
 Este capítulo incluye **38 componentes software** principales con códigos de 6 dígitos siguiendo el patrón `24 YY ZZ` (24 = ATA, YY = subcapítulo, ZZ = índice). Cada componente tiene asignado un nivel de certificación DO-178C/DO-254 según su criticidad.

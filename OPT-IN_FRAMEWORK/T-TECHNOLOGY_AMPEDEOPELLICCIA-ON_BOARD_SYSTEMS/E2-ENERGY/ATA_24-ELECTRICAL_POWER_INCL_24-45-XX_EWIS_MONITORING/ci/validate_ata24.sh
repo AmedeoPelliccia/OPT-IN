@@ -191,10 +191,14 @@ fi
 # Check for DO-178C and DO-254 references
 echo ""
 echo "Checking for DO-178C/DO-254 compliance references..."
-if grep -r "DO-178C\|DO-254\|ARP4754A\|ARP4761" "$ATA24_ROOT/README.md" "$ATA24_ROOT/INDEX.meta.yaml" 2>/dev/null | grep -q .; then
-    success "DO-178C/DO-254/ARP references found in documentation"
+if [ -f "$ATA24_ROOT/README.md" ] && [ -f "$ATA24_ROOT/INDEX.meta.yaml" ]; then
+    if grep -r "DO-178C\|DO-254\|ARP4754A\|ARP4761" "$ATA24_ROOT/README.md" "$ATA24_ROOT/INDEX.meta.yaml" 2>/dev/null | grep -q .; then
+        success "DO-178C/DO-254/ARP references found in documentation"
+    else
+        warning "No DO-178C/DO-254/ARP references found in documentation"
+    fi
 else
-    warning "No DO-178C/DO-254/ARP references found in documentation"
+    warning "README.md or INDEX.meta.yaml not found for reference checking"
 fi
 
 # Check for ATA cross-references
@@ -202,10 +206,15 @@ echo ""
 echo "Checking for ATA cross-references..."
 CROSSREF_ATAS=("ATA 23" "ATA 31" "ATA 33" "ATA 47" "ATA 49" "ATA 80" "ATA 95")
 for ata in "${CROSSREF_ATAS[@]}"; do
-    if grep -q "$ata" "$ATA24_ROOT/README.md" "$ATA24_ROOT/INDEX.meta.yaml"; then
-        success "Cross-reference found: $ata"
+    if [ -f "$ATA24_ROOT/README.md" ] && [ -f "$ATA24_ROOT/INDEX.meta.yaml" ]; then
+        if grep -q "$ata" "$ATA24_ROOT/README.md" "$ATA24_ROOT/INDEX.meta.yaml" 2>/dev/null; then
+            success "Cross-reference found: $ata"
+        else
+            warning "Missing cross-reference: $ata"
+        fi
     else
-        warning "Missing cross-reference: $ata"
+        warning "Cannot check cross-references: files not found"
+        break
     fi
 done
 
