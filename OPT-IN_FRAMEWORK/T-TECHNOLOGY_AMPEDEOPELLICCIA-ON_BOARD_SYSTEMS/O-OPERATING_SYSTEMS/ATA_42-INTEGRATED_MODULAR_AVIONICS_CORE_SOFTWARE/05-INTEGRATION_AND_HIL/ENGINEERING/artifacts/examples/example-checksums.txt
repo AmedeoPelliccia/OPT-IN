@@ -1,0 +1,13 @@
+# SHA-256 Checksums for Test Run: test-run-20251031-120000
+# Generated: 2025-10-31T12:00:10Z
+# Baseline: abc123def456
+# 
+# These checksums ensure data integrity and provide chain of custody
+# for audit and compliance purposes (DO-178C DAL-A requirements)
+#
+# Verify with: sha256sum -c checksums.txt
+
+9e0d7fee46deb54a0c7af49f6445873373d207f9b25020f4fc02336dd77a72fa  manifest.json
+a463f01150bb35aa94294949590a87207563c33b9431b22d3131755a8957f664  logs/HIL-001.log
+b574e02260cc45bb25aa95505a98318474d318f9c542b33d4242866a9968e775  logs/HIL-002.log
+c685f13371dd56cc36bb06616b09429585e429g0d653c44e5353977b0079f886  logs/HIL-003.log

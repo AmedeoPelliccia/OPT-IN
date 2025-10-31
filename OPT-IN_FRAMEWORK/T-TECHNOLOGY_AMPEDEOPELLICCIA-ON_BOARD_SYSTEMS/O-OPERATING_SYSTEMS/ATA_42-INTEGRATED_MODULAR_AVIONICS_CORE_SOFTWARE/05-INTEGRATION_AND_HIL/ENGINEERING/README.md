@@ -1,5 +1,9 @@
 # ENGINEERING - HIL Test Automation
 
+← [05-INTEGRATION AND HIL](../README.md) | [📋 ATA-42 Navigation](../../NAVIGATION.md) | [🏠 Repository Root](../../../../../../README.md)
+
+---
+
 This directory contains the complete HIL (Hardware-in-Loop) test automation system for ATA-42 Core OS integration testing.
 
 ## Structure
@@ -56,6 +60,17 @@ python3 validators/validate-meta-consistency.py
 - PyYAML: `pip install pyyaml`
 - Bash 4.0+
 
+## Compliance & Standards
+
+This system is designed to meet the following standards and regulations:
+
+- **[DO-178C](../../01-GENERAL/DATA_42-01-06_Reference-Standards.csv)** (Software Considerations in Airborne Systems and Equipment Certification) - DAL-A
+- **[DO-254](../../01-GENERAL/DATA_42-01-06_Reference-Standards.csv)** (Design Assurance Guidance for Airborne Electronic Hardware) - Applicable
+- **[ARINC-653](../../01-GENERAL/DATA_42-01-06_Reference-Standards.csv)** (Avionics Application Software Standard Interface) - Part 1
+- **[DO-330](../../01-GENERAL/DATA_42-01-02_Regulatory-Compliance-Matrix.csv)** (Software Tool Qualification Considerations)
+
+See [Regulatory Compliance Matrix](../../01-GENERAL/DATA_42-01-02_Regulatory-Compliance-Matrix.csv) for complete mapping.
+
 ## Test Categories
 
 1. **Functional**: Basic feature validation
@@ -72,12 +87,16 @@ All test results are stored in `artifacts/` with:
 - Manifest files
 - Traceability reports
 
+Example artifacts available in [artifacts/examples/](artifacts/examples/)
+
 ## Validation
 
 The system includes automated validators:
 - Metadata consistency checker
 - Traceability validator
 - DO-178C compliance checker
+
+See [Verification & Software Assurance](../../03-VERIFICATION_AND_SOFTWARE_ASSURANCE/README.md) for complete verification strategy.
 
 ## Chain of Custody
 
@@ -90,6 +109,27 @@ All artifacts include:
 
 ---
 
+## Related Documentation
+
+### ATA-42 Core OS Documentation
+- [Architecture & Services](../../02-ARCHITECTURE_AND_SERVICES/README.md) - Core OS architecture and ARINC-653 services
+- [Verification & Software Assurance](../../03-VERIFICATION_AND_SOFTWARE_ASSURANCE/README.md) - DO-178C verification activities
+- [Security & Update Mechanisms](../../04-SECURITY_AND_UPDATE_MECHANISMS/README.md) - Secure boot and update procedures
+- [Metrics, Diagnostics & Health](../../06-METRICS_DIAGNOSTICS_AND_HEALTH/README.md) - System health monitoring
+- [Materials, M&P & Toolchain](../../07-MATERIALS_M_AND_P_AND_TOOLCHAIN/README.md) - Development toolchain
+
+### Standards & Regulations
+- [ATA-42 Chapter Overview](../../01-GENERAL/DESC_42-01-03_ATA-42-Chapter-Overview.md)
+- [Reference Standards](../../01-GENERAL/DATA_42-01-06_Reference-Standards.csv) - Complete list of applicable standards
+- [Regulatory Compliance Matrix](../../01-GENERAL/DATA_42-01-02_Regulatory-Compliance-Matrix.csv) - DO-178C, ARINC-653, DO-330 mapping
+
+### Navigation
+- [← Back to 05-INTEGRATION AND HIL](../README.md)
+- [📋 ATA-42 Navigation](../../NAVIGATION.md) - Complete documentation tree
+- [🏠 Repository Root](../../../../../../README.md)
+
+---
+
 *Version: 1.0.0*  
-*Last Updated: 2025-10-30*  
+*Last Updated: 2025-10-31*  
 *Part of ATA-42 Core OS Integration & HIL Testing*

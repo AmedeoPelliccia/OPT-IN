@@ -1,0 +1,87 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                    HIL TEST LOG EXAMPLE                          ║
+║                    Test ID: HIL-XXX                             ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Test Name: Example Test
+Category: Functional/Performance/Security
+Priority: High/Medium/Low
+Start Time: YYYY-MM-DDTHH:MM:SS.ssssss
+
+══════════════════════════════════════════════════════════════════
+  TEST EXECUTION
+══════════════════════════════════════════════════════════════════
+
+[HH:MM:SS] Step 1: Initialize test environment...
+  ✓ Test harness initialized
+  ✓ Target hardware connected
+  ✓ Baseline verified: <commit-hash>
+
+[HH:MM:SS] Step 2: Execute test procedure...
+  → Running test sequence
+  → Monitoring system behavior
+  → Collecting measurements
+
+[HH:MM:SS] Step 3: Evaluate pass/fail criteria...
+  ✓ Criterion 1: PASS (actual: X, threshold: Y)
+  ✓ Criterion 2: PASS (actual: A, threshold: B)
+  ✓ Criterion 3: PASS (condition met)
+
+[HH:MM:SS] Step 4: Cleanup and finalize...
+  ✓ Test environment reset
+  ✓ Results recorded
+
+══════════════════════════════════════════════════════════════════
+  TEST RESULTS
+══════════════════════════════════════════════════════════════════
+
+Overall Status: PASS / FAIL
+Exit Code: 0
+Duration: X.XX seconds
+
+Measurements:
+- Metric 1: value (unit)
+- Metric 2: value (unit)
+- Metric 3: value (unit)
+
+Pass/Fail Criteria:
+✓ All criteria met
+✓ No anomalies detected
+✓ Performance within specifications
+
+══════════════════════════════════════════════════════════════════
+  TRACEABILITY
+══════════════════════════════════════════════════════════════════
+
+Requirements Coverage:
+- REQ-OS-XXX: <requirement description>
+
+Standards Compliance:
+- DO-178C: DAL-A verification activities
+- ARINC-653: Part 1 compliance
+
+Test Matrix Reference:
+- DATA_42-05-02_HIL-Test-Matrix.csv, Entry HIL-XXX
+
+Related Documents:
+- [Test Plan](../PROC_42-05-01_HIL-Test-Plan-Core-OS.md)
+- [Verification Strategy](../../../03-VERIFICATION_AND_SOFTWARE_ASSURANCE/README.md)
+
+══════════════════════════════════════════════════════════════════
+  METADATA
+══════════════════════════════════════════════════════════════════
+
+End Time: YYYY-MM-DDTHH:MM:SS.ssssss
+Test Framework: HIL Orchestrator v1.0.0
+Baseline: <commit-hash>
+Platform: HIL Test Rig
+Operator: CI/CD Pipeline / Manual
+
+Chain of Custody:
+- Log generated: YYYY-MM-DDTHH:MM:SS.sssZ
+- SHA-256: <checksum>
+- Included in manifest: test-run-YYYYMMDD-HHMMSS/manifest.json
+
+══════════════════════════════════════════════════════════════════
+                          END OF LOG
+══════════════════════════════════════════════════════════════════

@@ -24,7 +24,8 @@ Thumbs.db
 # Backup files
 *.bak
 
-# HIL Test artifacts and logs
-**/artifacts/
-**/logs/
-*.log
+# HIL Test artifacts and logs (exclude auto-generated, keep examples)
+**/artifacts/test-run-*/
+**/logs/*.log
+!**/logs/examples/
+!**/artifacts/examples/

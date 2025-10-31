@@ -1,8 +1,17 @@
 # DESC: Test Automation Architecture
 
+← [README](README.md) | [📋 ATA-42 Navigation](../../NAVIGATION.md)
+
+---
+
 ## Overview
 
-The HIL test automation system provides a complete framework for executing, validating, and documenting hardware-in-loop tests for the ATA-42 Core OS.
+The HIL test automation system provides a complete framework for executing, validating, and documenting hardware-in-loop tests for the [ATA-42 Core OS](../../README.md).
+
+**Related Standards:**
+- [DO-178C](../../01-GENERAL/DATA_42-01-06_Reference-Standards.csv) - Software certification guidance
+- [ARINC-653](../../01-GENERAL/DATA_42-01-06_Reference-Standards.csv) - Avionics application interface
+- [DO-330](../../01-GENERAL/DATA_42-01-02_Regulatory-Compliance-Matrix.csv) - Software tool qualification
 
 ## Architecture
 
@@ -120,13 +129,25 @@ Test parameters are stored in:
 
 ## Compliance
 
-The system meets DO-178C requirements for:
-- Test documentation
-- Traceability
+The system meets [DO-178C](../../01-GENERAL/DATA_42-01-06_Reference-Standards.csv) requirements for:
+- Test documentation and traceability
 - Configuration management
-- Quality assurance
+- Quality assurance processes
+
+See also:
+- [Verification & Software Assurance](../../03-VERIFICATION_AND_SOFTWARE_ASSURANCE/README.md) - Complete verification strategy
+- [Regulatory Compliance Matrix](../../01-GENERAL/DATA_42-01-02_Regulatory-Compliance-Matrix.csv) - Standards mapping
+
+---
+
+## Related Documentation
+
+- [Test Plan](PROC_42-05-01_HIL-Test-Plan-Core-OS.md) - HIL test objectives and success criteria
+- [Test Matrix](DATA_42-05-02_HIL-Test-Matrix.csv) - Complete test inventory
+- [Test Scripts](DATA_Test-Scripts.csv) - Script inventory and mapping
+- [05-INTEGRATION AND HIL](../README.md) - Parent section overview
 
 ---
 
 *Version: 1.0.0*  
-*Last Updated: 2025-10-30*
+*Last Updated: 2025-10-31*
