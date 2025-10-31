@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "747006",
+  "component_name": "Grounding cables & bonding straps",
+  "component_type": "hardware",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

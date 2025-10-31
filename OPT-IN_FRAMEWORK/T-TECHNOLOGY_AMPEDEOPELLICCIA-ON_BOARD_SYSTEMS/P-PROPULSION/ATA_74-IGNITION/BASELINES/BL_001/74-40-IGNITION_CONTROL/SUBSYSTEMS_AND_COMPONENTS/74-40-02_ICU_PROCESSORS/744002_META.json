@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "744002",
+  "component_name": "ICU processors & memory modules",
+  "component_type": "hardware",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

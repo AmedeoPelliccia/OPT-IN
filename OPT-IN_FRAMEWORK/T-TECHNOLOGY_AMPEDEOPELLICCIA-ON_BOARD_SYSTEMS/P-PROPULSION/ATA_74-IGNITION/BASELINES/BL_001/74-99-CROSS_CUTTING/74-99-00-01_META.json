@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "74-99-00",
+  "component_name": "Cross-cutting / Integration",
+  "component_type": "subsystem",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

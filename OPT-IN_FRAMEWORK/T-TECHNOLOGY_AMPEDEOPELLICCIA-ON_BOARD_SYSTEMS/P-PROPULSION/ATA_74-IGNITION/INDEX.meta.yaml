@@ -1,0 +1,123 @@
+schema_version: "1.1"
+id: "ATA_74_IGNITION_INDEX"
+chapter: "ATA 74 - IGNITION"
+governance:
+  owner_role: "Propulsion Systems / Engine Integration Engineering"
+  review_board: ["Airworthiness", "Propulsion", "Electrical", "Software", "Safety"]
+  regulatory_basis:
+    - "FAR 33.37 - Ignition System"
+    - "CS-E 40 - Ignition System"
+    - "SAE AS8775 - Aircraft Engine Electrical Ignition System"
+    - "RTCA DO-160G"
+    - "RTCA DO-178C"
+    - "RTCA DO-254"
+    - "SAE ARP4754A"
+    - "SAE ARP4761"
+effectivity:
+  msn: "ALL"
+  scope: "All AMPEL360 turbine engine configurations requiring ignition systems"
+traceability:
+  crossrefs:
+    - "ATA 05"   # Time Limits & Maintenance
+    - "ATA 24"   # Electrical Power
+    - "ATA 71"   # Power Plant
+    - "ATA 72"   # Engine
+    - "ATA 73"   # Engine Fuel and Control
+    - "ATA 76"   # Engine Controls
+    - "ATA 77"   # Engine Indicating
+    - "ATA 95"   # Digital Product Passport
+  source_documents:
+    - "IGN-SPEC-74-001: Ignition System Specification"
+    - "IGN-ARCH-74-001: Ignition System Architecture"
+    - "IGN-SAFETY-74-001: Ignition System Safety Assessment (DAL A)"
+    - "IGN-SAS-74-001: Software Accomplishment Summary (DO-178C Level A)"
+    - "IGN-QUAL-74-001: System Qualification Test Report"
+    - "IGN-ENV-74-001: Environmental Qualification (DO-160G)"
+    - "IGN-CERT-74-001: Certification Plan (FAR 33.37, CS-E 40)"
+    - "IGN-MAINT-74-001: Maintenance Program"
+    - "IGN-ICD-74-ATA24: ICD to Electrical Power"
+    - "IGN-ICD-74-FADEC: ICD to FADEC"
+safety:
+  criticality: "Critical - DAL Level A (Catastrophic)"
+  hazards:
+    - "Loss of ignition preventing engine start"
+    - "Loss of ignition capability during flight"
+    - "Uncommanded ignition causing fire hazard"
+    - "High-voltage arc causing electrical fire"
+    - "Ignition EMI affecting avionics"
+    - "Lightning damage to ignition system"
+    - "Single-point failure affecting engine operation"
+  airworthiness_limitation_items:
+    - "Dual-channel redundancy with independent power"
+    - "Fail-operational engine relight capability"
+    - "High-voltage insulation integrity"
+    - "Arc suppression and fire protection"
+    - "EMI/EMC compliance (DO-160)"
+    - "Lightning protection (DO-160)"
+    - "Software certification (DO-178C Level A)"
+    - "Spark energy and timing accuracy"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata74.sh"
+document_structure:
+  subdirectories:
+    - name: "OVERVIEW"
+      description: "System description, architecture, ignition principles, performance"
+    - name: "SAFETY"
+      description: "FHA, PSSA, SSA, HAZOP, FMEA, high-voltage safety, lightning protection, EMI"
+    - name: "REQUIREMENTS"
+      description: "ALR, SR, SSR, CR, RTM, regulations mapping, spark energy requirements"
+    - name: "DESIGN"
+      description: "System architecture, redundancy philosophy, ICDs, specifications"
+    - name: "INTERFACES"
+      description: "Mechanical, electrical, high-voltage, data bus, engine, FADEC interfaces"
+    - name: "ENGINEERING"
+      description: "Electrical, thermal, timing analyses; spark simulation; FEA; MBSE models"
+    - name: "V_AND_V"
+      description: "Verification/validation plans, test cases, evidence, traceability"
+    - name: "PROTOTYPING"
+      description: "Spark test benches, timing rigs, HV test stands, HIL benches"
+    - name: "PRODUCTION_PLANNING"
+      description: "FAI, PPAP, supplier management, QA procedures"
+    - name: "CERTIFICATION"
+      description: "FAR33, CS-E, FAR25, DO-160, DO-178C, DO-254 compliance matrices"
+    - name: "OPERATIONS_AND_MAINTENANCE"
+      description: "AMM, CMM, IPC, TSM references, service intervals"
+    - name: "ASSETS_MANAGEMENT"
+      description: "Configuration control, PN/SN tracking, obsolescence, lifecycle"
+    - name: "META_GOVERNANCE"
+      description: "Templates, schemas, validators, CI/CD pipelines"
+    - name: "BASELINES"
+      description: "BL_001 initial design baseline with all subsystems"
+  schemas:
+    - name: "ignition-system.schema.json"
+      description: "Ignition system metadata schema"
+    - name: "igniter.schema.json"
+      description: "Igniter/spark plug specification schema"
+    - name: "exciter.schema.json"
+      description: "Exciter power unit specification schema"
+    - name: "ignition-software.schema.json"
+      description: "Ignition software metadata (DO-178C) schema"
+    - name: "component-bom.schema.json"
+      description: "Component bill of materials schema"
+    - name: "test-evidence.schema.json"
+      description: "Test evidence and results schema"
+approvals:
+  - authority: "Propulsion Systems Engineering"
+    status: "Released"
+    date: "2025-10-31"
+  - authority: "Electrical Systems Engineering"
+    status: "Released"
+    date: "2025-10-31"
+  - authority: "Software Engineering"
+    status: "Released"
+    date: "2025-10-31"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-31"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-31"
+revision: "1.0.0"
+effective_date: "2025-10-31"
+next_review: "2026-10-31"

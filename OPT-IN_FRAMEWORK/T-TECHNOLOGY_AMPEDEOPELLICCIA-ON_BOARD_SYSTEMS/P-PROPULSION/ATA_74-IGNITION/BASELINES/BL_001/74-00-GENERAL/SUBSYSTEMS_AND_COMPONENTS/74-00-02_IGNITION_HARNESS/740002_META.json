@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "740002",
+  "component_name": "Cableado principal de ignici\u00f3n (ignition harness)",
+  "component_type": "hardware",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

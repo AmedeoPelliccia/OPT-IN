@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "component_id": "744011",
+  "component_name": "Ignition Control Unit Software (CRITICAL)",
+  "component_type": "software",
+  "criticality": "DAL Level A",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design",
+  "certification": {
+    "standard": "DO-178C",
+    "level": "A",
+    "requires_psac": true,
+    "requires_sas": true
+  }
+}
