@@ -1,0 +1,21 @@
+# ATA-47 INERTING SYSTEM - Complete Integrated Tree with Full ATA Numbering
+
+This file documents the complete directory structure for ATA-47 INERTING SYSTEM.
+
+See the issue specification for the complete CSV-formatted tree structure.
+
+Structure follows:
+- Chapter-level folders (OVERVIEW, SAFETY, REQUIREMENTS, etc.)
+- BASELINES/BL_001/ containing:
+  - 47-00-GENERAL (General system documentation)
+  - 47-03-GAS_SUPPLY_STORAGE (Subsystem)
+  - SUBSYSTEMS_AND_COMPONENTS (Hardware and Software components)
+
+All files follow ATA numbering convention: 47-XX-YY-ZZ where:
+- 47 = ATA Chapter
+- XX = Subsystem/Section (00 for general, 03 for gas supply, etc.)
+- YY = Component/Function
+- ZZ = Document number
+
+Hardware components numbered 470001-470006
+Software components numbered 470010-470012

@@ -1,0 +1,2 @@
+Component,Failure Mode,Effect,Severity,Occurrence,Detection,RPN,Action
+Control LRU,Loss of power,System shutdown,High,Low,High,60,Backup power
