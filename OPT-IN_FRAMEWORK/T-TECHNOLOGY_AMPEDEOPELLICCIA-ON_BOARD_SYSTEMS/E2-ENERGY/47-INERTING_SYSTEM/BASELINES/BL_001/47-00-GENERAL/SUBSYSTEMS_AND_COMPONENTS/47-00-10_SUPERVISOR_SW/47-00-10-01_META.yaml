@@ -1,0 +1,12 @@
+# DO-178C Software Metadata
+{
+  "software_id": "470010",
+  "name": "SUPERVISOR_SW",
+  "type": "software",
+  "dal": "B",
+  "standard": "DO-178C",
+  "version": "1.0.0",
+  "language": "C",
+  "compiler": "GCC ARM",
+  "target": "ARM Cortex-M7"
+}

@@ -1,0 +1,8 @@
+{
+  "software_id": "470011",
+  "name": "MAINTENANCE_TOOL_SW",
+  "type": "software",
+  "version": "1.0.0",
+  "language": "Python",
+  "framework": "PyQt5"
+}

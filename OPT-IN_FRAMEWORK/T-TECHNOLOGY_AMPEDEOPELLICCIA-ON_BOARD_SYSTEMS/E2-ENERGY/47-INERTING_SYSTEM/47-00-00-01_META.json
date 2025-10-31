@@ -1,0 +1,25 @@
+{
+  "ata_chapter": "47",
+  "title": "INERTING SYSTEM",
+  "version": "1.0.0",
+  "date": "2025-10-31",
+  "status": "Initial Design",
+  "baseline": "BL_001",
+  "responsible_engineer": "TBD",
+  "approval_status": "Draft",
+  "related_chapters": [
+    "ATA-24",
+    "ATA-28",
+    "ATA-31",
+    "ATA-34",
+    "ATA-42"
+  ],
+  "certification_basis": [
+    "FAR 25.981",
+    "CS-25.981",
+    "DO-160G",
+    "DO-178C"
+  ],
+  "safety_classification": "DAL-B",
+  "description": "Fuel tank inerting system using nitrogen generation to prevent fuel tank explosions"
+}
