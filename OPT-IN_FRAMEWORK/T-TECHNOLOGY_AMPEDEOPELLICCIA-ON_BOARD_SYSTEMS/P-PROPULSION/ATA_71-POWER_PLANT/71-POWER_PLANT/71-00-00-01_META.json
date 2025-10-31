@@ -1,0 +1,108 @@
+{
+  "chapter": {
+    "ata_code": "71",
+    "title": "POWER PLANT",
+    "description": "Engine installation and interfaces",
+    "version": "1.0",
+    "status": "Initial Release",
+    "date": "2025-10-31",
+    "classification": "Technical Documentation"
+  },
+  "scope": {
+    "includes": [
+      "Engine installation and mounting",
+      "Engine core and turbomachinery",
+      "Accessory gearbox systems",
+      "Fuel control and distribution",
+      "Ignition and starting systems",
+      "Engine indicating and control",
+      "System interfaces"
+    ],
+    "excludes": [
+      "Engine internal design details (see ATA 72)",
+      "Fuel storage (see ATA 28)",
+      "Nacelle structure (see ATA 54)"
+    ]
+  },
+  "regulations": {
+    "primary": [
+      {
+        "standard": "FAR Part 33",
+        "title": "Airworthiness Standards - Aircraft Engines",
+        "authority": "FAA"
+      },
+      {
+        "standard": "CS-E",
+        "title": "Certification Specifications for Engines",
+        "authority": "EASA"
+      }
+    ],
+    "secondary": [
+      {
+        "standard": "FAR Part 25",
+        "title": "Airworthiness Standards - Transport Category",
+        "scope": "Interface requirements"
+      },
+      {
+        "standard": "DO-160",
+        "title": "Environmental Conditions and Test Procedures"
+      },
+      {
+        "standard": "DO-178C",
+        "title": "Software Considerations in Airborne Systems"
+      },
+      {
+        "standard": "DO-254",
+        "title": "Design Assurance for Airborne Electronic Hardware"
+      },
+      {
+        "standard": "SAE AIR1826",
+        "title": "Propulsion System Nomenclature"
+      }
+    ]
+  },
+  "interfaces": {
+    "internal_ata": [
+      "ATA-72: ENGINE",
+      "ATA-73: ENGINE FUEL AND CONTROL",
+      "ATA-74: IGNITION",
+      "ATA-76: ENGINE CONTROLS",
+      "ATA-77: ENGINE INDICATING",
+      "ATA-79: OIL"
+    ],
+    "external_ata": [
+      "ATA-24: ELECTRICAL POWER",
+      "ATA-28: FUEL SYSTEM",
+      "ATA-36: PNEUMATIC",
+      "ATA-54: NACELLES/PYLONS",
+      "FMS: Flight Management System"
+    ]
+  },
+  "subsystems": {
+    "71-00": "GENERAL",
+    "71-10": "ENGINE CORE TURBOMACHINERY",
+    "71-20": "ACCESSORY GEARBOX",
+    "71-30": "FUEL CONTROL",
+    "71-40": "IGNITION START"
+  },
+  "baselines": [
+    {
+      "id": "BL_001",
+      "description": "Initial Design Baseline",
+      "date": "2025-10-31",
+      "status": "Active"
+    }
+  ],
+  "document_control": {
+    "owner": "Propulsion Systems Engineering",
+    "reviewer": "Chief Systems Engineer",
+    "approver": "Engineering Director",
+    "change_control": "ECR Process"
+  },
+  "metadata": {
+    "created_date": "2025-10-31",
+    "created_by": "System Architecture Team",
+    "last_modified": "2025-10-31",
+    "schema_version": "1.0"
+  }
+}

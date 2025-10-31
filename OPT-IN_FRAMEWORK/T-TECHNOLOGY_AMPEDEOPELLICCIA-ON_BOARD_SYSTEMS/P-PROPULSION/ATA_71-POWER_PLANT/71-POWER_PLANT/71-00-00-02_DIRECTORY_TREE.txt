@@ -1,0 +1,44 @@
+# ATA 71-00-00-02 DIRECTORY TREE
+
+Complete ATA-71 POWER PLANT structure with full ATA numbering.
+
+## Structure Overview
+
+T-TECHNOLOGY/
+└─ P-PROPULSION/
+   └─ 71-POWER_PLANT/
+      ├─ 71-00-00-00_README.md              # Chapter-level overview
+      ├─ 71-00-00-01_META.json              # Chapter metadata
+      ├─ 71-00-00-02_DIRECTORY_TREE.txt     # This file
+      │
+      ├─ OVERVIEW/                          # Chapter-level skeleton
+      ├─ SAFETY/
+      ├─ REQUIREMENTS/
+      ├─ DESIGN/
+      ├─ INTERFACES/
+      ├─ ENGINEERING/
+      ├─ V_AND_V/
+      ├─ PROTOTYPING/
+      ├─ PRODUCTION_PLANNING/
+      ├─ CERTIFICATION/
+      ├─ OPERATIONS_AND_MAINTENANCE/
+      ├─ ASSETS_MANAGEMENT/
+      ├─ META_GOVERNANCE/
+      │
+      └─ BASELINES/
+         └─ BL_001/                         # Baseline 001 (Initial Design)
+            ├─ 71-00-GENERAL/               # ATA 71-00 GENERAL
+            ├─ 71-10-ENGINE_CORE_TURBOMACHINERY/
+            ├─ 71-20-ACCESSORY_GEARBOX/
+            ├─ 71-30-FUEL_CONTROL/
+            └─ 71-40-IGNITION_START/
+
+Each subsystem follows the complete SKELETON pattern with hardware and software components.
+
+## Navigation
+
+[↑ Chapter README](./71-00-00-00_README.md)
+
+---
+
+*Part of the AMPEL360 ATA Chapter Mapping - OPT-IN Framework*
