@@ -538,7 +538,7 @@ Maps to **ATA 06–12**:
 #### **T — TECHNOLOGY (AMEDEOPELLICCIA On-Board Systems)**
 
 ##### **A — AIRFRAME (BWB Integration)** | **ATA 20, 50–57**
-- **Fuselage sections**: Forward (pilot cabin, nose LG), Center (300-passenger cabin, cooling systems, LH₂ tanks), Aft (non-pressurized, cooling loops, electrical distribution)
+- **Fuselage sections**: Forward (pilot cabin, nose LG), Center (passenger cabin, cooling systems, LH₂ tanks), Aft (non-pressurized, cooling loops, electrical distribution)
 - **Wing integration**: Fuel cell stack cooling ducts, electrical cabling, H₂ distribution lines
 - **Material compliance**: Composite structures (hydrogen-compatible resins), pressure vessel certifications for H₂ tanks
 
@@ -686,21 +686,20 @@ This **AMPEL360 OPT-IN mapping** integrates next-generation propulsion, energy s
 2. [Blended Wing Body - Wikipedia](https://en.wikipedia.org/wiki/Blended_wing_body)
 3. [Hydrogen Aircraft Research - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0360319924043295)
 4. [BWB Design Considerations - Scribd](https://www.scribd.com/document/760380200/Blended-Wing-Design-Considerations-for-A-Next-Generation-Commerci)
-5. [Blended Wing Body Overview - Wikipedia](https://en.wikipedia.org/wiki/Blended_Wing_Body)
-6. [FAA Hydrogen-Fueled Aircraft Roadmap](https://www.faa.gov/aircraft/air_cert/step/disciplines/propulsion_systems/hydrogen-fueled_aircraft_roadmap)
-7. [CAA Hydrogen Aircraft Publications](https://www.caa.co.uk/publication/download/25268)
-8. [ATI Hydrogen Report](https://www.ati.org.uk/wp-content/uploads/2021/08/aci-ati-hydrogen-report-1.pdf)
-9. [NASA BWB Research](https://ntrs.nasa.gov/api/citations/20040033924/downloads/20040033924.pdf)
-10. [Propfan Technology - Wikipedia](https://en.wikipedia.org/wiki/Propfan)
-11. [CO₂ Battery Research - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0306261925010864)
-12. [Electric Aircraft Research](https://escholarship.org/content/qt51c5r1nx/qt51c5r1nx.pdf)
-13. [Open Rotor Engine - Clean Sky](https://www.rotator-cleansky.com/open-rotor-engine)
-14. [Carbon Dioxide Battery Technology](https://blog.upsbatterycenter.com/carbon-dioxide-battery-turns-the-tables/)
-15. [AIAA Aircraft Design Paper](https://arc.aiaa.org/doi/10.2514/6.2024-3664)
-16. [Open Rotor Technology Analysis](https://leehamnews.com/2024/05/17/bjorns-corner-new-engine-development-part-8-open-rotor-technology/)
-17. [SAF and Hydrogen Propulsion](https://www.afsenergy.nl/blog-post/the-future-of-aviation-with-saf-and-hydrogen-propulsion)
-18. [Hydrogen and Electric Propulsion](https://www.leadventgrp.com/blog/hydrogen-and-electric-propulsion-complementing-saf-for-a-sustainable-future)
-19. [Sustainable Aviation Fuel Overview](https://afdc.energy.gov/fuels/sustainable-aviation-fuel)
+5. [FAA Hydrogen-Fueled Aircraft Roadmap](https://www.faa.gov/aircraft/air_cert/step/disciplines/propulsion_systems/hydrogen-fueled_aircraft_roadmap)
+6. [CAA Hydrogen Aircraft Publications](https://www.caa.co.uk/publication/download/25268)
+7. [ATI Hydrogen Report](https://www.ati.org.uk/wp-content/uploads/2021/08/aci-ati-hydrogen-report-1.pdf)
+8. [NASA BWB Research](https://ntrs.nasa.gov/api/citations/20040033924/downloads/20040033924.pdf)
+9. [Propfan Technology - Wikipedia](https://en.wikipedia.org/wiki/Propfan)
+10. [CO₂ Battery Research - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0306261925010864)
+11. [Electric Aircraft Research](https://escholarship.org/content/qt51c5r1nx/qt51c5r1nx.pdf)
+12. [Open Rotor Engine - Clean Sky](https://www.rotator-cleansky.com/open-rotor-engine)
+13. [Carbon Dioxide Battery Technology](https://blog.upsbatterycenter.com/carbon-dioxide-battery-turns-the-tables/)
+14. [AIAA Aircraft Design Paper](https://arc.aiaa.org/doi/10.2514/6.2024-3664)
+15. [Open Rotor Technology Analysis](https://leehamnews.com/2024/05/17/bjorns-corner-new-engine-development-part-8-open-rotor-technology/)
+16. [SAF and Hydrogen Propulsion](https://www.afsenergy.nl/blog-post/the-future-of-aviation-with-saf-and-hydrogen-propulsion)
+17. [Hydrogen and Electric Propulsion](https://www.leadventgrp.com/blog/hydrogen-and-electric-propulsion-complementing-saf-for-a-sustainable-future)
+18. [Sustainable Aviation Fuel Overview](https://afdc.energy.gov/fuels/sustainable-aviation-fuel)
 
 ---
 
