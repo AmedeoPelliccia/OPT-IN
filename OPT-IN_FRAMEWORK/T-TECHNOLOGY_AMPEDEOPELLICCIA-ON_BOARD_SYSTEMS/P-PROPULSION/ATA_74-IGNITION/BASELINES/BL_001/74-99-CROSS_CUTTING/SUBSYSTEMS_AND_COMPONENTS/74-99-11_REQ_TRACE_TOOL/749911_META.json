@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "749911",
+  "component_name": "Requirements Traceability Tool (Ignition)",
+  "component_type": "software",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

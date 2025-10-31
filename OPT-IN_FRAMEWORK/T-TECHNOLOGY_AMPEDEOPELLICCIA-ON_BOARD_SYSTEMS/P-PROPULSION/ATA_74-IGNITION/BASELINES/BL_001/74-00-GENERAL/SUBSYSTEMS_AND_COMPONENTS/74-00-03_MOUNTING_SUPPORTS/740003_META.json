@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "740003",
+  "component_name": "Montajes y soportes de sistema ignici\u00f3n",
+  "component_type": "hardware",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

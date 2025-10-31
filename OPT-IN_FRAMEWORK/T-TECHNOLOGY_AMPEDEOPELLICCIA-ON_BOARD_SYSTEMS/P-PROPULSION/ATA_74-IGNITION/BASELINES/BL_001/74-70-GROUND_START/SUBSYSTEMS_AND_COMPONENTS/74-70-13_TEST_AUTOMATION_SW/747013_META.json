@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "747013",
+  "component_name": "Ground Test Automation SW",
+  "component_type": "software",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

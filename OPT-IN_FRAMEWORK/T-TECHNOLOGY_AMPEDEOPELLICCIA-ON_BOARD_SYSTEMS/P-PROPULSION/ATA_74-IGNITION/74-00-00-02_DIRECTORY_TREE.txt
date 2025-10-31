@@ -1,0 +1,427 @@
+ATA 74 - IGNITION SYSTEM
+Complete Directory Tree Structure
+Version 1.0.0 - 2025-10-31
+
+================================================================================
+COMPONENT CODES LEGEND
+================================================================================
+
+Physical Components (Hardware):
+  74-00-XX: General ignition system (740001-740006)
+  74-10-XX: Igniters and spark plugs (741001-741006)
+  74-20-XX: Ignition exciters and power units (742001-742006)
+  74-30-XX: Ignition power supplies (743001-743006)
+  74-40-XX: Ignition control and sequencing (744001-744006)
+  74-50-XX: Ignition timing and synchronization (745001-745006)
+  74-60-XX: Ignition monitoring and indication (746001-746006)
+  74-70-XX: Ground start and external ignition (747001-747006)
+  74-80-XX: Ignition safety and protection (748001-748006)
+  74-90-XX: V&V, test and maintenance (749001-749006)
+  74-99-XX: Cross-cutting integration (749901-749904)
+
+Software Components:
+  74-XX-1X: Software modules (740010-749912)
+  Critical software marked with ⭐ requires DO-178C Level A certification
+
+================================================================================
+DIRECTORY STRUCTURE
+================================================================================
+
+T-TECHNOLOGY/
+└─ P-PROPULSION/
+   └─ ATA_74-IGNITION/
+      │
+      ├─ 74-00-00-00_README.md              # Chapter-level overview
+      ├─ 74-00-00-01_META.json              # Chapter metadata
+      ├─ 74-00-00-02_DIRECTORY_TREE.txt     # This file
+      ├─ INDEX.meta.yaml                    # Chapter index metadata
+      │
+      ├─ OVERVIEW/                          # Chapter-level overview
+      │  ├─ 74-00-01-00_README.md
+      │  ├─ 74-00-01-01_system_description.md
+      │  ├─ 74-00-01-02_architecture_overview.md
+      │  ├─ 74-00-01-03_ignition_principles.md
+      │  ├─ 74-00-01-04_performance_characteristics.md
+      │  └─ 74-00-01-05_integration_context.md
+      │
+      ├─ SAFETY/                            # Chapter-level safety
+      │  ├─ 74-00-02-00_README.md
+      │  ├─ 74-00-02-01_FHA.md              # Functional Hazard Assessment
+      │  ├─ 74-00-02-02_PSSA.md             # Preliminary System Safety Assessment
+      │  ├─ 74-00-02-03_SSA.md              # System Safety Assessment
+      │  ├─ 74-00-02-04_HAZOP.csv           # HAZOP study
+      │  ├─ 74-00-02-05_FMEA.csv            # Failure Modes & Effects Analysis
+      │  ├─ 74-00-02-06_high_voltage_safety.md
+      │  ├─ 74-00-02-07_lightning_protection.md
+      │  └─ 74-00-02-08_emi_emc_analysis.md
+      │
+      ├─ REQUIREMENTS/                      # Chapter-level requirements
+      │  ├─ 74-00-03-00_README.md
+      │  ├─ 74-00-03-01_ALR.md              # Aircraft Level Requirements
+      │  ├─ 74-00-03-02_SR.md               # System Requirements
+      │  ├─ 74-00-03-03_SSR.md              # Subsystem Requirements
+      │  ├─ 74-00-03-04_CR.md               # Component Requirements
+      │  ├─ 74-00-03-05_RTM.csv             # Requirements Traceability Matrix
+      │  ├─ 74-00-03-06_regulations_mapping.md
+      │  └─ 74-00-03-07_spark_energy_requirements.md
+      │
+      ├─ DESIGN/                            # Chapter-level design
+      │  ├─ 74-00-04-00_README.md
+      │  ├─ 74-00-04-01_ignition_system_architecture.md
+      │  ├─ 74-00-04-02_redundancy_philosophy.md
+      │  ├─ ICDs/
+      │  │  ├─ 74-00-04-10_ICD_to_ATA24.md  # To Electrical Power
+      │  │  ├─ 74-00-04-11_ICD_to_ATA71.md  # To Power Plant
+      │  │  ├─ 74-00-04-12_ICD_to_ATA72.md  # To Engine
+      │  │  ├─ 74-00-04-13_ICD_to_ATA73.md  # To Fuel Control
+      │  │  └─ 74-00-04-14_ICD_to_FADEC.md  # To FADEC
+      │  └─ specifications/
+      │     ├─ 74-00-04-30_system_spec.md
+      │     ├─ 74-00-04-31_spark_energy_spec.md
+      │     └─ 74-00-04-32_timing_accuracy_spec.md
+      │
+      ├─ INTERFACES/                        # Chapter-level interfaces
+      │  ├─ 74-00-05-00_README.md
+      │  ├─ 74-00-05-01_mechanical_interfaces.md
+      │  ├─ 74-00-05-02_electrical_interfaces.md
+      │  ├─ 74-00-05-03_high_voltage_interfaces.md
+      │  ├─ 74-00-05-04_data_bus_interfaces.md
+      │  ├─ 74-00-05-05_engine_interfaces.md
+      │  └─ 74-00-05-06_fadec_interfaces.md
+      │
+      ├─ ENGINEERING/                       # Chapter-level engineering
+      │  ├─ 74-00-06-00_README.md
+      │  ├─ analyses/
+      │  │  ├─ 74-00-06-10_electrical_analysis.md
+      │  │  ├─ 74-00-06-11_spark_energy_analysis.md
+      │  │  ├─ 74-00-06-12_timing_analysis.md
+      │  │  └─ 74-00-06-13_thermal_analysis.md
+      │  ├─ simulations/
+      │  │  ├─ 74-00-06-20_spark_simulation.md
+      │  │  ├─ 74-00-06-21_arc_modeling.md
+      │  │  └─ 74-00-06-22_emi_simulation.md
+      │  ├─ FEA_studies/
+      │  │  ├─ 74-00-06-30_thermal_FEA.md
+      │  │  ├─ 74-00-06-31_stress_analysis.md
+      │  │  └─ 74-00-06-32_vibration_analysis.md
+      │  ├─ MBSE_models/
+      │  │  ├─ 74-00-06-40_sysml_ignition_model.xml
+      │  │  └─ 74-00-06-41_model_description.md
+      │  └─ scripts/
+      │     ├─ 74-00-06-50_timing_calculations/
+      │     └─ 74-00-06-51_energy_calcs/
+      │
+      ├─ V_AND_V/                           # Chapter-level V&V
+      │  ├─ 74-00-07-00_README.md
+      │  ├─ 74-00-07-01_verification_plan.md
+      │  ├─ 74-00-07-02_validation_plan.md
+      │  ├─ test_plans/
+      │  │  ├─ 74-00-07-10_system_test_plan.md
+      │  │  ├─ 74-00-07-11_spark_bench_plan.md
+      │  │  └─ 74-00-07-12_altitude_test_plan.md
+      │  ├─ test_cases/
+      │  │  ├─ 74-00-07-20_test_matrix.csv
+      │  │  └─ 74-00-07-21_test_procedures/
+      │  └─ test_evidence/
+      │     ├─ 74-00-07-30_test_reports/
+      │     └─ 74-00-07-31_traceability_matrix.csv
+      │
+      ├─ PROTOTYPING/                       # Chapter-level prototyping
+      │  ├─ 74-00-08-00_README.md
+      │  ├─ 74-00-08-01_prototype_strategy.md
+      │  ├─ test_rigs/
+      │  │  ├─ 74-00-08-10_spark_test_bench.md
+      │  │  ├─ 74-00-08-11_timing_test_rig.md
+      │  │  └─ 74-00-08-12_hv_test_stand.md
+      │  ├─ benches/
+      │  │  ├─ 74-00-08-20_igniter_bench.md
+      │  │  └─ 74-00-08-21_ICU_HIL_bench.md
+      │  └─ prototype_reports/
+      │     ├─ 74-00-08-30_prototype_v1_report.md
+      │     └─ 74-00-08-31_prototype_v2_report.md
+      │
+      ├─ PRODUCTION_PLANNING/               # Chapter-level production
+      │  ├─ 74-00-09-00_README.md
+      │  ├─ 74-00-09-01_production_strategy.md
+      │  ├─ FAI/
+      │  │  ├─ 74-00-09-10_FAI_plan.md
+      │  │  └─ 74-00-09-11_FAI_reports/
+      │  ├─ PPAP/
+      │  │  ├─ 74-00-09-20_PPAP_requirements.md
+      │  │  └─ 74-00-09-21_PPAP_submissions/
+      │  ├─ suppliers/
+      │  │  ├─ 74-00-09-30_supplier_list.csv
+      │  │  └─ 74-00-09-31_supplier_qualifications/
+      │  └─ QA_procedures/
+      │     ├─ 74-00-09-40_QA_plan.md
+      │     └─ 74-00-09-41_inspection_procedures/
+      │
+      ├─ CERTIFICATION/                     # Chapter-level certification
+      │  ├─ 74-00-10-00_README.md
+      │  ├─ 74-00-10-01_certification_basis.md
+      │  ├─ 74-00-10-02_certification_plan.md
+      │  ├─ compliance_matrices/
+      │  │  ├─ 74-00-10-10_FAR33_compliance.csv      # Engine ignition
+      │  │  ├─ 74-00-10-11_CS_E_compliance.csv       # EASA engine
+      │  │  ├─ 74-00-10-12_FAR25_interface.csv       # Aircraft interface
+      │  │  ├─ 74-00-10-13_DO160_compliance.csv      # Environmental
+      │  │  ├─ 74-00-10-14_DO178C_compliance.csv     # Software
+      │  │  └─ 74-00-10-15_DO254_compliance.csv      # Hardware
+      │  └─ certification_evidence/
+      │     ├─ 74-00-10-20_test_reports/
+      │     ├─ 74-00-10-21_analysis_reports/
+      │     └─ 74-00-10-22_authority_approvals/
+      │
+      ├─ OPERATIONS_AND_MAINTENANCE/        # Chapter-level O&M
+      │  ├─ 74-00-11-00_README.md
+      │  ├─ 74-00-11-01_AMM_references.md   # Aircraft Maintenance Manual
+      │  ├─ 74-00-11-02_CMM_references.md   # Component Maintenance Manual
+      │  ├─ 74-00-11-03_IPC_references.md   # Illustrated Parts Catalog
+      │  ├─ 74-00-11-04_TSM_references.md   # Troubleshooting Manual
+      │  ├─ 74-00-11-05_ATA05_links.md
+      │  └─ 74-00-11-06_service_intervals.csv
+      │
+      ├─ ASSETS_MANAGEMENT/                 # Chapter-level assets
+      │  ├─ 74-00-12-00_README.md
+      │  ├─ 74-00-12-01_configuration_control.md
+      │  ├─ 74-00-12-02_PN_SN_tracking.csv
+      │  ├─ 74-00-12-03_obsolescence_management.md
+      │  ├─ 74-00-12-04_lifecycle_plan.md
+      │  └─ 74-00-12-05_spares_strategy.md
+      │
+      ├─ META_GOVERNANCE/                   # Chapter-level governance
+      │  ├─ 74-00-13-00_README.md
+      │  ├─ templates/
+      │  │  ├─ 74-00-13-10_component_template.md
+      │  │  ├─ 74-00-13-11_software_meta_template.yaml
+      │  │  ├─ 74-00-13-12_test_case_template.md
+      │  │  └─ 74-00-13-13_change_request_template.md
+      │  ├─ schemas/
+      │  │  ├─ 74-00-13-20_metadata_schema.json
+      │  │  ├─ 74-00-13-21_BOM_schema.json
+      │  │  └─ 74-00-13-22_requirements_schema.json
+      │  ├─ validators/
+      │  │  ├─ 74-00-13-30_structure_validator.py
+      │  │  ├─ 74-00-13-31_metadata_validator.py
+      │  │  └─ 74-00-13-32_compliance_checker.py
+      │  └─ CI_CD/
+      │     ├─ 74-00-13-40_gitlab_ci.yml
+      │     ├─ 74-00-13-41_build_scripts/
+      │     └─ 74-00-13-42_deployment_scripts/
+      │
+      └─ BASELINES/
+         │
+         └─ BL_001/                         # Baseline 001 (Initial Design)
+            │
+            ├─ 74-00-GENERAL/               # ATA 74-00 GENERAL
+            │  ├─ 74-00-00-00_README.md
+            │  ├─ 74-00-00-01_META.json
+            │  ├─ [SKELETON folders: OVERVIEW, SAFETY, REQUIREMENTS, DESIGN, etc.]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-00-01_IGNITION_SYSTEM/      # HW 740001
+            │     ├─ 74-00-02_IGNITION_HARNESS/     # HW 740002
+            │     ├─ 74-00-03_MOUNTING_SUPPORTS/    # HW 740003
+            │     ├─ 74-00-04_REDUNDANT_SYSTEM/     # HW 740004
+            │     ├─ 74-00-05_HV_CONNECTORS/        # HW 740005
+            │     ├─ 74-00-06_TEST_EQUIPMENT/       # HW 740006
+            │     ├─ 74-00-10_SUPERVISOR_SW/        # SW 740010
+            │     ├─ 74-00-11_HEALTH_MONITOR_SW/    # SW 740011
+            │     └─ 74-00-12_TEST_EVIDENCE_SW/     # SW 740012
+            │
+            ├─ 74-10-IGNITERS_SPARK_PLUGS/          # ATA 74-10
+            │  ├─ 74-10-00-00_README.md
+            │  ├─ 74-10-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-10-01_IGNITERS_PRIMARY/     # HW 741001
+            │     ├─ 74-10-02_IGNITER_HOUSING/      # HW 741002
+            │     ├─ 74-10-03_ELECTRODES/           # HW 741003
+            │     ├─ 74-10-04_MOUNTING_BRACKETS/    # HW 741004
+            │     ├─ 74-10-05_HV_LEADS/             # HW 741005
+            │     ├─ 74-10-06_INSPECTION_PORTS/     # HW 741006
+            │     ├─ 74-10-11_IGNITER_CONTROL_SW/   # SW 741011 ⭐ DO-178C Level A
+            │     └─ 74-10-12_WEAR_PREDICTION_SW/   # SW 741012
+            │
+            ├─ 74-20-IGNITION_EXCITERS/             # ATA 74-20
+            │  ├─ 74-20-00-00_README.md
+            │  ├─ 74-20-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-20-01_EXCITERS/             # HW 742001
+            │     ├─ 74-20-02_TRANSFORMERS/         # HW 742002
+            │     ├─ 74-20-03_EXCITER_HOUSING/      # HW 742003
+            │     ├─ 74-20-04_TRIGGER_CIRCUITS/     # HW 742004
+            │     ├─ 74-20-05_HV_TERMINALS/         # HW 742005
+            │     ├─ 74-20-06_REDUNDANCY_HW/        # HW 742006
+            │     ├─ 74-20-11_EXCITER_CONTROL_FW/   # SW 742011 ⭐ DO-178C Level A
+            │     ├─ 74-20-12_FAULT_DETECTION_SW/   # SW 742012 ⭐ DO-178C Level A
+            │     └─ 74-20-13_POWER_MGMT_SW/        # SW 742013
+            │
+            ├─ 74-30-POWER_SUPPLIES/                # ATA 74-30
+            │  ├─ 74-30-00-00_README.md
+            │  ├─ 74-30-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-30-01_PRIMARY_PSU/          # HW 743001
+            │     ├─ 74-30-02_BACKUP_PSU/           # HW 743002
+            │     ├─ 74-30-03_FILTERS_REGULATORS/   # HW 743003
+            │     ├─ 74-30-04_DISTRIBUTION_BOARDS/  # HW 743004
+            │     ├─ 74-30-05_VOLTAGE_SENSORS/      # HW 743005
+            │     ├─ 74-30-06_EMERGENCY_INTERFACES/ # HW 743006
+            │     ├─ 74-30-11_PSU_CONTROLLER_SW/    # SW 743011 ⭐ DO-178C Level A
+            │     ├─ 74-30-12_POWER_QUALITY_SW/     # SW 743012
+            │     └─ 74-30-13_LOAD_PROTECTION_SW/   # SW 743013
+            │
+            ├─ 74-40-IGNITION_CONTROL/              # ATA 74-40 ⭐ CRITICAL
+            │  ├─ 74-40-00-00_README.md
+            │  ├─ 74-40-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-40-01_ICU_LRU/              # HW 744001
+            │     ├─ 74-40-02_ICU_PROCESSORS/       # HW 744002
+            │     ├─ 74-40-03_ICU_IO_INTERFACES/    # HW 744003
+            │     ├─ 74-40-04_ICU_POWER_COND/       # HW 744004
+            │     ├─ 74-40-05_ICU_REDUNDANCY/       # HW 744005
+            │     ├─ 74-40-06_ICU_COOLING_EMI/      # HW 744006
+            │     ├─ 74-40-11_ICU_SOFTWARE/         # SW 744011 ⭐ DO-178C Level A (CRITICAL)
+            │     ├─ 74-40-12_REDUNDANCY_VOTING_SW/ # SW 744012 ⭐ DO-178C Level A
+            │     ├─ 74-40-13_ICU_BIT_SW/           # SW 744013 ⭐ DO-178C Level A
+            │     └─ 74-40-14_CONFIG_TOOLS/         # SW 744014 (non-flight)
+            │
+            ├─ 74-50-TIMING_SYNCHRONIZATION/        # ATA 74-50
+            │  ├─ 74-50-00-00_README.md
+            │  ├─ 74-50-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-50-01_ENGINE_SPEED_SENSORS/ # HW 745001
+            │     ├─ 74-50-02_POSITION_SENSORS/     # HW 745002
+            │     ├─ 74-50-03_SIGNAL_PROCESSORS/    # HW 745003
+            │     ├─ 74-50-04_SYNC_MODULES/         # HW 745004
+            │     ├─ 74-50-05_TIMING_ADJUSTERS/     # HW 745005
+            │     ├─ 74-50-06_REFERENCE_MARKERS/    # HW 745006
+            │     ├─ 74-50-11_TIMING_CONTROL_SW/    # SW 745011 ⭐ DO-178C Level A
+            │     ├─ 74-50-12_PHASE_DETECTION_SW/   # SW 745012 ⭐ DO-178C Level A
+            │     └─ 74-50-13_TIMING_MAP_SW/        # SW 745013 ⭐ DO-178C Level A
+            │
+            ├─ 74-60-MONITORING_INDICATION/         # ATA 74-60
+            │  ├─ 74-60-00-00_README.md
+            │  ├─ 74-60-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-60-01_CURRENT_SENSORS/      # HW 746001
+            │     ├─ 74-60-02_VOLTAGE_PROBES/       # HW 746002
+            │     ├─ 74-60-03_TEMP_SENSORS/         # HW 746003
+            │     ├─ 74-60-04_ION_PROBES/           # HW 746004
+            │     ├─ 74-60-05_COCKPIT_PANELS/       # HW 746005
+            │     ├─ 74-60-06_WARNING_LIGHTS/       # HW 746006
+            │     ├─ 74-60-11_MONITOR_DISPLAY_SW/   # SW 746011
+            │     ├─ 74-60-12_FAULT_ANNUNC_SW/      # SW 746012
+            │     └─ 74-60-13_DATA_RECORDING_SW/    # SW 746013
+            │
+            ├─ 74-70-GROUND_START/                  # ATA 74-70
+            │  ├─ 74-70-00-00_README.md
+            │  ├─ 74-70-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-70-01_GROUND_INTERFACES/    # HW 747001
+            │     ├─ 74-70-02_EXTERNAL_POWER/       # HW 747002
+            │     ├─ 74-70-03_TEST_PANELS/          # HW 747003
+            │     ├─ 74-70-04_PORTABLE_TEST_EQUIP/  # HW 747004
+            │     ├─ 74-70-05_SAFETY_INTERLOCKS/    # HW 747005
+            │     ├─ 74-70-06_GROUNDING_CABLES/     # HW 747006
+            │     ├─ 74-70-11_START_SEQUENCER_SW/   # SW 747011
+            │     ├─ 74-70-12_EXT_INTERFACE_SW/     # SW 747012
+            │     └─ 74-70-13_TEST_AUTOMATION_SW/   # SW 747013
+            │
+            ├─ 74-80-SAFETY_PROTECTION/             # ATA 74-80
+            │  ├─ 74-80-00-00_README.md
+            │  ├─ 74-80-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-80-01_ARC_SUPPRESSION/      # HW 748001
+            │     ├─ 74-80-02_OVERVOLT_PROTECTION/  # HW 748002
+            │     ├─ 74-80-03_CURRENT_LIMITERS/     # HW 748003
+            │     ├─ 74-80-04_INSUL_MONITORING/     # HW 748004
+            │     ├─ 74-80-05_EMERGENCY_SHUTDOWN/   # HW 748005
+            │     ├─ 74-80-06_LIGHTNING_PROTECT/    # HW 748006
+            │     ├─ 74-80-11_SAFETY_MONITOR_SW/    # SW 748011 ⭐ DO-178C Level A
+            │     ├─ 74-80-12_FAULT_ISOLATION_SW/   # SW 748012 ⭐ DO-178C Level A
+            │     └─ 74-80-13_SHUTDOWN_LOGIC_SW/    # SW 748013 ⭐ DO-178C Level A
+            │
+            ├─ 74-90-V_AND_V_TEST_MAINT/            # ATA 74-90
+            │  ├─ 74-90-00-00_README.md
+            │  ├─ 74-90-00-01_META.json
+            │  ├─ [SKELETON folders]
+            │  └─ SUBSYSTEMS_AND_COMPONENTS/
+            │     ├─ 74-90-01_TEST_BENCH/           # HW 749001
+            │     ├─ 74-90-02_HV_TEST_EQUIPMENT/    # HW 749002
+            │     ├─ 74-90-03_OSCILLOSCOPES/        # HW 749003
+            │     ├─ 74-90-04_LOAD_SIMULATORS/      # HW 749004
+            │     ├─ 74-90-05_SPARE_KITS/           # HW 749005
+            │     ├─ 74-90-06_CALIBRATION/          # HW 749006
+            │     ├─ 74-90-11_HIL_SIMULATOR_SW/     # SW 749011
+            │     ├─ 74-90-12_TEST_AUTOMATION_SW/   # SW 749012
+            │     └─ 74-90-13_MAINT_DIAGNOSTICS_SW/ # SW 749013
+            │
+            └─ 74-99-CROSS_CUTTING/                 # ATA 74-99
+               ├─ 74-99-00-00_README.md
+               ├─ 74-99-00-01_META.json
+               ├─ [SKELETON folders]
+               └─ SUBSYSTEMS_AND_COMPONENTS/
+                  ├─ 74-99-01_EMI_FILTERS/          # HW 749901
+                  ├─ 74-99-02_HV_CONNECTORS/        # HW 749902
+                  ├─ 74-99-03_BONDING_HARDWARE/     # HW 749903
+                  ├─ 74-99-04_INTEGRATION_BRACKETS/ # HW 749904
+                  ├─ 74-99-10_SECURE_UPDATE_SW/     # SW 749910 ⭐ DO-178C Level A
+                  ├─ 74-99-11_REQ_TRACE_TOOL/       # SW 749911
+                  └─ 74-99-12_HEALTH_AGGREGATOR_SW/ # SW 749912
+
+================================================================================
+NOTES
+================================================================================
+
+1. Each SUBSYSTEM_AND_COMPONENT folder contains full SKELETON structure:
+   - OVERVIEW/
+   - SAFETY/
+   - REQUIREMENTS/
+   - DESIGN/
+   - INTERFACES/
+   - ENGINEERING/ (includes source code for software components)
+   - V_AND_V/
+   - PROTOTYPING/
+   - PRODUCTION_PLANNING/
+   - CERTIFICATION/ (includes DO-178C artifacts for Level A software)
+   - OPERATIONS_AND_MAINTENANCE/
+   - ASSETS_MANAGEMENT/
+   - META_GOVERNANCE/
+
+2. Software components marked with ⭐ require DO-178C Level A certification
+   and include complete certification artifacts:
+   - PSAC (Plan for Software Aspects of Certification)
+   - SDP (Software Development Plan)
+   - SVP (Software Verification Plan)
+   - SCMP (Software Configuration Management Plan)
+   - SQAP (Software Quality Assurance Plan)
+   - SAS (Software Accomplishment Summary)
+   - SCI (Software Configuration Index)
+
+3. Source code structure for software components (example):
+   ENGINEERING/
+   └─ source_code/
+      ├─ src/
+      │  ├─ main.c
+      │  ├─ module1/
+      │  ├─ module2/
+      │  └─ ...
+      ├─ include/
+      ├─ tests/
+      └─ README.md
+
+4. Total component count:
+   - Hardware components: 66 (6 per subsystem × 11 subsystems)
+   - Software components: 36 (varying per subsystem)
+   - Total: 102 components
+
+================================================================================
+END OF DIRECTORY TREE
+================================================================================

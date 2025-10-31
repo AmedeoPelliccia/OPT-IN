@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "748001",
+  "component_name": "Arc suppression hardware",
+  "component_type": "hardware",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

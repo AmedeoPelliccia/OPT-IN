@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "component_id": "746005",
+  "component_name": "Cockpit indication panels",
+  "component_type": "hardware",
+  "criticality": "Standard",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "component_id": "747011",
+  "component_name": "Ground Start Sequencer SW",
+  "component_type": "software",
+  "criticality": "DAL Level B",
+  "revision": "1.0.0",
+  "effective_date": "2025-10-31",
+  "status": "Initial Design",
+  "certification": {
+    "standard": "DO-178C",
+    "level": "B",
+    "requires_psac": true,
+    "requires_sas": true
+  }
+}
