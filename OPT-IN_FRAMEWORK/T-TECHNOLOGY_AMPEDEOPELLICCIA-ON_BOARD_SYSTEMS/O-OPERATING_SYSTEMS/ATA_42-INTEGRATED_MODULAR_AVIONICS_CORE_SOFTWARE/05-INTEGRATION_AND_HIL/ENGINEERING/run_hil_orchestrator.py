@@ -247,6 +247,10 @@ def main():
     
     args = parser.parse_args()
     
+    # Validate that either test-id or matrix is specified
+    if not args.test_id and not args.matrix:
+        parser.error("Either --test-id or --matrix must be specified")
+    
     # Determine script directory
     eng_dir = Path(__file__).parent
     
