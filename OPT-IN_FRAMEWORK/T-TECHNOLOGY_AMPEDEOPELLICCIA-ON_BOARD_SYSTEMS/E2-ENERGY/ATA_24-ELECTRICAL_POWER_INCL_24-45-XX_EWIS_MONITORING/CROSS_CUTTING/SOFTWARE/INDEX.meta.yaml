@@ -1,0 +1,48 @@
+schema_version: "1.1"
+id: "ATA-24-99-00-INDEX"
+document:
+  type: "INDEX"
+  title: "ATA-24-99 Cross-Cutting Software - Software Component Index"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-99"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "ATA-24-99 Software Components"
+components:
+  - id: "ATA-24-99-00-SW-008"
+    title: "System Health & Prognostics SW"
+    file: "ATA-24-99-00-SW-008_system_health_prognostics.py"
+    dal_level: "B"
+    certifiable: true
+  - id: "ATA-24-99-00-SW-009"
+    title: "Cybersecurity & Key Management SW"
+    file: "ATA-24-99-00-SW-009_key_management.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-99-00-SW-010"
+    title: "HIL Orchestrator / Test Automation SW"
+    file: "ATA-24-99-00-SW-010_hil_orchestrator.py"
+    dal_level: "N/A"
+    certifiable: false
+  - id: "ATA-24-99-00-SW-011"
+    title: "Compliance & Traceability Tooling"
+    file: "ATA-24-99-00-SW-011_compliance_tools.py"
+    dal_level: "N/A"
+    certifiable: false
+  - id: "ATA-24-99-00-SW-012"
+    title: "Integration Middleware"
+    file: "ATA-24-99-00-SW-012_integration_middleware.c"
+    dal_level: "A"
+    certifiable: true
+
+integrity:
+  checksum_algorithm: "sha256"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial index creation"

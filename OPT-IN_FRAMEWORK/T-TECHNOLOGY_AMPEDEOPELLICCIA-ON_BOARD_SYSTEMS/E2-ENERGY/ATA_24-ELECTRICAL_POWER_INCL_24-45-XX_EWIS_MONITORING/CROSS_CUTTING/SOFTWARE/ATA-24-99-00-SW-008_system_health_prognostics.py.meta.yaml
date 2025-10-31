@@ -1,0 +1,58 @@
+schema_version: "1.1"
+id: "ATA-24-99-00-SW-008"
+document:
+  type: "SOFTWARE"
+  title: "System Health & Prognostics SW"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-99"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "E2-ENERGY electrical power system"
+  mod_status: []
+safety:
+  criticality: "High"
+  hazards:
+    - "Power system failure"
+    - "Loss of redundancy"
+  safety_impact: "Hazardous"
+  training_required: true
+  qualification_required: "DO-178C DAL-B"
+software:
+  language: "py"
+  dal_level: "B"
+  certifiable: true
+  functions:
+    - "health_initialize"
+    - "rul_estimation"
+    - "prognostic_analysis"
+    - "health_aggregation"
+  dependencies:
+    - "Hardware Abstraction Layer"
+    - "RTOS"
+  test_coverage_target: "90%"
+approvals:
+  - authority: "Chief Software Engineer"
+    name: "Amedeo Pelliccia"
+    status: "Under Review"
+    date: "2025-10-31"
+traceability:
+  source_documents:
+    - "ATA-24-99-00-SWDOC-008_REQUIREMENTS"
+    - "System Requirements Specification"
+  crossrefs:
+    - "ATA-24-00-00"
+  requirements:
+    - "FR-24-99-008-001"
+    - "FR-24-99-008-002"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "TBD"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial version"

@@ -1,0 +1,53 @@
+schema_version: "1.1"
+id: "ATA-24-33-00-INDEX"
+document:
+  type: "INDEX"
+  title: "ATA-24-33 Solid-CO₂ Battery - Software Component Index"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-33"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "ATA-24-33 Software Components"
+components:
+  - id: "ATA-24-33-00-SW-009"
+    title: "Solid-CO₂ Module Control SW"
+    file: "ATA-24-33-00-SW-009_co2_module_control.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-33-00-SW-010"
+    title: "Sorbent Health & Life Management SW"
+    file: "ATA-24-33-00-SW-010_sorbent_health_management.py"
+    dal_level: "B"
+    certifiable: true
+  - id: "ATA-24-33-00-SW-011"
+    title: "CO₂ Storage & Compression Control SW"
+    file: "ATA-24-33-00-SW-011_co2_storage_compression.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-33-00-SW-012"
+    title: "CO₂ Safety & Venting Controller SW"
+    file: "ATA-24-33-00-SW-012_co2_safety_venting.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-33-00-SW-013"
+    title: "CO₂ Lab Simulator / HIL SW"
+    file: "ATA-24-33-00-SW-013_co2_hil_simulator.py"
+    dal_level: "N/A"
+    certifiable: false
+  - id: "ATA-24-33-00-SW-014"
+    title: "CO₂ Reporting & DPP Integration SW"
+    file: "ATA-24-33-00-SW-014_dpp_integration.py"
+    dal_level: "C"
+    certifiable: true
+
+integrity:
+  checksum_algorithm: "sha256"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial index creation"

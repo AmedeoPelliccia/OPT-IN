@@ -1,0 +1,58 @@
+schema_version: "1.1"
+id: "ATA-24-34-00-INDEX"
+document:
+  type: "INDEX"
+  title: "ATA-24-34 Endocircular Recharge Loops - Software Component Index"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-34"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "ATA-24-34 Software Components"
+components:
+  - id: "ATA-24-34-00-SW-008"
+    title: "Endocircular Loop Controller SW"
+    file: "ATA-24-34-00-SW-008_loop_controller.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-34-00-SW-009"
+    title: "Thermal Energy Scheduler SW"
+    file: "ATA-24-34-00-SW-009_thermal_scheduler.py"
+    dal_level: "B"
+    certifiable: true
+  - id: "ATA-24-34-00-SW-010"
+    title: "Recharge Interface Protocol Stack"
+    file: "ATA-24-34-00-SW-010_recharge_protocol.c"
+    dal_level: "B"
+    certifiable: true
+  - id: "ATA-24-34-00-SW-011"
+    title: "Loop Fault Detection & Isolation SW"
+    file: "ATA-24-34-00-SW-011_loop_fdi.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-34-00-SW-012"
+    title: "Loop HIL & Bench Automation SW"
+    file: "ATA-24-34-00-SW-012_loop_hil_automation.py"
+    dal_level: "N/A"
+    certifiable: false
+  - id: "ATA-24-34-00-SW-013"
+    title: "Loop Data Logger & Maintenance SW"
+    file: "ATA-24-34-00-SW-013_loop_data_logger.c"
+    dal_level: "C"
+    certifiable: true
+  - id: "ATA-24-34-00-SW-014"
+    title: "Recharge→EMS Integration SW"
+    file: "ATA-24-34-00-SW-014_ems_integration.c"
+    dal_level: "A"
+    certifiable: true
+
+integrity:
+  checksum_algorithm: "sha256"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial index creation"

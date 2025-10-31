@@ -1,0 +1,929 @@
+{
+  "document_id": "ATA-24-00-00-MANIFEST-001",
+  "title": "ATA-24 Electrical Power Software Manifest",
+  "version": "1.0.0",
+  "date": "2025-10-31",
+  "aircraft": "AMPEL360",
+  "system": "ATA-24 Electrical Power",
+  "total_components": 38,
+  "certification_status": {
+    "DAL-A": 19,
+    "DAL-B": 6,
+    "DAL-C": 5,
+    "Non-Certifiable": 8
+  },
+  "components": [
+    {
+      "component_id": "2400010",
+      "ata_code": "ATA-24-00",
+      "part_number": "ATA-24-00-00-SW-010",
+      "name": "energy_management_system",
+      "title": "Energy Management System (EMS) Software",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-00-00-SW-010_energy_management_system.c",
+        "documentation": [
+          "ATA-24-00-00-SWDOC-010_ARCHITECTURE.md",
+          "ATA-24-00-00-SWDOC-010_REQUIREMENTS.md",
+          "ATA-24-00-00-SWDOC-010_DESIGN_DESCRIPTION.md",
+          "ATA-24-00-00-SWDOC-010_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-00-00-SWTEST-010_TEST_SUITE/",
+        "config": "ATA-24-00-00-SWCFG-010_CONFIG.json",
+        "sidecar": "ATA-24-00-00-SW-010_energy_management_system.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2400011",
+      "ata_code": "ATA-24-00",
+      "part_number": "ATA-24-00-00-SW-011",
+      "name": "power_conversion_firmware",
+      "title": "Power Conversion Firmware",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-00-00-SW-011_power_conversion_firmware.c",
+        "documentation": [
+          "ATA-24-00-00-SWDOC-011_ARCHITECTURE.md",
+          "ATA-24-00-00-SWDOC-011_REQUIREMENTS.md",
+          "ATA-24-00-00-SWDOC-011_DESIGN_DESCRIPTION.md",
+          "ATA-24-00-00-SWDOC-011_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-00-00-SWTEST-011_TEST_SUITE/",
+        "config": "ATA-24-00-00-SWCFG-011_CONFIG.json",
+        "sidecar": "ATA-24-00-00-SW-011_power_conversion_firmware.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2400012",
+      "ata_code": "ATA-24-00",
+      "part_number": "ATA-24-00-00-SW-012",
+      "name": "battery_management_system",
+      "title": "Battery Management System (BMS) Software",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-00-00-SW-012_battery_management_system.c",
+        "documentation": [
+          "ATA-24-00-00-SWDOC-012_ARCHITECTURE.md",
+          "ATA-24-00-00-SWDOC-012_REQUIREMENTS.md",
+          "ATA-24-00-00-SWDOC-012_DESIGN_DESCRIPTION.md",
+          "ATA-24-00-00-SWDOC-012_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-00-00-SWTEST-012_TEST_SUITE/",
+        "config": "ATA-24-00-00-SWCFG-012_CONFIG.json",
+        "sidecar": "ATA-24-00-00-SW-012_battery_management_system.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2400013",
+      "ata_code": "ATA-24-00",
+      "part_number": "ATA-24-00-00-SW-013",
+      "name": "protections_relay_logic",
+      "title": "Protections & Relay Logic Software",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-00-00-SW-013_protections_relay_logic.c",
+        "documentation": [
+          "ATA-24-00-00-SWDOC-013_ARCHITECTURE.md",
+          "ATA-24-00-00-SWDOC-013_REQUIREMENTS.md",
+          "ATA-24-00-00-SWDOC-013_DESIGN_DESCRIPTION.md",
+          "ATA-24-00-00-SWDOC-013_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-00-00-SWTEST-013_TEST_SUITE/",
+        "config": "ATA-24-00-00-SWCFG-013_CONFIG.json",
+        "sidecar": "ATA-24-00-00-SW-013_protections_relay_logic.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2400014",
+      "ata_code": "ATA-24-00",
+      "part_number": "ATA-24-00-00-SW-014",
+      "name": "power_quality_monitoring",
+      "title": "Power Quality Monitoring Software",
+      "language": "c",
+      "dal_level": "C",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-00-00-SW-014_power_quality_monitoring.c",
+        "documentation": [
+          "ATA-24-00-00-SWDOC-014_ARCHITECTURE.md",
+          "ATA-24-00-00-SWDOC-014_REQUIREMENTS.md",
+          "ATA-24-00-00-SWDOC-014_DESIGN_DESCRIPTION.md",
+          "ATA-24-00-00-SWDOC-014_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-00-00-SWTEST-014_TEST_SUITE/",
+        "config": "ATA-24-00-00-SWCFG-014_CONFIG.json",
+        "sidecar": "ATA-24-00-00-SW-014_power_quality_monitoring.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2400015",
+      "ata_code": "ATA-24-00",
+      "part_number": "ATA-24-00-00-SW-015",
+      "name": "ground_service_tools",
+      "title": "Ground/Service Tools & SW",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-00-00-SW-015_ground_service_tools.py",
+        "documentation": [
+          "ATA-24-00-00-SWDOC-015_ARCHITECTURE.md",
+          "ATA-24-00-00-SWDOC-015_REQUIREMENTS.md",
+          "ATA-24-00-00-SWDOC-015_DESIGN_DESCRIPTION.md",
+          "ATA-24-00-00-SWDOC-015_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-00-00-SWTEST-015_TEST_SUITE/",
+        "config": "ATA-24-00-00-SWCFG-015_CONFIG.json",
+        "sidecar": "ATA-24-00-00-SW-015_ground_service_tools.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2460009",
+      "ata_code": "ATA-24-60",
+      "part_number": "ATA-24-60-00-SW-009",
+      "name": "fuel_cell_stack_control",
+      "title": "Fuel-Cell Stack Control Software",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-60-00-SW-009_fuel_cell_stack_control.c",
+        "documentation": [
+          "ATA-24-60-00-SWDOC-009_ARCHITECTURE.md",
+          "ATA-24-60-00-SWDOC-009_REQUIREMENTS.md",
+          "ATA-24-60-00-SWDOC-009_DESIGN_DESCRIPTION.md",
+          "ATA-24-60-00-SWDOC-009_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-60-00-SWTEST-009_TEST_SUITE/",
+        "config": "ATA-24-60-00-SWCFG-009_CONFIG.json",
+        "sidecar": "ATA-24-60-00-SW-009_fuel_cell_stack_control.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2460010",
+      "ata_code": "ATA-24-60",
+      "part_number": "ATA-24-60-00-SW-010",
+      "name": "power_conditioning_unit",
+      "title": "Fuel-Cell Power Conditioning SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-60-00-SW-010_power_conditioning_unit.c",
+        "documentation": [
+          "ATA-24-60-00-SWDOC-010_ARCHITECTURE.md",
+          "ATA-24-60-00-SWDOC-010_REQUIREMENTS.md",
+          "ATA-24-60-00-SWDOC-010_DESIGN_DESCRIPTION.md",
+          "ATA-24-60-00-SWDOC-010_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-60-00-SWTEST-010_TEST_SUITE/",
+        "config": "ATA-24-60-00-SWCFG-010_CONFIG.json",
+        "sidecar": "ATA-24-60-00-SW-010_power_conditioning_unit.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2460011",
+      "ata_code": "ATA-24-60",
+      "part_number": "ATA-24-60-00-SW-011",
+      "name": "bop_diagnostics",
+      "title": "BOP Diagnostics & Predictive Maintenance SW",
+      "language": "py",
+      "dal_level": "B",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-60-00-SW-011_bop_diagnostics.py",
+        "documentation": [
+          "ATA-24-60-00-SWDOC-011_ARCHITECTURE.md",
+          "ATA-24-60-00-SWDOC-011_REQUIREMENTS.md",
+          "ATA-24-60-00-SWDOC-011_DESIGN_DESCRIPTION.md",
+          "ATA-24-60-00-SWDOC-011_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-60-00-SWTEST-011_TEST_SUITE/",
+        "config": "ATA-24-60-00-SWCFG-011_CONFIG.json",
+        "sidecar": "ATA-24-60-00-SW-011_bop_diagnostics.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2460012",
+      "ata_code": "ATA-24-60",
+      "part_number": "ATA-24-60-00-SW-012",
+      "name": "h2_safety_management",
+      "title": "H\u2082 Safety Management Software",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-60-00-SW-012_h2_safety_management.c",
+        "documentation": [
+          "ATA-24-60-00-SWDOC-012_ARCHITECTURE.md",
+          "ATA-24-60-00-SWDOC-012_REQUIREMENTS.md",
+          "ATA-24-60-00-SWDOC-012_DESIGN_DESCRIPTION.md",
+          "ATA-24-60-00-SWDOC-012_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-60-00-SWTEST-012_TEST_SUITE/",
+        "config": "ATA-24-60-00-SWCFG-012_CONFIG.json",
+        "sidecar": "ATA-24-60-00-SW-012_h2_safety_management.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2460013",
+      "ata_code": "ATA-24-60",
+      "part_number": "ATA-24-60-00-SW-013",
+      "name": "fc_hil_simulator",
+      "title": "Fuel-Cell HIL / Simulator SW",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-60-00-SW-013_fc_hil_simulator.py",
+        "documentation": [
+          "ATA-24-60-00-SWDOC-013_ARCHITECTURE.md",
+          "ATA-24-60-00-SWDOC-013_REQUIREMENTS.md",
+          "ATA-24-60-00-SWDOC-013_DESIGN_DESCRIPTION.md",
+          "ATA-24-60-00-SWDOC-013_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-60-00-SWTEST-013_TEST_SUITE/",
+        "config": "ATA-24-60-00-SWCFG-013_CONFIG.json",
+        "sidecar": "ATA-24-60-00-SW-013_fc_hil_simulator.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2460014",
+      "ata_code": "ATA-24-60",
+      "part_number": "ATA-24-60-00-SW-014",
+      "name": "data_logger_telemetry",
+      "title": "Fuel-Cell Data Logger & Telemetry SW",
+      "language": "c",
+      "dal_level": "C",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-60-00-SW-014_data_logger_telemetry.c",
+        "documentation": [
+          "ATA-24-60-00-SWDOC-014_ARCHITECTURE.md",
+          "ATA-24-60-00-SWDOC-014_REQUIREMENTS.md",
+          "ATA-24-60-00-SWDOC-014_DESIGN_DESCRIPTION.md",
+          "ATA-24-60-00-SWDOC-014_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-60-00-SWTEST-014_TEST_SUITE/",
+        "config": "ATA-24-60-00-SWCFG-014_CONFIG.json",
+        "sidecar": "ATA-24-60-00-SW-014_data_logger_telemetry.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2433009",
+      "ata_code": "ATA-24-33",
+      "part_number": "ATA-24-33-00-SW-009",
+      "name": "co2_module_control",
+      "title": "Solid-CO\u2082 Module Control SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-33-00-SW-009_co2_module_control.c",
+        "documentation": [
+          "ATA-24-33-00-SWDOC-009_ARCHITECTURE.md",
+          "ATA-24-33-00-SWDOC-009_REQUIREMENTS.md",
+          "ATA-24-33-00-SWDOC-009_DESIGN_DESCRIPTION.md",
+          "ATA-24-33-00-SWDOC-009_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-33-00-SWTEST-009_TEST_SUITE/",
+        "config": "ATA-24-33-00-SWCFG-009_CONFIG.json",
+        "sidecar": "ATA-24-33-00-SW-009_co2_module_control.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2433010",
+      "ata_code": "ATA-24-33",
+      "part_number": "ATA-24-33-00-SW-010",
+      "name": "sorbent_health_management",
+      "title": "Sorbent Health & Life Management SW",
+      "language": "py",
+      "dal_level": "B",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-33-00-SW-010_sorbent_health_management.py",
+        "documentation": [
+          "ATA-24-33-00-SWDOC-010_ARCHITECTURE.md",
+          "ATA-24-33-00-SWDOC-010_REQUIREMENTS.md",
+          "ATA-24-33-00-SWDOC-010_DESIGN_DESCRIPTION.md",
+          "ATA-24-33-00-SWDOC-010_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-33-00-SWTEST-010_TEST_SUITE/",
+        "config": "ATA-24-33-00-SWCFG-010_CONFIG.json",
+        "sidecar": "ATA-24-33-00-SW-010_sorbent_health_management.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2433011",
+      "ata_code": "ATA-24-33",
+      "part_number": "ATA-24-33-00-SW-011",
+      "name": "co2_storage_compression",
+      "title": "CO\u2082 Storage & Compression Control SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-33-00-SW-011_co2_storage_compression.c",
+        "documentation": [
+          "ATA-24-33-00-SWDOC-011_ARCHITECTURE.md",
+          "ATA-24-33-00-SWDOC-011_REQUIREMENTS.md",
+          "ATA-24-33-00-SWDOC-011_DESIGN_DESCRIPTION.md",
+          "ATA-24-33-00-SWDOC-011_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-33-00-SWTEST-011_TEST_SUITE/",
+        "config": "ATA-24-33-00-SWCFG-011_CONFIG.json",
+        "sidecar": "ATA-24-33-00-SW-011_co2_storage_compression.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2433012",
+      "ata_code": "ATA-24-33",
+      "part_number": "ATA-24-33-00-SW-012",
+      "name": "co2_safety_venting",
+      "title": "CO\u2082 Safety & Venting Controller SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-33-00-SW-012_co2_safety_venting.c",
+        "documentation": [
+          "ATA-24-33-00-SWDOC-012_ARCHITECTURE.md",
+          "ATA-24-33-00-SWDOC-012_REQUIREMENTS.md",
+          "ATA-24-33-00-SWDOC-012_DESIGN_DESCRIPTION.md",
+          "ATA-24-33-00-SWDOC-012_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-33-00-SWTEST-012_TEST_SUITE/",
+        "config": "ATA-24-33-00-SWCFG-012_CONFIG.json",
+        "sidecar": "ATA-24-33-00-SW-012_co2_safety_venting.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2433013",
+      "ata_code": "ATA-24-33",
+      "part_number": "ATA-24-33-00-SW-013",
+      "name": "co2_hil_simulator",
+      "title": "CO\u2082 Lab Simulator / HIL SW",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-33-00-SW-013_co2_hil_simulator.py",
+        "documentation": [
+          "ATA-24-33-00-SWDOC-013_ARCHITECTURE.md",
+          "ATA-24-33-00-SWDOC-013_REQUIREMENTS.md",
+          "ATA-24-33-00-SWDOC-013_DESIGN_DESCRIPTION.md",
+          "ATA-24-33-00-SWDOC-013_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-33-00-SWTEST-013_TEST_SUITE/",
+        "config": "ATA-24-33-00-SWCFG-013_CONFIG.json",
+        "sidecar": "ATA-24-33-00-SW-013_co2_hil_simulator.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2433014",
+      "ata_code": "ATA-24-33",
+      "part_number": "ATA-24-33-00-SW-014",
+      "name": "dpp_integration",
+      "title": "CO\u2082 Reporting & DPP Integration SW",
+      "language": "py",
+      "dal_level": "C",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-33-00-SW-014_dpp_integration.py",
+        "documentation": [
+          "ATA-24-33-00-SWDOC-014_ARCHITECTURE.md",
+          "ATA-24-33-00-SWDOC-014_REQUIREMENTS.md",
+          "ATA-24-33-00-SWDOC-014_DESIGN_DESCRIPTION.md",
+          "ATA-24-33-00-SWDOC-014_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-33-00-SWTEST-014_TEST_SUITE/",
+        "config": "ATA-24-33-00-SWCFG-014_CONFIG.json",
+        "sidecar": "ATA-24-33-00-SW-014_dpp_integration.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2434008",
+      "ata_code": "ATA-24-34",
+      "part_number": "ATA-24-34-00-SW-008",
+      "name": "loop_controller",
+      "title": "Endocircular Loop Controller SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-34-00-SW-008_loop_controller.c",
+        "documentation": [
+          "ATA-24-34-00-SWDOC-008_ARCHITECTURE.md",
+          "ATA-24-34-00-SWDOC-008_REQUIREMENTS.md",
+          "ATA-24-34-00-SWDOC-008_DESIGN_DESCRIPTION.md",
+          "ATA-24-34-00-SWDOC-008_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-34-00-SWTEST-008_TEST_SUITE/",
+        "config": "ATA-24-34-00-SWCFG-008_CONFIG.json",
+        "sidecar": "ATA-24-34-00-SW-008_loop_controller.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2434009",
+      "ata_code": "ATA-24-34",
+      "part_number": "ATA-24-34-00-SW-009",
+      "name": "thermal_scheduler",
+      "title": "Thermal Energy Scheduler SW",
+      "language": "py",
+      "dal_level": "B",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-34-00-SW-009_thermal_scheduler.py",
+        "documentation": [
+          "ATA-24-34-00-SWDOC-009_ARCHITECTURE.md",
+          "ATA-24-34-00-SWDOC-009_REQUIREMENTS.md",
+          "ATA-24-34-00-SWDOC-009_DESIGN_DESCRIPTION.md",
+          "ATA-24-34-00-SWDOC-009_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-34-00-SWTEST-009_TEST_SUITE/",
+        "config": "ATA-24-34-00-SWCFG-009_CONFIG.json",
+        "sidecar": "ATA-24-34-00-SW-009_thermal_scheduler.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2434010",
+      "ata_code": "ATA-24-34",
+      "part_number": "ATA-24-34-00-SW-010",
+      "name": "recharge_protocol",
+      "title": "Recharge Interface Protocol Stack",
+      "language": "c",
+      "dal_level": "B",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-34-00-SW-010_recharge_protocol.c",
+        "documentation": [
+          "ATA-24-34-00-SWDOC-010_ARCHITECTURE.md",
+          "ATA-24-34-00-SWDOC-010_REQUIREMENTS.md",
+          "ATA-24-34-00-SWDOC-010_DESIGN_DESCRIPTION.md",
+          "ATA-24-34-00-SWDOC-010_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-34-00-SWTEST-010_TEST_SUITE/",
+        "config": "ATA-24-34-00-SWCFG-010_CONFIG.json",
+        "sidecar": "ATA-24-34-00-SW-010_recharge_protocol.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2434011",
+      "ata_code": "ATA-24-34",
+      "part_number": "ATA-24-34-00-SW-011",
+      "name": "loop_fdi",
+      "title": "Loop Fault Detection & Isolation SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-34-00-SW-011_loop_fdi.c",
+        "documentation": [
+          "ATA-24-34-00-SWDOC-011_ARCHITECTURE.md",
+          "ATA-24-34-00-SWDOC-011_REQUIREMENTS.md",
+          "ATA-24-34-00-SWDOC-011_DESIGN_DESCRIPTION.md",
+          "ATA-24-34-00-SWDOC-011_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-34-00-SWTEST-011_TEST_SUITE/",
+        "config": "ATA-24-34-00-SWCFG-011_CONFIG.json",
+        "sidecar": "ATA-24-34-00-SW-011_loop_fdi.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2434012",
+      "ata_code": "ATA-24-34",
+      "part_number": "ATA-24-34-00-SW-012",
+      "name": "loop_hil_automation",
+      "title": "Loop HIL & Bench Automation SW",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-34-00-SW-012_loop_hil_automation.py",
+        "documentation": [
+          "ATA-24-34-00-SWDOC-012_ARCHITECTURE.md",
+          "ATA-24-34-00-SWDOC-012_REQUIREMENTS.md",
+          "ATA-24-34-00-SWDOC-012_DESIGN_DESCRIPTION.md",
+          "ATA-24-34-00-SWDOC-012_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-34-00-SWTEST-012_TEST_SUITE/",
+        "config": "ATA-24-34-00-SWCFG-012_CONFIG.json",
+        "sidecar": "ATA-24-34-00-SW-012_loop_hil_automation.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2434013",
+      "ata_code": "ATA-24-34",
+      "part_number": "ATA-24-34-00-SW-013",
+      "name": "loop_data_logger",
+      "title": "Loop Data Logger & Maintenance SW",
+      "language": "c",
+      "dal_level": "C",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-34-00-SW-013_loop_data_logger.c",
+        "documentation": [
+          "ATA-24-34-00-SWDOC-013_ARCHITECTURE.md",
+          "ATA-24-34-00-SWDOC-013_REQUIREMENTS.md",
+          "ATA-24-34-00-SWDOC-013_DESIGN_DESCRIPTION.md",
+          "ATA-24-34-00-SWDOC-013_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-34-00-SWTEST-013_TEST_SUITE/",
+        "config": "ATA-24-34-00-SWCFG-013_CONFIG.json",
+        "sidecar": "ATA-24-34-00-SW-013_loop_data_logger.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2434014",
+      "ata_code": "ATA-24-34",
+      "part_number": "ATA-24-34-00-SW-014",
+      "name": "ems_integration",
+      "title": "Recharge\u2192EMS Integration SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-34-00-SW-014_ems_integration.c",
+        "documentation": [
+          "ATA-24-34-00-SWDOC-014_ARCHITECTURE.md",
+          "ATA-24-34-00-SWDOC-014_REQUIREMENTS.md",
+          "ATA-24-34-00-SWDOC-014_DESIGN_DESCRIPTION.md",
+          "ATA-24-34-00-SWDOC-014_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-34-00-SWTEST-014_TEST_SUITE/",
+        "config": "ATA-24-34-00-SWCFG-014_CONFIG.json",
+        "sidecar": "ATA-24-34-00-SW-014_ems_integration.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445010",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-010",
+      "name": "ewis_monitoring_ecu",
+      "title": "EWIS Monitoring ECU Software",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-010_ewis_monitoring_ecu.c",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-010_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-010_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-010_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-010_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-010_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-010_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-010_ewis_monitoring_ecu.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445011",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-011",
+      "name": "sensor_node_firmware",
+      "title": "EWIS Sensor Node Firmware",
+      "language": "c",
+      "dal_level": "B",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-011_sensor_node_firmware.c",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-011_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-011_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-011_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-011_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-011_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-011_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-011_sensor_node_firmware.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445012",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-012",
+      "name": "ewis_gateway",
+      "title": "EWIS Gateway Protocol Stack",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-012_ewis_gateway.c",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-012_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-012_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-012_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-012_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-012_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-012_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-012_ewis_gateway.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445013",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-013",
+      "name": "ewis_analytics",
+      "title": "EWIS Analytics & Trending Platform",
+      "language": "py",
+      "dal_level": "C",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-013_ewis_analytics.py",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-013_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-013_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-013_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-013_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-013_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-013_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-013_ewis_analytics.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445014",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-014",
+      "name": "maintenance_tools",
+      "title": "EWIS Maintenance & Test Tools SW",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-014_maintenance_tools.py",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-014_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-014_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-014_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-014_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-014_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-014_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-014_maintenance_tools.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445015",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-015",
+      "name": "fault_injection_hil",
+      "title": "EWIS Fault Injection & HIL Tools",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-015_fault_injection_hil.py",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-015_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-015_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-015_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-015_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-015_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-015_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-015_fault_injection_hil.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445016",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-016",
+      "name": "cybersecurity_module",
+      "title": "EWIS Cybersecurity & Secure Boot Module",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-016_cybersecurity_module.c",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-016_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-016_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-016_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-016_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-016_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-016_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-016_cybersecurity_module.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2445017",
+      "ata_code": "ATA-24-45",
+      "part_number": "ATA-24-45-00-SW-017",
+      "name": "update_manager",
+      "title": "EWIS Update & Patch Manager",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-45-00-SW-017_update_manager.c",
+        "documentation": [
+          "ATA-24-45-00-SWDOC-017_ARCHITECTURE.md",
+          "ATA-24-45-00-SWDOC-017_REQUIREMENTS.md",
+          "ATA-24-45-00-SWDOC-017_DESIGN_DESCRIPTION.md",
+          "ATA-24-45-00-SWDOC-017_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-45-00-SWTEST-017_TEST_SUITE/",
+        "config": "ATA-24-45-00-SWCFG-017_CONFIG.json",
+        "sidecar": "ATA-24-45-00-SW-017_update_manager.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2499008",
+      "ata_code": "ATA-24-99",
+      "part_number": "ATA-24-99-00-SW-008",
+      "name": "system_health_prognostics",
+      "title": "System Health & Prognostics SW",
+      "language": "py",
+      "dal_level": "B",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-99-00-SW-008_system_health_prognostics.py",
+        "documentation": [
+          "ATA-24-99-00-SWDOC-008_ARCHITECTURE.md",
+          "ATA-24-99-00-SWDOC-008_REQUIREMENTS.md",
+          "ATA-24-99-00-SWDOC-008_DESIGN_DESCRIPTION.md",
+          "ATA-24-99-00-SWDOC-008_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-99-00-SWTEST-008_TEST_SUITE/",
+        "config": "ATA-24-99-00-SWCFG-008_CONFIG.json",
+        "sidecar": "ATA-24-99-00-SW-008_system_health_prognostics.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2499009",
+      "ata_code": "ATA-24-99",
+      "part_number": "ATA-24-99-00-SW-009",
+      "name": "key_management",
+      "title": "Cybersecurity & Key Management SW",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-99-00-SW-009_key_management.c",
+        "documentation": [
+          "ATA-24-99-00-SWDOC-009_ARCHITECTURE.md",
+          "ATA-24-99-00-SWDOC-009_REQUIREMENTS.md",
+          "ATA-24-99-00-SWDOC-009_DESIGN_DESCRIPTION.md",
+          "ATA-24-99-00-SWDOC-009_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-99-00-SWTEST-009_TEST_SUITE/",
+        "config": "ATA-24-99-00-SWCFG-009_CONFIG.json",
+        "sidecar": "ATA-24-99-00-SW-009_key_management.c.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2499010",
+      "ata_code": "ATA-24-99",
+      "part_number": "ATA-24-99-00-SW-010",
+      "name": "hil_orchestrator",
+      "title": "HIL Orchestrator / Test Automation SW",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-99-00-SW-010_hil_orchestrator.py",
+        "documentation": [
+          "ATA-24-99-00-SWDOC-010_ARCHITECTURE.md",
+          "ATA-24-99-00-SWDOC-010_REQUIREMENTS.md",
+          "ATA-24-99-00-SWDOC-010_DESIGN_DESCRIPTION.md",
+          "ATA-24-99-00-SWDOC-010_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-99-00-SWTEST-010_TEST_SUITE/",
+        "config": "ATA-24-99-00-SWCFG-010_CONFIG.json",
+        "sidecar": "ATA-24-99-00-SW-010_hil_orchestrator.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2499011",
+      "ata_code": "ATA-24-99",
+      "part_number": "ATA-24-99-00-SW-011",
+      "name": "compliance_tools",
+      "title": "Compliance & Traceability Tooling",
+      "language": "py",
+      "dal_level": "N/A",
+      "certifiable": false,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-99-00-SW-011_compliance_tools.py",
+        "documentation": [
+          "ATA-24-99-00-SWDOC-011_ARCHITECTURE.md",
+          "ATA-24-99-00-SWDOC-011_REQUIREMENTS.md",
+          "ATA-24-99-00-SWDOC-011_DESIGN_DESCRIPTION.md",
+          "ATA-24-99-00-SWDOC-011_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-99-00-SWTEST-011_TEST_SUITE/",
+        "config": "ATA-24-99-00-SWCFG-011_CONFIG.json",
+        "sidecar": "ATA-24-99-00-SW-011_compliance_tools.py.meta.yaml"
+      }
+    },
+    {
+      "component_id": "2499012",
+      "ata_code": "ATA-24-99",
+      "part_number": "ATA-24-99-00-SW-012",
+      "name": "integration_middleware",
+      "title": "Integration Middleware",
+      "language": "c",
+      "dal_level": "A",
+      "certifiable": true,
+      "version": "1.0.0",
+      "status": "Under Development",
+      "files": {
+        "source": "ATA-24-99-00-SW-012_integration_middleware.c",
+        "documentation": [
+          "ATA-24-99-00-SWDOC-012_ARCHITECTURE.md",
+          "ATA-24-99-00-SWDOC-012_REQUIREMENTS.md",
+          "ATA-24-99-00-SWDOC-012_DESIGN_DESCRIPTION.md",
+          "ATA-24-99-00-SWDOC-012_DO178C_PLAN.md"
+        ],
+        "tests": "ATA-24-99-00-SWTEST-012_TEST_SUITE/",
+        "config": "ATA-24-99-00-SWCFG-012_CONFIG.json",
+        "sidecar": "ATA-24-99-00-SW-012_integration_middleware.c.meta.yaml"
+      }
+    }
+  ]
+}

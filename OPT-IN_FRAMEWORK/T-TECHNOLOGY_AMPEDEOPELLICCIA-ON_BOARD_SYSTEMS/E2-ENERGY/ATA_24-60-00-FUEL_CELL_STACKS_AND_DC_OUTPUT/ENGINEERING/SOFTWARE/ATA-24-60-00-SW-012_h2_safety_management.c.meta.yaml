@@ -1,0 +1,59 @@
+schema_version: "1.1"
+id: "ATA-24-60-00-SW-012"
+document:
+  type: "SOFTWARE"
+  title: "H₂ Safety Management Software"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-60"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "E2-ENERGY electrical power system"
+  mod_status: []
+safety:
+  criticality: "Critical"
+  hazards:
+    - "Power system failure"
+    - "Loss of redundancy"
+  safety_impact: "Catastrophic"
+  training_required: true
+  qualification_required: "DO-178C DAL-A"
+software:
+  language: "c"
+  dal_level: "A"
+  certifiable: true
+  functions:
+    - "h2_leak_detection"
+    - "h2_concentration_monitoring"
+    - "h2_purge_control"
+    - "h2_valve_interlock"
+    - "h2_emergency_shutdown"
+  dependencies:
+    - "Hardware Abstraction Layer"
+    - "RTOS"
+  test_coverage_target: "100%"
+approvals:
+  - authority: "Chief Software Engineer"
+    name: "Amedeo Pelliccia"
+    status: "Under Review"
+    date: "2025-10-31"
+traceability:
+  source_documents:
+    - "ATA-24-60-00-SWDOC-012_REQUIREMENTS"
+    - "System Requirements Specification"
+  crossrefs:
+    - "ATA-24-00-00"
+  requirements:
+    - "FR-24-60-012-001"
+    - "FR-24-60-012-002"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "TBD"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial version"

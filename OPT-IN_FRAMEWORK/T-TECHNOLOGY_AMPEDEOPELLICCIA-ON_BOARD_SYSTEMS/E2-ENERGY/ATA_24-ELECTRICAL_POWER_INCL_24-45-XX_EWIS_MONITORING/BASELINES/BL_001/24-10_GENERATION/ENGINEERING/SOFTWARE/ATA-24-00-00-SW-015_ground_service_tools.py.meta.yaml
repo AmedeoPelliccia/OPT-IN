@@ -1,0 +1,57 @@
+schema_version: "1.1"
+id: "ATA-24-00-00-SW-015"
+document:
+  type: "SOFTWARE"
+  title: "Ground/Service Tools & SW"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-00"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "E2-ENERGY electrical power system"
+  mod_status: []
+safety:
+  criticality: "Medium"
+  hazards:
+    - "Power system failure"
+    - "Loss of redundancy"
+  safety_impact: "Major"
+  training_required: true
+  qualification_required: "DO-178C DAL-N/A"
+software:
+  language: "py"
+  dal_level: "N/A"
+  certifiable: false
+  functions:
+    - "tool_configurator"
+    - "tool_diagnostic"
+    - "tool_data_downloader"
+  dependencies:
+    - "Hardware Abstraction Layer"
+    - "RTOS"
+  test_coverage_target: "80%"
+approvals:
+  - authority: "Chief Software Engineer"
+    name: "Amedeo Pelliccia"
+    status: "Under Review"
+    date: "2025-10-31"
+traceability:
+  source_documents:
+    - "ATA-24-00-00-SWDOC-015_REQUIREMENTS"
+    - "System Requirements Specification"
+  crossrefs:
+    - "ATA-24-00-00"
+  requirements:
+    - "FR-24-00-015-001"
+    - "FR-24-00-015-002"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "TBD"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial version"
