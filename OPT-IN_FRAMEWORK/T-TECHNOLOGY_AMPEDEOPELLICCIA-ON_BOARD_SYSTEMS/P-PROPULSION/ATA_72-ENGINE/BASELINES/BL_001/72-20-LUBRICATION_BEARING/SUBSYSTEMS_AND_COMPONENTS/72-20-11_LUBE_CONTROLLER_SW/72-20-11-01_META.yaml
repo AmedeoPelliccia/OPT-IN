@@ -1,0 +1,10 @@
+---
+title: LUBE_CONTROLLER_SW
+ata_code: 72-20-11
+description: LUBE_CONTROLLER_SW Software Component
+type: software
+version: 1.0.0
+date_created: 2025-10-31
+status: initial
+dal_level: B
+do178c_compliance: Level B
