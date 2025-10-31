@@ -218,7 +218,7 @@
           "type": "string",
           "description": "Plan for Software Aspects of Certification reference"
         },
-        "scd_ref": {
+        "sci_ref": {
           "type": "string",
           "description": "Software Configuration Index reference"
         },
