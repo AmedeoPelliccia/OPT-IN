@@ -9,7 +9,6 @@ a cryptographic hash of all relevant input files and configurations.
 
 import hashlib
 import json
-import os
 import sys
 from pathlib import Path
 from typing import List, Dict, Any

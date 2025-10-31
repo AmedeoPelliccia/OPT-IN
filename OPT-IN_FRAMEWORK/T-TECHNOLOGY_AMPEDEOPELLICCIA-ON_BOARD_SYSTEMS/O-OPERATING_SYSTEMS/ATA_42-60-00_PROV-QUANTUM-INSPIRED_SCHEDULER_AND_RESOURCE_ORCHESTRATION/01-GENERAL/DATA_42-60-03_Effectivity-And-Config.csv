@@ -1,5 +1,5 @@
 Configuration ID,Aircraft Type,MSN Range,Software Version,Hardware Platform,Effectivity Date,Status,Notes
-CFG-QS-001,AMPEL360,ALL,0.1.0,IMA-CORE-V1,2025-10-30,Development,Initial development configuration
+CFG-QS-001,AMPEL360,ALL,0.1.0,IMA-CORE-V1,2025-10-31,Development,Initial development configuration
 CFG-QS-002,AMPEL360,ALL,0.2.0,IMA-CORE-V1,TBD,Planned,Alpha release target
 CFG-QS-003,AMPEL360,Prototype,0.3.0,IMA-CORE-V1,TBD,Planned,Beta release for HIL testing
 CFG-QS-004,AMPEL360,001-050,1.0.0,IMA-CORE-V2,TBD,Planned,Production release candidate

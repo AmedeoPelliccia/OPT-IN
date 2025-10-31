@@ -52,7 +52,7 @@ fi
 # Run benchmark suite
 echo "" | tee -a "$LOG_FILE"
 echo "--- Running Benchmark Suite ---" | tee -a "$LOG_FILE"
-BENCH_LOG="$ROOT_DIR/10-ARTIFACTS_AND_LOGS/logs/bench/bench-$(date +%Y%m%d).log"
+BENCH_LOG="$ROOT_DIR/10-ARTIFACTS_AND_LOGS/logs/bench/bench-$(date +%Y-%m-%d_%H%M%S).log"
 mkdir -p "$(dirname "$BENCH_LOG")"
 
 if python3 "$SIM_DIR/scripts/bench_runner.py" >> "$BENCH_LOG" 2>&1; then
