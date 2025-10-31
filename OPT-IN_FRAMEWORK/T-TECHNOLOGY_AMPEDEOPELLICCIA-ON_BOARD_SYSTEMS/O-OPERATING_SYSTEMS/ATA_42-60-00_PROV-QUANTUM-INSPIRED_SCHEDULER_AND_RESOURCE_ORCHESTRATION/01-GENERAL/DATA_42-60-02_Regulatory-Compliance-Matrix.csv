@@ -1,0 +1,23 @@
+Requirement ID,Standard,Section,Description,Compliance Status,Evidence,Notes
+REQ-QS-001,DO-178C,6.3.1,Software planning process,In Progress,QS-PLAN-001,Initial planning underway
+REQ-QS-002,DO-178C,6.3.2,Software development process,In Progress,QS-DEV-001,Algorithm design phase
+REQ-QS-003,DO-178C,6.3.3,Software verification process,Planned,QS-VER-001,V&V plan under development
+REQ-QS-004,DO-178C,6.3.4,Software configuration management,In Progress,Git + CI/CD,Version control established
+REQ-QS-005,DO-178C,6.3.5,Software quality assurance,Planned,QS-QA-001,QA plan pending
+REQ-QS-006,DO-178C,11.1,Objectives for Level A software,Planned,DO-178C Compliance Matrix,To be documented
+REQ-QS-007,DO-297,5.2,IMA system architecture,In Progress,QS-ARCH-001,Architecture document in progress
+REQ-QS-008,DO-297,5.3,Partition scheduling,In Progress,QS-SCHED-001,Core scheduler design
+REQ-QS-009,DO-297,5.4,Resource management,In Progress,QS-RES-001,Resource model defined
+REQ-QS-010,DO-297,6.2,Safety assessment,Planned,QS-SAFETY-001,Hazard analysis pending
+REQ-QS-011,ARINC 653,2.1,Partition management services,In Progress,Core OS Interface,Interface specification complete
+REQ-QS-012,ARINC 653,2.2,Time management services,In Progress,Core OS Interface,Timing services integrated
+REQ-QS-013,ARINC 653,2.3,Inter-partition communication,In Progress,Core OS Interface,IPC interface defined
+REQ-QS-014,ARINC 653,3.1,Spatial isolation,In Progress,Memory Protection,Hardware MPU integration
+REQ-QS-015,ARINC 653,3.2,Temporal isolation,In Progress,Scheduler Design,Schedule enforcement logic
+REQ-QS-016,DO-254,5.1,Hardware design lifecycle,N/A,N/A,Software-only component
+REQ-QS-017,DO-330,5.1,Tool qualification planning,Planned,QS-TOOL-001,Tool qualification plan pending
+REQ-QS-018,DO-330,5.2,Tool operational requirements,Planned,QS-TOOL-001,Simulation framework requirements
+REQ-QS-019,DO-160G,4.0,Environmental testing,Pending,N/A,HIL testing phase
+REQ-QS-020,ED-202A,4.2,MILS separation kernel,In Progress,Core OS Integration,Leveraging Core OS MILS features
+REQ-QS-021,ED-203,5.1,Security requirements,Planned,QS-SEC-001,Security analysis pending
+REQ-QS-022,ED-203,5.2,Cryptographic services,N/A,Core OS,Delegated to Core OS

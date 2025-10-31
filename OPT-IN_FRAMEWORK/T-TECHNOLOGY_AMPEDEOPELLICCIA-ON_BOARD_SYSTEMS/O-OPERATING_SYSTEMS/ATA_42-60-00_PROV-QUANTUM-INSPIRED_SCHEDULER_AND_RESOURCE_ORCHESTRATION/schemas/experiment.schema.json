@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.org/schemas/ata42-60/experiment.schema.json",
+  "title": "ATA 42-60-00 Simulation Experiment Schema",
+  "description": "Schema for simulation experiment specifications",
+  "type": "object",
+  "required": ["experiment_id", "version", "scenario", "workload", "metrics"],
+  "properties": {
+    "experiment_id": {
+      "type": "string",
+      "description": "Unique experiment identifier",
+      "pattern": "^EXP-[A-Z0-9-]+$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable experiment name"
+    },
+    "description": {
+      "type": "string"
+    },
+    "scenario": {
+      "type": "object",
+      "required": ["type", "duration_ms"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["steady_state", "load_variation", "fault_injection", "worst_case", "typical_flight"]
+        },
+        "duration_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "flight_phase": {
+          "type": "string",
+          "enum": ["preflight", "taxi", "takeoff", "climb", "cruise", "descent", "approach", "landing"]
+        }
+      }
+    },
+    "workload": {
+      "type": "object",
+      "required": ["partitions"],
+      "properties": {
+        "partitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["partition_id", "task_set"],
+            "properties": {
+              "partition_id": {"type": "string"},
+              "task_set": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["task_id", "wcet_ms", "period_ms"],
+                  "properties": {
+                    "task_id": {"type": "string"},
+                    "wcet_ms": {"type": "number"},
+                    "period_ms": {"type": "number"},
+                    "deadline_ms": {"type": "number"},
+                    "priority": {"type": "integer"}
+                  }
+                }
+              }
+            }
+          }
+        },
+        "resource_profile": {
+          "type": "object",
+          "properties": {
+            "cpu_utilization_target": {"type": "number", "minimum": 0, "maximum": 100},
+            "memory_usage_mb": {"type": "number"},
+            "io_load_mbps": {"type": "number"}
+          }
+        }
+      }
+    },
+    "scheduler_config": {
+      "$ref": "scheduler.schema.json"
+    },
+    "policies": {
+      "type": "array",
+      "items": {
+        "$ref": "policy.schema.json"
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "description": "Metrics to collect during experiment",
+      "items": {
+        "type": "object",
+        "required": ["metric_id", "type"],
+        "properties": {
+          "metric_id": {"type": "string"},
+          "type": {
+            "type": "string",
+            "enum": ["schedule_quality", "cpu_utilization", "deadline_misses", "optimization_time", "power_consumption", "thermal", "fairness_index"]
+          },
+          "sampling_interval_ms": {"type": "number"},
+          "aggregation": {
+            "type": "string",
+            "enum": ["mean", "median", "min", "max", "stddev", "p95", "p99"]
+          }
+        }
+      }
+    },
+    "validation_criteria": {
+      "type": "object",
+      "properties": {
+        "max_deadline_misses": {"type": "integer"},
+        "min_schedule_quality": {"type": "number"},
+        "max_optimization_time_ms": {"type": "number"},
+        "required_fairness_index": {"type": "number"}
+      }
+    },
+    "reproducibility": {
+      "type": "object",
+      "properties": {
+        "random_seed": {"type": "integer"},
+        "deterministic": {"type": "boolean"},
+        "environment_hash": {"type": "string"}
+      }
+    }
+  }
+}

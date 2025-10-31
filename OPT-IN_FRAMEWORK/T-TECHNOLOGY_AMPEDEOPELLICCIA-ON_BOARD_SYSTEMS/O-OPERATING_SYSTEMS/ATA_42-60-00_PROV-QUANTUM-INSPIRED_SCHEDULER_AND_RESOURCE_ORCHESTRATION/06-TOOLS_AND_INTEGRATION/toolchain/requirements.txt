@@ -1,0 +1,5 @@
+# Python dependencies for ATA 42-60-00 Quantum Scheduler
+# To be populated during development
+numpy>=1.20.0
+scipy>=1.7.0
+matplotlib>=3.4.0

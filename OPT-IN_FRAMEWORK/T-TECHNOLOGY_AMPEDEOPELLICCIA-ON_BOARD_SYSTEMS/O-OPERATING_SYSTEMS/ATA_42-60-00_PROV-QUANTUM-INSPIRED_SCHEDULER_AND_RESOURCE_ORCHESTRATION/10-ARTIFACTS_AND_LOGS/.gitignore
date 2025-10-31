@@ -1,0 +1,9 @@
+# Ignore all content in artifacts and logs
+artifacts/*
+logs/*
+
+# But keep directory structure
+!artifacts/.gitkeep
+!logs/.gitkeep
+!logs/sim_runs/.gitkeep
+!logs/bench/.gitkeep
