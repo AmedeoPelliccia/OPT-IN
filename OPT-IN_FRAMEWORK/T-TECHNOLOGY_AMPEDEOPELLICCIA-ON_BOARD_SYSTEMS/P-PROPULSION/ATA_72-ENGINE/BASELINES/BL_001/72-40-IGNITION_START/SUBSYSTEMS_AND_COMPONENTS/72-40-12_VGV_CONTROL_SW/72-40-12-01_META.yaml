@@ -1,0 +1,10 @@
+---
+title: VGV_CONTROL_SW
+ata_code: 72-40-12
+description: VGV_CONTROL_SW Software Component
+type: software
+version: 1.0.0
+date_created: 2025-10-31
+status: initial
+dal_level: A/B
+do178c_compliance: Level A/B

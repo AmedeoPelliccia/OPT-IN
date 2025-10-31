@@ -1,0 +1,10 @@
+---
+title: HEALTH_LOGGER_SW
+ata_code: 72-00-11
+description: HEALTH_LOGGER_SW Software Component
+type: software
+version: 1.0.0
+date_created: 2025-10-31
+status: initial
+dal_level: B
+do178c_compliance: Level B

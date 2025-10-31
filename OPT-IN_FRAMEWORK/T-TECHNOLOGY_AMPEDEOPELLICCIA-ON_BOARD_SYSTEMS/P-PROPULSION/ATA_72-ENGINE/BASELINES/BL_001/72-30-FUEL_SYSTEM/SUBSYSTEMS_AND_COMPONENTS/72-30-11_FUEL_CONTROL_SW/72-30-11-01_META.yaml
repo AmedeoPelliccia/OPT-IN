@@ -1,0 +1,10 @@
+---
+title: FUEL_CONTROL_SW
+ata_code: 72-30-11
+description: FUEL_CONTROL_SW Software Component
+type: software
+version: 1.0.0
+date_created: 2025-10-31
+status: initial
+dal_level: A
+do178c_compliance: Level A
