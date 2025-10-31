@@ -1,0 +1,22 @@
+{
+  "ata_chapter": "24-33-00",
+  "title": "SOLID-STATE CO2 BATTERY MODULES",
+  "version": "1.0.0",
+  "date": "2025-10-31",
+  "status": "Provisional",
+  "regulatory_basis": [
+    "FAA Part 25.1351 - Electrical systems and equipment",
+    "FAA Part 25.1353 - Electrical equipment and installations",
+    "FAA Part 25.1355 - Distribution system",
+    "RTCA DO-160 - Environmental Conditions and Test Procedures",
+    "SAE AS50881 - Wiring Aerospace Vehicle"
+  ],
+  "cross_references": [
+    "ATA 24-30 - Electrical Power Distribution",
+    "ATA 24-40 - Electrical Protection",
+    "ATA 21 - Air Conditioning",
+    "ATA 31 - Instruments",
+    "ATA 45 - Monitoring Systems",
+    "ATA 46 - Information Systems"
+  ]
+}
