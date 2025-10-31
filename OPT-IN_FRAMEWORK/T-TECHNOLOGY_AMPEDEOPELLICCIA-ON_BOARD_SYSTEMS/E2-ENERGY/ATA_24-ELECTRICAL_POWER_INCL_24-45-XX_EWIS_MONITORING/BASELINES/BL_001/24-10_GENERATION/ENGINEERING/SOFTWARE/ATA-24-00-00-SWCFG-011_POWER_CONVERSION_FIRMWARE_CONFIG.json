@@ -1,0 +1,16 @@
+{
+  "component_id": "24-00011",
+  "version": "1.0.0",
+  "dal_level": "A",
+  "configuration": {
+    "sampling_rate_hz": 100,
+    "timeout_ms": 5000,
+    "retry_count": 3,
+    "log_level": "INFO"
+  },
+  "parameters": {
+    "threshold_high": 100.0,
+    "threshold_low": 10.0,
+    "hysteresis": 5.0
+  }
+}

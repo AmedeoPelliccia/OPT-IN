@@ -1,0 +1,53 @@
+schema_version: "1.1"
+id: "ATA-24-00-00-INDEX"
+document:
+  type: "INDEX"
+  title: "ATA-24-00 General Power Management - Software Component Index"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-00"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "ATA-24-00 Software Components"
+components:
+  - id: "ATA-24-00-00-SW-010"
+    title: "Energy Management System (EMS) Software"
+    file: "ATA-24-00-00-SW-010_energy_management_system.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-00-00-SW-011"
+    title: "Power Conversion Firmware"
+    file: "ATA-24-00-00-SW-011_power_conversion_firmware.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-00-00-SW-012"
+    title: "Battery Management System (BMS) Software"
+    file: "ATA-24-00-00-SW-012_battery_management_system.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-00-00-SW-013"
+    title: "Protections & Relay Logic Software"
+    file: "ATA-24-00-00-SW-013_protections_relay_logic.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-00-00-SW-014"
+    title: "Power Quality Monitoring Software"
+    file: "ATA-24-00-00-SW-014_power_quality_monitoring.c"
+    dal_level: "C"
+    certifiable: true
+  - id: "ATA-24-00-00-SW-015"
+    title: "Ground/Service Tools & SW"
+    file: "ATA-24-00-00-SW-015_ground_service_tools.py"
+    dal_level: "N/A"
+    certifiable: false
+
+integrity:
+  checksum_algorithm: "sha256"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial index creation"

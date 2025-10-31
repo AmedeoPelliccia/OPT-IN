@@ -1,0 +1,53 @@
+schema_version: "1.1"
+id: "ATA-24-60-00-INDEX"
+document:
+  type: "INDEX"
+  title: "ATA-24-60 Fuel Cell Stacks - Software Component Index"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-60"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "ATA-24-60 Software Components"
+components:
+  - id: "ATA-24-60-00-SW-009"
+    title: "Fuel-Cell Stack Control Software"
+    file: "ATA-24-60-00-SW-009_fuel_cell_stack_control.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-60-00-SW-010"
+    title: "Fuel-Cell Power Conditioning SW"
+    file: "ATA-24-60-00-SW-010_power_conditioning_unit.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-60-00-SW-011"
+    title: "BOP Diagnostics & Predictive Maintenance SW"
+    file: "ATA-24-60-00-SW-011_bop_diagnostics.py"
+    dal_level: "B"
+    certifiable: true
+  - id: "ATA-24-60-00-SW-012"
+    title: "H₂ Safety Management Software"
+    file: "ATA-24-60-00-SW-012_h2_safety_management.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-60-00-SW-013"
+    title: "Fuel-Cell HIL / Simulator SW"
+    file: "ATA-24-60-00-SW-013_fc_hil_simulator.py"
+    dal_level: "N/A"
+    certifiable: false
+  - id: "ATA-24-60-00-SW-014"
+    title: "Fuel-Cell Data Logger & Telemetry SW"
+    file: "ATA-24-60-00-SW-014_data_logger_telemetry.c"
+    dal_level: "C"
+    certifiable: true
+
+integrity:
+  checksum_algorithm: "sha256"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial index creation"

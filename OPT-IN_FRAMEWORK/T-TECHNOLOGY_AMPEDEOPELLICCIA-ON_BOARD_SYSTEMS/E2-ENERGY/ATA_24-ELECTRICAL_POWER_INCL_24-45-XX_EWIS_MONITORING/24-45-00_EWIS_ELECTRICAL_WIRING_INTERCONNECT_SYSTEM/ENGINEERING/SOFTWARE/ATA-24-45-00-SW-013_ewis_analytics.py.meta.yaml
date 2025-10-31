@@ -1,0 +1,58 @@
+schema_version: "1.1"
+id: "ATA-24-45-00-SW-013"
+document:
+  type: "SOFTWARE"
+  title: "EWIS Analytics & Trending Platform"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-45"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "E2-ENERGY electrical power system"
+  mod_status: []
+safety:
+  criticality: "Medium"
+  hazards:
+    - "Power system failure"
+    - "Loss of redundancy"
+  safety_impact: "Major"
+  training_required: true
+  qualification_required: "DO-178C DAL-C"
+software:
+  language: "py"
+  dal_level: "C"
+  certifiable: true
+  functions:
+    - "analytics_initialize"
+    - "trend_analysis"
+    - "anomaly_detection"
+    - "dashboard_update"
+  dependencies:
+    - "Hardware Abstraction Layer"
+    - "RTOS"
+  test_coverage_target: "80%"
+approvals:
+  - authority: "Chief Software Engineer"
+    name: "Amedeo Pelliccia"
+    status: "Under Review"
+    date: "2025-10-31"
+traceability:
+  source_documents:
+    - "ATA-24-45-00-SWDOC-013_REQUIREMENTS"
+    - "System Requirements Specification"
+  crossrefs:
+    - "ATA-24-00-00"
+  requirements:
+    - "FR-24-45-013-001"
+    - "FR-24-45-013-002"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "TBD"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial version"

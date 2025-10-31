@@ -1,0 +1,57 @@
+schema_version: "1.1"
+id: "ATA-24-45-00-SW-011"
+document:
+  type: "SOFTWARE"
+  title: "EWIS Sensor Node Firmware"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-45"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "E2-ENERGY electrical power system"
+  mod_status: []
+safety:
+  criticality: "High"
+  hazards:
+    - "Power system failure"
+    - "Loss of redundancy"
+  safety_impact: "Hazardous"
+  training_required: true
+  qualification_required: "DO-178C DAL-B"
+software:
+  language: "c"
+  dal_level: "B"
+  certifiable: true
+  functions:
+    - "node_initialize"
+    - "sensor_processing"
+    - "node_communication"
+  dependencies:
+    - "Hardware Abstraction Layer"
+    - "RTOS"
+  test_coverage_target: "90%"
+approvals:
+  - authority: "Chief Software Engineer"
+    name: "Amedeo Pelliccia"
+    status: "Under Review"
+    date: "2025-10-31"
+traceability:
+  source_documents:
+    - "ATA-24-45-00-SWDOC-011_REQUIREMENTS"
+    - "System Requirements Specification"
+  crossrefs:
+    - "ATA-24-00-00"
+  requirements:
+    - "FR-24-45-011-001"
+    - "FR-24-45-011-002"
+integrity:
+  checksum_algorithm: "sha256"
+  checksum: "TBD"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial version"

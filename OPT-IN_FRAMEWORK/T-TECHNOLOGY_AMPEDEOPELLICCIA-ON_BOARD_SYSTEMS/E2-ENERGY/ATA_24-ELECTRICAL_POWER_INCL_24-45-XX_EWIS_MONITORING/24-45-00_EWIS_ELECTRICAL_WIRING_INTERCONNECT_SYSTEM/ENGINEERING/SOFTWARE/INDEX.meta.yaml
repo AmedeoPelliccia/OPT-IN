@@ -1,0 +1,63 @@
+schema_version: "1.1"
+id: "ATA-24-45-00-INDEX"
+document:
+  type: "INDEX"
+  title: "ATA-24-45 EWIS Monitoring - Software Component Index"
+  revision: "1.0.0"
+  effective_date: "2025-10-31"
+  chapter: "ATA-24-45"
+  section: "SOFTWARE"
+effectivity:
+  msn: "ALL"
+  configuration: "AMPEL360"
+  scope: "ATA-24-45 Software Components"
+components:
+  - id: "ATA-24-45-00-SW-010"
+    title: "EWIS Monitoring ECU Software"
+    file: "ATA-24-45-00-SW-010_ewis_monitoring_ecu.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-45-00-SW-011"
+    title: "EWIS Sensor Node Firmware"
+    file: "ATA-24-45-00-SW-011_sensor_node_firmware.c"
+    dal_level: "B"
+    certifiable: true
+  - id: "ATA-24-45-00-SW-012"
+    title: "EWIS Gateway Protocol Stack"
+    file: "ATA-24-45-00-SW-012_ewis_gateway.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-45-00-SW-013"
+    title: "EWIS Analytics & Trending Platform"
+    file: "ATA-24-45-00-SW-013_ewis_analytics.py"
+    dal_level: "C"
+    certifiable: true
+  - id: "ATA-24-45-00-SW-014"
+    title: "EWIS Maintenance & Test Tools SW"
+    file: "ATA-24-45-00-SW-014_maintenance_tools.py"
+    dal_level: "N/A"
+    certifiable: false
+  - id: "ATA-24-45-00-SW-015"
+    title: "EWIS Fault Injection & HIL Tools"
+    file: "ATA-24-45-00-SW-015_fault_injection_hil.py"
+    dal_level: "N/A"
+    certifiable: false
+  - id: "ATA-24-45-00-SW-016"
+    title: "EWIS Cybersecurity & Secure Boot Module"
+    file: "ATA-24-45-00-SW-016_cybersecurity_module.c"
+    dal_level: "A"
+    certifiable: true
+  - id: "ATA-24-45-00-SW-017"
+    title: "EWIS Update & Patch Manager"
+    file: "ATA-24-45-00-SW-017_update_manager.c"
+    dal_level: "A"
+    certifiable: true
+
+integrity:
+  checksum_algorithm: "sha256"
+  last_validated: "2025-10-31"
+revision_history:
+  - revision: "1.0.0"
+    date: "2025-10-31"
+    author: "Code Generator"
+    changes: "Initial index creation"
