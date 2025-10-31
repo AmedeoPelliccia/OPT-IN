@@ -1,0 +1,39 @@
+component_code,name,ata_subchapter,purpose,certification_note,do178c_level,do254_applicable,criticality
+240010,Energy Management System (EMS) Software,24-00,Orquesta generación ESS carga y estrategias de shedding,Crítico; sugerido DO-178C Nivel A (función de seguridad),A,No,Critical
+240011,Power Conversion Firmware (Inverter/Converter FW),24-00,Control en tiempo real de PWM lazos de corriente/tensión y protecciones,DO-178C Nivel A / interacción DO-254 para FPGA/ASIC,A,Sí,Critical
+240012,Battery Management System (BMS) Software,24-00,Control SOC cell balancing protección térmica y aislamiento,DO-178C Nivel A (seguridad de energía),A,No,Critical
+240013,Protections & Relay Logic Software,24-00,Lógica de disparo coordinación de protecciones y reclosing,DO-178C Nivel A/B según criticidad de protección,A,No,Critical
+240014,Power Quality Monitoring Software,24-00,Detección de eventos PQ logging y análisis (armado de evidencias),DO-178C Nivel C (informativo/monitor),C,No,Non-critical
+240015,Ground/Service Tools & SW,24-00,Herramientas de servicio configuradores y utilidades (no vuelo),No certificable; herramientas de apoyo,N/A,No,Non-critical
+246009,Fuel-Cell Stack Control Software,24-60,Gestión de flujo de H₂ humidificación celda por celda y control térmico,DO-178C Nivel A,A,No,Critical
+246010,Fuel-Cell Power Conditioning SW (PCU),24-60,Control de salida DC filtros activos y protección de bus,DO-178C Nivel A / DO-254 si HW crítico,A,Sí,Critical
+246011,BOP Diagnostics & Predictive Maintenance SW,24-60,Tendencias degradación y recomendaciones de mantenimiento,DO-178C Nivel B,B,No,Non-critical
+246012,H₂ Safety Management Software,24-60,Lógica de detección purgas interlocks y secuencias de seguridad,DO-178C Nivel A (seguridad H₂),A,No,Critical
+246013,Fuel-Cell HIL / Simulator SW,24-60,Simulador para pruebas HIL y validación de controladores,No certificable; herramienta de verificación,N/A,No,Non-critical
+246014,Fuel-Cell Data Logger & Telemetry SW,24-60,Recolección empaquetado y telemetría de parámetros de la pila,DO-178C Nivel C,C,No,Non-critical
+243309,Solid-CO₂ Module Control SW,24-33,Ciclos adsorción/regeneración y gestión de módulos,DO-178C Nivel A/B según seguridad de almacenamiento,B,No,Critical
+243310,Sorbent Health & Life Management SW,24-33,Seguimiento de capacidad degradación y reemplazos,DO-178C Nivel B,B,No,Non-critical
+243311,CO₂ Storage & Compression Control SW,24-33,Control de presurización compresores y seguridad de depósito,DO-178C Nivel A,A,No,Critical
+243312,CO₂ Safety & Venting Controller SW,24-33,Secuencias de venting seguro y contingencias,DO-178C Nivel A,A,No,Critical
+243313,CO₂ Lab Simulator / HIL SW,24-33,Simulador de comportamiento para pruebas de banco,No certificable,N/A,No,Non-critical
+243314,CO₂ Reporting & DPP Integration SW,24-33,Integración con Digital Product Passport y registros (manifest),DO-178C Nivel C / herramienta de evidencia,C,No,Non-critical
+243408,Endocircular Loop Controller SW,24-34,Orquestación de bombas válvulas y ciclos de recarga,DO-178C Nivel A/B,B,No,Critical
+243409,Thermal Energy Scheduler SW,24-34,Programa regeneración y gestión energética optimizada,DO-178C Nivel B,B,No,Non-critical
+243410,Recharge Interface Protocol Stack,24-34,Comunicación y seguridad en docking/transferencia de energía,DO-178C Nivel B/C,C,No,Non-critical
+243411,Loop Fault Detection & Isolation SW (FDI),24-34,Algoritmos FDI para aislar fallos y degradaciones,DO-178C Nivel A,A,No,Critical
+243412,Loop HIL & Bench Automation SW,24-34,Software de prueba y automatización para banco,No certificable,N/A,No,Non-critical
+243413,Loop Data Logger & Maintenance SW,24-34,Registro de eventos trending y herramientas de servicio,DO-178C Nivel C,C,No,Non-critical
+243414,Recharge→EMS Integration SW,24-34,Integrador entre loop y EMS para planificación y prioridad,DO-178C Nivel A (si impacta disponibilidad),A,No,Critical
+244510,EWIS Monitoring ECU Software,24-45,Diagnósticos en tiempo real thresholds y generación de eventos CAS,DO-178C Nivel A para funciones de aislamiento/seguridad,A,No,Critical
+244511,EWIS Sensor Node Firmware,24-45,Firmware embebido en nodos sensores (aislamiento/continuidad),DO-178C Nivel B/C según función,C,No,Non-critical
+244512,EWIS Gateway Protocol Stack,24-45,ARINC/CAN/AFDX bridge y mensajes deterministas hacia avionics,DO-178C Nivel A,A,No,Critical
+244513,EWIS Analytics & Trending Platform,24-45,Tendencias del arnés detección temprana y dashboards,DO-178C Nivel C (herramienta de análisis),C,No,Non-critical
+244514,EWIS Maintenance & Test Tools SW,24-45,Software de pruebas testers y calibradores,Herramienta de servicio (no flight-certified),N/A,No,Non-critical
+244515,EWIS Fault Injection & HIL Tools,24-45,Suite para validar respuesta y resiliencia EWIS,No certificable,N/A,No,Non-critical
+244516,EWIS Cybersecurity & Secure Boot Module,24-45,Autenticación arranque seguro y gestión de actualizaciones,DO-178C A/B y requisitos de ciberseguridad,A,No,Critical
+244517,EWIS Update & Patch Manager,24-45,Gestión de despliegue seguro de actualizaciones y registro,DO-178C Nivel A/B para control de SW crítico,A,No,Critical
+249908,System Health & Prognostics SW,24-99,Agregador de salud del sistema y estimación RUL/PD,DO-178C Nivel B,B,No,Non-critical
+249909,Cybersecurity & Key Management SW,24-99,Administración de claves certificados y políticas,DO-178C Nivel A (si afecta integridad crítica),A,No,Critical
+249910,HIL Orchestrator / Test Automation SW,24-99,Ejecutor de escenarios HIL y recolección de evidencias,Herramienta de verificación (no flight-certified),N/A,No,Non-critical
+249911,Compliance & Traceability Tooling,24-99,RTM mapeo DO-178C/DO-254 y generación de evidencia CSV/MD,Herramienta de ingeniería,N/A,No,Non-critical
+249912,Integration Middleware (EWIS/Power Bus),24-99,Middleware que normaliza y enruta telemetría entre subsistemas,DO-178C Nivel A/B (dependiendo del rol),B,No,Critical

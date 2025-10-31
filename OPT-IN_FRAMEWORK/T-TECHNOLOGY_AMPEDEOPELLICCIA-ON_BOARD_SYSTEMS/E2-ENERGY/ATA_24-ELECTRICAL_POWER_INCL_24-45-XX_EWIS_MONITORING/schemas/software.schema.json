@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema_version": "1.0",
+  "title": "Software Component Metadata",
+  "description": "Metadata schema for ATA-24 software components with DO-178C certification tracking",
+  "type": "object",
+  "required": [
+    "component_code",
+    "name",
+    "ata_subchapter",
+    "purpose",
+    "do178c_level",
+    "sw_baseline"
+  ],
+  "properties": {
+    "component_code": {
+      "type": "string",
+      "pattern": "^24[0-9]{4}$",
+      "description": "6-digit component code following pattern 24YYZZ (24=ATA, YY=subcapítulo, ZZ=índice)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Software component name"
+    },
+    "ata_subchapter": {
+      "type": "string",
+      "pattern": "^24-[0-9]{2}$",
+      "description": "ATA subchapter reference (e.g., 24-00, 24-33, 24-45, 24-60, 24-99)"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Brief description of component purpose and functionality"
+    },
+    "certification_note": {
+      "type": "string",
+      "description": "Certification guidance and notes"
+    },
+    "do178c_level": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "N/A"],
+      "description": "DO-178C Design Assurance Level (A=highest criticality, D=lowest, N/A=not flight-certified)"
+    },
+    "do254_applicable": {
+      "type": "boolean",
+      "description": "Indicates if DO-254 applies (for FPGA/ASIC hardware interactions)"
+    },
+    "criticality": {
+      "type": "string",
+      "enum": ["Critical", "Non-critical"],
+      "description": "System criticality classification"
+    },
+    "sw_baseline": {
+      "type": "object",
+      "required": ["version"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Software version identifier"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "description": "Source code repository URL"
+        },
+        "commit_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$",
+          "description": "Git commit hash (SHA-1)"
+        },
+        "build_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Build date in ISO 8601 format"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["checksum"],
+      "properties": {
+        "checksum": {
+          "type": "object",
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["sha256", "sha384", "sha512"],
+              "description": "Checksum algorithm used"
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[a-f0-9]+$",
+              "description": "Checksum value"
+            }
+          }
+        },
+        "signature": {
+          "type": "object",
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "description": "Digital signature algorithm"
+            },
+            "value": {
+              "type": "string",
+              "description": "Digital signature value"
+            },
+            "signer": {
+              "type": "string",
+              "description": "Entity that signed the software"
+            }
+          }
+        }
+      }
+    },
+    "hw_ref": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "References to related hardware components (part numbers, ECU IDs)"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["component_code", "version"],
+        "properties": {
+          "component_code": {
+            "type": "string",
+            "description": "Dependent software component code"
+          },
+          "version": {
+            "type": "string",
+            "description": "Required version or version range"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["required", "optional", "conflicts"],
+            "description": "Type of dependency relationship"
+          }
+        }
+      },
+      "description": "Software dependencies on other components"
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Interface name"
+          },
+          "protocol": {
+            "type": "string",
+            "description": "Communication protocol (e.g., ARINC 429, CAN, Ethernet, AFDX)"
+          },
+          "data_rate": {
+            "type": "string",
+            "description": "Data rate specification"
+          }
+        }
+      },
+      "description": "External interfaces and protocols"
+    },
+    "test_coverage": {
+      "type": "object",
+      "properties": {
+        "structural_coverage_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Structural code coverage percentage"
+        },
+        "mcdc_coverage_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "MC/DC coverage percentage (required for Level A)"
+        },
+        "requirements_coverage_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Requirements-based test coverage percentage"
+        },
+        "test_report_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "References to test reports and evidence"
+        }
+      }
+    },
+    "configuration_management": {
+      "type": "object",
+      "properties": {
+        "cm_tool": {
+          "type": "string",
+          "description": "Configuration management tool (e.g., Git, SVN)"
+        },
+        "baseline_id": {
+          "type": "string",
+          "description": "Configuration baseline identifier"
+        },
+        "change_control_board": {
+          "type": "string",
+          "description": "CCB responsible for this software"
+        }
+      }
+    },
+    "certification_artifacts": {
+      "type": "object",
+      "properties": {
+        "psac_ref": {
+          "type": "string",
+          "description": "Plan for Software Aspects of Certification reference"
+        },
+        "scd_ref": {
+          "type": "string",
+          "description": "Software Configuration Index reference"
+        },
+        "svcp_ref": {
+          "type": "string",
+          "description": "Software Verification and Validation Plan reference"
+        },
+        "sas_ref": {
+          "type": "string",
+          "description": "Software Accomplishment Summary reference"
+        },
+        "dpp_entry": {
+          "type": "string",
+          "description": "Digital Product Passport entry reference"
+        }
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Software release date"
+        },
+        "last_update": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date"
+        },
+        "next_review": {
+          "type": "string",
+          "format": "date",
+          "description": "Next scheduled review date"
+        },
+        "support_contact": {
+          "type": "string",
+          "description": "Support contact information"
+        }
+      }
+    }
+  }
+}

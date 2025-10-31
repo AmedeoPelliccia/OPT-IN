@@ -1,0 +1,111 @@
+schema_version: "1.1"
+component_code: "[Component Code]"  # e.g., 240010, 246009
+name: "[Software Component Name]"
+ata_subchapter: "[ATA Subchapter]"  # e.g., 24-00, 24-33, 24-45, 24-60, 24-99
+document_type: "SOFTWARE"
+revision: "1.0.0"
+effective_date: "2025-10-31"
+status: "Released"  # Draft, In Review, Released, Superseded
+
+purpose: |
+  [Brief description of component purpose and functionality]
+
+certification:
+  do178c_level: "[Level]"  # A, B, C, D, or N/A
+  do254_applicable: false  # true or false
+  criticality: "[Criticality]"  # Critical or Non-critical
+  certification_note: |
+    [Certification guidance and notes]
+
+sw_baseline:
+  version: "[Version]"  # e.g., 1.0.0, 2.3.1
+  repository: "[Repository URL]"  # e.g., https://github.com/org/repo
+  commit_hash: "[Git Commit Hash]"  # 40-character SHA-1
+  build_date: "YYYY-MM-DD"
+  release_date: "YYYY-MM-DD"
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "[SHA-256 checksum value]"
+  signature:
+    algorithm: "[Signature algorithm]"  # e.g., RSA-2048, ECDSA
+    value: "[Signature value]"
+    signer: "[Entity that signed]"
+
+hw_ref:
+  - "[Hardware component reference 1]"  # e.g., ECU-24-001, P/N 12345-67890
+  - "[Hardware component reference 2]"
+
+dependencies:
+  - component_code: "[Dependent component code]"
+    version: "[Required version]"
+    relationship: "required"  # required, optional, conflicts
+
+interfaces:
+  - name: "[Interface name]"
+    protocol: "[Protocol]"  # e.g., ARINC 429, CAN, Ethernet, AFDX
+    data_rate: "[Data rate]"  # e.g., 100 kbps, 1 Mbps
+
+test_coverage:
+  structural_coverage_pct: 0.0
+  mcdc_coverage_pct: 0.0  # Required for Level A
+  requirements_coverage_pct: 0.0
+  test_report_refs:
+    - "[Test Report Reference 1]"
+    - "[Test Report Reference 2]"
+
+configuration_management:
+  cm_tool: "Git"
+  baseline_id: "[Baseline ID]"
+  change_control_board: "[CCB Name]"
+
+certification_artifacts:
+  psac_ref: "[PSAC Document Reference]"  # Plan for Software Aspects of Certification
+  scd_ref: "[SCD Document Reference]"     # Software Configuration Index
+  svcp_ref: "[SVCP Document Reference]"   # Software Verification and Validation Plan
+  sas_ref: "[SAS Document Reference]"     # Software Accomplishment Summary
+  dpp_entry: "[DPP Entry Reference]"      # Digital Product Passport entry
+
+owner_role: "[Responsible Engineering Discipline]"
+
+review_board:
+  - "[Reviewer 1 Role/Name]"
+  - "[Reviewer 2 Role/Name]"
+  - "[Reviewer 3 Role/Name]"
+
+approvals:
+  - authority: "[Approval Authority]"
+    name: "[Approver Name]"
+    status: "Approved"  # Pending, In Review, Approved, Rejected
+    date: "YYYY-MM-DD"
+
+supersedes:
+  component_code: null  # Previous version component code
+  revision: null
+  effective_date: null
+
+related_documents:
+  - "[Related Document ID 1]"
+  - "[Related Document ID 2]"
+
+regulatory_basis:
+  - "[FAR 25.xxxx or other regulation]"
+
+traceability:
+  requirements:
+    - "[Requirement ID]"
+  source_documents:
+    - "[Source Document Reference]"
+
+maintenance:
+  last_update: "YYYY-MM-DD"
+  next_review: "YYYY-MM-DD"
+  support_contact: "[Support Contact]"
+
+keywords:
+  - "[keyword1]"
+  - "[keyword2]"
+
+notes: |
+  [Any additional notes or comments]

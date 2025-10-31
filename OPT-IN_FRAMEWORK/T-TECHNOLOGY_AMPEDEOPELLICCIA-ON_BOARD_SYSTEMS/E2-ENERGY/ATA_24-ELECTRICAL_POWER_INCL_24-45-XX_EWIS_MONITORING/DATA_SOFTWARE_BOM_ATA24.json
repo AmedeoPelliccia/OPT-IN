@@ -1,0 +1,392 @@
+{
+  "$schema": "./schemas/software.schema.json",
+  "metadata": {
+    "document_id": "DATA_SOFTWARE_BOM_ATA24_JSON_rev1.0.0_20251031",
+    "title": "ATA-24 Software Components Bill of Materials",
+    "revision": "1.0.0",
+    "effective_date": "2025-10-31",
+    "description": "Software components for ATA-24 Electrical Power systems including fuel cells, solid-CO₂ modules, endocircular loops, and EWIS monitoring"
+  },
+  "components": [
+    {
+      "component_code": "240010",
+      "name": "Energy Management System (EMS) Software",
+      "ata_subchapter": "24-00",
+      "purpose": "Orquesta generación, ESS, carga y estrategias de shedding",
+      "certification_note": "Crítico; sugerido DO-178C Nivel A (función de seguridad)",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "240011",
+      "name": "Power Conversion Firmware (Inverter/Converter FW)",
+      "ata_subchapter": "24-00",
+      "purpose": "Control en tiempo real de PWM, lazos de corriente/tensión y protecciones",
+      "certification_note": "DO-178C Nivel A / interacción DO-254 para FPGA/ASIC",
+      "do178c_level": "A",
+      "do254_applicable": true,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "240012",
+      "name": "Battery Management System (BMS) Software",
+      "ata_subchapter": "24-00",
+      "purpose": "Control SOC, cell balancing, protección térmica y aislamiento",
+      "certification_note": "DO-178C Nivel A (seguridad de energía)",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "240013",
+      "name": "Protections & Relay Logic Software",
+      "ata_subchapter": "24-00",
+      "purpose": "Lógica de disparo, coordinación de protecciones y reclosing",
+      "certification_note": "DO-178C Nivel A/B según criticidad de protección",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "240014",
+      "name": "Power Quality Monitoring Software",
+      "ata_subchapter": "24-00",
+      "purpose": "Detección de eventos PQ, logging y análisis (armado de evidencias)",
+      "certification_note": "DO-178C Nivel C (informativo/monitor)",
+      "do178c_level": "C",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "240015",
+      "name": "Ground/Service Tools & SW",
+      "ata_subchapter": "24-00",
+      "purpose": "Herramientas de servicio, configuradores y utilidades (no vuelo)",
+      "certification_note": "No certificable; herramientas de apoyo",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "246009",
+      "name": "Fuel-Cell Stack Control Software",
+      "ata_subchapter": "24-60",
+      "purpose": "Gestión de flujo de H₂, humidificación, celda por celda y control térmico",
+      "certification_note": "DO-178C Nivel A",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "246010",
+      "name": "Fuel-Cell Power Conditioning SW (PCU)",
+      "ata_subchapter": "24-60",
+      "purpose": "Control de salida DC, filtros activos y protección de bus",
+      "certification_note": "DO-178C Nivel A / DO-254 si HW crítico",
+      "do178c_level": "A",
+      "do254_applicable": true,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "246011",
+      "name": "BOP Diagnostics & Predictive Maintenance SW",
+      "ata_subchapter": "24-60",
+      "purpose": "Tendencias, degradación y recomendaciones de mantenimiento",
+      "certification_note": "DO-178C Nivel B",
+      "do178c_level": "B",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "246012",
+      "name": "H₂ Safety Management Software",
+      "ata_subchapter": "24-60",
+      "purpose": "Lógica de detección, purgas, interlocks y secuencias de seguridad",
+      "certification_note": "DO-178C Nivel A (seguridad H₂)",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "246013",
+      "name": "Fuel-Cell HIL / Simulator SW",
+      "ata_subchapter": "24-60",
+      "purpose": "Simulador para pruebas HIL y validación de controladores",
+      "certification_note": "No certificable; herramienta de verificación",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "246014",
+      "name": "Fuel-Cell Data Logger & Telemetry SW",
+      "ata_subchapter": "24-60",
+      "purpose": "Recolección, empaquetado y telemetría de parámetros de la pila",
+      "certification_note": "DO-178C Nivel C",
+      "do178c_level": "C",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243309",
+      "name": "Solid-CO₂ Module Control SW",
+      "ata_subchapter": "24-33",
+      "purpose": "Ciclos adsorción/regeneración y gestión de módulos",
+      "certification_note": "DO-178C Nivel A/B según seguridad de almacenamiento",
+      "do178c_level": "B",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "243310",
+      "name": "Sorbent Health & Life Management SW",
+      "ata_subchapter": "24-33",
+      "purpose": "Seguimiento de capacidad, degradación y reemplazos",
+      "certification_note": "DO-178C Nivel B",
+      "do178c_level": "B",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243311",
+      "name": "CO₂ Storage & Compression Control SW",
+      "ata_subchapter": "24-33",
+      "purpose": "Control de presurización, compresores y seguridad de depósito",
+      "certification_note": "DO-178C Nivel A",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "243312",
+      "name": "CO₂ Safety & Venting Controller SW",
+      "ata_subchapter": "24-33",
+      "purpose": "Secuencias de venting seguro y contingencias",
+      "certification_note": "DO-178C Nivel A",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "243313",
+      "name": "CO₂ Lab Simulator / HIL SW",
+      "ata_subchapter": "24-33",
+      "purpose": "Simulador de comportamiento para pruebas de banco",
+      "certification_note": "No certificable",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243314",
+      "name": "CO₂ Reporting & DPP Integration SW",
+      "ata_subchapter": "24-33",
+      "purpose": "Integración con Digital Product Passport y registros (manifest)",
+      "certification_note": "DO-178C Nivel C / herramienta de evidencia",
+      "do178c_level": "C",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243408",
+      "name": "Endocircular Loop Controller SW",
+      "ata_subchapter": "24-34",
+      "purpose": "Orquestación de bombas, válvulas y ciclos de recarga",
+      "certification_note": "DO-178C Nivel A/B",
+      "do178c_level": "B",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "243409",
+      "name": "Thermal Energy Scheduler SW",
+      "ata_subchapter": "24-34",
+      "purpose": "Programa regeneración y gestión energética optimizada",
+      "certification_note": "DO-178C Nivel B",
+      "do178c_level": "B",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243410",
+      "name": "Recharge Interface Protocol Stack",
+      "ata_subchapter": "24-34",
+      "purpose": "Comunicación y seguridad en docking/transferencia de energía",
+      "certification_note": "DO-178C Nivel B/C",
+      "do178c_level": "C",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243411",
+      "name": "Loop Fault Detection & Isolation SW (FDI)",
+      "ata_subchapter": "24-34",
+      "purpose": "Algoritmos FDI para aislar fallos y degradaciones",
+      "certification_note": "DO-178C Nivel A",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "243412",
+      "name": "Loop HIL & Bench Automation SW",
+      "ata_subchapter": "24-34",
+      "purpose": "Software de prueba y automatización para banco",
+      "certification_note": "No certificable",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243413",
+      "name": "Loop Data Logger & Maintenance SW",
+      "ata_subchapter": "24-34",
+      "purpose": "Registro de eventos, trending y herramientas de servicio",
+      "certification_note": "DO-178C Nivel C",
+      "do178c_level": "C",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "243414",
+      "name": "Recharge→EMS Integration SW",
+      "ata_subchapter": "24-34",
+      "purpose": "Integrador entre loop y EMS para planificación y prioridad",
+      "certification_note": "DO-178C Nivel A (si impacta disponibilidad)",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "244510",
+      "name": "EWIS Monitoring ECU Software",
+      "ata_subchapter": "24-45",
+      "purpose": "Diagnósticos en tiempo real, thresholds y generación de eventos CAS",
+      "certification_note": "DO-178C Nivel A para funciones de aislamiento/seguridad",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "244511",
+      "name": "EWIS Sensor Node Firmware",
+      "ata_subchapter": "24-45",
+      "purpose": "Firmware embebido en nodos sensores (aislamiento/continuidad)",
+      "certification_note": "DO-178C Nivel B/C según función",
+      "do178c_level": "C",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "244512",
+      "name": "EWIS Gateway Protocol Stack",
+      "ata_subchapter": "24-45",
+      "purpose": "ARINC/CAN/AFDX bridge y mensajes deterministas hacia avionics",
+      "certification_note": "DO-178C Nivel A",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "244513",
+      "name": "EWIS Analytics & Trending Platform",
+      "ata_subchapter": "24-45",
+      "purpose": "Tendencias del arnés, detección temprana y dashboards",
+      "certification_note": "DO-178C Nivel C (herramienta de análisis)",
+      "do178c_level": "C",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "244514",
+      "name": "EWIS Maintenance & Test Tools SW",
+      "ata_subchapter": "24-45",
+      "purpose": "Software de pruebas, testers y calibradores",
+      "certification_note": "Herramienta de servicio (no flight-certified)",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "244515",
+      "name": "EWIS Fault Injection & HIL Tools",
+      "ata_subchapter": "24-45",
+      "purpose": "Suite para validar respuesta y resiliencia EWIS",
+      "certification_note": "No certificable",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "244516",
+      "name": "EWIS Cybersecurity & Secure Boot Module",
+      "ata_subchapter": "24-45",
+      "purpose": "Autenticación, arranque seguro y gestión de actualizaciones",
+      "certification_note": "DO-178C A/B y requisitos de ciberseguridad",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "244517",
+      "name": "EWIS Update & Patch Manager",
+      "ata_subchapter": "24-45",
+      "purpose": "Gestión de despliegue seguro de actualizaciones y registro",
+      "certification_note": "DO-178C Nivel A/B para control de SW crítico",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "249908",
+      "name": "System Health & Prognostics SW",
+      "ata_subchapter": "24-99",
+      "purpose": "Agregador de salud del sistema y estimación RUL/PD",
+      "certification_note": "DO-178C Nivel B",
+      "do178c_level": "B",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "249909",
+      "name": "Cybersecurity & Key Management SW",
+      "ata_subchapter": "24-99",
+      "purpose": "Administración de claves, certificados y políticas",
+      "certification_note": "DO-178C Nivel A (si afecta integridad crítica)",
+      "do178c_level": "A",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    },
+    {
+      "component_code": "249910",
+      "name": "HIL Orchestrator / Test Automation SW",
+      "ata_subchapter": "24-99",
+      "purpose": "Ejecutor de escenarios HIL y recolección de evidencias",
+      "certification_note": "Herramienta de verificación (no flight-certified)",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "249911",
+      "name": "Compliance & Traceability Tooling",
+      "ata_subchapter": "24-99",
+      "purpose": "RTM, mapeo DO-178C/DO-254 y generación de evidencia CSV/MD",
+      "certification_note": "Herramienta de ingeniería",
+      "do178c_level": "N/A",
+      "do254_applicable": false,
+      "criticality": "Non-critical"
+    },
+    {
+      "component_code": "249912",
+      "name": "Integration Middleware (EWIS/Power Bus)",
+      "ata_subchapter": "24-99",
+      "purpose": "Middleware que normaliza y enruta telemetría entre subsistemas",
+      "certification_note": "DO-178C Nivel A/B (dependiendo del rol)",
+      "do178c_level": "B",
+      "do254_applicable": false,
+      "criticality": "Critical"
+    }
+  ]
+}
