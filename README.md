@@ -581,7 +581,7 @@ Maps to **ATA 06–12**:
 - **ATA 71 Power Plant**: Fuel cell stack assembly
 - **ATA 72 Engine**: Open rotor configuration (unducted fans driven by electric motor)
 - **ATA 73 Fuel & Control**: H₂ supply line management, pressure regulation, fuel cell control logic
-- **ATA 75 Air**: High-bypass intake geometry optimized for open rotor; H₂ combustion products (water vapor) exhaust
+- **ATA 75 Air**: High-bypass intake geometry optimized for open rotor; H₂ fuel cell products (water vapor) exhaust
 - **ATA 76 Engine Controls**: Electric motor speed control, fuel cell voltage regulation
 - **ATA 77 Engine Indicating**: Fuel cell stack voltage, current, thermal state; rotor RPM, thrust
 - **ATA 78 Exhaust**: Water vapor condensation management; thermal energy recovery
