@@ -1,0 +1,8 @@
+{
+  "ata_reference": "ATA-24-33-30",
+  "subsystem_name": "CO2 Cathode",
+  "parent_system": "ATA-24-33-00",
+  "version": "1.0.0",
+  "date": "2025-10-31",
+  "status": "Provisional"
+}

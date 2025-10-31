@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "ata_reference": "ATA-24-33-10",
+  "subsystem": "Cell Stack Assembly",
+  "required_fields": [
+    "ata_reference",
+    "title",
+    "date",
+    "status",
+    "revision"
+  ],
+  "optional_fields": [
+    "author",
+    "approver",
+    "notes"
+  ]
+}
