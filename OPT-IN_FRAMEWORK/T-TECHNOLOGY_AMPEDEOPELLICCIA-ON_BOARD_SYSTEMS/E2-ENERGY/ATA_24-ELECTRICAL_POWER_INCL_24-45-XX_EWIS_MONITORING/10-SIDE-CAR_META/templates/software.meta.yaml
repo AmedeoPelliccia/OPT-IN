@@ -63,7 +63,7 @@ configuration_management:
 certification_artifacts:
   psac_ref: "[PSAC Document Reference]"  # Plan for Software Aspects of Certification
   sci_ref: "[SCI Document Reference]"     # Software Configuration Index
-  svcp_ref: "[SVCP Document Reference]"   # Software Verification and Validation Plan
+  svcp_ref: "[SVCP Document Reference]"   # Software Verification Cases and Procedures
   sas_ref: "[SAS Document Reference]"     # Software Accomplishment Summary
   dpp_entry: "[DPP Entry Reference]"      # Digital Product Passport entry
 
