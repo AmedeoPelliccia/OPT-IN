@@ -658,7 +658,7 @@ Maps to **ATA 06–12**:
 | **ATA 24-33-00** | Electrical | Solid-CO₂ Battery Modules | Under EASA/FAA review |
 | **ATA 24-34-00** | Electrical | Endocircular Recharge Loops | Special Condition required |
 | **ATA 24-60-00** | Electrical | Fuel Cell Stacks & DC Output | DO-311A, SAE AS8034 |
-| **ATA 26-40-xx** | Fire | H₂ Leak/Fire Detection | DO-254 DO-178C |
+| **ATA 26-40-xx** | Fire | H₂ Leak/Fire Detection | DO-254, DO-178C |
 | **ATA 28-60-00** | Fuel | Cryogenic H₂ Storage | CS-23.AFGAS/H2, ISO 21029 |
 | **ATA 21-80-00** | ECS | CO₂ Capture & Processing | CS-25 Thermal Management |
 | **ATA 42-55-00** | Avionics | Powertrain Orchestration | ARP 4754A MBSE |
