@@ -6,7 +6,6 @@ Main test execution engine for Hardware-in-Loop testing
 import argparse
 import csv
 import json
-import os
 import subprocess
 import sys
 from datetime import datetime
