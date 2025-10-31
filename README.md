@@ -498,3 +498,210 @@ OPT-IN_FRAMEWORK/
 
 ---
 
+
+## AMPEL360 BWB H2 Hy-E: OPT-IN Framework Architecture
+
+Based on the specifications for **AMPEL360 BWB H2 Hy-E Q100 INTEGRA SAF**, this is a next-generation hydrogen-electric hybrid aircraft with **blended-wing-body (BWB)** architecture, **open-rotor propulsion**, **hydrogen fuel cells**, **CO₂ solid batteries**, and **sustainable aviation fuel (SAF)** integration. Here is the OPT‑IN Framework mapping tailored to this hybrid powertrain and aerodynamic configuration:
+
+---
+
+### Core Aircraft Characteristics
+
+| Attribute | Specification |
+|-----------|---------------|
+| **Configuration** | Blended-Wing-Body (integrated fuselage-wing) |
+| **Passengers** | 100–150 (Q100 class) |
+| **Primary Propulsion** | Hydrogen fuel cells + open rotor fans |
+| **Secondary Propulsion** | SAF-capable auxiliary turboshaft (for emergency / range extension) |
+| **Energy Storage** | CO₂ solid batteries (endocircular recharge loops) |
+| **Range** | Long-range (intercontinental capable) |
+| **Fuel Systems** | Cryogenic H₂ storage (ATA 28-60) + SAF reserves |
+
+---
+
+### OPT‑IN Layer Mapping for AMPEL360
+
+#### **O — ORGANIZATION** (Governance & Airworthiness)
+Maps to **ATA 00–05, 18** with H₂-specific compliance:
+- **Airworthiness Authority**: FAA H₂-Roadmap, EASA Special Conditions for hydrogen propulsion
+- **Regulatory Framework**: CS-E Gap Analysis for Hydrogen, DO-311A (fuel cell systems)
+- **Maintenance Policy**: H₂ system handling, fuel cell stack replacement intervals, cryogenic storage inspection
+
+---
+
+#### **P — PROGRAM** (Operational Definition)
+Maps to **ATA 06–12**:
+- **Servicing Procedures**: H₂ refueling (high-pressure, cryogenic), battery charge cycles
+- **Ground Operations**: H₂ leak detection before flight, battery state-of-charge verification
+- **Mission Planning**: H₂ consumption profiles, SAF fallback routes, fuel cell thermal management
+
+---
+
+#### **T — TECHNOLOGY (AMEDEOPELLICCIA On-Board Systems)**
+
+##### **A — AIRFRAME (BWB Integration)** | **ATA 20, 50–57**
+- **Fuselage sections**: Forward (pilot cabin, nose LG), Center (passenger cabin, cooling systems, LH₂ tanks), Aft (non-pressurized, cooling loops, electrical distribution)
+- **Wing integration**: Fuel cell stack cooling ducts, electrical cabling, H₂ distribution lines
+- **Material compliance**: Composite structures (hydrogen-compatible resins), pressure vessel certifications for H₂ tanks
+
+##### **M — MECHANICS (Open Rotor Actuation)** | **ATA 27, 29, 32, 37, 41**
+- **Flight Controls**: Aerodynamic surfaces controlled by fuel-cell-powered electric actuators (no hydraulic backup)
+- **Open Rotor Gearbox**: High-speed electric motor driving open fan via gearbox (ATA 83 Accessory Gear Boxes)
+- **Hydraulic System**: Minimal (emergency control only, pneumatic-driven); replaced by electric power
+
+##### **E1 — ENVIRONMENT (Thermal & Cryogenic)** | **ATA 21, 26, 30, 36, 38**
+- **H₂ Cryogenic Cooling**: Active boil-off management via heat exchangers; dual-phase H₂/liquid cooling circuits (ATA 21-50-xx provision)
+- **Fire Detection**: Hydrogen-specific leak sensors (ATA 26-40-xx H₂ detection section); CO₂ suppression for fuel cell stacks
+- **Pneumatic System**: Minimal; primarily for emergency bleed air (ATA 36 compressed to secondary role)
+- **ECS**: Low-pressure air conditioning fed by fuel cell waste heat recovery
+
+##### **D — DATA (Flight Records & Fuel Cell Monitoring)** | **ATA 31**
+- **FDR/CVR**: Standard recording + fuel cell stack health, H₂ pressure, battery state-of-charge, thermal dynamics
+- **Data Link**: Real-time performance upload to ground for predictive maintenance (ATA 46)
+
+##### **E2 — ENERGY (Fuel Cells & Batteries)** | **ATA 24, 47, 49, 80**
+- **Primary**: Hydrogen Fuel Cell Stacks (500–1000 kW per stack)
+  - Solid Oxide Fuel Cells (SOFC) or Proton Exchange Membrane (PEM)
+  - Output: DC power directly; DC-AC conversion via onboard inverters
+  - Thermal waste recovery: Heat for cabin ECS
+- **Secondary Storage**: CO₂ Solid Batteries (endocircular recharge loops)
+  - Discharge: Provides peak load buffering during climb/acceleration
+  - Recharge: Regenerative energy from descent, thermal recovery, or ground charging
+  - Integration point: ATA 24-34-00 Provisional (Endocircular Recharge Loops section)
+- **Tertiary**: SAF Reserve Tank
+  - Turboshaft APU (ATA 49) for range extension or emergency power
+  - Fuel cell efficiency drops at very high altitude → APU as auxiliary at cruise ceiling
+
+##### **O — OPERATING SYSTEMS (Quantum-Inspired Orchestration)** | **ATA 42**
+- **IMA Core**: Integrated Modular Avionics managing:
+  - Fuel cell stack power distribution
+  - Battery state-of-charge optimization (ATA 42-55-00 Prov: Powertrain/Energy Orchestration)
+  - Open rotor speed scheduling (ATA 42-60-00 Prov: Quantum-Inspired Scheduler)
+  - Thermal load management across cryogenic, cabin, and electrical domains
+
+##### **P — PROPULSION (Fuel Cell + Open Rotor)** | **ATA 60–83**
+- **ATA 71 Power Plant**: Fuel cell stack assembly
+- **ATA 72 Engine**: Open rotor configuration (unducted fans driven by electric motor)
+- **ATA 73 Fuel & Control**: H₂ supply line management, pressure regulation, fuel cell control logic
+- **ATA 75 Air**: High-bypass intake geometry optimized for open rotor; H₂ fuel cell products (water vapor) exhaust
+- **ATA 76 Engine Controls**: Electric motor speed control, fuel cell voltage regulation
+- **ATA 77 Engine Indicating**: Fuel cell stack voltage, current, thermal state; rotor RPM, thrust
+- **ATA 78 Exhaust**: Water vapor condensation management; thermal energy recovery
+- **ATA 79 Oil**: Replaced by thermal cooling fluid (perfluorocarbon or silicone); circulates through fuel cell stack and motor windings
+- **ATA 83 Accessory Gear Boxes**: Electric motor to open rotor gearbox (1:5–1:8 reduction)
+
+##### **E3 — ELECTRONICS (Fuel Cell Controllers & Power Distribution)** | **ATA 34, 39, 42**
+- **ATA 42 (Hardware)**: Fuel cell stack power management units (DC/DC converters, inverters)
+- **ATA 39 Electrical Panels**: Battery charge controllers, DC distribution busses
+- **Redundancy**: Dual fuel cell stacks with seamless switchover; dual battery packs
+
+##### **L1 — LOGICS (Control Laws & Energy Management)** | **ATA 22, 27, 42**
+- **Flight Control Law**: Fly-by-wire with electric actuation only; no hydraulic feedback
+- **Energy Management Algorithm**: Quantum-inspired resource orchestration (ATA 42-60-00)
+  - Objective: Minimize H₂ consumption while maintaining thrust, thermal, and electrical load balance
+  - Inputs: Altitude, Mach, weight, battery state-of-charge, fuel cell efficiency curve
+  - Outputs: Optimal fuel cell setpoint, battery discharge rate, APU engagement threshold
+- **Thermal Balancing**: Active heat pump coupling fuel cell waste heat to cabin ECS and cryogenic tank warming
+
+##### **L2 — LINKS (Communications & Data Network)** | **ATA 23, 46, 42**
+- **Network Fabric**: AFDX (Avionics Full-Duplex Switched Ethernet) linking fuel cell controllers, battery management, flight controls
+- **Datalink**: ACARS continuous upload of health parameters (fuel cell stack degradation, battery cycle life prediction)
+- **AI Anomaly Detection**: Real-time monitoring for hydrogen leaks, fuel cell flooding, battery thermal runaway
+
+##### **I — INFORMATION, INTELLIGENCE, INTERFACES** | **ATA 31, 42, 45, 46, 77, 93**
+- **OMS (Onboard Maintenance System)**: Fuel cell stack cycle counting, remaining useful life (RUL) prediction
+- **In-Flight Maintenance (ATA 48 Prov)**: AI-driven detection of fuel cell voltage degradation; automatic safeguard mode
+- **Model-Based Maintenance (ATA 92 Prov)**: Digital twin of fuel cell stack performance, battery aging models
+- **Data Loading (ATA 93 Prov)**: Configuration of fuel cell operating limits, battery charge profiles, thermal limits by mission type
+
+##### **C1 — COCKPIT.CABIN.CARGO** | **ATA 11, 15, 25, 33, 35, 44**
+- **Crew Information**: Real-time fuel cell status, battery remaining, cryogenic H₂ pressure display
+- **Cabin Furnishings (ATA 25)**: Lightweight composite seating, no hydraulic systems → lighter weight
+- **IFE (ATA 44)**: Powered by onboard electrical generation from fuel cells (no APU noise advantage)
+- **Oxygen System (ATA 35)**: Integrated with fuel cell water vapor exhaust (potential emergency breathing air generation)
+
+##### **C2 — CIRCULAR, CRYOGENICS** | **ATA 28, 21-80**
+- **H₂ Storage & Distribution (ATA 28-60-00 Prov)**: Cryogenic tank (20–100 kg H₂ capacity), insulation, boil-off management
+- **SAF Conditioning (ATA 28-40-xx)**: Secondary fuel system for APU, gravity feed, temperature control
+- **CO₂ Capture & Processing (ATA 21-80-00 Prov)**: Integrated with fuel cell exhaust; separation of CO₂ for battery regeneration loops
+- **Closed-Loop Endocircular Recharge**: CO₂ captured from fuel cell exhaust → compressed → used in solid battery discharge/recharge cycle
+
+##### **I2 — I + D (Intelligence & Data Integration)** | **ATA 40, 42-55, 42-60, 48, 92**
+- **Powertrain Orchestration Framework (ATA 42-55-00 Prov)**: Integrated controller managing fuel cell, battery, and thermal systems
+- **Quantum-Inspired Scheduler (ATA 42-60-00 Prov)**: Multi-objective optimization of power demand across propulsion, environmental control, and avionics
+- **AI-Enabled Maintenance (ATA 48)**: Continuous learning model predicting fuel cell degradation, battery state-of-health
+- **Model-Based Maintenance (ATA 92)**: Digital twins of fuel cell electrochemistry, battery impedance evolution
+
+##### **A2 — AERODYNAMICS** | **ATA 27**
+- **BWB Lift Distribution**: Integrated wing-fuselage control surfaces; open rotor placement optimized for spanwise thrust distribution
+- **Laminar Flow Control**: Active boundary layer suction (electric-powered) for drag reduction
+
+---
+
+#### **I — INFRASTRUCTURES (H₂ Value Chain & Operations)** | **ATA 02, 03, 10, 13, 85–116**
+- **Airport H₂ Supply Chain**: Cryogenic refueling stations, high-pressure cart connections, boil-off capture
+- **Ground Support Equipment (ATA 03)**: H₂ leak detector, cryogenic hoses, DC charging dock (battery recharge)
+- **Hangar Systems**: Hydrogen ventilation, thermal conditioning for fuel cell stack pre-flight warm-up
+- **Flight Simulator**: Full-envelope fuel cell and battery model, cryogenic tank dynamics, emergency fuel cell shutdown scenarios
+
+---
+
+#### **N — NEURAL NETWORKS, USERS, TRACEABILITY** | **ATA 95**
+- **Digital Product Passport (H₂ Configuration)**: Lifetime H₂ consumption, fuel cell stack cycle history, battery capacity fade tracking
+- **Blockchain Ledger**: Immutable record of SAF + H₂ fuel sourcing (lifecycle carbon intensity)
+- **Stakeholder Access**: Airline fleet manager, fuel supplier, air traffic control (real-time air-quality data from water-vapor exhaust)
+
+---
+
+### Critical ATA Provisional Sections for AMPEL360
+
+| ATA Provisional | Traditional Domain | New Application | Certification Status |
+|-----------------|-------------------|-----------------|----------------------|
+| **ATA 24-33-00** | Electrical | Solid-CO₂ Battery Modules | Under EASA/FAA review |
+| **ATA 24-34-00** | Electrical | Endocircular Recharge Loops | Special Condition required |
+| **ATA 24-60-00** | Electrical | Fuel Cell Stacks & DC Output | DO-311A, SAE AS8034 |
+| **ATA 26-40-xx** | Fire | H₂ Leak/Fire Detection | DO-254, DO-178C |
+| **ATA 28-60-00** | Fuel | Cryogenic H₂ Storage | CS-23.AFGAS/H2, ISO 21029 |
+| **ATA 21-80-00** | ECS | CO₂ Capture & Processing | CS-25 Thermal Management |
+| **ATA 42-55-00** | Avionics | Powertrain Orchestration | ARP 4754A MBSE |
+| **ATA 42-60-00** | Avionics | Quantum Scheduler | DO-178C Level A |
+| **ATA 48** | Maintenance | In-Flight AI Diagnostics | DO-387 (AI Exploration) |
+| **ATA 92** | Maintenance | Model-Based Maintenance | ED-215 (AI Assurance) |
+| **ATA 95** | Traceability | Digital Product Passport | ISO 23247 Digital Twin |
+
+---
+
+### Certification and Approval Pathway
+
+1. **Type Certification Authority**: EASA (with FAA reciprocity via TIP)
+2. **Special Conditions**: Hydrogen fuel system, open rotor structural dynamics, fuel cell thermal runaway containment
+3. **Equivalent Level of Safety (ELOS)**: Electric flight control without hydraulic backup vs. conventional architecture
+4. **Provisional Standards**: ATA chapters marked "Prov" require industry consensus via RTCA/EUROCAE taskgroups before full certification
+
+This **AMPEL360 OPT-IN mapping** integrates next-generation propulsion, energy storage, and digital intelligence within the established ATA framework, positioning it for near-term certification and operations.
+
+---
+
+### References
+
+1. [GAIA-AIR Ampel360XWLRGA Repository](https://github.com/Robbbo-T/GAIA-AIR-Ampel360XWLRGA)
+2. [Blended Wing Body - Wikipedia](https://en.wikipedia.org/wiki/Blended_wing_body)
+3. [Hydrogen Aircraft Research - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0360319924043295)
+4. [BWB Design Considerations - Scribd](https://www.scribd.com/document/760380200/Blended-Wing-Design-Considerations-for-A-Next-Generation-Commerci)
+5. [FAA Hydrogen-Fueled Aircraft Roadmap](https://www.faa.gov/aircraft/air_cert/step/disciplines/propulsion_systems/hydrogen-fueled_aircraft_roadmap)
+6. [CAA Hydrogen Aircraft Publications](https://www.caa.co.uk/publication/download/25268)
+7. [ATI Hydrogen Report](https://www.ati.org.uk/wp-content/uploads/2021/08/aci-ati-hydrogen-report-1.pdf)
+8. [NASA BWB Research](https://ntrs.nasa.gov/api/citations/20040033924/downloads/20040033924.pdf)
+9. [Propfan Technology - Wikipedia](https://en.wikipedia.org/wiki/Propfan)
+10. [CO₂ Battery Research - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0306261925010864)
+11. [Electric Aircraft Research](https://escholarship.org/content/qt51c5r1nx/qt51c5r1nx.pdf)
+12. [Open Rotor Engine - Clean Sky](https://www.rotator-cleansky.com/open-rotor-engine)
+13. [Carbon Dioxide Battery Technology](https://blog.upsbatterycenter.com/carbon-dioxide-battery-turns-the-tables/)
+14. [AIAA Aircraft Design Paper](https://arc.aiaa.org/doi/10.2514/6.2024-3664)
+15. [Open Rotor Technology Analysis](https://leehamnews.com/2024/05/17/bjorns-corner-new-engine-development-part-8-open-rotor-technology/)
+16. [SAF and Hydrogen Propulsion](https://www.afsenergy.nl/blog-post/the-future-of-aviation-with-saf-and-hydrogen-propulsion)
+17. [Hydrogen and Electric Propulsion](https://www.leadventgrp.com/blog/hydrogen-and-electric-propulsion-complementing-saf-for-a-sustainable-future)
+18. [Sustainable Aviation Fuel Overview](https://afdc.energy.gov/fuels/sustainable-aviation-fuel)
+
+---
+
