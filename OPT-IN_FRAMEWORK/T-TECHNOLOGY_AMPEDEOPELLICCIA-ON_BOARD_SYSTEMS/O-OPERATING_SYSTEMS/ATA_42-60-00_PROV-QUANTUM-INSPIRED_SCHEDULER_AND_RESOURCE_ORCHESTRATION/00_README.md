@@ -16,27 +16,33 @@ The quantum-inspired scheduler extends traditional ARINC 653 partition schedulin
 ## Applicable Standards & Regulations
 
 ### Primary Standards
-- **ARINC 653** Part 1 & 2: Required and Extended Services
-- **DO-178C**: Software Considerations in Airborne Systems (DAL A)
-- **DO-254**: Hardware Considerations in Airborne Systems
-- **DO-297**: Integrated Modular Avionics (IMA) Development Guidance
-- **DO-330**: Software Tool Qualification Considerations
+- **[ARINC 653](https://www.aviation-ia.com/standards/arinc-653/)** Part 1 & 2: Required and Extended Services
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)**: Software Considerations in Airborne Systems (DAL A)
+- **[DO-254](https://www.rtca.org/content/standards-guidance-materials)**: Hardware Considerations in Airborne Systems
+- **[DO-297](https://www.rtca.org/content/standards-guidance-materials)**: Integrated Modular Avionics (IMA) Development Guidance
+- **[DO-330](https://www.rtca.org/content/standards-guidance-materials)**: Software Tool Qualification Considerations
 
 ### Supporting Standards
-- **RTCA DO-160G**: Environmental Conditions and Test Procedures
-- **EUROCAE ED-12C**: Software Aspects of Certification
-- **EUROCAE ED-202A**: MILS Architecture
-- **EUROCAE ED-203**: Airborne Security
+- **[RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials)**: Environmental Conditions and Test Procedures
+- **[EUROCAE ED-12C](https://www.eurocae.net/)**: Software Aspects of Certification (European equivalent to DO-178C)
+- **[EUROCAE ED-202A](https://www.eurocae.net/)**: MILS Architecture
+- **[EUROCAE ED-203](https://www.eurocae.net/)**: Airborne Security
+
+### Regulatory Authorities
+- **[EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)**: Large Aeroplanes Certification Specifications
+- **[FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)**: Airworthiness Standards: Transport Category Airplanes
+- **[ICAO Annex 8](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf)**: Airworthiness of Aircraft
 
 ## Related ATA Chapters
 
-- **ATA 22**: AUTOFLIGHT (scheduling coordination)
-- **ATA 27**: FLIGHT CONTROLS (real-time resource requirements)
-- **ATA 31**: INDICATING / RECORDING SYSTEMS (performance metrics)
-- **ATA 34**: NAVIGATION (timing synchronization)
-- **ATA 40**: MULTISYSTEM (AI integration)
-- **ATA 42**: INTEGRATED MODULAR AVIONICS (Core OS, hardware, network)
-- **ATA 45**: ONBOARD MAINTENANCE SYSTEMS (health monitoring integration)
+- **[ATA 22 - AUTOFLIGHT](../../L1-LOGICS/ATA_22-AUTOFLIGHT/)**: Scheduling coordination
+- **[ATA 27 - FLIGHT CONTROLS](../../L1-LOGICS/ATA_27-FLIGHT_CONTROLS_CONTROL_LAW_COMPUTERS_SOFTWARE/)**: Real-time resource requirements
+- **[ATA 31 - INDICATING/RECORDING SYSTEMS](../../D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION-FDR_CVR/)**: Performance metrics
+- **[ATA 34 - NAVIGATION](../../E3-ELECTRONICS/ATA_34-NAVIGATION/)**: Timing synchronization
+- **[ATA 40 - MULTISYSTEM](../../I2-I+D/)**: AI integration (Reserved)
+- **[ATA 42 - INTEGRATED MODULAR AVIONICS](../ATA_42-INTEGRATED_MODULAR_AVIONICS_CORE_SOFTWARE/)**: Core OS, hardware, network
+- **[ATA 45 - ONBOARD MAINTENANCE SYSTEMS](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS_OMS_CMS/)**: Health monitoring integration
+- **[ATA 95 - DIGITAL PRODUCT PASSPORT](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/)**: Traceability integration
 
 ## Directory Structure
 
@@ -55,15 +61,15 @@ ATA_42-60-00_PROV-QUANTUM-INSPIRED_SCHEDULER_AND_RESOURCE_ORCHESTRATION/
 │   ├── resource.schema.json             # Resource model schema
 │   ├── experiment.schema.json           # Experiment specification schema
 │   └── result.schema.json               # Result format schema
-├── 01-GENERAL/                          # Governance and scope
-├── 02-DESIGN_AND_ALGORITHMS/           # Architecture and algorithms
-├── 03-SIMULATION_AND_VERIFICATION/     # Testing and validation
-├── 04-POLICIES_AND_RESOURCE_MODELS/    # Policies and resource definitions
-├── 05-SAFETY_AND_CERTIFICATION_WORKBENCH/ # Safety assessment
-├── 06-TOOLS_AND_INTEGRATION/           # Toolchain and integration
-├── 07-NONCONFORMANCE_AND_DEVIATION/    # NCR handling
-├── 08-SIDE-CAR_META/                   # Metadata sidecars
-├── 09-EXAMPLES_AND_RECORDS/            # Examples and records
+├── 01-GENERAL/                          # [Governance and scope](01-GENERAL/)
+├── 02-DESIGN_AND_ALGORITHMS/           # [Architecture and algorithms](02-DESIGN_AND_ALGORITHMS/)
+├── 03-SIMULATION_AND_VERIFICATION/     # [Testing and validation](03-SIMULATION_AND_VERIFICATION/)
+├── 04-POLICIES_AND_RESOURCE_MODELS/    # [Policies and resource definitions](04-POLICIES_AND_RESOURCE_MODELS/)
+├── 05-SAFETY_AND_CERTIFICATION_WORKBENCH/ # [Safety assessment](05-SAFETY_AND_CERTIFICATION_WORKBENCH/)
+├── 06-TOOLS_AND_INTEGRATION/           # [Toolchain and integration](06-TOOLS_AND_INTEGRATION/)
+├── 07-NONCONFORMANCE_AND_DEVIATION/    # [NCR handling](07-NONCONFORMANCE_AND_DEVIATION/)
+├── 08-SIDE-CAR_META/                   # [Metadata sidecars](08-SIDE-CAR_META/)
+├── 09-EXAMPLES_AND_RECORDS/            # [Examples and records](09-EXAMPLES_AND_RECORDS/)
 └── 10-ARTIFACTS_AND_LOGS/              # Runtime outputs (gitignored)
     ├── artifacts/                      # Build and test artifacts
     └── logs/                           # Execution logs
@@ -90,10 +96,10 @@ ATA_42-60-00_PROV-QUANTUM-INSPIRED_SCHEDULER_AND_RESOURCE_ORCHESTRATION/
 - DO-297 IMA safety patterns
 
 ### Integration
-- ARINC 653 API compatibility
-- AFDX network integration (ATA 42 L2-LINKS)
-- Health monitoring interface (ATA 45)
-- Digital Product Passport integration (ATA 95)
+- [ARINC 653 API](https://www.aviation-ia.com/standards/arinc-653/) compatibility
+- [AFDX network](../../L2-LINKS/ATA_42-INTEGRATED_MODULAR_AVIONICS_NETWORK_FABRIC-AFDX/) integration (ATA 42 L2-LINKS)
+- [Health monitoring interface](../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS_OMS_CMS/) (ATA 45)
+- [Digital Product Passport](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/) integration (ATA 95)
 
 ## Traceability
 

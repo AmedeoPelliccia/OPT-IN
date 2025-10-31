@@ -26,9 +26,9 @@ This document defines the scope, governance structure, and effectivity for the A
 - Hardware-in-Loop testing integration
 
 **Out of Scope:**
-- ARINC 653 Core OS implementation (covered by ATA 42 Core Software)
-- Hardware platform design (covered by ATA 42 Hardware Modules)
-- Network fabric implementation (covered by ATA 42 Network Fabric)
+- [ARINC 653](https://www.aviation-ia.com/standards/arinc-653/) Core OS implementation (covered by [ATA 42 Core Software](../../ATA_42-INTEGRATED_MODULAR_AVIONICS_CORE_SOFTWARE/))
+- Hardware platform design (covered by [ATA 42 Hardware Modules](../../../E3-ELECTRONICS/ATA_42-INTEGRATED_MODULAR_AVIONICS_HARDWARE_PLATFORM/))
+- Network fabric implementation (covered by [ATA 42 Network Fabric](../../../L2-LINKS/ATA_42-INTEGRATED_MODULAR_AVIONICS_NETWORK_FABRIC-AFDX/))
 - Application partition software (covered by respective ATA chapters)
 
 ### 1.3 Technology Readiness Level
@@ -118,10 +118,10 @@ All changes to this ATA chapter require:
 ### 3.4 Interface Dependencies
 
 **Required Interfaces:**
-- ARINC 653 API (Partition Management, Time Management, Inter-Partition Communication)
-- AFDX Network Interface (for distributed scheduling coordination)
-- Health Monitoring Interface (ATA 45 integration)
-- Digital Product Passport Interface (ATA 95 integration)
+- [ARINC 653 API](https://www.aviation-ia.com/standards/arinc-653/) (Partition Management, Time Management, Inter-Partition Communication)
+- [AFDX Network Interface](../../../L2-LINKS/ATA_42-INTEGRATED_MODULAR_AVIONICS_NETWORK_FABRIC-AFDX/) (for distributed scheduling coordination)
+- [Health Monitoring Interface](../../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS_OMS_CMS/) (ATA 45 integration)
+- [Digital Product Passport Interface](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/) (ATA 95 integration)
 
 ---
 
@@ -129,23 +129,23 @@ All changes to this ATA chapter require:
 
 ### 4.1 Applicable Regulations
 
-- **EASA**: CS-25 (Large Aeroplanes)
-- **FAA**: 14 CFR Part 25
-- **ICAO**: Annex 8 (Airworthiness of Aircraft)
+- **[EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)**: Large Aeroplanes Certification Specifications
+- **[FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)**: Airworthiness Standards: Transport Category Airplanes
+- **[ICAO Annex 8](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf)**: Airworthiness of Aircraft
 
 ### 4.2 Applicable Standards
 
 | Standard | Title | Applicability |
 |----------|-------|---------------|
-| RTCA DO-178C | Software Considerations in Airborne Systems | DAL A software lifecycle |
-| RTCA DO-254 | Hardware Considerations | Hardware integration |
-| RTCA DO-297 | IMA Development Guidance | IMA-specific guidance |
-| RTCA DO-330 | Software Tool Qualification | Development tools |
-| RTCA DO-160G | Environmental Conditions | Environmental testing |
-| ARINC 653 P1/P2 | Avionics Application Software Standard | Core OS interface |
-| EUROCAE ED-12C | Software Aspects of Certification | European equivalent to DO-178C |
-| EUROCAE ED-202A | MILS Architecture | Security architecture |
-| EUROCAE ED-203 | Airborne Security | Security requirements |
+| [RTCA DO-178C](https://www.rtca.org/content/standards-guidance-materials) | Software Considerations in Airborne Systems | DAL A software lifecycle |
+| [RTCA DO-254](https://www.rtca.org/content/standards-guidance-materials) | Hardware Considerations | Hardware integration |
+| [RTCA DO-297](https://www.rtca.org/content/standards-guidance-materials) | IMA Development Guidance | IMA-specific guidance |
+| [RTCA DO-330](https://www.rtca.org/content/standards-guidance-materials) | Software Tool Qualification | Development tools |
+| [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) | Environmental Conditions | Environmental testing |
+| [ARINC 653](https://www.aviation-ia.com/standards/arinc-653/) P1/P2 | Avionics Application Software Standard | Core OS interface |
+| [EUROCAE ED-12C](https://www.eurocae.net/) | Software Aspects of Certification | European equivalent to DO-178C |
+| [EUROCAE ED-202A](https://www.eurocae.net/) | MILS Architecture | Security architecture |
+| [EUROCAE ED-203](https://www.eurocae.net/) | Airborne Security | Security requirements |
 
 ### 4.3 Design Assurance Level
 
@@ -194,6 +194,27 @@ Requirements traceability maintained in:
 | Software Safety Engineering | TBD | Pending | (Under Review) |
 | Airworthiness Engineering | TBD | Pending | (Awaiting Submission) |
 | Certification Engineering | TBD | Pending | (Awaiting Submission) |
+
+---
+
+## 7. References
+
+### Related Documents
+- [INDEX.meta.yaml](../INDEX.meta.yaml) - Master index and traceability matrix
+- [DATA_42-60-02_Regulatory-Compliance-Matrix.csv](DATA_42-60-02_Regulatory-Compliance-Matrix.csv) - Detailed compliance mapping
+- [DATA_42-60-03_Effectivity-And-Config.csv](DATA_42-60-03_Effectivity-And-Config.csv) - Configuration control data
+
+### Related ATA Sections
+- [02-DESIGN_AND_ALGORITHMS](../02-DESIGN_AND_ALGORITHMS/) - Technical design specifications
+- [03-SIMULATION_AND_VERIFICATION](../03-SIMULATION_AND_VERIFICATION/) - Testing and validation
+- [05-SAFETY_AND_CERTIFICATION_WORKBENCH](../05-SAFETY_AND_CERTIFICATION_WORKBENCH/) - Safety assessment
+
+### Standards Resources
+- [RTCA Standards](https://www.rtca.org/content/standards-guidance-materials)
+- [EUROCAE Publications](https://www.eurocae.net/)
+- [ARINC Specifications](https://www.aviation-ia.com/standards/)
+- [EASA Certification Specifications](https://www.easa.europa.eu/document-library/certification-specifications)
+- [FAA Regulations (e-CFR)](https://www.ecfr.gov/)
 
 ---
 
