@@ -12,13 +12,19 @@
 
 This document provides an overview of the regulatory landscape applicable to the Air Conditioning and Pressurization System (ATA Chapter 21), including certification requirements, applicable standards, and compliance pathways.
 
+**Quick Links**:
+- [Complete References Document](../REFERENCES.md) - Centralized hyperlinks to all regulations and standards
+- [System Description](./21-00-00_SYSTEM_DESCRIPTION.md)
+- [Safety Documentation](../SAFETY/21-00-00_FHA.md)
+- [Certification Overview](../CERTIFICATION/README.md)
+
 ## 2. Primary Regulatory Requirements
 
 ### 2.1 FAA Regulations (United States)
 
-#### FAR Part 25 - Transport Category Airplanes
+#### [FAR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) - Transport Category Airplanes
 
-##### 25.831 - Ventilation
+##### [25.831 - Ventilation](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR45ddd4419ad436d/section-25.831)
 **Applicability**: Cabin and cockpit ventilation
 **Key Requirements**:
 - Minimum fresh air supply: 10 cubic feet per minute per crew member (flight deck)
@@ -29,9 +35,9 @@ This document provides an overview of the regulatory landscape applicable to the
 **Compliance Approach**:
 - Flow measurements in test rigs and aircraft
 - Gas analysis during ground and flight tests
-- Computational fluid dynamics (CFD) validation
+- Computational fluid dynamics ([CFD](../ENGINEERING/CFD/)) validation
 
-##### 25.841 - Pressurization Systems
+##### [25.841 - Pressurization Systems](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR45ddd4419ad436d/section-25.841)
 **Applicability**: Cabin pressure control and safety
 **Key Requirements**:
 - Cabin pressure altitude: Must not exceed 8,000 feet at maximum operating altitude under normal operating conditions
@@ -44,10 +50,10 @@ This document provides an overview of the regulatory landscape applicable to the
 **Compliance Approach**:
 - Pressure vessel structural analysis and testing
 - System functional testing (ground and flight)
-- Failure modes and effects analysis (FMEA)
+- [Failure modes and effects analysis (FMEA)](../SAFETY/scripts/fmea_calculator.py)
 - Demonstration of warning systems
 
-##### 25.1309 - Equipment, Systems, and Installations
+##### [25.1309 - Equipment, Systems, and Installations](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe8b86bdb1a03e2b/section-25.1309)
 **Applicability**: System safety and reliability
 **Key Requirements**:
 - Systems must be designed so that no single failure will prevent continued safe flight and landing
@@ -55,17 +61,17 @@ This document provides an overview of the regulatory landscape applicable to the
 - Major failure conditions (< 10⁻⁵ per flight hour) must not result in unacceptable workload or prevent crew from performing duties
 
 **Compliance Approach**:
-- System safety assessment per ARP4761
-- Functional Hazard Assessment (FHA)
+- System safety assessment per [SAE ARP4761](https://www.sae.org/standards/content/arp4761/)
+- [Functional Hazard Assessment (FHA)](../SAFETY/21-00-00_FHA.md)
 - Preliminary System Safety Assessment (PSSA)
 - System Safety Assessment (SSA)
 - Common Cause Analysis (CCA)
 
 ### 2.2 EASA Regulations (European Union)
 
-#### CS-25 - Certification Specifications for Large Aeroplanes
+#### [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) - Certification Specifications for Large Aeroplanes
 
-EASA CS-25 is harmonized with FAR Part 25, with identical or very similar requirements for:
+EASA CS-25 is harmonized with [FAR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25), with identical or very similar requirements for:
 - CS 25.831 - Ventilation
 - CS 25.841 - Pressurization systems
 - CS 25.1309 - Equipment, systems, and installations
@@ -91,7 +97,7 @@ EASA CS-25 is harmonized with FAR Part 25, with identical or very similar requir
 
 ### 3.1 SAE Standards
 
-#### SAE ARP85 - Air Conditioning Systems for Subsonic Airplanes
+#### [SAE ARP85](https://www.sae.org/standards/content/arp85/) - Air Conditioning Systems for Subsonic Airplanes
 **Purpose**: Design guidance for aircraft air conditioning
 **Content**:
 - System architecture and components
@@ -99,19 +105,19 @@ EASA CS-25 is harmonized with FAR Part 25, with identical or very similar requir
 - Design considerations
 - Testing methods
 
-**Application**: Industry best practice, often referenced in certification basis
+**Application**: Industry best practice, often referenced in [certification basis](../CERTIFICATION/README.md)
 
-#### SAE ARP217 - Human Response to Impact Acceleration
+#### [SAE ARP217](https://www.sae.org/standards/content/arp217/) - Human Response to Impact Acceleration
 **Purpose**: Safety factors for rapid decompression
 **Application**: Pressurization system design limits
 
-#### SAE ARP1270 - Aircraft Cabin Ozone Concentrations
+#### [SAE ARP1270](https://www.sae.org/standards/content/arp1270/) - Aircraft Cabin Ozone Concentrations
 **Purpose**: Ozone control requirements
 **Application**: Ozone converter sizing and validation
 
 ### 3.2 RTCA Standards
 
-#### RTCA DO-160 - Environmental Conditions and Test Procedures for Airborne Equipment
+#### [RTCA DO-160](https://www.rtca.org/content/standards-guidance-materials) - Environmental Conditions and Test Procedures for Airborne Equipment
 **Purpose**: Environmental qualification of electronic equipment
 **Sections Applicable to ATA-21**:
 - Section 4: Temperature Altitude
@@ -128,14 +134,14 @@ EASA CS-25 is harmonized with FAR Part 25, with identical or very similar requir
 - Section 22: Lightning Induced Transient Susceptibility
 - Section 23: Lightning Direct Effects
 
-**Application**: Environmental controllers, sensors, and electronic components must be qualified per DO-160
+**Application**: Environmental controllers, sensors, and electronic components must be qualified per [DO-160](https://www.rtca.org/content/standards-guidance-materials)
 
-#### RTCA DO-178C - Software Considerations in Airborne Systems and Equipment Certification
+#### [RTCA DO-178C](https://www.rtca.org/content/standards-guidance-materials) - Software Considerations in Airborne Systems and Equipment Certification
 **Purpose**: Software development assurance
 **Application**: Cabin pressure controller and temperature control software
 **Design Assurance Level**: Typically DAL-C for ATA-21 systems
 
-#### RTCA DO-254 - Design Assurance Guidance for Airborne Electronic Hardware
+#### [RTCA DO-254](https://www.rtca.org/content/standards-guidance-materials) - Design Assurance Guidance for Airborne Electronic Hardware
 **Purpose**: Hardware development assurance
 **Application**: FPGA and complex electronic hardware in controllers
 **Design Assurance Level**: Typically DAL-C for ATA-21 systems
@@ -150,28 +156,28 @@ EASA CS-25 is harmonized with FAR Part 25, with identical or very similar requir
 **Purpose**: Deterministic Ethernet for avionics
 **Application**: Next-generation data network (if applicable)
 
-### 3.4 ARP4754A and ARP4761
+### 3.4 [SAE ARP4754A](https://www.sae.org/standards/content/arp4754a/) and [ARP4761](https://www.sae.org/standards/content/arp4761/)
 
-#### ARP4754A - Guidelines for Development of Civil Aircraft and Systems
+#### [ARP4754A](https://www.sae.org/standards/content/arp4754a/) - Guidelines for Development of Civil Aircraft and Systems
 **Purpose**: System development process
 **Application**: Complete life cycle from concept to in-service support
 
 **Key Processes**:
-- Requirements capture and management
-- Design and implementation
-- Verification and validation
-- Configuration management
+- [Requirements capture and management](../REQUIREMENTS/README.md)
+- [Design and implementation](../DESIGN/README.md)
+- [Verification and validation](../V_AND_V/README.md)
+- [Configuration management](../ASSETS_MANAGEMENT/README.md)
 
-#### ARP4761 - Guidelines and Methods for Conducting the Safety Assessment Process
+#### [ARP4761](https://www.sae.org/standards/content/arp4761/) - Guidelines and Methods for Conducting the Safety Assessment Process
 **Purpose**: Safety assessment methodologies
-**Application**: Systematic approach to demonstrate compliance with 25.1309/CS 25.1309
+**Application**: Systematic approach to demonstrate compliance with [25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe8b86bdb1a03e2b/section-25.1309)/CS 25.1309
 
 **Methods**:
-- Functional Hazard Assessment (FHA)
+- [Functional Hazard Assessment (FHA)](../SAFETY/21-00-00_FHA.md)
 - Preliminary System Safety Assessment (PSSA)
 - System Safety Assessment (SSA)
 - Common Cause Analysis (CCA)
-- Fault Tree Analysis (FTA)
+- [Fault Tree Analysis (FTA)](../SAFETY/scripts/safety_analysis.py)
 - Failure Modes and Effects Analysis (FMEA)
 - Markov Analysis (for complex redundant systems)
 
@@ -432,19 +438,44 @@ EASA CS-25 is harmonized with FAR Part 25, with identical or very similar requir
 
 ## 12. References
 
+### Primary Reference Document
+**[Complete ATA-21 References](../REFERENCES.md)** - Centralized hyperlinks to all regulations, standards, and internal documentation
+
 ### Regulations
-- FAR Part 25 (latest amendment)
-- CS-25 (latest amendment)
+- [FAR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) (latest amendment)
+  - [25.831 - Ventilation](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR45ddd4419ad436d/section-25.831)
+  - [25.841 - Pressurization Systems](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR45ddd4419ad436d/section-25.841)
+  - [25.1309 - Equipment, Systems, and Installations](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe8b86bdb1a03e2b/section-25.1309)
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (latest amendment)
 
 ### Standards and Guidelines
-- SAE ARP85, ARP4754A, ARP4761
-- RTCA DO-160, DO-178C, DO-254
-- ARINC 429
-- ASHRAE 161
+- [SAE ARP85](https://www.sae.org/standards/content/arp85/) - Air Conditioning Systems
+- [SAE ARP4754A](https://www.sae.org/standards/content/arp4754a/) - Development Guidelines
+- [SAE ARP4761](https://www.sae.org/standards/content/arp4761/) - Safety Assessment Process
+- [RTCA DO-160](https://www.rtca.org/content/standards-guidance-materials) - Environmental Testing
+- [RTCA DO-178C](https://www.rtca.org/content/standards-guidance-materials) - Software Assurance
+- [RTCA DO-254](https://www.rtca.org/content/standards-guidance-materials) - Hardware Assurance
+- [ARINC 429](https://www.aviation-ia.com/aeec/projects/arinc-429-2/) - Data Bus Standard
+- [ASHRAE 161](https://www.ashrae.org/technical-resources/bookstore/ashrae-standard-161) - Air Quality
 
 ### Advisory Material
-- FAA Advisory Circulars (ACs)
-- EASA AMC/GM
+- [FAA Advisory Circulars (ACs)](https://www.faa.gov/regulations_policies/advisory_circulars/)
+- [EASA AMC/GM](https://www.easa.europa.eu/en/document-library/acceptable-means-of-compliance-and-guidance-materials)
+
+### Internal Documentation
+- [System Description](./21-00-00_SYSTEM_DESCRIPTION.md)
+- [Operational Concepts](./21-00-00_OPERATIONAL_CONCEPTS.md)
+- [Key Technologies](./21-00-00_KEY_TECHNOLOGIES.md)
+- [Functional Hazard Assessment](../SAFETY/21-00-00_FHA.md)
+- [Safety Case: Pressurization Loss](../SAFETY/SAFETY_CASES/21-00-00_PRESSURIZATION_LOSS.md)
+- [Certification Overview](../CERTIFICATION/README.md)
+
+### External Resources
+- [FAA - Federal Aviation Administration](https://www.faa.gov/)
+- [EASA - European Union Aviation Safety Agency](https://www.easa.europa.eu/)
+- [SAE International](https://www.sae.org/)
+- [RTCA, Inc.](https://www.rtca.org/)
+- [eCFR - Electronic Code of Federal Regulations](https://www.ecfr.gov/)
 
 ## Revision History
 

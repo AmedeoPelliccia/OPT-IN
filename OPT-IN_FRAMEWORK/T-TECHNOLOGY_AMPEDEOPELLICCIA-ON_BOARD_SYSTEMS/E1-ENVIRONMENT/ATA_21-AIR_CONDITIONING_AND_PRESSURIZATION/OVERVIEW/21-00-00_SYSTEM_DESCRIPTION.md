@@ -11,6 +11,18 @@
 - **Status:** Released
 - **Classification:** Technical Description
 
+**Related Documents:**
+- [Operational Concepts](./21-00-00_OPERATIONAL_CONCEPTS.md)
+- [Key Technologies](./21-00-00_KEY_TECHNOLOGIES.md)
+- [Regulatory Landscape](./21-00-00_REGULATORY_LANDSCAPE.md)
+- [Functional Hazard Assessment](../SAFETY/21-00-00_FHA.md)
+- [Complete References](../REFERENCES.md)
+
+**Applicable Regulations:**
+- [FAR 25.831](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR45ddd4419ad436d/section-25.831) - Ventilation
+- [FAR 25.841](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR45ddd4419ad436d/section-25.841) - Pressurization Systems
+- [FAR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe8b86bdb1a03e2b/section-25.1309) - System Safety
+
 ---
 
 ## 1. INTRODUCTION

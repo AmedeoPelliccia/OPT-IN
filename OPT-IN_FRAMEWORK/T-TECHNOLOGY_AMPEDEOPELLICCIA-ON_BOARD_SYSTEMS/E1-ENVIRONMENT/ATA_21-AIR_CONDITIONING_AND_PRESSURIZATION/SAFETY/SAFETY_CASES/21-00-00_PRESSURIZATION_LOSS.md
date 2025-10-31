@@ -9,6 +9,19 @@
 - **Status**: ACTIVE
 - **Classification**: HAZARDOUS
 
+**Related Documents:**
+- [Functional Hazard Assessment](../21-00-00_FHA.md)
+- [System Description](../../OVERVIEW/21-00-00_SYSTEM_DESCRIPTION.md)
+- [Regulatory Landscape](../../OVERVIEW/21-00-00_REGULATORY_LANDSCAPE.md)
+- [FMEA Calculator](../scripts/fmea_calculator.py)
+- [Safety Analysis Tool](../scripts/safety_analysis.py)
+- [Complete References](../../REFERENCES.md)
+
+**Applicable Regulations:**
+- [FAR 25.841](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR45ddd4419ad436d/section-25.841) - Pressurization Systems
+- [FAR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe8b86bdb1a03e2b/section-25.1309) - System Safety
+- [SAE ARP4761](https://www.sae.org/standards/content/arp4761/) - Safety Assessment Process
+
 ## 1. Executive Summary
 
 This safety case addresses the hazard of loss of cabin pressurization in the AMPEL360 aircraft, analyzing failure scenarios, demonstrating compliance with safety objectives, and documenting mitigation strategies.
@@ -19,13 +32,13 @@ This safety case addresses the hazard of loss of cabin pressurization in the AMP
 Loss of cabin pressure altitude regulation resulting in cabin altitude exceeding safe limits.
 
 ### 2.2 Failure Condition Classification
-**HAZARDOUS** per FAR 25.1309
+**HAZARDOUS** per [FAR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/subject-group-ECFRe8b86bdb1a03e2b/section-25.1309)
 - Significant reduction in safety margins
 - Physical distress or higher workload such that crew cannot be relied upon to perform tasks accurately
 - Serious or fatal injury to small number of occupants (other than flight crew)
 
 ### 2.3 Safety Objective
-Probability: < 10⁻⁷ per flight hour (Extremely Improbable)
+Probability: < 10⁻⁷ per flight hour (Extremely Improbable) per [SAE ARP4761](https://www.sae.org/standards/content/arp4761/)
 
 ## 3. Failure Scenarios
 

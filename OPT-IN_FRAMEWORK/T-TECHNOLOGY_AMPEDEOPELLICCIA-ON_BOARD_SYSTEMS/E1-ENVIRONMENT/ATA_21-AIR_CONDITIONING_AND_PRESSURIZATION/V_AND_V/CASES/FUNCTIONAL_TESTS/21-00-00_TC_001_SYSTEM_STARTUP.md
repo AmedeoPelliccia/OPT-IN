@@ -11,6 +11,13 @@
 - **Date**: 2025-10-31
 - **Status**: APPROVED
 
+**Related Documents:**
+- [System Description](../../../OVERVIEW/21-00-00_SYSTEM_DESCRIPTION.md)
+- [Operational Concepts](../../../OVERVIEW/21-00-00_OPERATIONAL_CONCEPTS.md)
+- [V&V Master Test Plan](../../PLANS/)
+- [Requirements](../../../REQUIREMENTS/README.md)
+- [Complete References](../../../REFERENCES.md)
+
 ## Test Objective
 
 Verify that the Air Conditioning and Pressurization system can be properly started from a cold aircraft condition and transition to normal operational mode.
