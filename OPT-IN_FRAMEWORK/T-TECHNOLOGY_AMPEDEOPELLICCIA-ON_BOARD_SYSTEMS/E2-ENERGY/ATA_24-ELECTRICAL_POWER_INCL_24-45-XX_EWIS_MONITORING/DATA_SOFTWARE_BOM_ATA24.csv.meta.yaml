@@ -1,0 +1,86 @@
+schema_version: "1.1"
+document_id: "DATA_SOFTWARE_BOM_ATA24_CSV_rev1.0.0_20251031"
+title: "ATA-24 Software Components Bill of Materials (CSV)"
+ata_chapter: "24"
+document_type: "DATA"
+revision: "1.0.0"
+effective_date: "2025-10-31"
+status: "Released"
+
+author:
+  name: "Software Engineering Team"
+  organization: "Electrical Power Systems Engineering"
+  email: "software-eng@ampel360.com"
+
+owner_role: "Software Engineering / Electrical Power Systems Engineering"
+
+review_board:
+  - "Software Engineering Lead"
+  - "Electrical Power Systems Engineering Lead"
+  - "Airworthiness Engineering"
+  - "Safety Engineering"
+
+approvals:
+  - authority: "Software Engineering"
+    name: "Software Engineering Lead"
+    status: "Approved"
+    date: "2025-10-31"
+  - authority: "Electrical Power Systems Engineering"
+    name: "EPSE Lead"
+    status: "Approved"
+    date: "2025-10-31"
+  - authority: "Airworthiness Engineering"
+    name: "Airworthiness Lead"
+    status: "Approved"
+    date: "2025-10-31"
+
+supersedes:
+  document_id: null
+  revision: null
+  effective_date: null
+
+related_documents:
+  - "INDEX.meta.yaml"
+  - "DATA_SOFTWARE_BOM_ATA24.json"
+  - "schemas/software.schema.json"
+
+regulatory_basis:
+  - "FAA Part 25.1351"
+  - "RTCA DO-178C"
+  - "RTCA DO-254"
+  - "ARP4754A"
+
+traceability:
+  requirements:
+    - "REQ-SW-24-001: Software component identification and tracking"
+    - "REQ-SW-24-002: DO-178C certification level assignment"
+    - "REQ-SW-24-003: Software BOM maintenance and version control"
+  source_documents:
+    - "ELEC-SW-24-001: Software Components Bill of Materials"
+    - "SW-CERT-24-001: Software Certification Plan per DO-178C"
+
+integrity:
+  checksum: "TBD"
+  algorithm: "sha256"
+  last_modified: "2025-10-31T06:20:00Z"
+
+keywords:
+  - "software"
+  - "BOM"
+  - "DO-178C"
+  - "DO-254"
+  - "electrical power"
+  - "EWIS"
+  - "fuel cell"
+  - "battery management"
+
+notes: |
+  Software components BOM for ATA-24 Electrical Power systems including:
+  - General power management (24-00): 6 components
+  - Fuel cell systems (24-60): 6 components
+  - Solid-CO₂ modules (24-33): 6 components
+  - Endocircular recharge loops (24-34): 7 components
+  - EWIS monitoring (24-45): 8 components
+  - Cross-cutting software (24-99): 5 components
+  
+  Total: 38 software components with DO-178C certification guidance

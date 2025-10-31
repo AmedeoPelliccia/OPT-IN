@@ -1,0 +1,99 @@
+schema_version: "1.1"
+id: "ATA_24_INDEX_rev1.0.0_20251031"
+chapter: "ATA 24 - ELECTRICAL POWER (INCL. 24-45-XX EWIS MONITORING)"
+governance:
+  owner_role: "Electrical Power Systems Engineering / EWIS Engineering"
+  review_board: ["Airworthiness Engineering", "Software Engineering", "Safety Engineering", "Avionics Integration Engineering"]
+  regulatory_basis: ["FAA Part 25.1351", "SAE AS50881", "RTCA DO-160", "RTCA DO-178C", "RTCA DO-254", "ARP4754A", "ARP4761"]
+traceability:
+  crossrefs:
+    - "ATA 23"  # Communications (electrical power for avionics)
+    - "ATA 31"  # Indicating/Recording Systems (power monitoring)
+    - "ATA 33"  # Lights (electrical power distribution)
+    - "ATA 47"  # Inerting System (fuel cell safety)
+    - "ATA 49"  # Airborne Auxiliary Power (APU electrical generation)
+    - "ATA 80"  # Starting (engine starting electrical systems)
+    - "ATA 95"  # Digital Product Passport (traceability)
+  source_documents:
+    - "ELEC-SPEC-24-001: Electrical Power System Design Specification"
+    - "ELEC-SW-24-001: Software Components Bill of Materials"
+    - "ELEC-QUAL-24-001: Power System Qualification Test Report"
+    - "ELEC-SAFETY-24-001: Electrical Power System Safety Assessment (ARP4761)"
+    - "ELEC-ENV-24-001: Environmental Qualification per DO-160"
+    - "MAINT-PLAN-24-001: Electrical Power Maintenance Program"
+    - "SW-CERT-24-001: Software Certification Plan per DO-178C"
+safety:
+  criticality: "Critical - Flight Safety Item"
+  hazards:
+    - "Loss of electrical power generation"
+    - "Battery thermal runaway or fire"
+    - "Power bus failure causing system shutdown"
+    - "EWIS insulation breakdown or arc fault"
+    - "Fuel cell hydrogen safety incidents"
+    - "Software malfunction in critical power management"
+    - "Power quality events affecting avionics"
+    - "Cybersecurity compromise of power control systems"
+  airworthiness_limitation_items:
+    - "Battery cell health monitoring and replacement criteria"
+    - "Fuel cell stack degradation limits"
+    - "EWIS harness integrity and insulation resistance"
+    - "Power conversion firmware version control"
+    - "Software baseline configuration management"
+integrity:
+  checksum_algorithm: "sha256"
+  validation_script: "ci/validate_ata24.sh"
+effectivity:
+  scope: "All AMPEL360 BWB configurations"
+  msn: "ALL"
+document_structure:
+  subdirectories:
+    - name: "01-GENERAL"
+      description: "Scope, governance, effectivity, regulatory compliance matrix"
+    - name: "02-SOFTWARE_COMPONENTS"
+      description: "Software components BOM, metadata sidecars, certification artifacts"
+    - name: "03-POWER_GENERATION"
+      description: "Generation system procedures, data, and specifications"
+    - name: "04-POWER_DISTRIBUTION"
+      description: "Distribution system procedures and load management"
+    - name: "05-BATTERY_SYSTEMS"
+      description: "Battery management, ESS control, and safety procedures"
+    - name: "06-FUEL_CELL_SYSTEMS"
+      description: "Fuel cell stack control, BOP diagnostics, H₂ safety (ATA-24-60)"
+    - name: "07-SOLID_CO2_MODULES"
+      description: "Solid-CO₂ battery modules, sorbent management (ATA-24-33)"
+    - name: "08-ENDOCIRCULAR_LOOPS"
+      description: "Endocircular recharge loops, thermal scheduling (ATA-24-34)"
+    - name: "09-EWIS_MONITORING"
+      description: "EWIS monitoring ECU, sensor nodes, gateway protocols (ATA-24-45)"
+    - name: "10-SIDE-CAR_META"
+      description: "Metadata templates for document and software sidecars"
+    - name: "11-SCHEMAS"
+      description: "JSON schemas for software, hardware, and data validation"
+    - name: "12-EXAMPLES_AND_RECORDS"
+      description: "Example records, test reports, and software baselines"
+  schemas:
+    - name: "software.schema.json"
+      description: "Software component schema (ID, name, purpose, DO-178C level, repository, integrity)"
+    - name: "power-system.schema.json"
+      description: "Power system specification schema (type, voltage, current, redundancy)"
+    - name: "battery-module.schema.json"
+      description: "Battery module specification schema (chemistry, capacity, BMS version)"
+approvals:
+  - authority: "Electrical Power Systems Engineering"
+    status: "Released"
+    date: "2025-10-31"
+  - authority: "Software Engineering"
+    status: "Released"
+    date: "2025-10-31"
+  - authority: "EWIS Engineering"
+    status: "Released"
+    date: "2025-10-31"
+  - authority: "Airworthiness Engineering"
+    status: "Approved"
+    date: "2025-10-31"
+  - authority: "Safety Engineering"
+    status: "Approved"
+    date: "2025-10-31"
+revision: "1.0.0"
+effective_date: "2025-10-31"
+next_review: "2026-10-31"

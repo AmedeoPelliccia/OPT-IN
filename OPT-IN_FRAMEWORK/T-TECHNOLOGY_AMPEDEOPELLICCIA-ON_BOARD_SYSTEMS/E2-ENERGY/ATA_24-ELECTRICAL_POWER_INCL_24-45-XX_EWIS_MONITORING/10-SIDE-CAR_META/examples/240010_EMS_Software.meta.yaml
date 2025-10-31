@@ -1,0 +1,171 @@
+schema_version: "1.1"
+component_code: "240010"
+name: "Energy Management System (EMS) Software"
+ata_subchapter: "24-00"
+document_type: "SOFTWARE"
+revision: "2.1.0"
+effective_date: "2025-10-31"
+status: "Released"
+
+purpose: |
+  Orquesta generación, ESS, carga y estrategias de shedding.
+  Sistema crítico que coordina todas las fuentes de energía (fuel cells, baterías, 
+  generadores) y gestiona la distribución de carga optimizando eficiencia y seguridad.
+
+certification:
+  do178c_level: "A"
+  do254_applicable: false
+  criticality: "Critical"
+  certification_note: |
+    Crítico; sugerido DO-178C Nivel A (función de seguridad).
+    Requiere MC/DC coverage ≥100% y structural coverage ≥100%.
+
+sw_baseline:
+  version: "2.1.0"
+  repository: "https://github.com/ampel360/ems-software"
+  commit_hash: "a1b2c3d4e5f6789012345678901234567890abcd"
+  build_date: "2025-10-25"
+  release_date: "2025-10-31"
+
+integrity:
+  checksum:
+    algorithm: "sha256"
+    value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  signature:
+    algorithm: "RSA-2048"
+    value: "3a4b5c6d7e8f90a1b2c3d4e5f6789012345678901234567890abcdef"
+    signer: "AMPEL360 Software Engineering Authority"
+
+hw_ref:
+  - "ECU-EMS-001 (P/N 24-EMS-100-001)"
+  - "Power Control Unit PCU-24-001"
+
+dependencies:
+  - component_code: "240011"
+    version: ">=1.5.0"
+    relationship: "required"
+  - component_code: "240012"
+    version: ">=3.0.0"
+    relationship: "required"
+  - component_code: "249912"
+    version: ">=1.0.0"
+    relationship: "required"
+
+interfaces:
+  - name: "ARINC 429 Bus 1"
+    protocol: "ARINC 429"
+    data_rate: "100 kbps"
+  - name: "CAN Bus - Power Management"
+    protocol: "CAN FD"
+    data_rate: "5 Mbps"
+  - name: "AFDX Network"
+    protocol: "AFDX (ARINC 664)"
+    data_rate: "100 Mbps"
+
+test_coverage:
+  structural_coverage_pct: 100.0
+  mcdc_coverage_pct: 100.0
+  requirements_coverage_pct: 100.0
+  test_report_refs:
+    - "TEST-EMS-240010-001: Unit Test Report"
+    - "TEST-EMS-240010-002: Integration Test Report"
+    - "TEST-EMS-240010-003: HIL Test Report"
+    - "TEST-EMS-240010-004: Safety Analysis Report"
+
+configuration_management:
+  cm_tool: "Git"
+  baseline_id: "EMS-SW-BL-2.1.0"
+  change_control_board: "Power Systems Software CCB"
+
+certification_artifacts:
+  psac_ref: "PSAC-EMS-240010-rev2.1"
+  scd_ref: "SCD-EMS-240010-rev2.1"
+  svcp_ref: "SVCP-EMS-240010-rev2.1"
+  sas_ref: "SAS-EMS-240010-rev2.1"
+  dpp_entry: "DPP-SW-24-0010"
+
+owner_role: "Electrical Power Systems Software Engineering"
+
+review_board:
+  - "Software Engineering Lead"
+  - "Electrical Power Systems Engineering Lead"
+  - "Airworthiness Engineering"
+  - "Safety Engineering"
+
+approvals:
+  - authority: "Software Engineering"
+    name: "John Doe"
+    status: "Approved"
+    date: "2025-10-28"
+  - authority: "Electrical Power Systems Engineering"
+    name: "Jane Smith"
+    status: "Approved"
+    date: "2025-10-29"
+  - authority: "Airworthiness Engineering"
+    name: "Bob Johnson"
+    status: "Approved"
+    date: "2025-10-30"
+  - authority: "Safety Engineering"
+    name: "Alice Williams"
+    status: "Approved"
+    date: "2025-10-31"
+
+supersedes:
+  component_code: "240010"
+  revision: "2.0.1"
+  effective_date: "2025-09-15"
+
+related_documents:
+  - "ELEC-SPEC-24-001: Electrical Power System Design Specification"
+  - "ELEC-SW-24-001: Software Components Bill of Materials"
+  - "SW-CERT-24-001: Software Certification Plan"
+
+regulatory_basis:
+  - "FAA Part 25.1351 - Electrical systems and equipment: general"
+  - "RTCA DO-178C - Software Considerations in Airborne Systems and Equipment Certification"
+  - "ARP4754A - Guidelines for Development of Civil Aircraft and Systems"
+
+traceability:
+  requirements:
+    - "REQ-EMS-001: Power generation coordination"
+    - "REQ-EMS-002: Load shedding strategy"
+    - "REQ-EMS-003: Battery state management"
+    - "REQ-EMS-004: Fault detection and isolation"
+    - "REQ-EMS-005: Emergency power mode"
+  source_documents:
+    - "ELEC-SPEC-24-001"
+    - "SAFE-EMS-001: EMS Safety Assessment"
+
+maintenance:
+  last_update: "2025-10-25"
+  next_review: "2026-04-30"
+  support_contact: "ems-support@ampel360.com"
+
+keywords:
+  - "energy management"
+  - "power distribution"
+  - "load shedding"
+  - "DO-178C Level A"
+  - "critical software"
+  - "ESS coordination"
+
+notes: |
+  Example sidecar for the Energy Management System software component.
+  
+  Key Features:
+  - Multi-source power coordination (fuel cells, batteries, generators)
+  - Intelligent load shedding based on priority and availability
+  - Real-time power quality monitoring and correction
+  - Fault-tolerant architecture with redundancy management
+  - Integration with all power subsystems via multiple bus protocols
+  
+  Certification Status:
+  - DO-178C Level A certification achieved
+  - 100% MC/DC coverage for all safety-critical functions
+  - Full requirements traceability maintained
+  - Comprehensive HIL testing completed
+  
+  Known Dependencies:
+  - Power Conversion Firmware (240011) for inverter/converter control
+  - BMS Software (240012) for battery state information
+  - Integration Middleware (249912) for system-wide telemetry
