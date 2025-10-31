@@ -1,0 +1,19 @@
+# Interface to Emergency Bus
+
+## Overview
+
+This document provides detailed information for Interface to Emergency Bus.
+
+## Content
+
+[Content to be developed]
+
+## References
+
+- Parent system documentation
+- Related ATA chapters
+- Applicable standards
+
+---
+
+*ATA-49 AIRBORNE AUXILIARY POWER Documentation*
