@@ -222,9 +222,13 @@
           "type": "string",
           "description": "Software Configuration Index reference"
         },
+        "svp_ref": {
+          "type": "string",
+          "description": "Software Verification Plan reference"
+        },
         "svcp_ref": {
           "type": "string",
-          "description": "Software Verification and Validation Plan reference"
+          "description": "Software Verification Cases and Procedures reference"
         },
         "sas_ref": {
           "type": "string",
