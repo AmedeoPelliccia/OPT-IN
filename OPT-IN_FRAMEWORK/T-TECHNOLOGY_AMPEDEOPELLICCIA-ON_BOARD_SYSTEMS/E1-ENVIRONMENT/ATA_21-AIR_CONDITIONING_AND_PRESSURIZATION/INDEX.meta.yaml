@@ -94,5 +94,3 @@ digital_product_passport:
 chain_of_custody:
   tracking_enabled: true
   audit_trail_required: true
-
----
